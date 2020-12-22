@@ -1,0 +1,59 @@
+---
+title: Varlıklar ve veri kümeleri
+description: Varlıklar sayfasında verileri görüntüleyin.
+ms.date: 04/16/2020
+ms.reviewer: mukeshpo
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: e3f41c0424b2cd756d72ae6af9d5225ebba92628
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4407186"
+---
+# <a name="entities-in-audience-insights"></a>Hedef kitle içgörülerinde varlıklar
+
+[Veri kaynaklarınızı yapılandırdıktan](data-sources.md) sonra, alınan verilerin kalitesini değerlendirmek için **Varlıklar** sayfasına gidin. Varlıklar, veri kümeleri olarak kabul edilir. Dynamics 365 Customer Insights'ın birçok özelliği, bu varlıklar etrafında oluşturulmuştur. Bunları yakından incelemek, bu özelliklerin çıktılarını doğrulamanıza yardımcı olabilir.
+
+**Varlıklar** sayfası, varlıkları listeler ve çeşitli sütunlar içerir:
+
+- **Adı**: Veri varlığınızın adı. Varlık adının yanında bir uyarı simgesi görürseniz bu, o varlığa ait verilerin başarıyla yüklenmediği anlamına gelir.
+- **Kaynak**: Varlıktan verileri alan veri kaynaklarının türü
+- **Oluşturan**: Varlığı oluşturan kişinin adı
+- **Oluşturma Tarihi**: Varlığın oluşturulma tarihi ve saati
+- **Güncelleştiren**: Varlığı güncelleştiren kişinin adı
+- **Son güncelleştirme**: Varlığın son güncelleştirilme tarihi ve saati
+- **Son yenileme**: Son veri yenileme tarihi ve saati
+
+## <a name="exploring-a-specific-entitys-data"></a>Belirli bir varlığın verilerini keşfetme
+
+Varlıktaki farklı alanları ve kayıtları keşfetmek için bir varlık seçin.
+
+> [!div class="mx-imgBorder"]
+> ![Varlık seç](media/data-manager-entities-data.png "Varlık seç")
+
+- **Veri** sekmesi varsayılan olarak seçilidir ve varlığın tek tek kayıtlarıyla ilgili ayrıntıları listeleyen bir tablo gösterir.
+
+> [!div class="mx-imgBorder"]
+> ![Alanlar tablosu](media/data-manager-entities-fields.PNG "Alanlar tablosu")
+
+- **Alanlar** sekmesi seçilen varlık için alan adları, veri türleri ve türler gibi ayrıntıların incelenmesini sağlayan bir tablo gösterir. **Tür** sütunu, sistem tarafından otomatik olarak tanımlanan veya kullanıcılar tarafından [el ile eşlenen](map-entities.md) Common Data Model ile ilişkilendirilmiş türleri gösterir. Bunlar, özniteliklerin veri türlerinden farklı olabilecek semantik türlerdir. Örneğin, aşağıdaki *E-posta* alanı *Metin* veri türüne sahiptir ancak (semantik) Common Data Model türü *E-posta* veya *E-posta Adresi* olabilir.
+
+> [!NOTE]
+> Her iki tablo da varlığınızın verilerinin yalnızca bir örneğini gösterir. Veri kümesinin tamamını görüntülemek için **Veri kaynakları** sayfasına gidin, bir varlık seçin, **Düzenle** seçeneğini belirleyin ve ardından [Veri kaynakları](data-sources.md)'nda açıklandığı gibi Power Query düzenleyicisiyle bu varlığın verilerini görüntüleyin.
+
+Varlıktaki alınan veriler hakkında daha fazla bilgi edinmek isterseniz **Özet** sütunu, verileriniz için geçerli olan boş değerler, eksik değerler, benzersiz değerler, sayılar ve dağıtımlar gibi verilerin bazı önemli özelliklerini sağlar.
+
+Verilerin özetini görmek için grafik simgesini seçin.
+
+> [!div class="mx-imgBorder"]
+> ![Özet simgesi](media/data-manager-entities-summary.png "Veri özeti tablosu")
+
+### <a name="next-step"></a>Sonraki adım
+
+Alınan verileri *eşlemeyi*, *eşleştirmeyi* ve *birleştirmeyi* öğrenmek için [Birleştirme](data-unification.md) konusuna bakın.

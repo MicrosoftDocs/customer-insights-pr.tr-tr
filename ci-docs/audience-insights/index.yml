@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Dynamics 365 Customer Insights'ta hedef kitle içgörüleri özelliği
+summary: Birden çok kaynaktan müşteri verilerini alın, birleştirin ve düzenleyin. Müşteri profilleri ve gerçek zamanlı segmentler oluşturun ve bunları yönetin. Müşteri verilerinden daha iyi yararlanabilmek için bu verileri diğer sistemlerle tümleştirin.
+metadata:
+  title: Hedef kitle içgörüleri belgeleri
+  description: Hedef kitle içgörüleri için önemli bağlantıların olduğu yardım merkezi.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4407211"
+landingContent:
+- title: Hedef kitle içgörüleri hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Ürüne genel bakış
+      url: overview.md
+    - text: Yeni ve güncelleştirilmiş özellikler
+      url: whats-new-audience-insights.md
+    - text: Topluluk sitesi
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Veri kaynaklarını alma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Veri kaynakları ekleme
+      url: data-sources.md
+    - text: Artımlı yenileme
+      url: incremental-refresh-data-sources.md
+    - text: Varlıkları anlama
+      url: entities.md
+- title: Verileri birleştirme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Eşleme
+      url: map-entities.md
+    - text: Eşleştir
+      url: match-entities.md
+    - text: Adres Mektup Birleştirme
+      url: merge-entities.md
+- title: Müşteri profillerini daraltma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: İlişkileri yapılandırma
+      url: relationships.md
+    - text: Müşteri etkinliklerini listeleme
+      url: activities.md
+    - text: Kendi makine öğrenimi modellerinizi getirin
+      url: custom-models.md
+- title: Müşteri verilerini dışarı aktarma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Dışarı aktarma hedeflerini ayarlama
+      url: export-destinations.md
+    - text: Dynamics 365 uygulamalarında müşteri kartları
+      url: customer-card-add-in.md
+    - text: Power BI bağlayıcısı
+      url: export-power-bi.md
+- title: Uygulamayı yönetmek
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sistemi yapılandırma
+      url: system.md
+    - text: Kullanıcı izinlerini tanımlama
+      url: permissions.md
+    - text: Birden çok ortamı yönetme
+      url: manage-environments.md
