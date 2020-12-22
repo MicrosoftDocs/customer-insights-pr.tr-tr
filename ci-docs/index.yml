@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Dynamics 365 Customer Insights için yardım merkezi
+  author: m-hartmann
+  description: Yardım içeriğiyle başlamak için ilgili makaleleri bulun.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4407228"
+title: Dynamics 365 Customer Insights belgeleri
+summary: Başlamak için yardımcı kaynaklar bulun ve Customer Insights özellikleri ve yetenekleri hakkında bilgi edinin.
+landingContent:
+- title: Customer Insights ile tanışma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Customer Insights'a genel bakış
+      url: overview.md
+    - text: Yayın planları
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Ortamınıza erişme
+      url: https://home.ci.ai.dynamics.com/
+- title: Hedef kitle içgörülerini kullanmaya başlama
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Deneme sürümü için kaydol
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Yenilikler
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Hedef kitle içgörüleri belgeleri
+      url: audience-insights/index.yml
+- title: İletişime geçme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Dynamics 365 topluluğuna katılma
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Fikirlerinizi paylaşın
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Bir sorun bildirin
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Hedef kitle içgörüleri eğitimleri
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Yeni ortam oluşturun
+      url: audience-insights/home.md
+    - text: Birleşik müşteri profili oluşturma
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Uygulamayla çalışma
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Hedef kitle içgörüleri verilerini dışarı aktarma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Dışarı aktarma hedeflerini ayarlama
+      url: audience-insights/export-destinations.md
+    - text: Dynamics 365 uygulamalarında müşteri kartları
+      url: audience-insights/customer-card-add-in.md
+    - text: Power BI bağlayıcısı
+      url: audience-insights/export-power-bi.md
+- title: Hedef kitle içgörülerini yönetme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sistemi yapılandırma
+      url: audience-insights/system.md
+    - text: Kullanıcı izinlerini tanımlama
+      url: audience-insights/permissions.md
+    - text: Birden çok ortamı yönetme
+      url: audience-insights/manage-environments.md
+- title: Etkileşim içgörüleri hakkında (önizleme)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Özelliğe genel bakış
+      url: engagement-insights/overview.md
+    - text: Koşullar ve kavramlar
+      url: engagement-insights/glossary.md
+    - text: Başlayın
+      url: engagement-insights/get-started.md
+- title: Etkileşim içgörüleri için raporlar (önizleme)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Raporları görüntüle
+      url: engagement-insights/view-reports.md
+    - text: Özel raporlar oluşturma
+      url: engagement-insights/custom-reports.md
+    - text: Birleşik profiller raporunu görüntüleme
+      url: engagement-insights/profile-reports.md
+- title: Etkileşim içgörüleri için olaylar (önizleme)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Siyah beyaz olaylar oluşturma
+      url: engagement-insights/refined-events.md
+    - text: Olayları dışarı aktarma
+      url: engagement-insights/export-events.md
+    - text: Kişisel verileri silme ve dışarı aktarma
+      url: engagement-insights/delete-export-personal-data.md
