@@ -1,51 +1,57 @@
 ---
 title: Customer Insights verilerini Dynamics 365 Sales'e dışarı aktarma
 description: Dynamics 365 Sales bağlantısını yapılandırmayı öğrenin.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643842"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269032"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="0bed4-103">Dynamics 365 Sales için bağlayıcı (önizleme)</span><span class="sxs-lookup"><span data-stu-id="0bed4-103">Connector for Dynamics 365 Sales (preview)</span></span>
+# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="adad2-103">Dynamics 365 Sales için bağlayıcı (önizleme)</span><span class="sxs-lookup"><span data-stu-id="adad2-103">Connector for Dynamics 365 Sales (preview)</span></span>
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-<span data-ttu-id="0bed4-104">Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sales ile promosyonları göndermek için müşteri verilerinizi kullanın.</span><span class="sxs-lookup"><span data-stu-id="0bed4-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
+<span data-ttu-id="adad2-104">Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sales ile promosyonları göndermek için müşteri verilerinizi kullanın.</span><span class="sxs-lookup"><span data-stu-id="adad2-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
 
-## <a name="prerequisite"></a><span data-ttu-id="0bed4-105">Önkoşul</span><span class="sxs-lookup"><span data-stu-id="0bed4-105">Prerequisite</span></span>
+## <a name="prerequisite"></a><span data-ttu-id="adad2-105">Önkoşul</span><span class="sxs-lookup"><span data-stu-id="adad2-105">Prerequisite</span></span>
 
-<span data-ttu-id="0bed4-106">[Common Data Service kullanılarak Dynamics 365 Sales'ten alınan](connect-power-query.md) ilgili kişi kayıtları.</span><span class="sxs-lookup"><span data-stu-id="0bed4-106">Contact records [from Dynamics 365 Sales ingested using Common Data Service](connect-power-query.md).</span></span>
+1. <span data-ttu-id="adad2-106">Segmenti Customer Insights'tan Sales'e aktarabilmeniz için Dynamics 365 Sales'te ilgili kişi kayıtlarının bulunması gerekir.</span><span class="sxs-lookup"><span data-stu-id="adad2-106">Contact records must be present in Dynamics 365 Sales before you can export a segment from Customer Insights to Sales.</span></span> <span data-ttu-id="adad2-107">[Common Data Services kullanarak Dynamics 365 Sales](connect-power-query.md)'te kişilerin alınması hakkında daha fazla bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="adad2-107">Read more on how to ingest contacts in [Dynamics 365 Sales using Common Data Services](connect-power-query.md).</span></span>
 
-## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="0bed4-107">Sales için bağlayıcıyı yapılandırma</span><span class="sxs-lookup"><span data-stu-id="0bed4-107">Configure the connector for Sales</span></span>
+   > [!NOTE]
+   > <span data-ttu-id="adad2-108">Segmentleri hedef kitle içgörülerden Sales'e aktarmak, Sales kurulumlarında yeni ilgili kişi kaydı oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="adad2-108">Exporting segments from audience insights to Sales will not create new contact records in the Sales instances.</span></span> <span data-ttu-id="adad2-109">Sales'teki ilgili kişi kayıtları, hedef kitle içgörülerinde alınmalı ve veri kaynağı olarak kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="adad2-109">The contact records from Sales must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="adad2-110">Ayrıca, segmentlerin dışarı aktarılabilmesi için müşteri kimliklerini ilgili kişi kimlikleriyle eşlemek üzere birleşik Müşteri varlığına eklenmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="adad2-110">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
 
-1. <span data-ttu-id="0bed4-108">Hedef kitle içgörülerinde, **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-108">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="adad2-111">Sales için bağlayıcıyı yapılandırma</span><span class="sxs-lookup"><span data-stu-id="adad2-111">Configure the connector for Sales</span></span>
 
-1. <span data-ttu-id="0bed4-109">**Dynamics 365 Sales** altında, **Ayarla**'yı seçin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-109">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
+1. <span data-ttu-id="adad2-112">Hedef kitle içgörülerinde, **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.</span><span class="sxs-lookup"><span data-stu-id="adad2-112">In audience insights, go to **Admin** > **Export destinations**.</span></span>
 
-1. <span data-ttu-id="0bed4-110">Dışarı aktarma hedefinize **Görünen ad** alanında tanınabilir bir ad verin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-110">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="adad2-113">**Dynamics 365 Sales** altında, **Ayarla**'yı seçin.</span><span class="sxs-lookup"><span data-stu-id="adad2-113">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
 
-1. <span data-ttu-id="0bed4-111">Kuruluşunuzun Sales URL'sini **Sunucu adresi** alanına girin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-111">Enter your organization's Sales URL in the **Server address** field.</span></span>
+1. <span data-ttu-id="adad2-114">Dışarı aktarma hedefinize **Görünen ad** alanında tanınabilir bir ad verin.</span><span class="sxs-lookup"><span data-stu-id="adad2-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
 
-1. <span data-ttu-id="0bed4-112">**Sunucu yönetici hesabı** bölümünde, **Oturum aç**'ı seçin ve bir Dynamics 365 Sales hesabı belirleyin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-112">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
+1. <span data-ttu-id="adad2-115">Kuruluşunuzun Sales URL'sini **Sunucu adresi** alanına girin.</span><span class="sxs-lookup"><span data-stu-id="adad2-115">Enter your organization's Sales URL in the **Server address** field.</span></span>
 
-1. <span data-ttu-id="0bed4-113">Müşteri kimliği alanını Dynamics 365 İlgili Kişi Kimliği ile eşleyin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-113">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
+1. <span data-ttu-id="adad2-116">**Sunucu yönetici hesabı** bölümünde, **Oturum aç**'ı seçin ve bir Dynamics 365 Sales hesabı belirleyin.</span><span class="sxs-lookup"><span data-stu-id="adad2-116">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
 
-1. <span data-ttu-id="0bed4-114">**İleri**'yi seçin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-114">Select **Next**.</span></span>
+1. <span data-ttu-id="adad2-117">Müşteri kimliği alanını Dynamics 365 İlgili Kişi Kimliği ile eşleyin.</span><span class="sxs-lookup"><span data-stu-id="adad2-117">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
 
-1. <span data-ttu-id="0bed4-115">Bir veya daha fazla segment seçin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-115">Choose one or more segments.</span></span>
+1. <span data-ttu-id="adad2-118">**İleri**'yi seçin.</span><span class="sxs-lookup"><span data-stu-id="adad2-118">Select **Next**.</span></span>
 
-1. <span data-ttu-id="0bed4-116">**Kaydet**'i seçin.</span><span class="sxs-lookup"><span data-stu-id="0bed4-116">Select **Save**.</span></span>
+1. <span data-ttu-id="adad2-119">Bir veya daha fazla segment seçin.</span><span class="sxs-lookup"><span data-stu-id="adad2-119">Choose one or more segments.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="0bed4-117">Verileri dışarı aktarma</span><span class="sxs-lookup"><span data-stu-id="0bed4-117">Export the data</span></span>
+1. <span data-ttu-id="adad2-120">**Kaydet**'i seçin.</span><span class="sxs-lookup"><span data-stu-id="adad2-120">Select **Save**.</span></span>
 
-<span data-ttu-id="0bed4-118">[Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="0bed4-118">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="0bed4-119">Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.</span><span class="sxs-lookup"><span data-stu-id="0bed4-119">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+## <a name="export-the-data"></a><span data-ttu-id="adad2-121">Verileri dışarı aktarma</span><span class="sxs-lookup"><span data-stu-id="adad2-121">Export the data</span></span>
+
+<span data-ttu-id="adad2-122">[Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="adad2-122">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="adad2-123">Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.</span><span class="sxs-lookup"><span data-stu-id="adad2-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
