@@ -1,20 +1,20 @@
 ---
 title: Ortamları oluşturma ve yönetme
 description: Hizmete kaydolmayı ve ortamları yönetmeyi öğrenin.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644157"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270136"
 ---
 # <a name="manage-environments"></a>Ortamları yönet
 
@@ -46,9 +46,9 @@ Yeni ortam oluşturmanın iki yolu vardır. Tamamen yeni bir yapılandırma beli
 
 Ortam oluşturmak için:
 
-1. Uygulamanın başlığındaki **ayarlar** simgesini seçin.
+1. Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin.
 
-1. **Yeni ortam**'ı seçin.
+1. **Yeni**'yi seçin.
 
    > [!div class="mx-imgBorder"]
    > ![Ortam ayarları](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Ortam oluşturmak için:
 
    - Azure Data Lake Storage Gen2 seçeneği için kimlik doğrulamasına yönelik olarak kaynak tabanlı seçeneğini veya abonelik tabanlı seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Kapsayıcı** adı değiştirilemez ve "customerinsights"tır.
    
-   - [Tahminleri](predictions.md) kullanmak isterseniz **Tahminleri kullan** altındaki **Sunucu adresi** alanında Common Data Service kurulumu URL'sini girin.
+   - [Tahminler](predictions.md) kullanmak veya Microsoft Dataverse temelli uygulamalar ve çözümler ile veri paylaşımını yapılandırmak isterseniz **Microsoft Dataverse ile veri paylaşımını yapılandırma** altında Microsoft Dataverse ortam URL'sini sağlayın ve ek özellikleri etkinleştirin. Customer Insights çıktı verilerini Microsoft Dataverse Yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
+
+     > [!NOTE]
+     > - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydettiğinizde, Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımı şu anda desteklenmemektedir.
+     > - Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımını etkinleştirdiğinizde, [Varlıktaki eksik değerleri tahmin etme](predictions.md) özelliği şu anda desteklenmemektedir.
+
+     > [!div class="mx-imgBorder"]
+     > ![Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri](media/Datasharing-with-DataverseMDL.png)
 
    Veri alımı veya segment oluşturma gibi işlemleri çalıştırdığınızda yukarıda belirttiğiniz depolama hesabında karşılık gelen klasörler oluşturulur. Veri dosyaları ve model.json dosyaları oluşturulur ve çalıştırdığınız işleme göre ilgili alt klasörlere eklenir.
 
@@ -120,11 +127,11 @@ Veri birleşme işlemi tamamlanınca **Ölçümler**'e ve **Segmentler**'e gidip
 
 Varolan ortamların bazı ayrıntılarını düzenleyebilirsiniz.
 
-1. **Yönetici** > **Sistem** > **Hakkında**'ya gidin.
+1.  Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin.
 
-2. **Düzenle** seçeneğini işaretleyin.
+2.  **Düzenle** simgesini seçin.
 
-3. Ortamın **Görünen adı**'nı güncelleştirebilir ancak **Bölge**'yi veya **Tür**'ü değiştiremezsiniz.
+3. **Ortamı düzenle** kutusunda, ortamın **Görünen ad**'ını güncelleştirebilirsiniz ancak **Bölge**'yi veya **Tür**'ü değiştiremezsiniz.
 
 4. Bir ortam Azure Data Lake Storage 2. Nesil uygulamasında verileri depolamak üzere yapılandırılırsa, **firma anahtarını** güncelleştirebilirsiniz. Ancak **Hesap adı**'nı veya **Kapsayıcı** adını değiştiremezsiniz.
 
@@ -132,19 +139,27 @@ Varolan ortamların bazı ayrıntılarını düzenleyebilirsiniz.
 
 ## <a name="reset-an-existing-environment"></a>Mevcut bir ortamı sıfırlama
 
-Tüm yapılandırmaları silmek ve alınan verileri kaldırmak isterseniz ortamı boş bir durum olarak sıfırlayabilirsiniz.
+Yönetici olarak, tüm yapılandırmaları silmek ve alınan verileri kaldırmak isterseniz ortamı boş bir durum olarak sıfırlayabilirsiniz.
 
-1.  **Yönetici** > **Sistem** > **Hakkında**'ya gidin.
+1.  Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin. 
 
-2.  **Sıfırla**'yı seçin. 
+2.  Sıfırlamak istediğiniz ortamı seçin ve üç noktayı **...** seçin. 
 
-3.  Silme işlemini onaylamak için ortam adını girin ve **Sıfırla**'yı seçin.
+3. **Sıfırla** seçeneğini belirleyin. 
+
+4.  Silme işlemini onaylamak için ortam adını girin ve **Sıfırla**'yı seçin.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Var olan bir ortamı silme (yalnızca yöneticiler için kullanılabilir)
+
+Yönetici olarak, yönettiğiniz bir ortamı silebilirsiniz.
+
+1.  Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin.
+
+2.  Sıfırlamak istediğiniz ortamı seçin ve üç noktayı **...** seçin. 
+
+3. **Sil** seçeneğini belirleyin. 
+
+4.  Silme işlemini onaylamak için ortam adını girin ve **Sil**'i seçin.
 
 
-## <a name="delete-an-existing-environment"></a>Varolan bir ortamı silme
-
-1. **Yönetici** > **Sistem** > **Hakkında**'ya gidin.
-
-1. **Sil**'i seçin.
-
-1. Silme işlemini onaylamak için ortam adını girin ve **Sil**'i seçin.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

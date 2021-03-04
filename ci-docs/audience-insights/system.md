@@ -1,7 +1,7 @@
 ---
 title: Hedef kitle içgörülerinde sistem yapılandırması
 description: Dynamics 365 Customer Insights hedef kitle içgörüleri özelliğinde sistem ayarları hakkında bilgi edinin.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407219"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267364"
 ---
 # <a name="system-configuration"></a>Sistem yapılandırma
 
-**Sistem** sayfasında dört sekme bulunur: **Durum**, **Zamanlama**, **Hakkında** ve **Genel**.
+**Sistem** sayfası, aşağıdaki sekmeleri içerir:
+- [Durum](#status-tab)
+- [Zamanlama](#schedule-tab)
+- [API kullanımı](#api-usage-tab)
+- [Hakkında](#about-tab)
+- [Genel](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Sistem sayfası](media/system-tabs.png "Sistem sayfası")
 
 ## <a name="status-tab"></a>Durum sekmesi
 
-**Durum sekmesi**, birçok önemli ürün işleminin yanı sıra veri alımının ve veri dışarı aktarmalarının ilerlemesini izlemenize de olanak tanır. Etkin işlemlerin tam olduğundan emin olmak için bu sekmedeki bilgileri gözden geçirin.
+**Durum sekmesi**; veri alımı, veri dışarı aktarma işlemleri ve diğer bazı önemli ürün işlemlerinin ilerlemesini izlemenizi sağlar. Etkin işlemlerin tam olduğundan emin olmak için bu sekmedeki bilgileri gözden geçirin.
 
-Bu sekmede **Veri kaynakları**, **Sistem işlemleri** ve **Veri hazırlama** için durum tabloları bulunur. Her tablo, görevin **Adını** ve ilgili varlığını, en son çalıştırma **Durumunu** ve **Son güncelleştirme** zamanını izler.
+Bu sekmede, çeşitli işlemler için durum ve işleme bilgilerini içeren tablolar bulunur. Her tablo, görevin **Adını** ve ilgili varlığını, en son çalıştırma **Durumunu** ve **Son güncelleştirme** zamanını izler.
 
 Görevlerin adını seçerek son birkaç çalıştırmanın ayrıntılarını görüntüleyin.
 
@@ -40,7 +45,7 @@ Görevler için altı tür durum vardır. Aşağıdaki durum türleri ayrıca *E
 - **Atlandı:** Görev atlandı. Bu görevin bağımlı olduğu aşağı yönlü işlemlerden biri veya daha fazlası başarısız oldu veya atlandı.
 - **Başarısız:** Görevin işlenmesi başarısız oldu.
 - **İptal edildi:** İşlem, tamamlanmadan önce kullanıcı tarafından iptal edildi.
-- **Kuyruğa Alındı:** İşlem kuyruğa alındı ve tüm aşağı yönlü görevler tamamlandıktan sonra başlayacak. Daha fazla bilgi için bkz. [Yenileme ilkeleri](#refresh-policies).
+- **Kuyruğa Alındı:** İşleme kuyruğa alınır ve tüm yukarı akış görevleri tamamlandığında başlar. Daha fazla bilgi için bkz. [Yenileme ilkeleri](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Yenileme ilkeleri
 
@@ -89,4 +94,17 @@ Seçimlerinizi onaylamak için **Kaydet**'i seçin.
 
 ## <a name="api-usage-tab"></a>API kullanımı sekmesi
 
-Gerçek zamanlı API kullanımı ile ilgili ayrıntıları bulun ve belirli bir zaman aralığında hangi olayların gerçekleştiğini görün. Daha fazla bilgi için bkz. [Gerçek zamanlı veri alımı](real-time-data-ingestion.md).
+Gerçek zamanlı API kullanımıyla ilgili ayrıntıları bulun ve belirli bir zaman diliminde hangi olayların gerçekleştiğini görün. **Zaman dilimi seçin** açılan menüsünde, zaman dilimini seçin. 
+
+**API kullanımı** üç bölüm içerir: 
+- **API çağrıları**: seçilen zaman diliminde API'ye yapılan toplu çağrı sayısını görselleştiren bir grafik.
+
+- **Veri aktarımı**: seçilen zaman diliminde API aracılığıyla aktarılan veri miktarını gösteren bir grafik.
+
+-  **İşlemler**: kullanılabilir her API işlemi için satırları ve işlemlerin kullanımıyla ilgili ayrıntıları içeren bir tablo. [API başvurusuna](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) gitmek için bir işlem adı seçebilirsiniz.
+
+   [Gerçek zamanlı veri alımı](real-time-data-ingestion.md) kullanan işlemler, gerçek zamanlı API kullanımını görüntülemek için dürbün simgesine sahip bir düğme içerir. Geçerli ortamda gerçek zamanlı API kullanımına yönelik kullanım ayrıntılarını içeren bir yan bölmeyi açmak için düğmeyi seçin.   
+   Gerçek zamanlı etkileşimlerinizi en iyi şekilde nasıl sunacağınızı seçmek için **Gerçek zamanlı API kullanımı** bölmesindeki **Gruplama ölçütü** kutusunu kullanın. Verileri API yöntemi, uygun bulunan varlık adı (alınan varlık), oluşturan (etkinliğin kaynağı), sonuç (başarı veya başarısızlık) ya da hata kodlarına göre gruplandırabilirsiniz. Veriler, geçmiş grafiği ve tablo olarak kullanılabilir.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

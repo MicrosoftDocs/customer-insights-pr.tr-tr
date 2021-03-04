@@ -1,7 +1,7 @@
 ---
 title: Müşteri Kartı Eklentisi'ni yükleme ve yapılandırma
 description: Dynamics 365 Customer Insights için Müşteri Kartı eklentisini yükleyin ve yapılandırın.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644067"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268068"
 ---
 # <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
 
@@ -28,7 +28,7 @@ Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görün
 - [Common Data Service'i kullanarak Dynamics 365 uygulamasından alınan](connect-power-query.md) müşteri profilleri.
 - Müşteri Kartı Eklentisi kullanıcılarının, hedef kitle içgörülerinde [kullanıcı olarak eklenmesi](permissions.md) gerekir.
 - [Yapılandırılan arama ve filtreleme özellikleri](search-filter-index.md).
-- Demografi denetimi: Birleşik müşteri profilinde yaş ya da cinsiyet gibi demografik alanlar kullanılabilir.
+- Demografi denetimi: Birleşik müşteri profilinde (yaş ya da cinsiyet gibi) demografik alanlar kullanılabilir.
 - Zenginleştirme denetimi: Müşteri profillerine uygulanmış etkin [zenginleştirmeler](enrichment-hub.md) gerektirir.
 - Zeka denetimi: Azure Machine Learning ([Tahminler](predictions.md) veya [Özel Modeller](custom-models.md)) kullanılarak oluşturulan veriler gerektirir
 - Ölçüm denetimi: [Yapılandırılmış ölçümler](measures.md) gerektirir.
@@ -92,10 +92,26 @@ Müşteri Kartı Eklentisi, Dynamics 365'teki müşteri etkileşimi uygulamalar�
 
 1. **Alan Özellikleri** iletişim kutusunda, **Formda etiketi göster** onay kutusunun işaretini kaldırın.
 
-1. Denetim için **Web**'i seçin. Zenginleştirme denetimi için **enrichmentType** alanını yapılandırarak görüntülemek istediğiniz zenginleştirme türünü seçin. Her zenginleştirme türü için ayrı bir zenginleştirme denetimi eklemeniz gerekir.
+1. Denetim için **Web**'i seçin. Zenginleştirme denetimi için **enrichmentType** alanını yapılandırarak görüntülemek istediğiniz zenginleştirme türünü seçin. Her bir zenginleştirme türü için ayrı bir zenginleştirme denetimi ekleyin.
 
 1. Güncelleştirilmiş ilgili kişi formunu yayımlamak için **Kaydet** ve **Yayımla**'yı seçin.
 
 1. Yayınlanmış ilgili kişi formuna gidin. Yeni eklenen denetimi görürsünüz. İlk kez kullandığınızda oturum açmanız gerekebilir.
 
 1. Özel denetimde göstermek istediklerinizi özelleştirmek için sağ üst köşedeki düzenle düğmesini seçin.
+
+## <a name="upgrade-customer-card-add-in"></a>Müşteri Kartı Eklentisini Yükseltme
+Müşteri Kartı Eklentisi otomatik olarak yükseltilmez. En son sürüme yükseltmek için Eklentinin yüklü olduğu Dynamics 365 uygulamasında bu yordamı izleyin.
+
+1. Dynamics 365 uygulamasında, **Ayarlar** > **Özelleştirme**'ye gidin ve **Çözümler**'i seçin.
+
+1. Eklentiler tablosunda, **CustomerInsightsCustomerCard** öğesini arayın ve satırı seçin.
+
+1. Eylem çubuğunda, **Çözüm Yükseltmesini Uygula**'yı seçin.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Dynamics 365 uygulamalarının Özelleştirme alanında çözümü yükseltme":::
+
+1. Yükseltme işlemi başlatıldıktan sonra yükseltme tamamlanana kadar bir yükleniyor göstergesi görürsünüz. Daha yeni bir sürüm yoksa yükseltme işlemi bir hata iletisi gösterir.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

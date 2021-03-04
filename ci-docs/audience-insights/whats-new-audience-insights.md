@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650028"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270456"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -30,6 +30,77 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="january-2021-updates"></a>Ocak 2021 güncelleştirmeleri
+
+Ocak 2021'deki güncelleştirmeler; çeşitli özellikler, performans yükseltmeleri ve hata düzeltmeleri içerir.
+
+#### <a name="extensibility"></a>Genişletilebilirlik
+
+- **SFTP dışarı aktarma işlemi için genişletilmiş işlevsellik ve performans iyileştirmeleri** Artık, tüm çıktı varlıklarını Customer Insights'tan bir SFTP ana bilgisayarına dışarı aktarabilirsiniz. Daha önce dışarı aktarma, segment varlıklarıyla sınırlıydı. Ek olarak, SFTP dışarı aktarma işleminin performansı, SFTP ana bilgisayarınızın performansına bağlı olarak daha kısa sürede daha fazla veri hacmi sağlar.    
+  Daha fazla bilgi için bkz. [SFTP için bağlayıcı (önizleme)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmentler
+
+- **Ölçümleri iyileştirmek için makine öğrenimi destekli önerilen segmentler** Segmentleri keşfetmenin ve oluşturmanın yeni bir yolu var. Sistem, halihazırda izlediğiniz bir KPI'yı (ölçüm) iyileştirmeye yardımcı olabilecek segmentler önermek için bir yapay zeka modeli kullanır. Bir ölçü veya bir başka birincil öznitelikte seçtiğiniz özniteliklerin etkilerinin kapsamını gösteririz. Bu bilgiler, fırsatlar sunan olası segmentlerin bulunmasına yardımcı olur.    
+  Daha fazla bilgi için bkz. [Önerilen segmentler (önizleme)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Veri birleştirme
+
+- **Gelişmiş eşleme deneyimi** Veri birleştirme alanındaki eşleme deneyimi güncelleştirildi. Bu güncelleştirme, eşleme kurallarını yapılandırmanıza ve görüntülemenize olanak tanır ve eşlemenin nasıl çalıştığını daha fazla açıklamak üzere ayrıntılı istatistikler içerir. Eşleme kuralını devre dışı bırakma seçenekleri vardır. Böylece yapılandırma korunurken, eşleme kuralları sürüklenip bırakılırken artık eşleme kuralı etkin değildir.
+  Daha fazla bilgi için bkz. [Varlıkları eşleştirme](match-entities.md).
+
+- **Eşleştirme işlemindeki yinelenenleri kaldırma çıktısı varlık olarak kullanılabilir** Eşleştirme işlemindeki yinelenenleri kaldırma işleminin çıktısı artık daha fazla analiz için ayrı bir varlığa yazılıyor. Bu varlık, yinelenenleri kaldırma işleminde kullanılan alanlardan, kazanan kayıttan ve kazanan kayıtla birleştirilen karşılık gelen alternatif kayıtlardan oluşur.
+  Daha fazla bilgi için bkz. [Varlık olarak yinelenenleri kaldırma çıktısı](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Sistem yönetimi
+
+- **Verileri Microsoft Dataverse ile sorunsuz bir şekilde paylaşma** Artık Customer Insights çıktısını Microsoft Dataverse Managed Data Lake'i kullanarak Microsoft Dataverse uygulamalarıyla paylaşabilirsiniz. Dataverse ortamını Customer Insights ile ilişkilendirdikten sonra veri paylaşımını etkinleştirme seçeneğine sahip olursunuz.
+  Daha fazla bilgi için bkz. [Ortamları yönetme](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Aralık 2020 güncelleştirmeleri
+
+Aralık 2020'deki güncelleştirmeler çeşitli özellikler, performans yükseltmeleri ve hata düzeltmeleri içerir.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Aralık 2020'deki yeni ve güncelleştirilmiş özellikler
+
+#### <a name="data-enrichment"></a>Veri zenginleştirme
+
+- **İyileştirilmiş Marka ve İlgi Alanı benzeşim zenginleştirmeleri**
+  
+  Benzeşim puanlarımızı, daha anlaşılır hale getirmek ve kullanımlarını kolaylaştırmak için basitleştirdik. Artık müşterileri, belirli bir marka veya ilgi alanı için ne kadar benzeşime sahip olduklarına göre hızlı bir şekilde tanımlayabilirsiniz.
+
+  Ek olarak, müşteri profillerinizin nasıl zenginleştirilmesini istediğinizi daha iyi denetleyebilmeniz için yeni yapılandırma seçenekleri ekledik. 
+
+  Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md).
+
+- **Hangi profillerin zenginleştirileceğini denetleme**
+
+  Artık müşteri profillerinizin yalnızca bir alt kümesini, varsayılan müşteri varlığı yerine bir segment varlığı belirleme seçeneğiyle zenginleştirebilirsiniz. Zenginleştirmek istediğiniz müşteri profilleri ile bir segment oluşturun ve bu segmenti müşteri veri setinizin zenginleştirme yapılandırmasında seçin.
+  Bu özellik şu anda yalnızca Experian ve HERE Technologies tarafından sağlanan zenginleştirmeler için kullanılabilir. Yakında bu özelliği daha fazla zenginleştirme için etkinleştireceğiz.
+
+  Daha fazla bilgi için bkz. [Experian'ın sunduğu demografi bilgileriyle müşteri profillerini zenginleştirme](enrichment-experian.md) veya [HERE Technologies ile müşteri profillerini zenginleştirme](enrichment-here.md).
+
+#### <a name="extensibility"></a>Genişletilebilirlik
+
+- **Segmentlerinizi Autopilot aracılığıyla etkinleştirme**
+
+  Segmentleri Autopilot'a dışarı aktarın ve pazarlama amaçları için kullanın. Daha fazla bilgi için bkz. [Autopilot için bağlayıcı (önizleme)](export-autopilot.md).
+
+- **Segmentlerinizi SendGrid aracılığıyla etkinleştirme**
+
+  Segmentleri SendGrid'e dışarı aktarın ve pazarlama amaçları için kullanın. Daha fazla bilgi için bkz. [SendGrid için bağlayıcı](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Sistem yönetimi
+
+- **Güncelleştirilmiş ortam yönetimi deneyimi**
+  
+  Artık, doğrudan uygulama başlığındaki ortam seçiciden ortamlar oluşturabilir, düzenleyebilir, silebilir ve sıfırlayabilirsiniz. 
+  
+  Ek olarak kullandığınız ortam, ortam panelinin en üstüne sabitlenir, böylece artık kullandığınız ortamı aramanıza gerek kalmaz.
+
+  Daha fazla bilgi için bkz. [Ortamları yönetme](manage-environments.md).
 
 ## <a name="november-2020-updates"></a>Kasım 2020 güncelleştirmeleri
 
@@ -151,7 +222,7 @@ Bu yeni özellik, veri birleştirme sürecine iletilen semantik giriş özniteli
 
 - **Experian'dan demografik zenginleştirme**
 
-Experian'dan demografik zenginleştirme artık önizleme olarak kullanılabilir. Experian, tüketici ve iş alacak raporlama ve pazarlama servisleri için genel bir liderdir. [Experian’ın veri zenginleştirme hizmetiyle](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage) müşteri profillerinizi ev büyüklüğü, gelir ve bunun gibi demografik verilerle zenginleştirerek müşterileriniz hakkında daha ayrıntılı bir anlayış geliştirebilirsiniz.
+Experian'dan demografik zenginleştirme artık önizleme olarak kullanılabilir. Experian, tüketici ve iş alacak raporlama ve pazarlama servisleri için genel bir liderdir. [Experian'ın veri zenginleştirme hizmetiyle](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage) müşteri profillerinizi ev büyüklüğü, gelir ve bunun gibi demografik verilerle zenginleştirerek müşterileriniz hakkında daha ayrıntılı bir anlayış geliştirebilirsiniz.
 
 Bu özelliği kullanmak için etkin bir Experian aboneliğinizin olması gerekir.
 
@@ -165,7 +236,7 @@ Daha fazla bilgi için bkz. [Experian'dan demografiyle müşteri profillerini ze
 Görev ayrıntıları bölmesi, sistemin çalıştırdığı görevlerle ilgili ayrıntıları görmenizi sağlar. Yapılandırmayla ilgili sorunları belirlemenin ve çözüm bulmanın kullanışlı bir yoludur.
 Hata iletilerini inceleyerek olası sorunların nasıl çözüldüğünü görün.
  
-- **Ek sayfalara işleme bilgileri eklendi**
+- **Daha fazla sayfaya eklenen işleme bilgileri**
 
 Bu iyileştirme **Varlıklar** ve **Müşteriler** sayfasında varlıklarınızın durumu hakkında bilgiler ekler.
  
@@ -202,9 +273,9 @@ Ağustos 2020'deki güncelleştirmeler, çeşitli özellikler, performans yükse
 
 #### <a name="enrichment"></a>Zenginleştirme
 
-- **İlgi alanı eğilimleri zenginleştirmesi ek pazarlarda kullanılabilir**
+- **İlgi alanı eğilimleri zenginleştirmesi daha fazla pazarda kullanılabilir**
 
-  İlgi alanları zenginleştirmesinin Amerika Birleşik Devletleri dışında kullanılabilirliğini beş ek pazara genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişletmeyle müşteri verilerinizi bu pazarlar için geçerli olan ek ilgi alanlarıyla zenginleştirebilirsiniz. Ayrıca bu pazarlarda bulunan müşteri profillerinizi, Microsoft Graph'taki yerel özel verileri kullanarak da zenginleştireceğiz.
+  İlgi alanı eğilimleri zenginleştirmesinin kullanılabilirliğini Amerika Birleşik Devletleri'nin ötesinde diğer beş pazara genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişlemeyle müşteri verilerinizi bu pazarlar için geçerli olan daha fazla ilgi alanıyla zenginleştirebilirsiniz. Ayrıca bu pazarlarda bulunan müşteri profillerinizi, Microsoft Graph'taki yerel özel verileri kullanarak da zenginleştireceğiz.
   Daha fazla bilgi için, bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +294,9 @@ Temmuz 2020'deki güncelleştirmeler, çeşitli özellikler, performans yükselt
 
 #### <a name="enrichment"></a>Zenginleştirme
 
-- **Marka benzerlikleri zenginleştirme başka pazarlarda da kullanılma sunuldu**
+- **Marka eğilimleri zenginleştirmesi daha fazla pazarda kullanılabilir**
 
-  Marka benzerlikleri zenginleştirmenin kullanılabilirliğini Birleşik Devletler'in yanında beş pazara daha genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişlemeyle, müşteri verilerinizi bu pazarlardaki yerel markalarla zenginleştirebilirsiniz. Ayrıca bu pazarlarda bulunan müşteri profillerinizi, Microsoft Graph'taki yerel özel verileri kullanarak da zenginleştireceğiz.
+  Marka eğilimleri zenginleştirmesinin kullanılabilirliğini Amerika Birleşik Devletleri'nin ötesinde diğer beş pazara genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişlemeyle, müşteri verilerinizi bu pazarlardaki yerel markalarla zenginleştirebilirsiniz. Ayrıca bu pazarlarda bulunan müşteri profillerinizi, Microsoft Graph'taki yerel özel verileri kullanarak da zenginleştireceğiz.
   Daha fazla bilgi için, bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>Haziran 2020 güncelleştirmeleri
@@ -238,7 +309,7 @@ Haziran 2020'deki güncelleştirmeler, çeşitli özellikler, performans yüksel
 
 - **Leadspace'ten şirket verileriyle zenginleştirme**
   
-  Leadspace'ten ilgili şirket verilerini aramak için kullanılan birleşik müşteri profillerindeki alanları tanımlayın. Zenginleştirme işlemini çalıştırdıktan sonra, B2B profilleri şirket büyüklüğü, konum ve sektör gibi ek özniteliklerle zenginleştirilir.    
+  Leadspace'ten ilgili şirket verilerini aramak için kullanılan birleşik müşteri profillerindeki alanları tanımlayın. Zenginleştirme işlemini çalıştırdıktan sonra B2B profilleri şirket boyutu, konum, sektör vb. daha fazla öznitelik ile zenginleştirilir.    
   Bu işbirliği, üçüncü taraf servislerden gelen girişle verilerinizin kalitesini geliştirmenize olanak sağlar. Bu zenginleştirmeyi kullanırken B2B şirket verilerine erişim için Leadspace'ten lisans almanız gerekir. Sistem, verilerinizi sürekli zenginleştirmek için bu lisansı kullanır.    
   Daha fazla bilgi için bkz. [Leadscape ile şirket profillerini zenginleştirme](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Haziran 2020'deki güncelleştirmeler, çeşitli özellikler, performans yüksel
   Dynamics 365 Müşteri Kartı Eklentisi'ndeki yeni bir denetim, Dynamics 365'teki müşteri etkileşimi uygulamalarındaki ilgili kişileriniz üzerinde marka ve ilgi alanı zenginleştirmeleri yapmanızı sağlar.    
   Daha fazla bilgi için bkz. [Müşteri Kartı Eklentisi](customer-card-add-in.md).
 
-- **Ek Power Automate tetikleyiciler**
+- **Daha fazla Power Automate tetikleyicisi**
 
   Power Automate tetikleyicilerimizi genişleterek aşağıdaki tetikleyicileri ekledik:
   - Otomatik tam yenileme (veri kaynakları, birleşme, segmentler, ölçümler, dışarı aktarımlar) tamamlandığında bildirim alın veya eylem gerçekleştirin.
@@ -295,12 +366,12 @@ Haziran 2020'deki güncelleştirmeler, çeşitli özellikler, performans yüksel
   
   Yapay zeka kullanarak müşteri tabanınızda benzer müşteriler bulun. İkili sınıflandırma makine öğrenimi modeli, genişletilmiş segmentteki müşterilere benzerlik puanı atar. Puan, kaynak segmentteki müşterilere benzerliğe dayanır. Benzerlik puanına bağlı olarak, müşteri profilleri yeni oluşturulan segmente eklenir.
 
-  Bazen dijital pazarda benzerlik modelleme olarak adlandırılan bu yöntem, ek öznitelikleri hesaba katarak başka bir müşteri segmentinize benzeyen müşterileri bulmak için bir yapay zeka modeli kullanılır. Hem öznitelikleri seçmenize olanak tanır hem de bu yeni segmentte yer alması gereken en fazla müşteri sayısını belirtmenizi sağlar. Yapay zeka modeli, seçtiğiniz özniteliklere göre her müşteri için benzerlik puanlarını hesaplar ve yüksek ortalama benzerlik puanı olan müşterileri bulur. Sonuçta ortaya çıkan segmentte, asıl segmentinizdeki müşterilere benzeyen müşteriler yer alır.    
+  Dijital pazarlamada bazen benzer modelleme olarak da anılan bu yetenek daha fazla özniteliği hesaba katarak müşterilerinizin başka bir segmentine benzeyen müşterileri bulmaya yardımcı olmak için bir yapay zeka modeli kullanır. Hem öznitelikleri seçmenize olanak tanır hem de bu yeni segmentte yer alması gereken en fazla müşteri sayısını belirtmenizi sağlar. Yapay zeka modeli, seçtiğiniz özniteliklere göre her müşteri için benzerlik puanlarını hesaplar ve yüksek ortalama benzerlik puanı olan müşterileri bulur. Sonuçta ortaya çıkan segmentte, asıl segmentinizdeki müşterilere benzeyen müşteriler yer alır.    
   Daha fazla bilgi için bkz. [Benzer Müşteriler](find-similar-customer-segments.md).
 
 - **Segment çakışması ve farklılıklar**
 
-  Segment çakışması, iki veya daha fazla segmentte ortak olan müşterileri görmenizi sağlar. Örneğin, yüksek harcama yapan müşteriler segmentin memnuniyeti yüksek müşteriler segmenti ile nasıl çakıştığını veya kaybedilen müşteri segmentinin memnuniyeti düşük müşteriler segmenti ile nasıl çakıştığını görürsünüz. Ayrıca, sizin seçeceğiniz başka bir özniteliğe göre çakışmanın nasıl değiştiğini analiz edebilirsiniz.
+  Segment çakışması, iki veya daha fazla segmentte ortak olan müşterileri görmenizi sağlar. Örneğin, yüksek harcama yapan müşteriler segmentin memnuniyeti yüksek müşteriler segmenti ile nasıl çakıştığını veya kaybedilen müşteri segmentinin memnuniyeti düşük müşteriler segmenti ile nasıl çakıştığını görürsünüz. Ek olarak, seçtiğiniz ek bir özniteliğe göre çakışmanın nasıl değiştiğini de analiz edebilirsiniz.
 
   Segment farklıları, bir segmenti diğer müşterilerinizden veya başka bir segmentten ayıran unsurları ortaya çıkarır. Tüm yapmanız gereken bir segment tanımlamaktır. Sistem, en güçlüden en zayıfa doğru sıralanan farklılıklar listesi biçiminde segmenti diğerlerinden ayıran profil özniteliklerini ve ölçümleri belirler.    
   Daha fazla bilgi için bkz. [Segment içgörüleri (önizleme)](segment-insights.md).
@@ -333,7 +404,7 @@ Mayıs 2020'deki güncelleştirmeler çeşitli özellikler, performans yükseltm
 
 - **Müşteri Kartı Eklentisinde güncelleştirilmiş zaman çizelgesi ve sayfalandırma**
 
-  Müşteri Kartı Eklentisi çözümünün zaman çizelgesi, etkinlik zaman çizelgesiyle eşleşir. Zaman çizelgesinin sayfalaması bir defada 50 kadar etkinlik gösterecek şekilde geliştirildi. Ayrıca zaman çizelgesine ek etkinlikler yüklenmesine izin verilir.    
+  Müşteri Kartı Eklentisi çözümünün zaman çizelgesi, etkinlik zaman çizelgesiyle eşleşir. Zaman çizelgesinin sayfalaması bir defada 50 kadar etkinlik gösterecek şekilde geliştirildi. Ayrıca, zaman çizelgesinde daha fazla etkinlik yüklenmesine izin verir.    
   Daha fazla bilgi için bkz. [Müşteri Kartı Eklentisi](customer-card-add-in.md).
 
 - **Segment değişiklikleri için Power Automate tetikleyicisi**
@@ -412,7 +483,7 @@ Nisan 2020'deki güncelleştirmeler, çeşitli özellikler, performans yükseltm
 
 - **LiveRamp'a dışarı aktarma**
 
-  Dijital, sosyal ve TV ekosistemlerindeki 500'den fazla platformla bağlanmak için LiveRamp®'ta verilerinizi etkinleştirin. Reklam kampanyalarını hedeflemek, gizlemek ve kişiselleştirmek için verilerinizden LiveRamp'ta yararlanın.    
+  Dijital, sosyal ve TV ekosistemlerindeki 500'den fazla platformla bağlanmak için LiveRamp®'ta verilerinizi etkinleştirin. Reklam kampanyalarını hedeflemek, durdurmak ve kişiselleştirmek için LiveRamp'taki verilerinizi kullanın.    
   Daha fazla bilgi için bkz. [LiveRamp&reg; bağlayıcısı](export-liveramp.md).
 
 - **Customer Insights Teams Eklentisi**
@@ -433,7 +504,7 @@ Nisan 2020'deki güncelleştirmeler, çeşitli özellikler, performans yükseltm
 
 #### <a name="segments"></a>Segmentler
 
-- **Ek işleç**
+- **Başka bir işleç**
   
   Ekleme işleci, müşteriler için olası birkaç dize değerine göre segmentlere ayırmaya olanak tanır. Bu işleci eklemeden önce bu tür segmentleri birden çok VEYA koşulu ile oluşturmanız gerekir. Ekleme işleci bunu tek bir koşulla gerçekleştirmenizi sağlar.    
   Daha fazla bilgi için bkz. [Segmentler oluşturma ve yönetme](segments.md).
@@ -444,3 +515,6 @@ Nisan 2020'deki güncelleştirmeler, çeşitli özellikler, performans yükseltm
   
   Yapılandırmanızı bir ortamdan diğerine kopyalayın. Yeni bir ortam oluştururken yapılandırmayı kopyalamak istediğiniz var olan bir ortamı seçebilirsiniz. Şu anda veri kaynaklarını, veri birleştirmeyi, ilişkileri, ölçümleri ve segmentleri kopyalamayı destekliyoruz. Veri kaynağı kimlik bilgileri ve gerçek veriler kopyalanmaz.    
   Daha fazla bilgi için bkz. [Ortamları yönetme](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

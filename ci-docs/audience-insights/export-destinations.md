@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643887"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477157"
 ---
-# <a name="export-destinations-preview"></a>Dışarı aktarma hedefleri (önizleme)
+# <a name="export-destinations-preview-overview"></a>Dışarı aktarma hedeflerine (önizleme) genel bakış
 
 **Dışarı aktarma hedefleri** sayfası, verileri dışarı aktarmak için ayarladığınız tüm konumları gösterir. Ayrıca dışarı aktarma için yeni hedefler de ekleyebilirsiniz. Ayrıca şu anda kullanılabilir olan dışarı aktarma seçeneklerini gösterir. Hızlı bir genel bakış ve açıklama edinin ve her genişletilebilirlik seçeneğiyle neler yapabileceğinizi öğrenin. Birleşik profilleri, ölçümleri ve segmentleri işletmenizle ilgili desteklenen uygulamalara dışarı aktarın.
 
@@ -27,10 +27,13 @@ Aşağıdaki genişletilebilirlik seçeneklerini bulmak için **Yönetici** > **
 - [Power Automate bağlayıcısı](export-power-automate.md)
 - [Power Apps bağlayıcısı](export-power-apps.md)
 - [Power BI bağlayıcısı](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob Depolama](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp&reg; bağlayıcı](export-liveramp.md)
 - [Microsoft Teams için bot](export-teams-bot.md)
 - [MailChimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Verme hedefini kaldırmak için ana **Dışa aktarma hedefleri** sayfasından ba
 2. Açılır menüsünde **Kaldır** seçeneğini belirleyin.
 
 3. Onay ekranında **Kaldır**'ı seçerek kaldırma işlemini onaylayın.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

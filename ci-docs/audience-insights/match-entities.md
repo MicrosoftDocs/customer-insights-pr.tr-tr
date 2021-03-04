@@ -4,17 +4,17 @@ description: Birleştirilmiş müşteri profilleri oluşturmak için varlıklar�
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407216"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267502"
 ---
 # <a name="match-entities"></a>Varlıkları eşleme
 
@@ -22,7 +22,7 @@ Eşleme aşamasını tamamladıktan sonra varlıklarınızı eşleştirmeye haz�
 
 ## <a name="specify-the-match-order"></a>Eşleştirme sırasını belirtme
 
-**Birleştir** > **Eşleştir**'e gidin ve eşleştirme aşamasını başlatmak için **Sırayı ayarla**'yı seçin.
+**Veri** > **Birleştir** > **Eşleştir**'e gidin ve eşleştirme aşamasına başlamak için **Sırayı ayarla**'yı seçin.
 
 Her eşleştirme iki veya daha fazla varlığı tek bir varlıkta birleştirirken her benzersiz müşteri kaydı korunur. Aşağıdaki örnekte üç varlık seçtik: **Birincil** varlık olarak **ContactCSV: TestData**, **Varlık 2** olarak **WebAccountCSV: TestData** ve **Varlık 3** olarak **CallRecordSmall: TestData**. Seçimlerin üzerindeki diyagramda eşleştirme sırasının nasıl yürütüleceği gösterilir.
 
@@ -136,7 +136,7 @@ Yinelenenleri kaldırma işlemi yapılan kayıt tanımlandıktan sonra bu kayıt
 
 1. Eşleştirme işlemini çalıştırmak artık yinelenenleri kaldırma kurallarında tanımlanan koşullara göre kayıtları gruplandırır. Kayıtları gruplandırdıktan sonra kazanan kaydı belirlemek için birleştirme ilkesi uygulanır.
 
-1. Bu kazanan kayıt daha sonra çapraz varlık eşleştirmesine iletilir.
+1. Bu kazanan kayıt daha sonra, eşleme kalitesini iyileştirmek için kazanan olmayan kayıtlarla (örneğin, alternatif kimlikler) birlikte çapraz varlık eşleştirmesine aktarılır.
 
 1. Her zaman eşleştir ve hiçbir zaman eşleştirme durumları için tanımlanan özel eşleştirme kuralları, yinelenenleri kaldırma kurallarını geçersiz kılar. Yinelenenleri kaldırma kuralı, eşleşen kayıtları belirlerse ve bir özel eşleştirme kuralı bu kayıtları hiçbir zaman eşleştirme şeklinde ayarlandıysa iki kayıt eşleştirilmez.
 
@@ -157,6 +157,17 @@ Birinci eşleştirme işlemi, birleşik ana varlığın oluşturulmasını sağl
 
 > [!TIP]
 > Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+
+## <a name="deduplication-output-as-an-entity"></a>Varlık olarak yinelenenleri kaldırma çıktısı
+Yinelenenleri kaldırma işlemi, çapraz varlık eşleşmesinin parçası olarak oluşturulan birleşik ana varlığa ek olarak, yinelemeleri kaldırılan kayıtları tanımlamak için eşleştirme sırasından her varlık için yeni bir varlık oluşturur. Bu varlıklar **Varlıklar** sayfasındaki **Sistem** bölümünde **ConflationMatchPairs:CustomerInsights** ile birlikte **Deduplication_Datasource_Entity** adıyla bulunabilir.
+
+Yinelenenleri kaldırma çıkış varlığı aşağıdaki bilgileri içerir:
+- Kimlikler/Anahtarlar
+  - Birincil anahtar alanı ve alternatif kimlikler alanı. Alternatif kimlikler alanı, bir kayıt için tanımlanan tüm alternatif kimliklerden oluşur.
+  - Deduplication_GroupId alanı, belirtilen yinelenenleri kaldırma alanlarına göre tüm benzer kayıtları gruplayan bir varlık içinde tanımlanan grubu veya kümeyi gösterir. Bu, sistem işleme amaçları için kullanılır. El ile yenilenenleri kaldırma kuralı veya sistem tanımlı yenilemeyi kaldırma kuralları yoksa bu alanı, yenilenenleri kaldırma çıkış varlığında bulamayabilirsiniz.
+  - Deduplication_WinnerId: Bu alan, tanımlanan gruplardan veya kümelerden kazanan kimliğini içerir. Deduplication_WinnerId bir kaydın Birincil anahtar değeriyle aynıysa bu, kaydın kazanan kayıt olduğu anlamına gelir.
+- Yinelenenleri kaldırma kurallarını tanımlamak için kullanılan alanlar.
+- Yinelenenleri kaldırma kurallarından hangilerinin uygulandığını ve eşleştirme algoritması tarafından döndürülen puanı gösteren Kural ve Puan alanları.
 
 ## <a name="review-and-validate-your-matches"></a>Eşleştirmelerinizi inceleme ve doğrulama
 
@@ -200,6 +211,11 @@ Bazı eşleştirme parametrelerinizi yeniden yapılandırarak kaliteyi artırın
   > [!div class="mx-imgBorder"]
   > ![Kuralı yineleme](media/configure-data-duplicate-rule.png "Kuralı yineleme")
 
+- Eşleşme kuralını, eşleştirme sürecinden hariç tutarken korumak için **Bir kuralı devre dışı bırakın**.
+
+  > [!div class="mx-imgBorder"]
+  > ![Bir kuralı devre dışı bırakma](media/configure-data-deactivate-rule.png "Bir kuralı devre dışı bırakma")
+
 - **Düzenle** simgesini seçerek **kurallarınızı düzenleyin**. Aşağıdaki değişiklikleri uygulayabilirsiniz:
 
   - Bir koşulun özniteliklerini değiştirme: Belirli bir koşul satırındaki yeni öznitelikleri seçin.
@@ -229,6 +245,8 @@ Belirli kayıtların her zaman eşleştirilmesi veya hiç eşleştirilmemesi ger
     - Entity2Key: 34567
 
    Aynı şablon dosyası, birden çok varlıktaki özel eşleştirme kayıtlarını belirtebilir.
+   
+   Bir varlıkta yinelenenleri kaldırma için özel eşleştirme belirtmek isterseniz aynı varlığı, Varlık1 ve Varlık2 olarak sağlayın ve farklı birincil anahtar değerleri ayarlayın.
 
 5. Uygulamak istediğiniz tüm geçersiz kılmaları ekledikten sonra şablon dosyasını kaydedin.
 
@@ -250,3 +268,6 @@ Belirli kayıtların her zaman eşleştirilmesi veya hiç eşleştirilmemesi ger
 ## <a name="next-step"></a>Sonraki adım
 
 En az bir eşleştirme çifti için eşleştirme işlemini tamamladıktan sonra verilerinizdeki olası çelişkileri [**Birleştirme**](merge-entities.md) konusuna giderek çözebilirsiniz.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

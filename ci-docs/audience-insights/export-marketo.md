@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 34ccee2894f1f2b552d0c6a88a6810e2dfc677a3
-ms.sourcegitcommit: 0b1d3ca11b8ba362a959da0eea15c37e9cdba084
+ms.openlocfilehash: e0245f2d01aabc86f43532822c056965ff7ae67a
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4570427"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267105"
 ---
 # <a name="connector-for-marketo-preview"></a>Marketo için bağlayıcı (önizleme)
 
@@ -74,3 +74,6 @@ Marketo ile kampanyalar oluşturmak, e-posta pazarlaması sağlamak ve belirli m
 
 Dynamics 365 Customer Insights uygulamasının Marketo'ya veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak Marketo'nun sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
 Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman bu dışarı aktarma hedefini kaldırabilir.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

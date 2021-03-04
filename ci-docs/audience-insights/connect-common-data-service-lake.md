@@ -4,17 +4,17 @@ description: Yönetilen bir Common Data Service data lake'ten verileri içe akta
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643422"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267838"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Common Data Service yönetilen veri gölündeki verilere bağlanma
 
@@ -34,7 +34,10 @@ Azure Data Lake Storage gibi çevrimiçi hizmetlerde depolanan veriler, verileri
 
 3. **Common Data Service'e bağlan**'ı ve ardından **İleri**'yi seçin.
 
-4. Veri kaynağı için bir **ad** girin ve **İleri**'yi seçin.
+4. Veri kaynağı için bir **ad** girin ve **İleri**'yi seçin. Yönergeleri adlandırın: 
+   - Bir harfle başlayın.
+   - Yalnızca harfleri ve sayıları kullanın. Özel karakterlere ve boşluklara izin verilmez.
+   - 3 ile 64 arasında karakter kullanın.
 
 5. Common Data Service kuruluşunuz için **Sunucu adresini** girin ve **Oturum aç**'ı seçin.
 
@@ -65,3 +68,6 @@ Farklı bir Common Data Service'e bağlanmak için [yeni bir veri kaynağı olu�
 3. Listeden **Düzenle** seçeneği belirleyin.
 
 4. Kullanılabilir varlıklar listesinden ek varlıklar seçin ve ardından **Kaydet**'i seçin.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643707"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269998"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Facebook Reklamları Yöneticisi için bağlayıcı (önizleme)
 
@@ -62,7 +62,16 @@ Facebook ve Instagram'da kampanyalar oluşturmak için birleşik müşteri profi
 
 [Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
 
+## <a name="known-limitations"></a>Bilinen sınırlamalar
+
+- Facebook Reklamları Yöneticisi'ne dışarı aktarma başına 10 milyona kadar müşteri profili 
+- Facebook Reklamları Yöneticisi'ne dışarı aktarma segmentlerle sınırlıdır
+- Toplam 10 milyon profil bulunan segmentlerin dışarı aktarılmasının tamamlanması 90 dakika kadar sürebilir
+
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 
 Dynamics 365 Customer Insights uygulamasının Facebook Reklamları Yöneticisine veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak Facebook Reklamları'nın sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
 Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman bu dışarı aktarma hedefini kaldırabilir.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

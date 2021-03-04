@@ -4,16 +4,16 @@ description: Dynamics 365 Customer Insights'ta Azure Machine Learning uygulamas�
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668927"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267258"
 ---
 # <a name="custom-machine-learning-models"></a>Özel makine öğrenimi modelleri
 
@@ -46,15 +46,15 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 
 1. Machine Learning Studio (klasik) web hizmetini veya **Modelinizi içeren web hizmeti** açılan menüsünden Azure Machine Learning kanalını seçin. Ardından **İleri**'yi seçin.
    - [Machine Learning Studio'da (klasik) bir web hizmetini yayımlama](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service) hakkında daha fazla bilgi edinin
-   - [Tasarımcı kullanarak Azure Machine Learning'de bir kanalı yayımlama](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) veya [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) hakkında daha fazla bilgi edinin. 
-     > [!NOTE]
-     > Kanalınız [işlem hattı uç noktası](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) altında yayımlanmalıdır.
+   - [Tasarımcı kullanarak Azure Machine Learning'de bir kanalı yayımlama](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) veya [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) hakkında daha fazla bilgi edinin. Kanalınız [işlem hattı uç noktası](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) altında yayımlanmalıdır.
 
 1. Her bir **Web hizmeti girişi** için, hedef kitle içgörülerinden eşleşen **Varlık**'ı seçin ve **İleri** seçeneğini belirleyin.
+   > [!NOTE]
+   > Özel model iş akışı; web hizmeti girdi alanlarını, alanın adına ve veri türüne göre varlık özniteliklerine eşlemek için buluşsal yöntemler uygular. Web hizmeti alanı bir varlıkla eşlenemezse bir hata görürsünüz.
 
    > [!div class="mx-imgBorder"]
    > ![İş Akışı yapılandır](media/intelligence-screen2-updated.png "İş Akışı yapılandır")
-
+   
 1. **Model Çıkış Parametreleri** adımında, aşağıdaki özellikleri ayarlayın:
    - Machine Learning Studio (klasik)
       1. Web hizmeti çıkış sonuçlarının akmasını istediğiniz çıkışın **Varlık adı**'nı girin.
@@ -112,3 +112,6 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 1. **Sil**'i seçin ve silme işleminizi onaylayın.
 
 İş akışınız silinir. İş akışını oluşturduğunuzda oluşturulan [varlık](entities.md) devam eder ve **Varlıklar** sayfasından görüntülenebilir.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

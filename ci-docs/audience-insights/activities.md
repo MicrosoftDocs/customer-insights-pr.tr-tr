@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667253"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267456"
 ---
 # <a name="customer-activities"></a>Müşteri etkinlikleri
 
@@ -44,13 +44,13 @@ Veri kaynaklarınız, birden çok veri kaynağından işlem tabanlı ve aktivite
 
 1. **İlişki ayarla** bölümünde aktivite verilerinizi ilgili müşteriye bağlamak için ayrıntıları yapılandırın.
 
-   > [!div class="mx-imgBorder"]
-   > ![Varlık ilişkisini tanımlama](media/activities-entities-define.png "Varlık ilişkisini tanımlama")
-
     - **Aktivite varlığı alanı**: Aktivite varlığınızda başka bir varlık ile ilişki kurmak için kullanılacak alanı seçin.
     - **Müşteri varlığı**: Aktivite varlığınızın ilişkide olacağı ilgili kaynak müşteri varlığını seçin. Yalnızca veri birleştirme işleminde kullanılan kaynak müşteri varlıklarıyla bağlantı kurabilirsiniz.
     - **Müşteri varlığı alanı**: Bu alan, eşleme işleminde seçilen kaynak müşteri varlığının birincil anahtarını gösterir. Kaynak müşteri varlığındaki bu birincil anahtar alanı aktivite varlığı ile ilişki kurmak için kullanılır.
     - **Ad**: Bu aktivite varlığı ile seçilen kaynak müşteri varlığı arasında bir ilişki zaten varsa ilişki adı salt okunur modda olacaktır. Böyle bir ilişki yoksa burada sağlanan ad ile yeni bir ilişki oluşturulur.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Varlık ilişkisini tanımlama](media/activities-entities-define.png "Varlık ilişkisini tanımlama")
 
 1. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
 
@@ -82,3 +82,6 @@ Veri kaynaklarınız, birden çok veri kaynağından işlem tabanlı ve aktivite
 3. **Sil** simgesini seçin.
 
 4. Silme işlemini onaylayın.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

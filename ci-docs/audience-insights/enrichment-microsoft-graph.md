@@ -1,20 +1,20 @@
 ---
 title: Microsoft Graph ile müşteri profillerini zenginleştirme
 description: Müşteri verilerinizi marka ve ilgi benzerlikleriyle zenginleştirmek için Microsoft Graph'ın özel verilerini kullanın.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407187"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269354"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Müşteri profillerini marka ve ilgi benzerlikleriyle zenginleştirme (önizleme)
 
@@ -35,16 +35,21 @@ Microsoft Graph'taki çevrimiçi arama verilerini, çeşitli nüfus niteliği se
 
 [Microsoft Graph hakkında daha fazla bilgi edinin](https://docs.microsoft.com/graph/overview)
 
-## <a name="affinity-score-and-confidence"></a>Benzeşim puanı ve güvenilirliği
+## <a name="affinity-level-and-score"></a>Benzeşim düzeyi ve puanı
 
-**Benzeşim puanı** 100 puanlık bir ölçekte hesaplanır 100 ve bir marka ya da ilgi için en yüksek benzeşim içeren kesimi temsil eder.
+Her zenginleştirilmiş müşteri profilinde iki ilgili değer sağlarız: yakınlık düzeyi ve yakınlık puanı. Bu değerler, diğer demografik segmentlere kıyasla o profilin demografik segmenti, bir marka veya ilgi alanı için benzeşimin ne kadar güçlü olduğunu belirlemenize yardımcı olur.
 
-**Benzeşim güvenilirliği** de 100 puan ölçeğinde hesaplanır. Bu, bir segmentin marka veya ilgi alanına benzerliğine sistemin güvenilirlik düzeyini belirtir. Güvenirlik düzeyi, segment boyutunu ve segment parçalı yapısını temel alır. Segment boyutu, belirli bir segmentte tutdığımız veri miktarına bağlıdır. Segment ayrıntı düzeyi, bir profilde kaç özniteliğin (yaş, cinsiyet, konum) mevcut olduğuna göre belirlenir.
+*Benzeşim düzeyi* dört düzeyden oluşur ve *benzeşim puanı*, benzeşim düzeyleriyle eşleşen 100 puanlık bir ölçekte hesaplanır.
 
-Veri kümeniz için puanları normalleştirmiyoruz. Sonuç olarak, veri kümesi için tüm olası benzeşim puanı değerlerini göremeyebilirsiniz. Örneğin, verilerinizde benzerlik puanı 100 olan zenginleştirilmiş müşteri profili olmayabilir. Belirli bir marka veya ilgi alanı için 100 puan alan nüfus niteliği segmentinde hiç müşteri yoksa bu mümkündür.
 
-> [!TIP]
-> Benzeşim puanları kullanarak [segmentler oluştururken](segments.md), uygun puan eşiklerine karar vermeden önce veri kümesi için benzeşim puanları dağılımını gözden geçirin. Örneğin, belirli bir marka veya ilgi için en yüksek benzeşim puanı olan 25 veri kümesinde 10 benzeşim puanı çok önemli kabul edilebilir.
+|Benzeşim düzeyi |Benzerlik puanı  |
+|---------|---------|
+|Çok yüksek     | 85-100       |
+|Yüksek     | 70-84        |
+|Orta     | 35-69        |
+|Düşük     | 1-34        |
+
+Benzeşimi ölçmek istediğiniz ayrıntı düzeyine bağlı olarak benzeşim düzeyini veya puanını kullanabilirsiniz. Benzeşim puanı size daha hassas kontrol sağlar.
 
 ## <a name="supported-countriesregions"></a>Desteklenen ülkeler/bölgeler
 
@@ -54,17 +59,13 @@ Veri kümeniz için puanları normalleştirmiyoruz. Sonuç olarak, veri kümesi 
 
 ### <a name="implications-related-to-country-selection"></a>Ülke seçimiyle ilgili etkiler
 
-- [Kendi markalarınızı seçerken](#define-your-brands-or-interests), seçili ülkeye/bölgeye göre öneri sağlarız.
+- [Kendi markalarınızı seçerken](#define-your-brands-or-interests) sistem, seçilen ülkeye veya bölgeye göre öneriler sunar.
 
-- [Bir sektör belirlerken](#define-your-brands-or-interests), seçilen ülkeye/bölgeye bağlı olarak en ilgili markaları veya ilgi alanlarını belirleriz.
+- [Bir sektör seçerken](#define-your-brands-or-interests), seçilen ülkeye veya bölgeye göre en ilgili markaları veya ilgi alanlarını elde edersiniz.
 
-- [Alanlarınızı eşlerken](#map-your-fields), Ülke/Bölge alanı eşleşmiyorsa müşteri profillerinizi zenginleştirmek için seçili ülke/bölge ayarından alınan Microsoft Graph verilerini kullanırız. Bu seçim, ülke/bölge verisi bulunmayan müşteri profillerinizi zenginleştirmek için de kullanılır.
-
-- [Profiller zenginleştirilirken](#refresh-enrichment), seçili ülkede/bölgede olmayan profiller de dahil olmak üzere seçili marka ve ilgili alanları için Microsoft Graph verileri bulunan tüm müşteri profillerini zenginleştiririz. Örneğin, Almanya seçeneğini belirlediyseniz, ABD'deki seçili marka ve ilgili alanları için Microsoft Graph verileri varsa Birleşik Devletler'de bulunan profilleri zenginleştiririz.
+- [Profilleri zenginleştirirken](#refresh-enrichment), seçilen markalar ve ilgi alanları için veri aldığımız tüm müşteri profillerini zenginleştiririz. Seçilen ülkede veya bölgede olmayan profiller de dahildir. Örneğin, Almanya seçeneğini belirlediyseniz, ABD'deki seçili marka ve ilgili alanları için Microsoft Graph verileri varsa Birleşik Devletler'de bulunan profilleri zenginleştiririz.
 
 ## <a name="configure-enrichment"></a>Zenginleştirme yapılandırma
-
-Marka veya ilgi alanı zenginleştirmesini yapılandırma iki adımdan oluşur:
 
 ### <a name="define-your-brands-or-interests"></a>Markalarınızı veya ilgi alanlarınızı tanımlayın
 
@@ -75,9 +76,19 @@ Aşağıdaki seçeneklerden birini belirleyin:
 
 Marka veya ilgi alanı eklemek için eşleşen terimlere göre öneriler almak üzere bunu giriş alanına girin. Aradığınız bir markayı veya ilgi alanını listelemezsek **Öner** bağlantısını kullanarak bize geri bildirim gönderin.
 
+### <a name="review-enrichment-preferences"></a>Zenginleştirme tercihlerini inceleme
+
+Varsayılan zenginleştirme tercihlerinizi inceleyin ve gerektiği gibi güncelleştirin.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Zenginleştirme tercihleri penceresinin ekran görüntüsü.":::
+
+### <a name="select-entity-to-enrich"></a>Zenginleştirilecek varlığı seçme
+
+**Zenginleştirilmiş varlık**'ı seçin ve Microsoft Graph'tan alınan şirket verileriyle zenginleştirmek istediğiniz veri kümesini seçin. Tüm müşteri profillerinizi zenginleştirmek için Müşteri varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
+
 ### <a name="map-your-fields"></a>Alanlarınızı eşleyin
 
-Müşteri verilerinizi zenginleştirmek için kullanmamızı istediğiniz nüfus niteliği segmentini tanımlamak için birleşik müşteri varlığınızdaki alanları en az iki öznitelikle eşleştirin. Alanların eşlemesini tanımlamak için **Düzenle** ' ye ve bitirdiğinizde **Uygula** ' yı seçin. Alan eşlemesini tamamlamak için **Kaydet**'i seçin.
+Sistemin müşteri verilerinizi zenginleştirmek için kullanmasını istediğiniz demografik segmenti tanımlamak için birleşik müşteri varlığınızdan alanları eşleyin. Ülke/Bölge'yi ve en azından Doğum Tarihi veya Cinsiyet özniteliklerini eşleyin. Ayrıca, Şehir (ve Bölge) veya Posta kodundan en az birini eşlemeniz gerekir. Alanların eşlemesini tanımlamak için **Düzenle** ' ye ve bitirdiğinizde **Uygula** ' yı seçin. Alan eşlemesini tamamlamak için **Kaydet**'i seçin.
 
 Aşağıdaki biçim ve değerler desteklenmektedir; değerler büyük/küçük harfe duyarlı değildir:
 
@@ -120,3 +131,6 @@ Tek müşteri kartlarında marka ve faiz benzeşimleri de görüntülenebilir. *
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentleri](segments.md), [Ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışarı aktarın](export-destinations.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

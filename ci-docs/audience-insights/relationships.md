@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407221"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269905"
 ---
 # <a name="relationships-between-entities"></a>Varlıklar arasındaki ilişkiler
 
@@ -28,8 +28,8 @@ Eşleştirme ve birleştirme işlemleri sırasında sistem ilişkileri, akıllı
 > ![İlişki oluşturma](media/relationships-entities-merge.png "İlişki oluşturma")
 
 - ***CustomerToContact* ilişkisi** Müşteri varlığı ile İlgili Kişi varlığı arasında oluşturulmuştur. Müşteri varlığı **contactId** İlgili kişi varlığı anahtar alanıyla ilişkilendirmek için **Contact_contactId** anahtar alanını alır.
-- **_CustomerToAccount_ ilişkisi** Müşteri varlığı ile Firma varlığı arasında oluşturulur. Müşteri varlığı **accountId** Firma varlığı anahtar alanıyla ilişkilendirmek için **Account_accountId** anahtar alanını alır.
-- **_CustomerToWebAccount_ ilişkisi** Müşteri varlığı ile WebAccount varlığı arasında oluşturulur. Müşteri varlığı **webaccountId** WebAccount varlık anahtarı alanıyla ilişkilendirmek için **WebAccount_webaccountId** anahtar alanını alır.
+- ***CustomerToAccount* ilişkisi** Müşteri varlığı ile Firma varlığı arasında oluşturulur. Müşteri varlığı **accountId** Firma varlığı anahtar alanıyla ilişkilendirmek için **Account_accountId** anahtar alanını alır.
+- ***CustomerToWebAccount* ilişkisi** Müşteri varlığı ile WebAccount varlığı arasında oluşturulur. Müşteri varlığı **webaccountId** WebAccount varlık anahtarı alanıyla ilişkilendirmek için **WebAccount_webaccountId** anahtar alanını alır.
 
 ## <a name="create-a-relationship"></a>İlişki oluşturma
 
@@ -69,3 +69,6 @@ Eşleştirme ve birleştirme işlemleri sırasında sistem ilişkileri, akıllı
 ## <a name="next-step"></a>Sonraki adım
 
 Sistem ve özel ilişkiler, artık yalıtılmış olmayan birden çok veri kaynağını temel alan segmentler oluşturmak için kullanılır. Daha fazla bilgi için bkz. [Segmentler](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644427"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268342"
 ---
 # <a name="transactional-churn-prediction-preview"></a>İşlem tabanlı erime tahmini (önizleme)
 
@@ -96,6 +96,8 @@ ms.locfileid: "4644427"
 1. İsteğe bağlı olarak, **Müşteri etkinlikleri** için **Veri ekle**'yi seçin. Ön koşullarda açıklandığı şekilde müşteri etkinliği bilgilerini sağlayan varlığı seçin.
 
 1. Anlamsal alanları müşteri etkinliği varlığınızdaki özniteliklerle eşleyin ve **İleri**'yi seçin. Alanların açıklamaları için [ön koşullara](#prerequisites) göz atın.
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="İşlem verileri için müşteri alanlarını eşleyin.":::
 
 1. Yapılandırmakta olduğunuz müşteri etkinliğinin türüyle eşleşen bir etkinlik türü seçin. **Yeni oluştur** seçeneğini belirleyin ve kullanılabilir bir etkinlik türü seçin veya yeni bir tür oluşturun.
 
@@ -185,3 +187,6 @@ Tahminin silinmesi, tahminin çıktı varlığını da kaldırır.
 1. Silmek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
 
 1. **Sil**'i seçin.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

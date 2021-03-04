@@ -1,7 +1,7 @@
 ---
 title: Müşteri profilleri arama ve filtreleme
 description: Birleşik müşteri profilleri hakkındaki bilgileri kolayca bulun ve belirtilen öznitelikler için filtreleyin.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407222"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270090"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Müşteri profilleri: Dizin arama ve filtreleme
 
@@ -28,14 +28,6 @@ Müşteri verilerinizi birleştirerek toplam müşteri tabanınızda birleşik g
 Yönetici olarak aranabilir öznitelikleri ilk kez tanımlıyorsanız önce dizin oluşturulan alanları tanımlamanız gerekir. Kullanıcıların **Müşteriler** sayfasında müşterileri arayabileceği ve filtreleyebileceği tüm öznitelikleri seçmenizi öneririz. Yalnızca veri birleştirme işlemi sırasında oluşturduğunuz Müşteri Profili varlığında bulunan öznitelikleri belirtebilirsiniz.
 
 1. **Müşteriler** sayfasını açın ve **Dizini ara ve filtrele**'yi seçin.
-
-> [!NOTE]
-> Eşleme sayfasında tanımlandığı üzere aşağıdaki anlamsal türlerden Müşteri varlığında kullanılabilir özniteliklerde varsayılan arama dizini yapılandırması oluştururuz.
-> - Kişinin Adı, Soyadı, İkinci Adı, Tam Adı
-> - Kuruluş Adı
-> - E-posta Adresi
-> - Telefon numarası
-> - Konum bilgileri
 
 2. Dizin oluşturulan alanları belirtmek için **+ Ekle**'yi seçin.
 
@@ -65,3 +57,10 @@ Tabloda aşağıdaki bilgiler sunulur.
 2. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
 
 3. Ayarlarınızı uygulamaya hazır olduğunuzda **Çalıştır**'ı seçin.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Müşteri profillerini aramak için **Müşteriler** sayfasına gidin veya tüm müşteri profillerinin bir alt kümesini görmek için dizinlenen alanları kullanın.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

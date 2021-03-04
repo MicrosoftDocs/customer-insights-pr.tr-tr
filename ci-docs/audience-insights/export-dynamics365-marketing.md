@@ -1,20 +1,20 @@
 ---
 title: Customer Insights verilerini Dynamics 365 Marketing'e dışarı aktarma
 description: Dynamics 365 Marketing bağlantısını yapılandırmayı öğrenin.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643797"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269078"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Connector for Dynamics 365 Marketing (önizleme)
 
@@ -24,7 +24,10 @@ Dynamics 365 Marketing ile kampanyalar oluşturmak ve belirli müşteri gruplar�
 
 ## <a name="prerequisite"></a>Önkoşul
 
-[Common Data Service kullanılarak Dynamics 365 Marketing'ten alınan](connect-power-query.md) ilgili kişi kayıtları.
+- Segmenti Customer Insights'tan Marketing'e aktarabilmeniz için Dynamics 365 Marketing'de ilgili kişi kayıtlarının bulunması gerekir. [Common Data Services kullanarak Dynamics 365 Marketing](connect-power-query.md)'de kişilerin alınması hakkında daha fazla bilgi edinin.
+
+  > [!NOTE]
+  > Segmentleri hedef kitle içgörülerden Marketing'e aktarmak, Marketing kurulumlarında yeni ilgili kişi kaydı oluşturmaz. Marketing'deki ilgili kişi kayıtları, hedef kitle içgörülerinde alınmalı ve veri kaynağı olarak kullanılmalıdır. Ayrıca, segmentlerin dışarı aktarılabilmesi için müşteri kimliklerini ilgili kişi kimlikleriyle eşlemek üzere birleşik Müşteri varlığına eklenmesi gerekir.
 
 ## <a name="configure-the-connector-for-marketing"></a>Marketing için bağlayıcıyı yapılandırma
 
@@ -49,3 +52,6 @@ Dynamics 365 Marketing ile kampanyalar oluşturmak ve belirli müşteri gruplar�
 ## <a name="export-the-data"></a>Verileri dışarı aktarma
 
 [Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

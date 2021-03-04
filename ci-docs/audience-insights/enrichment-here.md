@@ -1,20 +1,20 @@
 ---
 title: Üçüncü taraf HERE Technologies zenginleştirme ile zenginleştirme
 description: Üçüncü taraf HERE Technologies zenginleştirmesi hakkında genel bilgiler.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668702"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269538"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 
@@ -43,7 +43,11 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
 
 1. **HERE'a Bağlan**'ı seçerek her iki girişi de onaylayın.
 
-1. **Veri ekle**'yi seçin ve alanları birincil ve/veya ikincil adresle eşlemek isteyip istemediğinizi seçin. Her iki adres (örneğin, bir ev ve bir iş adresi) için bir alan eşlemesi belirtebilir ve her iki adres için profilleri ayrı ayrı zenginleştirebilirsiniz. **İleri**'yi seçin.
+1.  **Veri ekle** seçeneğini belirleyin ve HERE Technologies'den alınan konum verileriyle zenginleştirmek istediğiniz **Müşteri veri kümesi**'ni seçin. Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Müşteri veri kümesi seçerken ekran görüntüsü.":::
+
+1. Alanları birincil ve/veya ikincil adresle eşlemek isteyip istemediğinizi seçin. Her iki adres (örneğin, bir ev ve bir iş adresi) için bir alan eşlemesi belirtebilir ve her iki adres için profilleri ayrı ayrı zenginleştirebilirsiniz. **İleri**'yi seçin.
 
 1. HERE Technologies'den eşleşen konum verilerini aramak için birleşik profillerinizden hangi alanların kullanılması gerektiğini tanımlayın. Seçilen birincil ve/veya ikincil adres için **Sokak 1** ve **Posta Kodu** alanları gereklidir. Daha yüksek bir eşleşme doğruluğu için daha fazla alan eklenebilir.
 
@@ -68,3 +72,6 @@ Zenginleştirilmiş müşteri verilerinizle geliştirin. Müşterilerinize, kiş
 
 Dynamics 365 Customer Insights uygulamasının HERE Technologies'e veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak HERE Technologies'in sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
 Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

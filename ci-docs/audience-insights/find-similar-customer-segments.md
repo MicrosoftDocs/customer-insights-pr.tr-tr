@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: 8cdec4edd599b0249fcf144b5e5c0124504e1e14
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: b9b2e7fa862b595c6a364a7208e42295b4f9df83
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407207"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268894"
 ---
 # <a name="similar-customers-preview"></a>Benzer Müşteriler (önizleme)
 
@@ -79,3 +79,6 @@ Benzer bir segmenti düzenlemek için **Segmentler** sayfasında seçin ve eylem
 - 0,85 ile 1 arasındaki benzerlik puanları, sistemin *çok benzer* olarak sınıflandırdığı müşterilerdir
 
 Benzerlik puanları 0,4 altında olan müşteriler, model çıktısına dahil edilmez. Sistem bunları kaynak segmente yeterince benzetmez.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

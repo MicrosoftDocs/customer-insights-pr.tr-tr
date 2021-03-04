@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407206"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268710"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri
 
@@ -75,3 +75,6 @@ Kiracı yöneticisi verileri dışarı aktarmak için aşağıdaki adımları iz
 1. D365CI@microsoft.com adresine, istek içerisinde kullanıcının e-posta adresini belirten bir e-posta gönderin. Customer Insights takımı, kayıtlı kiracı yöneticisi e-posta adresine bir e-posta göndererek verilerin dışarı aktarılmasını onaylamanızı ister.
 2. İstenen kullanıcı için verileri dışarı aktarma onayını kabul edin.
 3. Dışarı aktarılan verileri kiracı yöneticisi e-posta adresi üzerinden alın.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

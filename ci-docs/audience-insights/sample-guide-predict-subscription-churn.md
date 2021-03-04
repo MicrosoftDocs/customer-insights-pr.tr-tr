@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4654004"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269877"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Abonelik erimesi tahmini (önizleme) örnek kılavuzu
 
@@ -29,7 +29,7 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 - Customer Insights'ta en azından [Katkıda bulunan izinleri](permissions.md).
 - [Yeni bir ortamda](manage-environments.md) aşağıdaki adımları uygulamanızı öneririz.
 
-## <a name="task-1---ingest-data"></a>Görev 1: Veri Alma
+## <a name="task-1---ingest-data"></a>Görev 1: Veri alma
 
 Özellikle [veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) başlıklı makaleleri inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar. 
 
@@ -46,10 +46,9 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
    - **DateOfBirth**: Tarih
    - **CreatedOn**: Tarih/Saat/Bölge
 
-   [!div class="mx-imgBorder"]
-   ![Doğum Tarihini Tarihe Dönüştürme](media/ecommerce-dob-date.PNG "doğum tarihini tarihe dönüştürme")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Doğum tarihini tarihe dönüştürün.":::
 
-1. Sağ bölmedeki "Ad" alanında, **Query** veri kaynağınızı **eCommerceContacts** olarak yeniden adlandırın.
+1. Sağ bölmedeki **Ad** alanında, **Sorgu** veri kaynağınızı **eCommerceContacts** olarak yeniden adlandırın
 
 1. Veri kaynağını kaydedin.
 
@@ -67,7 +66,7 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
    - **RewardsPoints**: Tamsayı
    - **CreatedOn**: Tarih/Saat
 
-1. Sağ bölmedeki "Ad" alanında, **Query** veri kaynağınızı **loyCustomers** olarak yeniden adlandırın.
+1. Sağ bölmedeki **Ad** alanında, **Sorgu** veri kaynağınızı **loyCustomers** olarak yeniden adlandırın.
 
 1. Veri kaynağını kaydedin.
 
@@ -90,7 +89,7 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
    - **Is_auto_renew**: Doğru/Yanlış
    - **RecurringFrequencyInMonths**: Tamsayı
 
-1. Sağ bölmedeki "Ad" alanında, **Query** veri kaynağınızı **SubscriptionHistory** olarak yeniden adlandırın.
+1. Sağ bölmedeki **Ad** alanında, **Sorgu** veri kaynağınızı **SubscriptionHistory** olarak yeniden adlandırın.
 
 1. Veri kaynağını kaydedin.
 
@@ -107,7 +106,7 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
    - **ReviewRating**: Tamsayı
    - **ReviewDate**: Tarih
 
-1. Sağ bölmedeki "Ad" alanında, **Query** veri kaynağınızı **webReviews** olarak yeniden adlandırın.
+1. Sağ bölmedeki "Ad" alanında, **Sorgu** veri kaynağınızı **webReviews** olarak yeniden adlandırın.
 
 ## <a name="task-2---data-unification"></a>Görev 2: Veri birleştirme
 
@@ -230,3 +229,6 @@ Model tarafından oluşturulan varlığı temel alan yeni bir segment oluşturab
 Artık bu abonelik işi için yüksek erime riskli müşterileri tanımlayan dinamik olarak güncelleştirilen bir segmente sahipsiniz.
 
 Daha fazla bilgi için bkz. [Segmentler oluşturma ve yönetme](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

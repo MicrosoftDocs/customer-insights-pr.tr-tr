@@ -1,20 +1,20 @@
 ---
 title: Azure Data Lake Storage Gen2 hesabına bir hizmet sorumlusu ile bağlanma
 description: Hedef kitle içgörülerine eklerken kendi veri gölünüze bağlanmak üzere hedef kitle içgörüleri için bir Azure hizmet sorumlusu kullanın.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644112"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267746"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Hedef kitle içgörüleri için Azure hizmet sorumlusu ile Azure Data Lake Storage Gen2 hesabına bağlanma
 
@@ -22,7 +22,9 @@ Azure hizmetlerini kullanan otomatik araçlar her zaman kısıtlı izinlere sahi
 
 Hizmet sorumlusunu [veri kaynağı olarak bir Common Data Model klasörünü eklemek veya düzenlemek](connect-common-data-model.md) veya [yeni bir ortam oluşturmak veya mevcut ortamı güncelleştirmek](manage-environments.md#create-an-environment-in-an-existing-organization) için güvenli bir şekilde kullanabilirsiniz.
 
-Hizmet sorumlusu oluşturmak için Azure aboneliğinizde yönetici izinlerine sahip olmanız gerekir.
+> [!IMPORTANT]
+> - Hizmet sorumlusunu kullanmayı amaçlayan Azure Data Lake Gen2 depolama hesabında [Hiyerarşik Ad Alanı (HNS) etkin](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace) olmalıdır.
+> - Hizmet sorumlusu oluşturmak için Azure aboneliğinizde yönetici izinlerine sahip olmanız gerekir.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Hedef kitle içgörüleri için Azure hizmet sorumlusu oluşturma
 
@@ -83,7 +85,7 @@ Azure Data Lake depolama hesabını [çıkış verilerini depolamak](manage-envi
 
 Seçili yaklaşımla ilgili gerekli bilgileri sağlamak için aşağıdaki adımları izleyin.
 
-### <a name="resounce-based-storage-account-connection"></a>Kaynak tabanlı depolama hesabı bağlantısı
+### <a name="resource-based-storage-account-connection"></a>Kaynak tabanlı depolama hesabı bağlantısı
 
 1. [Azure yönetim portalına](https://portal.azure.com) gidin, aboneliğinizde oturum açın ve depolama hesabını açın.
 
@@ -108,7 +110,8 @@ Seçili yaklaşımla ilgili gerekli bilgileri sağlamak için aşağıdaki adım
 1. Hedef kitle içgörülerinde doğru değerleri seçtiğinizden emin olmak için **Abonelik**, **Kaynak grubu** ve depolama hesabının **Adını** inceleyin.
 
 1. Hedef kitle içgörülerinde, depolama hesabını eklerken değerleri veya ilgili alanları seçin.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Depolama hesabı kaynak kimliği bilgilerini girin.":::
    
 1. Depolama hesabını eklemek için hedef kitle içgörülerinde kalan adımlarla devam edin.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

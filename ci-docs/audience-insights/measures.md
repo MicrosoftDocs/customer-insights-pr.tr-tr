@@ -1,7 +1,7 @@
 ---
-title: Ölçüm oluşturma ve düzenleme
-description: Belirli iş alanlarının performansını analiz edip yansıtmak için müşteri ile ilgili ölçümleri tanımlayın.
-ms.date: 10/15/2020
+title: Ölçüm oluşturma ve yönetme
+description: İşinizin performansını analiz etmek ve yansıtmak için ölçümler tanımlayın.
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,105 +9,111 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407218"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269952"
 ---
 # <a name="define-and-manage-measures"></a>Ölçümleri tanımlama ve yönetme
 
-**Ölçümler** belirli iş alanlarının performansını ve durumunu yansıtan ana performans göstergelerini (KPI'lar) temsil eder. Hedef kitle içgörüleri, ölçümlerinizi el ile kodlamanızı veya doğrulamanızı gerektirmeyen bir sorgu oluşturucusu kullanarak farklı ölçüm türleri oluşturmak için sezgisel bir deneyim sağlar. İş ölçümlerinizi **Giriş** sayfasında izleyebilir, **Müşteri Kartı**'ndaki belirli müşteriler için ölçümleri görebilir ve **Segmentler** sayfasında müşteri segmentlerini tanımlamak için ölçümleri kullanabilirsiniz.
+Ölçümler, [birleşik profiller](data-unification.md)'den ilgili değerleri alarak müşteri davranışlarını ve iş performansını daha iyi anlamanıza yardımcı olur. Örneğin, bir işletme tek bir müşterinin satın alma geçmişini anlamak için *müşteri başına toplam harcama*'yı görmek ister. Alternatif olarak, işletmenin toplam değer düzeyindeki gelirini anlamak için *şirketin toplam satışları*'nı ölçmek ister.  
+
+Ölçümler, çeşitli işleçlere ve basit eşleşme seçeneklerine sahip bir veri sorgusu platformu olan ölçüm oluşturucu kullanılarak oluşturulur. Verileri filtrelemenizi, sonuçları gruplamanızı, [varlık ilişkisi yollarını](relationships.md) algılamanızı ve çıktıyı önizlemenizi sağlar.
+
+Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini planlamak için ölçüm oluşturucuyu kullanın. Örneğin, *müşteri başına toplam harcama* ve *müşteri başına toplam iade* ölçümü oluşturmak, yüksek harcaması olan ancak yüksek iadesi de olan bir müşteri grubunun belirlenmesine yardımcı olur. Sonraki en iyi eylemleri yürütmek için [segment oluşturabilirsiniz](segments.md). 
 
 ## <a name="create-a-measure"></a>Ölçüm oluşturma
 
-Bu bölümde sıfırdan bir ölçüm oluşturma açıklanmaktadır. Müşteri varlığı aracılığıyla bağlanan birden çok veri kaynağından alınan verilerle ölçümler oluşturabilirsiniz. Bazı [hizmet sınırları](service-limits.md) geçerlidir.
+Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı olarak gösterilmektedir. Müşteri varlığıyla bağlantı kurmak için bir ilişki ayarı olan veri varlıklarından gelen veri öznitelikleriyle bir ölçüm oluşturabilirsiniz. 
 
 1. Hedef kitle içgörülerinde, **Ölçümler**'e gidin.
 
-2. **Yeni ölçüm**'ü seçin.
+1. **Yeni**'yi seçin.
 
-3. Ölçüm **Türü**'nü seçin:
-
-   - **Müşteri özniteliği**: Her müşteri için müşterinin puanını, değerini veya durumunu yansıtan tek bir alandır. Müşteri öznitelikleri, sistem tarafından oluşturulan **Müşteri Ölçümü** adlı yeni bir varlıkta öznitelikler olarak oluşturulur.
-
-   - **Müşteri ölçümü**: Seçili boyutlara göre dökümle birlikte müşteri davranışı hakkında öngörüler sağlar. Her ölçüm için, her müşterinin birden çok kaydıyla potansiyel olarak yeni bir varlık oluşturulur.
-
-   - **İş ölçümü**: İş performansınızı ve işin durumunu izler. İş ölçümlerinin iki farklı çıktısı olabilir: **Giriş** sayfasında gösterilen sayısal bir çıktı veya **Varlıklar** sayfasında bulabileceğiniz yeni bir varlık.
-
-4. **Ad**'ı ve isteğe bağlı **Görünen ad**'ı belirleyip **İleri**'yi seçin.
-
-5. **Varlıklar** bölümünde, açılan listeden birinci varlığı seçin. Bu aşamada, ölçüm tanımınızın bir parçası olarak ek varlıkların gerekip gerekmediğine karar vermeniz gerekir.
-
-   > [!div class="mx-imgBorder"]
-   > ![Ölçüm tanımı](media/measure-definition.png "Ölçüm tanımı")
-
-   Daha fazla varlık eklemek için **Varlık ekle**'yi ve ölçüm için kullanmak istediğiniz varlıkları seçin.
-
+1. **Adı düzenle**'yi seçin ve ölçüm için bir **Ad** verin. 
    > [!NOTE]
-   > Yalnızca başlangıç varlığınızla ilişkili olan varlıkları seçebilirsiniz. İlişkiler tanımlama hakkında daha fazla bilgi için bkz. [İlişkiler](relationships.md).
+   > Yeni ölçüm yapılandırmanızda, örneğin CustomerID ve bir hesaplama gibi yalnızca iki alan varsa çıktı, Customer_Measure adlı sistem tarafından oluşturulan varlığa yeni bir sütun olarak eklenir. Birleştirilmiş müşteri profilinde ölçümün değerini de görebilirsiniz. Diğer ölçümler kendi varlıklarını oluşturur.
 
-6. İsteğe bağlı olarak değişkenleri yapılandırabilirsiniz. **Değişkenler** bölümünde **Yeni değişken**'i seçin.
+1. Yapılandırma alanında, **İşlev Seç** açılan menüsünden toplama işlevini seçin. Toplama işlevleri aşağıdakileri içerir: 
+   - **Sum**
+   - **Ortalama**
+   - **Sayı**
+   - **Benzersiz Sayı**
+   - **Maksimum**
+   - **Min**
+   - **İlk**: Veri kaydının ilk değerini alır
+   - **Son**: Veri kaydına eklenen son değeri alır
 
-   Değişkenler, seçtiğiniz her bir kayıtta yapılan hesaplamalardır. Örneğin, her müşteri kaydı için satış noktası (POS) ve çevrimiçi satışların toplamı.
+   :::image type="content" source="media/measure-operators.png" alt-text="Ölçüm hesaplamaları için işleçler.":::
 
-7. Değişken için bir **Ad** belirleyin.
+1. Bu ölçümü oluşturmak için ihtiyaç duyduğunuz verileri seçmek için **Öznitelik ekle**'yi seçin.
+   
+   1. **Öznitelikler** sekmesini seçin. 
+   1. Veri varlığı: Ölçmek istediğiniz özniteliği içeren varlığı seçin. 
+   1. Veri özniteliği: Ölçümü hesaplamak için toplama işlevinde kullanmak istediğiniz özniteliği seçin. Bir seferde yalnızca bir öznitelik seçebilirsiniz.
+   1. **Ölçümler** sekmesini seçerek var olan bir ölçümden bir veri özniteliği de seçebilirsiniz. Alternatif olarak, bir varlık veya ölçüm adı arayabilirsiniz. 
+   1. Seçilen özniteliği ölçüme eklemek için **Ekle**'yi seçin.
 
-8. **İfade** alanında, hesaplamanıza başlayacağınız alanı seçin.
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Hesaplamalarda kullanmak için bir öznitelik seçin.":::
 
-9. Hesaplamanıza eklenecek daha fazla alan seçerken **İfade** alanına bir ifade yazın.
+1. Daha karmaşık ölçümler oluşturmak için ölçüm işlevinizde daha fazla öznitelik ekleyebilir veya matematik işleçleri kullanabilirsiniz.
 
-   > [!NOTE]
-   > Şu anda yalnızca aritmetik ifadeler desteklenmektedir. Ayrıca değişken hesaplaması farklı [varlık yollarındaki](relationships.md) varlıklar için desteklenmez.
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Matematik işleçleriyle karmaşık bir ölçüm oluşturun.":::
 
-10. **Bitti**'yi seçin.
+1. Filtre eklemek için yapılandırma alanında **Filtre**'yi seçin. 
+  
+   1. **Filtreler** bölmesinin **Öznitelik ekle** bölümünde, filtre oluşturmak için kullanmak istediğiniz özniteliği seçin.
+   1. Seçili her öznitelik için filtreyi tanımlamak üzere filtre işleçlerini ayarlayın.
+   1. Filtreleri ölçüme eklemek için **Uygula**'yı seçin.
 
-11. **Ölçüm tanımı** bölümünde, seçtiğiniz varlıkların ve hesaplanan değişkenlerin yeni bir ölçüm varlığında veya özniteliğinde nasıl toplanacağını tanımlarsınız.
+1. Boyut eklemek için yapılandırma alanında **Boyut**'u seçin. Boyutlar, ölçüm çıkış varlığında sütunlar olarak gösterilir.
+   1. Hesaplama değerlerini gruplamak istediğiniz veri öznitelikleri eklemek için **Boyutları düzenle**'yi seçin. Örneğin, şehir veya cinsiyet. Varsayılan olarak, *müşteri düzeyinde ölçümler* oluşturmak için *CustomerID* boyutu seçilir. *İş düzeyinde ölçümler* oluşturmak isterseniz varsayılan boyutu kaldırabilirsiniz.
+   1. Ölçüme boyutları eklemek için **Bitti**'yi seçin.
 
-12. **Yeni boyut**'u seçin. Boyutu bir *grup ölçütü* işlevi olarak düşünebilirsiniz. Ölçüm varlığınızın veya özniteliğinizin veri çıktısı, tanımladığınız tüm boyutlara göre gruplandırılır.
+1. Eşlediğiniz veri varlığı ile Müşteri varlığı arasında birden fazla yol varsa tanımlanan [varlık ilişkisi yolları](relationships.md)'ndan birini seçmeniz gerekir. Ölçüm sonuçları, seçilen yola bağlı olarak değişebilir.
+   1. **Veri tercihleri**'ni seçin ve ölçümünüzü tanımlamak için kullanılması gereken varlık yolunu seçin.
+   1. Seçiminizi uygulamak için **Bitti**'yi seçin. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Toplam döngüsünü seçme](media/measures-businessreport-measure-definition2.png "Toplam döngüsünü seçme")
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Ölçüm için varlık yolunu seçin.":::
 
-    Boyut tanımınızın bir parçası olarak aşağıdaki bilgileri seçin veya girin:
+1. Ölçüm için daha fazla hesaplama eklemek üzere **Yeni hesaplama**'yı seçin. Yeni hesaplamalar için yalnızca aynı varlık yolundaki varlıkları kullanabilirsiniz. Daha fazla hesaplama, ölçüm çıkış varlığında yeni sütunlar olarak gösterilir.
 
-    - **Varlık**: Bir Ölçüm varlığı tanımlarsanız en az bir öznitelik içermelidir. Bir Ölçüm özniteliği tanımlarsanız varsayılan olarak yalnızca bir öznitelik içerir. Bu seçim, bu özniteliği içeren varlığı seçmekle ilgilidir.
-    - **Alan**: Ölçüm varlığınıza veya özniteliğinize eklenecek belirli özniteliği seçin.
-    - **Demet**: Verileri günlük, aylık veya yıllık olarak toplamak isteyip istemediğinizi seçin. Yalnızca bir Tarih türü özniteliği seçtiyseniz bu zorunlu bir seçimdir.
-    - **Olarak**: Yeni alanınızın adını tanımlar.
-    - **Görünen ad**: Alanınızın görünen adını tanımlar.
+1. Bir ölçümden bir hesaplamayı **Yenileme**, **Yeniden Adlandırma** veya **Kaldırma** işlemleri için hesaplamada **...** seçeneğini belirleyin.
 
-    > [!NOTE]
-    > İş ölçümünüz tek sayılı bir varlık olarak kaydedilir ve ölçümünüze daha fazla boyut eklemediğiniz sürece **Giriş** sayfasında görüntülenir. Daha fazla boyut ekledikten sonra ölçüm *Giriş* sayfasında **görüntülenmez**.
+1. **Önizleme** alanında, filtreleri ve boyutları içeren ölçüm çıkış varlığının veri şemasını görürsünüz. Önizleme, yapılandırmadaki değişikliklere dinamik olarak tepki verir.
 
-13. İsteğe bağlı olarak toplama işlevleri ekleyin. Oluşturduğunuz tüm toplamalarla Ölçüm varlığınız veya özniteliğinizde yeni bir değer elde edilir. Desteklenen toplama işlevleri şunlardır: **Minimum**, **Maksimum**, **Ortalama**, **Medyan**, **Toplam**, **Benzersiz Sayı**, **Birinci** (bir boyut değerinin ilk kaydını alır) ve **Son** (bir boyut değerine eklenen son kaydı alır).
+1. Yapılandırılan ölçüm sonuçlarını hesaplamak için **Çalıştır**'ı seçin. Geçerli yapılandırmayı koruyup ölçümü daha sonra çalıştırmak isterseniz **Kaydet ve kapat**'ı seçin.
 
-14. Yaptığınız değişiklikleri ölçüme uygulamak için **Kaydet**'i seçin.
+1. Listede yeni oluşturulan ölçümü görmek için **Ölçümler**'e gidin.
 
 ## <a name="manage-your-measures"></a>Ölçümlerinizi yönetme
 
-En az bir ölçüm oluşturduktan sonra **Ölçümler** sayfasında bir ölçüm listesi görürsünüz.
+[Ölçüm oluşturduktan](#create-a-measure) sonra **Ölçümler** sayfasında bir ölçüm listesi görürsünüz.
 
-Ölçüm türü, oluşturucu, oluşturma tarihi ve saati, son düzenleme tarihi ve saati, durumu (ölçümün etkin, etkin değil veya başarısız olması) ve son yenileme tarihi ve saati hakkında bilgiler bulabilirsiniz. Listeden bir ölçüm seçtiğinizde çıktısının bir önizlemesini görebilirsiniz.
+Ölçüm türü, oluşturan, oluşturma tarihi, durum ve durum hakkında bilgiler bulabilirsiniz. Listeden bir ölçümü seçtiğinizde, çıktıyı önizleyebilir ve bir .CSV dosyası indirebilirsiniz.
 
 Tüm ölçümlerinizi aynı anda yenilemek için belirli bir ölçüm seçmeden **Tümünü yenile**'yi seçin.
 
 > [!div class="mx-imgBorder"]
 > ![Tek ölçümleri yönetmek için eylemler](media/measure-actions.png "Tek ölçümleri yönetmek için eylemler")
 
-Alternatif olarak, listeden bir ölçüm seçin ve aşağıdaki işlemlerden birini gerçekleştirin:
+Aşağıdaki seçenekler için listeden bir ölçüm seçin:
 
 - Ayrıntılarını görmek için ölçüm adını seçin.
 - Ölçümün yapılandırmasını **düzenleyin**.
+- En son verileri göre ölçümü **yenileyin**.
 - Ölçümü **yeniden adlandırın**.
 - Ölçümü **silin**.
-- Üç noktayı (...) seçin ve ardından ölçüm için yenileme işlemini başlatmak üzere **Yenile**'yi seçin.
-- Ölçümün bir .CSV dosyasını almak için üç nokta (...) ve ardından **İndir**'i seçin.
+- **Etkinleştirin** veya **Devre Dışı Bırakın**. Etkin olmayan ölçümler [zamanlanmış yenileme](system.md#schedule-tab) sırasında yenilenmez.
 
 > [!TIP]
 > Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
 
 ## <a name="next-step"></a>Sonraki adım
 
-**Segmentler** sayfasında ilk müşteri segmentinizi oluşturmak için mevcut ölçümleri kullanabilirsiniz. Daha fazla bilgi için bkz. [Segmentler](segments.md).
+[Müşteri segmenti](segments.md) oluşturmak için var olan ölçümleri kullanabilirsiniz.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

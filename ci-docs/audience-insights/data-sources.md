@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643977"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269722"
 ---
-# <a name="overview-about-data-sources"></a>Veri kaynaklarına genel bakış
+# <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Her alınan veri kaynağının adı, durumu ve verilerin bu kaynak için en son 
 |Yenileniyor    |Veri alımı devam ediyor. **Eylem** sütununda **Yenilemeyi durdur**'u seçerek bu işlemi iptal edebilirsiniz. Veri kaynağının yenilenmesinin durdurulması veri kaynağını son yenileme durumuna döndürür.       |
 |Yapılamadı     |Veri alımı hatalarla karşılaştı.         |
 
-Hata ayrıntıları ve aşağı akış işlemi güncelleştirmeleri dahil olmak üzere yenileme durumu hakkında daha fazla ayrıntı incelemek için **Yenileme durumu**'nu seçin.
+Daha fazla ayrıntıyı incelemek için herhangi bir veri kaynağının **Durum** sütunundaki değeri seçin. **İlerleme ayrıntıları** bölmesinde, **Veri kaynakları**'nı genişletin. Hata ayrıntıları ve aşağı akış işlemi güncelleştirmeleri dahil olmak üzere yenileme durumu hakkında daha fazla bilgi için **Ayrıntılara bakın**'ı seçin.
 
 Verilerin yüklenmesi biraz zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, **Varlıklar** sayfasından incelenebilir. Daha fazla bilgi için bkz. [Varlıklar](entities.md).
 
@@ -76,3 +76,6 @@ Veri kaynağını isteğe bağlı olarak yenilemek için şu adımları izleyin:
 2. Kaldırmak istediğiniz veri kaynağının yanındaki dikey üç noktayı seçin ve açılan menüden **Sil**'i seçin.
 
 3. Silme işlemini onaylayın.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

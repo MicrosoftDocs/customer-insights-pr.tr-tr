@@ -1,20 +1,20 @@
 ---
 title: Customer Insights verilerini Dynamics 365 Sales'e dışarı aktarma
 description: Dynamics 365 Sales bağlantısını yapılandırmayı öğrenin.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643842"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269032"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Dynamics 365 Sales için bağlayıcı (önizleme)
 
@@ -24,7 +24,10 @@ Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sale
 
 ## <a name="prerequisite"></a>Önkoşul
 
-[Common Data Service kullanılarak Dynamics 365 Sales'ten alınan](connect-power-query.md) ilgili kişi kayıtları.
+1. Segmenti Customer Insights'tan Sales'e aktarabilmeniz için Dynamics 365 Sales'te ilgili kişi kayıtlarının bulunması gerekir. [Common Data Services kullanarak Dynamics 365 Sales](connect-power-query.md)'te kişilerin alınması hakkında daha fazla bilgi edinin.
+
+   > [!NOTE]
+   > Segmentleri hedef kitle içgörülerden Sales'e aktarmak, Sales kurulumlarında yeni ilgili kişi kaydı oluşturmaz. Sales'teki ilgili kişi kayıtları, hedef kitle içgörülerinde alınmalı ve veri kaynağı olarak kullanılmalıdır. Ayrıca, segmentlerin dışarı aktarılabilmesi için müşteri kimliklerini ilgili kişi kimlikleriyle eşlemek üzere birleşik Müşteri varlığına eklenmesi gerekir.
 
 ## <a name="configure-the-connector-for-sales"></a>Sales için bağlayıcıyı yapılandırma
 
@@ -49,3 +52,6 @@ Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sale
 ## <a name="export-the-data"></a>Verileri dışarı aktarma
 
 [Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

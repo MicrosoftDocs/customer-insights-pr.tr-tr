@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407180"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477112"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI (önizleme) için bağlayıcı
 
@@ -31,7 +31,7 @@ Power BI Desktop ile verileriniz için görselleştirmeler oluşturun. Birleşik
 
 1. **Daha fazlasını göster**'i seçin ve **Dynamics 365 Customer Insights** uygulamasını arayın
 
-1. Sonucu seçin ve **Bağlan**'ı seçin.
+1. **Bağlan**'ı seçin.
 
 1. Customer Insights için kullandığınız kuruluş hesabıyla **Oturum açın** ve **Bağlan**'ı seçin.
    > [!NOTE]
@@ -52,3 +52,22 @@ Power BI için Customer Insights bağlayıcısı, 1 milyon müşteri profili iç
 ### <a name="work-with-a-subset-of-data"></a>Bir alt veri kümesiyle çalışma
 
 Verilerinizin alt kümesiyle çalışmayı düşünün. Örneğin, tüm müşteri kayıtlarını Power BI'a dışarı aktarmak yerine [segmentler](segments.md) oluşturabilirsiniz.
+
+## <a name="troubleshooting"></a>Sorun giderme
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Customer Insights ortamı Power BI'da gösterilmiyor
+
+Hedef kitle içgörülerinde aynı olan iki varlık arasında birden fazla [ilişki](relationships.md) tanımlanmış ortamlar, Power BI bağlayıcısında kullanılamaz.
+
+Yinelenen ilişkileri belirleyebilir ve kaldırabilirsiniz.
+
+1. Hedef kitle içgörülerinde, Power BI'da eksik olan ortamda **Veri** > **İlişkiler**'e gidin.
+2. Yinelenen ilişkileri tanımlayın:
+   - Aynı olan iki varlık arasında birden çok tanımlanmış ilişki olup olmadığını denetleyin.
+   - Her ikisi de birleştirme işlemine dahil olan iki varlık arasında oluşturulmuş bir ilişki olup olmadığını denetleyin. Birleştirme işlemine dahil olan tüm varlıklar arasında tanımlanan örtük bir ilişki vardır.
+3. Belirlenen tüm yinelenen ilişkileri kaldırın.
+
+Yinelenen ilişkiler kaldırıldıktan sonra Power BI bağlayıcısını yeniden yapılandırmayı deneyin. Ortam şimdi kullanılabilir durumda olmalıdır.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

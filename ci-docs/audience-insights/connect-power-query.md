@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407199"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267799"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Bir Power Query veri kaynağına bağlanın
 
@@ -28,7 +28,10 @@ Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlay�
 
 1. **Veri içe aktar** yöntemini seçin ve **İleri** öğesini seçin.
 
-1. Veri kaynağı için bir **Ad** girin ve veri kaynağını oluşturmak için **İleri** öğesini seçin.
+1. Veri kaynağı için bir **Ad** girin ve veri kaynağını oluşturmak için **İleri** öğesini seçin. Yönergeleri adlandırın: 
+   - Bir harfle başlayın.
+   - Yalnızca harfleri ve sayıları kullanın. Özel karakterlere ve boşluklara izin verilmez.
+   - 3 ile 64 arasında karakter kullanın.
 
 1. [Kullanılabilir bağlayıcılardan](#available-power-query-data-sources) birini seçin. Bu örnekte, **Metin/CSV** bağlayıcısını seçiyoruz.
 
@@ -77,3 +80,6 @@ Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı liste
 3. **Power Query - Sorguları düzenle** diyaloğundaki değişikliklerinizi ve dönüşümlerinizi [Yeni veri kaynağı oluştur](#create-a-new-data-source) bölümünde açıklandığı gibi uygulayın.
 
 4. Değişikliklerinizi kaydetmek için düzenlemelerinizi tamamladıktan sonra Power Query uygulamasında **Kaydet**'i seçin.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

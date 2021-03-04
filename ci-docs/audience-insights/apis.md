@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 5a03e916676800afdd8692da865a1060952d5c4f
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689154"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267548"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
@@ -140,3 +140,6 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 
 1. Bu yöntem birden çok türü (örneğin, `IList<InstanceInfo>` ve`ApiErrorResult`) döndürebileceğinden yanıt, `object` türü olabilir. Dönüş türünü kontrol etmek için nesneleri işlem için [API ayrıntıları sayfasında](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) belirtilen yanıt türlerine güvenle dönüştürebilirsiniz.    
    İstek hakkında daha fazla bilgi gerekiyorsa ham yanıt nesnesine erişmek için **http ileti yöntemlerini** kullanın.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
