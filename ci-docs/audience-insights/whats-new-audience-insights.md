@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270456"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598523"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-En son güncelleştirmeleri bildirmekten heyecan duyuyoruz! Bu makalede genel önizleme özellikleri, genel kullanılabilirlik geliştirmeleri ve özellik güncelleştirmeleri özetlenmektedir. Uzun vadeli özellik planlarını görmek için [Dynamics 365 ve Power Platform sürüm planları](https://docs.microsoft.com/dynamics365/release-plans/) konusuna bakın.
+En son güncelleştirmeleri bildirmekten heyecan duyuyoruz! Bu makalede genel önizleme özellikleri, genel kullanılabilirlik geliştirmeleri ve özellik güncelleştirmeleri özetlenmektedir. Uzun vadeli özellik planlarını görmek için [Dynamics 365 ve Power Platform sürüm planları](/dynamics365/release-plans/) konusuna bakın.
 
 Son altı ayda planlanan özellikler hakkında daha fazla bilgi edinmek için aşağıdaki videoyu da izleyebilirsiniz.
 
@@ -30,6 +30,40 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="february-2021-updates"></a>Şubat 2021 güncelleştirmeleri
+
+Şubat 2021'deki güncelleştirmeler; çeşitli özellikler, performans yükseltmeleri ve hata düzeltmeleri içerir.
+
+#### <a name="extensibility"></a>Genişletilebilirlik
+
+- **Segmentleri AdRoll'a aktar**
+
+  Dışa aktarma hedeflerimizi AdRoll'u içerecek şekilde genişlettik. Artık Customer Insights'taki segmentleri AdRoll hedef kitlesine aktarabilir ve reklamınızın temeli olarak kullanabilirsiniz. Daha fazla bilgi için bkz. [AdRoll için Bağlayıcı](export-adroll.md).
+
+#### <a name="segments"></a>Segmentler
+ 
+- **Segmenti yineleme**
+  
+  Varolan bir segmenti temel alan yeni bir segment oluşturmak için, bir segmenti çoğaltabilir ve daha da iyileştirmek için çoğaltılan segmenti düzenleyebilirsiniz. 
+
+- **Segmente başka öznitelikler ekleme**
+
+  Artık, müşteri profilinin parçası olmayan öznitelikleri segment çıkışlarınıza ekleyebilirsiniz. Örneğin, müşteri varlığıyla M:1 ilişkisine sahip abonelik varlığının bir parçası olmasına rağmen, abonelik kimliklerini bir segmente dahil edin. Öznitelik, müşteri varlığıyla ilgili bir varlığa ait olduğu sürece artık bu öznitelikleri dahil edebilirsiniz.  
+
+#### <a name="predictions"></a>Tahminler
+
+- **Tahmini ürün önerileri oluşturma**
+
+  Müşterilerin neleri satın almakla ilgilendiğini anlamak, iş gelirini iyileştirmek ve kişiselleştirme ve etkileşim aracılığıyla müşteri bağlılığı oluşturmak için gereken ilk adımlardan biridir. Müşterinizin ilgi alanlarına uygun olmayan ürünler için önerilerde bulunulması, müşteriyle işletmeniz arasında bir kopukluk hissi oluşmasına ve sonuçta müşteriden gelecek genel potansiyel gelirin ve deneyimin sınırlanmasına neden olabilir. 
+
+  Kendi verilerinizi kullanarak artık, müşterilerinizin gelecekte hangi ürünleri satın alacağıyla ilgili tahminler oluşturabilirsiniz. Daha fazla bilgi için bkz. [Ürün önerisi tahmini](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Sistem yönetimi
+
+- **Ortam kopyalama daha fazla veri kaynağı türünü destekler**
+
+  Yöneticiler, ortam yapılandırmalarını aynı kuruluşta yeni bir ortama kopyalayabilir. Bu özellik, bir Common Data Service Data Lake veya Common Data Model klasörüne dayalı veri kaynaklarının kullanıldığı durumlarda ortam kopyalama işlevini genişletir.
 
 ## <a name="january-2021-updates"></a>Ocak 2021 güncelleştirmeleri
 

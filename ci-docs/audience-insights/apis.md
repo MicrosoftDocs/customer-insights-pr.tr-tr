@@ -1,20 +1,20 @@
 ---
 title: API'lerle çalışma
 description: API'ler kullanın ve sınırlamaları öğrenin.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267548"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710484"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
@@ -36,7 +36,7 @@ Bu makale, Customer Insights API'lerine erişmeniz ve Azure Uygulama Kaydı olu�
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights API'lerini etkinleştirme":::
 
-1. API'leri denemek için **API'lerimizi keşfedin**'i seçin.
+1. [API'leri denemek](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) için **API'lerimizi keşfedin**'i seçin.
 
 1. Bir API işlemi belirleyin ve **Deneyin**'i seçin.
 
@@ -47,6 +47,9 @@ Bu makale, Customer Insights API'lerine erişmeniz ve Azure Uygulama Kaydı olu�
 1. Yan bölmenin alt kısmına gidin ve **Gönder**'i seçin.
 
 Bir süre sonra aşağıda HTTP yanıtı görüntülenir.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="API'leri seçip test etmeyi gösteren animasyonlu GIF.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Azure portalında yeni uygulama kaydı oluşturma
 
@@ -61,6 +64,8 @@ Bu adımlar, temsilci izinleri kullanarak bir Azure uygulamasında Customer Insi
 
 1. Yeni Uygulama kaydınızda, **API izinleri**'ne gidin.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Uygulama kaydında API iznini ayarlamak için animasyonlu GIF.":::
+
 1. Yan bölmede **İzin ekle**'yi ve **Customer Insights**'ı seçin.
 
 1. **İzin türü** için, **Temsilci izinleri**'ni ve **user_impersonation** iznini seçin.
@@ -71,9 +76,11 @@ Bu adımlar, temsilci izinleri kullanarak bir Azure uygulamasında Customer Insi
 
 API'ye isteğinizle birlikte göndermek üzere bir taşıyıcı belirteç almak için Microsoft Kimlik Doğrulaması Kitaplığı (MSAL) ile bu uygulama kaydının Uygulama/İstemci Kimliğini kullanabilirsiniz.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici izni vermek için animasyonlu GIF.":::
+
 MSAL hakkında daha fazla bilgi için bkz. [Microsoft Kimlik Doğrulaması Kitaplığı'na Genel Bakış (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Azure'da uygulama kaydı hakkında daha fazla bilgi için bkz. [Yeni Azure portalı uygulama kaydı deneyimi](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Azure'da uygulama kaydı hakkında daha fazla bilgi için bkz. [Yeni Azure portalı uygulama kaydı deneyimi](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 API'leri istemci kitaplıklarında kullanma hakkında bilgi için bkz. [Customer Insights istemci kitaplıkları](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ API'leri istemci kitaplıklarında kullanma hakkında bilgi için bkz. [Customer
 
 1. Uygulama kaydını tamamlamak için **Şunun için yönetici onayı ver...** seçeneğini belirleyin.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici izni vermek için animasyonlu GIF.":::
+
 1. Sonuç olarak, Customer Insights'a uygulama kaydının adını kullanıcı olarak eklemeniz gerekir.    
    Customer Insights'ı açın, **Yönetici** > **İzinler**'e gidin ve **Kullanıcı ekle**'yi seçin.
 
@@ -108,7 +117,7 @@ API'leri istemci kitaplıklarında kullanma hakkında bilgi için bkz. [Customer
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights istemci kitaplıkları
 
-Bu bölüm, Customer Insights API'leri için mevcut istemci kitaplıklarını kullanmaya başlamanıza yardımcı olur.
+Bu bölüm, Customer Insights API'leri için mevcut istemci kitaplıklarını kullanmaya başlamanıza yardımcı olur. Tüm kitaplık kaynak kodları ve örnek uygulamalar, [Customer Insights GitHub sayfasında](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries) bulunabilir. 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 
 #### <a name="use-the-c-client-library"></a>C# istemci kitaplığını kullanma
 
-1. Mevcut [Azure uygulama kaydınızı](#create-a-new-app-registration-in-the-azure-portal) kullanarak `AccessToken` belirtecini almak için [Microsoft Kimlik Doğrulaması Kitaplığını (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) kullanın.
+1. Mevcut [Azure uygulama kaydınızı](#create-a-new-app-registration-in-the-azure-portal) kullanarak `AccessToken` belirtecini almak için [Microsoft Kimlik Doğrulaması Kitaplığını (MSAL)](/azure/active-directory/develop/msal-overview) kullanın.
 
 1. Belirtecin kimliğini doğrulayıp başarıyla aldıktan sonra ek **DefaultRequestHeaders "Yetkilendirme"** öğesini **Taşıyıcı <access token>** ve **Ocp-Apim-Subscription-Key** öğesini [Customer Insights ortamınızdaki **abonelik anahtarı**](#get-started-trying-the-customer-insights-apis) olarak ayarlayarak yeni bir `HttpClient` oluşturun veya var olanı kullanın.    
    Uygun olduğunda **Yetkilendirme** üst bilgisini sıfırlayın. Örneğin, belirtecin süresi dolduğunda.
@@ -141,5 +150,12 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 1. Bu yöntem birden çok türü (örneğin, `IList<InstanceInfo>` ve`ApiErrorResult`) döndürebileceğinden yanıt, `object` türü olabilir. Dönüş türünü kontrol etmek için nesneleri işlem için [API ayrıntıları sayfasında](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) belirtilen yanıt türlerine güvenle dönüştürebilirsiniz.    
    İstek hakkında daha fazla bilgi gerekiyorsa ham yanıt nesnesine erişmek için **http ileti yöntemlerini** kullanın.
 
+### <a name="nodejs-package"></a>NodeJS paketi
+
+NPM'den elde edilecek NodeJS istemci kitaplıklarını kullanın: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Python paketi
+
+PyPi'dan elde edilecek Python istemci kitaplıklarını kullanın: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

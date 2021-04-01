@@ -2,19 +2,19 @@
 title: Gerçek zamanlı veri alımı ve sınırlamalar
 description: Hedef kitle içgörülerindeki gerçek zamanlı özellikler hakkında genel bilgiler.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270304"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598593"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Gerçek zamanlı veri alımı (önizleme)
 
@@ -54,7 +54,7 @@ Gerçek zamanlı API, kaynak sisteminizden (tek bir kaynak kaydı) birleşik mü
 
 Gerçek zamanlı API'ye bağlanmanın iki yolu vardır:
 
-- [Dynamics 365 Customer Insights bağlayıcısını](https://docs.microsoft.com/connectors/customerinsights/) kullanılarak [dolaylı olarak](#connect-via-the-dynamics-365-customer-insights-connector)
+- [Dynamics 365 Customer Insights bağlayıcısını](/connectors/customerinsights/) kullanılarak [dolaylı olarak](#connect-via-the-dynamics-365-customer-insights-connector)
 - kodla [doğrudan](#connect-directly-to-the-real-time-api)
 
 Her iki yol da aşağıdaki ön koşulları paylaşır:
@@ -66,13 +66,13 @@ Her iki yol da aşağıdaki ön koşulları paylaşır:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Dynamics 365 Customer Insights bağlayıcısıyla bağlanma
 
-Gerçek zamanlı API, kod yazmak ve dağıtmak gerekmeden verileri özel bir Power Platform bağlayıcısından veya [Dynamics 365 Customer Insights bağlayıcısından](https://docs.microsoft.com/connectors/customerinsights/) alabilir.    
-Bağlayıcı, API ile aynı gerçek zamanlı eylemleri gerçekleştirebilir. Premium bağlayıcılar için geçerli bir lisansınızın olması gerekir. Daha fazla bilgi için bkz. [Power Apps ve Power Automate'i lisanslama hakkında SSS](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Gerçek zamanlı API, kod yazmak ve dağıtmak gerekmeden verileri özel bir Power Platform bağlayıcısından veya [Dynamics 365 Customer Insights bağlayıcısından](/connectors/customerinsights/) alabilir.    
+Bağlayıcı, API ile aynı gerçek zamanlı eylemleri gerçekleştirebilir. Premium bağlayıcılar için geçerli bir lisansınızın olması gerekir. Daha fazla bilgi için bkz. [Power Apps ve Power Automate'i lisanslama hakkında SSS](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps ve/veya Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps ve/veya Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Akış oluşturma hakkında ayrıntılı bilgi için bkz. [Power Automate belgeleri](https://docs.microsoft.com/power-automate/).
+Akış oluşturma hakkında ayrıntılı bilgi için bkz. [Power Automate belgeleri](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Gerçek zamanlı API'ye doğrudan bağlanma
 

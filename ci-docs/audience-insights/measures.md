@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269952"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654756"
 ---
 # <a name="define-and-manage-measures"></a>Ölçümleri tanımlama ve yönetme
 
@@ -72,8 +72,8 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
    1. Hesaplama değerlerini gruplamak istediğiniz veri öznitelikleri eklemek için **Boyutları düzenle**'yi seçin. Örneğin, şehir veya cinsiyet. Varsayılan olarak, *müşteri düzeyinde ölçümler* oluşturmak için *CustomerID* boyutu seçilir. *İş düzeyinde ölçümler* oluşturmak isterseniz varsayılan boyutu kaldırabilirsiniz.
    1. Ölçüme boyutları eklemek için **Bitti**'yi seçin.
 
-1. Eşlediğiniz veri varlığı ile Müşteri varlığı arasında birden fazla yol varsa tanımlanan [varlık ilişkisi yolları](relationships.md)'ndan birini seçmeniz gerekir. Ölçüm sonuçları, seçilen yola bağlı olarak değişebilir.
-   1. **Veri tercihleri**'ni seçin ve ölçümünüzü tanımlamak için kullanılması gereken varlık yolunu seçin.
+1. Eşlediğiniz veri varlığı ile *Müşteri* varlığı arasında birden fazla yol varsa tanımlanan [varlık ilişkisi yolları](relationships.md)'ndan birini seçmeniz gerekir. Ölçüm sonuçları, seçilen yola bağlı olarak değişebilir. 
+   1. **Veri tercihleri**'ni seçin ve ölçümünüzü tanımlamak için kullanılması gereken varlık yolunu seçin. *Müşteri* varlığının yalnızca tek bir yolu varsa Bu denetim gösterilmez.
    1. Seçiminizi uygulamak için **Bitti**'yi seçin. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Ölçüm için varlık yolunu seçin.":::
