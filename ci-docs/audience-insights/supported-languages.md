@@ -1,84 +1,84 @@
 ---
 title: Hedef kitle içgörüleri için desteklenen diller
 description: Dil desteğini anlayın ve yapılandırın.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268204"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595496"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a><span data-ttu-id="b25a6-103">Hedef kitle içgörüleri özelliği için desteklenen diller</span><span class="sxs-lookup"><span data-stu-id="b25a6-103">Supported languages for audience insights capability</span></span>
+# <a name="supported-languages-for-audience-insights-capability"></a><span data-ttu-id="cfcbd-103">Hedef kitle içgörüleri özelliği için desteklenen diller</span><span class="sxs-lookup"><span data-stu-id="cfcbd-103">Supported languages for audience insights capability</span></span>
 
-<span data-ttu-id="b25a6-104">Dynamics 365 Customer Insights hedef kitle içgörüleri özelliği, birkaç dili destekler.</span><span class="sxs-lookup"><span data-stu-id="b25a6-104">Dynamics 365 Customer Insights audience insights capability supports a number of languages.</span></span> <span data-ttu-id="b25a6-105">Bu konuda, kullanılabilir diller listelenmekte ve aralarında geçiş yapmak için desteğin yanı sıra hangi içeriğin çevrildiğine dair genel bakış sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b25a6-105">This topic lists the available languages and provides support for changing between them, as well as an overview of what content is translated.</span></span>
+<span data-ttu-id="cfcbd-104">Dynamics 365 Customer Insights için hedef kitle içgörüleri birçok dile çevrilmiştir.</span><span class="sxs-lookup"><span data-stu-id="cfcbd-104">Audience insights for Dynamics 365 Customer Insights is translated to many languages.</span></span> <span data-ttu-id="cfcbd-105">Aşağıdaki listede, mevcut diller ve nelerin çevrildiği hakkında bilgiler yer almaktadır.</span><span class="sxs-lookup"><span data-stu-id="cfcbd-105">The following list contains available languages and information on what's translated.</span></span> <span data-ttu-id="cfcbd-106">Ayrıca dil ayarlarının nasıl değiştirileceği hakkında daha fazla bilgi edinebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="cfcbd-106">You can also learn more about how to change the language settings.</span></span> 
 
-## <a name="languages"></a><span data-ttu-id="b25a6-106">Diller</span><span class="sxs-lookup"><span data-stu-id="b25a6-106">Languages</span></span>
+## <a name="languages"></a><span data-ttu-id="cfcbd-107">Diller</span><span class="sxs-lookup"><span data-stu-id="cfcbd-107">Languages</span></span>
 
-| <span data-ttu-id="b25a6-107">Dil adı (İngilizce)</span><span class="sxs-lookup"><span data-stu-id="b25a6-107">Language name (English)</span></span>|  <span data-ttu-id="b25a6-108">Dil Adı (yerel dil)</span><span class="sxs-lookup"><span data-stu-id="b25a6-108">Language Name (native language)</span></span> |
+| <span data-ttu-id="cfcbd-108">Dil adı (İngilizce)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-108">Language name (English)</span></span>|  <span data-ttu-id="cfcbd-109">Dil Adı (yerel dil)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-109">Language Name (native language)</span></span> |
 | ------------- | ------------- |
-| <span data-ttu-id="b25a6-109">Baskça</span><span class="sxs-lookup"><span data-stu-id="b25a6-109">Basque</span></span> | <span data-ttu-id="b25a6-110">euskara</span><span class="sxs-lookup"><span data-stu-id="b25a6-110">euskara</span></span> |
-| <span data-ttu-id="b25a6-111">Bulgarca</span><span class="sxs-lookup"><span data-stu-id="b25a6-111">Bulgarian</span></span> | <span data-ttu-id="b25a6-112">Български</span><span class="sxs-lookup"><span data-stu-id="b25a6-112">Български</span></span> |
-| <span data-ttu-id="b25a6-113">Katalanca</span><span class="sxs-lookup"><span data-stu-id="b25a6-113">Catalan</span></span> | <span data-ttu-id="b25a6-114">català</span><span class="sxs-lookup"><span data-stu-id="b25a6-114">català</span></span> |
-| <span data-ttu-id="b25a6-115">Çince (Basitleştirilmiş)</span><span class="sxs-lookup"><span data-stu-id="b25a6-115">Chinese (Simplified)</span></span> | <span data-ttu-id="b25a6-116">中文(简体)</span><span class="sxs-lookup"><span data-stu-id="b25a6-116">中文(简体)</span></span> |
-| <span data-ttu-id="b25a6-117">Çince (Geleneksel)</span><span class="sxs-lookup"><span data-stu-id="b25a6-117">Chinese (Traditional)</span></span> | <span data-ttu-id="b25a6-118">中文(繁體)</span><span class="sxs-lookup"><span data-stu-id="b25a6-118">中文(繁體)</span></span> |
-| <span data-ttu-id="b25a6-119">Hırvatça</span><span class="sxs-lookup"><span data-stu-id="b25a6-119">Croatian</span></span> | <span data-ttu-id="b25a6-120">hrvatski</span><span class="sxs-lookup"><span data-stu-id="b25a6-120">hrvatski</span></span> |
-| <span data-ttu-id="b25a6-121">Çek Dili</span><span class="sxs-lookup"><span data-stu-id="b25a6-121">Czech</span></span> | <span data-ttu-id="b25a6-122">čeština</span><span class="sxs-lookup"><span data-stu-id="b25a6-122">čeština</span></span> |
-| <span data-ttu-id="b25a6-123">Danca</span><span class="sxs-lookup"><span data-stu-id="b25a6-123">Danish</span></span> | <span data-ttu-id="b25a6-124">dansk</span><span class="sxs-lookup"><span data-stu-id="b25a6-124">dansk</span></span> |
-| <span data-ttu-id="b25a6-125">Hollandaca</span><span class="sxs-lookup"><span data-stu-id="b25a6-125">Dutch</span></span> | <span data-ttu-id="b25a6-126">Nederlands</span><span class="sxs-lookup"><span data-stu-id="b25a6-126">Nederlands</span></span> |
-| <span data-ttu-id="b25a6-127">İngilizce</span><span class="sxs-lookup"><span data-stu-id="b25a6-127">English</span></span> | <span data-ttu-id="b25a6-128">İngilizce</span><span class="sxs-lookup"><span data-stu-id="b25a6-128">English</span></span> |
-| <span data-ttu-id="b25a6-129">Estonca</span><span class="sxs-lookup"><span data-stu-id="b25a6-129">Estonian</span></span> | <span data-ttu-id="b25a6-130">eesti</span><span class="sxs-lookup"><span data-stu-id="b25a6-130">eesti</span></span> |
-| <span data-ttu-id="b25a6-131">Fince</span><span class="sxs-lookup"><span data-stu-id="b25a6-131">Finnish</span></span> | <span data-ttu-id="b25a6-132">suomi</span><span class="sxs-lookup"><span data-stu-id="b25a6-132">suomi</span></span> |
-| <span data-ttu-id="b25a6-133">Fransızca</span><span class="sxs-lookup"><span data-stu-id="b25a6-133">French</span></span> | <span data-ttu-id="b25a6-134">français</span><span class="sxs-lookup"><span data-stu-id="b25a6-134">français</span></span> |
-| <span data-ttu-id="b25a6-135">Galicia lehçesi</span><span class="sxs-lookup"><span data-stu-id="b25a6-135">Galician</span></span> | <span data-ttu-id="b25a6-136">galego</span><span class="sxs-lookup"><span data-stu-id="b25a6-136">galego</span></span> |
-| <span data-ttu-id="b25a6-137">Almanca</span><span class="sxs-lookup"><span data-stu-id="b25a6-137">German</span></span> | <span data-ttu-id="b25a6-138">Deutsch</span><span class="sxs-lookup"><span data-stu-id="b25a6-138">Deutsch</span></span> |
-| <span data-ttu-id="b25a6-139">Yunanca</span><span class="sxs-lookup"><span data-stu-id="b25a6-139">Greek</span></span> | <span data-ttu-id="b25a6-140">Ελληνικά</span><span class="sxs-lookup"><span data-stu-id="b25a6-140">Ελληνικά</span></span> |
-| <span data-ttu-id="b25a6-141">Hintçe</span><span class="sxs-lookup"><span data-stu-id="b25a6-141">Hindi</span></span> | <span data-ttu-id="b25a6-142">हिंदी</span><span class="sxs-lookup"><span data-stu-id="b25a6-142">हिंदी</span></span> |
-| <span data-ttu-id="b25a6-143">Macarca</span><span class="sxs-lookup"><span data-stu-id="b25a6-143">Hungarian</span></span> | <span data-ttu-id="b25a6-144">magyar</span><span class="sxs-lookup"><span data-stu-id="b25a6-144">magyar</span></span> |
-| <span data-ttu-id="b25a6-145">Endonezya dili</span><span class="sxs-lookup"><span data-stu-id="b25a6-145">Indonesian</span></span> | <span data-ttu-id="b25a6-146">Bahasa Indonesia</span><span class="sxs-lookup"><span data-stu-id="b25a6-146">Bahasa Indonesia</span></span> |
-| <span data-ttu-id="b25a6-147">İtalyanca</span><span class="sxs-lookup"><span data-stu-id="b25a6-147">Italian</span></span> | <span data-ttu-id="b25a6-148">italiano</span><span class="sxs-lookup"><span data-stu-id="b25a6-148">italiano</span></span> |
-| <span data-ttu-id="b25a6-149">Japonca</span><span class="sxs-lookup"><span data-stu-id="b25a6-149">Japanese</span></span> | <span data-ttu-id="b25a6-150">日本語</span><span class="sxs-lookup"><span data-stu-id="b25a6-150">日本語</span></span> |
-| <span data-ttu-id="b25a6-151">Kazakça</span><span class="sxs-lookup"><span data-stu-id="b25a6-151">Kazakh</span></span> | <span data-ttu-id="b25a6-152">Қазақ</span><span class="sxs-lookup"><span data-stu-id="b25a6-152">Қазақ</span></span> |
-| <span data-ttu-id="b25a6-153">Kore Dili</span><span class="sxs-lookup"><span data-stu-id="b25a6-153">Korean</span></span> | <span data-ttu-id="b25a6-154">한국어</span><span class="sxs-lookup"><span data-stu-id="b25a6-154">한국어</span></span> |
-| <span data-ttu-id="b25a6-155">Letonca</span><span class="sxs-lookup"><span data-stu-id="b25a6-155">Latvian</span></span> | <span data-ttu-id="b25a6-156">latviešu</span><span class="sxs-lookup"><span data-stu-id="b25a6-156">latviešu</span></span> |
-| <span data-ttu-id="b25a6-157">Litvanca</span><span class="sxs-lookup"><span data-stu-id="b25a6-157">Lithuanian</span></span> | <span data-ttu-id="b25a6-158">lietuvių</span><span class="sxs-lookup"><span data-stu-id="b25a6-158">lietuvių</span></span> |
-| <span data-ttu-id="b25a6-159">Malay dili</span><span class="sxs-lookup"><span data-stu-id="b25a6-159">Malay</span></span> | <span data-ttu-id="b25a6-160">Bahasa Melayu</span><span class="sxs-lookup"><span data-stu-id="b25a6-160">Bahasa Melayu</span></span> |
-| <span data-ttu-id="b25a6-161">Norveççe (Bokmål)</span><span class="sxs-lookup"><span data-stu-id="b25a6-161">Norwegian (Bokmål)</span></span> | <span data-ttu-id="b25a6-162">norsk (bokmål)</span><span class="sxs-lookup"><span data-stu-id="b25a6-162">norsk (bokmål)</span></span> |
-| <span data-ttu-id="b25a6-163">Lehçe</span><span class="sxs-lookup"><span data-stu-id="b25a6-163">Polish</span></span> | <span data-ttu-id="b25a6-164">Polski</span><span class="sxs-lookup"><span data-stu-id="b25a6-164">Polski</span></span> |
-| <span data-ttu-id="b25a6-165">Portekizce (Brezilya)</span><span class="sxs-lookup"><span data-stu-id="b25a6-165">Portuguese (Brazil)</span></span> | <span data-ttu-id="b25a6-166">português</span><span class="sxs-lookup"><span data-stu-id="b25a6-166">português</span></span> |
-| <span data-ttu-id="b25a6-167">Portekizce (Portekiz)</span><span class="sxs-lookup"><span data-stu-id="b25a6-167">Portuguese (Portugal)</span></span> | <span data-ttu-id="b25a6-168">português</span><span class="sxs-lookup"><span data-stu-id="b25a6-168">português</span></span> |
-| <span data-ttu-id="b25a6-169">Romence</span><span class="sxs-lookup"><span data-stu-id="b25a6-169">Romanian</span></span> | <span data-ttu-id="b25a6-170">română</span><span class="sxs-lookup"><span data-stu-id="b25a6-170">română</span></span> |
-| <span data-ttu-id="b25a6-171">Rusça</span><span class="sxs-lookup"><span data-stu-id="b25a6-171">Russian</span></span> | <span data-ttu-id="b25a6-172">Русский</span><span class="sxs-lookup"><span data-stu-id="b25a6-172">Русский</span></span> |
-| <span data-ttu-id="b25a6-173">Sırpça (Kiril)</span><span class="sxs-lookup"><span data-stu-id="b25a6-173">Serbian (Cyrillic)</span></span> | <span data-ttu-id="b25a6-174">српски</span><span class="sxs-lookup"><span data-stu-id="b25a6-174">српски</span></span> |
-| <span data-ttu-id="b25a6-175">Sırpça (Latin)</span><span class="sxs-lookup"><span data-stu-id="b25a6-175">Serbian (Latin)</span></span> | <span data-ttu-id="b25a6-176">srpski</span><span class="sxs-lookup"><span data-stu-id="b25a6-176">srpski</span></span> |
-| <span data-ttu-id="b25a6-177">Slovakça</span><span class="sxs-lookup"><span data-stu-id="b25a6-177">Slovak</span></span> | <span data-ttu-id="b25a6-178">slovenčina</span><span class="sxs-lookup"><span data-stu-id="b25a6-178">slovenčina</span></span> |
-| <span data-ttu-id="b25a6-179">Slovence</span><span class="sxs-lookup"><span data-stu-id="b25a6-179">Slovenian</span></span> | <span data-ttu-id="b25a6-180">slovenski</span><span class="sxs-lookup"><span data-stu-id="b25a6-180">slovenski</span></span> |
-| <span data-ttu-id="b25a6-181">İspanyolca</span><span class="sxs-lookup"><span data-stu-id="b25a6-181">Spanish</span></span> | <span data-ttu-id="b25a6-182">español</span><span class="sxs-lookup"><span data-stu-id="b25a6-182">español</span></span> |
-| <span data-ttu-id="b25a6-183">İsveç Dili</span><span class="sxs-lookup"><span data-stu-id="b25a6-183">Swedish</span></span> | <span data-ttu-id="b25a6-184">svenska</span><span class="sxs-lookup"><span data-stu-id="b25a6-184">svenska</span></span> |
-| <span data-ttu-id="b25a6-185">Tay dili</span><span class="sxs-lookup"><span data-stu-id="b25a6-185">Thai</span></span> | <span data-ttu-id="b25a6-186">ไทย</span><span class="sxs-lookup"><span data-stu-id="b25a6-186">ไทย</span></span> |
-| <span data-ttu-id="b25a6-187">Türkçe</span><span class="sxs-lookup"><span data-stu-id="b25a6-187">Turkish</span></span> | <span data-ttu-id="b25a6-188">Türkçe</span><span class="sxs-lookup"><span data-stu-id="b25a6-188">Türkçe</span></span> |
-| <span data-ttu-id="b25a6-189">Ukraynaca</span><span class="sxs-lookup"><span data-stu-id="b25a6-189">Ukrainian</span></span> | <span data-ttu-id="b25a6-190">українська</span><span class="sxs-lookup"><span data-stu-id="b25a6-190">українська</span></span> |
-| <span data-ttu-id="b25a6-191">Vietnamca</span><span class="sxs-lookup"><span data-stu-id="b25a6-191">Vietnamese</span></span> | <span data-ttu-id="b25a6-192">Tiếng Việt</span><span class="sxs-lookup"><span data-stu-id="b25a6-192">Tiếng Việt</span></span> |
+| <span data-ttu-id="cfcbd-110">Baskça</span><span class="sxs-lookup"><span data-stu-id="cfcbd-110">Basque</span></span> | <span data-ttu-id="cfcbd-111">euskara</span><span class="sxs-lookup"><span data-stu-id="cfcbd-111">euskara</span></span> |
+| <span data-ttu-id="cfcbd-112">Bulgarca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-112">Bulgarian</span></span> | <span data-ttu-id="cfcbd-113">български</span><span class="sxs-lookup"><span data-stu-id="cfcbd-113">български</span></span> |
+| <span data-ttu-id="cfcbd-114">Katalanca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-114">Catalan</span></span> | <span data-ttu-id="cfcbd-115">català</span><span class="sxs-lookup"><span data-stu-id="cfcbd-115">català</span></span> |
+| <span data-ttu-id="cfcbd-116">Çince (Basitleştirilmiş)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-116">Chinese (Simplified)</span></span> | <span data-ttu-id="cfcbd-117">中文(简体)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-117">中文(简体)</span></span> |
+| <span data-ttu-id="cfcbd-118">Çince (Geleneksel)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-118">Chinese (Traditional)</span></span> | <span data-ttu-id="cfcbd-119">中文(繁體)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-119">中文(繁體)</span></span> |
+| <span data-ttu-id="cfcbd-120">Hırvatça</span><span class="sxs-lookup"><span data-stu-id="cfcbd-120">Croatian</span></span> | <span data-ttu-id="cfcbd-121">hrvatski</span><span class="sxs-lookup"><span data-stu-id="cfcbd-121">hrvatski</span></span> |
+| <span data-ttu-id="cfcbd-122">Çek Dili</span><span class="sxs-lookup"><span data-stu-id="cfcbd-122">Czech</span></span> | <span data-ttu-id="cfcbd-123">čeština</span><span class="sxs-lookup"><span data-stu-id="cfcbd-123">čeština</span></span> |
+| <span data-ttu-id="cfcbd-124">Danca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-124">Danish</span></span> | <span data-ttu-id="cfcbd-125">dansk</span><span class="sxs-lookup"><span data-stu-id="cfcbd-125">dansk</span></span> |
+| <span data-ttu-id="cfcbd-126">Hollandaca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-126">Dutch</span></span> | <span data-ttu-id="cfcbd-127">Nederlands</span><span class="sxs-lookup"><span data-stu-id="cfcbd-127">Nederlands</span></span> |
+| <span data-ttu-id="cfcbd-128">İngilizce</span><span class="sxs-lookup"><span data-stu-id="cfcbd-128">English</span></span> | <span data-ttu-id="cfcbd-129">İngilizce</span><span class="sxs-lookup"><span data-stu-id="cfcbd-129">English</span></span> |
+| <span data-ttu-id="cfcbd-130">Estonca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-130">Estonian</span></span> | <span data-ttu-id="cfcbd-131">eesti</span><span class="sxs-lookup"><span data-stu-id="cfcbd-131">eesti</span></span> |
+| <span data-ttu-id="cfcbd-132">Fince</span><span class="sxs-lookup"><span data-stu-id="cfcbd-132">Finnish</span></span> | <span data-ttu-id="cfcbd-133">suomi</span><span class="sxs-lookup"><span data-stu-id="cfcbd-133">suomi</span></span> |
+| <span data-ttu-id="cfcbd-134">Fransızca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-134">French</span></span> | <span data-ttu-id="cfcbd-135">français</span><span class="sxs-lookup"><span data-stu-id="cfcbd-135">français</span></span> |
+| <span data-ttu-id="cfcbd-136">Galicia lehçesi</span><span class="sxs-lookup"><span data-stu-id="cfcbd-136">Galician</span></span> | <span data-ttu-id="cfcbd-137">galego</span><span class="sxs-lookup"><span data-stu-id="cfcbd-137">galego</span></span> |
+| <span data-ttu-id="cfcbd-138">Almanca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-138">German</span></span> | <span data-ttu-id="cfcbd-139">Deutsch</span><span class="sxs-lookup"><span data-stu-id="cfcbd-139">Deutsch</span></span> |
+| <span data-ttu-id="cfcbd-140">Yunanca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-140">Greek</span></span> | <span data-ttu-id="cfcbd-141">Ελληνικά</span><span class="sxs-lookup"><span data-stu-id="cfcbd-141">Ελληνικά</span></span> |
+| <span data-ttu-id="cfcbd-142">Hintçe</span><span class="sxs-lookup"><span data-stu-id="cfcbd-142">Hindi</span></span> | <span data-ttu-id="cfcbd-143">हिंदी</span><span class="sxs-lookup"><span data-stu-id="cfcbd-143">हिंदी</span></span> |
+| <span data-ttu-id="cfcbd-144">Macarca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-144">Hungarian</span></span> | <span data-ttu-id="cfcbd-145">magyar</span><span class="sxs-lookup"><span data-stu-id="cfcbd-145">magyar</span></span> |
+| <span data-ttu-id="cfcbd-146">Endonezce</span><span class="sxs-lookup"><span data-stu-id="cfcbd-146">Indonesian</span></span> | <span data-ttu-id="cfcbd-147">Endonezya</span><span class="sxs-lookup"><span data-stu-id="cfcbd-147">Indonesia</span></span> |
+| <span data-ttu-id="cfcbd-148">İtalyanca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-148">Italian</span></span> | <span data-ttu-id="cfcbd-149">italiano</span><span class="sxs-lookup"><span data-stu-id="cfcbd-149">italiano</span></span> |
+| <span data-ttu-id="cfcbd-150">Japonca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-150">Japanese</span></span> | <span data-ttu-id="cfcbd-151">日本語</span><span class="sxs-lookup"><span data-stu-id="cfcbd-151">日本語</span></span> |
+| <span data-ttu-id="cfcbd-152">Kazakça</span><span class="sxs-lookup"><span data-stu-id="cfcbd-152">Kazakh</span></span> | <span data-ttu-id="cfcbd-153">қазақ тілі</span><span class="sxs-lookup"><span data-stu-id="cfcbd-153">қазақ тілі</span></span> |
+| <span data-ttu-id="cfcbd-154">Kore dili</span><span class="sxs-lookup"><span data-stu-id="cfcbd-154">Korean</span></span> | <span data-ttu-id="cfcbd-155">한국어</span><span class="sxs-lookup"><span data-stu-id="cfcbd-155">한국어</span></span> |
+| <span data-ttu-id="cfcbd-156">Letonca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-156">Latvian</span></span> | <span data-ttu-id="cfcbd-157">latviešu</span><span class="sxs-lookup"><span data-stu-id="cfcbd-157">latviešu</span></span> |
+| <span data-ttu-id="cfcbd-158">Litvanca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-158">Lithuanian</span></span> | <span data-ttu-id="cfcbd-159">lietuvių</span><span class="sxs-lookup"><span data-stu-id="cfcbd-159">lietuvių</span></span> |
+| <span data-ttu-id="cfcbd-160">Malayca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-160">Malay</span></span> | <span data-ttu-id="cfcbd-161">Melayu</span><span class="sxs-lookup"><span data-stu-id="cfcbd-161">Melayu</span></span> |
+| <span data-ttu-id="cfcbd-162">Norveççe (Bokmål)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-162">Norwegian (Bokmål)</span></span> | <span data-ttu-id="cfcbd-163">norsk bokmål</span><span class="sxs-lookup"><span data-stu-id="cfcbd-163">norsk bokmål</span></span> |
+| <span data-ttu-id="cfcbd-164">Lehçe</span><span class="sxs-lookup"><span data-stu-id="cfcbd-164">Polish</span></span> | <span data-ttu-id="cfcbd-165">polski</span><span class="sxs-lookup"><span data-stu-id="cfcbd-165">polski</span></span> |
+| <span data-ttu-id="cfcbd-166">Portekizce (Brezilya)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-166">Portuguese (Brazil)</span></span> | <span data-ttu-id="cfcbd-167">português</span><span class="sxs-lookup"><span data-stu-id="cfcbd-167">português</span></span> |
+| <span data-ttu-id="cfcbd-168">Portekizce (Portekiz)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-168">Portuguese (Portugal)</span></span> | <span data-ttu-id="cfcbd-169">português</span><span class="sxs-lookup"><span data-stu-id="cfcbd-169">português</span></span> |
+| <span data-ttu-id="cfcbd-170">Romence</span><span class="sxs-lookup"><span data-stu-id="cfcbd-170">Romanian</span></span> | <span data-ttu-id="cfcbd-171">română</span><span class="sxs-lookup"><span data-stu-id="cfcbd-171">română</span></span> |
+| <span data-ttu-id="cfcbd-172">Rusça</span><span class="sxs-lookup"><span data-stu-id="cfcbd-172">Russian</span></span> | <span data-ttu-id="cfcbd-173">pусский</span><span class="sxs-lookup"><span data-stu-id="cfcbd-173">pусский</span></span> |
+| <span data-ttu-id="cfcbd-174">Sırpça (Kiril)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-174">Serbian (Cyrillic)</span></span> | <span data-ttu-id="cfcbd-175">српски</span><span class="sxs-lookup"><span data-stu-id="cfcbd-175">српски</span></span> |
+| <span data-ttu-id="cfcbd-176">Sırpça (Latin)</span><span class="sxs-lookup"><span data-stu-id="cfcbd-176">Serbian (Latin)</span></span> | <span data-ttu-id="cfcbd-177">srpski</span><span class="sxs-lookup"><span data-stu-id="cfcbd-177">srpski</span></span> |
+| <span data-ttu-id="cfcbd-178">Slovakça</span><span class="sxs-lookup"><span data-stu-id="cfcbd-178">Slovak</span></span> | <span data-ttu-id="cfcbd-179">slovenčina</span><span class="sxs-lookup"><span data-stu-id="cfcbd-179">slovenčina</span></span> |
+| <span data-ttu-id="cfcbd-180">Slovence</span><span class="sxs-lookup"><span data-stu-id="cfcbd-180">Slovenian</span></span> | <span data-ttu-id="cfcbd-181">slovenski</span><span class="sxs-lookup"><span data-stu-id="cfcbd-181">slovenski</span></span> |
+| <span data-ttu-id="cfcbd-182">İspanyolca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-182">Spanish</span></span> | <span data-ttu-id="cfcbd-183">español</span><span class="sxs-lookup"><span data-stu-id="cfcbd-183">español</span></span> |
+| <span data-ttu-id="cfcbd-184">İsveç Dili</span><span class="sxs-lookup"><span data-stu-id="cfcbd-184">Swedish</span></span> | <span data-ttu-id="cfcbd-185">svenska</span><span class="sxs-lookup"><span data-stu-id="cfcbd-185">svenska</span></span> |
+| <span data-ttu-id="cfcbd-186">Tay dili</span><span class="sxs-lookup"><span data-stu-id="cfcbd-186">Thai</span></span> | <span data-ttu-id="cfcbd-187">ไทย</span><span class="sxs-lookup"><span data-stu-id="cfcbd-187">ไทย</span></span> |
+| <span data-ttu-id="cfcbd-188">Türkçe</span><span class="sxs-lookup"><span data-stu-id="cfcbd-188">Turkish</span></span> | <span data-ttu-id="cfcbd-189">Türkçe</span><span class="sxs-lookup"><span data-stu-id="cfcbd-189">Türkçe</span></span> |
+| <span data-ttu-id="cfcbd-190">Ukraynaca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-190">Ukrainian</span></span> | <span data-ttu-id="cfcbd-191">українська</span><span class="sxs-lookup"><span data-stu-id="cfcbd-191">українська</span></span> |
+| <span data-ttu-id="cfcbd-192">Vietnamca</span><span class="sxs-lookup"><span data-stu-id="cfcbd-192">Vietnamese</span></span> | <span data-ttu-id="cfcbd-193">Tiếng Việt</span><span class="sxs-lookup"><span data-stu-id="cfcbd-193">Tiếng Việt</span></span> |
 
-## <a name="whats-translated"></a><span data-ttu-id="b25a6-193">Çevrilmiş öğeler</span><span class="sxs-lookup"><span data-stu-id="b25a6-193">What's translated</span></span>
+## <a name="whats-translated"></a><span data-ttu-id="cfcbd-194">Çevrilmiş öğeler</span><span class="sxs-lookup"><span data-stu-id="cfcbd-194">What's translated</span></span>
 
-<span data-ttu-id="b25a6-194">Uygulamada menü, etiket metni ve sistem iletileri gibi öğeleri tercih ettiğiniz dilde görüntülemek için dil tercihiniz kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b25a6-194">The app uses your language preference to display elements like the menu, label text, and system messages in your preferred language.</span></span>
+<span data-ttu-id="cfcbd-195">Uygulamada menü, etiket metni ve sistem iletileri gibi öğeleri tercih ettiğiniz dilde görüntülemek için dil tercihiniz kullanılır.</span><span class="sxs-lookup"><span data-stu-id="cfcbd-195">The app uses your language preference to display elements like the menu, label text, and system messages in your preferred language.</span></span>
 
-<span data-ttu-id="b25a6-195">Çoğu özellik verilerinize bağlı olduğundan bazı öğeler özgün dillerinde kalır.</span><span class="sxs-lookup"><span data-stu-id="b25a6-195">Because most features are based on your data, some items remain in their original language.</span></span> <span data-ttu-id="b25a6-196">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="b25a6-196">For example:</span></span>
+<span data-ttu-id="cfcbd-196">Çoğu özellik verilerinize bağlı olduğundan bazı öğeler özgün dillerinde kalır.</span><span class="sxs-lookup"><span data-stu-id="cfcbd-196">Because most features are based on your data, some items remain in their original language.</span></span> <span data-ttu-id="cfcbd-197">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="cfcbd-197">For example:</span></span>
 
-- <span data-ttu-id="b25a6-197">Varlıklar ve segmentler dahil olmak üzere verileriniz</span><span class="sxs-lookup"><span data-stu-id="b25a6-197">Your data, including entities and segments</span></span>
-- <span data-ttu-id="b25a6-198">Ortam adınız</span><span class="sxs-lookup"><span data-stu-id="b25a6-198">Your environment name</span></span>
+- <span data-ttu-id="cfcbd-198">Varlıklar ve segmentler dahil olmak üzere verileriniz</span><span class="sxs-lookup"><span data-stu-id="cfcbd-198">Your data, including entities and segments</span></span>
+- <span data-ttu-id="cfcbd-199">Ortam adınız</span><span class="sxs-lookup"><span data-stu-id="cfcbd-199">Your environment name</span></span>
 
-## <a name="choose-your-language-settings"></a><span data-ttu-id="b25a6-199">Dil ayarlarınızı seçme</span><span class="sxs-lookup"><span data-stu-id="b25a6-199">Choose your language settings</span></span>  
+## <a name="choose-your-language-settings"></a><span data-ttu-id="cfcbd-200">Dil ayarlarınızı seçme</span><span class="sxs-lookup"><span data-stu-id="cfcbd-200">Choose your language settings</span></span>  
 
-<span data-ttu-id="b25a6-200">[**Sistem** sayfasında](system.md) tercih ettiğiniz dili değiştirin.</span><span class="sxs-lookup"><span data-stu-id="b25a6-200">Change your preferred language [on the **System** page](system.md).</span></span>
+<span data-ttu-id="cfcbd-201">[**Sistem** sayfasında](system.md) tercih ettiğiniz dili değiştirin.</span><span class="sxs-lookup"><span data-stu-id="cfcbd-201">Change your preferred language [on the **System** page](system.md).</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
