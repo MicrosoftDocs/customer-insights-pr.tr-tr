@@ -2,25 +2,25 @@
 title: Common Data Model'de Customer Insights varlık şemaları
 description: Common Data Model'da varlıklarla çalışın.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269308"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596385"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model'de varlık şemaları
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Common Data Model](https://docs.microsoft.com/common-data-model/) bildirimli bir belirtimdir ve iş ile üretkenlik uygulamalarında yaygın olarak kullanılan kavram ve aktiviteleri temsil eden standart varlıkların bir tanımıdır. Bu model, gözlemsel ve analitik veriler için genişletilmektedir. Common Data Model, (Firma, İş Birimi, Servis Talebi, İlgili Kişi, Müşteri Adayı, Fırsat ve Ürün gibi) iyi tanımlanmış, modüler ve genişletilebilir iş varlıklarının yanı sıra satıcılar, çalışanlar ve müşterilerle etkileşimler ve servis düzeyi sözleşmeleri gibi aktiviteler sağlar. Herhangi biri, işle ilgili ek fikirler yakalamak için Common Data Model tanımlarını oluşturabilir ve genişletebilir.
+[Common Data Model](/common-data-model/) bildirimli bir belirtimdir ve iş ile üretkenlik uygulamalarında yaygın olarak kullanılan kavram ve aktiviteleri temsil eden standart varlıkların bir tanımıdır. Bu model, gözlemsel ve analitik veriler için genişletilmektedir. Common Data Model, (Firma, İş Birimi, Servis Talebi, İlgili Kişi, Müşteri Adayı, Fırsat ve Ürün gibi) iyi tanımlanmış, modüler ve genişletilebilir iş varlıklarının yanı sıra satıcılar, çalışanlar ve müşterilerle etkileşimler ve servis düzeyi sözleşmeleri gibi aktiviteler sağlar. Herhangi biri, işle ilgili ek fikirler yakalamak için Common Data Model tanımlarını oluşturabilir ve genişletebilir.
 
 Bu, uygulamaların ve veri tümleştiricilerinin birleşik bir veri tanımı sağlayarak daha kolay iş birliği yapmasına olanak tanıyan bir paylaşılan veri modelidir. Common Data Model; standart varlıklar, ilişkiler, hiyerarşiler, nitelikler ve daha fazlası bulunan zengin bir meta veri sistemi içerir. Dynamics 365 uygulamalarından kaynaklık ve 260 standart varlıklarla GitHub'da açık kaynaklarım arasında yer alır. Dahili ve harici iş ortaklarından oluşan geniş bir sistem, Common Data Model için endüstriye özel kavramlara katkıda bulunur.
 
@@ -32,13 +32,13 @@ Müşterinin 360 derecelik görünümünü ve genişletilebilirlik amacıyla Com
 
 | Varlık | Açıklama |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Gözlemsel değeri olan bir kullanıcı tarafından gerçekleştirilen bir aktivite. |
-|[Müşteri profili](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | İş etkinliklerinde bulunan veya bulunma potansiyeli olan kişi veya kuruluş. |
-|[Ölçüm tanımı](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Sıfır veya daha fazla boyuta göre bölümlenen KPI'ların tanımı (Aylık Etkin Kullanıcılar, Müşteri Tarafından Toplam Harcanan, Ortalama Müşteri Edinme Maliyeti gibi) |
-|[Segment](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Ortak niteliklere sahip bir grup üyeyi tanımlar. |
-|[Segment üyeleri](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Belirli bir segmente katılan üyeler. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Gözlemsel değeri olan bir kullanıcı tarafından gerçekleştirilen bir aktivite. |
+|[Müşteri profili](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | İş etkinliklerinde bulunan veya bulunma potansiyeli olan kişi veya kuruluş. |
+|[Ölçüm tanımı](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Sıfır veya daha fazla boyuta göre bölümlenen KPI'ların tanımı (Aylık Etkin Kullanıcılar, Müşteri Tarafından Toplam Harcanan, Ortalama Müşteri Edinme Maliyeti gibi) |
+|[Segment](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Ortak niteliklere sahip bir grup üyeyi tanımlar. |
+|[Segment üyeleri](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Belirli bir segmente katılan üyeler. |
 
-Daha fazla bilgi için [Common Data Model'deki Customer Insights varlık şemaları](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview) hakkındaki belgelere bakın.
+Daha fazla bilgi için [Common Data Model'deki Customer Insights varlık şemaları](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview) hakkındaki belgelere bakın.
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Common Data Model varlık gezginini kullanarak varlıkları görüntüleme
 

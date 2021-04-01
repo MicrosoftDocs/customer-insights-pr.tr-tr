@@ -2,19 +2,19 @@
 title: Müşteri yaşam süresi değeri (CLV) tahmini
 description: Gelecekteki etkin müşterilerin gelir potansiyelini tahmin edin.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268618"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595833"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Müşteri yaşam süresi değeri (CLV) tahmini (Önizleme)
 
@@ -194,11 +194,11 @@ Sonuçlar sayfası içinde verilerin üç ana bölümü bulunur.
   
   - **Yüksek değerli müşterileri tahmin etmede başarı oranı**
 
-  Temel modele kıyasla yapay zeka modelini kullanarak yüksek değerli müşterileri tahmin etmedeki farkı görün. Örneğin, %84 başarı oranı, yapay zeka modelinin eğitim verilerindeki tüm yüksek değerli müşterilerden %84'ünü doğru şekilde yakalayabildiği anlamına gelir. Ardından göreli değişikliği raporlamak için bu başarı oranı, temel modelin başarı oranıyla karşılaştırılır. Bu değer, modele derece atamak için kullanılır.
+    Temel modele kıyasla yapay zeka modelini kullanarak yüksek değerli müşterileri tahmin etmedeki farkı görün. Örneğin, %84 başarı oranı, yapay zeka modelinin eğitim verilerindeki tüm yüksek değerli müşterilerden %84'ünü doğru şekilde yakalayabildiği anlamına gelir. Ardından göreli değişikliği raporlamak için bu başarı oranı, temel modelin başarı oranıyla karşılaştırılır. Bu değer, modele derece atamak için kullanılır.
 
   - **Hata ölçümleri**
     
-  Diğer bir ölçüm, gelecekteki değerleri tahmin etmedeki hatalar yönünden modelin genel performansını gözden geçirmenizi sağlar. Bu hatayı değerlendirmek için genel Ortalama Hatanın Kare Kökü (RMSE) ölçümü kullanılır. RMSE, bir modelin nicel verileri tahmin ederken yaptığı hataları ölçmenin standart bir yoludur. Yapay zeka modelinin RMSE'si, temel modelin RMSE'si ile karşılaştırılır ve göreli fark raporlanır.
+    Diğer bir ölçüm, gelecekteki değerleri tahmin etmedeki hatalar yönünden modelin genel performansını gözden geçirmenizi sağlar. Bu hatayı değerlendirmek için genel Ortalama Hatanın Kare Kökü (RMSE) ölçümü kullanılır. RMSE, bir modelin nicel verileri tahmin ederken yaptığı hataları ölçmenin standart bir yoludur. Yapay zeka modelinin RMSE'si, temel modelin RMSE'si ile karşılaştırılır ve göreli fark raporlanır.
 
   Yapay zeka modeli, müşterilerin işinize kazandırdıkları değere göre doğru sıralamasını önceliklendirir. Bu nedenle, son model derecesini elde etmek için yalnızca yüksek değerli müşterileri tahmin etme başarı oranı kullanılır. RMSE ölçümü, aykırı değerlere karşı hassastır. Olağanüstü yüksek satın alma değerleri olan müşterilerin küçük bir yüzdesine sahip olduğunuz senaryolarda, genel RMSE ölçümü, model performansını tam olarak yansıtmayabilir.   
 

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267930"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597443"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Azure Machine Learning tabanlı modeller kullanma
 
@@ -29,9 +29,9 @@ Dynamics 365 Customer Insights'taki birleşik veriler, işle ilgili ek içgörü
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Azure Machine Learning çalışma alanı ayarlama
 
-1. Çalışma alanı oluşturmak üzere farklı seçenekler için bkz. [Azure Machine Learning çalışma alanı oluşturma](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace). En iyi performans için çalışma alanını Customer Insights ortamınıza coğrafi olarak en yakın olan Azure bölgesinde oluşturun.
+1. Çalışma alanı oluşturmak üzere farklı seçenekler için bkz. [Azure Machine Learning çalışma alanı oluşturma](/azure/machine-learning/concept-workspace#-create-a-workspace). En iyi performans için çalışma alanını Customer Insights ortamınıza coğrafi olarak en yakın olan Azure bölgesinde oluşturun.
 
-1. Çalışma alanınıza [Azure Machine Learning Studio](https://ml.azure.com/) üzerinden erişin. Çalışma alanınıza ilişkin birkaç [etkileşim yolu](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) bulunur.
+1. Çalışma alanınıza [Azure Machine Learning Studio](https://ml.azure.com/) üzerinden erişin. Çalışma alanınıza ilişkin birkaç [etkileşim yolu](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) bulunur.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure Machine Learning tasarımcısıyla çalışma
 
@@ -39,13 +39,13 @@ Azure Machine Learning tasarımcısı, Machine Learning Studio (klasik) ile benz
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure Machine Learning SDK'sı ile çalışma
 
-Veri bilimcileri ve yapay zeka geliştiricileri, makine öğrenimi iş akışları oluşturmak için [Azure Machine Learning SDK'sını](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) kullanır. Şu anda SDK kullanarak eğitilen modeller, Customer Insights ile doğrudan tümleştirilemez. Bu modeli kullanan bir toplu çıkarım işlem hattı için Customer Insights ile tümleştirme gerekir.
+Veri bilimcileri ve yapay zeka geliştiricileri, makine öğrenimi iş akışları oluşturmak için [Azure Machine Learning SDK'sını](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) kullanır. Şu anda SDK kullanarak eğitilen modeller, Customer Insights ile doğrudan tümleştirilemez. Bu modeli kullanan bir toplu çıkarım işlem hattı için Customer Insights ile tümleştirme gerekir.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Customer Insights ile tümleştirmek için toplu işlem hattı gereksinimleri
 
 ### <a name="dataset-configuration"></a>Veri Kümesi Yapılandırması
 
-Customer Insights'taki varlık verilerini toplu çıkarım işlem hattınız için kullanmak üzere veri kümeleri oluşturmanız gerekir. Bu veri kümelerinin çalışma alanında kayıtlı olması gerekir. Şu anca yalnızca .csv biçimindeki [tablosal veri kümelerini](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) destekliyoruz. Varlık verilerine karşılık gelen veri kümelerinin, işlem hattı parametresi olarak parametreleştirilmesi gerekir.
+Customer Insights'taki varlık verilerini toplu çıkarım işlem hattınız için kullanmak üzere veri kümeleri oluşturmanız gerekir. Bu veri kümelerinin çalışma alanında kayıtlı olması gerekir. Şu anca yalnızca .csv biçimindeki [tablosal veri kümelerini](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) destekliyoruz. Varlık verilerine karşılık gelen veri kümelerinin, işlem hattı parametresi olarak parametreleştirilmesi gerekir.
    
 * Tasarımcıda veri kümesi parametreleri
    
@@ -76,7 +76,7 @@ Customer Insights'taki varlık verilerini toplu çıkarım işlem hattınız iç
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>İşlem hattı verilerini Customer Insights'a içeri aktarma
 
-* Tasarımcı, bir işlem hattının çıktısını Azure depolama alanına dışarı aktarmaya olanak tanıyan [Verileri Dışa Aktarma modülünü](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) sağlar. Şu anda modülün, veri deposu türü olarak **Azure Blob Depolama**'yı kullanması ve **Veri Deposu**'nu ve ilgili **Yol**'u parametreleştirmesi gerekir. Customer Insights, ürün için erişilebilir veri deposu ve yol ile işlem hattı yürütmesi sırasında bu parametreleri geçersiz kılar.
+* Tasarımcı, bir işlem hattının çıktısını Azure depolama alanına dışarı aktarmaya olanak tanıyan [Verileri Dışa Aktarma modülünü](/azure/machine-learning/algorithm-module-reference/export-data) sağlar. Şu anda modülün, veri deposu türü olarak **Azure Blob Depolama**'yı kullanması ve **Veri Deposu**'nu ve ilgili **Yol**'u parametreleştirmesi gerekir. Customer Insights, ürün için erişilebilir veri deposu ve yol ile işlem hattı yürütmesi sırasında bu parametreleri geçersiz kılar.
    > [!div class="mx-imgBorder"]
    > ![Verileri Dışarı Aktarma Modülü Yapılandırması](media/intelligence-designer-importdata.png "Verileri Dışarı Aktarma Modülü Yapılandırması")
    

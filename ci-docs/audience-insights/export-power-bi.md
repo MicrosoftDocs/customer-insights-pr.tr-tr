@@ -2,19 +2,19 @@
 title: Power BI bağlayıcısı
 description: Power BI içinde Dynamics 365 Customer Insights bağlayıcısının nasıl kullanıldığını öğrenin.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477112"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596063"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI (önizleme) için bağlayıcı
 
@@ -23,7 +23,7 @@ Power BI Desktop ile verileriniz için görselleştirmeler oluşturun. Birleşik
 ## <a name="prerequisites"></a>Ön koşullar
 
 - Birleşik müşteri profillerinizin olması gerekir.
-- Bilgisayarınızda en son [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) sürümü yüklü olmalıdır. [Power BI Desktop hakkında daha fazla bilgi edinin](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/)'ın en son sürümü bilgisayarınızda yüklüdür. [Power BI Desktop hakkında daha fazla bilgi edinin](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Power BI için bağlayıcıyı yapılandırma
 
@@ -47,7 +47,7 @@ Power BI Desktop ile verileriniz için görselleştirmeler oluşturun. Birleşik
 
 ## <a name="large-data-sets"></a>Büyük veri kümeleri
 
-Power BI için Customer Insights bağlayıcısı, 1 milyon müşteri profili içeren veri kümeleriyle çalışmak üzere tasarlanmıştır. Daha büyük veri kümelerinin içeri aktarılması işe yarayabilir ancak uzun zaman alır. Buna ek olarak, işlem Power BI sınırlamaları nedeniyle zaman aşımına uğrayabilir. Daha fazla bilgi için bkz. [Power BI: Büyük veri kümeleri için öneriler](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Power BI için Customer Insights bağlayıcısı, 1 milyon müşteri profili içeren veri kümeleriyle çalışmak üzere tasarlanmıştır. Daha büyük veri kümelerinin içeri aktarılması işe yarayabilir ancak uzun zaman alır. Buna ek olarak, işlem Power BI sınırlamaları nedeniyle zaman aşımına uğrayabilir. Daha fazla bilgi için bkz. [Power BI: Büyük veri kümeleri için öneriler](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Bir alt veri kümesiyle çalışma
 
@@ -70,4 +70,3 @@ Yinelenen ilişkileri belirleyebilir ve kaldırabilirsiniz.
 Yinelenen ilişkiler kaldırıldıktan sonra Power BI bağlayıcısını yeniden yapılandırmayı deneyin. Ortam şimdi kullanılabilir durumda olmalıdır.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

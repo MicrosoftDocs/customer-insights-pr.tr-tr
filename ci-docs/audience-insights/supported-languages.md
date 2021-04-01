@@ -1,31 +1,31 @@
 ---
 title: Hedef kitle içgörüleri için desteklenen diller
 description: Dil desteğini anlayın ve yapılandırın.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268204"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595496"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Hedef kitle içgörüleri özelliği için desteklenen diller
 
-Dynamics 365 Customer Insights hedef kitle içgörüleri özelliği, birkaç dili destekler. Bu konuda, kullanılabilir diller listelenmekte ve aralarında geçiş yapmak için desteğin yanı sıra hangi içeriğin çevrildiğine dair genel bakış sağlanmaktadır.
+Dynamics 365 Customer Insights için hedef kitle içgörüleri birçok dile çevrilmiştir. Aşağıdaki listede, mevcut diller ve nelerin çevrildiği hakkında bilgiler yer almaktadır. Ayrıca dil ayarlarının nasıl değiştirileceği hakkında daha fazla bilgi edinebilirsiniz. 
 
 ## <a name="languages"></a>Diller
 
 | Dil adı (İngilizce)|  Dil Adı (yerel dil) |
 | ------------- | ------------- |
 | Baskça | euskara |
-| Bulgarca | Български |
+| Bulgarca | български |
 | Katalanca | català |
 | Çince (Basitleştirilmiş) | 中文(简体) |
 | Çince (Geleneksel) | 中文(繁體) |
@@ -42,20 +42,20 @@ Dynamics 365 Customer Insights hedef kitle içgörüleri özelliği, birkaç dil
 | Yunanca | Ελληνικά |
 | Hintçe | हिंदी |
 | Macarca | magyar |
-| Endonezya dili | Bahasa Indonesia |
+| Endonezce | Endonezya |
 | İtalyanca | italiano |
 | Japonca | 日本語 |
-| Kazakça | Қазақ |
-| Kore Dili | 한국어 |
+| Kazakça | қазақ тілі |
+| Kore dili | 한국어 |
 | Letonca | latviešu |
 | Litvanca | lietuvių |
-| Malay dili | Bahasa Melayu |
-| Norveççe (Bokmål) | norsk (bokmål) |
-| Lehçe | Polski |
+| Malayca | Melayu |
+| Norveççe (Bokmål) | norsk bokmål |
+| Lehçe | polski |
 | Portekizce (Brezilya) | português |
 | Portekizce (Portekiz) | português |
 | Romence | română |
-| Rusça | Русский |
+| Rusça | pусский |
 | Sırpça (Kiril) | српски |
 | Sırpça (Latin) | srpski |
 | Slovakça | slovenčina |

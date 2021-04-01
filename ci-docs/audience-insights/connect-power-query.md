@@ -2,23 +2,23 @@
 title: Power Query bağlayıcısı aracılığıyla veri alma
 description: Power Query temelli veri kaynakları için bağlayıcılar.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267799"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596937"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Bir Power Query veri kaynağına bağlanın
 
-Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlayıcıların çoğu, Dynamics 365 Customer Insights tarafından desteklenmektedir. Power Query bağlayıcılarına dayalı veri kaynaklarını eklemek, genel olarak sonraki bölümde açıklanan adımları takip eder. Ancak, kullandığınız bağlayıcıya bağlı olarak, farklı bilgiler gereklidir. Daha fazla bilgi için, [Power Query bağlayıcısı referansı](https://docs.microsoft.com/power-query/connectors/)'ndaki tekil bağlayıcılar hakkındaki belgelere bakın.
+Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlayıcıların çoğu, Dynamics 365 Customer Insights tarafından desteklenmektedir. Power Query bağlayıcılarına dayalı veri kaynaklarını eklemek, genel olarak sonraki bölümde açıklanan adımları takip eder. Ancak, kullandığınız bağlayıcıya bağlı olarak, farklı bilgiler gereklidir. Daha fazla bilgi için, [Power Query bağlayıcısı referansı](/power-query/connectors/)'ndaki tekil bağlayıcılar hakkındaki belgelere bakın.
 
 ## <a name="create-a-new-data-source"></a>Yeni veri kaynağı oluşturma
 
@@ -44,7 +44,7 @@ Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlay�
    > [!div class="mx-imgBorder"]
    > ![Sorguları düzenle diyaloğu](media/data-manager-configure-edit-queries.png "Sorguları düzenle diyaloğu")
 
-1. Ayrıca verilerinizi dönüştürebilirsiniz. Düzenlenecek veya dönüştürülecek bir varlık seçin. Dönüşümleri uygulamak için Power Query penceresindeki seçenekleri kullanın. Her dönüşüm **Uygulanan adımlar** altında listelenir. Power Query, çok sayıda önceden oluşturulmuş dönüştürme seçeneği sunar. Daha fazla bilgi için bkz. [Power Query Dönüştürmeleri](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Ayrıca verilerinizi dönüştürebilirsiniz. Düzenlenecek veya dönüştürülecek bir varlık seçin. Dönüşümleri uygulamak için Power Query penceresindeki seçenekleri kullanın. Her dönüşüm **Uygulanan adımlar** altında listelenir. Power Query, çok sayıda önceden oluşturulmuş dönüştürme seçeneği sunar. Daha fazla bilgi için bkz. [Power Query Dönüştürmeleri](/power-query/power-query-what-is-power-query#transformations).
 
 1. **Sorguları düzenle** iletişim kutusunda **Veri al**'ı seçerek veri kaynağınıza ek varlıklar ekleyebilirsiniz.
 
@@ -59,7 +59,7 @@ Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlay�
 
 ## <a name="available-power-query-data-sources"></a>Kullanılabilir Power Query veri kaynakları
 
-Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı listesi için bkz. [Power Query bağlayıcı referansı](https://docs.microsoft.com/power-query/connectors/). 
+Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı listesi için bkz. [Power Query bağlayıcı referansı](/power-query/connectors/). 
 
 **Customer Insights (Veri akışları)** sütununda onay işareti bulunan bağlayıcılar, Power Query temelli yeni veri kaynakları oluşturmak için kullanılabilir. Ön koşullar, sınırlamalar ve diğer ayrıntılar hakkında daha fazla bilgi edinmek için ilgili bağlayıcının belgelerini gözden geçirin.
 

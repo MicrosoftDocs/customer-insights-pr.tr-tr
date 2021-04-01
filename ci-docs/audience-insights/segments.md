@@ -1,20 +1,20 @@
 ---
 title: Segmentler oluşturma ve yönetme
 description: Müşterileri çeşitli özniteliklere göre gruplandırmak için müşteri segmentleri oluşturun.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270380"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597086"
 ---
 # <a name="create-and-manage-segments"></a>Segmentler oluşturma ve yönetme
 
@@ -35,19 +35,19 @@ Segmentler, **Segmentler** sayfasında yönetilir.
 
 1. Hedef kitle içgörülerinde, **Segmentler** sayfasına gidin.
 
-2. **Yeni** > **Boş segment**'i seçin.
+1. **Yeni** > **Boş segment**'i seçin.
 
-3. **Yeni segment** bölmesinde, bir segment türü seçin ve bir **Ad** girin.
+1. **Yeni segment** bölmesinde, bir segment türü seçin ve bir **Ad** girin.
 
    İsteğe bağlı olarak, bir görünen ad ve segmentin tanımlanmasına yardımcı olan bir açıklama girin.
 
-4. Grubu tanımlayacağınız **Segment oluşturucu** sayfasına gitmek için **İleri**'yi seçin. Grup, bir müşteri kümesidir.
+1. Grubu tanımlayacağınız **Segment oluşturucu** sayfasına gitmek için **İleri**'yi seçin. Grup, bir müşteri kümesidir.
 
-5. Segmentlerine ayırmak istediğiniz özniteliği içeren varlığı seçin.
+1. Segmentlerine ayırmak istediğiniz özniteliği içeren varlığı seçin.
 
-6. Segmentlere ayırmak için bir öznitelik seçin. Bu öznitelik dört değer türünden birine sahip olabilir: sayısal, dize, tarih veya Boole.
+1. Segmentlere ayırmak için bir öznitelik seçin. Bu öznitelik dört değer türünden birine sahip olabilir: sayısal, dize, tarih veya Boole.
 
-7. Seçili öznitelik için bir işleç ve bir değer seçin.
+1. Seçili öznitelik için bir işleç ve bir değer seçin.
 
    > [!div class="mx-imgBorder"]
    > ![Özel grup filtresi](media/customer-group-numbers.png "Müşteri grubu filtresi")
@@ -64,9 +64,14 @@ Segmentler, **Segmentler** sayfasında yönetilir.
    > [!div class="mx-imgBorder"]
    > ![Segment oluşturmada ilişki yolu](media/segments-multiple-relationships.png "Segment oluşturmada ilişki yolu")
 
-9. Segmentinizi kaydetmek için **Kaydet**'i seçin. Tüm gereksinimler doğrulanırsa segmentiniz kaydedilir ve işlenir. Aksi takdirde taslak olarak kaydedilir.
+1. Varsayılan olarak, segmentler, tanımlanmış filtrelerle eşleşen müşteri profillerinin tüm özniteliklerini içeren bir çıkış varlığı üretir. Bir segment *müşteri* varlığından başka varlıklara dayanıyorsa çıkış varlığına bu varlıklardan daha fazla nitelik ekleyebilirsiniz. Çıkış varlığına eklenecek öznitelikleri seçmek için **proje öznitelikleri**'ni seçin.  
 
-10. **Segmentler** sayfasına geri dönmek için **Segmentler'e dön**'ü seçin.
+   
+   Örnek: Bir segment, *müşteri* varlığıyla ilişkili müşteri etkinlik verilerini içeren bir varlığa dayanır. Segment, son 60 gün içinde yardım masasına telefon eden tüm müşterileri arar. Çıkış varlığındaki tüm eşleşen müşteri kayıtlarına çağrı süresini ve yapılan çağrı sayısını eklemeyi seçebilirsiniz. Bu bilgiler, sık olarak arayan müşterilere çevrimiçi yardım makalelerine ve SSS öğelerine yönlendiren yararlı bağlantılar içeren bir e-posta göndermek için kullanışlı olabilir.
+
+1. Segmentinizi kaydetmek için **Kaydet**'i seçin. Tüm gereksinimler doğrulanırsa segmentiniz kaydedilir ve işlenir. Aksi takdirde taslak olarak kaydedilir.
+
+1. **Segmentler** sayfasına geri dönmek için **Segmentler'e dön**'ü seçin.
 
 ## <a name="manage-existing-segments"></a>Mevcut segmentleri yönetme
 
@@ -85,6 +90,7 @@ Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
 - Segment üyelerinin bir önizlemesi olan üye sayısı eğilimi de dahil olmak üzere segment ayrıntılarını **görüntüleyin**.
 - Özelliklerini değiştirmek için segmenti **düzenleyin**.
+- Bir segmentin **yinelemesini oluşturun**. Özelliklerini hemen düzenlemeyi veya yinelemeyi kaydetmeyi seçebilirsiniz.
 - En son verileri dahil etmek için segmenti **yenileyin**.
 - Segmenti **Etkinleştirin** veya **Devre dışı bırakın**. Segmentlerin etkin veya etkin değil olmak üzere iki olası durumu vardır. Bu durumlar, bir segmenti düzenlerken kullanışlıdır. Etkin olmayan segmentler için segment tanımı vardır ancak tanım henüz herhangi bir müşteri içermemektedir. Segmenti etkinleştirdiğinizde durumu "etkin değil" durumundan"etkin" durumuna değişir ve segment tanımına uyan müşterileri aramaya başlar. [Zamanlanan yenileme](system.md#schedule-tab) yapılandırılırsa etkin olmayan segmentlerde **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir. Etkin olmayan bir segment etkinleştirildiğinde, yenilenir ve zamanlanan yenilemelere dahil edilir.
   Alternatif olarak, belirli bir segmentin etkinleştirilmesi ve devre dışı bırakılması için gelecekte bir tarih ve saat belirtmek üzere **Etkinleştir/Devre Dışı Bırak** açılır menüsündeki **Daha sonra zamanla** işlevselliğini de kullanabilirsiniz.

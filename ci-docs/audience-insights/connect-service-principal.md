@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267746"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596523"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Hedef kitle içgörüleri için Azure hizmet sorumlusu ile Azure Data Lake Storage Gen2 hesabına bağlanma
 
@@ -23,7 +23,7 @@ Azure hizmetlerini kullanan otomatik araçlar her zaman kısıtlı izinlere sahi
 Hizmet sorumlusunu [veri kaynağı olarak bir Common Data Model klasörünü eklemek veya düzenlemek](connect-common-data-model.md) veya [yeni bir ortam oluşturmak veya mevcut ortamı güncelleştirmek](manage-environments.md#create-an-environment-in-an-existing-organization) için güvenli bir şekilde kullanabilirsiniz.
 
 > [!IMPORTANT]
-> - Hizmet sorumlusunu kullanmayı amaçlayan Azure Data Lake Gen2 depolama hesabında [Hiyerarşik Ad Alanı (HNS) etkin](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace) olmalıdır.
+> - Hizmet sorumlusunu kullanmayı amaçlayan Azure Data Lake Gen2 depolama hesabında [Hiyerarşik Ad Alanı (HNS) etkin](/azure/storage/blobs/data-lake-storage-namespace) olmalıdır.
 > - Hizmet sorumlusu oluşturmak için Azure aboneliğinizde yönetici izinlerine sahip olmanız gerekir.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Hedef kitle içgörüleri için Azure hizmet sorumlusu oluşturma
@@ -48,7 +48,7 @@ Hedef kitle içgörüleri için yeni bir hizmet sorumlusu oluşturmadan önce ku
 
 ### <a name="create-a-new-service-principal"></a>Yeni bir hizmet sorumlusu oluşturma
 
-1. **Azure Active Directory PowerShell for Graph**'ın en son sürümünü yükleyin. Daha fazla bilgi için bkz. [Azure Active Directory PowerShell for Graph'ı yükleme](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. **Azure Active Directory PowerShell for Graph**'ın en son sürümünü yükleyin. Daha fazla bilgi için bkz. [Azure Active Directory PowerShell for Graph'ı yükleme](/powershell/azure/active-directory/install-adv2).
    - Bilgisayarınızda, klavyenizdeki Windows tuşunu seçin ve **Windows PowerShell** ve **Yönetici Olarak Çalıştır** için arama yapın.
    
    - Açılan PowerShell penceresine `Install-Module AzureAD` girin.

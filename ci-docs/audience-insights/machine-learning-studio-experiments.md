@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270228"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598363"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Azure Machine Learning Studio'ya (klasik) dayalı modeller kullanma
 
@@ -37,7 +37,7 @@ Dynamics 365 Customer Insights'taki birleşik veriler, işle ilgili ek içgörü
 
 1. **Machine Learning Studio Çalışma Alanı**'nı arayın ve **Oluştur**'u seçin.
 
-1. [Çalışma alanını oluşturmak](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace) için gerekli ayrıntıları girin. İçeri aktarmayı planladığınız veri miktarına göre **Web hizmeti planı fiyatlandırma katmanı**'nı seçin. En iyi performans için coğrafi olarak size en yakın **Konum**'u seçin.
+1. [Çalışma alanını oluşturmak](/azure/machine-learning/studio/create-workspace) için gerekli ayrıntıları girin. İçeri aktarmayı planladığınız veri miktarına göre **Web hizmeti planı fiyatlandırma katmanı**'nı seçin. En iyi performans için coğrafi olarak size en yakın **Konum**'u seçin.
 
 1. Kaynağı oluşturduktan sonra Machine Learning Studio çalışma alanı panosu gösterilir. **Machine Learning Studio'yu Başlat**'ı seçin.
 
@@ -65,7 +65,7 @@ Dynamics 365 Customer Insights'taki birleşik veriler, işle ilgili ek içgörü
 
    ![Tahmine dayalı web hizmeti ayarlama](media/predictive-webservice-control.png)
 
-1. Tahmine dayalı web hizmeti denemesi başarılı olduktan sonra bu denemeyi otomatik zamanlama için dağıtabilirsiniz. Web hizmetinin Customer Insights ile çalışması için **Web Hizmetini Dağıt** > **Web Hizmeti [Yeni] Önizlemesini Dağıt**'ı seçin. [Web hizmetini dağıtma hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Tahmine dayalı web hizmeti denemesi başarılı olduktan sonra bu denemeyi otomatik zamanlama için dağıtabilirsiniz. Web hizmetinin Customer Insights ile çalışması için **Web Hizmetini Dağıt** > **Web Hizmeti [Yeni] Önizlemesini Dağıt**'ı seçin. [Web hizmetini dağıtma hakkında daha fazla bilgi edinin](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Tahmine dayalı web hizmeti dağıtma](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Aşağıdaki resimde, Azure Machine Learning Studio'da model eğitimi ve değerl
 
 ![Azure Machine Learning Studio'da kayıp modeli](media/azure-machine-learning-model.png)
 
-Ayrıca, model iyileştirmenin önemli bir yönü olan **Permütasyon Özellik Önemi** adlı bir teknik de uygulanır. Yerleşik modeller, herhangi belirli bir özelliğin nihai tahmine etkisiyle ilgili hiç içgörü sunamaz veya çok az içgörü sunabilir. Özellik önemi hesaplayıcısı, özelliklerin belirli bir modelin sonucuna etkisini ayrı ayrı hesaplamak için özel bir algoritma kullanır. Özellik önemi, + 1 ile -1 arasında bir değere normalleştirilir. Olumsuz etki, ilgili özelliğin sonuç üzerinde mantığa aykırı bir etkisinin olduğu ve modelden kaldırılması gerektiği anlamına gelir. Olumlu etki ise özelliğin tahmine yoğun çok fazla etkisinin olduğunu gösterir. Bu değerler, farklı ölçümler olduğundan korelasyon katsayıları değildir. Daha fazla bilgi için bkz. [Permütasyon Özellik Önemi](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Ayrıca, model iyileştirmenin önemli bir yönü olan **Permütasyon Özellik Önemi** adlı bir teknik de uygulanır. Yerleşik modeller, herhangi belirli bir özelliğin nihai tahmine etkisiyle ilgili hiç içgörü sunamaz veya çok az içgörü sunabilir. Özellik önemi hesaplayıcısı, özelliklerin belirli bir modelin sonucuna etkisini ayrı ayrı hesaplamak için özel bir algoritma kullanır. Özellik önemi, + 1 ile -1 arasında bir değere normalleştirilir. Olumsuz etki, ilgili özelliğin sonuç üzerinde mantığa aykırı bir etkisinin olduğu ve modelden kaldırılması gerektiği anlamına gelir. Olumlu etki ise özelliğin tahmine yoğun çok fazla etkisinin olduğunu gösterir. Bu değerler, farklı ölçümler olduğundan korelasyon katsayıları değildir. Daha fazla bilgi için bkz. [Permütasyon Özellik Önemi](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 [Erime denemesinin tamamına Azure Yapay Zeka Galerisi'nden ulaşılabilir](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Veriler, üç farklı varlıktan alınır ve özellikler bunlardan türetilir. �
 
 ## <a name="integrate-custom-models"></a>Özel modelleri tümleştirme
 
-Bu tahminleri Customer Insights'ta kullanmak için müşteri kimlikleri ile birlikte **dışarı aktarmanız** gerekir. Kaynak verileri dışarı aktardığınız [aynı Azure Blob depolama konumuna tahminleri dışarı aktarın](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs). Tahmine dayalı web hizmeti, düzenli olarak çalıştırılacak ve puanları güncelleştirecek şekilde zamanlanabilir.
+Bu tahminleri Customer Insights'ta kullanmak için müşteri kimlikleri ile birlikte **dışarı aktarmanız** gerekir. Kaynak verileri dışarı aktardığınız [aynı Azure Blob depolama konumuna tahminleri dışarı aktarın](/azure/storage/common/storage-import-export-data-from-blobs). Tahmine dayalı web hizmeti, düzenli olarak çalıştırılacak ve puanları güncelleştirecek şekilde zamanlanabilir.
 
 Özel model tarafından oluşturulan veriler, müşteri verilerinizi daha fazla zenginleştirmek için kullanılabilir. Daha fazla bilgi için bkz. [Özel makine öğrenimi modelleri](custom-models.md).
 
