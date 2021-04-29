@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598654"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896489"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Dynamics 365 Customer Insights için hedef kitle içgörülerine genel bakış
 
@@ -27,9 +27,9 @@ Hedef kitle içgörüleri, müşterilerinizle ilgili daha kapsamlı bir anlayı�
   - Verilerinizi kolaylıkla bağlayın ve birleştirin; [önceden oluşturulmuş bağlayıcıları kullanarak popüler veri kaynaklarından](data-sources.md) işlemsel, gözlemsel ve davranışsal veriler elde edin.
   - Müşteri verilerini akıllıca dönüştürün: [Common Data Model](/common-data-model/)'e uygun birleşik müşteri profilleri oluşturun. AI/ML yönetimli önerilerle müşteri kimliklerini çözümleyin.
 
-- **Microsoft Graph içinde yer alan hedef kitle yönetim bilgileri ile zenginleştirme**
+- **hedef kitle istihbaratıyla zenginleşin**
 
-  - [Microsoft Graph içinde yer alan hedef kitle yönetim bilgilerini ekleyerek](enrichment-microsoft-graph.md) daha zengin müşteri profilleri oluşturun.  
+  - [Zenginleştirilmiş veri ekleyerek](enrichment-hub.md) daha zengin müşteri profilleri oluşturun.  
 
 - **İş süreçlerinizi ve kişiselleştirilmiş müşteri deneyimlerinizi güçlendirme**
 
@@ -43,7 +43,7 @@ Hedef kitle içgörüleri, müşterilerinizle ilgili daha kapsamlı bir anlayı�
 
   - Tüm müşteri verilerinizi almak için zengin bir bağlayıcı koleksiyonuna erişin.
   - Müşteri verilerini birleştirme ve [Common Data Model](/common-data-model/) biçimine dönüştürme yeteneği.
-  - Marka benzerliği ve ilgi alanları gibi Microsoft Graph içinde yer alan hedef kitle yönetim bilgilerinden elde edilen öngörülerle müşteri bilgilerini zenginleştirin.
+  - Marka benzerliği ve ilgi alanları gibi hedef kitle yönetim bilgilerinden elde edilen öngörülerle müşteri bilgilerini zenginleştirin.
   - Hedef kitle içgörülerini kolayca yapılandırmanıza ve olası sorunları tanımlamanıza yardımcı olacak "kodlama gerektirmeyen" yapılandırma ve hata ayıklama deneyimi.
   - Yapay zeka destekli önerilerle müşteri verilerini farklı kaynaklarda temizleyin ve standartlaştırın.  
 

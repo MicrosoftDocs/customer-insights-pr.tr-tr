@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598523"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896259"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598523"
 
 En son güncelleştirmeleri bildirmekten heyecan duyuyoruz! Bu makalede genel önizleme özellikleri, genel kullanılabilirlik geliştirmeleri ve özellik güncelleştirmeleri özetlenmektedir. Uzun vadeli özellik planlarını görmek için [Dynamics 365 ve Power Platform sürüm planları](/dynamics365/release-plans/) konusuna bakın.
 
-Son altı ayda planlanan özellikler hakkında daha fazla bilgi edinmek için aşağıdaki videoyu da izleyebilirsiniz.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı bölgeler özellikleri diğerlerinden önce görebilir. Farklı şekilde belirtilmedikçe herhangi bir işlem yapmanıza gerek yoktur ve uygulamayı kesinti olmadan otomatik olarak güncelleştiririz.
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="march-2021-updates"></a>Mart 2021 güncelleştirmeleri
+
+Mart 2021'deki güncelleştirmeler çeşitli özellikler, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="activities"></a>Aktiviteler
+
+- **Etkinlik Sihirbazı ve anlamsal türler** Etkinlik eşleme deneyimlerimizi kılavuz olarak geliştirdi ve güncelleştirdik ve aktivite eşlemesi oluşturmayı basitleştirin. Bu yeni deneyle, kullanıcılar sürecin her adımının tamamlanmasına yardımcı olmak için destekli bir deneyim alırlar. Aktivite eşleme adımında, çok sayıda aktivite türünde seçmenin yanı sıra, Kullanıcı *Abonelik* ve/veya *salesorderline* için verileri, aşağı akış tüketimi için kullanılabilecek endüstri standardı şemalarına anlam olarak eşlemeye de izin verebilir.    
+  Daha fazla bilgi için bkz. [Müşteri etkinlikleri](activities.md).
+
+### <a name="data-ingestion"></a>Veri alımı
+
+- **Power Platform veri akışları ve ağ geçitleri kullanarak yerinde veri kaynaklarına bağlanma** Power Platform iş akışlarının önizlemesini duyurmaktan ve Customer Insights'da ilişkilendirilmiş Power Platform veya Dataverse ortamla ağ geçitleri kullanarak bağlantı kurma konusunda mutluyuz. Bir Customer Insights ortamında, bağlantılı bir Dataverse ortamla oluşturulan tüm yeni veri kaynakları varsayılan olarak yerinde veri bağlantısı ve zengin bağlayıcılar ve dönüşüm özellikleri setinde Power Platform veri akışları getirir.
+
+### <a name="extensibility"></a>Genişletilebilirlik
+
+- **Bağlantılar ve dışa aktarmalarda düzenlenen dışa aktarmalar** **Dışa aktarma hedefleri** sayfasının adını **bağlantılar** olarak değiştirdik ve **dışarı aktarımlar** için ayrı bir sayfa ekledik. Bu güncelleştirmenin bir parçası olarak, varolan verme işlemlerini bir bağlantının çiftlerine ve bu bağlantıyı kullanarak verme işlemini geçireceğiz. Artık yöneticilere **bağlantılar** sayfasındaki giden veriler üzerinde daha fazla açıklık vardır. Tüm Kullanıcı rolleri **Dışa aktarmalar** sayfasına erişim sağlar, ancak yalnızca Yöneticiler, katkı sağlayanlar grubunun paylaşılan bağlantılarla belirli verme işlemlerini düzenlemesine izin vermeyi seçebilirler.     
+  Daha fazla bilgi için bkz. [Bağlantılara genel bakış](connections.md) ve [Dışa aktarmalara genel bakış](export-destinations.md).
+
+- **Segmentleri Campaign Monitor'a aktarma** Dışa aktarma hedeflerimizi, Campaign Monitor içerecek şekilde genişlettik. Artık Customer Insights'den Campaign Monitor listelerine segmentleri verebilir ve bunları pazarlama kampanyalarınız için temel olarak kullanabilirsiniz.    
+   Daha fazla bilgi için bkz. [Campaign Monitor'a aktarma](export-campaign-monitor.md).
+
+- **Segmentleri Constant Contact'a aktarma** Dışa aktarma hedeflerimizi, Constant Contact içerecek şekilde genişlettik. Artık Customer Insights'den Constant Contact listelerine segmentleri verebilir ve bunları pazarlama kampanyalarınız için temel olarak kullanabilirsiniz.   
+   Daha fazla bilgi için bkz. [Constant Contact'a aktarma](export-constant-contact.md).
+
+- **Segmentleri RollWorks'a aktarma** Dışa aktarma hedeflerimizi, RollWorks içerecek şekilde genişlettik. Artık Customer Insights'den RollWorks listelerine segmentleri verebilir ve bunları B2B reklamcılığı için temel olarak kullanabilirsiniz.    
+   Daha fazla bilgi için bkz. [RollWorks'e aktarma](export-rollworks.md).
+
+- **Segmentleri Snapchat'e aktarma** Dışa aktarma hedeflerimizi, Snapchat içerecek şekilde genişlettik. Artık Customer Insights'den Snapchat listelerine segmentleri verebilir ve bunları reklamcılığı için temel olarak kullanabilirsiniz.     
+   Daha fazla bilgi için bkz. [Snapchat'e aktarma](export-snapchat.md).
+
+### <a name="predictions"></a>Tahminler
+
+- **Ürün önerileri için ürün filtreleri kullanma ürün** Öneri modelinizde Ürün filtreleri kullanma yeteneğini ekledik. Artık, ürünlerinizin yalnızca bir alt kümesini kullanan bir tahmin oluşturabilirsiniz.    
+   Daha fazla bilgi için bkz. [Ürün filtrelerini yapılandırma](predict-product-recommendation.md#configure-product-filters).
+
+- **Model tahminlerinden segment oluşturma** Bir tahmin modelin sonuçlarını kullanarak segmentler oluşturmak için hızlı bir yol ekledik. Model sonuçları sayfasından, **yeni segment oluştur** seçeneğini belirleyerek kolayca yeni bir segment oluşturabilirsiniz.    
+  Daha fazla bilgi için bkz. [Tahmin modeli esasında bir segment oluşturma](prediction-based-segment.md).
+
+- **Ürün önerilerinde açıklamalar** Ürün önerileri ve bu etkenlerin ürün önerilerine katkıda bulunma derecesini açıklayan ve AI modeli tarafından öğrenilen anahtar etkenlerin öğrendikleri bilgiler eklenmiştir. Bu bilgi, model sonuçları ekranına eklenir.    
+   Daha fazla bilgi için bkz. [Tahmin durumunu ve sonuçları inceleme](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Şubat 2021 güncelleştirmeleri
 
@@ -107,7 +144,7 @@ Aralık 2020'deki güncelleştirmeler çeşitli özellikler, performans yükselt
 
   Ek olarak, müşteri profillerinizin nasıl zenginleştirilmesini istediğinizi daha iyi denetleyebilmeniz için yeni yapılandırma seçenekleri ekledik. 
 
-  Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md).
+  Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft.md).
 
 - **Hangi profillerin zenginleştirileceğini denetleme**
 
@@ -309,8 +346,8 @@ Ağustos 2020'deki güncelleştirmeler, çeşitli özellikler, performans yükse
 
 - **İlgi alanı eğilimleri zenginleştirmesi daha fazla pazarda kullanılabilir**
 
-  İlgi alanı eğilimleri zenginleştirmesinin kullanılabilirliğini Amerika Birleşik Devletleri'nin ötesinde diğer beş pazara genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişlemeyle müşteri verilerinizi bu pazarlar için geçerli olan daha fazla ilgi alanıyla zenginleştirebilirsiniz. Ayrıca bu pazarlarda bulunan müşteri profillerinizi, Microsoft Graph'taki yerel özel verileri kullanarak da zenginleştireceğiz.
-  Daha fazla bilgi için, bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md)
+  İlgi alanı eğilimleri zenginleştirmesinin kullanılabilirliğini Amerika Birleşik Devletleri'nin ötesinde diğer beş pazara genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişlemeyle müşteri verilerinizi bu pazarlar için geçerli olan daha fazla ilgi alanıyla zenginleştirebilirsiniz. Ayrıca, bu pazarlarda bulunan müşteri profillerinizi, Microsoft 'taki yerel özel verileri kullanarak da zenginleştiririz.
+  Daha fazla bilgi için, bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Temmuz 2020 güncelleştirmeleri
@@ -330,8 +367,8 @@ Temmuz 2020'deki güncelleştirmeler, çeşitli özellikler, performans yükselt
 
 - **Marka eğilimleri zenginleştirmesi daha fazla pazarda kullanılabilir**
 
-  Marka eğilimleri zenginleştirmesinin kullanılabilirliğini Amerika Birleşik Devletleri'nin ötesinde diğer beş pazara genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişlemeyle, müşteri verilerinizi bu pazarlardaki yerel markalarla zenginleştirebilirsiniz. Ayrıca bu pazarlarda bulunan müşteri profillerinizi, Microsoft Graph'taki yerel özel verileri kullanarak da zenginleştireceğiz.
-  Daha fazla bilgi için, bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md)
+  Marka eğilimleri zenginleştirmesinin kullanılabilirliğini Amerika Birleşik Devletleri'nin ötesinde diğer beş pazara genişletiyoruz: Kanada, Avustralya, Birleşik Krallık, Fransa ve Almanya. Bu genişlemeyle, müşteri verilerinizi bu pazarlardaki yerel markalarla zenginleştirebilirsiniz. Ayrıca, bu pazarlarda bulunan müşteri profillerinizi, Microsoft 'taki yerel özel verileri kullanarak da zenginleştiririz.
+  Daha fazla bilgi için, bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Haziran 2020 güncelleştirmeleri
 
@@ -355,7 +392,7 @@ Haziran 2020'deki güncelleştirmeler, çeşitli özellikler, performans yüksel
 - **Marka ve ilgi alanı benzerliği zenginleştirmeyi birbirinden ayırma**
 
   Marka ve ilgi alanı benzerlikleri, artık iki ayrı zenginleştirme olarak kullanılabilir. Ayrı zenginleştirmeler, iş gereksinimlerinize veya ihtiyaçlarınıza bağlı olarak bunları ayrı ayrı yapılandırma ve yönetme esnekliği sunar.    
-  Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md).
+  Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Genişletilebilirlik
 

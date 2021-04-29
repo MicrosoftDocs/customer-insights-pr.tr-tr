@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini SendGrid'e dışarı aktarma
-description: SendGrid'e bağlantının nasıl yapılandırılacağını öğrenin.
-ms.date: 12/08/2020
+description: Bağlantıyı yapılandırmayı ve SendGrid'a dışa aktarmayı öğrenin.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,57 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 1a1f679fa42d47d524ebfdd6e931ae2822565f77
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a4c64cf77c682e07f3d0759c43355336b5806fc8
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597305"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759789"
 ---
-# <a name="connector-for-sendgrid-preview"></a>SendGrid için bağlayıcı (önizleme)
+# <a name="export-segments-to-sendgrid-preview"></a>Segmentleri SendGrid'a dışa aktarma (Önizleme)
 
 Birleşik müşteri profillerinin segmentlerini SendGrid ilgili kişi listelerine aktarın ve bunları SendGrid'te kampanyalar ve e-posta pazarlaması için kullanın. 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
 
 -   [SendGrid hesabınızın](https://sendgrid.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
 -   SendGrid'te mevcut ilgili kişi listeleri ve ilgili kimlikler olmalıdır. Daha fazla bilgi için bkz. [SendGrid - İlgili kişileri yönetme](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
 -   Hedef kitle içgörülerinde [yapılandırılmış segmentleriniz](segments.md) olmalıdır.
 -   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
-
-## <a name="connect-to-sendgrid"></a>SendGrid'e bağlanma
-
-1. **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
-
-1. **SendGrid** altında, **Ayarla**'yı seçin.
-
-1. Dışarı aktarma hedefinize **Görünen ad** alanında tanınabilir bir ad verin.
-
-   :::image type="content" source="media/export-sendgrid.PNG" alt-text="SendGrid dışarı aktarma yapılandırma bölmesi.":::
-
-1. **SendGrid API anahtarınızı** [SendGrid API anahtarı](https://sendgrid.com/docs/ui/account-and-settings/api-keys/) girin.
-
-1. **[SendGrid listesi kimliğinizi](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)** girin.
-
-1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
-
-1. SendGrid'e bağlantıyı başlatmak için **Bağlan**'ı seçin.
-
-1. **Kendinizi dışarı aktarma kullanıcısı olarak ekleyin**'i seçin ve Customer Insights kimlik bilgilerinizi girin.
-
-1. Dışarı aktarmayı yapılandırmak için **İleri**'yi seçin.
-
-## <a name="configure-the-connector"></a>Bağlayıcıyı yapılandırma
-
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. **Adı**, **Soyadı**, **Ülke/Bölge**, **Bölge**, **Şehir** ve **Posta kodu** gibi diğer isteğe bağlı alanlar için aynı adımları tekrarlayın.
-
-1. Dışarı aktarmak istediğiniz segmentleri seçin. SendGrid'e **toplamda 100.000'den fazla müşteri profilini aktarmamayı kesinlikle öneririz**. 
-
-1. **Kaydet**'i seçin.
-
-## <a name="export-the-data"></a>Verileri dışarı aktarma
-
-[Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
@@ -67,6 +33,48 @@ Birleşik müşteri profillerinin segmentlerini SendGrid ilgili kişi listelerin
 - SendGrid'e aktarma segmentlerle sınırlıdır.
 - 100.000'e kadar profili SendGrid'e aktarma işleminin tamamlanması birkaç saat kadar sürebilir. 
 - SendGrid'e aktarabileceğiniz profil sayısı, SendGrid ile yaptığınız sözleşmeye bağlıdır ve bu sözleşmeyle sınırlıdır.
+
+## <a name="set-up-connection-to-sendgrid"></a>SendGrid bağlantısı ayarla
+
+1. **Yönetici** > **Bağlantılar** gidin.
+
+1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **SendGrid**'ı seçin.
+
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. **SendGrid API anahtarınızı** [SendGrid API anahtarı](https://sendgrid.com/docs/ui/account-and-settings/api-keys/) girin.
+
+1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
+
+1. SendGrid'e bağlantıyı başlatmak için **Bağlan**'ı seçin.
+
+1. **Kendinizi dışarı aktarma kullanıcısı olarak ekleyin**'i seçin ve Customer Insights kimlik bilgilerinizi girin.
+
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
+
+## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
+
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+
+1. **Veri** > **Dışa aktarmalar**'a gidin.
+
+1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
+
+1. **Dışa aktarma bağlantısı** alanında, SendGrid bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
+
+1. **[SendGrid listesi kimliğinizi](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)** girin.
+
+1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. **Adı**, **Soyadı**, **Ülke/Bölge**, **Bölge**, **Şehir** ve **Posta kodu** gibi diğer isteğe bağlı alanlar için aynı adımları tekrarlayın.
+
+1. Dışarı aktarmak istediğiniz segmentleri seçin. SendGrid'e **toplamda 100.000'den fazla müşteri profilini aktarmamayı kesinlikle öneririz**. 
+
+1. **Kaydet**'i seçin.
+
+Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
+
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 

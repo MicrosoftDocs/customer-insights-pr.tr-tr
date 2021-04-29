@@ -1,7 +1,7 @@
 ---
 title: Ortamları oluşturma ve yönetme
 description: Hizmete kaydolmayı ve ortamları yönetmeyi öğrenin.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598317"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5888010"
 ---
 # <a name="manage-environments"></a>Ortamları yönet
 
@@ -44,6 +44,9 @@ Bu makalede, yeni kuruluş oluşturma ve ortam hazırlama açıklanmaktadır.
 
 Yeni ortam oluşturmanın iki yolu vardır. Tamamen yeni bir yapılandırma belirleyebilir veya bazı yapılandırma ayarlarını var olan bir ortamdan kopyalayabilirsiniz.
 
+> [!NOTE]
+> Kuruluşlar, her Customer Insights lisansı için *iki* ortam oluşturabilir. Kuruluşunuz birden çok lisans satın alırsanız, kullanılabilir ortam sayısını artırmak için [destek ekibimize başvurun](https://go.microsoft.com/fwlink/?linkid=2079641). Kapasite ve eklenti kapasitesi hakkında daha fazla bilgi için [Dynamics 365 lisans Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=866544)'nu karşıdan yükleyin.
+
 Ortam oluşturmak için:
 
 1. Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin.
@@ -55,14 +58,14 @@ Ortam oluşturmak için:
 
 1. **Yeni ortam oluştur** iletişim kutusunda, **Yeni ortam**'ı seçin.
 
-   [Verileri geçerli ortamdan kopyalamak](#additional-considerations-for-copy-configuration-preview) isterseniz **Mevcut ortamdan kopyala**'yı seçin. Kuruluşunuzda verileri kopyalayabileceğiniz tüm kullanılabilir ortamların bir listesini görürsünüz.
+   [Verileri geçerli ortamdan kopyalamak](#considerations-for-copy-configuration-preview) isterseniz **Mevcut ortamdan kopyala**'yı seçin. Kuruluşunuzda verileri kopyalayabileceğiniz tüm kullanılabilir ortamların bir listesini görürsünüz.
 
 1. Aşağıdaki ayrıntıları sağlayın:
    - **Ad**: Bu ortamın adı. Var olan bir ortamı kopyaladıysanız bu alan zaten doldurulmuş haldedir ancak bunu değiştirebilirsiniz.
    - **Bölge**: Hizmetin dağıtıldığı ve barındırıldığı bölge.
    - **Tür**: Üretim veya Korumalı Alan ortamı oluşturmak isteyip istemediğinizi seçin.
 
-2. İsteğe bağlı olarak, **Gelişmiş ayarlar**'ı seçebilirsiniz:
+1. İsteğe bağlı olarak, **Gelişmiş ayarlar**'ı seçebilirsiniz:
 
    - **Tüm verileri şuraya kaydet**: Customer Insights'ta oluşturulan çıkış verilerini depolamak istediğiniz yeri belirtir. İki seçeneğiniz vardır: **Customer Insights depolama alanı** (Customer Insights takımı tarafından yönetilen Azure Data Lake) ve **Azure Data Lake Storage 2. Nesil** (kendi Azure Data Lake Storage uygulamanız). Varsayılan olarak, Customer Insights depolama seçeneği belirlenmiştir.
 
@@ -75,20 +78,20 @@ Ortam oluşturmak için:
 
    - Azure Data Lake Storage Gen2 seçeneği için kimlik doğrulamasına yönelik olarak kaynak tabanlı seçeneğini veya abonelik tabanlı seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Kapsayıcı** adı değiştirilemez ve "customerinsights"tır.
    
-   - [Tahminler](predictions.md) kullanmak veya Microsoft Dataverse temelli uygulamalar ve çözümler ile veri paylaşımını yapılandırmak isterseniz **Microsoft Dataverse ile veri paylaşımını yapılandırma** altında Microsoft Dataverse ortam URL'sini sağlayın ve ek özellikleri etkinleştirin. Customer Insights çıktı verilerini Microsoft Dataverse Yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
+   - [Tahminleri](predictions.md) kullanmak, Microsoft Dataverse temelinde uygulama ve çözümlerle ilgili veri paylaşmayı yapılandırmak veya yerinde veri kaynaklarından gelen verileri etkinleştirmek isterseniz, **Microsoft Dataverse ile veri paylaşımını yapılandır ve ilave özellikleri etkinleştirin** altında Microsoft Dataverse ortam URL'sini sağlayın. Customer Insights çıktı verilerini Microsoft Dataverse Yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
 
      > [!NOTE]
      > - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydettiğinizde, Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımı şu anda desteklenmemektedir.
      > - Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımını etkinleştirdiğinizde, [Varlıktaki eksik değerleri tahmin etme](predictions.md) özelliği şu anda desteklenmemektedir.
 
      > [!div class="mx-imgBorder"]
-     > ![Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri](media/Datasharing-with-DataverseMDL.png)
+     > ![Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri](media/datasharing-with-DataverseMDL.png)
 
    Veri alımı veya segment oluşturma gibi işlemleri çalıştırdığınızda yukarıda belirttiğiniz depolama hesabında karşılık gelen klasörler oluşturulur. Veri dosyaları ve model.json dosyaları oluşturulur ve çalıştırdığınız işleme göre ilgili alt klasörlere eklenir.
 
    Depolama hesabınızda birden fazla Customer Insights ortamı oluşturur ve bu ortamlardan çıkış varlıklarını kaydetmeyi seçerseniz kapsayıcıda ci_<environmentid> bulunan her ortam için ayrı klasörler oluşturulur.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Yapılandırmayı kopyalamak için ek önemli noktalar (önizleme)
+### <a name="considerations-for-copy-configuration-preview"></a>Kopya yapılandırması (Önizleme) ile ilgili hususlar
 
 Aşağıdaki yapılandırma ayarları kopyalanır:
 
@@ -136,6 +139,18 @@ Varolan ortamların bazı ayrıntılarını düzenleyebilirsiniz.
 4. Bir ortam Azure Data Lake Storage 2. Nesil uygulamasında verileri depolamak üzere yapılandırılırsa, **firma anahtarını** güncelleştirebilirsiniz. Ancak **Hesap adı**'nı veya **Kapsayıcı** adını değiştiremezsiniz.
 
 5. İsteğe bağlı olarak, hesap anahtarı tabanlı bir bağlantıdan kaynak tabanlı veya abonelik tabanlı bir bağlantıya güncelleştirebilirsiniz. Yükseltme işlemi yaptığınızda güncelleştirmeden sonra hesap anahtarına geri dönemezsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). Bağlantıyı güncelleştirdiğinizde **Kapsayıcı** bilgilerini değiştiremezsiniz.
+
+6. İsteğe bağlı olarak, **Microsoft Dataverse ile veri paylaşımı Yapılandır ve ek özellikleri etkinleştir** altında Microsoft Dataverse ortam URL'si sağlayabilirsiniz. Bu yetenekler, Microsoft Dataverse'e dayanarak uygulama ve çözümlerle veri paylaşımı, yerinde veri kaynaklarından veri alımı veya [tahminlerin](predictions.md) kullanımınu içerir. Customer Insights çıktı verilerini Microsoft Dataverse Yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
+
+   > [!NOTE]
+   > - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydettiğinizde, Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımı şu anda desteklenmemektedir.
+   > - [Bir varlıktaki eksik değerlerin tahmin](predictions.md), Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımını etkinleştirdiğinizde şu anda desteklenmemektedir.
+
+   Microsoft Dataverse ile veri paylaşımını etkinleştirdiğinizde veri kaynaklarınız ve diğer işlemler için bir seferlik tam yenileme tetiklenecek. İşlemler çalışır durumda ve sıraya alınmışsa, Microsoft Dataverse ile veri paylaşımını etkinleştirme seçeneğini görmezsiniz. Bu işlemlerin tamamlanmasını bekleyebilir veya veri paylaşımını etkinleştirmek için iptal edebilirsiniz. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri.":::
+   
+   Veri alımı veya segment oluşturma gibi işlemleri çalıştırdığınızda yukarıda belirttiğiniz depolama hesabında karşılık gelen klasörler oluşturulur. Çalıştırdığınız işleme bağlı olarak veri dosyaları ve model.json dosyaları oluşturulur ve ilgili alt klasörlere eklenir.
 
 ## <a name="reset-an-existing-environment"></a>Mevcut bir ortamı sıfırlama
 

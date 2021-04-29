@@ -1,7 +1,7 @@
 ---
-title: Dışarı aktarma hedefleri
-description: Verileri dışarı aktarın ve dışarı aktarma hedeflerini yönetin.
-ms.date: 07/21/2020
+title: Customer Insights'den verileri dışa aktarma
+description: Verileri paylaşmak için dışarı aktarma işlemlerini yönetin.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596112"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896167"
 ---
-# <a name="export-destinations-preview-overview"></a>Dışarı aktarma hedeflerine (önizleme) genel bakış
+# <a name="exports-preview-overview"></a>Dışarı aktarma (önizleme) genel bakışı
 
-**Dışarı aktarma hedefleri** sayfası, verileri dışarı aktarmak için ayarladığınız tüm konumları gösterir. Ayrıca dışarı aktarma için yeni hedefler de ekleyebilirsiniz. Ayrıca şu anda kullanılabilir olan dışarı aktarma seçeneklerini gösterir. Hızlı bir genel bakış ve açıklama edinin ve her genişletilebilirlik seçeneğiyle neler yapabileceğinizi öğrenin. Birleşik profilleri, ölçümleri ve segmentleri işletmenizle ilgili desteklenen uygulamalara dışarı aktarın.
+**Dışarı aktarmalar** sayfası, tüm yapılandırılmış dışarı aktarımları gösterir. Belirli verileri farklı uygulamalarla paylaşmak için verir. Bunlar arasında müşteri profilleri veya varlıkları, şemaları ve eşleme ayrıntıları yer alabilir. Her dışarı aktarma işlemi [kimlik doğrulamayı ve erişimi yönetmek için bir Yönetici olarak ayarlanmış bir bağlantı](connections.md) ister.
 
-Aşağıdaki genişletilebilirlik seçeneklerini bulmak için **Yönetici** > **Hedefleri dışarı aktar**'a gidin:
+> [!NOTE]
+> 2021 Mart tarihine kadar, otomatik olarak karşılık gelen hizmete bir bağlantı oluşturmuştur. Şimdi dışarı aktarımlar oluşturmak için önce [bir Yönetici tarafından oluşturulup paylaşılmalarını gerektirir](connections.md).
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Adobe Deneyim Platformu](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [Autopilot](export-autopilot.md)
-- [Azure Blob Depolama](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Microsoft Teams için bot](export-teams-bot.md)
-- [Customer Insights API'si](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (Müşteri Kartı Eklentisi)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Satış Merkezi (Müşteri Kartı Eklentisi)](customer-card-add-in.md)
-- [Facebook Reklamları Yöneticisi](export-facebook.md)
-- [Google Ads](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [MailChimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+Dışarı aktarmalar sayfasını görüntülemek için **veri** > **dışarı aktarımlara** gidin. Tüm Kullanıcı rolleri, yapılandırılmış dışarı aktarımları görüntüleme erişimine sahiptir. Dışarı aktarımları adına, bağlantı adına veya bağlantı türüne göre bulmak için Komut çubuğundaki arama alanını kullanın.
 
-## <a name="add-a-new-export-destination"></a>Yeni dışarı aktarma hedefi ekle
+## <a name="set-up-a-new-export"></a>Yeni dışa aktarma ayarlayın
 
-Dışarı aktarma hedefleri eklemek için [yönetici izinleriniz](permissions.md) olmalıdır. Microsoft hizmetlerine dışarı aktarırsanız her iki hizmetin de aynı kuruluşta olduğunu varsayarız.
+Bir verme işlemi kurmak veya düzenlemek için, kullanabileceğiniz bağlantılara sahip olmanız gerekir. Bağlantılar sizin [Kullanıcı rolünüze](permissions.md) bağlıdır:
+- Yöneticilerin tüm bağlantılara erişimi vardır. Ayrıca, verme işlemi ayarlanırken yeni bağlantılar da oluşturabilirler.
+- Katkıda bulunanlar belirli bağlantılara erişim sahibi olabilir. Bunlar yöneticilere bağlantıları yapılandırma ve paylaşma konusunda bağımlıdır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Görüntüleyenler yalnızca varolan dışarı aktarımları görüntüleyebilir, ancak oluşturmaz.
 
-1. **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-1. **Dışarı aktarma hedeflerim** sekmesine geçin.
+1. Yeni bir dışa aktarma oluşturmak için **Dışa aktarma Ekle**'yi seçin.
 
-1. Yeni bir dışarı aktarma hedefi oluşturmak için **Hedef ekle**'yi seçin.
+1. **Verme işlemini ayarla** bölmesinde, hangi bağlantının kullanılacağını seçin. [Bağlantılar](connections.md) Yöneticiler tarafından yönetilir. 
 
-1. **Hedef ekle** bölmesinde, açılan menüden dışarı aktarma hedefinin **Tür**'ünü seçin.
+1. Gerekli ayrıntıları sağlayın ve verme işlemini oluşturmak için **Kaydet**'i seçin.
 
-1. Gerekli ayrıntıları sağlayın ve dışarı aktarma hedefini oluşturmak için **İleri**'yi seçin.
-
-**Keşfet** sekmesinde bir kutucukta **Ayarla**'yı da seçebilirsiniz.
-
-## <a name="view-export-destinations"></a>Dışa aktarma hedeflerini görüntüle
-
-Dışarı aktarma hedefleri oluşturduktan sonra bunları **Dışarı aktarma hedeflerim** sekmesindeki bir tabloda bulabilirsiniz. Bu tabloda üç sütun vardır:
-
-- **görünen ad**: hedef oluştururken girdiğiniz ad.
-- **Tür**: Hedefi oluştururken belirlediğiniz dışarı aktarma hedef türü.
-- **Oluşturulma tarihi**: Hedefin oluşturulduğu tarih.
-
-## <a name="edit-an-export-destination"></a>Dışarı aktarma hedefi düzenleme
+### <a name="edit-an-export"></a>Dışarı aktarmayı düzenle
 
 1. Düzenlemek istediğiniz Dışarı Aktarma hedefi için dikey üç noktayı seçin.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dikey üç nokta](media/export-destinations-page-ellipsis.png "Dikey üç nokta")
-
 1. Açılan menüden **Düzenle**'yi seçin.
 
-1. Güncelleştirme gerektiren değerleri değiştirin ve **Kaydet**'i seçin.
+1. Güncellemek istediğiniz değerleri değiştirin ve **Kaydet**'i seçin.
 
-## <a name="export-data-on-demand"></a>Verileri isteğe bağlı olarak dışarı aktarma
+## <a name="view-exports-and-export-details"></a>Dışarı aktarmalar ve verme ayrıntılarını görüntüleme
 
-Dışarı aktarma hedefi için bir bağlayıcı yapılandırdıktan sonra dışarı aktarma, her [zamanlanan yenilemeyle](system.md#schedule-tab) çalışır.
+Verme hedefleri oluşturduktan sonra, bunlar **veri** > **Dışa aktarma** üzerinde listelenir. Tüm kullanıcılar hangi verilerin paylaşılan ve en son durumunu görebilir.
 
-Zamanlanan bir yenilemeyi beklemeden verileri dışarı aktarmak için **Yönetici** > **Dışarı aktarma hedefleri** bölümündeki **Dışarı aktarma hedeflerim** sekmesine gidin.
+1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-> [!div class="mx-imgBorder"]
-> ![Dikey üç nokta](media/export-destinations-page-ellipsis.png "Dikey üç nokta")
+1. İzinleri düzenleme izni olmayan kullanıcılar **Düzenleme** yerine **Görüntüle**'ye bakın.
 
-- Tüm dışarı aktarma hedeflerine dışarı aktarmayı aynı anda çalıştırmak için listenin üzerindeki **Dışarı Aktar**'ı seçin.
-- Liste öğesinden sonra üç noktayı (...) seçin ve ardından tek bir dışarı aktarma hedefi için dışarı aktarmayı çalıştırmak üzere **Dışarı Aktar** seçeneğini belirleyin.
+1. Bu yan bölme bu dışa aktarmanın ayarlarını gösterir. İzinleri Düzenlemeden sonra değerleri değiştiremezsiniz. Dışarı aktarmalar sayfasına dönmek için **Kapat**'ı seçin.
 
-## <a name="remove-an-export-destination"></a>Dışa aktarma hedefini kaldırma
+## <a name="run-exports-on-demand"></a>İstek Üzerine dışa aktarma çalıştır
 
-Verme hedefini kaldırmak için ana **Dışa aktarma hedefleri** sayfasından başlayın.
+Bir verme yapılandırması yapılandırıldıktan sonra, çalışma bağlantısı olduğu sürece her [zamanlanmış yenileme](system.md#schedule-tab) çalışır.
 
-1. Kaldırmak istediğiniz verme hedefi için dikey üç nokta seçin.
+Zamanlanmış yenileme beklemeden verileri vermek için **veri** > **Dışa aktarmalar** bölümüne gidin. İki seçeneğiniz vardır:
 
-   > [!div class="mx-imgBorder"]
-   > ![Dikey üç nokta](media/export-destinations-page-ellipsis.png "Dikey üç nokta")
+- Tüm verme işlemlerini çalıştırmak için, komut çubuğunda **Tümünü Çalıştır**'ı seçin. 
+- Tek bir verme çalıştırmak için, bir liste öğesindeki üç noktayı (...) seçin ve sonra **Çalıştır**'ı seçin.
 
-2. Açılır menüsünde **Kaldır** seçeneğini belirleyin.
+## <a name="remove-an-export"></a>Dışa aktarmayı kaldırma
 
-3. Onay ekranında **Kaldır**'ı seçerek kaldırma işlemini onaylayın.
+1. **Veri** > **Dışa aktarmalar**'a gidin.
+
+1. Kaldırmak istediğiniz dışa aktarma için dikey üç nokta seçin.
+
+1. Açılır menüsünde **Kaldır** seçeneğini belirleyin.
+
+1. Onay ekranında **Kaldır**'ı seçerek kaldırma işlemini onaylayın.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

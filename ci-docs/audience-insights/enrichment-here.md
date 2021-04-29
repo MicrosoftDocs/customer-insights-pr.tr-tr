@@ -1,7 +1,7 @@
 ---
 title: Üçüncü taraf HERE Technologies zenginleştirme ile zenginleştirme
 description: Üçüncü taraf HERE Technologies zenginleştirmesi hakkında genel bilgiler.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597765"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896075"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 
@@ -26,35 +26,54 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
 
 - Etkin bir HERE Technologies aboneliğiniz olması gerekir. Abone olmak için [buradan kaydolabilir](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) veya [HERE Technologies ile doğrudan iletişime geçebilirsiniz](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [HERE Technologies Konum Zenginleştirme hakkında daha fazla bilgi edinin.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- HERE Technologies API anahtarına sahip olmalısınız.
+- Kullanılabilir bir HERE [bağlantısı](connections.md) vardır *veya* [Yönetici](permissions.md#administrator) izniniz ve HERE Technologies API anahtarınız vardır.
 
-- [Yönetici](permissions.md#administrator) izinlerine sahip olmalısınız.
+## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 
-## <a name="configuration"></a>Yapılandırma
+1. **Veriler** > **Zenginleştirme**'ye gidin. 
 
-1. **Veriler** > **Zenginleştirme**'ye gidin.
-
-1. HERE Technologies kutucuğunda **Verilerimi zenginleştir**'i seçin.
+1. HERE Technologies kutucuğunda **verilerimi zenginleştir** ve **Başlarken**'i seçin.
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies kutucuğu](media/HERE-tile.png "HERE Technologies kutucuğu")
 
-1. Etkin bir **HERE Technologies API anahtarı** girin. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin. 
+1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi seçerek bir bağlantı oluşturabilirsiniz. Açılır listeden **HERE Technologies**'i seçin. 
 
-1. **HERE'a Bağlan**'ı seçerek her iki girişi de onaylayın.
+1. Seçimini onaylamak için **HERE Technologies bağlantısı**'nı seçin.
 
-1.  **Veri ekle** seçeneğini belirleyin ve HERE Technologies'den alınan konum verileriyle zenginleştirmek istediğiniz **Müşteri veri kümesi**'ni seçin. Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
+1.  **İleri**'ye ve HERE Technologies'dan konum verileriyle zenginleştirmek istediğiniz **müşteri veri kümesi** seçin. Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Müşteri veri kümesi seçerken ekran görüntüsü.":::
 
-1. Alanları birincil ve/veya ikincil adresle eşlemek isteyip istemediğinizi seçin. Her iki adres (örneğin, bir ev ve bir iş adresi) için bir alan eşlemesi belirtebilir ve her iki adres için profilleri ayrı ayrı zenginleştirebilirsiniz. **İleri**'yi seçin.
+1. Alanları birincil ve/veya ikincil adresle eşlemek isteyip istemediğinizi seçin. Her iki adres için de bir alan eşlemesi ve her iki adres için de profilleri zenginleştirmeniz belirtebilirsiniz. Örneğin, bir giriş ve iş adresi varsa. **İleri**'yi seçin.
 
 1. HERE Technologies'den eşleşen konum verilerini aramak için birleşik profillerinizden hangi alanların kullanılması gerektiğini tanımlayın. Seçilen birincil ve/veya ikincil adres için **Sokak 1** ve **Posta Kodu** alanları gereklidir. Daha yüksek bir eşleşme doğruluğu için daha fazla alan eklenebilir.
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies zenginleştirmesi yapılandırma sayfası](media/enrichment-HERE-configuration.png "HERE Technologies zenginleştirmesi yapılandırma sayfası")
 
-1. Alan eşlemesini tamamlamak için **Uygula**'yı seçin.
+1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
+
+1. Zenginleştirme için bir ad girin. 
+
+1. seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Bağlantıyı HERE Technologies için yapılandırma 
+
+Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zenginleştirme yapılandırırken **Bağlantı Ekle**'yi seçin *veya* **yönetici** > **Bağlantılar**'a gidip HERE Technologies kutucuğunda **Ayarla**'yı seçin.
+
+1. **Görünen ad** kutusunda bağlantı için bir ad girin.
+
+1. Geçerli bir HERE Technologies API anahtarı sağlayın.
+
+1. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin
+
+1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
+
+1. Doğrulamayı tamamladıktan sonra, **Kaydet**'i seçin.
+
+> [!div class="mx-imgBorder"]
+   > ![HERE Technologies bağlantı yapılandırma sayfası](media/enrichment-HERE-connection.png "HERE Technologies bağlantı yapılandırma sayfası")
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 

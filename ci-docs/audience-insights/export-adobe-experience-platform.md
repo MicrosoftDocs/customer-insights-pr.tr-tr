@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Adobe Deneyim Platformu'na dışa aktarma
 description: Adobe Deneyim Platformu'nda hedef kitle içgörü segmentlerini nasıl kullanacağınızı öğrenin.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596293"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760125"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Deneyim Platformu'nda (önizleme) Customer Insights segmentlerini kullanma
 
@@ -51,21 +51,36 @@ Göndermek istediğiniz teklif e-postası, müşterinin ad, soyadı ve abonelik 
 
 Hedef kitlemiz tanımlandığımızda, hedef kitle içgörülerinden Azure Blob depolama hesabına dışa aktarma işlemini yapılandırabiliriz.
 
-1. Hedef kitle içgörülerinde, **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+### <a name="configure-a-connection"></a>Bağlantı yapılandırma
 
-1. **Azure Blob depolama** kutucuğunda **ayarla**'yı seçin.
+1. **Yönetici** > **Bağlantılar** gidin.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob depolama için yapılandırma kutucuğu.":::
+1. **Bağlantı Ekle**'yi seçin ve **Azure Blob depolama alanı**'na seçin veya **Azure Blob depolama** alanında **ayarla**'yı seçin:
 
-1. bu yeni dışa aktarma hedefi için bir **görünen ad** girin ve sonra, segmenti dışa aktarmak istediğiniz Azure Blob depolama hesabının **hesap adını**, **Hesap anahtarını** ve **kapsayıcısını** girin.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob depolama için yapılandırma kutucuğu."::: bağlantı yapılandırmak için:
+
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. **Firma adını**, **firma anahtarını** ve segmenti vermek istediğiniz Blob depolama hesabınızın **kapsayıcısını** girin.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Depolama alanı hesabı yapılandırmasının ekran görüntüsü."::: 
+   
+    - BLOB depolama hesabı adı ve firma anahtarının nasıl bulunacağı hakkında daha fazla bilgi edinmek için bkz. [Azure Portal'da depolama hesabı ayarlarını yönetme](/azure/storage/common/storage-account-manage).
+    - Kapsayıcının nasıl oluşturulacağını öğrenmek için bkz. [Kapsayıcı oluşturma](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Azure Blob depolama hesabı adı ve hesap anahtarının nasıl bulunacağı hakkında daha fazla bilgi edinmek için, bkz. [Azure Portal'da depolama hesabı ayarlarını yönetme](/azure/storage/common/storage-account-manage).
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin. 
 
-   - Kapsayıcının nasıl oluşturulacağını öğrenmek için bkz. [Kapsayıcı oluşturma](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
-1. **İleri**'yi seçin.
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+
+1. **Veri** > **Dışa aktarmalar**'a gidin.
+
+1. Yeni bir dışa aktarma oluşturmak için **Dışa aktarma Ekle**'yi seçin.
+
+1. **Dışa aktarma bağlantısı** alanında, Azure Blob Depolama bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
 
 1. Dışa aktarmak istediğiniz segmenti seçin. Bu örnekte, **ChurnProneCustomers**'dır.
 
@@ -73,11 +88,9 @@ Hedef kitlemiz tanımlandığımızda, hedef kitle içgörülerinden Azure Blob 
 
 1. **Kaydet**'i seçin.
 
-Dışa aktarma hedefini kaydettikten sonra, bunu **yönetici** > **Dışa aktarmalar** > **Dışa aktarma hedeflerim**'de bulabilirsiniz.
+Verme hedefini kaydettikten sonra, **veri** > **Dışar aktarmalar**'da bulursunuz.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Dışa aktarımlar ve örnek segmentin vurgulandığı ekran görüntüsü.":::
-
-Artık [segmenti talep üzerine dışa aktarabilirsiniz](export-destinations.md#export-data-on-demand). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md) ile de çalışır.
+Artık [segmenti talep üzerine dışa aktarabilirsiniz](export-destinations.md#run-exports-on-demand). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md) ile de çalışır.
 
 > [!NOTE]
 > Dışa aktarılan segmentteki kayıt sayısının, Adobe Campaign Standard lisansınızda izin verilen sınırın içinde olduğundan emin olun.

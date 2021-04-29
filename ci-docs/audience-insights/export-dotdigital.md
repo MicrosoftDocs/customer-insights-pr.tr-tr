@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini DotDigital'e dışarı aktarma
-description: DotDigital'e bağlantının nasıl yapılandırılacağını öğrenin.
-ms.date: 11/14/2020
+description: Bağlantıyı yapılandırmayı ve DotDigital'a dışa aktarmayı öğrenin.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,40 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 51a28bdf0de34f0555d8ad7e3d13b2ef8911d417
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598041"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759983"
 ---
-# <a name="connector-for-dotdigital-preview"></a>DotDigital için bağlayıcı (önizleme)
+# <a name="export-segment-lists-to-dotdigital-preview"></a>Segment listelerini DotDigital (Önizleme) içine aktar
 
 Birleşik müşteri profillerinin segmentlerini DotDigital adres defterlerine dışarı aktarın ve bunları DotDigital ile kampanyalar, e-posta pazarlaması ve müşteri segmentleri oluşturmak için kullanın. 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
 
 -   [DotDigital hesabınızın](https://dotdigital.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
 -   DotDigital'de mevcut adres defterleri ve ilgili kimlikler olmalıdır. Kimlik, bir adres defterini seçip açtığınızda URL'de bulunabilir. Daha fazla bilgi için bkz. [DotDigital adres defterleri](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Hedef kitle içgörülerinde [yapılandırılmış segmentleriniz](segments.md) olmalıdır.
 -   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
-## <a name="connect-to-dotdigital"></a>DotDigital'e bağlanma
+## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-1. **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+- Her DotDigital'e dışarı aktarma işlemi için en fazla 1 milyon profil.
+- DotDigital'e dışarı aktarma segmentlerle sınırlıdır.
+- Toplam 1 milyon profil bulunan segmentlerin dışarı aktarılması, sağlayıcı tarafındaki sınırlamalar nedeniyle 3 saat kadar sürebilir. 
+- DotDigital'e dışarı aktarabileceğiniz profil sayısı, DotDigital ile yaptığınız sözleşmeye bağlıdır ve sınırlıdır.
 
-1. **DotDigital** altında, **Ayarla**'yı seçin.
+## <a name="set-up-connection-to-dotdigital"></a>DotDigital bağlantısı ayarla
 
-1. Dışarı aktarma hedefinize **Görünen ad** alanında tanınabilir bir ad verin.
+1. **Yönetici** > **Bağlantılar** gidin.
 
-   :::image type="content" source="media/DotDigital_config.PNG" alt-text="DotDigital dışarı aktarma işlemi için yapılandırma bölmesi.":::
+1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **DotDigital**'ı seçin.
+
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. **DotDigital kullanıcı adınızı ve parolanızı** girin.
 
@@ -47,9 +54,18 @@ Birleşik müşteri profillerinin segmentlerini DotDigital adres defterlerine d�
 
 1. **Kendinizi dışarı aktarma kullanıcısı olarak ekleyin**'i seçin ve Customer Insights kimlik bilgilerinizi girin.
 
-1. Dışarı aktarmayı yapılandırmak için **İleri**'yi seçin.
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin. 
 
-## <a name="configure-the-connector"></a>Bağlayıcıyı yapılandırma
+## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
+
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+
+1. **Veri** > **Dışa aktarmalar**'a gidin.
+
+1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
+
+1. **Dışa aktarma bağlantısı** alanında, DotDigital bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
+
 
 1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. **Ad**, **Soyadı**, **Tam adı**, **Cinsiyet** ve **Posta kodu** gibi diğer isteğe bağlı alanlar için aynı adımları tekrarlayın.
 
@@ -57,16 +73,12 @@ Birleşik müşteri profillerinin segmentlerini DotDigital adres defterlerine d�
 
 1. **Kaydet**'i seçin.
 
-## <a name="export-the-data"></a>Verileri dışarı aktarma
+Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
-[Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır. DotDigital'de, artık segmentlerinizi [DotDigital adres defterlerinde](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) bulabilirsiniz.
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
+ 
+DotDigital'de, artık segmentlerinizi [DotDigital adres defterlerinde](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) bulabilirsiniz.
 
-## <a name="known-limitations"></a>Bilinen sınırlamalar
-
-- Her DotDigital'e dışarı aktarma işlemi için en fazla 1 milyon profil.
-- DotDigital'e dışarı aktarma segmentlerle sınırlıdır.
-- Toplam 1 milyon profil bulunan segmentlerin dışarı aktarılması, sağlayıcı tarafındaki sınırlamalar nedeniyle 3 saat kadar sürebilir. 
-- DotDigital'e dışarı aktarabileceğiniz profil sayısı, DotDigital ile yaptığınız sözleşmeye bağlıdır ve sınırlıdır.
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 

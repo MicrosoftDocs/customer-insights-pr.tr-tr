@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Dynamics 365 Sales'e dışarı aktarma
-description: Dynamics 365 Sales bağlantısını yapılandırmayı öğrenin.
-ms.date: 02/01/2021
+description: Bağlantıyı yapılandırmayı ve Dynamics 365 Sales'da dışa aktarmayı öğrenin.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,35 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 39ecdf528c6be4d8fb420a52a6ed998317e43bcd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fc1a05ba4d21d96aa1a9724d158687bbb86949b6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598133"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759628"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a>Dynamics 365 Sales için bağlayıcı (önizleme)
+# <a name="use-segments-in-dynamics-365-sales-preview"></a>Dynamics 365 Sales'daki segmentleri kullanma (önizleme)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sales ile promosyonları göndermek için müşteri verilerinizi kullanın.
 
-## <a name="prerequisite"></a>Önkoşul
+## <a name="prerequisite-for-connection"></a>Bağlantı için ön koşul
 
 1. Segmenti Customer Insights'tan Sales'e aktarabilmeniz için Dynamics 365 Sales'te ilgili kişi kayıtlarının bulunması gerekir. [Common Data Services kullanarak Dynamics 365 Sales](connect-power-query.md)'te kişilerin alınması hakkında daha fazla bilgi edinin.
 
    > [!NOTE]
    > Segmentleri hedef kitle içgörülerden Sales'e aktarmak, Sales kurulumlarında yeni ilgili kişi kaydı oluşturmaz. Sales'teki ilgili kişi kayıtları, hedef kitle içgörülerinde alınmalı ve veri kaynağı olarak kullanılmalıdır. Ayrıca, segmentlerin dışarı aktarılabilmesi için müşteri kimliklerini ilgili kişi kimlikleriyle eşlemek üzere birleşik Müşteri varlığına eklenmesi gerekir.
 
-## <a name="configure-the-connector-for-sales"></a>Sales için bağlayıcıyı yapılandırma
+## <a name="set-up-the-connection-to-sales"></a>Sales bağlantısını ayarlayın.
 
-1. Hedef kitle içgörülerinde, **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Dynamics 365 Sales** altında, **Ayarla**'yı seçin.
+1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **Dynamics 365 Sales**'ı seçin.
 
-1. Dışarı aktarma hedefinize **Görünen ad** alanında tanınabilir bir ad verin.
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Kuruluşunuzun Sales URL'sini **Sunucu adresi** alanına girin.
 
@@ -43,15 +45,24 @@ Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sale
 
 1. Müşteri kimliği alanını Dynamics 365 İlgili Kişi Kimliği ile eşleyin.
 
-1. **İleri**'yi seçin.
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin. 
+
+## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
+
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+
+1. **Veri** > **Dışa aktarmalar**'a gidin.
+
+1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
+
+1. **Dışa aktarma bağlantısı** alanında, Dynamics 365 Sales bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
 
 1. Bir veya daha fazla segment seçin.
 
 1. **Kaydet**'i seçin.
 
-## <a name="export-the-data"></a>Verileri dışarı aktarma
+Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
-[Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
-
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Ölçüm oluşturma ve yönetme
 description: İşinizin performansını analiz etmek ve yansıtmak için ölçümler tanımlayın.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654756"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887964"
 ---
 # <a name="define-and-manage-measures"></a>Ölçümleri tanımlama ve yönetme
 
-Ölçümler, [birleşik profiller](data-unification.md)'den ilgili değerleri alarak müşteri davranışlarını ve iş performansını daha iyi anlamanıza yardımcı olur. Örneğin, bir işletme tek bir müşterinin satın alma geçmişini anlamak için *müşteri başına toplam harcama*'yı görmek ister. Alternatif olarak, işletmenin toplam değer düzeyindeki gelirini anlamak için *şirketin toplam satışları*'nı ölçmek ister.  
+Ölçüler müşteri davranışlarını ve iş performansını daha iyi anlamanıza yardımcı olur. Bu kullanıcılar [tümleşik profiller](data-unification.md) içinden ilgili değerlere bakar . Örneğin, bir işletme tek bir müşterinin satın alma geçmişini anlamak için *müşteri başına toplam harcama* veya *şirketin toplam satış* düzeyini anlamak için tüm işletmede harcanan toplam ölçümü görmek istemektedir.  
 
 Ölçümler, çeşitli işleçlere ve basit eşleşme seçeneklerine sahip bir veri sorgusu platformu olan ölçüm oluşturucu kullanılarak oluşturulur. Verileri filtrelemenizi, sonuçları gruplamanızı, [varlık ilişkisi yollarını](relationships.md) algılamanızı ve çıktıyı önizlemenizi sağlar.
 
 Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini planlamak için ölçüm oluşturucuyu kullanın. Örneğin, *müşteri başına toplam harcama* ve *müşteri başına toplam iade* ölçümü oluşturmak, yüksek harcaması olan ancak yüksek iadesi de olan bir müşteri grubunun belirlenmesine yardımcı olur. Sonraki en iyi eylemleri yürütmek için [segment oluşturabilirsiniz](segments.md). 
 
-## <a name="create-a-measure"></a>Ölçüm oluşturma
+## <a name="build-your-own-measure-from-scratch"></a>Kendi ölçünüzü sıfırdan oluşturun
 
 Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı olarak gösterilmektedir. Müşteri varlığıyla bağlantı kurmak için bir ilişki ayarı olan veri varlıklarından gelen veri öznitelikleriyle bir ölçüm oluşturabilirsiniz. 
 
 1. Hedef kitle içgörülerinde, **Ölçümler**'e gidin.
 
-1. **Yeni**'yi seçin.
+1. **Yeni**'yi seçin ve **Kendinizinkini oluşturun**'u seçin.
 
 1. **Adı düzenle**'yi seçin ve ölçüm için bir **Ad** verin. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
    1. Hesaplama değerlerini gruplamak istediğiniz veri öznitelikleri eklemek için **Boyutları düzenle**'yi seçin. Örneğin, şehir veya cinsiyet. Varsayılan olarak, *müşteri düzeyinde ölçümler* oluşturmak için *CustomerID* boyutu seçilir. *İş düzeyinde ölçümler* oluşturmak isterseniz varsayılan boyutu kaldırabilirsiniz.
    1. Ölçüme boyutları eklemek için **Bitti**'yi seçin.
 
+1. Verilerinizde bir tamsayıyla değiştirmeniz gereken değerler varsa, örneğin *boş* değeri *0* olarak değiştirin; **kurallar**'ı seçin. Kuralı yapılandırın ve değişiklik olarak yalnızca tam sayı seçtiğinizden emin olun.
+
 1. Eşlediğiniz veri varlığı ile *Müşteri* varlığı arasında birden fazla yol varsa tanımlanan [varlık ilişkisi yolları](relationships.md)'ndan birini seçmeniz gerekir. Ölçüm sonuçları, seçilen yola bağlı olarak değişebilir. 
    1. **Veri tercihleri**'ni seçin ve ölçümünüzü tanımlamak için kullanılması gereken varlık yolunu seçin. *Müşteri* varlığının yalnızca tek bir yolu varsa Bu denetim gösterilmez.
    1. Seçiminizi uygulamak için **Bitti**'yi seçin. 
@@ -88,9 +90,57 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
 
 1. Listede yeni oluşturulan ölçümü görmek için **Ölçümler**'e gidin.
 
+## <a name="use-a-template-to-build-a-measure"></a>Ölçü oluşturmak için şablon kullanma
+
+Sık kullanılan ölçüler oluşturmak için önceden tanımlanmış şablonları kullanabilirsiniz. Şablonların ve destekli bir deneyim hakkında ayrıntılı açıklamalar, etkili ölçüm oluşturulmasına yardımcı olur. Şablonlar *Birleşik aktivite* varlığındaki eşlenmiş veriler üzerinde derleyin . Bu nedenle, bir şablondan ölçü oluşturmadan önce [müşteri aktiviteleri](activities.md) yapılandırdığınızdan emin olun.
+
+Kullanılabilir ölçü şablonları: 
+- Ortalama işlem değeri (ATV)
+- Toplam işlem değeri
+- Ortalama günlük gelir
+- Ortalama yıllık gelir
+- İşlem sayısı
+- Kazanılan bağlılık puanları
+- Kullanılan bağlılık puanları
+- Bağlılık puanı bakiyesi
+- Etkin müşteri ömrü
+- Bağlılık programı üyelik süresi
+- Son satın alma işleminden itibaren geçen süre
+
+Aşağıdaki yordamda, şablon kullanarak yeni bir ölçü oluşturma adımları özetlenmektedir.
+
+1. Hedef kitle içgörülerinde, **Ölçümler**'e gidin.
+
+1. **Yeni**'yi seçi nve **Bir şablon seç**'i seçin.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Vurgulu şablon içeren yeni bir ölçü oluştururken açılan menünün ekran görüntüsü.":::
+
+1. Gereksinim duyduğunuz şablonu bulun ve **şablon seç**'i seçin.
+
+1. Gerekli verileri gözden geçirin ve Tüm verileriniz varsa **başlangıç**'ı seçin.
+
+1. **Ad Düzenle** bölmesinde, ölçümünün adını ve çıktı varlığını ayarlayın. 
+
+1. **Bitti**'yi seçin.
+
+1. **Zaman dönemini ayarla** bölümünde, kullanılacak verilerin zaman dilimi tanımlayın. Yeni ölçünün tüm veri kümesi kapsamasını istiyorsanız, **her zaman** seçeneğini belirleyin. Veya ölçünün **belirli bir döneme** odaklanmasını isterseniz.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Bir şablondan ölçü yapılandırılırken zaman dönemi bölümünü gösteren ekran görüntüsü.":::
+
+1. Sonraki bölümde, aktiviteleri seçmek için **verileri Ekle**'yi seçin ve karşılık gelen verileri *birleştirilmiş aktivite* varlığınızın içinde eşleyin .
+
+    1. Adım 1/2: **aktivite türü** altında, kullanmak istediğiniz varlığın türünü seçin. **Aktiviteler** için eşlemek istediğiniz varlıkları seçin.
+    1. Adım 2/2: formülün gerektirdiği bileşen Için *birleştirilmiş aktivite* varlığındaki özniteliği seçin. Örneğin, ortalama hareket değeri için bu, hareket değerini temsil eden bir özniteliktir. **Etkinlik zaman damgası** için birleştirilmiş aktivite varlığındaki, aktivitenin tarih ve saatini gösteren özniteliği seçin.
+   
+1. Veri eşlemesi başarılı olduktan sonra, durumu **tamamlandı** olarak ve eşlenen aktivitelerin ve özniteliklerin adını görebilirsiniz.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Tamamlanmış ölçüm şablonu yapılandırmasının ekran görüntüsü.":::
+
+1. Şimdi, ölçümün sonuçlarını hesaplamak için **Çalıştır** seçeneğini seçebilirsiniz. Daha sonra belirginleştirmek için **Taslağı kaydet**'i seçin.
+
 ## <a name="manage-your-measures"></a>Ölçümlerinizi yönetme
 
-[Ölçüm oluşturduktan](#create-a-measure) sonra **Ölçümler** sayfasında bir ölçüm listesi görürsünüz.
+Ölçüler listesini **Ölçüler** sayfasında bulabilirsiniz.
 
 Ölçüm türü, oluşturan, oluşturma tarihi, durum ve durum hakkında bilgiler bulabilirsiniz. Listeden bir ölçümü seçtiğinizde, çıktıyı önizleyebilir ve bir .CSV dosyası indirebilirsiniz.
 

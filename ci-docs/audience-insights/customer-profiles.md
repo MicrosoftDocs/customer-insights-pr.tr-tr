@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596891"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896351"
 ---
 # <a name="customer-profiles"></a>Müşteri profilleri
 
@@ -59,7 +59,7 @@ Müşteri ayrıntıları şunları içerir:
 
 -   **Müşteri profili kutucuğu:** Bu kutucuk, birleşik müşteri profili varlığından farklı değerleri gösterir. Bu ayrıntılar, e-posta adresi, ad, şehir vb. bilgiler içerebilir. 
 
--   **Olası ilgi alanları, olası markalar:** Birinci taraf zenginleştirme yapılandırıp yapılandırmadığınızı gösterir. Bu müşterinin sahip olduğu profile benzer bir profile sahip müşterinin markalar için olası ilgi alanlarını ve eğilimlerini temsil eder. Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft-graph.md).
+-   **Olası ilgi alanları, olası markalar:** Birinci taraf zenginleştirme yapılandırıp yapılandırmadığınızı gösterir. Bu müşterinin sahip olduğu profile benzer bir profile sahip müşterinin markalar için olası ilgi alanlarını ve eğilimlerini temsil eder. Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft.md).
 
 -   **Ölçümler:** Belirli bir tür için bir veya daha fazla ölçüm yapılandırıp yapılandırmadığınızı gösterir: müşteri özniteliği ölçümleri. Bunlar, bireysel müşteri düzeyinde müşterilerinize göre hesaplanmış KPI'lar içerir. Daha fazla bilgi için bkz. [Ölçümleri tanımlama ve yönetme](measures.md).
 

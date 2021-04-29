@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597857"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896535"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
@@ -83,7 +83,7 @@ Birleştirme işlemini ilk defa başarılı bir şekilde tamamlamıyorsanız zen
 
 ## <a name="next-step"></a>Sonraki Adım
 
-Müşterileriniz hakkında daha fazla bilgi edinmek için [aktiviteler](activities.md)'i, [zenginleştirme](enrichment-microsoft-graph.md)'yi veya [ilişkiler](relationships.md)'i yapılandırın.
+Müşterileriniz hakkında daha fazla bilgi edinmek için [aktiviteler](activities.md)'i, [zenginleştirme](enrichment-hub.md)'yi veya [ilişkiler](relationships.md)'i yapılandırın.
 
 Aktiviteleri, zenginleştirmeyi veya ilişkileri önceden yapılandırdıysanız veya segmentleri tanımladıysanız en son müşteri verilerini kullanmak için bunlar otomatik olarak işlenir.
 

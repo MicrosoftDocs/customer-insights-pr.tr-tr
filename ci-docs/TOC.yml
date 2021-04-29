@@ -65,7 +65,7 @@
         - name: Müşteri profillerini zenginleştirme
           href: audience-insights/enrichment-hub.md
         - name: Marka ve ilgi benzerlikleri
-          href: audience-insights/enrichment-microsoft-graph.md
+          href: audience-insights/enrichment-microsoft.md
         - name: HERE Technologies ile zenginleştirme
           href: audience-insights/enrichment-here.md
         - name: Leadspace ile zenginleştirme
@@ -104,6 +104,8 @@
           href: audience-insights/predict-product-recommendation.md
         - name: Ürün öneri tahmini için örnek kılavuz
           href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Tahminleri temel alan segmentler oluşturma
+          href: audience-insights/prediction-based-segment.md
         - name: Özel makine öğrenimi modelleri uygulama
           href: audience-insights/custom-models.md
         - name: Azure Machine Learning ile denemeler
@@ -112,58 +114,72 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Dışarı aktarma seçenekleri
       items:
-        - name: Dışarı aktarma hedeflerine genel bakış
-          href: audience-insights/export-destinations.md
-        - name: AdRoll
-          href: audience-insights/export-adroll.md
-        - name: Adobe Campaign Standard
-          href: audience-insights/export-adobe-campaign-standard.md
-        - name: Adobe Deneyim Platformu
-          href: audience-insights/export-adobe-experience-platform.md
-        - name: Autopilot
-          href: audience-insights/export-autopilot.md
-        - name: Azure Blob Depolama
-          href: audience-insights/export-azure-blob-storage.md
-        - name: Azure Data Lake Storage 2. Nesil
-          href: audience-insights/export-azure-data-lake-storage-gen2.md
-        - name: DotDigital
-          href: audience-insights/export-dotdigital.md
-        - name: Dynamics 365 Customer Service (Eklenti)
-          href: audience-insights/customer-card-add-in.md
-        - name: Dynamics 365 Marketing
-          href: audience-insights/export-dynamics365-marketing.md
-        - name: Dynamics 365 Sales
-          href: audience-insights/export-dynamics365-sales.md
-        - name: Dynamics 365 Sales Merkezi (Eklenti)
-          href: audience-insights/customer-card-add-in.md
-        - name: Facebook Ads Yöneticisi
-          href: audience-insights/export-facebook.md
-        - name: Google Ads
-          href: audience-insights/export-google-ads.md
-        - name: LiveRamp
-          href: audience-insights/export-liveramp.md
-        - name: MailChimp
-          href: audience-insights/export-mailchimp.md
-        - name: Microsoft Teams (bot)
-          href: audience-insights/export-teams-bot.md
-        - name: Marketo
-          href: audience-insights/export-marketo.md
-        - name: Power BI
-          href: audience-insights/export-power-bi.md
-        - name: Power Apps
-          href: audience-insights/export-power-apps.md
-        - name: Power Automate
-          href: audience-insights/export-power-automate.md
-        - name: SendGrid
-          href: audience-insights/export-sendgrid.md
-        - name: SFTP
-          href: audience-insights/export-sftp.md
+        - name: Dışarı aktarma işlemleri
+          items:
+            - name: Dışarı aktarma (önizleme) genel bakışı
+              href: audience-insights/export-destinations.md
+            - name: AdRoll
+              href: audience-insights/export-adroll.md
+            - name: Autopilot
+              href: audience-insights/export-autopilot.md
+            - name: Azure Blob Depolama
+              href: audience-insights/export-azure-blob-storage.md
+            - name: Azure Data Lake Storage 2. Nesil
+              href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Adobe Campaign Standard
+              href: audience-insights/export-adobe-campaign-standard.md
+            - name: Adobe Deneyim Platformu
+              href: audience-insights/export-adobe-experience-platform.md
+            - name: Campaign Monitor
+              href: audience-insights/export-campaign-monitor.md
+            - name: Constant Contact
+              href: audience-insights/export-constant-contact.md
+            - name: DotDigital
+              href: audience-insights/export-dotdigital.md
+            - name: Dynamics 365 Marketing
+              href: audience-insights/export-dynamics365-marketing.md
+            - name: Dynamics 365 Sales
+              href: audience-insights/export-dynamics365-sales.md
+            - name: Facebook Ads Yöneticisi
+              href: audience-insights/export-facebook.md
+            - name: Google Ads
+              href: audience-insights/export-google-ads.md
+            - name: LiveRamp
+              href: audience-insights/export-liveramp.md
+            - name: MailChimp
+              href: audience-insights/export-mailchimp.md
+            - name: Marketo
+              href: audience-insights/export-marketo.md
+            - name: RollWorks
+              href: audience-insights/export-rollworks.md
+            - name: SendGrid
+              href: audience-insights/export-sendgrid.md
+            - name: Snapchat
+              href: audience-insights/export-snapchat.md
+            - name: SFTP
+              href: audience-insights/export-sftp.md
+        - name: Diğer kullanımlar
+          items:
+            - name: Dynamics 365 Customer Service (Eklenti)
+              href: audience-insights/customer-card-add-in.md
+            - name: Dynamics 365 Sales Merkezi (Eklenti)
+              href: audience-insights/customer-card-add-in.md
+            - name: Microsoft Teams (bot)
+              href: audience-insights/export-teams-bot.md
+            - name: Power Apps
+              href: audience-insights/export-power-apps.md
+            - name: Power Automate
+              href: audience-insights/export-power-automate.md
+            - name: Power BI
+              href: audience-insights/export-power-bi.md
     - name: Yönetim
       items:
         - name: Sistem yapılandırmasını ayarlama
           href: audience-insights/system.md
         - name: Kullanıcı izinleri atama
           href: audience-insights/permissions.md
+        - name: Bağlantılara (önizleme) genel bakış
+          href: audience-insights/connections.md
         - name: Birden çok ortamı yönetme
           href: audience-insights/manage-environments.md
         - name: Hizmet Sorumlusunu kullanarak ADLS depolama hesabına bağlanma
@@ -212,10 +228,14 @@
       items:
         - name: Raporları görüntüle
           href: engagement-insights/view-reports.md
-        - name: Özel raporlar oluşturma
+        - name: Özel raporlar oluştur
           href: engagement-insights/custom-reports.md
         - name: Birleştirilmiş profil raporları oluşturma
           href: engagement-insights/profile-reports.md
+    - name: Yolculuk analizleri
+      items:
+        - name: Hunü raporları oluşturma ve yönetme
+          href: engagement-insights/funnel-reports.md
     - name: Geliştirici kaynakları
       items:
         - name: Geliştirici kaynaklarına genel bakış

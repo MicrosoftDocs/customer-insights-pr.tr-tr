@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Adobe Campaign Standard'a dışa aktarma
 description: Adobe Campaign Standard'da hedef kitle içgörü segmentlerini nasıl kullanacağınızı öğrenin.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596339"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760305"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Adobe Campaign Standard'da (önizleme) Customer Insights segmentlerini kullanma
 
@@ -48,15 +48,21 @@ Göndermek istediğiniz teklif e-postası, müşterinin ad, soyadı ve abonelik 
 
 ## <a name="export-your-target-audience"></a>Hedef kitlenizi dışa aktarın
 
+### <a name="configure-a-connection"></a>Bağlantı yapılandırma
+
 Hedef kitlemiz tanımlandığımızda, hedef kitle içgörülerinden Azure Blob depolama hesabına dışa aktarma işlemini yapılandırabiliriz.
 
-1. Hedef kitle içgörülerinde, **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+1. Hedef kitle içgörülerinde **yönetici** > **bağlantılar**'a gidin.
 
-1. **Adobe Campaign** kutucuğunda **Ayarla**'yı seçin.
+1. **Bağlantı Ekle** ' yı seçin ve bağlantıyı yapılandırmak için **Adobe kampanya**'yı seçin veya **Adobe kampanya** kutucuğunda **ayarla** ' yı seçin.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Adobe Campaign Standard için yapılandırma kutucuğu.":::
 
-1. bu yeni dışa aktarma hedefi için bir **görünen ad** girin ve sonra, segmenti dışa aktarmak istediğiniz Azure Blob depolama hesabının **hesap adını**, **Hesap anahtarını** ve **kapsayıcısını** girin.  
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+
+1. **Firma adını**, **firma anahtarını** ve segmenti vermek istediğiniz Azure Blob depolama hesabının **kapsayıcısını** girin.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Depolama alanı hesabı yapılandırmasının ekran görüntüsü."::: 
 
@@ -64,7 +70,17 @@ Hedef kitlemiz tanımlandığımızda, hedef kitle içgörülerinden Azure Blob 
 
    - Kapsayıcının nasıl oluşturulacağını öğrenmek için bkz. [Kapsayıcı oluşturma](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. **İleri**'yi seçin.
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
+
+### <a name="configure-an-export"></a>Dışa aktarma yapılandırma
+
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+
+1. **Veri** > **Dışa aktarmalar**'a gidin.
+
+1. Yeni bir dışa aktarma oluşturmak için **Dışa aktarma Ekle**'yi seçin.
+
+1. **Dışa aktarma bağlantısı** alanında, Adobe kampanya bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
 
 1. Dışa aktarmak istediğiniz segmenti seçin. Bu örnekte, **ChurnProneCustomers**'dır.
 
@@ -83,11 +99,9 @@ Hedef kitlemiz tanımlandığımızda, hedef kitle içgörülerinden Azure Blob 
 
 1. **Kaydet**'i seçin.
 
-Dışa aktarma hedefini kaydettikten sonra, bunu **yönetici** > **Dışa aktarmalar** > **Dışa aktarma hedeflerim**'de bulabilirsiniz.
+Verme hedefini kaydettikten sonra, **veri** > **Dışar aktarmalar**'da bulursunuz.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Dışa aktarımlar ve örnek segmentin vurgulandığı ekran görüntüsü.":::
-
-Artık [segmenti talep üzerine dışa aktarabilirsiniz](export-destinations.md#export-data-on-demand). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md) ile de çalışır.
+Artık [segmenti talep üzerine dışa aktarabilirsiniz](export-destinations.md#run-exports-on-demand). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md) ile de çalışır.
 
 > [!NOTE]
 > Dışa aktarılan segmentteki kayıt sayısının, Adobe Campaign Standard lisansınızda izin verilen sınırın içinde olduğundan emin olun.

@@ -1,7 +1,7 @@
 ---
 title: Üçüncü taraf Experian zenginleştirme ile zenginleştirme
 description: Experian üçüncü taraf zenginleştirmesi hakkında genel bilgiler.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597811"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896397"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian'da müşteri profillerini demografik bilgilerle zenginleştirin (önizleme)
 
@@ -25,10 +25,10 @@ Experian, tüketici ve iş alacak raporlama ve pazarlama servisleri için genel 
 Experian'ı yapılandırmak için, aşağıdaki ön koşullar karşılanmalıdır:
 
 - Etkin bir Experian aboneliğiniz var. Bir abonelik almak için, doğrudan [Experian ile iletişim kurun](https://www.experian.com/marketing-services/contact). [Experian Veri Zenginleştirme hakkında daha fazla bilgi edinin](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Experian sizin için, SSH etkin Güvenli Aktarım (ST) hesabınızda; Kullanıcı Kimliği, Parti Kimliği ve Model Numarası oluşturmuştur.
-- Hedef kitle içgörülerinde [Yönetici](permissions.md#administrator) izinlerine sahipsiniz.
 
-## <a name="configuration"></a>Yapılandırma
+- Bir Experian bağlantısı zaten bir Yönetici tarafından yapılandırılmış olabilir *veya* [Yönetici](permissions.md#administrator) izinlere sahip olmanız gerekir. Ayrıca, Experian tarafından oluşturulan SSH etkin güvenli aktarım (ST) hesabınız için Kullanıcı kimliği, taraf kimliği ve model numarası gerekir.
+
+## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 
 1. **Veri** > **Zenginleştirme** sayfasına gidin ve **Keşfet** sekmesini seçin.
 
@@ -36,26 +36,46 @@ Experian'ı yapılandırmak için, aşağıdaki ön koşullar karşılanmalıdı
 
    > [!div class="mx-imgBorder"]
    > ![Experian kutucuğu](media/experian-tile.png "Experian kutucuğu")
+   > 
 
-1. **Başlarken**'i  seçin ve Experian Güvenli Aktarım hesabınız için; Kullanıcı Kimliği, Parti Kimliği ve Model Numarası öğelerini girin. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin. **Uygula**'yı seçerek tüm girişleri onaylayın.
+1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi ve açılan kutudan Experian seçeneğini belirleyerek bir bağlantı oluşturabilirsiniz. 
 
-## <a name="map-your-fields"></a>Alanlarınızı eşleyin
+1. Bağlantı seçimini onaylamak için **Experian bağlantısı**'nı seçin.
 
-1.  **Veri ekle** seçeneğini belirleyin ve Experian'dan alınan demografik verilerle zenginleştirmek istediğiniz **Müşteri veri kümesi**'ni seçin. Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
+1.  **İleri**'ye ve Experian'dan nüfus verileriyle zenginleştirmek istediğiniz **müşteri veri kümesi** seçin. Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
 
-1. Kimlik çözümlemesi için Experian'a gönderilmek üzere **Ad ve Adres**, **E-posta** veya **Telefon**'dan anahtar tanımlayıcılarınızı seçin.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Müşteri veri kümesi seçerken ekran görüntüsü.":::
 
-   > [!TIP]
-   > Experian'a gönderilen her ekstra anahtar tanımlayıcı özniteliği, daha yüksek bir eşleme oranı verimliliği elde etmeyi sağlar.
+1. **İleri**'i seçin ve Experian uygulamasından eşleşen demografik verilerini aramak için Birleşik profillerinizden hangi alan türlerinin kullanılacağını tanımlayın. Alan **adı ve adres**, **Telefon** veya **e-posta** alanlarından en az birine gerek vardır. Daha yüksek eşleşme hassasiyeti için daha fazla iki alan eklenebilir. Bu seçim, sonraki adımda erişiminiz olan eşleme alanlarını etkileyecek.
 
-1. **İleri**'yi seçin ve seçili anahtar tanımlayıcısı alanları için, birleşmiş müşteri varlığınızdan karşılık gelen öznitelikleri eşleyin.
+    > [!TIP]
+    > Experian'a gönderilen her ekstra anahtar tanımlayıcı özniteliği, daha yüksek bir eşleme oranı verimliliği elde etmeyi sağlar.
 
-1. Experian'a göndermek istediğiniz ek öznitelikleri eşlemek için, **Öznitelik ekle** seçeneğini seçin.
+1. Alan eşlemesini başlatmak için **İleri**'yi seçin.
 
-1.  Alan eşlemesini tamamlamak için **Kaydet**'i seçin.
+1. Experian uygulamasından eşleşen demografik verilerini aramak için Birleşik profillerinizden hangi alan türlerinin kullanılacağını tanımlayın. Gerekli alanlar işaretlidir.
 
-    > [!div class="mx-imgBorder"]
-    > ![Experian alan eşlemesi](media/experian-field-mapping.png "Experian alan eşlemesi")
+1. Zenginleştirme için bir ad ve çıkış varlığı için bir ad girin.
+
+1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
+
+## <a name="configure-the-connection-for-experian"></a>Bağlantıyı Experian için yapılandırma 
+
+Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zenginleştirme yapılandırırken **Bağlantı Ekle**'yi seçin *veya* **yönetici** > **Bağlantılar**'a gidip Experian kutucuğunda **Ayarla**'yı seçin.
+
+1. **Başlarken**'i seçin.
+
+1. **Görünen ad** kutusunda bağlantı için bir ad girin.
+
+1. Experian güvenli aktarım hesabınız için geçerli bir kullanıcı kimliği, taraf kimliği ve model numarası girin.
+
+1. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin
+
+1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
+
+1. Doğrulamayı tamamladıktan sonra, **Kaydet**'i seçin.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian bağlantısı yapılandırma bölmesi.":::
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 

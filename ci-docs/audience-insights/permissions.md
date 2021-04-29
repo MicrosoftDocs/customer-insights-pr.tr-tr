@@ -1,7 +1,7 @@
 ---
 title: Kullanıcı izinlerini yönetme
 description: İzinler ve kullanıcı rolleri hakkında bilgi edinin.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595726"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760397"
 ---
 # <a name="user-permissions"></a>Kullanıcı izinleri
 
@@ -31,7 +31,7 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. Hedef kitle 
 - **Zenginleştirme** sayfasını görüntüleyin ve keşfedin.
 - **Varlıklar** sayfasını kullanarak varlıkları keşfedin ve dışarı aktarın.
 - **Sistem** sayfasını kullanarak sistem işlemlerinin durumunu görüntüleyin.
-- **Segmentler** sayfasından segmentleri dışarı aktarın.
+- **Dışarı aktarımlar** sayfasında dışa aktarmaları görüntüleyin.
 - **Power BI Customer Insights** panosunu yükleyin ve kullanın.
 
 ## <a name="contributor"></a>Katılımcı
@@ -43,6 +43,7 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. Hedef kitle 
 - Segmentleri, **Segmentler** sayfasını kullanarak oluşturun.
 - **Ölçümler** sayfasını kullanarak ölçümler oluşturun.
 - **Zenginleştirme** sayfasından yapılandırmayı yönetin ve müşteri profillerini zenginleştirin (yalnızca birinci taraf zenginleştirmeleri için).
+- Katkıda bulunanlar ile paylaşılan bağlantılara göre, verme işlemlerini yönetin ve oluşturun. [Yöneticilerin, verme amacıyla bir bağlantı kullanmalarına nasıl izin verdiği hakkında daha fazla bilgi edinin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Yönetici
 
@@ -50,8 +51,9 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. Hedef kitle 
 - Sistem işlemleriniz için çalışma dili ve yenileme zamanlamaları da dahil olmak üzere **Sistem** sayfasındaki ayarları değiştirin.
 - İzinleri, **İzinler** sayfasını kullanarak görüntüleyin ve ekleyin.
 - Müşteriler sayfası için arama ve filtreleme tanımlarını **Dizini ara ve filtrele** sayfasını (**Müşteriler** sayfasından erişilebilir) kullanarak ayarlayın.
-- **Hedefleri dışarı aktarma** sayfasını kullanarak Dynamics 365 Sales segmenti hedeflerini tanımlayın.
+- Bağlantıları yönetin ve **bağlantılar** sayfasındaki diğer Kullanıcı rolleri için izin verin.
 - **Zenginleştirme** sayfasından yapılandırmayı yönetin ve müşteri profillerini zenginleştirin (tüm zenginleştirmeler için).
+- **Dışa aktarmalar** sayfasında dışa aktarmaları yönetin ve oluşturun.
 - **Müşteri Kartı Eklentisi**'ni yükleyin ve kullanın.
 - **Power Apps bağlayıcısı**'nı ekleyin ve kullanın.
 - [Customer Insights API'leri](apis.md)'nin kullanımını etkinleştirin.

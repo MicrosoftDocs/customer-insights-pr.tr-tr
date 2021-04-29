@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595680"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906926"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonelik erime tahmini (önizleme)
 
@@ -49,6 +49,12 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
         - **Zaman Damgası:** Birincil anahtarla belirtilen olayın tarihi ve saati.
         - **Etkinlik:** Kullanmak istediğiniz etkinliğin adı. Örneğin, video akış hizmetinde "UserAction" adlı bir alan "Görüntülendi" değerine sahip olabilir.
         - **Ayrıntılar:** Etkinlikle ilgili ayrıntılı bilgiler. Örneğin, video akış hizmetinde "ShowTitle" adlı bir alan müşterinin izlediği bir video değerine sahip olabilir.
+- Önerilen veri özellikleri:
+    - Yeterli geçmiş veriler: Abonelik verileri en az seçili zaman penceresini ikiye katmıyor. Tercihen iki ile üç yıllık abonelik verisi.
+    - Abonelik durumu: veri her müşteri için etkin ve etkin olmayan abonelikler içerir, böylece Müşteri kimliği başına birden çok giriş vardır.
+    - Müşteri sayısı: en az 10 müşteri profili (tercihen 1.000 benzersiz müşteri). Model 10 adetten az müşteriyi kullanarak başarısız olur ve geçmişteki verileri yetersiz eder.
+    - Veri miktarı: sağlanan varlığın veri alanında eksik değerin %20 ' den az olması.
+   
    > [!NOTE]
    > Kaybı hesaplamak istediğiniz müşterilerin %50'si için en az iki aktivite kaydına gereksinim duyarsınız.
 
@@ -67,7 +73,7 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
 ### <a name="define-customer-churn"></a>Müşteri erimesini tanımlayın
 
 1. İşletmenizin, bir müşteriyi kayıp durumunda kabul edildiği **Abonelik sona erdikten sonra geçen gün** sayısını girin. Bu dönem genellikle müşteriyi kaybetmeme amacı taşıyan teklifler veya diğer pazarlama faaliyetleriyle ilgili iş etkinlikleriyle bağlantılıdır.
-1. **Kaybı tahmin etmek üzere gelecekte bakılacak gün sayısı** için sayı girerek tahmin için gün sayısı belirleyin. Örneğin, pazarlama elde tutma çabalarınızı düzenlemek için müşterilerinizin gelecek 90 gün içindeki erime riskinizi tahmin etmek için. Erime riskini daha uzun veya daha kısa bir süre için tahmin etmek, erime riski profilinizdeki faktörleri gidermenin daha zor olmasına neden olur ancak bu, belirli iş gereksinimlerinize oldukça bağlıdır. Devam etmek için **İleri**'yi seçin
+1. **Kaybı tahmin etmek üzere gelecekte bakılacak gün sayısı** için sayı girerek tahmin için gün sayısı belirleyin. Örneğin, pazarlama elde tutma çabalarınızı düzenlemek için müşterilerinizin gelecek 90 gün içindeki erime riskinizi tahmin etmek için. Karmaşıklık tehlikesini daha uzun veya daha kısa bir süre için tahmin etmek, iş gereksinimlerinize bağlı olarak, karmaşıklığı riskli profilinizdeki faktörlerin daha zor olmasını zorlaştırır. Devam etmek için **İleri**'yi seçin
    >[!TIP]
    > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Kaydet ve Kapat**'ı seçebilirsiniz. Devam etmek için taslak tahminini **Tahminlerim** sekmesinde bulabilirsiniz.
 
@@ -113,7 +119,8 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
 1. İncelemek istediğiniz tahmini seçin.
    - **Tahmin adı:** Oluştururken girilen tahmin adı.
    - **Tahmin türü:** Tahmin için kullanılan modelin türü
-   - **Çıkış varlığı:** Tahminin çıktısının depolanacağı varlığın adı. Bu ada sahip bir varlığı **Veri** > **Varlıklar** bölümünden bulabilirsiniz.
+   - **Çıkış varlığı:** Tahminin çıktısının depolanacağı varlığın adı. Bu ada sahip bir varlığı **Veri** > **Varlıklar** bölümünden bulabilirsiniz.    
+     Çıkış varlığında *ChurnScore* karmaşıklık olasılığı tahmini olasılığıdır ve *IsChurn* 0,5 eşiğindeki *ChurnScore* tabanlı bir ikili etikettir. Varsayılan eşik senaryonuz için çalışmayabilir. Tercih edilen eşiğe sahip [yeni bir segment oluşturun](segments.md#create-a-new-segment).
    - **Tahmin edilen alan:** Bu alan yalnızca bazı tahmin türleri için doldurulur ve abonelik erime tahmininde kullanılmaz.
    - **Durum:** Tahminin geçerli çalıştırma durumu.
         - **Kuyruğa Alındı:** Tahmin şu anda diğer işlemlerin çalıştırılmasını bekliyor.

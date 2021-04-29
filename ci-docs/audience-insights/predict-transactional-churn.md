@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597213"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906880"
 ---
 # <a name="transactional-churn-prediction-preview"></a>İşlem tabanlı erime tahmini (önizleme)
 
@@ -46,6 +46,14 @@ ms.locfileid: "5597213"
         - **Zaman Damgası:** Birincil anahtarla belirtilen olayın tarihi ve saati.
         - **Etkinlik:** Kullanmak istediğiniz etkinliğin adı. Örneğin, bir marketteki "UserAction" adlı alan, müşteri tarafından kullanılan bir kupon olabilir.
         - **Ayrıntılar:** Etkinlikle ilgili ayrıntılı bilgiler. Örneğin, bir marketteki "CouponValue" adlı alan, kuponun para birimi değeri olabilir.
+- Önerilen veri özellikleri:
+    - Yeterli geçmiş veriler: İşlem verileri en az seçili zaman penceresini ikiye katmıyor. Tercihen iki ile üç yıllık abonelik verisi. 
+    - Her müşteri için birden çok satınalma: Ideal olarak her müşteri için en az iki işlem.
+    - Müşteri sayısı: en az 10 müşteri profili (tercihen 1.000 benzersiz müşteri). Model 10 adetten az müşteriyi kullanarak başarısız olur ve geçmişteki verileri yetersiz eder.
+    - Veri miktarı: sağlanan varlığın veri alanında eksik değerin %20 ' den az olması.
+
+> [!NOTE]
+> Yüksek müşteri satın alma sıklığı (birkaç hafta) olan bir iş için daha kısa bir tahmin pencere ve karmaşıklık tanımı seçmeniz önerilir. Düşük satın alma sıklığı (her birkaç ay veya bir yılda bir) için, daha uzun bir tahmin penceresi ve karmaşıklık tanımı seçin.
 
 ## <a name="create-a-transactional-churn-prediction"></a>İşlem tabanlı erime tahmini oluşturma
 
@@ -129,7 +137,9 @@ ms.locfileid: "5597213"
 1. İncelemek istediğiniz tahmini seçin.
    - **Tahmin adı:** Tahmini oluştururken tahmine verilen ad.
    - **Tahmin türü:** Tahmin için kullanılan model türü
-   - **Çıkış varlığı:** Tahminin çıktısının depolanacağı varlığın adı. Bu ada sahip bir varlığı **Veri** > **Varlıklar** bölümünden bulabilirsiniz.
+   - **Çıkış varlığı:** Tahminin çıktısının depolanacağı varlığın adı. Bu ada sahip bir varlığı **Veri** > **Varlıklar** bölümünden bulabilirsiniz.    
+     Çıkış varlığında *ChurnScore* karmaşıklık olasılığı tahmini olasılığıdır ve *IsChurn* 0,5 eşiğindeki *ChurnScore* tabanlı bir ikili etikettir. Varsayılan eşik senaryonuz için çalışmayabilir. Tercih edilen eşiğe sahip [yeni bir segment oluşturun](segments.md#create-a-new-segment).
+     Tüm müşterilerin etkin müşteri olması gerekmez. Bunların bazılarında, uzun bir süre için herhangi bir etkinlik yapılmamış olabilir ve siz karmaşıklığı tanımına göre önceden yapılmış olarak kabul edilir. Zaten kullanıma sunulan müşterilerin karmaşıklık tehlikesini tahmin etmek, ilgi hedef kitle olmadığı için bu yararlı değildir.
    - **Tahmini alan:** Bu alan yalnızca bazı tahmin türleri için doldurulur ve erime tahmininde kullanılmaz.
    - **Durum:** Tahmin çalıştırmasının durumu.
         - **Kuyruğa Alındı:** Tahmin, diğer işlemlerin çalışmasını bekliyor.

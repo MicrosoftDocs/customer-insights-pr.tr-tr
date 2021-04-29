@@ -1,6 +1,6 @@
 ---
-title: Customer Insights verilerini AdRoll'a dışarı aktarma
-description: Bağlantıyı yapılandırmayı ve AdRoll'a dışa aktarmayı öğrenin.
+title: Customer Insights verilerini RollWorks'e aktarma
+description: Bağlantıyı yapılandırmayı ve RollWorks'e dışa aktarmayı öğrenin.
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,36 +9,36 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 4979f0147dea2270f11342c1bb6b0693f3c24aea
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895983"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760658"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Segment listelerini AdRoll (Önizleme) içine aktar
+# <a name="export-segment-lists-to-rollworks-preview"></a>Segment listelerini RollWorks (Önizleme) içine aktar
 
-Birleşik müşteri profilleri segmentlerini AdRoll'a dışa aktarın ve bunları reklam için kullanın. 
+Birleşik müşteri profillerinin bölümlerini RollWorks'e verin ve bunları reklamcılık için kullanın. 
 
 ## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
 
--   [AdRoll hesabınızın](https://www.adroll.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
+-   Bir [RollWorks hesabınız ](https://www.rollworks.com/) ve karşılık gelen Yönetici kimlik bilgileriniz var.
 -   Hedef kitle içgörülerinde [yapılandırılmış segmentleriniz](segments.md) olmalıdır.
 -   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Dışa aktarma başına 250.000'e kadar profili AdRoll'a aktarabilirsiniz.
-- 100'den az profili olan segmentleri AdRoll'a dışa aktaramazsınız. 
-- AdRoll'a dışarı aktarma segmentlerle sınırlıdır.
-- AdRoll'a 250.000'den fazla profili dışa aktarmanın tamamlanması 10 dakika kadar sürebilir. 
-- AdRoll'a dışarı aktarabileceğiniz profil sayısı, AdRoll ile yaptığınız sözleşmeye bağlıdır ve sınırlıdır.
+- RollWorks'e verme başına en fazla 250.000 profili verebilirsiniz.
+- RollWorks'e 100 daha az profili bulunan segmentleri veremezsiniz. 
+- RollWorks'e verilmesi kesimlerle sınırlıdır.
+- 250.000 profilin RollWorks'e aktarılması için en fazla 10 dakika geçmesi gerekebilir. 
+- RollWorks'e verebileceğiniz profil sayısı bağımlıdır ve RollWorks ile sözleşmeniz üzerinde sınırlıdır.
 
-## <a name="set-up-connection-to-adroll"></a>AdRoll bağlantısını ayarlayın
+## <a name="set-up-connection-to-rollworks"></a>RollWorks bağlantısını ayarlayın.
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **AdRoll**'u seçin.
+1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **RollWorks**'ı seçin.
 
 1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
 
@@ -46,9 +46,9 @@ Birleşik müşteri profilleri segmentlerini AdRoll'a dışa aktarın ve bunlar�
 
 1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
 
-1. AdRoll'a bağlantıyı başlatmak için **Bağlan**'ı seçin.
+1. RollWorks Bağlantısı başlatmak için **Bağlan**'nı seçin.
 
-1. **AdRoll ile kimlik doğrulaması**'nı seçin ve AdRoll kimlik bilgilerinizi girin. 
+1. **RollWorks ile kimlik doğrulaması** seçin ve RollWorks için yönetici kimlik bilgilerinizi sağlayın.
 
 1. **Kendinizi dışarı aktarma kullanıcısı olarak ekleyin**'i seçin ve Customer Insights kimlik bilgilerinizi girin.
 
@@ -62,11 +62,11 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
 
-1. **Dışa aktarma bağlantısı** alanında, AdRoll bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
+1. **Dışa aktarma bağlantısı** alanında, RollWorks bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
 
-1. **AdRoll reklam verenin kimliğini** girin daha fazla bilgi için bkz. [AdRoll reklam verenin profilleri](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. **Rollworks reklam verenin kimliğini** girin [Rollworks Reklam Verilebilir](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Segmentleri AdRoll'a dışa aktarmak gerekir.
+3. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. RollWorks'e segmentleri aktarmak gerekir.
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. En az 100 üye içeren bir segment seçin. Daha küçük segmentleri dışa aktaramazsınız. Buna ek olarak, dışa aktarılacak bir segmentin maksimum boyutu, dışa aktarma başına 250'000 üyedir. 
 
@@ -79,6 +79,6 @@ Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile 
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 
-Dynamics 365 Customer Insights uygulamasının AdRoll'a veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak AdRoll'un sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
+RollWorks'e veri aktarmk için Dynamics 365 Customer Insights etkinleştirdiğinizde, kişisel veriler gibi önemli potansiyel bilgiler de dahil olmak üzere Dynamics 365 Customer Insights uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, bu tür verileri yönergeye aktaracaktır, ancak RollWorks'ün sahip olabileceğiniz gizlilik veya güvenlik yükümlülüklerini karşıladığından emin olmak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman bu dışarı aktarma hedefini kaldırabilir.

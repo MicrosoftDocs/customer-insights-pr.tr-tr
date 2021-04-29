@@ -1,7 +1,7 @@
 ---
 title: Birleşik müşteri profillerini zenginleştirme
 description: Müşteri verilerinizi zenginleştirmek için özellikleri kullanın.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597719"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896029"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
 
@@ -27,8 +27,8 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 
 **Keşfet** sekmesinde aşağıdaki zenginleştirmeleri bulursunuz:
 
-- Microsoft Graph tarafından sağlanan [markalar](enrichment-microsoft-graph.md)
-- Microsoft Graph tarafından sağlanan [ilgi alanları](enrichment-microsoft-graph.md)
+- Microsoft tarafından sağlanan [markalar](enrichment-microsoft.md)
+- Microsoft tarafından sağlanan [ilgi alanları](enrichment-microsoft.md)
 - Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
 - Experian tarafından sağlanan [demografik veriler](enrichment-experian.md)
 - HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md)
@@ -40,7 +40,7 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 
 Tüm yapılandırılmış zenginleştirmeleri görmek için **Zenginleştirmelerim**'e gidin. Her zenginleştirme, zenginleştirme hakkında ek bilgiler içeren bir satır olarak temsil edilir.
 
-Kullanılabilir seçenekleri görmek için bir zenginleştirme seçin. Alternatif olarak, seçenekleri görmek için liste öğesindeki üç noktayı da (...) seçebilirsiniz.
+Kullanılabilir seçenekleri görmek için bir zenginleştirme seçin. Ayrıca seçenekleri görmek için liste öğesindeki üç noktayı (...) da seçebilirsiniz.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Zenginleştirmelerim listesindeki zenginleştirmeleri yönetme seçenekleri":::
 
@@ -52,5 +52,12 @@ Kullanılabilir seçenekleri görmek için bir zenginleştirme seçin. Alternati
 
 Listeden birden çok zenginleştirme özelliğini seçerek, tek seferde çalıştırabilir veya devre dışı bırakabilirsiniz. Görüntüleme ve düzenleme seçenekleri toplu eylem olarak kullanılamaz ve aynı anda tek seferde yalnızca bir zenginleştirme için kullanılır.
 
+## <a name="enrichments-and-connections"></a>Zenginleştirme ve bağlantılar
+
+Üçüncü taraf zenginleştirmeler, yönetici kimlik bilgileriyle birlikte ayarlanan ve veri aktarımları için izin sağlayan [bağlantılar](connections.md) kullanılarak yapılandırılır. Bağlantı, Yöneticiler ve katkıda bulunanlar tarafından enrichments yapılandırmak için kullanılabilir.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Aynı türden birden çok zenginleştirme
+
+Zenginleştirmeniz gereken varlık, profillerinizin yalnızca bir alt kümesini zenginleştirme olanağı sağlayan zenginleştirme yapılandırması sırasında belirtilir. Akçaağaç için, verileri yalnızca belirli bir kesim için zenginleştirmeniz gerekir. Aynı türden birçok zenginleştirme ve aynı bağlantıyı yeniden kullanabilirsiniz. Bazı zenginleştirmeler aynı türden zenginleştirmeler türlerine sınırlı olur. Sınırları ve geçerli kullanımı, **zenginleştirme** sayfasında görülebilir.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

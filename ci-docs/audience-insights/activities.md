@@ -1,7 +1,7 @@
 ---
 title: Müşteri etkinlikleri
 description: Müşteri etkinliklerini tanımlayın ve müşteri zaman çizelgesinde görüntüleyin.
-ms.date: 10/13/2020
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,79 +9,88 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
+ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596753"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "5866431"
 ---
 # <a name="customer-activities"></a>Müşteri etkinlikleri
 
-Etkinlikleri kronolojik sırayla listeleyen bir müşteri zaman çizelgesi oluşturmak için Dynamics 365 Customer Insights'ta [çeşitli veri kaynaklarından](data-sources.md) müşteri etkinliklerini birleştirin. Zaman çizelgesini [Müşteri Kartı eklentisini](customer-card-add-in.md) kullanarak Power BI panosunda Dynamics 365'deki Customer Engagement uygulamalarına ekleyebilirsiniz.
+Aktiviteleri kronolojik olarak listeleyen bir zaman çizelgesi oluşturmak için Dynamics 365 Customer Insights uygulamasında [çeşitli veri kaynaklarından](data-sources.md) müşteri etkinliklerini birleştirin. [Müşteri kartı eklentisi](customer-card-add-in.md) çözümü ile Dynamics 365 uygulamalarına zaman çizelgesini veya bir Power BI panoyu dahil edin.
 
 ## <a name="define-an-activity"></a>Aktivite tanımlama
 
 Veri kaynaklarınız, birden çok veri kaynağından işlem tabanlı ve aktivite verilerine sahip varlıkları içerir. Bu varlıkları tanımlayın ve müşterinin zaman çizelgesinde görüntülemek istediğiniz aktiviteleri seçin. Hedef aktivitenizi veya aktivitelerinizi içeren varlığı seçin.
 
+> [!NOTE]
+> Varlığın müşteri zaman çizelgesine dahil edilmesi için **Tarih** türünde en az bir özniteliği olması gerekir ve **Tarih** alanları olmayan varlıkları ekleyemezsiniz. Böyle bir varlık bulunmazsa **Aktivite ekle** denetimi devre dışı bırakılır.
+
 1. Hedef kitle içgörülerinde, **Veri** > **Etkinlikler**'e gidin.
 
-1. **Aktivite ekle**'yi seçin.
+1. Aktivite kurma işlemi için destekli deneyimi başlatmak üzere **aktivite Ekle**'yı seçin.
 
-   > [!NOTE]
-   > Varlığın müşteri zaman çizelgesine dahil edilmesi için **Tarih** türünde en az bir özniteliği olması gerekir ve **Tarih** alanları olmayan varlıkları ekleyemezsiniz. Böyle bir varlık bulunmazsa **Aktivite ekle** denetimi devre dışı bırakılır.
+1. **Aktivite verileri** adımında, aşağıdaki alanlar için değerleri ayarlayın:
 
-1. **Aktivite ekle** bölmesinde, aşağıdaki alanların değerlerini ayarlayın:
-
+   - **Aktivite adı**: Etkinliğiniz için bir ad seçin.
    - **Varlık**: İşlem tabanlı veya aktivite verileri içeren bir varlık seçin.
    - **Birincil anahtar**: Bir kaydı benzersiz şekilde tanımlayan alanı seçin. Yinelenen değerler, boş değerler veya eksik değerler içermemelidir.
-   - **Zaman Damgası**: Aktivitenizin başlangıç zamanını temsil eden alanı seçin.
-   - **Olay**: Aktivite için olay olan alanı seçin.
-   - **Web adresi**: Bu aktivite hakkında ek bilgiler sağlayan URL'yi temsil eden alanı seçin. Örneğin, bu aktiviteye kaynak olan işlem tabanlı sistem. Bu URL, veri kaynağındaki herhangi bir alan olabilir veya Power Query dönüşümü kullanarak yeni alan olarak oluşturulabilir. Bu URL verileri, API'ler kullanarak aşağı doğru tüketilebilecek şekilde Birleşik Aktivite varlığında depolanır.
-   - **Ayrıntılar**: İsteğe bağlı olarak, ek ayrıntılar için eklenen alanı seçin.
-   - **Simge**: İsteğe bağlı olarak, bu aktiviteyi temsil eden simgeyi seçin.
-   - **Aktivite Türü**: Aktivitenin özgün anlam tanımını en iyi açıklayacak şekilde Common Data Model için aktivite türü başvurusunu tanımlayın.
 
-1. **İlişki ayarla** bölümünde aktivite verilerinizi ilgili müşteriye bağlamak için ayrıntıları yapılandırın.
+   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Aktivite verilerini ad, varlık ve birincil anahtarla ayarlayın.":::
 
-    - **Aktivite varlığı alanı**: Aktivite varlığınızda başka bir varlık ile ilişki kurmak için kullanılacak alanı seçin.
-    - **Müşteri varlığı**: Aktivite varlığınızın ilişkide olacağı ilgili kaynak müşteri varlığını seçin. Yalnızca veri birleştirme işleminde kullanılan kaynak müşteri varlıklarıyla bağlantı kurabilirsiniz.
-    - **Müşteri varlığı alanı**: Bu alan, eşleme işleminde seçilen kaynak müşteri varlığının birincil anahtarını gösterir. Kaynak müşteri varlığındaki bu birincil anahtar alanı aktivite varlığı ile ilişki kurmak için kullanılır.
-    - **Ad**: Bu aktivite varlığı ile seçilen kaynak müşteri varlığı arasında bir ilişki zaten varsa ilişki adı salt okunur modda olacaktır. Böyle bir ilişki yoksa burada sağlanan ad ile yeni bir ilişki oluşturulur.
+1. **İleri**’yi seçip sonraki adıma geçin.
+
+1. **İlişki** adımında, aktivite verilerinizi ilgili müşteriye bağlamak için ayrıntıları yapılandırın. Bu adım, varlıklar arasındaki bağlantıyı görselleştirir.  
+
+   - **İlk**: Aktivite varlığındaki yabancı alan, başka bir varlıkla ilişki kurmak için kullanılacak.
+   - **İkinci**: Aktivite varlığınızın ilişkide olacağı karşılık gelen kaynak müşteri varlığı. Yalnızca veri birleşme işleminde kullanılan kaynak müşteri varlıklarına ilişki oluşturabilirsiniz.
+   - **Üçüncü**: Bu aktivite varlığı ile seçili kaynak müşteri varlığı arasında bir ilişki zaten varsa, ilişki adı salt okunur modda olur. Böyle bir ilişki yoksa, bu kutuda sağladığınız adla yeni bir ilişki oluşturulur.
+
+   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Varlık ilişkisini tanımlayın.":::
+
+1. **İleri**’yi seçip sonraki adıma geçin. 
+
+1. **Aktivite birleştirici** adımında, aktivite olayını ve etkinliğinizin başlangıç saatini seçin. 
+   - **Gerekli alanlar**
+      1. **Olay etkinliği**: Bu faaliyete yönelik olay olan alan.
+      2. **Zaman damgası**: etkinliğinizin başlangıç saatini gösteren alan.
+
+   - **İsteğe bağlı alanlar**
+      1. **Ek ayrıntı**: bu aktiviteyle ilgili bilgileri içeren alan.
+      2. **Simge**: en iyi bu aktivite türünü temsil eden simge.
+      3. **Web adresi**: bu aktiviteyle ilgili bilgileri içeren BIR URL içeren alan. Örneğin, bu aktiviteye kaynak olan işlem tabanlı sistem. Bu URL, veri kaynağındaki herhangi bir alan olabilir veya Power Query dönüşümü kullanarak yeni alan olarak oluşturulabilir. URL verileri *Birleşik aktivite* varlığında depolanır ve bu da [API](apis.md)'lar kullanılarak akış yönündeki tüketilebilir.
    
-   > [!div class="mx-imgBorder"]
-   > ![Varlık ilişkisini tanımlama](media/activities-entities-define.png "Varlık ilişkisini tanımlama")
+   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Birleştirilmiş bir aktivite varlığındaki müşteri aktivite verilerini belirtin.":::
 
-1. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
+1. Sonraki adıma geçmek için **ileri** öğesini seçin. Etkinlik türü **Diğer** olarak ayarlanmış olarak aktiviteyi şimdi kaydetmek için **Bitir ve gözden geçir**'i seçebilirsiniz. 
 
-1. **Aktiviteler** sayfasında **Çalıştır**'ı seçin.
+1. **Aktivite türü** adımında, aktivite türünü seçin ve isteğe bağlı olarak Customer Insights'ın diğer alanlarında kullanmak üzere bazı aktivite türlerini anlam olarak eşlemek istiyorsanız öğesini seçin. Şu anda , alanları eşlemek için agreeing sonrasında *abonelik* & *SalesOrderLine* aktivite türleri anlam olarak eşleştirilir. Aktivite türü yeni aktivite için uygun değilse, *Diğer* veya  özel bir aktivite türü için *Yeni oluştur*'u seçebilirsiniz.
+
+1. Sonraki adıma geçmek için **ileri** öğesini seçin. 
+
+1. **Gözden geçirme** adımında, seçimlerinizi doğrulayın. Önceki adımlardan birine geri dönerek gerekirse bilgileri güncelleştirmeniz gerekir.
+
+   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Bir aktivite için belirtilen alanları gözden geçirin.":::
+   
+1. Değişikliklerinizi uygulamak için **aktiviteyi Kaydet**'i seçin ve **veri** > **aktivitelerine** dönmek için **bitti**'yı seçin. Burada, hangi aktivitelerin zaman çizelgesinde gösterilecek şekilde ayarlandığını görürsünüz. 
+
+1. **Aktiviteler** sayfasında, aktiviteyi işlemek için **Çalıştır**'ı seçin. 
 
 > [!TIP]
 > Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
 
-## <a name="edit-an-activity"></a>Aktivite düzenleme
 
-1. Hedef kitle içgörülerinde, **Veri** > **Etkinlikler**'e gidin.
+## <a name="manage-existing-activities"></a>Mevcut aktiviteleri yönetme
 
-2. Düzenlemek istediğiniz aktivite varlığını seçin ve **Düzenle**'yi seçin. Alternatif olarak, varlık satırının üzerine gelip **Düzenle** simgesini de seçebilirsiniz.
+**Veri** > **aktiviteler**'de, kaydedilmiş tüm aktivitelerinizi görüntüleyebilir ve yönetebilirsiniz. Her aktivite, kaynak, varlık ve aktivite türü hakkındaki ayrıntıları da içeren bir satırla temsil edilir.
 
-3. **Düzenle** simgesine tıklayın.
+Bir aktivite seçtiğinizde aşağıdaki eylemler kullanılabilir. 
 
-4. **Aktiviteyi düzenle** bölmesinde değerleri güncelleştirin ve **Kaydet**'i seçin.
+- **Düzenle**: Gözden geçirme adımında aktivite kurulumunu açar. Bu adımdan, geçerli yapılandırmanın herhangi birini veya tümünü değiştirebilirsiniz. Yapılandırmayı değiştirdikten sonra değişiklikleri işlemek için, **aktiviteyi Kaydet**'i ve ardından **Çalıştır**'ı seçin.
 
-5. **Aktiviteler** sayfasında **Çalıştır**'ı seçin.
+- **Yeniden Adlandır**: Seçili aktivite için farklı bir ad gireceğiniz yerde bir iletişim kutusu açar. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
 
-## <a name="delete-an-activity"></a>Aktiviteyi silme
-
-1. Hedef kitle içgörülerinde, **Veri** > **Etkinlikler**'e gidin.
-
-2. Kaldırmak istediğiniz aktivite varlığını seçin ve **Sil**'i seçin. Alternatif olarak, varlık satırının üzerine gelip **Sil** simgesini de seçebilirsiniz. Ayrıca bir defada silinecek birden fazla aktivite varlığı seçebilirsiniz.
-   > [!div class="mx-imgBorder"]
-   > ![Varlık ilişkilerini düzenleme veya silme](media/activities-entities-edit-delete.png "Varlık ilişkilerini düzenleme veya silme")
-
-3. **Sil** simgesini seçin.
-
-4. Silme işlemini onaylayın.
-
+- **Sil**: Seçili aktiviteyi silme işlemini onaylamak için bir iletişim kutusu açar. Ayrıca, aktiviteleri seçip ardından Sil simgesini seçerek aynı anda birden fazla aktiviteyi silebilirsiniz. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
