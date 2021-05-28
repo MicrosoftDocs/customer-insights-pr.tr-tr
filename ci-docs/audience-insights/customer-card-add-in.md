@@ -1,7 +1,7 @@
 ---
-title: Müşteri Kartı Eklentisi'ni yükleme ve yapılandırma
-description: Dynamics 365 Customer Insights için Müşteri Kartı eklentisini yükleyin ve yapılandırın.
-ms.date: 01/20/2021
+title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi
+description: Bu eklentiye sahip Dynamics 365 uygulamalarındaki hedef kitle öngörülerdeki verileri gösterin.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597351"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059612"
 ---
 # <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görünümünü edinin. Müşteri Kartı Eklentisiyle nüfus niteliklerini, öngörüleri ve aktivite zaman çizelgelerini görüntüleyin.
+Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görünümünü edinin. Desteklenen bir Dynamics 365 uygulamasında müşteri kartı eklentisi yüklüyse, nüfus, öngörü ve etkinlik zaman çizelgelerini görüntülemeyi tercih edebilirsiniz. Eklenti, Customer Insights'den, bağlı Dynamics 365 uygulamasındaki verileri etkilemeden verileri alır. 
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- Birleşik Arabirim etkinleştirilmiş olan Dynamics 365 uygulaması (ör. Satış Merkezi veya Müşteri Hizmetleri Merkezi) 9.0 ve sonraki sürümler.
-- [Common Data Service'i kullanarak Dynamics 365 uygulamasından alınan](connect-power-query.md) müşteri profilleri.
-- Müşteri Kartı Eklentisi kullanıcılarının, hedef kitle içgörülerinde [kullanıcı olarak eklenmesi](permissions.md) gerekir.
-- [Yapılandırılan arama ve filtreleme özellikleri](search-filter-index.md).
-- Demografi denetimi: Birleşik müşteri profilinde (yaş ya da cinsiyet gibi) demografik alanlar kullanılabilir.
-- Zenginleştirme denetimi: Müşteri profillerine uygulanmış etkin [zenginleştirmeler](enrichment-hub.md) gerektirir.
-- Zeka denetimi: Azure Machine Learning ([Tahminler](predictions.md) veya [Özel Modeller](custom-models.md)) kullanılarak oluşturulan veriler gerektirir
-- Ölçüm denetimi: [Yapılandırılmış ölçümler](measures.md) gerektirir.
-- Zaman çizelgesi denetimi: [Yapılandırılmış etkinlikler](activities.md) gerektirir.
+- Eklenti yalnızca satış veya müşteri hizmetleri, sürüm 9.0 ve daha sonraki sürümler gibi Dynamics 365 model güdümlü uygulamalarla çalışır.
+- Dynamics 365 verilerinizin, [Common Data Service bağlayıcıyı kullanarak Dynamics 365 uygulamasından alması](connect-power-query.md) gerektiği hedef kitle içgörüleri müşteri profilleriyle eşleşmesi gerekir.
+- Müşteri kartı eklentisinin tüm Dynamics 365 kullanıcıları verileri görmek için hedef kitle içgörülerinde [kullanıcıların eklenmesi](permissions.md) gerekir.
+- Hedef kitle içgörülerinde [yapılandırılan arama ve filtre özellikleri](search-filter-index.md) , verilerin çalışması için arama yapmak amacıyla gereklidir.
+- Her eklenti denetimi hedef kitle öngörüler içindeki belirli verilere dayanır:
+  - Ölçüm denetimi: [Yapılandırılmış ölçümler](measures.md) gerektirir.
+  - İstihbarat denetimi: [Tahminler](predictions.md) veya [özel modeller](custom-models.md) kullanılarak oluşturulan veriler gerekir.
+  - Demografi denetimi: Birleşik müşteri profilinde (yaş ya da cinsiyet gibi) demografik alanlar kullanılabilir.
+  - Zenginleştirme denetimi: Müşteri profillerine uygulanmış etkin [zenginleştirmeler](enrichment-hub.md) gerektirir.
+  - Zaman çizelgesi denetimi: [Yapılandırılmış etkinlikler](activities.md) gerektirir.
 
 ## <a name="install-the-customer-card-add-in"></a>Müşteri Kartı Eklentisini yükleme
 
@@ -56,9 +57,9 @@ Müşteri Kartı Eklentisi, Dynamics 365'teki müşteri etkileşimi uygulamalar�
    > [!NOTE]
    > **Oturum aç** düğmesini seçtiğinizde tarayıcı açılır pencere engelleyicisinin kimlik doğrulama penceresini engellemediğinden emin olun.
 
-1. Verileri getirmek istediğiniz ortamı seçin.
+1. Verileri getirmek istediğiniz Customer Insights ortamını seçin.
 
-1. Dynamics 365 uygulamasındaki kayıtlarla hangi alanın eşleneceğini tanımlayın.
+1. Dynamics 365 uygulamasındaki kayıtlarla alan eşlemesini tanımlayın. Customer Insights'deki verilerinize bağlı olarak, aşağıdaki seçenekleri eşlemeyi seçebilirsiniz:
    - Bir ilgili kişiyle eşlemek için ilgili kişi varlığınızın kimliğiyle eşleşen Müşteri varlığında alanı seçin.
    - Bir firmayla eşlemek için firma varlığınızın kimliğiyle eşleşen Müşteri varlığında alanı seçin.
 

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887964"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049274"
 ---
 # <a name="define-and-manage-measures"></a>Ölçümleri tanımlama ve yönetme
 
@@ -34,7 +34,7 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
 
 1. **Adı düzenle**'yi seçin ve ölçüm için bir **Ad** verin. 
    > [!NOTE]
-   > Yeni ölçüm yapılandırmanızda, örneğin CustomerID ve bir hesaplama gibi yalnızca iki alan varsa çıktı, Customer_Measure adlı sistem tarafından oluşturulan varlığa yeni bir sütun olarak eklenir. Birleştirilmiş müşteri profilinde ölçümün değerini de görebilirsiniz. Diğer ölçümler kendi varlıklarını oluşturur.
+   > Yeni ölçü yapılandırmanızda yalnızca iki alan (örneğin, CustomerID ve bir hesaplama) varsa, çıkış, sistem tarafından üretilen Customer_Measure adlı varlığa yeni bir sütun olarak eklenir. Birleştirilmiş müşteri profilinde ölçümün değerini de görebilirsiniz. Diğer ölçümler kendi varlıklarını oluşturur.
 
 1. Yapılandırma alanında, **İşlev Seç** açılan menüsünden toplama işlevini seçin. Toplama işlevleri aşağıdakileri içerir: 
    - **Sum**

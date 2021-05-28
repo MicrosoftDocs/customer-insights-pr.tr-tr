@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596431"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049418"
 ---
 # <a name="entities-in-audience-insights"></a>Hedef kitle içgörülerinde varlıklar
 
@@ -35,14 +35,14 @@ ms.locfileid: "5596431"
 Varlıktaki farklı alanları ve kayıtları keşfetmek için bir varlık seçin.
 
 > [!div class="mx-imgBorder"]
-> ![Varlık seç](media/data-manager-entities-data.png "Varlık seç")
+> ![Bir varlık seçin](media/data-manager-entities-data.png "Varlık seç")
 
-- **Veri** sekmesi varsayılan olarak seçilidir ve varlığın tek tek kayıtlarıyla ilgili ayrıntıları listeleyen bir tablo gösterir.
+- **Veri** sekmesi, varlığın bağımsız kayıtlarıyla ilgili ayrıntıları listeleyen bir tablo görüntüler.
 
 > [!div class="mx-imgBorder"]
 > ![Alanlar tablosu](media/data-manager-entities-fields.PNG "Alanlar tablosu")
 
-- **Alanlar** sekmesi seçilen varlık için alan adları, veri türleri ve türler gibi ayrıntıların incelenmesini sağlayan bir tablo gösterir. **Tür** sütunu, sistem tarafından otomatik olarak tanımlanan veya kullanıcılar tarafından [el ile eşlenen](map-entities.md) Common Data Model ile ilişkilendirilmiş türleri gösterir. Bunlar, özniteliklerin veri türlerinden farklı olabilecek semantik türlerdir. Örneğin, aşağıdaki *E-posta* alanı *Metin* veri türüne sahiptir ancak (semantik) Common Data Model türü *E-posta* veya *E-posta Adresi* olabilir.
+- **Öznitelikler** sekmesi varsayılan olarak seçilir ve seçilen varlığın, alan adları, veri türleri ve türler gibi ayrıntılarını gözden geçirmek için bir tablo gösterir. **Tür** sütunu, sistem tarafından otomatik olarak tanımlanan veya kullanıcılar tarafından [el ile eşlenen](map-entities.md) Common Data Model ile ilişkilendirilmiş türleri gösterir. Bunlar, özniteliklerin veri türlerinden farklı olabilecek semantik türlerdir. Örneğin, aşağıdaki *E-posta* alanı *Metin* veri türüne sahiptir ancak (semantik) Common Data Model türü *E-posta* veya *E-posta Adresi* olabilir.
 
 > [!NOTE]
 > Her iki tablo da varlığınızın verilerinin yalnızca bir örneğini gösterir. Veri kümesinin tamamını görüntülemek için **Veri kaynakları** sayfasına gidin, bir varlık seçin, **Düzenle** seçeneğini belirleyin ve ardından [Veri kaynakları](data-sources.md)'nda açıklandığı gibi Power Query düzenleyicisiyle bu varlığın verilerini görüntüleyin.

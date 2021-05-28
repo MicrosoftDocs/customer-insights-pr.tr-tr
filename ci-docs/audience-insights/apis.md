@@ -1,7 +1,7 @@
 ---
 title: API'lerle çalışma
 description: API'ler kullanın ve sınırlamaları öğrenin.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873686"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016644"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
@@ -90,19 +90,13 @@ API'leri istemci kitaplıklarında kullanma hakkında bilgi için bkz. [Customer
 
 1. Azure portalındaki Uygulama kaydınızda **API izinleri**'ne gidin.
 
-1. Yan bölmede **İzin ekle**'yi ve **Customer Insights**'ı seçin.
+1. **İzin ekle'yi** seçin. 
+
+1. **Organizasyonumun kullandığı API'ler** sekmesini seçin ve listeden **Customer Insights için Dynamics 365 AI** i seçin. 
 
 1. **İzin türü** için, **Uygulama izinleri**'ni ve **CustomerInsights.Api.All** iznini seçin.
 
 1. **İzinler ekle**'yi seçin.
-
-1. Bu Uygulama izninde yönetici onayı vermek için bir Hizmet Sorumlusu eklemeniz gerekir.
-
-   1. Azure Active Directory (AD) PowerShell modülünü yükleyin: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. AD hesabınıza bağlanın: `Connect-AzureAD -TenantId <your tenant id>`. Kiracı kimliğinizi **Genel Bakış** > **Azure Active Directory** bölümünde bulabilirsiniz.
-   1. Azure AD Hizmet Sorumlusu eklemek için şu komutu çalıştırın: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` AppId parametresi Customer Insights API uygulamasıyla ilgilidir.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Hizmet sorumlusu örneği":::
 
 1. Uygulama kaydınız için **API izinleri**'ne geri dönün.
 

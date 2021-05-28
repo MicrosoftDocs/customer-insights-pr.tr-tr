@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesinde varlıkları eşleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896535"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085600"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
 Birleştirme aşaması, veri bütünleştirme sürecindeki son aşamadır. Amacı, çelişen veriler arasında mutabakat sağlamaktır. Çakışan verilere örnek olarak veri kümelerinizden ikisinde bulunan ancak her birinde biraz farklı görünen bir müşteri adı ("Grant Marshall" ile "Grant Marshal" gibi) veya biçim olarak farklılık gösteren bir telefon numarası (617-803-091X ile 617803091X gibi) gösterilebilir. Bu çakışan veri noktalarının birleştirilmesi özniteliğe karşılık öznitelik temelinde yapılır.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Birleşik müşteri profilini tanımlayan birleştirilmiş alanlarla veri birleşme işlemini gösteren sayfayı birleştirme sayfası.":::
+
 [Eşleştirme aşaması](match-entities.md) tamamlandıktan sonra **Birleştir** sayfasındaki **Birleştir** kutucuğunu seçerek birleştirme aşamasını başlatın.
 
 ## <a name="review-system-recommendations"></a>Sistem önerilerini inceleme
 
-**Birleştir** sayfasında bütünleştirilmiş müşteri profili varlığınızda (yapılandırma sürecinin sonucu) birleştirilecek öznitelikleri seçip hariç tutun. Bazı öznitelikler sistem tarafından otomatik olarak birleştirilir.
+**Veri** > **Tümleştir** > **Birleştir**'de birleştirilmiş müşteri profili varlığınız içinde birleştirmek için öznitelikleri seçersiniz ve dışarıda bırakabilirsiniz. Birleştirilmiş müşteri profili, verilerin birleşme işleminin sonucudur. Bazı öznitelikler sistem tarafından otomatik olarak birleştirilir.
 
-### <a name="view-merged-attributes"></a>Birleştirilmiş öznitelikleri görüntüleme
+Otomatik olarak birleştirilmiş özniteliklerinden birine dahil edilen öznitelikleri görüntülemek için, tablonun **müşteri alanları** sekmesinde Bu birleştirilmiş özniteliği seçin. Birleştirilen özniteliği oluşturan öznitelik birleştirilmiş özniteliğin altında iki yeni satır olarak görünür.
 
-Otomatik olarak birleştirilmiş özniteliklerden birine dahil edilen öznitelikleri görüntülemek için söz konusu birleştirilmiş özniteliği seçin. Birleştirilen özniteliği oluşturan iki öznitelik birleştirilmiş özniteliğin altında iki yeni satır olarak görüntülenir.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Birleştirilmiş alanları ayır, yeniden adlandırın, dışlayın ve düzenleyin
 
-> [!div class="mx-imgBorder"]
-> ![Birleştirilmiş özniteliği seçme](media/configure-data-merge-profile-attributes.png "Birleştirilmiş özniteliği seçme")
+Birleşik müşteri profili oluşturmak için sistemin birleştirilmiş öznitelikleri nasıl işleyeceğini değiştirebilirsiniz. **Daha fazla göster**'i seçin ve neyi değiştirmek istediğinizi seçin.
 
-### <a name="separate-merged-attributes"></a>Birleştirilmiş öznitelikleri ayırma
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Birleştirilmiş öznitelikleri yönetmek için daha fazla açılan menüdeki seçenekler.":::
 
-Otomatik olarak birleştirilmiş özniteliklerden herhangi birini ayırmak veya birleştirmesini kaldırmak için **Profil öznitelikleri** tablosunda özniteliği bulun.
+Daha fazla bilgi için aşağıdaki bölümlere bakın.
 
-1. Üç nokta (...) düğmesini seçin.
+## <a name="separate-merged-fields"></a>Ayrı birleştirilen alanlar
+
+Birleştirilmiş alanları ayırmak için tablodaki özniteliği bulun. Ayrılmış alanlar, tümleşik müşteri profili üzerinde bağımsız veri noktaları olarak gösterilir. 
+
+1. Birleşik alanını seçin.
   
-2. Açılır listede, **Alanları ayır**'ı seçin.
+1. **Diğer göster**'i ve **Ayrı alanlar**'ı seçin.
+ 
+1. Ayrımı onaylayın.
 
-### <a name="remove-merged-attributes"></a>Birleştirilmiş öznitelikleri kaldırma
+1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin.
 
-Özniteliği son müşteri profili varlığından hariç tutmak için **Profil öznitelikleri** tablosunda bulun.
+## <a name="rename-merged-fields"></a>Birleştirilmiş alanları yeniden adlandırma
 
-1. Üç nokta (...) düğmesini seçin.
+Birleştirilmiş özniteliklerin görünen ad değiştirin. Çıkış varlığının adını değiştiremezsiniz.
+
+1. Birleşik alanını seçin.
   
-2. Açılır listede, **Birleştirme**'yi seçin.
+1. **Diğer göster**'i ve **Yeniden adlandır**'ı seçin.
 
-   Öznitelik, **Müşteri kaydından kaldırıldı** bölümüne taşınır.
+1. Değiştirilen görünen ad onaylayın. 
 
-## <a name="manually-add-a-merged-attribute"></a>Birleştirilmiş bir özniteliği el ile ekleme
+1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin.
 
-Birleştirilmiş bir öznitelik eklemek için **Birleştir** sayfasına gidin.
+## <a name="exclude-merged-fields"></a>Birleştirilmiş alanları dışarıda tut
 
-1. **Birleştirilmiş öznitelik ekle**'yi seçin.
+Birleşik müşteri profilinden öznitelik dışlayın. Alan başka bir işlemde (örneğin, bir segmentteki) kullanılıyorsa, bu işlemlerden müşteri profilinden hariç tutularak bunları kaldırın. 
 
-2. Daha sonra bunu **Birleştir** sayfasında tanımlamak için bir **Ad** girin.
+1. Birleşik alanını seçin.
+  
+1. **Diğer göster**'i ve **Hariç tut**'u seçin.
 
-3. İsteğe bağlı olarak, birleştirilmiş Müşteri Profili varlığında görünmesi için bir **Görünen ad** girin.
+1. Dışlamayı onaylayın.
 
-4. Eşleşen varlıklardan birleştirmek istediğiniz öznitelikleri seçmek için **Yinelenen öznitelikleri seç**'i yapılandırın. Ayrıca öznitelikler için arama da yapabilirsiniz.
+1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
 
-5. Bir özniteliği diğerlerinin üstünde önceliklendirmek için **Öneme göre sırala**'yı ayarlayın. Örneğin, *WebAccountCSV* varlığı *Tam Adlar* özniteliği hakkında en doğru verileri içeriyorsa *WebAccountCSV* öğesini seçerek bu varlığı *ContactCSV* öğesinin üstünde önceliklendirebilirsiniz. Sonuç olarak, *Tam Ad* özniteliği için değerler çekilirken *WebAccountCSV* birinci önceliğe, *ContactCSV* ise ikinci önceliğe geçer.
+**Birleştirme** sayfasında, hariç tutulan tüm alanların listesini görmek için **dışlanmış alanlar**'ı seçin. Bu bölme, dışarıda tutulan alanları eklemenize olanak tanır.
+
+## <a name="manually-combine-fields"></a>Manuel olarak Birleştirilecek alanlar
+
+Birleştirilmiş bir özniteliği el ile belirtin. 
+
+1. **Birleştirme** sayfasında **Alanları Birleştir**'i seçin.
+
+1. Bir **ad** ve bir **Çıkış alan adı** girin.
+
+1. Eklenecek alan seçin. Daha fazla alanı Birleştirmek için **Alanları ekle**'yi seçin.
+
+1. Dışlamayı onaylayın.
+
+1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
+
+## <a name="change-the-order-of-fields"></a>Alanların sırasını değiştirme
+
+Bazı varlıklar diğerlerine göre daha fazla ayrıntı içerir. Bir varlık bir alanla ilgili en son verileri içeriyorsa, değerleri birleştirirken diğer varlıklar üzerinde öncelik verebilirsiniz.
+
+1. Birleşik alanını seçin.
+  
+1. **Diğer göster**'i ve **Düzenle**'yi seçin.
+
+1. Siparişi ayarlamak veya istediğiniz konuma sürükleyip bırakmak için **Alanları Birleştir** bölmesinde **yukarı/aşağı taşı** seçeneğini belirleyin.
+
+1. Değişikliği onaylayın.
+
+1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin.
 
 ## <a name="run-your-merge"></a>Birleştirmenizi çalıştırma
 
@@ -72,11 +111,11 @@ Birleştirilmiş bir öznitelik eklemek için **Birleştir** sayfasına gidin.
 > [!div class="mx-imgBorder"]
 > ![Veri birleştirme Kaydet ve Çalıştır](media/configure-data-merge-save-run.png "Veri birleştirme Kaydet ve Çalıştır")
 
-Ek değişiklikler yapmak ve adımı yeniden çalıştırmak için devam eden bir birleştirmeyi iptal edebilirsiniz. **Yenileniyor ...** seçeneğini belirleyin ve görünen yan bölmede **İşi iptal et**'i seçin.
+Yalnızca birleştirilmiş müşteri varlığında yansıtılan çıktıyı görmek isterseniz, **Yalnızca birleştirmeyi Çalıştır**'ı seçin. Aşağı akış işlemleri [yenileme zamanlamasında tanımlandığı](system.md#schedule-tab) şekilde yenilenecek.
 
-**Yenileniyor ...** metni **Başarılı** olarak değiştikten sonra birleştirme, tanımladığınız ilkelere göre verilerinizdeki çelişkileri tamamladı ve çözdü. Birleştirilmiş ve birleştirilmemiş öznitelikler, birleşik profil varlığına dahil edilir. Dışlanan öznitelikler, birleşik profil varlığına dahil edilmez.
+Değişiklikleri kullanarak sistemi yenilemek için **Birleştirme ve akış yönündeki işlemleri Çalıştır**'ı seçin. Zenginleştirme, segmentler ve ölçüler dahil tüm işlemler otomatik olarak yeniden çalışır. Tüm aşağı akış işlemleri tamamlandıktan sonra, müşteri profilleri yaptığınız tüm değişiklikleri yansıtır.
 
-Birleştirme işlemini ilk defa başarılı bir şekilde tamamlamıyorsanız zenginleştirme, segmentlere ayırma ve ölçümler dahil tüm aşağı akış işlemleri otomatik olarak yeniden çalışır. Tüm aşağı akış işlemleri yeniden çalıştırıldıktan sonra müşteri profilleri yaptığınız değişiklikleri yansıtır.
+Daha fazla değişiklik yapmak ve adımı yeniden çalıştırmak için sürmekte olan bir birleştirmeyi iptal edebilirsiniz. **Yenileniyor ...** seçeneğini belirleyin ve görünen yan bölmede **İşi iptal et**'i seçin.
 
 > [!TIP]
 > Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
@@ -85,9 +124,6 @@ Birleştirme işlemini ilk defa başarılı bir şekilde tamamlamıyorsanız zen
 
 Müşterileriniz hakkında daha fazla bilgi edinmek için [aktiviteler](activities.md)'i, [zenginleştirme](enrichment-hub.md)'yi veya [ilişkiler](relationships.md)'i yapılandırın.
 
-Aktiviteleri, zenginleştirmeyi veya ilişkileri önceden yapılandırdıysanız veya segmentleri tanımladıysanız en son müşteri verilerini kullanmak için bunlar otomatik olarak işlenir.
-
-
-
+Zaten aktiviteleri, zenginleştirme veya segmentleri yapılandırdıysanız, en son müşteri verilerini kullanmak için bunlar otomatik olarak işlenir.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

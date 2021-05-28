@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896029"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954511"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
 
@@ -29,6 +29,7 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 
 - Microsoft tarafından sağlanan [markalar](enrichment-microsoft.md)
 - Microsoft tarafından sağlanan [ilgi alanları](enrichment-microsoft.md)
+- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md)
 - Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
 - Experian tarafından sağlanan [demografik veriler](enrichment-experian.md)
 - HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md)

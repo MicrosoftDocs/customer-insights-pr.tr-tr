@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595833"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954603"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Müşteri yaşam süresi değeri (CLV) tahmini (Önizleme)
 
@@ -38,11 +38,11 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
 - Müşteri Tanımlayıcısı: İşlemleri tek bir müşteriyle eşleştiren benzersiz tanımlayıcı
 
 - İşlem Geçmişi: Aşağıdaki anlamsal veri şemasının bulunduğu geçmiş işlemler günlüğü
-    - İşlem Kimliği: Her bir işlemin benzersiz tanımlayıcısı
-    - İşlem tarihi: Tarih, tercihen her bir işlemin zaman damgası
-    - İşlem tutarı: Her bir işlemin parasal değeri (örneğin, gelir veya kar marjı)
-    - İadelere atanmış etiket (isteğe bağlı): İşlemin iade olup olmadığını belirten Boole değeri 
-    - Ürün Kimliği (isteğe bağlı): İşleme dahil olan ürünün ürün kimliği
+    - **İşlem Kimliği**: Her bir işlemin benzersiz tanımlayıcısı
+    - **İşlem tarihi**: Tarih, tercihen her bir işlemin zaman damgası
+    - **İşlem tutarı**: Her bir işlemin parasal değeri (örneğin, gelir veya kar marjı)
+    - **İadelere atanmış etiket** (isteğe bağlı): İşlemin iade olup olmadığını belirten Boole değeri 
+    - **Ürün Kimliği** (isteğe bağlı): İşleme dahil olan ürünün ürün kimliği
 
 - Ek veriler (isteğe bağlı), örneğin:
     - Web etkinlikleri: web sitesi ziyaret geçmişi, e-posta geçmişi
@@ -53,10 +53,20 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
     - Müşterilerinizle etkinlikleri eşleştiren müşteri tanımlayıcıları
     - Etkinliğin adını ve tarihini içeren etkinlik bilgileri
     - Etkinliklerin anlamsal veri şeması şunları içerir: 
-        - Birincil anahtar: Etkinliğin benzersiz tanımlayıcısı
-        - Zaman Damgası: Birincil anahtarla belirtilen olayın tarihi ve saati
-        - Olay (etkinlik adı): Kullanmak istediğiniz olayın adı
-        - Ayrıntılar (tutar veya değer): Müşteri etkinliği ile ilgili ayrıntılar
+        - **Birincil anahtar:** Etkinliğin benzersiz tanımlayıcısı
+        - **Zaman Damgası:** Birincil anahtarla belirtilen olayın tarihi ve saati
+        - **Olay (etkinlik adı):** Kullanmak istediğiniz olayın adı
+        - **Ayrıntılar (tutar veya değer):** Müşteri etkinliği ile ilgili ayrıntılar
+
+- Önerilen veri özellikleri:
+    - Yeterli geçmiş veri: En az bir yıllık işlem verileri. Tercihen CLV bir yıl için tahmin etmek için işlem verileri iki ila üç yıl.
+    - Müşteri başına birden fazla satın alma: İdeal olarak, tercihen birden fazla tarih boyunca müşteri kimliği başına en az iki ila üç işlem.
+    - Müşteri sayısı: en az 100 benzersiz müşteri (tercihen 10.000 müşteri). Model 100 adetten az müşteriyi kullanarak başarısız olur ve geçmişteki verileri yetersiz eder
+    - Veri tamlığı: Giriş verilerindeki gerekli alanlarda %20'den az eksik değer   
+
+> [!NOTE]
+> - Model, müşterilerinizin hareket geçmişini gerektiriyor. Şu anda yalnızca bir işlem geçmişi varlığı yapılandırılabilir. Birden çok satın alma/işlem varlığı varsa, veri alımından önce Power Query alabilirsiniz.
+> - Ancak, ek müşteri etkinliği verileri (isteğe bağlı) için, model tarafından değerlendirilmek üzere istediğiniz kadar müşteri etkinliği varlığı ekleyebilirsiniz.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Müşteri Yaşam Süresi Değeri tahmini oluşturma
 
@@ -76,7 +86,7 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
    Varsayılan olarak, birim ay olarak ayarlanır. Bunu gelecekte daha ileri bir tarihe bakmak için yıl olarak değiştirebilirsiniz.
 
    > [!TIP]
-   > CLV'yi belirlediğiniz dönemde doğru şekilde tahmin etmek için geçmiş verileri karşılaştırabileceğiniz bir dönem gerekir. Örneğin, önümüzdeki 12 ay için tahmin yapmak istiyorsanız en az 18 - 24 aylık geçmiş verilere sahip olmanız önerilir.
+   > CLV'yi belirlediğiniz dönemde doğru şekilde tahmin etmek için geçmiş verileri karşılaştırabileceğiniz bir dönem gerekir. Örneğin, önümüzdeki 12 ay için CLV tahmini yapmak istiyorsanız en az 18 - 24 aylık geçmiş verilere sahip olmanız önerilir.
 
 1. **Etkin müşterilerin** işiniz için ne ifade ettiğini belirtin. Müşterinin etkin olarak kabul edilmesi için en az bir işleminin olması gerektiği zaman dilimini ayarlayın. Model yalnızca etkin müşterilerin CLV'sini tahmin eder. 
    - **Modelin satın alma aralığını hesaplamasına izin ver (önerilir)**: Model, verilerinizi analiz eder ve geçmiş satın almalara göre bir dönem belirler.
@@ -181,14 +191,14 @@ Sonuçlar sayfası içinde verilerin üç ana bölümü bulunur.
   Sistem, tahmini yapılandırırken yüksek değerli müşterilerin sağlanan tanımını kullanarak yüksek değerli müşterileri tahmin etmede bir temel modele kıyasla yapay zeka modelinin nasıl performans gösterdiğini değerlendirir.    
 
   Dereceler aşağıdaki kurallara göre belirlenir:
-  - Model, temel modele kıyasla en az %5 daha yüksek değerli müşterileri doğru şekilde tahmin ettiğinde A.
-  - Model, temel modele kıyasla en az %0-5 arasında daha yüksek değerli müşterileri doğru şekilde tahmin ettiğinde B.
-  - Model, temel modele kıyasla daha az yüksek değerli müşterileri doğru şekilde tahmin ettiğinde C.
+  - Model, temel modele kıyasla en az %5 daha yüksek değerli müşterileri doğru şekilde tahmin ettiğinde **A**.
+  - Model, temel modele kıyasla en az %0-5 arasında daha yüksek değerli müşterileri doğru şekilde tahmin ettiğinde **B**.
+  - Model, temel modele kıyasla daha az yüksek değerli müşterileri doğru şekilde tahmin ettiğinde **C**.
 
   **Model derecelendirmesi** bölmesi, yapay zeka modelinin performansı ve temel model hakkında daha fazla ayrıntı gösterir. Temel model, öncelikle müşteriler tarafından yapılan geçmiş satın almalara göre müşteri yaşam süresi değerini hesaplamak için yapay zeka tabanlı olmayan bir yaklaşım kullanır.     
   CLV'yi temel modele göre hesaplamak için kullanılan standart formül:    
 
-  *Her müşteri için CLV = Etkin müşteri penceresinde müşterinin gerçekleştirdiği ortalama aylık satın alma * CLV tahmin dönemindeki ay sayısı * Tüm müşterilerin genel bekletme oranı*
+  _**Her müşteri için CLV** = Etkin müşteri penceresinde müşterinin gerçekleştirdiği ortalama aylık satın alma * CLV tahmin dönemindeki ay sayısı * Tüm müşterilerin genel bekletme oranı*_
 
   Yapay zeka modeli, temel modelle iki model performansı ölçümüne göre karşılaştırılır.
   

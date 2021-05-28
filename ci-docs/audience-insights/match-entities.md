@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595588"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085646"
 ---
 # <a name="match-entities"></a>Varlıkları eşleme
 
@@ -103,6 +103,18 @@ Eşleşme kuralları koşul kümelerini temsil eder. Varlıkları birden fazla �
 
 > [!NOTE]
 > Kuralların sırası önemlidir. Eşleşme algoritması ilk kuralınıza göre eşleştirmeye çalışır ve yalnızca birinci kuralla eşleşme tanımlanmadığında ikinci kurala devam eder.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Varlık sırasını Eşleştirme kurallarında değiştirme
+
+Varlıkları eşleştirme kurallarına göre, bunların işlenme sırasını değiştirmek için yeniden sıralayabilirsiniz. Değişen bir sipariş nedeniyle çakışan kurallar kaldırılacak. Kaldırılmış kuralları güncelleştirilmiş bir yapılandırmayla yeniden oluşturmanız gerekir.
+
+1. **Veri** > **Tümleştir** > **Eşleştir**'e gidin ve **Düzenle**'yi seçin.
+
+1. **Kural Düzenle** bölmesinde, sırayı değiştirmek için **yukarı/aşağı taşı** denetimini seçin veya sürükleyip bırakma varlıklarını seçin.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Varlıkların, eşleştirme aşamasında işlenme sırasını değiştirme seçenekleri.":::
+
+1. Kuralı kaydetmek için **Bitti**'yi seçin.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Eşleştirme varlığında yinelenenleri kaldırmayı tanımlama
 
