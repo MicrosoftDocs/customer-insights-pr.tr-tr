@@ -96,33 +96,43 @@
           href: audience-insights/measures.md
     - name: Tahminler
       items:
-        - name: Değer tahminlerini kullanarak veri tamamlama
-          href: audience-insights/predictions.md
-        - name: Abonelik erime tahmini
-          href: audience-insights/predict-subscription-churn.md
-        - name: Abonelik erimesi tahmini için örnek kılavuz
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: İşlem tabanlı erimeyi tahmin etme
-          href: audience-insights/predict-transactional-churn.md
-        - name: İşlem tabanlı erime tahmini için örnek kılavuz
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Müşteri yaşam süresi değerini (CLV) tahmin etme
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Ürün önerilerini tahmin etme
-          href: audience-insights/predict-product-recommendation.md
-        - name: Ürün öneri tahmini için örnek kılavuz
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Yapay zeka yardımıyla verileri tahmin edin
+          items:
+            - name: Tahmin modellerine genel bakış
+              href: audience-insights/predictions-overview.md
+            - name: Müşteri yaşam süresi değerini (CLV) tahmin etme
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Ürün önerilerini tahmin etme
+              href: audience-insights/predict-product-recommendation.md
+            - name: Abonelik erime tahmini
+              href: audience-insights/predict-subscription-churn.md
+            - name: İşlem tabanlı erimeyi tahmin etme
+              href: audience-insights/predict-transactional-churn.md
+            - name: Azure Machine Learning'den özel modeller kullanma
+              href: audience-insights/custom-models.md
+            - name: Kısmen eksik verileri tamamlama
+              href: audience-insights/predictions.md
+        - name: Örnek kılavuzlar
+          items:
+            - name: CLV tahmini için örnek kılavuz
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Abonelik erimesi tahmini için örnek kılavuz
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: İşlem tabanlı erime tahmini için örnek kılavuz
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Ürün öneri tahmini için örnek kılavuz
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Azure Machine Learning ile denemeler
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Azure Machine Learning Studio ile denemeler
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Tahminleri yönetme
+          href: audience-insights/manage-predictions.md
         - name: Tahminleri temel alan segmentler oluşturma
           href: audience-insights/prediction-based-segment.md
-        - name: Özel makine öğrenimi modelleri uygulama
-          href: audience-insights/custom-models.md
-        - name: Azure Machine Learning ile denemeler
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Azure Machine Learning Studio ile denemeler
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Dışarı aktarma seçenekleri
       items:
-        - name: Dışarı aktarma işlemleri
+        - name: Dışarı aktarmalar
           items:
             - name: Dışa aktarmalara genel bakış
               href: audience-insights/export-destinations.md
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: MailChimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Common Data Model'de varlık şemalarını inceleme
           href: audience-insights/entity-schemas.md
+        - name: Dataverse'deki Customer Insights verileri
+          href: audience-insights/customer-insights-dataverse.md
         - name: API'lerle çalışma
           href: audience-insights/apis.md
         - name: API başvuruları
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Birleştirilmiş profil raporları oluşturma
           href: engagement-insights/profile-reports.md
+        - name: Boyutları görüntüleme ve oluşturma
+          href: engagement-insights/dimensions.md
+        - name: Ölçümleri görüntüleme ve oluşturma
+          href: engagement-insights/metrics.md
+        - name: Segmentleri görüntüleme ve oluşturma
+          href: engagement-insights/segments.md
     - name: Yolculuk analizleri
       items:
         - name: Hunü raporları oluşturma ve yönetme
