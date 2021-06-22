@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906788"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095580"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Ürün önerisi tahmini (önizleme)
 
@@ -205,33 +205,9 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
        > [!div class="mx-imgBorder"]
        > ![Ayrı müşterilerin seçili bir kümesi için yüksek güvenilirlikli önerileri gösteren liste](media/product-recommendation-highconfidence.PNG "Ayrı müşterilerin seçili bir kümesi için yüksek güvenilirlikli önerileri gösteren liste")
 
-## <a name="fix-a-failed-prediction"></a>Başarısız bir tahmini düzeltme
+## <a name="manage-predictions"></a>Tahminleri yönetme
 
-1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
-
-1. Hata günlüklerini görüntülemek istediğiniz tahmini seçin ve **Günlükler** seçeneğini belirleyin.
-
-1. Tüm hataları inceleyin. Oluşabilecek birkaç hata türü vardır ve bu hatalar, hataya neden olan koşulu tanımlarlar. Örneğin, doğru tahmin için yeterli veri bulunmayan bir hata genellikle Customer Insights'a daha fazla veri yükleyerek çözümlenir.
-
-## <a name="refresh-a-prediction"></a>Tahmini yenileme
-
-Tahminler, ayarlarda yapılandırıldığı şekilde [verilerinizin yenilendiği zamanlamayla](system.md#schedule-tab) aynı zamanlamada otomatik olarak yenilenir.
-
-1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
-
-1. Yenilemek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-
-1. **Yenile**'yi seçin.
-
-## <a name="delete-a-prediction"></a>Tahmini silme
-
-Tahminin silinmesi, tahminin çıktı varlığını da kaldırır.
-
-1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
-
-1. Silmek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-
-1. **Sil**'i seçin.
+Tahminleri optimize etmek, sorunları gidermek, yenilemek veya silmek mümkündür. Bir tahmini daha hızlı ve daha güvenilir hale getirmeyi öğrenmek için giriş verileri kullanılabilirlik raporunu gözden geçirin. Daha fazla bilgi için bkz. [Tahminleri yönetme](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595297"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129923"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Ürün önerisi tahmini (önizleme) örnek kılavuzu
 
@@ -22,7 +22,7 @@ Aşağıda sağlanan örnek verileri kullanarak size uçtan uca ürün önerisi 
 
 ## <a name="scenario"></a>Senaryo
 
-Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee web sitesi üzerinden satış yapan bir şirkettir. Amaçları, yinelenen müşterilerine hangi ürünleri önermeleri gerektiğini anlamaktır. Müşterilerin hangi ürünleri **satın alma olasılıklarının** daha yüksek olduğunu bilmek belirli ürünlere odaklanarak pazarlama çalışmalarından tasarruf etmelerine yardımcı olabilir.
+Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek kaliteli kahve ve kahve makineleri üreten bir şirkettir. Amaçları, yinelenen müşterilerine hangi ürünleri önermeleri gerektiğini anlamaktır. Müşterilerin hangi ürünleri **satın alma olasılıklarının** daha yüksek olduğunu bilmek belirli ürünlere odaklanarak pazarlama çalışmalarından tasarruf etmelerine yardımcı olabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -65,7 +65,7 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 
 1. Yan bölmedeki **Ad** alanında, **Sorgu** veri kaynağınızı **eCommercePurchases** olarak yeniden adlandırın.
 
-1. Veri kaynağını kaydedin.
+1. Veri kaynağını **kaydedin**.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Müşteri verilerini bağlılık şemasından alma
@@ -83,11 +83,11 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 
 1. Sağ bölmedeki **Ad** alanında, **Sorgu** veri kaynağınızı **loyCustomers** olarak yeniden adlandırın.
 
-1. Veri kaynağını kaydedin.
+1. Veri kaynağını **kaydedin**.
 
 ## <a name="task-2---data-unification"></a>Görev 2: Veri birleştirme
 
-Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme/Eşleştirme/Birleştirme** işlemine başlayabilirsiniz. Daha fazla bilgi için bkz. [Veri birleştirme](data-unification.md).
+Verileri aldıktan sonra, artık birleştirilmiş müşteri profili oluşturmak için veri birleştirme işlemine başlıyoruz. Daha fazla bilgi için bkz. [Veri birleştirme](data-unification.md).
 
 ### <a name="map"></a>Eşleme
 
@@ -156,7 +156,7 @@ Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çal
 
    - **Ürün sayısı**: Bu değeri **5** olarak ayarlayın. Bu ayar, müşterilerinize ne kadar ürün önermek istediğinizi tanımlar.
 
-   - **Müşterilerin yakın zamanda satın aldıkları ürünler önerilsin mi?**: Müşterilerinizin daha önce satın aldığı ürünleri öneriye dahil etmek istediğinizi belirtmek için **Evet**'i seçin.
+   - **Beklenen yinelenen satın almalar**: Müşterilerinizin daha önce satın aldığı ürünleri öneriye eklemek istediğinizi belirtmek için **Evet**'i seçin.
 
    - **Geriye dönük bakılacak aralık:** En az **365 gün** seçin. Bu ayar, modelin önerilerde giriş olarak kullanmak için müşteri etkinliğinde geriye dönük bakılması gereken süreyi tanımlar.
    

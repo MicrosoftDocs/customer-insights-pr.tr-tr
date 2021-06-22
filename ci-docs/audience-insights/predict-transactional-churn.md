@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906880"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095626"
 ---
 # <a name="transactional-churn-prediction-preview"></a>İşlem tabanlı erime tahmini (önizleme)
 
@@ -144,7 +144,7 @@ ms.locfileid: "5906880"
    - **Durum:** Tahmin çalıştırmasının durumu.
         - **Kuyruğa Alındı:** Tahmin, diğer işlemlerin çalışmasını bekliyor.
         - **Yenileniyor:** Tahmin şu anda çıktı varlığına geçecek sonuçlar üretmek için çalışıyor.
-        - **Başarısız Oldu:** Tahmin çalıştırması başarısız oldu. Diğer ayrıntılar için [günlükleri inceleyin](#troubleshoot-a-failed-prediction).
+        - **Başarısız Oldu:** Tahmin çalıştırması başarısız oldu. Diğer ayrıntılar için [günlükleri inceleyin](manage-predictions.md#troubleshoot-a-failed-prediction).
         - **Başarılı Oldu:** Tahmin başarılı oldu. Tahmini incelemek için dikey üç noktanın altında **Görüntüle**'yi seçin
    - **Düzenlendi:** Tahmin için yapılandırmanın değiştirildiği tarih.
    - **Son yenilenme:** Tahminin çıkış varlığındaki sonuçları yenilediği tarih.
@@ -168,35 +168,9 @@ ms.locfileid: "5906880"
        
     1. **En etkili faktörler:** Tahmininizi oluştururken dikkate alınacak çok sayıda faktör vardır. Modelin oluşturduğu toplu tahminler için faktörlerin her birinin hesaplanan bir önem derecesi vardır. Bu faktörleri, tahmin sonuçlarınızı doğrulamak için kullanabilirsiniz. Alternatif olarak bu bilgileri daha sonra müşterilerin erime riskini etkilemeye yardımcı olabilecek [segmentler oluşturmak](segments.md) için kullanabilirsiniz.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Başarısız olan bir tahminle ilgili sorunları giderme
+## <a name="manage-predictions"></a>Tahminleri yönetme
 
-1. **Yönetim Bilgileri** > **Tahminler**'e gidin ve **Tahminlerim** sekmesini seçin.
-
-1. Hata günlüklerini görüntülemek istediğiniz tahminin yanındaki dikey elipsleri seçin.
-
-1. **Günlükler**'i seçin.
-
-1. Tüm hataları inceleyin. Oluşabilecek birkaç hata türü vardır ve bu hatalar, hataya neden olan koşulu tanımlarlar. Örneğin, doğru tahmin için yeterli veri bulunmadığını gösteren bir hata genellikle Customer Insights'a ek veriler yükleyerek çözümlenir.
-
-## <a name="refresh-a-prediction"></a>Tahmini yenileme
-
-Tahminler, ayarlarda yapılandırılan aynı [veri yenileme zamanlamasına](system.md#schedule-tab) göre otomatik olarak yenilenir. Bunları el ile de yenileyebilirsiniz.
-
-1. **Yönetim Bilgileri** > **Tahminler**'e gidin ve **Tahminlerim** sekmesini seçin.
-
-1. Yenilemek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-
-1. **Yenile**'yi seçin.
-
-## <a name="delete-a-prediction"></a>Tahmini silme
-
-Tahminin silinmesi, tahminin çıktı varlığını da kaldırır.
-
-1. **Yönetim Bilgileri** > **Tahminler**'e gidin ve **Tahminlerim** sekmesini seçin.
-
-1. Silmek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-
-1. **Sil**'i seçin.
+Tahminleri optimize etmek, sorunları gidermek, yenilemek veya silmek mümkündür. Bir tahmini daha hızlı ve daha güvenilir hale getirmeyi öğrenmek için giriş verileri kullanılabilirlik raporunu gözden geçirin. Daha fazla bilgi için bkz. [Tahminleri yönetme](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906926"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095672"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonelik erime tahmini (önizleme)
 
@@ -147,30 +147,9 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
        > [!div class="mx-imgBorder"]
        > ![Erime sonucunu tahmin etmede etkili faktörleri ve bunların önemini gösteren liste](media/subscription-churn-influentialfactors.PNG "Erime sonucunu tahmin etmede etkili faktörleri ve bunların önemini gösteren liste")
 
-## <a name="fix-a-failed-prediction"></a>Başarısız bir tahmini düzeltme
+## <a name="manage-predictions"></a>Tahminleri yönetme
 
-1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
-1. Hata günlüklerini görüntülemek istediğiniz tahmini seçin ve **Günlükler** seçeneğini belirleyin.
-   > [!div class="mx-imgBorder"]
-   > ![Kapat, modeli düzenle ve günlükler düğmelerini içeren sonuçlar menü çubuğunun görünümü](media/subscription-churn-logsbutton.PNG "Kapat, modeli düzenle ve günlükler düğmelerini içeren sonuçlar menü çubuğunun görünümü")
-1. Tüm hataları inceleyin. Oluşabilecek birkaç hata türü vardır ve bu hatalar, hataya neden olan koşulu tanımlarlar. Örneğin, doğru şekilde tahmin etmek için yeterli veri bulunmayan bir hata genellikle ek veriler yüklenerek çözülür.
-
-## <a name="refresh-a-prediction"></a>Tahmini yenileme
-
-Tahminler, ayarlarda yapılandırılan aynı [veri yenileme zamanlamasına](system.md#schedule-tab) göre otomatik olarak yenilenir.
-
-1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
-1. Yenilemek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-1. **Yenile**'yi seçin.
-
-## <a name="delete-a-prediction"></a>Tahmini silme
-
-1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
-1. Silmek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-1. **Sil**'i seçin.
-
-> [!NOTE]
-> Bir tahmin silindiğinde çıktı varlığı kaldırılır.
+Tahminleri optimize etmek, sorunları gidermek, yenilemek veya silmek mümkündür. Bir tahmini daha hızlı ve daha güvenilir hale getirmeyi öğrenmek için giriş verileri kullanılabilirlik raporunu gözden geçirin. Daha fazla bilgi için bkz. [Tahminleri yönetme](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

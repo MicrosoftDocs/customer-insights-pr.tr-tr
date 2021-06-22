@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988944"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263275"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -26,6 +26,37 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="may-2021-updates"></a>Mayıs 2021 güncelleştirmeleri
+
+Mayıs 2021'deki güncelleştirmeler çeşitli özellikler, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="data-ingestion"></a>Veri alımı
+
+- **Azure Data Lake Storage'dan veri eklediğinizde meta veri veya varlık tanımını görüntüleyin veya değiştirin** Artık Azure Data Lake Storage'ınızda Common Data Model klasörünüzden veri eklediğinizde hedef kitle içgörülerindeki meta veri veya varlık tanımı görüntüleyebilir ve düzenleyebilirsiniz. Bu özellik gerçek zamanlı geri bildirim, model doğrulaması ve hata denetimi sağlar. model.json ve manifest.json öğesini sorunsuz şekilde düzenlemenizi sağlar.
+
+### <a name="extensibility"></a>Genişletilebilirlik
+
+- **Geliştirilmiş segment dışarı aktarma, özel zamanlama ve yineleme** Artık bir listedeki [belirli bir segment için tüm dışarı aktarmaları görebilirsiniz](export-destinations.md#view-exports-and-export-details). Bu yeni görünüm, belirli bir segmentin nasıl kullanıldığını yönetmenize ve mevcut olanı uyarlamanıza veya yeni dışarı aktarmalar oluşturmanıza yardımcı olur.    
+  Tek veya bir kerede birkaç dışarı aktarma için [özel yenileme zamanlamaları tanımlayabilirsiniz](export-destinations.md#schedule-and-run-exports). Bugüne kadar, tüm dışarı aktarma işlemleri her sistem yenilemesiyle çalıştırılıyordu.    
+  Sıfırdan yeni bir dışarı aktarma oluşturmak yerine, mevcut bir dışarı aktarmayı temel alarak zaman kazanabilirsiniz.
+
+- **Segmentleri Microsoft Advertising'e aktarma** Dışarı aktarma hedeflerimizi, Microsoft Advertising içerecek şekilde genişlettik. Birleştirilmiş müşteri profili verilerinizle Microsoft Advertising'te Müşteriyle Eşleşen hedef kitleler oluşturun ve bu hedef kitleleri reklam kampanyalarınızda kullanın. Daha fazla bilgi için bkz. [Segmentleri Microsoft Advertising'e aktarma](export-microsoft-advertising.md).
+
+- **Segmentleri LinkedIn Ads'e aktarın** Dışarı aktarma hedeflerimizi LinkedIn ADs'i içerecek ve birleşik müşteri profili verilerinizi dışarı aktararak LinkedIn aracılığıyla İlgili Kişi Hedfeleme ve Şirket Hedeflemenin kilidini açmanızı sağlayacak şekilde genişlettik. Daha fazla bilgi için bkz. [Segmentleri LinkedIn Ads'e aktarma](export-linkedin-ads.md).
+
+
+- **Segmentleri Omnisend'e aktarma** Dışarı aktarma hedeflerimizi, Omnisend'i içerecek şekilde genişlettik. Kampanyalar oluşturmak, e-posta pazarlaması sağlamak ve Omnisend ile belirli müşteri gruplarını kullanmak için hedef kitle içgörülerinde oluşturulan segmentleri kullanın. Daha fazla bilgi için bkz. [Segmentleri Omnisend'e aktarma](export-omnisend.md).
+
+### <a name="predictions"></a>Tahminler
+
+- **Giriş Verileri Kullanılabilirlik Raporu** Giriş verileri kullanılabilirlik raporu, kullanıma hazır tahminlerinizin üretilebileceği hataların ve uyarıların birleştirilmiş bir görünümünü sağlar. Ayrıca model performansının nasıl artırılacağına dair önerilerde de bulunur.    
+  Rapor, bir model eğitim sürecini tamamladıktan sonra kullanılabilir. Başarıyla tamamlanıp tamamlanmadığına bakılmaksızın, her model için ayrı olarak oluşturulur.
+  Şu anda bu özellik yalnızca İşlem Erime modeli için kullanılabilir. Daha fazla bilgi için bkz. [Giriş verileri kullanılabilirlik raporu](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>İlişki
+
+- **İlişki görselleştirici** İlişki görselleştirici görünümü, varlıklar arasındaki tüm mevcut ilişkileri ve bunların kardinalitesini görmenizi sağlar. İlişkiler artık gruplar halinde düzenlenir: kullanıcı tarafından oluşturulan, sistem ve devralınan ilişkiler. Ayrıca bir görünümü resim olarak da dışarı aktarabilirsiniz. Daha fazla bilgi için bkz. [İlişkileri görüntüleme](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Nisan 2021 güncelleştirmeleri
 

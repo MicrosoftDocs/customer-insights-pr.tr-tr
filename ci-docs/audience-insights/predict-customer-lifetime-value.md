@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954603"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095534"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Müşteri yaşam süresi değeri (CLV) tahmini (Önizleme)
 
@@ -149,7 +149,6 @@ Temel müşteri etkileşimlerini yansıtan veriler (web, müşteri hizmetleri ve
 
 1. **İleri**'yi seçin.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Model yapılandırmasını gözden geçirme ve çalıştırma
 
 1. **Model ayrıntılarınızı gözden geçirin** adımında, tahmin yapılandırmasını doğrulayın. Gösterilen değerin altındaki **Düzenle** seçeneğine tıklayarak, tahmin yapılandırmasının herhangi bir bölümüne dönebilirsiniz. İlerleme göstergesinden bir yapılandırma adımı da seçebilirsiniz.
@@ -170,11 +169,10 @@ Temel müşteri etkileşimlerini yansıtan veriler (web, müşteri hizmetleri ve
 - **Durum:**: Tahmin çalıştırmasının durumu.
     - **Kuyruğa Alındı**: Tahmin, diğer işlemlerin tamamlanmasını bekliyor.
     - **Yenileniyor**: Tahmin şu anda çıkış varlığına geçecek sonuçlar oluşturmak için çalışıyor.
-    - **Başarısız Oldu**: Tahmin çalıştırması başarısız oldu. Diğer ayrıntılar için [günlükleri inceleyin](#troubleshoot-a-failed-prediction).
+    - **Başarısız Oldu**: Tahmin çalıştırması başarısız oldu. Diğer ayrıntılar için [günlükleri inceleyin](manage-predictions.md#troubleshoot-a-failed-prediction).
     - **Başarılı Oldu**: Tahmin başarılı oldu. Tahmin sonuçlarını gözden geçirmek için dikey elipslerin altında **Görüntüle**'yi seçin.
 - **Düzenlendi**: Tahmin için yapılandırmanın değiştirildiği tarih.
 - **Son yenilenme**: Tahminin çıkış varlığındaki sonuçları yenilediği tarih.
-
 
 ### <a name="review-prediction-results"></a>Tahmin sonuçlarını gözden geçirme
 
@@ -216,28 +214,8 @@ Sonuçlar sayfası içinde verilerin üç ana bölümü bulunur.
 
 - **En etkili faktörler**: Yapay zeka modeline sağlanan giriş verilerine göre CLV tahmininizi oluştururken çeşitli faktörler göz önünde bulundurulur. Faktörlerin her biri, bir modelin oluşturduğu toplu tahminlerde hesaba katılan bir öneme sahiptir. Bu faktörleri, tahmin sonuçlarınızı doğrulamak için kullanabilirsiniz. Bu faktörler tüm müşterilerinizin CLV'sini tahmin etmeye katkıda bulunan en etkili faktörler hakkında daha fazla içgörü de sağlar.
 
-## <a name="refresh-a-prediction"></a>Tahmini yenileme
+## <a name="manage-predictions"></a>Tahminleri yönetme
 
-Tahminler, ayarlarda yapılandırıldığı şekilde [verilerinizin yenilendiği zamanlamayla](system.md#schedule-tab) aynı zamanlamada otomatik olarak yenilenir. Bunları el ile de yenileyebilirsiniz.
-
-1. **Yönetim Bilgileri** > **Tahminler**'e gidin ve **Tahminlerim** sekmesini seçin.
-2. Yenilemek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-3. **Yenile**'yi seçin.
-
-## <a name="delete-a-prediction"></a>Tahmini silme
-
-Tahminin silinmesi, tahminin çıktı varlığını da kaldırır.
-
-1. **Yönetim Bilgileri** > **Tahminler**'e gidin ve **Tahminlerim** sekmesini seçin.
-2. Silmek istediğiniz tahminin yanındaki dikey üç noktayı seçin.
-3. **Sil**'i seçin.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Başarısız olan bir tahminle ilgili sorunları giderme
-
-1. **Yönetim Bilgileri** > **Tahminler**'e gidin ve **Tahminlerim** sekmesini seçin.
-2. Hata günlüklerini görüntülemek istediğiniz tahminin yanındaki dikey elipsleri seçin.
-3. **Günlükler**'i seçin.
-4. Tüm hataları inceleyin. Oluşabilecek birkaç hata türü vardır ve bu hatalar, hataya neden olan koşulu tanımlarlar. Örneğin, doğru şekilde tahmin etmek için yeterli veri bulunmadığıyla ilgili bir hata genellikle hedef kitle içgörülerine daha fazla veri yüklenerek çözülür.
-
+Tahminleri optimize etmek, sorunları gidermek, yenilemek veya silmek mümkündür. Bir tahmini daha hızlı ve daha güvenilir hale getirmeyi öğrenmek için giriş verileri kullanılabilirlik raporunu gözden geçirin. Daha fazla bilgi için bkz. [Tahminleri yönetme](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034036"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111411"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -32,22 +32,13 @@ Yeni bir segment oluşturmanın çeşitli yolları vardır:
 - Bir ölçülere veya özniteliklere dayalı olarak AI destekli öneriler: [ölçümleri iyileştirmek için önerilen segmentler](suggested-segments.md)
 - Aktivitelere dayalı öneriler: [Müşteri etkinliğine dayalı olarak önerilen segmentler](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Varolan segmentler hakkında Öngörüler alın
-
-[Segment Öngörüler](segment-insights.md) ile varolan segmentlerinizi etrafında ek bilgiler keşfedin. İki segmentin arasındaki farkı veya ortaklıkları öğrenin.
-
-## <a name="find-similar-customers"></a>Benzer müşterileri bul
-
-Bir seçili segmentin üyelerine benzer, yapay zekalarla ilgili yardım bulunan müşterileri bulun. Daha fazla bilgi için bkz. [Benzer Müşteriler](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Mevcut segmentleri yönetme
 
 Tüm kaydedilmiş segmentlerinizi görüntülemek ve bunları yönetmek için **segmentler** sayfasına gidin.
 
 Her bölüm, segment hakkında ek bilgiler içeren bir satırla temsil edilir.
 
-> [!div class="mx-imgBorder"]
-> ![Var olan bir segmenti yönetme seçenekleri](media/segments-selected-segment.png "Var olan bir segmenti yönetme seçenekleri")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Seçenekler açılan listesi ve kullanılabilir seçenekler içeren seçili segment.":::
 
 Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
@@ -59,7 +50,7 @@ Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
   Alternatif olarak, belirli bir segmentin etkinleştirilmesi ve devre dışı bırakılması için gelecekte bir tarih ve saat belirtmek üzere **Etkinleştir/Devre Dışı Bırak** açılır menüsündeki **Daha sonra zamanla** işlevselliğini de kullanabilirsiniz.
 - Segmenti **yeniden adlandırın**.
 - Üyelerin listesini .CSV dosyası olarak **indirin**.
-- **Şuraya ekle** seçeneği, segmentteki müşteri kimliklerinin listesini başka bir uygulamada işlenmek üzere gönderir.
+- Dışarı aktarmalarla ilgili segmenti görmek ve yönetmek için **Dışarı aktarmaları yönetin**. [Dışarı aktarmalar hakkında daha fazla bilgi edinin.](export-destinations.md)
 - Segmenti **silin**.
 
 ## <a name="refresh-segments"></a>Segmentleri yenileme
@@ -68,6 +59,24 @@ Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
 > [!TIP]
 > Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+
+## <a name="export-segments"></a>Segmentleri dışarı aktarma
+
+Segmentler sayfasından veya [dışarı aktarmalar sayfasından](export-destinations.md) bir segmenti dışarı aktarabilirsiniz. 
+
+1. **Segmentler** sayfasına gidin.
+
+1. Dışarı aktarmak istediğiniz segment için **Daha fazlasını göster [...]** öğesini seçin.
+
+1. Eylemler açılan listesinden **Dışarı aktarmaları yönet**'i seçin.
+
+1. **Segment için dışarı aktarmalar (önizleme)** sayfası açılır. Geçerli segmenti içeren veya içermeyen dışa aktarmalara göre gruplandırılan tüm yapılandırılmış dışarı aktarmaları görebilirsiniz.
+
+   1. Seçili segmenti bir dışarı aktarmaya eklemek için listeden dışa aktarmayı seçin ve **Segment ekle**'yi seçin.
+
+   1. Seçili segmentle yeni bir dışarı aktarma oluşturmak için **Dışarı aktarma ekle**'yi seçin. Dışarı aktarma oluşturma hakkında daha fazla bilgi için bkz. [Yeni dışarı aktarma ayarlama](export-destinations.md#set-up-a-new-export).
+
+1. Segmentler için ana sayfaya dönmek üzere **Geri**'yi seçin.
 
 ## <a name="view-processing-history-and-segment-members"></a>İşleme geçmişi ve segment üyelerini görüntüleme
 
