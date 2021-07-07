@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129923"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306190"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Ürün önerisi tahmini (önizleme) örnek kılavuzu
 
@@ -105,9 +105,9 @@ Verileri aldıktan sonra, artık birleştirilmiş müşteri profili oluşturmak 
 
 1. **Eşleştir** sekmesine gidin ve **Sırayı Ayarla**'yı seçin.
 
-2. **Birincil** açılan listesinde, **eCommerceContacts : eCommerce** öğesini birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
+2. **Birincil** açılan listede **eCommerceContacts : eCommerce**'ü birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
 
-3. **Varlık 2** açılan listesinde, **loyCustomers : LoyaltyScheme** öğesini seçin ve tüm kayıtları ekleyin.
+3. **Varlık 2** açılır listesinde **loyCustomers:LoyaltyScheme**'iyi seçin ve tüm kayıtları ekleyin.
 
    ![Eşleştirilen eCommerce ve Bağlılık öğelerini birleştirin.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Verileri aldıktan sonra, artık birleştirilmiş müşteri profili oluşturmak 
 
 5. FullName kullanarak ilk koşulunuzu ekleyin.
 
-   - eCommerceContacts için açılan listede **FullName** öğesini seçin.
-   - loyCustomers için açılan menüde **FullName** öğesini seçin.
+   - eCommerceContacts için açılır alanında **Tam Ad**'ı seçin.
+   - loyCustomers için açılır alanında **Tam Ad**'ı seçin.
    - **Normalleştir** açılan listesini ve **Tür (Telefon, Ad, Adres, ...)** öğesini seçin.
    - **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
 
 6. Yeni kural için **FullName, Email** adını girin.
 
    - **Koşul Ekle**'yi seçerek e-posta adresi için ikinci bir koşul ekleyin.
-   - eCommerceContacts varlığı için açılan listede **EMail** öğesini seçin.
-   - loyCustomers varlığı için açılan listede **EMail** öğesini seçin.
+   - Varlık eCommerceContacts için açılır menüde **E-posta**'yı seçin.
+   - Varlık loyCustomers için açılır menüde **E-posta**'yı seçin.
    - Normalleştir alanını boş bırakın.
    - **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
 

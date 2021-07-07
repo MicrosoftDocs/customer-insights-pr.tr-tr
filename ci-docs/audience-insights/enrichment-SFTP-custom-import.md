@@ -9,22 +9,22 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896305"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304674"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Müşteri profillerini özel verilerle zenginleştirme (önizleme)
 
-Güvenli Dosya Aktarım Protokolü (SFTP) özel alma, veri birleşme işlemine gitmek zorunda olmayan verileri almanıza olanak tanır. Verilerinizi aktarmanın esnek, güvenli ve kolay bir yoludur. SFTP özel içeri aktarma işlemi, zenginleştirme için gereken müşteri profili verilerini dışarı aktarmanıza olanak tanıyan [SFTP dışarı aktarma](export-sftp.md) ile birlikte kullanılabilir. Veriler daha sonra işlenebilir, zenginleştirilebilir ve SFTP özel içeri aktarma işlemi, zenginleştirilmiş verileri Dynamics 365 Customer Insights uygulamasının hedef kitle içgörü özelliğine getirmek için kullanılabilir.
+Güvenli Dosya Aktarım Protokolü (SFTP) özel içeri aktarma işlemi, verileri veri birleştirme işleminden geçmek zorunda kalmadan içeri aktarmanızı sağlar. Verilerinizi aktarmanın esnek, güvenli ve kolay bir yoludur. SFTP özel içeri aktarma işlemi, zenginleştirme için gereken müşteri profili verilerini dışarı aktarmanıza olanak tanıyan [SFTP dışarı aktarma](export-sftp.md) ile birlikte kullanılabilir. Veriler daha sonra işlenebilir ve zenginleştirilmiş hale getirebilir ve zenginleştirilmiş verileri Dynamics 365 Customer Insights hedef kitle öngörüler özelliğine yeniden getirmek için sftp özel alma kullanılabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
 SFTP özel içeri aktarma zenginleştirmelerini yapılandırmak için aşağıdaki ön koşulların karşılanması gerekir:
 
-- SFTP ana bilgisayarında alınacak dosyanın dosya adı ve konumu (yolu) vardır.
+- SFTP ana bilgisayarındaki alınacak dosyanın adı ve konumuna (yol) sahip olmanız gerekir.
 - Alınacak veriler Için [Common Data Model şemasını](/common-data-model/) belirten bir *model.json* dosyası vardır. Bu dosya, içeri aktarılacak dosyayla aynı dizinde olmalıdır.
 - Bir SFTP bağlantısı zaten bir Yönetici tarafından yapılandırılmış olabilir *veya* [Yönetici](permissions.md#administrator) izinlere sahip olmanız gerekir. Verileri almak istediğiniz SFTP konumunun Kullanıcı kimlik bilgileri, URL'si ve bağlantı noktası numarası gerekir.
 
@@ -37,11 +37,11 @@ SFTP özel içeri aktarma zenginleştirmelerini yapılandırmak için aşağıda
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP Özel İçeri Aktarma kutucuğu.":::
 
-1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi ve açılan kutudan **SFTP Özel içe Aktarma** seçeneğini belirleyerek bir bağlantı oluşturabilirsiniz.
+1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi ve açılan listeden **SFTP özel içe aktarma** seçeneğini belirleyerek bir bağlantı oluşturabilirsiniz.
 
 1. Bağlantı seçimini onaylamak için **Özel İçe aktarmaya bağlan**'ı seçin.
 
-1.  **İleri**'i seçin ve almak istediğiniz veri dosyasının **adını** ve **yolunu** girin.
+1.  **İleri**'i seçin ve almak istediğiniz veri dosyasının **yolunu** ve **dosya adını** girin.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Veri konumuna girerken ekran görüntüsü.":::
 
@@ -55,21 +55,21 @@ Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zengin
 
 1. **Görünen ad** kutusunda bağlantı için bir ad girin.
 
-1. Geçerli bir Kullanıcı adı, parola ve STFP sunucusu için ana bilgisayar URL 'SI girin alınacak verilerin bulunduğu yer.
+1. Alınacak verilerin bulunduğu SFTP sunucusu için geçerli bir Kullanıcı adı, parola ve ana bilgisayar URL 'SI girin.
 
 1. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin.
 
 1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
 
-1. Doğrulama tamamlandığında bağlantı, **Kaydet**'i tıklatarak da kaydedilebilir.
+1. Doğrulama tamamlandığında, bağlantı, **Kaydet** seçilerek kaydedilebilir.
 
-> [!div class="mx-imgBorder"]
-   > ![Experian bağlantısı yapılandırma sayfası](media/enrichment-SFTP-connection.png "Experian bağlantısı yapılandırma sayfası")
+   > [!div class="mx-imgBorder"]
+   > ![Experian bağlantı Yapılandırması sayfası](media/enrichment-SFTP-connection.png "Experian bağlantı Yapılandırması sayfası")
 
 
 ## <a name="defining-field-mappings"></a>Alan eşlemelerini tanımlama 
 
-SFTP sunucusunda içeri aktarılacak dosyayı içeren dizin ayrıca bir *model.json* dosyası da içermelidir. Bu dosya, verileri içeri aktarmak için kullanılacak şemayı tanımlar. Şema, alan eşlemesini belirtmek için [Common Data Model](/common-data-model/) kullanmalıdır. model.json dosyasının basit bir örneği şuna benzer:
+SFTP sunucusunda içeri aktarılacak dosyayı içeren dizin ayrıca bir *model.json* dosyası da içermelidir. Bu dosya, verileri içeri aktarmak için kullanılacak şemayı tanımlar. Şemanın, alan eşlemesini belirtmek Için [ortak veri modeli](/common-data-model/) kullanmaları gerekebilir. model.json dosyasının basit bir örneği şuna benzer:
 
 ```
 {
@@ -123,6 +123,6 @@ Zenginleştirme işlemi tamamlandıktan sonra yeni içeri aktarılan özel zengi
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Zenginleştirilmiş müşteri verilerinizle geliştirin. Müşterilerinize kişiselleştirilmiş deneyimler sunmak için [segmentler](segments.md), [ölçümler](measures.md) oluşturun ve [verileri dışarı aktarın](export-destinations.md).
+Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

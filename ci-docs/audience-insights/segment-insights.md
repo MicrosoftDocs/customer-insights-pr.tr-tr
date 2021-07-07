@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595358"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306098"
 ---
 # <a name="segment-insights-preview"></a>Segment içgörüleri (önizleme)
 
@@ -50,7 +50,7 @@ Analiz sonuçlarını görmek için bir içgörü seçin:
 
 - Analiz için seçili segmentlerle çakışan üye sayısı.
 - Segmentlerden birine eklenen ancak kalan segmentlere eklenmeyen üye sayısı.
-- Çakışma analizini yapılandırırken alanları seçtiyseniz bunları ilgili sekmelerde bulabilirsiniz. İlgili herhangi bir öznitelik düzeyini seçmek için filtre açılan menüsünü kullanabilirsiniz, alttaki tablo ilgili verileri gösterir.
+- Çakışma analizini yapılandırırken alanları seçtiyseniz bunları ilgili sekmelerde bulabilirsiniz. Herhangi bir öznitelik ilgi düzeyini seçmek için filtre açılır menüsünü kullanabilirsiniz ve alttaki tablo ilgili verileri gösterecektir.
 
 ## <a name="segment-differentiators"></a>Segment farklılaştırıcılar
 

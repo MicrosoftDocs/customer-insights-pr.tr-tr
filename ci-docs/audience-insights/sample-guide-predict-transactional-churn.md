@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595450"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306144"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>İşlem tabanlı erime tahmini (önizleme) örnek kılavuzu
 
-Bu kılavuzda, aşağıda sağlanan verileri kullanarak Customer Insights'ta uçtan uca İşlem Tabanlı Erime tahmini örneği açıklanmaktadır. Bu kılavuzda kullanılan verilerin tamamı gerçek olmayan müşteri verileridir ve Customer Insights Aboneliğinizdeki *Demo* ortamında bulunan Contoso veri kümesinin bir parçasıdır.
+Bu kılavuzda, aşağıda sağlanan verileri kullanarak Customer Insights'ta uçtan uca İşlem Tabanlı Erime tahmini örneği açıklanmaktadır. Bu kılavuzda kullanılan tüm veriler gerçek müşteri verileri değildir ve Customer Insights aboneliğinizde *Demo* ortamında bulunan Contoso veri kümesi parçasıdır.
 
 ## <a name="scenario"></a>Senaryo
 
-Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee web sitesi üzerinden satış yapan bir şirkettir. Amaçları, ürünlerini düzenli olarak satın alan müşterilerden hangilerinin sonraki 60 gün içinde etkin müşteri olmayı bırakacağını öğrenmektir. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
+Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek kaliteli kahve ve kahve makineleri üreten bir şirkettir. Amaçları, ürünlerini düzenli olarak satın alan müşterilerden hangilerinin sonraki 60 gün içinde etkin müşteri olmayı bırakacağını öğrenmektir. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -109,9 +109,9 @@ Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme
 
 1. **Eşleştir** sekmesine gidin ve **Sırayı Ayarla**'yı seçin.
 
-1. **Birincil** açılan listesinde, **eCommerceContacts : eCommerce** öğesini birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
+1. **Birincil** açılan listede **eCommerceContacts : eCommerce**'ü birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
 
-1. **Varlık 2** açılan listesinde, **loyCustomers : LoyaltyScheme** öğesini seçin ve tüm kayıtları ekleyin.
+1. **Varlık 2** açılır listesinde **loyCustomers:LoyaltyScheme**'iyi seçin ve tüm kayıtları ekleyin.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Eşleştirilen eCommerce ve Bağlılık öğelerini birleştirin.":::
 
@@ -119,16 +119,16 @@ Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme
 
 1. FullName kullanarak ilk koşulunuzu ekleyin.
 
-   * eCommerceContacts için açılan listede **FullName** öğesini seçin.
-   * loyCustomers için açılan menüde **FullName** öğesini seçin.
+   * eCommerceContacts için açılır alanında **Tam Ad**'ı seçin.
+   * loyCustomers için açılır alanında **Tam Ad**'ı seçin.
    * **Normalleştir** açılan listesini ve **Tür (Telefon, Ad, Adres, ...)** öğesini seçin.
    * **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
 
 1. Yeni kural için **FullName, Email** adını girin.
 
    * **Koşul Ekle**'yi seçerek e-posta adresi için ikinci bir koşul ekleyin.
-   * eCommerceContacts varlığı için açılan listede **EMail** öğesini seçin.
-   * loyCustomers varlığı için açılan listede **EMail** öğesini seçin. 
+   * Varlık eCommerceContacts için açılır menüde **E-posta**'yı seçin.
+   * Varlık loyCustomers için açılır menüde **E-posta**'yı seçin. 
    * Normalleştir alanını boş bırakın. 
    * **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
 

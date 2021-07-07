@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245731"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305180"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Müşteri profillerini marka ve ilgi benzerlikleriyle zenginleştirme (önizleme)
 
-Microsoft'tan gelen ve müşteri verilerinizi marka ve faiz benzeşimleri ile zenginleştirmek için özel verileri kullanın. Bu benzeşimler, müşterilerinize benzer nüfus nitelikleri olan kişilerin verilerine göre belirlenir. Bu bilgiler, belirli markalar ve ilgi alanları için benzeşimleri esas alarak müşterilerinizi daha iyi anlamanıza ve segmentlemenize yardımcı olur.
+Microsoft'tan gelen ve müşteri verilerinizi marka ve faiz benzeşimleri ile zenginleştirmek için özel verileri kullanın. Bu benzerlikler, müşterilerinizle benzer demografideki kişilerden alınan verilere bağlıdır. Bu bilgiler, belirli markalar ve ilgi alanları için benzeşimleri esas alarak müşterilerinizi daha iyi anlamanıza ve segmentlemenize yardımcı olur.
 
 Hedef kitle içgörülerinde, [zenginleştirmeleri yapılandırmak ve görüntülemek](enrichment-hub.md) için **Veri** > **Zenginleştirme**'ye gidin.
 
@@ -27,7 +27,7 @@ Marka benzerlikleri zenginleştirmesini yapılandırmak için **Keşfet** sekmes
 İlgi alanı benzerlikleri zenginleştirmesini yapılandırmak için **Keşfet** sekmesine gidin ve **İlgi alanları** kutucuğunda **Verilerimi zenginleştir**'i seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Markalar ve İlgi Alanları kutucukları](media/BrandsInterest-tile-Hub.png "Markalar ve İlgi Alanları kutucukları")
+   > ![Markalar ve ilgi alanları](media/BrandsInterest-tile-Hub.png "Markalar ve İlgi alanları")
 
 ## <a name="how-we-determine-affinities"></a>Benzeşimler nasıl belirlenir?
 
@@ -53,7 +53,7 @@ Benzeşimi ölçmek istediğiniz ayrıntı düzeyine bağlı olarak benzeşim d�
 
 Şu anda şu ülke/bölge seçeneklerini destekliyoruz: Avustralya, Kanada (İngilizce), Fransa, Almanya, Birleşik Krallık veya ABD (İngilizce).
 
-Ülke seçmek için **Marka zenginleştirme** veya **İlgi alanı zenginleştirme** seçeneklerini açın ve **Ülke/Bölge**'nin yanında **Değiştir**'i seçin. **Ülke/Bölge ayarları** bölmesinde, bir seçenek belirleyin ve **Uygula**'yı seçin.
+Bir ülke veya bölge seçmek için, **markalar zenginleştirme** veya **ilgi çekici bir zenginleştirme** ve **ülke/bölge** yanında **Değiştir**'i seçin. **Ülke/Bölge ayarları** bölmesinde, bir seçenek belirleyin ve **Uygula**'yı seçin.
 
 ### <a name="implications-related-to-country-selection"></a>Ülke seçimiyle ilgili etkiler
 
@@ -61,7 +61,7 @@ Benzeşimi ölçmek istediğiniz ayrıntı düzeyine bağlı olarak benzeşim d�
 
 - [Bir sektör seçerken](#define-your-brands-or-interests), seçilen ülkeye veya bölgeye göre en ilgili markaları veya ilgi alanlarını elde edersiniz.
 
-- [Profilleri zenginleştirirken](#refresh-enrichment), seçilen markalar ve ilgi alanları için veri aldığımız tüm müşteri profillerini zenginleştiririz. Seçilen ülkede veya bölgede olmayan profiller de dahildir. Örneğin, ABD'de seçilen markalar ve ilgi alanları için kullanılabilir veri varsa, Almanya'da seçeneğini belirlediyseniz, bu ABD'de yer alan profilleri zenginleştiririz.
+- [Profilleri zenginleştirdiğinizde](#refresh-enrichment), seçili markalar ve ilgi alanları için, seçili ülke veya bölgede olmayan profiller de dahil olmak üzere verilerini edindiğimiz tüm müşteri profillerini zenginleştirebilirsiniz. Örneğin, ABD'de seçilen markalar ve ilgi alanları için kullanılabilir veri varsa, Almanya'da seçeneğini belirlediyseniz, bu ABD'de yer alan profilleri zenginleştiririz.
 
 ## <a name="configure-enrichment"></a>Zenginleştirme yapılandırma
 
@@ -71,7 +71,7 @@ Destekli bir deneyim, zenginleştirme yapılandırmasında size yardımcı olur.
 
 Bu seçeneklerden birini veya her ikisini birden kullanarak en fazla beş adet marka veya ilgi alanı seçin:
 
-- **Sektör**: Açılır listeden sektörünüzü yapın ve ardından bu sektördeki başlıca markalar veya ilgi alanları arasından seçim yapın.
+- **Endüstri**: Açılır listeden sektörünüzün seçiminizi yapın ve ardından bu sektör için en üst markalar veya ilgi alanları arasından seçim yapın.
 - **Kendinizinkini seçin**: Kuruluşunuzla ilgili marka veya ilgi alanı girin ve ardından eşleşen öneriler arasından seçim yapın. Aradığınız bir markayı veya ilgi alanını listelemezsek **Öner** bağlantısını kullanarak bize geri bildirim gönderin.
 
 ### <a name="review-enrichment-preferences"></a>Zenginleştirme tercihlerini inceleme
@@ -90,17 +90,17 @@ Sistemin müşteri verilerinizi zenginleştirmek için kullanmasını istediğin
 
 Aşağıdaki biçim ve değerler desteklenmektedir; değerler büyük/küçük harfe duyarlı değildir:
 
-- **Doğum Tarihi**: Doğum tarihinin veri alımı sırasında DateTime türüne dönüştürülmesi önerilir. Alternatif olarak, [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) biçiminde "yyyy-AA-gg" veya "yyyy-AA-ggTSS:dd:ssZ" şeklinde bir dize olabilir.
-- **Cinsiyet**: Erkek, Kadın, Bilinmiyor
-- **Posta kodu**: ABD için beş basamaklı posta kodları, diğer yerler için standart posta kodu
-- **Şehir**: İngilizce şehir adı
+- **Doğum Tarihi**: Doğum tarihinin veri alımı sırasında DateTime türüne dönüştürülmesi önerilir. Alternatif olarak, [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) biçiminde "yyyy-MM-dd" veya "yyyy-MM-ddTHH:mm:ss" olarak bir dize olabilir.
+- **Cinsiyet**: Erkek, Kadın, Bilinmiyor.
+- **Posta kodu**: Amerika Birleşik Devletleri için beş basamaklı posta kodları, başka her yerde standart posta kodu.
+- **Şehir**: İngilizce şehir adı.
 - **Bölge**: ABD ve Kanada için iki harfli kısaltma. Avustralya için iki veya üç harfli kısaltma. Fransa, Almanya veya BK için geçerli değildir.
 - **Ülke/Bölge**:
 
   - US: Amerika Birleşik Devletleri, Birleşik Devletler, ABD, US, Amerika
   - CA: Kanada, CA
   - GB: Birleşik Krallık, UK, Büyük Britanya, GB, Büyük Britanya ve İrlanda Birleşik Krallığı, Büyük Britanya Birleşik Krallığı
-  - AU: Avustralya, AU, Avustralya Milletler Topluluğu
+  - AU: Avusturalya, AU, Avusturalya Uluslar Topluluğu
   - FR: Fransa, FR, Fransa Cumhuriyeti
   - DE: Almanya, Alman, Deutschland, Allemagne, DE, Almanya Federal Cumhuriyeti, Almanya Cumhuriyeti
 
@@ -113,10 +113,11 @@ Son olarak, bilgileri gözden geçirmeniz ve zenginleştirme için bir ad girmen
 ## <a name="refresh-enrichment"></a>Zenginleştirme yenileme
 
 Nüfus nitelikleri için markaları, ilgi alanlarını ve alan eşleşmesini yapılandırdıktan sonra zenginleştirmeyi çalıştırın. İşlemi başlatmak için marka veya ilgi alanı yapılandırma sayfasında **Çalıştır**'ı seçin. Ayrıca, zamanlanmış yenilemenin parçası olarak sistemin zenginleştirme otomatik olarak çalıştırılmasına izin verebilirsiniz.
+
 Müşteri verilerinizin boyutuna bağlı olarak bir zenginleştirme çalıştırmasının tamamlanması birkaç dakika sürebilir.
 
 > [!TIP]
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden birinin **Ayrıntılarını gör**'ü seçtikten sonra ek bilgiler bulacaksınız: işlem süresi, son işlem tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
@@ -134,7 +135,7 @@ Tek müşteri kartlarında marka ve faiz benzeşimleri de görüntülenebilir. *
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentleri](segments.md), [Ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışarı aktarın](export-destinations.md).
+Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

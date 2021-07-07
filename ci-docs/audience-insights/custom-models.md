@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700692"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305684"
 ---
 # <a name="custom-machine-learning-models"></a>Özel makine öğrenimi modelleri
 
@@ -72,7 +72,7 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
       > [!div class="mx-imgBorder"]
       > ![Model Çıkış Parametresi Bölmesi](media/intelligence-screen3-outputparameters.png "Model Çıkış Parametresi Bölmesi")
 
-1. Müşterileri tanımlayan **Müşteri kimliği sonuçları** açılan menüsünden eşleşen özniteliği belirleyin ve **Kaydet**'i seçin.
+1. Müşterileri tanımlayan **müşteri kimliği sonuçları** listesinde bulunan ilgili özniteliği seçin ve **Kaydet**'i seçin.
 
    > [!div class="mx-imgBorder"]
    > ![Sonuçları Müşteri verileri bölmesiyle ilişkilendirme](media/intelligence-screen4-relatetocustomer.png "Sonuçları Müşteri verileri bölmesiyle ilişkilendirme")
@@ -100,7 +100,7 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
       1. Test işlem hattınız için **Çıkış veri deposu parametre adı**'nı seçin.
       1. Test işlem hattınız için **Çıkış Yolu parametre adı**'nı seçin.
 
-1. Müşterileri tanımlayan **Müşteri kimliği sonuçları** açılan menüsünden eşleşen özniteliği belirleyin ve **Kaydet**'i seçin.
+1. Müşterileri tanımlayan **müşteri kimliği sonuçları** listesinde bulunan ilgili özniteliği seçin ve **Kaydet**'i seçin.
    Müşteri varlığının Müşteri Kimliği sütununa benzer değerlere sahip çıkarım çıktısından bir öznitelik seçin. Veri kümenizde böyle bir sütun yoksa satırı benzersiz şekilde tanımlayan bir öznitelik seçin.
 
 ## <a name="run-a-workflow"></a>İş akışını çalıştırma

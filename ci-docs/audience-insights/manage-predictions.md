@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095760"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315902"
 ---
 # <a name="manage-predictions"></a>Tahminleri yönetme
 
@@ -35,9 +35,6 @@ Bu makalede, çoğu tahmin senaryosunun paylaştığı bazı görevler anlatılm
 Giriş verileri kullanılabilirlik raporu, kullanıma hazır tahminlerinizin üretilebileceği hataların ve uyarıların birleştirilmiş bir görünümünü sağlar. Ayrıca model performansının nasıl artırılacağına dair önerilerde de bulunur.
 
 Rapor, bir model eğitim sürecini tamamladıktan sonra kullanılabilir. Başarıyla tamamlanıp tamamlanmadığına bakılmaksızın, her model için ayrı olarak oluşturulur.
-
-> [!NOTE]
-> Şu anda bu özellik yalnızca İşlem Erime modeli için kullanılabilir.
 
 ### <a name="view-the-input-data-usability-report"></a>Giriş verileri kullanılabilirlik raporunu görüntüleme
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595542"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306327"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Abonelik erimesi tahmini (önizleme) örnek kılavuzu
 
@@ -22,7 +22,7 @@ Aşağıda sağlanan örnek verileri kullanarak size uçtan uca abonelik erimesi
 
 ## <a name="scenario"></a>Senaryo
 
-Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee web sitesi üzerinden satış yapan bir şirkettir. Yakın zamanda müşterilerinin düzenli olarak kahve alması için bir abonelik işi başlattılar. Hedefleri, abone olan müşterilerin sonraki birkaç ay içinde aboneliklerini iptal edip etmeyeceğini anlamaktır. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
+Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek kaliteli kahve ve kahve makineleri üreten bir şirkettir. Yakın zamanda müşterilerinin düzenli olarak kahve alması için bir abonelik işi başlattılar. Hedefleri, abone olan müşterilerin sonraki birkaç ay içinde aboneliklerini iptal edip etmeyeceğini anlamaktır. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -128,9 +128,9 @@ Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme
 
 1. **Eşleştir** sekmesine gidin ve **Sırayı Ayarla**'yı seçin.
 
-1. **Birincil** açılan listesinde, **eCommerceContacts : eCommerce** öğesini birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
+1. **Birincil** açılan listede **eCommerceContacts : eCommerce**'ü birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
 
-1. **Varlık 2** açılan listesinde, **loyCustomers : LoyaltyScheme** öğesini seçin ve tüm kayıtları ekleyin.
+1. **Varlık 2** açılır listesinde **loyCustomers:LoyaltyScheme**'iyi seçin ve tüm kayıtları ekleyin.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Eşleştirilen eCommerce ve Bağlılık öğelerini birleştirin.":::
 
@@ -138,16 +138,16 @@ Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme
 
 1. FullName kullanarak ilk koşulunuzu ekleyin.
 
-   * eCommerceContacts için açılan listede **FullName** öğesini seçin.
-   * loyCustomers için açılan menüde **FullName** öğesini seçin.
+   * eCommerceContacts için açılır alanında **Tam Ad**'ı seçin.
+   * loyCustomers için açılır alanında **Tam Ad**'ı seçin.
    * **Normalleştir** açılan listesini ve **Tür (Telefon, Ad, Adres, ...)** öğesini seçin.
    * **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
 
 1. Yeni kural için **FullName, Email** adını girin.
 
    * **Koşul Ekle**'yi seçerek e-posta adresi için ikinci bir koşul ekleyin.
-   * eCommerceContacts varlığı için açılan listede **EMail** öğesini seçin.
-   * loyCustomers varlığı için açılan listede **EMail** öğesini seçin. 
+   * Varlık eCommerceContacts için açılır menüde **E-posta**'yı seçin.
+   * Varlık loyCustomers için açılır menüde **E-posta**'yı seçin. 
    * Normalleştir alanını boş bırakın. 
    * **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
 

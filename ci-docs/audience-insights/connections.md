@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896121"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304996"
 ---
 # <a name="connections-preview-overview"></a>Bağlantılara (önizleme) genel bakış
 
@@ -74,7 +74,9 @@ Verme bağlantısını ayarlarken veya düzenlerken [dışarı aktarımları](ex
 
 ## <a name="remove-a-connection"></a>Bağlantı kaldırma
 
-Kaldırmakta olduğunuz bağlantı zenginleştirme veya dışarı aktarımlar tarafından kullanılıyorsa önce Bu parolaları ayırmanız veya kaldırmanız gerekir. Kaldır iletişim kutusu sizi ilgili zenginleştirme veya dışa aktarımlara yönlendirecektir. Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunları, [zenginleştirme](enrichment-hub.md) veya [dışarı aktarmalar](export-destinations.md) sayfasında bunlara başka bir bağlantı ekleyerek yeniden etkinleştirebilirsiniz.
+Kaldırmakta olduğunuz bağlantı zenginleştirme veya dışarı aktarımlar tarafından kullanılıyorsa önce Bu parolaları ayırmanız veya kaldırmanız gerekir. Kaldır iletişim kutusu sizi ilgili zenginleştirme veya dışa aktarımlara yönlendirecektir. 
+
+Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunları, [zenginleştirme](enrichment-hub.md) veya [dışarı aktarmalar](export-destinations.md) sayfasında bunlara başka bir bağlantı ekleyerek yeniden etkinleştirebilirsiniz.
 
 1. **Yönetici** > **Bağlantılar (Önizleme)** gidin.
 

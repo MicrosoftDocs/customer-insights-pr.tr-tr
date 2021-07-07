@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111411"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306281"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -68,7 +68,7 @@ Segmentler sayfasından veya [dışarı aktarmalar sayfasından](export-destinat
 
 1. Dışarı aktarmak istediğiniz segment için **Daha fazlasını göster [...]** öğesini seçin.
 
-1. Eylemler açılan listesinden **Dışarı aktarmaları yönet**'i seçin.
+1. Eylemler açılan listesinden **Dışa Aktarmaları yönet**'i seçin.
 
 1. **Segment için dışarı aktarmalar (önizleme)** sayfası açılır. Geçerli segmenti içeren veya içermeyen dışa aktarmalara göre gruplandırılan tüm yapılandırılmış dışarı aktarmaları görebilirsiniz.
 

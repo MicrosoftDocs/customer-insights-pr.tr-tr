@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259123"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304904"
 ---
 # <a name="manage-environments"></a>Ortamları yönet
 
@@ -54,29 +54,32 @@ Ortam oluşturmak için:
 1. **Yeni**'yi seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Ortam ayarları](media/environment-settings-dialog.png)
+   > ![Ortam ayarları.](media/environment-settings-dialog.png)
 
-1. **Yeni ortam oluştur** iletişim kutusunda, **Yeni ortam**'ı seçin.
+1. **Ortam oluştur** iletişim kutusunda **Yeni ortam**'ı seçin.
 
    [Verileri geçerli ortamdan kopyalamak](#considerations-for-copy-configuration-preview) isterseniz **Mevcut ortamdan kopyala**'yı seçin. Kuruluşunuzda verileri kopyalayabileceğiniz tüm kullanılabilir ortamların bir listesini görürsünüz.
 
 1. Aşağıdaki ayrıntıları sağlayın:
    - **Ad**: Bu ortamın adı. Var olan bir ortamı kopyaladıysanız bu alan zaten doldurulmuş haldedir ancak bunu değiştirebilirsiniz.
-   - **Bölge**: Hizmetin dağıtıldığı ve barındırıldığı bölge.
    - **Tür**: Üretim veya Korumalı Alan ortamı oluşturmak isteyip istemediğinizi seçin.
-
+   - **Bölge**: Hizmetin dağıtıldığı ve barındırıldığı bölge.
+   
 1. İsteğe bağlı olarak, **Gelişmiş ayarlar**'ı seçebilirsiniz:
 
-   - **Tüm verileri şuraya kaydet**: Customer Insights'ta oluşturulan çıkış verilerini depolamak istediğiniz yeri belirtir. İki seçeneğiniz vardır: **Customer Insights depolama alanı** (Customer Insights takımı tarafından yönetilen Azure Data Lake) ve **Azure Data Lake Storage 2. Nesil** (kendi Azure Data Lake Storage uygulamanız). Varsayılan olarak, Customer Insights depolama seçeneği belirlenmiştir.
+   - **Tüm verileri şuraya kaydet**: Customer Insights'ta oluşturulan çıkış verilerini depolamak istediğiniz yeri belirtir. İki seçeneğiniz olacak: **Customer Insights depolama** alanı (Customer Insights ekibi tarafından yönetilen bir Azure Data Lake) ve **Azure Data Lake Storage** (kendinizin Azure Data Lake Storage'ı). Varsayılan olarak, Customer Insights depolama seçeneği belirlenmiştir.
 
-   > [!NOTE]
-   > Verileri Azure Data Lake Storage'a kaydederek, verilerin bu Azure depolama hesabı için Dynamics 365 Customer Insights'ta depolandığı yerden farklı olabilecek uygun bir coğrafi konuma aktarılabileceğini ve burada depolanabileceğini kabul edersiniz. [Microsoft Güven Merkezi 'Nden daha fazla bilgi edinin.](https://www.microsoft.com/trust-center)
-   >
-   > Geçerli olarak, söz konusu varlıklar her zaman Customer Insights yönetilen veri gölü içinde depolanır.
-   > Yalnızca ortamı oluştururken seçtiğiniz Azure bölgesindeki Azure Data Lake Gen2 depolama hesaplarını destekliyoruz.
-   > Yalnızca Azure Data Lake 2. Nesil Hiyerarşik Ad Alanı (HNS) etkin depolama hesaplarını destekliyoruz.
+     > [!NOTE]
+     > Verileri Azure Data Lake Storage'a kaydederek, verilerin bu Azure depolama hesabı için Dynamics 365 Customer Insights'ta depolandığı yerden farklı olabilecek uygun bir coğrafi konuma aktarılabileceğini ve burada depolanabileceğini kabul edersiniz. [Microsoft Güven Merkezi 'Nden daha fazla bilgi edinin.](https://www.microsoft.com/trust-center)
+     >
+     > Geçerli olarak, söz konusu varlıklar her zaman Customer Insights yönetilen Data Lake içinde depolanır. 
+     > 
+     > Yalnızca ortamı oluştururken seçtiğiniz Azure bölgesinden Azure Data Lake Storage hesapları destekliyoruz. 
+     > 
+     > Yalnızca hiyerarşik ad alanı etkinleştirilmiş Azure Data Lake Storage hesapları destekliyoruz.
 
-   - Azure Data Lake Storage Gen2 seçeneği için kimlik doğrulamasına yönelik olarak kaynak tabanlı seçeneğini veya abonelik tabanlı seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Kapsayıcı** adı değiştirilemez ve `customerinsights` olacaktır.
+
+   - Bu Azure Data Lake Storage seçeneği için, kaynak tabanlı bir seçenek ile kimlik doğrulaması için abonelik tabanlı bir seçenek arasında seçim yapabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Kapsayıcı** adı değiştirilemez ve `customerinsights` olacaktır.
    
    - [Tahminleri](predictions.md) kullanmak isterseniz Microsoft Dataverse ile veri paylaşımını yapılandırın veya yerinde veri kaynaklarından gelen verileri almayı etkinleştirin, **Microsoft Dataverse ile veri paylaşımını yapılandır ve ek özellikleri etkinleştir** altında Microsoft Dataverse ortam URL'sini girin. Customer Insights çıktı verilerini Microsoft Dataverse Yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
 
@@ -85,7 +88,7 @@ Ortam oluşturmak için:
      > - Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımını etkinleştirdiğinizde, [Varlıktaki eksik değerleri tahmin etme](predictions.md) özelliği şu anda desteklenmemektedir.
 
      > [!div class="mx-imgBorder"]
-     > ![Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri](media/datasharing-with-DataverseMDL.png)
+     > ![Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri.](media/datasharing-with-DataverseMDL.png)
 
    Veri alımı veya segment oluşturma gibi işlemleri çalıştırdığınızda yukarıda belirttiğiniz depolama hesabında karşılık gelen klasörler oluşturulur. Veri dosyaları ve model.json dosyaları oluşturulur ve İşlem adına göre ilgili klasörlere eklenir.
 
@@ -113,14 +116,14 @@ Aşağıdaki ayarlar *kopyalanmaz*:
 
 - Müşteri profilleri.
 - Veri kaynağı kimlik bilgileri. Her veri kaynağı için kimlik bilgilerini girmeniz ve veri kaynaklarını el ile yenilemeniz gerekir.
-- Common Data Model klasöründen ve Common Data Service yönetilen gölünden veri kaynakları. Bu veri kaynaklarını kaynak ortamdaki adlarıyla kendiniz oluşturmanız gerekir.
+- Common Data Model klasöründen ve Dataverse yönetilen Data Lake'ten veri kaynakları. Bu veri kaynaklarını kaynak ortamdaki adlarıyla kendiniz oluşturmanız gerekir.
 
 Bir ortamı kopyaladığınızda, yeni ortamın oluşturulduğunu belirten bir onay iletisi görürsünüz. Veri kaynaklarının listesini görmek için **Veri kaynaklarına git**'i seçin.
 
 Tüm veri kaynakları bir **Kimlik Bilgileri Gerekli** durumu gösterir. Veri kaynaklarını düzenleyin ve yenilemek için kimlik bilgilerini girin.
 
 > [!div class="mx-imgBorder"]
-> ![Kopyalanan veri kaynakları](media/data-sources-copied.png)
+> ![Kopyalanan veri kaynakları.](media/data-sources-copied.png)
 
 Veri kaynaklarını yeniledikten sonra **Veriler** > **Birleştir**'e gidin. Burada kaynak ortamdaki ayarları bulabilirsiniz. Bunları gerektiği gibi düzenleyin veya veri birleştirme işlemini başlatmak ve birleştirilmiş müşteri varlığını oluşturmak için **Çalıştır**'ı seçin.
 
@@ -136,7 +139,7 @@ Varolan ortamların bazı ayrıntılarını düzenleyebilirsiniz.
 
 3. **Ortamı düzenle** kutusunda, ortamın **Görünen ad**'ını güncelleştirebilirsiniz ancak **Bölge**'yi veya **Tür**'ü değiştiremezsiniz.
 
-4. Bir ortam Azure Data Lake Storage 2. Nesil uygulamasında verileri depolamak üzere yapılandırılırsa, **firma anahtarını** güncelleştirebilirsiniz. Ancak **Hesap adı**'nı veya **Kapsayıcı** adını değiştiremezsiniz.
+4. Bir ortam Azure Data Lake Storage'de veri depolamak üzere yapılandırılmışsa, **Hesap anahtarını** güncelleştirebilirsiniz. Ancak **Hesap adı**'nı veya **Kapsayıcı** adını değiştiremezsiniz.
 
 5. İsteğe bağlı olarak, hesap anahtarı tabanlı bir bağlantıdan kaynak tabanlı veya abonelik tabanlı bir bağlantıya güncelleştirebilirsiniz. Yükseltme işlemi yaptığınızda güncelleştirmeden sonra hesap anahtarına geri dönemezsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). Bağlantıyı güncelleştirdiğinizde **Kapsayıcı** bilgilerini değiştiremezsiniz.
 
@@ -158,19 +161,19 @@ Yönetici olarak, tüm yapılandırmaları silmek ve alınan verileri kaldırmak
 
 1.  Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin. 
 
-2.  Sıfırlamak istediğiniz ortamı seçin ve üç noktayı **...** seçin. 
+2.  Sıfırlamak istediğiniz ortamı seçin ve üç noktayı (**...**) seçin. 
 
 3. **Sıfırla** seçeneğini belirleyin. 
 
 4.  Silme işlemini onaylamak için ortam adını girin ve **Sıfırla**'yı seçin.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Var olan bir ortamı silme (yalnızca yöneticiler için kullanılabilir)
+## <a name="delete-an-existing-environment"></a>Varolan bir ortamı silme
 
 Yönetici olarak, yönettiğiniz bir ortamı silebilirsiniz.
 
 1.  Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin.
 
-2.  Sıfırlamak istediğiniz ortamı seçin ve üç noktayı **...** seçin. 
+2.  Sıfırlamak istediğiniz ortamı seçin ve üç noktayı (**...**) seçin. 
 
 3. **Sil** seçeneğini belirleyin. 
 

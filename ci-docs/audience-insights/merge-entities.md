@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085600"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305680"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
@@ -34,7 +34,7 @@ Otomatik olarak birleştirilmiş özniteliklerinden birine dahil edilen öznitel
 
 Birleşik müşteri profili oluşturmak için sistemin birleştirilmiş öznitelikleri nasıl işleyeceğini değiştirebilirsiniz. **Daha fazla göster**'i seçin ve neyi değiştirmek istediğinizi seçin.
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Birleştirilmiş öznitelikleri yönetmek için daha fazla açılan menüdeki seçenekler.":::
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Birleştirilmiş öznitelikleri yönetmek için daha fazla açılan menüsünde göster menüsündeki seçenekler.":::
 
 Daha fazla bilgi için aşağıdaki bölümlere bakın.
 

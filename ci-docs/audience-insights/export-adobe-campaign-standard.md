@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760305"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305410"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Adobe Campaign Standard'da (önizleme) Customer Insights segmentlerini kullanma
 
-Dynamics 365 Customer Insights için hedef kitle içgörülerinin kullanıcısı olarak ilgili hedef kitleleri hedefleyerek pazarlama kampanyalarınızı daha etkili hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Deneyim Platformu ve Adobe Campaign Standard gibi uygulamalardaki hedef kitle içgörülerindeki segmentleri kullanmak için bu makalede özetlenen birkaç adımı izlemeniz gerekir.
+Dynamics 365 Customer Insights'de hedef kitle içgörüler kullanıcısı olarak, ilgili kitleleri hedefleyerek pazarlama kampanyalarınızı daha verimli hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Deneyim Platformu ve Adobe Campaign Standard gibi uygulamalardaki hedef kitle içgörülerindeki segmentleri kullanmak için bu makalede özetlenen birkaç adımı izlemeniz gerekir.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Bu makalede özetlenen adımların süreç diyagramı.":::
 
@@ -80,7 +80,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. Yeni bir dışa aktarma oluşturmak için **Dışa aktarma Ekle**'yi seçin.
 
-1. **Dışa aktarma bağlantısı** alanında, Adobe kampanya bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
+1. **Dışa aktarma bağlantısı** alanında, Adobe kampanya bölümünden bir bağlantı seçin. Bu bölüm adını görmüyorsanız, bu tür hiçbir bağlantı kullanabilirsiniz.
 
 1. Dışa aktarmak istediğiniz segmenti seçin. Bu örnekte, **ChurnProneCustomers**'dır.
 
@@ -128,7 +128,7 @@ Adobe Campaign Standard'da içe aktaracağınız kayıtlardan başka kayıt yoks
 
 Her şey artık hazır olduğundan, profilleri oluşturmak için hazırlanan hedef kitle verilerini hedef kitle içgörülerinden Adobe Campaign Standard'a aktarmamız gerekir. İş akışı kullanarak [Adobe Campaign Standard'daki profilleri nasıl içe aktaracağınızı öğrenin](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences).
 
-Aşağıdaki görüntüde içe aktarma iş akışı 8 saatte bir çalışacak şekilde yapılandırılmıştır ve dışa aktarılan hedef kitle içgörüleri segmentlerini (Azure Blob depolamada .csv dosyası) arar. İş akışı, .csv dosyasının içeriğini belirtilen bir sütun sırasında ayıklar. Bu iş akışı, temel hata işlemenin gerçekleştirilmesi ve Adobe Campaign Standard'da verileri doldurmadan önce her kaydın bir e-posta adresine sahip olduğundan emin olmak amacıyla oluşturulmuştur. İş akışı aynı zamanda ACS profili verilerine güncelleştirmeden/eklemeden önce dosya adından segment adını ayıklar.
+Aşağıdaki resimdeki içe aktarma iş akışı, her sekiz saatte bir çalışacak ve dışa aktarılan hedef kitle içgörü segmentlerini (Azure Blob Depolama'da .csv dosyası) arayacak şekilde yapılandırılmıştır. İş akışı, .csv dosyasının içeriğini belirtilen bir sütun sırasında ayıklar. Bu iş akışı, temel hata işlemenin gerçekleştirilmesi ve Adobe Campaign Standard'da verileri doldurmadan önce her kaydın bir e-posta adresine sahip olduğundan emin olmak amacıyla oluşturulmuştur. İş akışı, Adobe Campaign Standard profil verilerine eklemeden önce segment adını dosya adından da ayıklar.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Adobe Campaign Standard kullanıcı arabiriminde bir içe aktarma iş akışının ekran görüntüsü.":::
 

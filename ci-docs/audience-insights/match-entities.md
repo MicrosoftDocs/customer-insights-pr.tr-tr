@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085646"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306052"
 ---
 # <a name="match-entities"></a>Varlıkları eşleme
 
@@ -209,7 +209,7 @@ En iyi değeri bulmak için koşullarda farklı duyarlılık eşikleri deneyin.
 
 Eşleştirme parametrelerinin çoğunu yeniden yapılandırabilir ve üzerinde ince ayar yapabilirsiniz.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Eşleştieme Kuralı seçeneklerini içeren açılan menünün ekran görüntüsü.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Kural seçeneklerini eşleştirme seçeneğiyle açılır menünün ekran görüntüsü.":::
 
 - Birden çok kural tanımladıysanız **kurallarınızın sırasını değiştirin**. **Yukarı Taşı** ve **Aşağı Taşı** seçeneklerini seçerek veya sürükleyip bırakarak eşleştirme kurallarını yeniden sıralayabilirsiniz.
 

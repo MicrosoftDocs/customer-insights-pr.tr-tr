@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049274"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304832"
 ---
 # <a name="define-and-manage-measures"></a>Ölçümleri tanımlama ve yönetme
 
-Ölçüler müşteri davranışlarını ve iş performansını daha iyi anlamanıza yardımcı olur. Bu kullanıcılar [tümleşik profiller](data-unification.md) içinden ilgili değerlere bakar . Örneğin, bir işletme tek bir müşterinin satın alma geçmişini anlamak için *müşteri başına toplam harcama* veya *şirketin toplam satış* düzeyini anlamak için tüm işletmede harcanan toplam ölçümü görmek istemektedir.  
+Ölçüler müşteri davranışlarını ve iş performansını daha iyi anlamanıza yardımcı olur. Bu kullanıcılar [tümleşik profiller](data-unification.md) içinden ilgili değerlere bakar . Örneğin, bir işletme, tek bir müşterinin satın alma geçmişini anlamak için *müşteri başına toplam harcamayı* görmeyi veya tüm işletmedeki toplam düzey geliri anlamak için *şirketin toplam satışlarını* ölçmeyi ister.  
 
 Ölçümler, çeşitli işleçlere ve basit eşleşme seçeneklerine sahip bir veri sorgusu platformu olan ölçüm oluşturucu kullanılarak oluşturulur. Verileri filtrelemenizi, sonuçları gruplamanızı, [varlık ilişkisi yollarını](relationships.md) algılamanızı ve çıktıyı önizlemenizi sağlar.
 
@@ -69,12 +69,14 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
    1. Filtreleri ölçüme eklemek için **Uygula**'yı seçin.
 
 1. Boyut eklemek için yapılandırma alanında **Boyut**'u seçin. Boyutlar, ölçüm çıkış varlığında sütunlar olarak gösterilir.
+ 
    1. Hesaplama değerlerini gruplamak istediğiniz veri öznitelikleri eklemek için **Boyutları düzenle**'yi seçin. Örneğin, şehir veya cinsiyet. Varsayılan olarak, *müşteri düzeyinde ölçümler* oluşturmak için *CustomerID* boyutu seçilir. *İş düzeyinde ölçümler* oluşturmak isterseniz varsayılan boyutu kaldırabilirsiniz.
    1. Ölçüme boyutları eklemek için **Bitti**'yi seçin.
 
 1. Verilerinizde bir tamsayıyla değiştirmeniz gereken değerler varsa, örneğin *boş* değeri *0* olarak değiştirin; **kurallar**'ı seçin. Kuralı yapılandırın ve değişiklik olarak yalnızca tam sayı seçtiğinizden emin olun.
 
 1. Eşlediğiniz veri varlığı ile *Müşteri* varlığı arasında birden fazla yol varsa tanımlanan [varlık ilişkisi yolları](relationships.md)'ndan birini seçmeniz gerekir. Ölçüm sonuçları, seçilen yola bağlı olarak değişebilir. 
+   
    1. **Veri tercihleri**'ni seçin ve ölçümünüzü tanımlamak için kullanılması gereken varlık yolunu seçin. *Müşteri* varlığının yalnızca tek bir yolu varsa Bu denetim gösterilmez.
    1. Seçiminizi uygulamak için **Bitti**'yi seçin. 
 
@@ -113,7 +115,7 @@ Aşağıdaki yordamda, şablon kullanarak yeni bir ölçü oluşturma adımları
 
 1. **Yeni**'yi seçi nve **Bir şablon seç**'i seçin.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Vurgulu şablon içeren yeni bir ölçü oluştururken açılan menünün ekran görüntüsü.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Şablonda vurgulu yeni bir ölçü oluştururken açılır menünün ekran görüntüsü.":::
 
 1. Gereksinim duyduğunuz şablonu bulun ve **şablon seç**'i seçin.
 
@@ -123,7 +125,7 @@ Aşağıdaki yordamda, şablon kullanarak yeni bir ölçü oluşturma adımları
 
 1. **Bitti**'yi seçin.
 
-1. **Zaman dönemini ayarla** bölümünde, kullanılacak verilerin zaman dilimi tanımlayın. Yeni ölçünün tüm veri kümesi kapsamasını istiyorsanız, **her zaman** seçeneğini belirleyin. Veya ölçünün **belirli bir döneme** odaklanmasını isterseniz.
+1. **Zaman dönemini ayarla** bölümünde, kullanılacak verilerin zaman dilimi tanımlayın. **Tüm zaman**'ı seçerek yeni ölçünün tüm veri kümesi kapsamasını mı yoksa ölçünün **Belirli bir döneme** odaklanmasını mı istediğinizi seçin.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Bir şablondan ölçü yapılandırılırken zaman dönemi bölümünü gösteren ekran görüntüsü.":::
 
@@ -142,12 +144,12 @@ Aşağıdaki yordamda, şablon kullanarak yeni bir ölçü oluşturma adımları
 
 Ölçüler listesini **Ölçüler** sayfasında bulabilirsiniz.
 
-Ölçüm türü, oluşturan, oluşturma tarihi, durum ve durum hakkında bilgiler bulabilirsiniz. Listeden bir ölçümü seçtiğinizde, çıktıyı önizleyebilir ve bir .CSV dosyası indirebilirsiniz.
+Ölçüm türü, oluşturan, oluşturma tarihi, durum ve durum hakkında bilgiler bulabilirsiniz. Listeden bir ölçü seçtiğinizde, çıktıyı önizleyebilir ve bir CSV dosyası indirebilirsiniz.
 
 Tüm ölçümlerinizi aynı anda yenilemek için belirli bir ölçüm seçmeden **Tümünü yenile**'yi seçin.
 
 > [!div class="mx-imgBorder"]
-> ![Tek ölçümleri yönetmek için eylemler](media/measure-actions.png "Tek ölçümleri yönetmek için eylemler")
+> ![Tek ölçümleri yönetmek için eylemler.](media/measure-actions.png "Tek ölçümleri yönetmek için eylemler.")
 
 Aşağıdaki seçenekler için listeden bir ölçüm seçin:
 
@@ -159,11 +161,11 @@ Aşağıdaki seçenekler için listeden bir ölçüm seçin:
 - **Etkinleştirin** veya **Devre Dışı Bırakın**. Etkin olmayan ölçümler [zamanlanmış yenileme](system.md#schedule-tab) sırasında yenilenmez.
 
 > [!TIP]
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden birinin **Ayrıntılarını gör**'ü seçtikten sonra ek bilgiler bulacaksınız: işlem süresi, son işlem tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
 
 ## <a name="next-step"></a>Sonraki adım
 
-[Müşteri segmenti](segments.md) oluşturmak için var olan ölçümleri kullanabilirsiniz.
+[Müşteri segmenti](segments.md) oluşturmak için varolan önlemleri kullanabilirsiniz.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

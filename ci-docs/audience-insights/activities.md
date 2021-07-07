@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866431"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304950"
 ---
 # <a name="customer-activities"></a>Müşteri etkinlikleri
 
@@ -45,7 +45,7 @@ Veri kaynaklarınız, birden çok veri kaynağından işlem tabanlı ve aktivite
 
    - **İlk**: Aktivite varlığındaki yabancı alan, başka bir varlıkla ilişki kurmak için kullanılacak.
    - **İkinci**: Aktivite varlığınızın ilişkide olacağı karşılık gelen kaynak müşteri varlığı. Yalnızca veri birleşme işleminde kullanılan kaynak müşteri varlıklarına ilişki oluşturabilirsiniz.
-   - **Üçüncü**: Bu aktivite varlığı ile seçili kaynak müşteri varlığı arasında bir ilişki zaten varsa, ilişki adı salt okunur modda olur. Böyle bir ilişki yoksa, bu kutuda sağladığınız adla yeni bir ilişki oluşturulur.
+   - **Üçüncü**: Bu aktivite varlığı ile seçili kaynak müşteri varlığı arasında bir ilişki zaten varsa, ilişki adı salt okunur modda olur. Böyle bir ilişki yoksa bu kutuda sağladığınız adla yeni bir ilişki oluşturulur.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Varlık ilişkisini tanımlayın.":::
 
@@ -53,23 +53,23 @@ Veri kaynaklarınız, birden çok veri kaynağından işlem tabanlı ve aktivite
 
 1. **Aktivite birleştirici** adımında, aktivite olayını ve etkinliğinizin başlangıç saatini seçin. 
    - **Gerekli alanlar**
-      1. **Olay etkinliği**: Bu faaliyete yönelik olay olan alan.
-      2. **Zaman damgası**: etkinliğinizin başlangıç saatini gösteren alan.
+      - **Olay etkinliği**: Bu faaliyete yönelik olay olan alan.
+      - **Zaman damgası**: etkinliğinizin başlangıç saatini gösteren alan.
 
    - **İsteğe bağlı alanlar**
-      1. **Ek ayrıntı**: bu aktiviteyle ilgili bilgileri içeren alan.
-      2. **Simge**: en iyi bu aktivite türünü temsil eden simge.
-      3. **Web adresi**: bu aktiviteyle ilgili bilgileri içeren BIR URL içeren alan. Örneğin, bu aktiviteye kaynak olan işlem tabanlı sistem. Bu URL, veri kaynağındaki herhangi bir alan olabilir veya Power Query dönüşümü kullanarak yeni alan olarak oluşturulabilir. URL verileri *Birleşik aktivite* varlığında depolanır ve bu da [API](apis.md)'lar kullanılarak akış yönündeki tüketilebilir.
+      - **Ek ayrıntı**: bu aktiviteyle ilgili bilgileri içeren alan.
+      - **Simge**: en iyi bu aktivite türünü temsil eden simge.
+      - **Web adresi**: bu aktiviteyle ilgili bilgileri içeren BIR URL içeren alan. Örneğin, bu aktiviteye kaynak olan işlem tabanlı sistem. Bu URL, veri kaynağındaki herhangi bir alan olabilir veya Power Query dönüşümü kullanarak yeni alan olarak oluşturulabilir. URL verileri *Birleşik aktivite* varlığında depolanır ve bu da [API](apis.md)'lar kullanılarak akış yönündeki tüketilebilir.
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Birleştirilmiş bir aktivite varlığındaki müşteri aktivite verilerini belirtin.":::
 
 1. Sonraki adıma geçmek için **ileri** öğesini seçin. Etkinlik türü **Diğer** olarak ayarlanmış olarak aktiviteyi şimdi kaydetmek için **Bitir ve gözden geçir**'i seçebilirsiniz. 
 
-1. **Aktivite türü** adımında, aktivite türünü seçin ve isteğe bağlı olarak Customer Insights'ın diğer alanlarında kullanmak üzere bazı aktivite türlerini anlam olarak eşlemek istiyorsanız öğesini seçin. Şu anda , alanları eşlemek için agreeing sonrasında *abonelik* & *SalesOrderLine* aktivite türleri anlam olarak eşleştirilir. Aktivite türü yeni aktivite için uygun değilse, *Diğer* veya  özel bir aktivite türü için *Yeni oluştur*'u seçebilirsiniz.
+1. **Aktivite türü** adımında, aktivite türünü seçin ve isteğe bağlı olarak Customer Insights'ın diğer alanlarında kullanmak üzere bazı aktivite türlerini anlam olarak eşlemek istiyorsanız öğesini seçin. Şu anda, *Abonelik* ve *SalesOrderLine* etkinlik türleri alanları eşlemek için anlaşma sonrasında anlamsal olarak eşleştirilir. Aktivite türü yeni aktivite için uygun değilse, *Diğer* veya  özel bir aktivite türü için *Yeni oluştur*'u seçebilirsiniz.
 
 1. Sonraki adıma geçmek için **ileri** öğesini seçin. 
 
-1. **Gözden geçirme** adımında, seçimlerinizi doğrulayın. Önceki adımlardan birine geri dönerek gerekirse bilgileri güncelleştirmeniz gerekir.
+1. **Gözden geçirme** adımında, seçimlerinizi doğrulayın. Önceki adımlardan birine dönün ve gerekiyorsa bilgileri güncelleştirin.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Bir aktivite için belirtilen alanları gözden geçirin.":::
    
@@ -89,7 +89,7 @@ Bir aktivite seçtiğinizde aşağıdaki eylemler kullanılabilir.
 
 - **Düzenle**: Gözden geçirme adımında aktivite kurulumunu açar. Bu adımdan, geçerli yapılandırmanın herhangi birini veya tümünü değiştirebilirsiniz. Yapılandırmayı değiştirdikten sonra değişiklikleri işlemek için, **aktiviteyi Kaydet**'i ve ardından **Çalıştır**'ı seçin.
 
-- **Yeniden Adlandır**: Seçili aktivite için farklı bir ad gireceğiniz yerde bir iletişim kutusu açar. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
+- **Yeniden Adlandır**: seçili aktivite için farklı bir ad girebileceğiniz bir iletişim kutusu açar. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
 
 - **Sil**: Seçili aktiviteyi silme işlemini onaylamak için bir iletişim kutusu açar. Ayrıca, aktiviteleri seçip ardından Sil simgesini seçerek aynı anda birden fazla aktiviteyi silebilirsiniz. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
 

@@ -1,5 +1,5 @@
 ---
-title: Üçüncü taraf HERE Technologies zenginleştirme ile zenginleştirme
+title: Üçüncü taraf zenginleştirme HERE Technologies ile zenginleştirme
 description: Üçüncü taraf HERE Technologies zenginleştirmesi hakkında genel bilgiler.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896075"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305318"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 
@@ -26,7 +26,7 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
 
 - Etkin bir HERE Technologies aboneliğiniz olması gerekir. Abone olmak için [buradan kaydolabilir](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) veya [HERE Technologies ile doğrudan iletişime geçebilirsiniz](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [HERE Technologies Konum Zenginleştirme hakkında daha fazla bilgi edinin.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Kullanılabilir bir HERE [bağlantısı](connections.md) vardır *veya* [Yönetici](permissions.md#administrator) izniniz ve HERE Technologies API anahtarınız vardır.
+- HERE [bağlantısı](connections.md) kullanılabilir *veya* [Yönetici](permissions.md#administrator) izinleriniz ve HERE Technologies API anahtarınız vardır.
 
 ## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 
@@ -37,7 +37,7 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies kutucuğu](media/HERE-tile.png "HERE Technologies kutucuğu")
 
-1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi seçerek bir bağlantı oluşturabilirsiniz. Açılır listeden **HERE Technologies**'i seçin. 
+1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi seçerek bir bağlantı oluşturabilirsiniz. Açılan listeden **HERE Technologies**'i seçin. 
 
 1. Seçimini onaylamak için **HERE Technologies bağlantısı**'nı seçin.
 
@@ -56,7 +56,7 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
 
 1. Zenginleştirme için bir ad girin. 
 
-1. seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
+1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
 
 ## <a name="configure-the-connection-for-here-technologies"></a>Bağlantıyı HERE Technologies için yapılandırma 
 
@@ -66,13 +66,13 @@ Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zengin
 
 1. Geçerli bir HERE Technologies API anahtarı sağlayın.
 
-1. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin
+1. **Kabul ediyorum**'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
 
 1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
 
 1. Doğrulamayı tamamladıktan sonra, **Kaydet**'i seçin.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![HERE Technologies bağlantı yapılandırma sayfası](media/enrichment-HERE-connection.png "HERE Technologies bağlantı yapılandırma sayfası")
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
@@ -85,7 +85,7 @@ Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşter
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Zenginleştirilmiş müşteri verilerinizle geliştirin. Müşterilerinize, kişiselleştirilmiş deneyimler sunmak için; [parçalar](segments.md), [ölçümler](measures.md) oluşturun ve hatta [veriyi dışa aktar](export-destinations.md) öğesini kullanın.
+Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 

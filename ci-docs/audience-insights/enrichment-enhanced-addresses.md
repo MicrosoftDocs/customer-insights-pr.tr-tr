@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965602"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305456"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Müşteri profillerinin gelişmiş adreslerle zenginleştirilmesi
 
@@ -22,7 +22,7 @@ Verilerinizdeki adresler yapılandırılmamış, eksik veya yanlış olabilir. D
 
 ## <a name="how-we-enhance-addresses"></a>Adresleri nasıl geliştiriyoruz?
 
-Modelimiz bir adresi geliştirmek için iki adımlı bir süreçten geçer. İlk olarak, bileşenlerini tanımlamak için adresi ayrıştırır ve bunları yapılandırılmış bir biçime yerleştirir. Ardından, adresteki değerleri düzeltmek, tamamlamak ve standartlaştırmak için yapay zekayı kullanıyoruz.
+Modelimiz bir adresi geliştirmek için iki adımlı bir süreçten geçer. İlk olarak, bileşenlerini tanımlamak için adresi ayrıştırır ve bunları yapılandırılmış bir biçime yerleştirir. Sonra yapay zekayı, adresteki değerleri düzeltmek, doldurmak ve standartlaşmak için kullanırız.
 
 ### <a name="example"></a>Örnek
 
@@ -50,7 +50,7 @@ Gelişmiş adresler yalnızca alınan adres verilerinizde zaten varolan değerle
 2. Posta kodları veya sokak adları gibi değerlerden herhangi birinin geçerli olup olmadığını doğrulama.
 3. Tanımadığı değerleri değiştirme.
 
-Model, adresleri geliştirmek için makine öğrenimi tabanlı teknikler kullanır. Herhangi bir ML tabanlı modelde olduğu gibi, model bir giriş değerini değiştirdiğinde yüksek bir güven eşiği uygularken, %100 doğruluk garanti edilmez.
+Model, adresleri geliştirmek için makine öğrenimi tabanlı teknikler kullanır. Makine öğrenim tabanlı modelde olduğu gibi, model bir giriş değerini değiştirdiğinde yüksek güvenirlik eşiği uyguladığımdayken, yüzde 100 kesinliği garanti edilmez.
 
 ## <a name="supported-countries-or-regions"></a>Desteklenen ülkeler veya bölgeler
 
@@ -76,7 +76,7 @@ Adresler bir ülke/bölge değeri içermelidir. Desteklenmeyen ülkeler veya bö
 1. Adreslerin veri kümenizde nasıl biçimlendirildiklerini seçin. Verilerinizdeki adresler tek bir alan kullanıyorsa, **Tek öznitelikli adres**'i seçin. Verilerinizdeki adresler birden fazla alanda kullanıyorsa, **Birden çok öznitelikli adres**'i seçin.
 
    > [!NOTE]
-   > Ülke/Bölge hem tek öznitelikli hem de çok öznitelikli adreste zorunludur. Geçerli veya desteklenen ülke/bölge değerleri içermeyen adresler zenginleştirilmeyecek
+   > Hem tek öznitelik hem de birden çok öznitelik adreslerinde ülke/bölge zorunludur. Geçerli veya desteklenen ülke/bölge değerleri içermeyen adresler zenginleştirilmeyecek.
 
 1.  Adres alanlarını birleşik müşteri varlığınızdan eşleyin.
 
@@ -98,6 +98,6 @@ Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşter
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Zenginleştirilmiş müşteri verilerinizle geliştirin. Müşterilerinize, kişiselleştirilmiş deneyimler sunmak için; [parçalar](segments.md), [ölçümler](measures.md) oluşturun ve hatta [veriyi dışa aktar](export-destinations.md) öğesini kullanın.
+Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253064"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305502"
 ---
 # <a name="exports-preview-overview"></a>Dışarı aktarma (önizleme) genel bakışı
 
 **Dışarı aktarmalar** sayfası, tüm yapılandırılmış dışarı aktarımları gösterir. Belirli verileri farklı uygulamalarla paylaşmak için verir. Bunlar arasında müşteri profilleri veya varlıkları, şemaları ve eşleme ayrıntıları yer alabilir. Her dışarı aktarma işlemi [kimlik doğrulamayı ve erişimi yönetmek için bir Yönetici olarak ayarlanmış bir bağlantı](connections.md) ister.
 
-Dışarı aktarmalar sayfasını görüntülemek için **veri** > **dışarı aktarımlara** gidin. Tüm Kullanıcı rolleri, yapılandırılmış dışarı aktarımları görüntüleme erişimine sahiptir. Dışarı aktarımları adına, bağlantı adına veya bağlantı türüne göre bulmak için Komut çubuğundaki arama alanını kullanın.
+Dışarı aktarmalar sayfasını görüntülemek için **veri** > **dışarı aktarımlara** gidin. Tüm kullanıcı rolleri yapılandırılmış dışa aktarmaları görüntüleyebilir. Verme işlemlerini adlarına, bağlantı adlarına veya bağlantı türlerine göre bulmak için komut çubuğundaki arama alanını kullanın.
 
 ## <a name="set-up-a-new-export"></a>Yeni dışa aktarma ayarlayın
 
@@ -65,7 +65,7 @@ Dışarı aktarma hedefleri oluşturduktan sonra, bunlar **Veri** > **Dışa akt
 
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-1. İzinleri düzenleme izni olmayan kullanıcılar **Düzenleme** yerine **Görüntüle**'ye bakın.
+1. Düzenleme izni olmayan kullanıcılar, dışa aktarma ayrıntılarını görmek için **Düzenle** yerine **Görüntüle**'yi seçer.
 
 1. Yan bölme, bir dışarı aktarmanın yapılandırmasını gösterir. İzinleri Düzenlemeden sonra değerleri değiştiremezsiniz. Dışarı aktarmalar sayfasına dönmek için **Kapat**'ı seçin.
 
@@ -73,7 +73,7 @@ Dışarı aktarma hedefleri oluşturduktan sonra, bunlar **Veri** > **Dışa akt
 
 Yapılandırdığınız her bir dışarı aktarma bir yenileme zamanlaması içerir. Yenileme sırasında, sistem dışarı aktarma işlemine dahil etmek için yeni veya güncelleştirilmiş verileri arar. Varsayılan olarak, dışarı aktarma işlemleri [zamanlanmış her sistem yenileme](system.md#schedule-tab) işleminin parçası olarak çalıştırılır. Yenileme zamanlamasını özelleştirebilir veya dışa aktarma işlemlerini el ile çalıştırmak için kapatabilirsiniz.
 
-Dışarı aktarma zamanlamaları, ortamınızın durumuna bağlıdır. Zamanlanmış bir dışarı aktarma işleminin başlatılması gerektiğinde [bağımlılıklar](system.md#refresh-policies) üzerinde devam eden güncelleştirmeler varsa, sistem önce bağımlılıkları tamamlar ve dışarı aktarma işini ardından çalıştırır. **Yenilendi** sütununda bir dışarı aktarmanın en son ne zaman yenilendiğini görebilirsiniz.
+Dışarı aktarma zamanlamaları, ortamınızın durumuna bağlıdır. Zamanlanmış bir verme işleminin başlaması gerektiğinde [bağımlılıklar](system.md#refresh-policies) üzerinde devam eden güncelleştirmeler varsa, sistem önce güncelleştirmeleri tamamlar ve sonra verme işlemini çalıştırır. **Yenilendi** sütununda bir dışarı aktarmanın en son ne zaman yenilendiğini görebilirsiniz.
 
 ### <a name="schedule-exports"></a>Dışarı aktarmaları zamanlama
 

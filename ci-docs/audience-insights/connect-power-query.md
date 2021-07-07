@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596937"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305915"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Bir Power Query veri kaynağına bağlanın
 
@@ -72,7 +72,7 @@ Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı liste
 
 1. Hedef kitle içgörülerinde, **Veri** > **Veri kaynakları**'na gidin.
 
-2. Değiştirmek istediğiniz veri kaynağının yanındaki dikey üç noktayı seçin ve açılan menüden **Düzenle**'yi seçin.
+2. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı seçin ve açılır menüden **Düzenle**'yi seçin.
 
    > [!div class="mx-imgBorder"]
    > ![Seçeneği düzenle](media/edit-option-data-sources.png "Seçeneği düzenle")

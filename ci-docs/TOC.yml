@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: Leadspace ile zenginleştirme
           href: audience-insights/enrichment-leadspace.md
-        - name: Experian ile zenginleştirme
+        - name: Experian İle zenginleştirme
           href: audience-insights/enrichment-experian.md
         - name: SFTP özel içeri aktarmayla zenginleştirme
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,6 +136,8 @@
           items:
             - name: Dışa aktarmalara genel bakış
               href: audience-insights/export-destinations.md
+            - name: Etkin Kampanyalar
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -238,17 +244,17 @@
       items:
         - name: Kullanmaya başlama
           href: engagement-insights/get-started.md
-        - name: Çalışma alanı oluşturma
+        - name: Çalışma alanı oluştur
           href: engagement-insights/create-workspace.md
-        - name: Web sitenizi işaretleme
-          href: engagement-insights/instrument-website.md
+        - name: Web sitelerinden ve Mobil uygulamalardan olay yakalayın
+          href: engagement-insights/developer-resources.md
         - name: Kavramlar ve terminoloji
           href: engagement-insights/glossary.md
     - name: Olaylar
       items:
         - name: Olay oluşturma ve değiştirme
           href: engagement-insights/refined-events.md
-        - name: Olayları dışarı aktarma
+        - name: Olayları dışarı aktar
           href: engagement-insights/export-events.md
     - name: Raporlar
       items:
@@ -272,10 +278,18 @@
       items:
         - name: Geliştirici kaynaklarına genel bakış
           href: engagement-insights/developer-resources.md
-        - name: Web SDK'sı eğitimi
+        - name: Web SDK öğreticisi
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Web SDK'sı örneği
           href: engagement-insights/websdk-sample.md
+        - name: Android SDK öğreticisi
+          href: engagement-insights/get-started-android.md
+        - name: Android SDK Numunesi
+          href: engagement-insights/androidsdk-sample.md
+        - name: iOS SDK öğreticisi
+          href: engagement-insights/get-started-ios.md
+        - name: iOS SDK örneği
+          href: engagement-insights/iossdk-sample.md
     - name: Yönetim
       items:
         - name: Roller ve izinler

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085554"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304720"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
@@ -30,15 +30,15 @@ Veri kaynağını, üç ana yolla ekleyebilirsiniz:
 
 - [Baştan sona düzinelerce Power Query bağlayıcısı](connect-power-query.md)
 - [Common Data Model klasöründen](connect-common-data-model.md)
-- [Kendi Common Data Service gölünüzden](connect-common-data-service-lake.md)
+- [Kendi Microsoft Dataverse gölünüzden](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Şirket içi veri kaynaklarından veri ekleme
 
-Audience Insights'daki yerinde veri kaynaklarından alınan veriler Power Platform veri akışlarına göre desteklenmektedir. Veri akışları, ortam ayarlanırken [Microsoft Dataverse ortam URL 'Si sağlanarak](manage-environments.md#create-an-environment-in-an-existing-organization) Customer Insights'ta etkinleştirilebilir.
+Audience Insights'daki yerinde veri kaynaklarından alınan veriler Microsoft Power Platform veri akışlarına göre desteklenmektedir. Veri akışları, ortam ayarlanırken [Microsoft Dataverse ortam URL 'Si sağlanarak](manage-environments.md#create-an-environment-in-an-existing-organization) Customer Insights'ta etkinleştirilebilir.
 
-Bir Dataverse ortamı Customer Insights ile ilişkilendirdikten sonra oluşturulan veri kaynakları, [Power Platform veri akışlarını](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) kullanır. Veri akışları, veri ağ geçitlerini kullanarak önceden ön bağlanabilirliği destekler. [Yerinde veri ağ geçitlerini kullanmak](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md) üzere bir Dataverse ortamı ilişkilendirilmeden önce varolan veri kaynaklarını kaldırıp yeniden oluşturun.
+Bir Dataverse ortamı Customer Insights ile ilişkilendirdikten sonra oluşturulan veri kaynakları, [Power Platform veri akışlarını](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) kullanır. Veri akışları, veri ağ geçitlerini kullanarak önceden ön bağlanabilirliği destekler. [Yerinde veri ağ geçitlerini kullanmak](/data-integration/gateway/service-gateway-app.md) üzere bir Dataverse ortamı ilişkilendirilmeden önce varolan veri kaynaklarını kaldırıp yeniden oluşturun.
 
-Varolan Power BI veya Power Apps ortamdan gelen veri geçitleri görünür ve Customer Insights'ta yeniden kullanabilirsiniz. Veri kaynakları sayfası, yerinde veri ağ geçitlerini görüntüleyebileceğiniz ve yapılandırabileceğiniz Power Platform ortama gitmek için bağlantıları gösterir.
+Varolan Power BI veya Power Apps ortamdan gelen veri geçitleri görünür ve Customer Insights'ta yeniden kullanabilirsiniz. Veri kaynakları sayfasında, yerinde veri ağ geçitlerini görüntüleyebileceğiniz ve yapılandırabileceğiniz Microsoft Power Platform ortama gitmek için bağlantılar gösterilir.
 
 ## <a name="review-ingested-data"></a>Alınan verilerin gözden geçirilmesi
 
@@ -56,7 +56,7 @@ Her alınan veri kaynağının adı, durumu ve verilerin bu kaynak için en son 
 
 Daha fazla ayrıntıyı incelemek için herhangi bir veri kaynağının **Durum** sütunundaki değeri seçin. **İlerleme ayrıntıları** bölmesinde, **Veri kaynakları**'nı genişletin. Hata ayrıntıları ve aşağı akış işlemi güncelleştirmeleri dahil olmak üzere yenileme durumu hakkında daha fazla bilgi için **Ayrıntılara bakın**'ı seçin.
 
-Verilerin yüklenmesi biraz zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, **Varlıklar** sayfasından incelenebilir. Daha fazla bilgi için bkz. [Varlıklar](entities.md).
+Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, **Varlıklar** sayfasından incelenebilir. Daha fazla bilgi için bkz. [Varlıklar](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Veri kaynağını yenileme
 
@@ -66,9 +66,9 @@ Alınan tüm veri kaynaklarınızın zamanlanmış yenilemelerini yapılandırma
 
 Veri kaynağını isteğe bağlı olarak yenilemek için şu adımları izleyin:
 
-1. Hedef kitle içgörülerinde, **Veri** > **Veri kaynakları**'na gidin
+1. Hedef kitle içgörülerinde, **Veri** > **Veri kaynakları**'na gidin.
 
-2. Yenilemek istediğiniz veri kaynağının yanındaki dikey üç noktayı seçin ve açılan listeden **Yenile**'yi seçin.
+2. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı seçin ve açılır listeden **Yenile**'yi seçin.
 
 3. Veri kaynağı şimdi el ile yenileme için tetiklenir. Bir veri kaynağı yenileme, hem varlık şemasını hem de veri kaynağı belirtilen tüm varlıklar için verileri güncelleştirir.
 
@@ -78,7 +78,7 @@ Veri kaynağını isteğe bağlı olarak yenilemek için şu adımları izleyin:
 
 1. Hedef kitle içgörülerinde, **Veri** > **Veri kaynakları**'na gidin.
 
-2. Kaldırmak istediğiniz veri kaynağının yanındaki dikey üç noktayı seçin ve açılan menüden **Sil**'i seçin.
+2. Kaldırmak istediğiniz veri kaynağı yanındaki dikey üç noktayı seçin ve açılır menüden **Sil**'yi seçin.
 
 3. Silme işlemini onaylayın.
 

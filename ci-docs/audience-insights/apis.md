@@ -9,21 +9,21 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016644"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304766"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
-Dynamics 365 Customer Insights, Customer Insights'taki verilerinizi temel alarak kendi uygulamalarınızı oluşturmak için API'ler sağlar.
+Dynamics 365 Customer Insights, Customer Insights'ndeki verilerinize göre kendi uygulamalarınızı oluşturmak için API'ler sağlar.
 
 > [!IMPORTANT]
 > Bu API'lerin ayrıntıları, [Customer Insights API'leri başvurusunda](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) listelenir. İşlemler, parametreler ve yanıtlar hakkında ek bilgiler içerirler.
 
-Bu makale, Customer Insights API'lerine erişmeniz ve Azure Uygulama Kaydı oluşturmanız için size yol gösterir ve mevcut istemci kitaplıklarını kullanmaya başlamanıza yardımcı olur.
+Bu makalede, Customer Insights API'lerine nasıl erişileceği,, bir Azure Uygulaması Kaydı nasıl oluşturulacağı ve kullanılabilir istemci kitaplıklarıyla nasıl başlanır açıklanmaktadır.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Customer Insights API'lerini denemeye başlama
 
@@ -32,6 +32,7 @@ Bu makale, Customer Insights API'lerine erişmeniz ve Azure Uygulama Kaydı olu�
 1. Customer Insights ortamınızda API'leri etkinleştirmek için **Yönetici** > **İzinler**'e gidin. Bunu yapabilmek için yönetici izinlerine ihtiyacınız vardır.
 
 1. **API'ler** sekmesine gidin ve **Etkinleştir** düğmesini seçin.    
+ 
    API'lerin etkinleştirilmesi, kurulumunuz için API isteklerinde kullanılacak birincil ve ikincil abonelik anahtarı oluşturur. **Yönetici** > **İzinler** > **API'ler**'de **Birincil oluştur** veya **İkincil Oluştur**'u seçerek anahtarları yeniden oluşturabilirsiniz.
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights API'lerini etkinleştirme":::
@@ -40,7 +41,7 @@ Bu makale, Customer Insights API'lerine erişmeniz ve Azure Uygulama Kaydı olu�
 
 1. Bir API işlemi belirleyin ve **Deneyin**'i seçin.
 
-1. Yan bölmede, **Yetkilendirme** açılan menüsündeki değeri **örtük** olarak ayarlayın. `Authorization` üst bilgisi ekli taşıyıcı belirteçle sağlanır. Abonelik anahtarınız otomatik olarak doldurulur.
+1. Yan bölmede, **Yetkilendirme** açılan menüsündeki değeri **örtük** olarak ayarlayın. `Authorization` Üstbilgi bir taşıyıcı belirteci ile eklenir. Abonelik anahtarınız otomatik olarak doldurulur.
   
 1. İsteğe bağlı olarak, tüm gerekli sorgu parametrelerini ekleyin.
 
@@ -48,27 +49,27 @@ Bu makale, Customer Insights API'lerine erişmeniz ve Azure Uygulama Kaydı olu�
 
 Bir süre sonra aşağıda HTTP yanıtı görüntülenir.
 
-
-   :::image type="content" source="media/try-apis.gif" alt-text="API'leri seçip test etmeyi gösteren animasyonlu GIF.":::
+   :::image type="content" source="media/try-apis.gif" alt-text="API'ler nasıl test edilir?":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Azure portalında yeni uygulama kaydı oluşturma
 
-Bu adımlar, temsilci izinleri kullanarak bir Azure uygulamasında Customer Insights API'lerini kullanmaya başlamanıza yardımcı olur. İlk olarak [Başlarken bölümünü](#get-started-trying-the-customer-insights-apis) tamamladığınızdan emin olun.
+Bu adımlar, temsilci seçilen izinleri kullanarak bir Azure uygulamasında Customer Insights API'lerini kullanmaya başlamanıza yardımcı olur. Önce [Başlarken bölümünü](#get-started-trying-the-customer-insights-apis) tamamladığından emin olun.
 
 1. Customer Insights verilerine erişim sağlayabilen hesapla [Azure portalında](https://portal.azure.com) oturum açın.
 
 1. Solda, **Uygulama kayıtları**'nı seçin.
 
 1. Uygulama adını girmek için **Yeni kayıt** seçeneğini belirleyin ve hesap türünü seçin.
+ 
    İsteğe bağlı olarak, yeniden yönlendirme URL'si ekleyin. http://localhost, yerel bilgisayarınızda bir uygulama geliştirmek için yeterlidir.
 
 1. Yeni Uygulama kaydınızda, **API izinleri**'ne gidin.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Uygulama kaydında API iznini ayarlamak için animasyonlu GIF.":::
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Uygulama kaydında API izinleri nasıl ayarlanır?":::
 
 1. Yan bölmede **İzin ekle**'yi ve **Customer Insights**'ı seçin.
 
-1. **İzin türü** için, **Temsilci izinleri**'ni ve **user_impersonation** iznini seçin.
+1. **İzin türü** için, **Temsilci izinleri**'ni seçin ve sonra **user_impersonation** iznini seçin.
 
 1. **İzinler ekle**'yi seçin. Kullanıcı oturum açmadan API'ye erişmeniz gerekiyorsa [Sunucudan sunucuya uygulama izinleri](#server-to-server-application-permissions) bölümünü inceleyin.
 
@@ -76,13 +77,13 @@ Bu adımlar, temsilci izinleri kullanarak bir Azure uygulamasında Customer Insi
 
 API'ye isteğinizle birlikte göndermek üzere bir taşıyıcı belirteç almak için Microsoft Kimlik Doğrulaması Kitaplığı (MSAL) ile bu uygulama kaydının Uygulama/İstemci Kimliğini kullanabilirsiniz.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici izni vermek için animasyonlu GIF.":::
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici onayı verme":::
 
 MSAL hakkında daha fazla bilgi için bkz. [Microsoft Kimlik Doğrulaması Kitaplığı'na Genel Bakış (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Azure'da uygulama kaydı hakkında daha fazla bilgi için bkz. [Yeni Azure portalı uygulama kaydı deneyimi](/azure/active-directory/develop/app-registration-portal-training-guide).
+Azure'da uygulama kaydı hakkında daha fazla bilgi için, bkz. [Uygulama kaydetme](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
 
-API'leri istemci kitaplıklarında kullanma hakkında bilgi için bkz. [Customer Insights istemci kitaplıkları](#customer-insights-client-libraries).
+İstemci kitaplıklarımızda API'leri kullanma hakkında bilgi için, bkz. [Customer Insights istemci kitaplıkları](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Sunucudan sunucuya uygulama izinleri
 
@@ -94,7 +95,7 @@ API'leri istemci kitaplıklarında kullanma hakkında bilgi için bkz. [Customer
 
 1. **Organizasyonumun kullandığı API'ler** sekmesini seçin ve listeden **Customer Insights için Dynamics 365 AI** i seçin. 
 
-1. **İzin türü** için, **Uygulama izinleri**'ni ve **CustomerInsights.Api.All** iznini seçin.
+1. **İzin türü** için, **Uygulama izinleri**'ni seçin ve sonra **CustomerInsights.Api.All** iznini seçin.
 
 1. **İzinler ekle**'yi seçin.
 
@@ -102,9 +103,10 @@ API'leri istemci kitaplıklarında kullanma hakkında bilgi için bkz. [Customer
 
 1. Uygulama kaydını tamamlamak için **Şunun için yönetici onayı ver...** seçeneğini belirleyin.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici izni vermek için animasyonlu GIF.":::
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici onayı verme":::
 
-1. Sonuç olarak, Customer Insights'a uygulama kaydının adını kullanıcı olarak eklemeniz gerekir.    
+1. Sonuç olarak, Customer Insights'a uygulama kaydının adını kullanıcı olarak eklemeniz gerekir.  
+   
    Customer Insights'ı açın, **Yönetici** > **İzinler**'e gidin ve **Kullanıcı ekle**'yi seçin.
 
 1. Uygulama kaydınızın adını arayıp arama sonuçlarından seçin ve **Kaydet**'i seçin.
@@ -124,6 +126,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 1. **Microsoft.Dynamics.CustomerInsights.Api** için arama yapın.
 
 1. Projeye paketi eklemek için **Yükle**'yi seçin.
+ 
    Alternatif olarak, **NuGet Paket Yöneticisi Konsolu**'nda bu komutu çalıştırın: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="NuGet paketini Visual Studio projesine ekleme":::
@@ -132,7 +135,8 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 
 1. Mevcut [Azure uygulama kaydınızı](#create-a-new-app-registration-in-the-azure-portal) kullanarak `AccessToken` belirtecini almak için [Microsoft Kimlik Doğrulaması Kitaplığını (MSAL)](/azure/active-directory/develop/msal-overview) kullanın.
 
-1. Belirtecin kimliğini doğrulayıp başarıyla aldıktan sonra ek **DefaultRequestHeaders "Yetkilendirme"** öğesini **Taşıyıcı <access token>** ve **Ocp-Apim-Subscription-Key** öğesini [Customer Insights ortamınızdaki **abonelik anahtarı**](#get-started-trying-the-customer-insights-apis) olarak ayarlayarak yeni bir `HttpClient` oluşturun veya var olanı kullanın.    
+1. Belirtecin kimliğini doğrulayıp başarıyla aldıktan sonra ek **DefaultRequestHeaders "Yetkilendirme"** öğesini **Taşıyıcı <access token>** ve **Ocp-Apim-Subscription-Key** öğesini [Customer Insights ortamınızdaki **abonelik anahtarı**](#get-started-trying-the-customer-insights-apis) olarak ayarlayarak yeni bir `HttpClient` oluşturun veya var olanı kullanın.   
+ 
    Uygun olduğunda **Yetkilendirme** üst bilgisini sıfırlayın. Örneğin, belirtecin süresi dolduğunda.
 
 1. Bu `HttpClient` istemcisini `CustomerInsights` istemcisinin yapısına aktarın.
@@ -142,6 +146,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 1. Müşteri ile (örneğin, `GetAllInstancesAsync` gibi) "uzantı yöntemleri" için görüşmeler yapın. Temel `Microsoft.Rest.HttpOperationResponse` öğesine erişim tercih ediliyorsa (örneğin, `GetAllInstancesWithHttpMessagesAsync` gibi) "http ileti yöntemlerini" kullanın.
 
 1. Bu yöntem birden çok türü (örneğin, `IList<InstanceInfo>` ve`ApiErrorResult`) döndürebileceğinden yanıt, `object` türü olabilir. Dönüş türünü kontrol etmek için nesneleri işlem için [API ayrıntıları sayfasında](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) belirtilen yanıt türlerine güvenle dönüştürebilirsiniz.    
+   
    İstek hakkında daha fazla bilgi gerekiyorsa ham yanıt nesnesine erişmek için **http ileti yöntemlerini** kullanın.
 
 ### <a name="nodejs-package"></a>NodeJS paketi
