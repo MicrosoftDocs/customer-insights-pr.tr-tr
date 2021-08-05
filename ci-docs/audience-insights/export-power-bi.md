@@ -1,7 +1,7 @@
 ---
 title: Power BI bağlayıcısı
 description: Power BI içinde Dynamics 365 Customer Insights bağlayıcısının nasıl kullanıldığını öğrenin.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596063"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661126"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI (önizleme) için bağlayıcı
 
@@ -39,7 +39,7 @@ Power BI Desktop ile verileriniz için görselleştirmeler oluşturun. Birleşik
 
 1. **Navigator** iletişim kutusunda. erişiminiz olan tüm ortamların listesini görebilirsiniz. Ortamı genişletin ve klasörlerden herhangi birini (varlıklar, ölçümler, segmentler, zenginleştirmeler) açın. Örneğin, içeri aktarabileceğiniz tüm varlıkları görmek için **Varlıklar** klasörünü açın.
 
-   ![Power BI Bağlayıcısı Gezgini](media/power-bi-navigator.png "Power BI Bağlayıcısı Gezgini")
+   ![Power BI Bağlayıcısı Gezgini.](media/power-bi-navigator.png "Power BI Bağlayıcısı Gezgini")
 
 1. Dahil edilecek varlıkların yanındaki onay kutularını ve **Yükle**'yi seçin. Birden çok ortamdan birden çok varlık seçebilirsiniz.
 
@@ -68,5 +68,11 @@ Yinelenen ilişkileri belirleyebilir ve kaldırabilirsiniz.
 3. Belirlenen tüm yinelenen ilişkileri kaldırın.
 
 Yinelenen ilişkiler kaldırıldıktan sonra Power BI bağlayıcısını yeniden yapılandırmayı deneyin. Ortam şimdi kullanılabilir durumda olmalıdır.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Varlıkları Power BI Desktop uygulamasında yüklerken tarih alanlarındaki hatalar
+
+AA/GG/YYYY gibi tarih biçimine sahip alanlar içeren varlıkları yüklerken uyumsuz yerel biçimler nedeniyle hatalarla karşılaşabilirsiniz. Bu uyumsuzluk, Power BI Desktop dosyanız İngilizce'den (Amerika Birleşik Devletleri) başka bir yerel ayara değiştirildiğinde meydana gelir çünkü hedef kitle içgörülerindeki tarih alanları ABD biçiminde kaydedilir.
+
+Power BI Desktop dosyası, veriler alınırken uygulanan tek bir yerel ayara sahiptir. Bu tarih alanlarının doğru yorumlanmasını sağlamak için .BPI dosyasının yerel ayarını İngilizce (Amerika Birleşik Devletleri) olarak belirleyin. [Power BI Desktop dosyasının yerel ayarının nasıl değiştirileceğini öğrenin](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

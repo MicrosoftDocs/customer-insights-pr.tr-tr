@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304628"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554642"
 ---
 # <a name="customer-profiles"></a>Müşteri profilleri
 
@@ -23,11 +23,11 @@ ms.locfileid: "6304628"
 Müşteriler, kişi veya kuruluş (önizleme) olabilir. Her müşteri veya kuruluş profili bir kutucuk ile temsil edilir. Belirli bir müşteri veya kuruluşla ilgili ek bilgileri görmek için bir kutucuk seçin. Ek kayıtları görmek için sayfanın altındaki sayfalandırma denetimlerini kullanın.
 
 > [!div class="mx-imgBorder"] 
-> ![B2C müşteri profilleri](media/profiles-customers.png "B2C müşteri profilleri")
+> ![B2C müşteri profilleri.](media/profiles-customers.png "B2C müşteri profilleri")
 
 Kuruluşlar (Önizleme)
 > [!div class="mx-imgBorder"] 
-> ![B2B müşteri profilleri](media/profile-customers-b2b.png "B2B müşteri profilleri")
+> ![B2B müşteri profilleri.](media/profile-customers-b2b.png "B2B müşteri profilleri")
 
 > [!NOTE]
 > Gezinmede **Müşteriler**'i seçtiğinizde kutucukları göremiyorsanız yöneticinizin **Dizini ara ve filtrele** ile [en az bir aranabilir öznitelik tanımlaması](search-filter-index.md) gerekir.
@@ -47,7 +47,7 @@ Müşterileri, Müşteri Profili varlık alanlarına göre filtreleyebilirsiniz.
 2. Müşterileri filtrelemek istediğiniz özniteliklerin yanındaki kutuları işaretleyin.
 
    > [!div class="mx-imgBorder"] 
-   > ![Müşteri profilleri](media/profiles-customers3.png "Müşteri profilleri")
+   > ![Müşteri profilleri.](media/profiles-customers3.png "Müşteri profilleri")
 
 3. **Müşteriler** sayfasında, **Filtreleri temizle**'yi seçerek filtrelerinizi kaldırın.
 

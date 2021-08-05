@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306052"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650342"
 ---
 # <a name="match-entities"></a>Varlıkları eşleme
 
@@ -138,7 +138,7 @@ Yinelenenleri kaldırma kurallarını belirtmek zorunlu değildir. Böyle bir ku
    - **En az yeni**: Kazanan kaydı, en az yeni olma durumuna göre tanımlar. Yeni olma durumunu tanımlamak için bir tarih veya sayısal alan gerekir.
  
    > [!div class="mx-imgBorder"]
-   > ![Yinelenenleri kaldırma kuralları adım 1](media/match-selfconflation.png "Yinelenenleri kaldırma kuralları adım 1")
+   > ![Yinelenenleri kaldırma kuralları adım 1.](media/match-selfconflation.png "Yinelenenleri kaldırma kuralları adım 1")
  
 1. Varlıklar seçildikten ve birleştirme tercihleri ayarlandıktan sonra varlık düzeyinde yinelenenleri kaldırma kuralını tanımlamak için **Kural ekle**'yi seçin.
    - **Alan Seç**, Bu varlıktaki tüm kullanılabilir alanları listeler. Yinelemeleri denetlemek istediğiniz alanı seçin. Her bir müşteri için muhtemelen benzersiz olan alanları seçin. Örneğin, bir e-posta adresi veya ad, şehir ve telefon numarasının birleşimi.
@@ -146,7 +146,7 @@ Yinelenenleri kaldırma kurallarını belirtmek zorunlu değildir. Böyle bir ku
    - **Koşul ekle**'yi seçerek daha fazla koşul tanımlayın.
  
    > [!div class="mx-imgBorder"]
-   > ![Yinelenenleri kaldırma kuralları adım 2](media/match-selfconflation-rules.png "Yinelenenleri kaldırma kuralları adım 2")
+   > ![Yinelenenleri kaldırma kuralları adım 2.](media/match-selfconflation-rules.png "Yinelenenleri kaldırma kuralları adım 2")
 
   Bir varlık için birden fazla yinelenenleri kaldırma kuralı oluşturabilirsiniz. 
 
@@ -179,7 +179,9 @@ Yinelenenleri kaldırma çıkış varlığı aşağıdaki bilgileri içerir:
 Başarılı bir çalıştırmanın sonucunu, Birleşik müşteri profili varlığını, **varlıklar** sayfasında bulabilirsiniz. Birleşik müşteri varlığınız, **profiller** bölümünde **müşteriler** olarak adlandırılır. İlk başarılı eşleşme çalıştırması Birleşik *müşteri* varlığını oluşturur. Sonraki tüm eşleşme çalıştırmaları bu varlığı genişletir.
 
 > [!TIP]
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+> Eşleştirme sürecini çalıştırdıktan sonra **Görev ayrıntıları** bölmesini açmak için işlem durumunu seçin. Bu; işleme süresi, son işleme tarihi ve görevle ilgili tüm hatalar ve uyarılar hakkında bir genel bakış sunar. Eşleme işlemine hangi varlıkların katıldığını, onlara hangi kuralların uygulandığını ve güncelleştirmelerin başarılı bir şekilde yayımlanıp yayımlanmadığını görmek için **Ayrıntılara göz atın**'ı seçin.  
+> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Görev durumu bağlantısından işlem ayrıntılarına ulaşmak için detaya gitme yolu.":::
 
 ## <a name="review-and-validate-your-matches"></a>Eşleştirmelerinizi inceleme ve doğrulama
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095580"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556148"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Ürün önerisi tahmini (önizleme)
 
@@ -64,7 +64,7 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 
 1. **Ürün önerileri modeli (önizleme)** kutucuğunu seçin ve **Bu modeli kullan** seçeneğini belirleyin.
    > [!div class="mx-imgBorder"]
-   > ![Bu modeli kullan düğmesinin bulunduğu Ürün Önerisi modeli kutucuğu](media/product-recommendation-usethismodel.PNG "Bu modeli kullan düğmesinin bulunduğu Ürün Önerisi modeli kutucuğu")
+   > ![Bu modeli kullan düğmesinin bulunduğu Ürün Önerisi modeli kutucuğu.](media/product-recommendation-usethismodel.PNG "Bu modeli kullan düğmesinin bulunduğu Ürün Önerisi modeli kutucuğu")
 
 1. Model gereksinimleri hakkındaki bilgileri inceleyin. Gerekli verilere sahipseniz **Başlayın**.
 
@@ -93,7 +93,7 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 
 1. Anlamsal alanları, satın alma geçmişi varlığınızdaki özniteliklerle eşleyin ve **İleri**'yi seçin. Alanların açıklamaları için [ön koşullara](#prerequisites) göz atın.
    > [!div class="mx-imgBorder"]
-   > ![Varlık ilişkisini tanımlama](media/product-recommendation-purchasehistorymapping.PNG "Seçili satın alma geçmişi varlığındaki alanlarla eşlenen anlamsal öznitelikleri gösteren satın alma geçmişi sayfası")
+   > ![Varlık ilişkisini tanımlayın.](media/product-recommendation-purchasehistorymapping.PNG "Seçili satın alma geçmişi varlığındaki alanlarla eşlenen anlamsal öznitelikleri gösteren satın alma geçmişi sayfası")
 
 1. Alanlar doldurulmamışsa satın alma geçmişi varlığınızdan *Müşteri* varlığına olan ilişkiyi yapılandırın.
     1. **Satın alma geçmişi varlığı**'nı seçin.
@@ -101,7 +101,7 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
     1. Birincil müşteri varlığınızla eşleşen **Müşteri varlığı**'nı seçin.
     1. İlişkiyi açıklayan bir ad girin.
        > [!div class="mx-imgBorder"]
-       > ![Müşteriyle oluşturulan bir ilişkiyi gösteren satın alma geçmişi sayfası](media/model-purchase-join.png "Müşteriyle oluşturulan bir ilişkiyi gösteren satın alma geçmişi sayfası")
+       > ![Müşteriyle oluşturulan bir ilişkiyi gösteren satın alma geçmişi sayfası.](media/model-purchase-join.png "Müşteriyle oluşturulan bir ilişkiyi gösteren satın alma geçmişi sayfası")
 
 1. **Kaydet**'i seçin.
 
@@ -145,7 +145,7 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
 
 1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
    > [!div class="mx-imgBorder"]
-   > ![Tahminlerim sayfasının görünümü](media/product-recommendation-mypredictions.PNG "Tahminlerim sayfasının görünümü")
+   > ![Tahminlerim sayfasının görünümü.](media/product-recommendation-mypredictions.PNG "Tahminlerim sayfasının görünümü")
 
 1. İncelemek istediğiniz tahmini seçin.
    - **Tahmin adı:** Oluştururken girilen tahmin adı.
@@ -163,7 +163,7 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
 
 1. Sonuçlarını incelemek istediğiniz tahminin yanındaki dikey üç noktayı ve **Görünüm**'ü seçin.
    > [!div class="mx-imgBorder"]
-   > ![Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü](media/product-recommendation-verticalellipses.PNG "Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü")
+   > ![Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü.](media/product-recommendation-verticalellipses.PNG "Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü")
 
 1. Sonuçlar sayfası içinde beş birincil veri bölümü vardır:
     1. **Eğitim modeli performansı:** A, B veya C olası puanlardır. Bu puan, tahminin performansını gösterir ve çıktı varlığında depolanan sonuçları kullanma kararını verirken size yardımcı olabilir.
@@ -173,13 +173,13 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
             - **C** "K'daki başarı" ölçümü temelden azsa modelin **C** kalitesinde olduğu kabul edilir.
                
                > [!div class="mx-imgBorder"]
-               > ![Model performansı sonucunun görünümü](media/product-recommendation-modelperformance.PNG "Model performansı sonucunun görünümü")
+               > ![Model performansı sonucunun görünümü.](media/product-recommendation-modelperformance.PNG "Model performansı sonucunun görünümü")
             - **Temel**: Model, tüm müşteriler arasında satın alma sayısına göre en çok önerilen ürünleri alır ve model tarafından tanımlanan öğrenilmiş kuralları kullanarak müşteriler için bir öneri kümesi oluşturur. Ardından tahminler ürünü satın alan müşteri sayısına göre hesaplanarak en çok satın alınan ürünlerle karşılaştırılır. Müşterinin önerilen ürünlerinde en çok satın alınan ürünlerde de görülen en az bir ürünü varsa bunlar temelin bir parçası olarak kabul edilir. Toplam 100 müşteri arasında 10'u önerilen bir ürünü satın alırsa temeli %10 olur.
             - **K'daki başarı**: Öneriler, işlemlerin doğrulama dönemi kümesi kullanılarak tüm müşteriler için oluşturulur ve işlemlerin doğrulama kümesiyle karşılaştırılır. Örneğin, 12 aylık bir dönemde 12. ay veri doğrulama kümesi olarak ayrılabilir. Model, önceki 11 aydan öğrendiklerini temel alarak 12. ayda satın alabileceğiniz en az bir ürünü tahmin ederse müşterinin "K'daki başarı" ölçümü artmış olur.
     
     1. **En önerilmiş ürünler (çıkarıldı olarak):** Müşterileriniz için öngörülen en önde gelen beş ürün.
        > [!div class="mx-imgBorder"]
-       > ![En çok önerilen 5 ürünü gösteren grafik](media/product-recommendation-topproducts.PNG "En çok önerilen 5 ürünü gösteren grafik")
+       > ![En çok önerilen ilk 5 ürünü gösteren grafik.](media/product-recommendation-topproducts.PNG "En çok önerilen 5 ürünü gösteren grafik")
     
     1. **Temel öneri etmenleri:** Model, ürün önerileri yapmak için müşterilerin hareket geçmişini kullanır. Geçmişteki satın almalara dayalı olarak desenler öğrenir ve müşteriler ve ürünler arasında benzerlikler bulur. Bu benzerlikler daha sonra ürün önerileri oluşturmak için kullanılır.
     Aşağıda, modelin oluşturduğu bir ürün önerisini etkileyebilecek etmenler yer verilmiştir. 
@@ -190,20 +190,20 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
         Her ürün önerisi, bu etkenlerin bir veya daha fazlası tarafından etkilenir. Bir rol oynanan her etkileyen faktörünün bir grafikte görselleştirilmiş olduğu önerilerin yüzdesi. Aşağıdaki örnekte, önerilerin %100'ü geçmiş hareketlerle, %60 müşteri benzerliği ve %22 ürün benzerliğini takip ederek etkileyendir. Etkileyen etkenlerin tam olarak katkı yüzdesini görmek için Grafikteki çubukların üzerinde gezdirin.
 
         > [!div class="mx-imgBorder"]
-        > ![Temel öneri faktörleri](media/product-recommendation-keyrecommendationfactors.png "Ürün önerileri üretmek için modelin öğrendikleri önemli öneri etmenleri")
+        > ![Temel öneri etkenleri.](media/product-recommendation-keyrecommendationfactors.png "Ürün önerileri üretmek için modelin öğrendikleri önemli öneri etmenleri")
        
      
    1. **Veri istatistikleri**: Modelin kabul edildiği hareket, müşteri ve ürün sayısının genel görünümünü verir. Bu, desenleri öğrenmek ve ürün önerileri üretmek için kullanılan giriş verilerini temel alır.
 
       > [!div class="mx-imgBorder"]
-      > ![Veri istatistikleri](media/product-recommendation-datastatistics.png "Desenleri öğrenmek için modelin kullandığı verilerin dışında veri istatistikleri")
+      > ![Veri istatistikleri.](media/product-recommendation-datastatistics.png "Desenleri öğrenmek için modelin kullandığı verilerin dışında veri istatistikleri")
 
       Bu bölümde, modelleri öğrenmek ve ürün önerileri üretmek için modelin kullandığı veri noktalarının istatistikleri gösterilmektedir. Model yapılandırmasında yapılandırıldığı şekilde filtre, modelin ürettiği çıktı üzerinde uygulanır. Ancak, model, desenleri öğrenmek için tüm kullanılabilir verileri kullanır. Bu nedenle, model yapılandırmasında ürün filtreleme kullanırsanız bu bölüm, tanımlanan filtreleme ölçütleriyle eşleşen ürün sayısından farklı olabilen, modelleri öğrenmekte olan modelin toplam sayısını gösterir.
 
    1. **Yüksek güvenilirlikli ürün önerileri:** Modelin müşteri tarafından satın alınacağına inandığı ürünleri müşterilerinize sağladığı önerilerin bir örneği.    
       Ürün kataloğu eklenirse ürün kimlikleri ürün adlarıyla değiştirilir. Ürün adları, tahminler hakkında daha fazla işlem yapılabilecek ve sezgisel bilgiler sağlar.
        > [!div class="mx-imgBorder"]
-       > ![Ayrı müşterilerin seçili bir kümesi için yüksek güvenilirlikli önerileri gösteren liste](media/product-recommendation-highconfidence.PNG "Ayrı müşterilerin seçili bir kümesi için yüksek güvenilirlikli önerileri gösteren liste")
+       > ![Ayrı müşterilerin seçili bir kümesi için yüksek güvenilirlikli önerileri gösteren liste.](media/product-recommendation-highconfidence.PNG "Ayrı müşterilerin seçili bir kümesi için yüksek güvenilirlikli önerileri gösteren liste")
 
 ## <a name="manage-predictions"></a>Tahminleri yönetme
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259215"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650066"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
@@ -24,11 +24,11 @@ Customer Insights, çıkış verilerinin [Microsoft Dataverse](/powerapps/maker/
 
 **Mevcut Dataverse ortamları olan kuruluşlar**
 
-Zaten Dataverse kullanan kuruluşlar, yönetici hedef kitle içgörülerini ayarlarken [mevcut Dataverse ortamlarından birini kullanabilir](manage-environments.md#create-an-environment-in-an-existing-organization). Dataverse ortamına URL sağlarken, yeni hedef kitle içgörüleri ortamlarına eklenir. Mümkün olan en iyi performansı sağlamak için, Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır.
+Zaten Dataverse kullanan kuruluşlar, yönetici hedef kitle içgörülerini ayarlarken [mevcut Dataverse ortamlarından birini kullanabilir](get-started-paid.md). Dataverse ortamına URL sağlarken, yeni hedef kitle içgörüleri ortamlarına eklenir. Mümkün olan en iyi performansı sağlamak için, Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır.
 
 Bir Dataverse ortamı eklemek için, hedef kitle içgörüleri ortamı oluştururken **Gelişmiş ayarlar**'ı genişletin. **Microsoft Dataverse ortam URL**'sini girin ve **Veri paylaşımını etkinleştirmek** için onay kutusunu seçin.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Yeni kuruluş**
 

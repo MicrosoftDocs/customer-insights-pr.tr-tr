@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 6e2080b4ad19f6f57f60da591345e80ce9083e8a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306281"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554091"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -89,7 +89,7 @@ Sayfanın üst kısmında üye sayısındaki değişiklikleri görselleştiren b
 Görselleştirmenin zaman dilimini güncelleştirebilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> ![Segment zaman aralığı](media/segment-time-range.png "Segment zaman aralığı")
+> ![Segment zaman aralığı.](media/segment-time-range.png "Segment zaman aralığı")
 
 Alt kısım, segment üyelerinin bir listesini içerir.
 

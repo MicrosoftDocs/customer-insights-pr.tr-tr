@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597167"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554045"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Müşteri profilleri: Dizin arama ve filtreleme
 
 Müşteri verilerinizi birleştirerek toplam müşteri tabanınızda birleşik görünüm sağlayan bir Müşteri Profili varlığı elde edersiniz. Kolayca [belirli bir müşteri veya müşteri grubuyla ilgili bilgileri bulmak](customer-profiles.md) için **Müşteriler** sayfasında **Arama** ve **Filtreleme** özelliklerini yapılandırabilirsiniz. Yöneticilerin, arama ve filtreleme için kullanıcılara sunulan **Dizini ara ve filtrele** sayfasındaki öznitelikleri nasıl düzenleyebileceğini öğrenmek için okumaya devam edin.
 
 > [!div class="mx-imgBorder"]
-> ![Arama filtresi](media/search-filter.png "Arama filtresi")
+> ![Arama filtresi.](media/search-filter.png "Arama filtresi")
 
 ## <a name="add-fields-and-specify-attributes"></a>Alan ekleme ve öznitelikleri belirleme
 

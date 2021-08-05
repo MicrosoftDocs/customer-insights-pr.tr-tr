@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305684"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554872"
 ---
 # <a name="custom-machine-learning-models"></a>Özel makine öğrenimi modelleri
 
@@ -42,7 +42,7 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 1. Özel modelinize **Ad** alanında tanınabilir bir ad verin.
 
    > [!div class="mx-imgBorder"]
-   > ![Yeni iş akışı bölmesinin ekran görüntüsü](media/new-workflowv2.png "Yeni iş akışı bölmesinin ekran görüntüsü")
+   > ![Yeni iş akışı bölmesinin ekran görüntüsü.](media/new-workflowv2.png "Yeni iş akışı bölmesinin ekran görüntüsü")
 
 1. **Web hizmetinizi içeren kiracı**'da web hizmetini içeren kuruluşu seçin.
 
@@ -59,7 +59,7 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
    > Özel model iş akışı; web hizmeti girdi alanlarını, alanın adına ve veri türüne göre varlık özniteliklerine eşlemek için buluşsal yöntemler uygular. Web hizmeti alanı bir varlıkla eşlenemezse bir hata görürsünüz.
 
    > [!div class="mx-imgBorder"]
-   > ![İş Akışı yapılandır](media/intelligence-screen2-updated.png "İş Akışı yapılandır")
+   > ![İş akışı yapılandırın.](media/intelligence-screen2-updated.png "İş Akışı yapılandır")
 
 1. **Model Çıkış Parametreleri** adımında, aşağıdaki özellikleri ayarlayın:
    - Machine Learning Studio (klasik)
@@ -70,12 +70,12 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
       1. Açılan menüden toplu işlem hattınızın **Çıkış Yolu parametre adı**'nı seçin.
 
       > [!div class="mx-imgBorder"]
-      > ![Model Çıkış Parametresi Bölmesi](media/intelligence-screen3-outputparameters.png "Model Çıkış Parametresi Bölmesi")
+      > ![Model Çıkış Parametresi Bölmesi.](media/intelligence-screen3-outputparameters.png "Model Çıkış Parametresi Bölmesi")
 
 1. Müşterileri tanımlayan **müşteri kimliği sonuçları** listesinde bulunan ilgili özniteliği seçin ve **Kaydet**'i seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Sonuçları Müşteri verileri bölmesiyle ilişkilendirme](media/intelligence-screen4-relatetocustomer.png "Sonuçları Müşteri verileri bölmesiyle ilişkilendirme")
+   > ![Sonuçları Müşteri verileri bölmesiyle ilişkilendirin.](media/intelligence-screen4-relatetocustomer.png "Sonuçları Müşteri verileri bölmesiyle ilişkilendirme")
 
 1. İş akışı hakkında ayrıntılar içeren **İş Akışı Kaydedildi** ekranını görürsünüz.    
    Azure Machine Learning işlem hattı için bir iş akışı yapılandırdıysanız hedef kitle içgörüleri işlem hattını içeren çalışma alanına eklenir. Hedef kitle içgörüleri, Azure çalışma alanında **Katkıda Bulunan** rolünü alır.

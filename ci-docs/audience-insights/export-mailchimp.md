@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124251"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362533"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentleri Mailchimp'e aktarma (önizleme)
 
@@ -38,7 +38,7 @@ Haber bültenleri ve e-posta kampanyaları oluşturmak için birleşik müşteri
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **Autopilot**'u seçin.
+1. **Bağlantı ekle**'yi seçin ve bağlantıyı yapılandırmak için **Mailchimp**'i seçin.
 
 1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
 

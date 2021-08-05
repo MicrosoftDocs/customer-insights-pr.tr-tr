@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977401"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327388"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Azure Synapse Analytics'e verileri dışarı aktar (Önizleme)
 
@@ -74,8 +74,10 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 1. Verme için tanınabilir bir **görünen ad** ve bir **Veritabanı adı** sağlayın.
 
 1. Azure Synapse Analytics'e hangi varlıkları dışa aktarmak istediğinizi seçin.
+   > [!NOTE]
+   > [Common Data Model klasörü](connect-common-data-model.md)'nü temel alan veri kaynakları desteklenmez.
 
-1. **Kaydet**'i seçin.
+2. **Kaydet**'i seçin.
 
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 

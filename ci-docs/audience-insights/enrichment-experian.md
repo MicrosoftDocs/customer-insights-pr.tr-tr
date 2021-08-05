@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309844"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555377"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian'dan (Önizleme) nüfus nitelikleriyle zenginleştirme müşteri profilleri
 
@@ -39,7 +39,7 @@ Experian'ı yapılandırmak için aşağıdaki ön koşullar karşılanmalıdır
 1. Experian Kutucukta **verilerimi zenginleştir** seçeneğini belirleyin.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian düzenleme yapabilir](media/experian-tile.png "Experian tile")
+   > ![Experian kutucuğu.](media/experian-tile.png "Experian tile")
    > 
 
 1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi ve açılan listeden Experian seçeneğini belirleyerek bir bağlantı oluşturabilirsiniz. 

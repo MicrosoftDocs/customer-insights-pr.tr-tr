@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597443"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554459"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Azure Machine Learning tabanlı modeller kullanma
 
@@ -52,7 +52,7 @@ Customer Insights'taki varlık verilerini toplu çıkarım işlem hattınız iç
      Tasarımcıda, **Veri Kümesinde Sütun Seç**'i açın ve parametre için ad sağladığınız **İşlem hattı parametresi olarak ayarla** seçeneğini belirleyin.
 
      > [!div class="mx-imgBorder"]
-     > ![Tasarımcıda veri kümesi parametreleştirmesi](media/intelligence-designer-dataset-parameters.png "Tasarımcıda veri kümesi parametreleştirmesi")
+     > ![Tasarımcıda veri kümesi parametreleştirmesi.](media/intelligence-designer-dataset-parameters.png "Tasarımcıda veri kümesi parametreleştirmesi")
    
 * SDK'da (Python) veri kümesi parametresi
    
@@ -78,7 +78,7 @@ Customer Insights'taki varlık verilerini toplu çıkarım işlem hattınız iç
 
 * Tasarımcı, bir işlem hattının çıktısını Azure depolama alanına dışarı aktarmaya olanak tanıyan [Verileri Dışa Aktarma modülünü](/azure/machine-learning/algorithm-module-reference/export-data) sağlar. Şu anda modülün, veri deposu türü olarak **Azure Blob Depolama**'yı kullanması ve **Veri Deposu**'nu ve ilgili **Yol**'u parametreleştirmesi gerekir. Customer Insights, ürün için erişilebilir veri deposu ve yol ile işlem hattı yürütmesi sırasında bu parametreleri geçersiz kılar.
    > [!div class="mx-imgBorder"]
-   > ![Verileri Dışarı Aktarma Modülü Yapılandırması](media/intelligence-designer-importdata.png "Verileri Dışarı Aktarma Modülü Yapılandırması")
+   > ![Verileri Dışarı Aktarma Modülü Yapılandırması.](media/intelligence-designer-importdata.png "Verileri Dışarı Aktarma Modülü Yapılandırması")
    
 * Kod kullanarak çıkarım çıktısını yazarken çıktıyı çalışma alanında *kayıtlı veri deposu* içindeki bir yola yükleyebilirsiniz. Yol ve veri deposu, işlem hattında parametreleştirilse Customer insights, çıkarım çıktısını okuyabilir ve içeri aktarabilir. Şu anda csv biçimindeki tek bir tablosal çıktı desteklenmektedir. Yol, dizini ve dosya adını içermelidir.
 

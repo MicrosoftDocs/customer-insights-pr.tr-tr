@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095672"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556331"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonelik erime tahmini (önizleme)
 
@@ -63,7 +63,7 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
 1. Hedef kitle içgörülerinde, **Yönetim Bilgileri** > **Tahminler**'e gidin.
 1. **Abonelik erime modeli (önizleme)** kutucuğunu ve **Bu modeli kullan**'ı seçin.
    > [!div class="mx-imgBorder"]
-   > ![Bu modeli kullan düğmesiyle Abonelik Erime modeli kutucuğu](media/subscription-churn-usethismodel.PNG "Bu modeli kullan düğmesiyle Abonelik Erime modeli kutucuğu")
+   > ![Bu modeli kullan düğmesiyle Abonelik Erimesi modeli kutucuğu.](media/subscription-churn-usethismodel.PNG "Bu modeli kullan düğmesiyle Abonelik Erime modeli kutucuğu")
 
 ### <a name="name-model"></a>Modeli adlandır
 
@@ -86,11 +86,11 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
     1. Birincil müşteri varlığınızla eşleşen **Müşteri varlığı**'nı seçin.
     1. İlişkiyi açıklayan bir ad girin.
        > [!div class="mx-imgBorder"]
-       > ![Müşteriyle ilişki oluşturmayı gösteren abonelik geçmişi sayfası](media/subscription-churn-subscriptionhistoryrelationship.PNG "Müşteriyle ilişki oluşturmayı gösteren abonelik geçmişi sayfası")
+       > ![Müşteriyle ilişki oluşturmayı gösteren abonelik geçmişi sayfası.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Müşteriyle ilişki oluşturmayı gösteren abonelik geçmişi sayfası")
 1. **İleri**'yi seçin.
 1. Anlam alanlarını abonelik geçmişi varlığınızın içindeki özniteliklerle eşleyin ve **Kaydet**'i seçin. Alanların açıklamaları için [ön koşullara](#prerequisites) göz atın.
    > [!div class="mx-imgBorder"]
-   > ![Seçili abonelik geçmişi varlığındaki alanlara eşlenen anlamsal öznitelikleri gösteren abonelik geçmişi sayfası](media/subscription-churn-subscriptionhistorymapping.PNG "Seçili abonelik geçmişi varlığındaki alanlara eşlenen anlamsal öznitelikleri gösteren abonelik geçmişi sayfası")
+   > ![Seçili abonelik geçmişi varlığındaki alanlara eşlenen anlamsal öznitelikleri gösteren abonelik geçmişi sayfası.](media/subscription-churn-subscriptionhistorymapping.PNG "Seçili abonelik geçmişi varlığındaki alanlara eşlenen anlamsal öznitelikleri gösteren abonelik geçmişi sayfası")
 1. **Müşteri etkinlikleri** için **Veri ekle** seçeneğini belirleyin ve ön koşullarda açıklandığı gibi müşteri etkinliği bilgilerini sağlayan varlığı seçin.
 1. Yapılandırmakta olduğunuz müşteri etkinliğinin türüyle eşleşen bir etkinlik türü seçin.  İhtiyacınız olan etkinlik türüyle eşleşen bir seçenek görmezseniz **Yeni oluştur** seçeneğini belirleyin ve bir ad girin.
 1. Müşteri etkinliği varlığınızla Müşteri varlığı arasındaki ilişkiyi yapılandırmanız gerekir.
@@ -101,7 +101,7 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
 1. Anlam alanlarını müşteri etkinliği varlığınızın içindeki özniteliklerle eşleyin ve **Kaydet**'i seçin. Alanların açıklamaları için [ön koşullara](#prerequisites) göz atın.
 1. (İsteğe Bağlı) Eklemek istediğiniz başka müşteri etkinlikleri varsa yukarıdaki adımları yineleyin.
    > [!div class="mx-imgBorder"]
-   > ![Varlık ilişkisini tanımlama](media/subscription-churn-customeractivitiesmapping.PNG "Seçili müşteri etkinliği varlığındaki alanlara eşlenen anlamsal öznitelikleri gösteren müşteri etkinlikleri sayfası")
+   > ![Varlık ilişkisini tanımlayın.](media/subscription-churn-customeractivitiesmapping.PNG "Seçili müşteri etkinliği varlığındaki alanlara eşlenen anlamsal öznitelikleri gösteren müşteri etkinlikleri sayfası")
 1. **İleri**'yi seçin.
 
 ### <a name="set-schedule-and-review-configuration"></a>Zamanlamayı ayarlayın ve yapılandırmayı gözden geçirin
@@ -115,7 +115,7 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
 
 1. **Yönetim Bilgileri** > **Tahminler** altındaki **Tahminlerim** sekmesine gidin.
    > [!div class="mx-imgBorder"]
-   > ![Tahminlerim sayfasının görünümü](media/subscription-churn-mypredictions.PNG "Tahminlerim sayfasının görünümü")
+   > ![Tahminlerim sayfasının görünümü.](media/subscription-churn-mypredictions.PNG "Tahminlerim sayfasının görünümü")
 1. İncelemek istediğiniz tahmini seçin.
    - **Tahmin adı:** Oluştururken girilen tahmin adı.
    - **Tahmin türü:** Tahmin için kullanılan modelin türü
@@ -131,7 +131,7 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
    - **Son yenilenme:** Tahminin çıkış varlığındaki sonuçları yenilediği tarih.
 1. Sonuçlarını incelemek istediğiniz tahminin yanındaki dikey üç noktayı ve **Görünüm**'ü seçin.
    > [!div class="mx-imgBorder"]
-   > ![Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü](media/subscription-churn-verticalellipses.PNG "Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü")
+   > ![Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü.](media/subscription-churn-verticalellipses.PNG "Düzenleme, yenileme, görüntüleme, günlükler ve silme dahil olmak üzere tahminin dikey üç nokta menüsündeki seçeneklerin görünümü")
 1. Sonuçlar sayfası içinde verilerin üç ana bölümü bulunur:
     1. **Eğitim modeli performansı:** A, B veya C olası puanlardır. Bu puan, tahminin performansını gösterir ve çıktı varlığında depolanan sonuçları kullanma kararını verirken size yardımcı olabilir.
         - Puanlar aşağıdaki kurallara göre belirlenir:
@@ -139,13 +139,13 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
             - **B** model, toplam tahminlerin en az %50'sini doğru tahmin ettiğinde ve kaybedilen müşteriler için doğru tahminlerin yüzdesi geçmiş ortalama erime oranı, geçmiş ortalama erime oranından %10'a kadar büyük olduğunda.
             - **C** model toplam tahminlerin %50'sinden azını doğru tahmin ettiğinde veya kaybedilen müşteriler için doğru tahminlerin yüzdesi, geçmiş ortalama erime oranından düşük olduğunda.
                > [!div class="mx-imgBorder"]
-               > ![Model performansı sonucunun görünümü](media/subscription-churn-modelperformance.PNG "Model performansı sonucunun görünümü")
+               > ![Model performansı sonucunun görünümü.](media/subscription-churn-modelperformance.PNG "Model performansı sonucunun görünümü")
     1. **Erime olasılığı (müşteri sayısı):** Tahmin edilen erime risklerine göre müşteri grupları. Bu veriler daha sonra, erime riski yüksek olan müşterilerden bir segment oluşturmak istediğinizde size yardımcı olabilir. Bu tür segmentler, segment üyeliği için ayrımın nerede olması gerektiğini anlamaya yardımcı olur.
        > [!div class="mx-imgBorder"]
-       > ![Erime sonuçlarının dağılımını %0-100 aralığında bölünmüş olarak gösteren grafik](media/subscription-churn-resultdistribution.PNG "Erime sonuçlarının dağılımını %0-100 aralığında bölünmüş olarak gösteren grafik")
+       > ![Erime sonuçlarının dağılımını %0-100 aralığında bölünmüş olarak gösteren grafik.](media/subscription-churn-resultdistribution.PNG "Erime sonuçlarının dağılımını %0-100 aralığında bölünmüş olarak gösteren grafik")
     1. **En etkili faktörler:** Tahmininizi oluştururken dikkate alınacak çok sayıda faktör vardır. Faktörlerin her biri, bir modelin oluşturduğu toplu tahminlerde hesaba katılan bir öneme sahiptir. Bu faktörleri, tahmin sonuçlarınızı doğrulamak için kullanabilirsiniz. Alternatif olarak bu bilgileri daha sonra müşterilerin erime riskini etkilemeye yardımcı olabilecek [segmentler oluşturmak](segments.md) için kullanabilirsiniz.
        > [!div class="mx-imgBorder"]
-       > ![Erime sonucunu tahmin etmede etkili faktörleri ve bunların önemini gösteren liste](media/subscription-churn-influentialfactors.PNG "Erime sonucunu tahmin etmede etkili faktörleri ve bunların önemini gösteren liste")
+       > ![Erime sonucunu tahmin etmede etkileyen faktörleri ve bunların önemini gösteren liste.](media/subscription-churn-influentialfactors.PNG "Erime sonucunu tahmin etmede etkili faktörleri ve bunların önemini gösteren liste")
 
 ## <a name="manage-predictions"></a>Tahminleri yönetme
 

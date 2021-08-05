@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596385"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692329"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model'de varlık şemaları
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596385"
 
 Bu, uygulamaların ve veri tümleştiricilerinin birleşik bir veri tanımı sağlayarak daha kolay iş birliği yapmasına olanak tanıyan bir paylaşılan veri modelidir. Common Data Model; standart varlıklar, ilişkiler, hiyerarşiler, nitelikler ve daha fazlası bulunan zengin bir meta veri sistemi içerir. Dynamics 365 uygulamalarından kaynaklık ve 260 standart varlıklarla GitHub'da açık kaynaklarım arasında yer alır. Dahili ve harici iş ortaklarından oluşan geniş bir sistem, Common Data Model için endüstriye özel kavramlara katkıda bulunur.
 
-Birden çok sistem ve platformda bugün Power BI veri akışları ve Azure Data Services dahil olmak üzere Common Data Model uygulanmaktadır. Common Data Service, Dynamics 365, Power Apps, Power BI, ve yaklaşan Azure veri hizmetlerinde zaten desteklenmektedir, değer doğrudan [Open Data Initiative](https://www.microsoft.com/open-data-initiative)'e tahakkuk ediyor.
+Çok sayıda sistem ve platform, Power BI veri akışları ve Azure Data Services dahil olmak üzere Common Data Model'i bugün uygular. Microsoft Dataverse, Dynamics 365, Power Apps, Power BI ve bir sonraki Azure veri hizmetlerinde zaten destekleniyor ve [Open Data Initiative](https://www.microsoft.com/open-data-initiative)'e doğrudan değer kazandırıyor.
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insights varlık şemaları
 
@@ -44,7 +44,7 @@ Daha fazla bilgi için [Common Data Model'deki Customer Insights varlık şemala
 
 Varlıkları [Common Data Model Varlık Gezgini](https://microsoft.github.io/CDM/)'nde görüntüleyebilirsiniz. **GitHub'dan yükle!** seçeneğini belirleyin düğmesini tıklayın ve Customer Insights varlıklarının ve tanımlarının listesini bulabileceğiniz **foundationcommon** > **crmcommon** > **çözümler** > **customerınsights** bölümüne gidin.
 > [!div class="mx-imgBorder"]
-> ![CustomerActivity varlığını gösteren CDM varlık Gezgini](media/CDM-entity-navigator.png "CustomerActivity varlığını gösteren CDM varlık Gezgini")
+> ![CustomerActivity varlığını gösteren CDM Varlık Gezgini.](media/CDM-entity-navigator.png "CustomerActivity varlığını gösteren CDM varlık Gezgini")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

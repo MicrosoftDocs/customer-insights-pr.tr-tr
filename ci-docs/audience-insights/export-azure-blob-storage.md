@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Azure Blob depolamasına içeri aktarma
 description: Bağlantıyı yapılandırmayı ve Blob Depolama'da dışa aktarmayı öğrenin.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976205"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318323"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segment listesini ve diğer verileri Azure Blob depolama'ya ver (Önizleme)
 
 Blob Depolama Customer Insights verilerinizi depolamak veya verilerinizi diğer uygulamalara aktarmak için kullanın.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Blob Depolama'ya bağlantıyı ayarlayın
+## <a name="set-up-the-connection-to-blob-storage"></a>Blob Depolama bağlantısını ayarlama
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
@@ -30,7 +30,7 @@ Blob Depolama Customer Insights verilerinizi depolamak veya verilerinizi diğer 
 
 1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. BLOB depolama hesabınız için **hesap adını**, **hesap anahtarını** ve **kapsayıcıyı** girin .
+1. Blob Depolama hesabınız için **Hesap adını**, **Hesap anahtarını** ve **Kapsayıcıyı** girin.
     - BLOB depolama hesabı adı ve firma anahtarının nasıl bulunacağı hakkında daha fazla bilgi edinmek için bkz. [Azure Portal'da depolama hesabı ayarlarını yönetme](/azure/storage/common/storage-account-manage).
     - Kapsayıcının nasıl oluşturulacağını öğrenmek için bkz. [Kapsayıcı oluşturma](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -40,11 +40,14 @@ Blob Depolama Customer Insights verilerinizi depolamak veya verilerinizi diğer 
 
 Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
 
+> [!IMPORTANT]
+> Azure Blob Depolama hesabı için geçici silme ayarını açtıysanız dışarı aktarmalar başarısız olur. Verileri bloblara dışarı aktarmak için geçici silmeyi kapatın. Daha fazla bilgi için bkz. [Blob geçici silmeyi etkinleştirme](/azure/storage/blobs/soft-delete-blob-enable.md)
+
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 
 1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
 
-1. **Dışa aktarma bağlantısı** alanında, Azure Blob Depolama bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
+1. **Dışa aktarma bağlantısı** alanında, Azure Blob Depolama bölümünden bir bağlantı seçin. Bu bölüm adını görmüyorsanız, bu tür hiçbir bağlantı kullanabilirsiniz.
 
 1. Bu hedefe vermek istediğiniz varlıkların her birinin yanındaki kutuyu seçin.
 
@@ -53,13 +56,16 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
 Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır.     
+
 [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
 
-Verilen veriler, yapılandırdığınız BLOB depolama kapsayıcısında depolanır. Aşağıdaki klasör yolları kapsayıcısında otomatik olarak oluşturulur:
+Dışarı aktarılan veriler, yapılandırdığınız Blob Depolama kapsayıcısında depolanır. Aşağıdaki klasör yolları kapsayıcısında otomatik olarak oluşturulur:
 
-- Kaynak varlıkları ve sistem tarafından oluşturulan varlıklar için: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Kaynak varlıkları ve sistem tarafından oluşturulan varlıklar için:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Örnek: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Verilen varlıklar için model. JSON %ExportDestinationName% düzeyinde olur
+ 
+- Dışarı aktarılan varlıklar için model.json, %ExportDestinationName% düzeyinde olur.  
   - Örnek: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

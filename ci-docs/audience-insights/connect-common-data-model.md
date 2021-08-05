@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596569"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554918"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Common Data Model klasörünü Azure Data Lake hesabına bağlama
 
@@ -45,7 +45,7 @@ Bu makalede, Azure Data Lake Storage Gen2 hesabınızı kullanarak Common Data M
 
 1. Kimlik doğrulaması için kaynak tabanlı seçeneğini veya abonelik tabanlı seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Kapsayıcı** bilgilerini girin ve **İleri**'yi seçin.
    > [!div class="mx-imgBorder"]
-   > ![Azure Data Lake için yeni bağlantı ayrıntılarının girileceği iletişim kutusu](media/enter-new-storage-details.png)
+   > ![Azure Data Lake için yeni bağlantı ayrıntılarının girileceği iletişim kutusu.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Veri kaynağına bağlanabilmek ve veri kaynağı oluşturabilmek için yukarıda başvurulan kapsayıcı veya depolama hesabıyla ilgili aşağıdaki rollerden biri gerekir:
    >  - Depolama Blobu Veri Okuyucusu
@@ -58,11 +58,11 @@ Bu makalede, Azure Data Lake Storage Gen2 hesabınızı kullanarak Common Data M
 
 1. Seçili model.json veya manifest.json dosyasında kullanılabilir varlıkların listesini elde edersiniz. Kullanılabilir varlıklar listesinden inceleyip seçebilir ve **Kaydet**'i seçebilirsiniz. Seçili tüm varlıklar yeni veri kaynağından alınır.
    > [!div class="mx-imgBorder"]
-   > ![Bir model.json dosyasının bir varlık listesini gösteren iletişim kutusu](media/review-entities.png)
+   > ![model.json dosyasının varlık listesini gösteren iletişim kutusu.](media/review-entities.png)
 
 8. Hangi veri varlıkları için veri profili oluşturmayı etkinleştirmek istediğinizi belirtin ve **Kaydet**'i seçin. Veri profili oluşturma analizleri ve diğer yetenekleri etkinleştirir. Varlıktaki tüm öznitelikleri seçmek üzere varlığın tamamını veya tercih ettiğiniz belirli öznitelikleri seçebilirsiniz. Varsayılan olarak, veri profili oluşturmak için varlık etkinleştirilmez.
    > [!div class="mx-imgBorder"]
-   > ![Veri profili oluşturmayı gösteren iletişim kutusu](media/dataprofiling-entities.png)
+   > ![Veri profili oluşturmayı gösteren iletişim kutusu.](media/dataprofiling-entities.png)
 
 9. Seçimlerinizi kaydettikten sonra **Veri kaynakları** sayfası açılır. Artık veri kaynağı olarak Common Data Model klasörü bağlantısını görmeniz gerekir.
 
@@ -81,12 +81,12 @@ Common Data Model klasörünü içeren depolama hesabı için erişim anahtarın
 
 4. İsteğe bağlı olarak, **erişim tuşunu** güncelleştirip **İleri**'yi seçin.
 
-   ![Varolan veri kaynağı için bir erişim anahtarını düzenlemek ve güncelleştirmek için iletişim kutusu](media/edit-access-key.png)
+   ![Var olan veri kaynağının bir erişim anahtarını düzenlemek ve güncelleştirmek için iletişim kutusu.](media/edit-access-key.png)
 
 5. İsteğe bağlı olarak, bir hesap anahtarı bağlantısından kaynak tabanlı veya abonelik tabanlı bir bağlantıya güncelleştirebilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). Bağlantıyı güncelleştirdiğinizde **Kapsayıcı** bilgilerini değiştiremezsiniz.
    > [!div class="mx-imgBorder"]
 
-   > ![Azure Data Lake'in bağlantı ayrıntılarını mevcut bir depolama hesabına girmek için iletişim kutusu](media/enter-existing-storage-details.png)
+   > ![Azure Data Lake'in bağlantı ayrıntılarını mevcut bir depolama hesabına girmek için iletişim kutusu.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Veri kaynağına bağlanabilmek ve veri kaynağı oluşturabilmek için yukarıda başvurulan kapsayıcı veya depolama hesabıyla ilgili aşağıdaki rollerden biri gerekir:

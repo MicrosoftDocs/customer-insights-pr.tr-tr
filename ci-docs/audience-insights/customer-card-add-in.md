@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059612"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692229"
 ---
 # <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
 
@@ -25,7 +25,7 @@ Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görün
 ## <a name="prerequisites"></a>Ön koşullar
 
 - Eklenti yalnızca satış veya müşteri hizmetleri, sürüm 9.0 ve daha sonraki sürümler gibi Dynamics 365 model güdümlü uygulamalarla çalışır.
-- Dynamics 365 verilerinizin, [Common Data Service bağlayıcıyı kullanarak Dynamics 365 uygulamasından alması](connect-power-query.md) gerektiği hedef kitle içgörüleri müşteri profilleriyle eşleşmesi gerekir.
+- Dynamics 365 verilerinizin, [Microsoft Dataverse bağlayıcıyı kullanarak Dynamics 365 uygulamasından alması](connect-power-query.md) gerektiği hedef kitle içgörüleri müşteri profilleriyle eşleşmesi gerekir.
 - Müşteri kartı eklentisinin tüm Dynamics 365 kullanıcıları verileri görmek için hedef kitle içgörülerinde [kullanıcıların eklenmesi](permissions.md) gerekir.
 - Hedef kitle içgörülerinde [yapılandırılan arama ve filtre özellikleri](search-filter-index.md) , verilerin çalışması için arama yapmak amacıyla gereklidir.
 - Her eklenti denetimi hedef kitle öngörüler içindeki belirli verilere dayanır:
@@ -50,7 +50,7 @@ Müşteri Kartı Eklentisi, Dynamics 365'teki müşteri etkileşimi uygulamalar�
 1. **Dynamics 365 Customer Insights Müşteri Kartı Eklentisi (Önizleme)** çözümü için **Görünen Ad** bağlantısını seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Görünen adı seçme](media/select-display-name.png "Görünen adı seçme")
+   > ![Görünen adı seçin.](media/select-display-name.png "Görünen adı seçme")
 
 1. **Oturum aç**'ı seçin ve Customer Insights'ı yapılandırmak için kullandığınız yönetici hesabının kimlik bilgilerini girin.
 
@@ -64,7 +64,7 @@ Müşteri Kartı Eklentisi, Dynamics 365'teki müşteri etkileşimi uygulamalar�
    - Bir firmayla eşlemek için firma varlığınızın kimliğiyle eşleşen Müşteri varlığında alanı seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![İlgili Kişi Kimliği alanı](media/contact-id-field.png "İlgili Kişi Kimliği alanı")
+   > ![İlgili Kişi Kimliği alanı.](media/contact-id-field.png "İlgili Kişi Kimliği alanı")
 
 1. Ayarları kaydetmek için **Yapılandırmayı kaydet**'i seçin.
 
@@ -83,7 +83,7 @@ Müşteri Kartı Eklentisi, Dynamics 365'teki müşteri etkileşimi uygulamalar�
 1. Müşteri Kartı denetimlerini eklemek istediğiniz ilgili kişi formunu seçin.
 
     > [!div class="mx-imgBorder"]
-    > ![İlgili Kişi formunu seçme](media/contact-active-forms.png "İlgili Kişi formunu seçme")
+    > ![İlgili Kişi formunu seçin.](media/contact-active-forms.png "İlgili Kişi formunu seçme")
 
 1. Form düzenleyicisinde bir denetim eklemek için **Alan Gezgini**'nden herhangi bir alanı denetimin görünmesini istediğiniz yere sürükleyin.
 
@@ -110,7 +110,7 @@ Müşteri Kartı Eklentisi otomatik olarak yükseltilmez. En son sürüme yükse
 
 1. Eylem çubuğunda, **Çözüm Yükseltmesini Uygula**'yı seçin.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Dynamics 365 uygulamalarının Özelleştirme alanında çözümü yükseltme":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Dynamics 365 uygulamalarının Özelleştirme alanında çözümü yükseltin.":::
 
 1. Yükseltme işlemi başlatıldıktan sonra yükseltme tamamlanana kadar bir yükleniyor göstergesi görürsünüz. Daha yeni bir sürüm yoksa yükseltme işlemi bir hata iletisi gösterir.
 

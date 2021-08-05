@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305318"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555331"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 
@@ -35,7 +35,7 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
 1. HERE Technologies kutucuğunda **verilerimi zenginleştir** ve **Başlarken**'i seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies kutucuğu](media/HERE-tile.png "HERE Technologies kutucuğu")
+   > ![HERE Technologies kutucuğu.](media/HERE-tile.png "HERE Technologies kutucuğu")
 
 1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi seçerek bir bağlantı oluşturabilirsiniz. Açılan listeden **HERE Technologies**'i seçin. 
 
@@ -50,7 +50,7 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
 1. HERE Technologies'den eşleşen konum verilerini aramak için birleşik profillerinizden hangi alanların kullanılması gerektiğini tanımlayın. Seçilen birincil ve/veya ikincil adres için **Sokak 1** ve **Posta Kodu** alanları gereklidir. Daha yüksek bir eşleşme doğruluğu için daha fazla alan eklenebilir.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies zenginleştirmesi yapılandırma sayfası](media/enrichment-HERE-configuration.png "HERE Technologies zenginleştirmesi yapılandırma sayfası")
+   > ![HERE Technologies zenginleştirme yapılandırması sayfası.](media/enrichment-HERE-configuration.png "HERE Technologies zenginleştirmesi yapılandırma sayfası")
 
 1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
 
@@ -73,7 +73,7 @@ Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zengin
 1. Doğrulamayı tamamladıktan sonra, **Kaydet**'i seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies bağlantı yapılandırma sayfası](media/enrichment-HERE-connection.png "HERE Technologies bağlantı yapılandırma sayfası")
+   > ![HERE Technologies bağlantı yapılandırması sayfası.](media/enrichment-HERE-connection.png "HERE Technologies bağlantı yapılandırma sayfası")
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 

@@ -2,6 +2,8 @@
   href: index.yml
 - name: Ürüne genel bakış
   href: overview.md
+- name: Deneme oluşturma
+  href: audience-insights/get-started-trial.md
 - name: Ortamınıza erişme
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Hedef kitle içgörüleri
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Özelliğe genel bakış
       href: audience-insights/overview.md
-    - name: Ücretsiz deneme sürümü
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Yeni ve güncelleştirilmiş özellikler
       href: audience-insights/whats-new-audience-insights.md
-    - name: Yeni ortam oluşturun
-      href: audience-insights/home.md
+    - name: Yeni ortam oluştur
+      href: audience-insights/get-started-paid.md
     - name: Modülleri öğrenme
       items:
         - name: Veri alma
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Veri kaynağı olarak bir Common Data Model klasörü ekleme
           href: audience-insights/connect-common-data-model.md
-        - name: Common Data Service yönetilen veri gölü ekleme
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Dataverse yönetilen veri gölü ekleme
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Veri kaynakları için artımlı yenileme
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Gerçek zamanlı veri alımı
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: SFTP özel içeri aktarmayla zenginleştirme
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmentler ve ölçüler
+    - name: Segmentler
       items:
         - name: Segmentlere genel bakış
           href: audience-insights/segments.md
-        - name: Segmentler ve müşteri grupları oluşturma
+        - name: Segmentler oluşturma
           href: audience-insights/segment-builder.md
         - name: Ölçülere göre önerilen segmentler
           href: audience-insights/suggested-segments.md
@@ -254,11 +254,13 @@
       items:
         - name: Olay oluşturma ve değiştirme
           href: engagement-insights/refined-events.md
+        - name: Önceden kimliği doğrulanmış ziyaretçilerden gelen web etkinliklerini tanıma
+          href: engagement-insights/unknown-to-known.md
         - name: Olayları dışarı aktar
           href: engagement-insights/export-events.md
     - name: Raporlar
       items:
-        - name: Raporları görüntüle
+        - name: Raporları görüntüleyin
           href: engagement-insights/view-reports.md
         - name: Özel raporlar oluştur
           href: engagement-insights/custom-reports.md
@@ -304,7 +306,9 @@
       items:
         - name: Kişisel verileri silme ve dışarı aktarma
           href: engagement-insights/delete-export-personal-data.md
+    - name: Bölgesel kullanılabilirlik
+      href: engagement-insights/regional-availability.md
     - name: Hizmet sınırları
       href: engagement-insights/quotas.md
-- name: Desteğe başvurun
+- name: Destek birimine başvurun
   href: 'https://admin.powerplatform.microsoft.com/support'

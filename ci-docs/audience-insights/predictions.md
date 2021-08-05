@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595925"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692551"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Tahminlerle kısmi verilerinizi tamamlama
 
@@ -31,11 +31,11 @@ Tahminler, bir müşteri hakkındaki kavrayışınızı artırabilecek tahmini d
 
 Kuruluşunuzun tahminler özelliğini kullanabilmesi için aşağıdaki ön koşulların karşılanması gerekir:
 
-1. Kuruluşunuzun [Common Data Service içinde ayarlanmış](/ai-builder/build-model#prerequisites) bir kurulumu vardır ve Customer Insights ile aynı kuruluştadır.
+1. Kuruluşunuzun [Microsoft Dataverse uygulamasında ayarlanmış](/ai-builder/build-model#prerequisites) bir kurulumu vardur ve bu, Customer Insights ile aynı kuruluştadır.
 
-2. Ortamınız, Common Data Service kurulumunuza eklenir.
+2. Hedef kitle içgörü ortamınız Dataverse kurulumunuza eklenir.
 
-[Yeni bir ortam oluşturuyorsanız](manage-environments.md) bunu **Ortam oluştur** iletişim kutusunda yapılandırın ve **Gelişmiş**'i seçin. Zaten bir ortam oluşturduysanız, ayarlarına gidin ve **Gelişmiş**'i seçin. Her iki durumda da, **Tahminleri kullan** bölümünde, ortamınızı eklemek istediğiniz Common Data Service kurulumu URL'sini girin.
+[Yeni bir ortam oluşturuyorsanız](get-started-paid.md) bunu **Ortam oluştur** iletişim kutusunda yapılandırın ve **Gelişmiş**'i seçin. Zaten bir ortam oluşturduysanız, ayarlarına gidin ve **Gelişmiş**'i seçin. Her iki durumda da, **Tahminleri kullan** bölümünde, ortamınızı eklemek istediğiniz Dataverse kurulumu URL'sini girin.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Müşteri varlığında tahmin oluşturma
 
@@ -47,17 +47,17 @@ Kuruluşunuzun tahminler özelliğini kullanabilmesi için aşağıdaki ön koş
 
 4. Değerlerini tahmin etmek istediğiniz öznitelik adını bulun ve ardından **Özet** sütununda **Genel Bakış** simgesini seçin.
    > [!div class="mx-imgBorder"]
-   > ![Genel Bakış simgesi](media/intelligence-overviewicon.png "Genel Bakış simgesi")
+   > ![Genel Bakış simgesi.](media/intelligence-overviewicon.png "Genel Bakış simgesi")
 
 5. Özniteliğinizde yüksek oranda eksik değer varsa tahmininize devam etmek için **Eksik değerleri tahmin et**'i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Eksik değerleri tahmin et düğmesi ile gösterilen genel bakış durumu](media/intelligence-overviewpredictmissingvalues.png "Eksik değerleri tahmin et düğmesi ile gösterilen genel bakış durumu")
+   > ![Eksik değerleri tahmin et düğmesi gözüken genel bakış durumu.](media/intelligence-overviewpredictmissingvalues.png "Eksik değerleri tahmin et düğmesi ile gösterilen genel bakış durumu")
 
 6. Tahminin sonuçları için **Görünen ad**'ı ve **Çıkış varlığı adı**'nı girin.
 
 7. Önceden doldurulmuş seçenekler listesi, değerleri tahmin edilen bir kategoriyle eşleyebileceğiniz yeri gösterir. Bu durumda, tahminin doğru/yanlış veya ikili niteliğiyle eşleştiklerinden kategori seçenekleriniz yalnızca 0 veya 1 olur. Kategori sütununda, son tahminde "0" olarak sınıflandırılmasını istediğiniz alan değerlerini "0" olarak ve son tahminde "1" olarak sınıflandırmak istediğiniz öğeleri "1" olarak eşleyin.
    > [!div class="mx-imgBorder"]
-   > ![Kategorilere eşlenen alan değerlerini gösteren örnek](media/intelligence-categorymapping.png "Kategorilere eşlenen alan değerlerini gösteren örnek")
+   > ![Kategorilere eşlenen alan değerlerini gösteren örnek.](media/intelligence-categorymapping.png "Kategorilere eşlenen alan değerlerini gösteren örnek")
 
 8. **Bitti**'yi seçtiğinizde tahmin işlenir. İşleme, verilerin boyutuna ve karmaşıklığına bağlı olarak biraz zaman alır. Sonuçlar, oluşturduğunuz tahminin **Çıkış varlığı adı** temel alınarak yeni bir varlıkta kullanılabilir.
 
@@ -77,7 +77,7 @@ Bu akışın bir parçası olarak Müşteri Memnuniyeti veya Satın Alma Tutarı
 
 5. Oluşturduğunuz segmentin kaynak alanında eksik veriler varsa eksik değerleri tahmin etmeyi seçebilirsiniz.
    > [!div class="mx-imgBorder"]
-   > ![Tahmin düğmesi](media/segments-predictoption.png "Tahmin düğmesi")
+   > ![Tahmin düğmesi.](media/segments-predictoption.png "Tahmin düğmesi")
 
 6. Tahminin sonuçları için **Görünen ad**'ı ve **Çıkış varlığı adı**'nı girin.
 
@@ -93,7 +93,7 @@ Bu akışın bir parçası olarak Müşteri Memnuniyeti veya Satın Alma Tutarı
 
 4. Tahmin görünümünüzde bir dizi veri noktası görürsünüz.
    > [!div class="mx-imgBorder"]
-   > ![Tahminler sayfası](media/intelligence-predictionsviewpage.png "Tahminler sayfası")
+   > ![Tahminler sayfası.](media/intelligence-predictionsviewpage.png "Tahminler sayfası")
 
    - **Tahmin edilen değerler**, Alan değerinden Kategori eşleme aşamasına kadar oluşturduğunuz eşlemeyi gösterir. Bunlar, veri kümenizde belirli bir kategoriyle eşleştirilen değerlerdir.
    -**Başlıca fikir liderleri**, veri kümenizde Alan değerinizin belirli bir kategoriyle eşlenmesine yönelik tahmin güvenilirliğini etkileme olasılığı en yüksek olan etkenlerdir.
@@ -139,7 +139,7 @@ Tahmini tekrar çalıştırdığınızda oluşturduğunuz güncelleştirilmiş m
 
 ## <a name="troubleshooting"></a>Sorun Giderme
 
-Bir hata nedeniyle Common Data Service işlemini tamamlayamazsanız işlemi el ile tamamlamayı deneyebilirsiniz. Ekleme işleminde oluşabilecek iki bilinen sorun vardır:
+Bir hata nedeniyle Dataverse işlemini tamamlayamazsanız işlemi el ile tamamlamayı deneyebilirsiniz. Ekleme işleminde oluşabilecek iki bilinen sorun vardır:
 
 - Müşteri Kartı Eklentisi çözümü yüklü değil.
     1. [Çözümü yüklemek ve yapılandırmak](customer-card-add-in.md) için yönergeleri tamamlayın.

@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596523"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692137"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Hedef kitle içgörüleri için Azure hizmet sorumlusu ile Azure Data Lake Storage Gen2 hesabına bağlanma
 
 Azure hizmetlerini kullanan otomatik araçlar her zaman kısıtlı izinlere sahip olmalıdır. Azure, uygulamalarda tamamen ayrıcalıklı bir kullanıcı olarak oturum açma olması yerine hizmet sorumluları sağlar. Hedef kitle içgörülerini depolama hesabı anahtarları yerine bir Azure hizmet sorumlusu kullanarak Azure Data Lake Storage Gen2 hesabına bağlamayı öğrenmek için okumaya devam edin. 
 
-Hizmet sorumlusunu [veri kaynağı olarak bir Common Data Model klasörünü eklemek veya düzenlemek](connect-common-data-model.md) veya [yeni bir ortam oluşturmak veya mevcut ortamı güncelleştirmek](manage-environments.md#create-an-environment-in-an-existing-organization) için güvenli bir şekilde kullanabilirsiniz.
+Hizmet sorumlusunu [veri kaynağı olarak bir Common Data Model klasörünü eklemek veya düzenlemek](connect-common-data-model.md) veya [yeni bir ortam oluşturmak veya mevcut ortamı güncelleştirmek](get-started-paid.md) için güvenli bir şekilde kullanabilirsiniz.
 
 > [!IMPORTANT]
 > - Hizmet sorumlusunu kullanmayı amaçlayan Azure Data Lake Gen2 depolama hesabında [Hiyerarşik Ad Alanı (HNS) etkin](/azure/storage/blobs/data-lake-storage-namespace) olmalıdır.
@@ -81,7 +81,7 @@ Değişikliklerin yayılması 15 dakikaya kadar sürebilir.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Hedef Kitle İçgörülerindeki depolama hesabı ekinde Azure Kaynağı Kimliği veya Azure Aboneliği ayrıntılarını girin.
 
-Azure Data Lake depolama hesabını [çıkış verilerini depolamak](manage-environments.md) veya [veri kaynağı olarak kullanmak](connect-common-data-service-lake.md) için hedef kitle içgörülerine ekleyin. Azure Data Lake seçeneğini belirlemek, kaynak tabanlı veya abonelik tabanlı yaklaşım arasında seçim yapmanıza olanak tanır.
+Azure Data Lake depolama hesabını [çıkış verilerini depolamak](manage-environments.md) veya [veri kaynağı olarak kullanmak](connect-dataverse-managed-lake.md) için hedef kitle içgörülerine ekleyin. Azure Data Lake seçeneğini belirlemek, kaynak tabanlı veya abonelik tabanlı yaklaşım arasında seçim yapmanıza olanak tanır.
 
 Seçili yaklaşımla ilgili gerekli bilgileri sağlamak için aşağıdaki adımları izleyin.
 

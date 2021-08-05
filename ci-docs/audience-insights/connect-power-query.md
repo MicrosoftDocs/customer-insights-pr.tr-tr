@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305915"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554720"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Bir Power Query veri kaynağına bağlanın
 
@@ -42,7 +42,7 @@ Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlay�
 1. **Power Query - Sorguları Düzenle** diyaloğu, verileri incelemenizi ve geliştirmenizi sağlar. Seçtiğiniz veri kaynağında sistemlerin belirlediği varlıklar sol bölmede görüntülenir.
 
    > [!div class="mx-imgBorder"]
-   > ![Sorguları düzenle diyaloğu](media/data-manager-configure-edit-queries.png "Sorguları düzenle diyaloğu")
+   > ![Sorguları düzenle iletişim kutusu.](media/data-manager-configure-edit-queries.png "Sorguları düzenle diyaloğu")
 
 1. Ayrıca verilerinizi dönüştürebilirsiniz. Düzenlenecek veya dönüştürülecek bir varlık seçin. Dönüşümleri uygulamak için Power Query penceresindeki seçenekleri kullanın. Her dönüşüm **Uygulanan adımlar** altında listelenir. Power Query, çok sayıda önceden oluşturulmuş dönüştürme seçeneği sunar. Daha fazla bilgi için bkz. [Power Query Dönüştürmeleri](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı liste
 2. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı seçin ve açılır menüden **Düzenle**'yi seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Seçeneği düzenle](media/edit-option-data-sources.png "Seçeneği düzenle")
+   > ![Seçeneği düzenleyin.](media/edit-option-data-sources.png "Seçeneği düzenle")
 
 3. **Power Query - Sorguları düzenle** diyaloğundaki değişikliklerinizi ve dönüşümlerinizi [Yeni veri kaynağı oluştur](#create-a-new-data-source) bölümünde açıklandığı gibi uygulayın.
 

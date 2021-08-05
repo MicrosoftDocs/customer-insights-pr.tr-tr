@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305680"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650250"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
@@ -109,7 +109,7 @@ Bazı varlıklar diğerlerine göre daha fazla ayrıntı içerir. Bir varlık bi
 İster öznitelikleri el ile birleştirin isterseniz sistemin bunları birleştirmesine izin verin, birleştirmenizi her zaman çalıştırabilirsiniz. Süreci başlatmak için **Birleştir** sayfasında **Çalıştır**'ı seçin.
 
 > [!div class="mx-imgBorder"]
-> ![Veri birleştirme Kaydet ve Çalıştır](media/configure-data-merge-save-run.png "Veri birleştirme Kaydet ve Çalıştır")
+> ![Veri birleştirme Kaydet ve Çalıştır.](media/configure-data-merge-save-run.png "Veri birleştirme Kaydet ve Çalıştır")
 
 Yalnızca birleştirilmiş müşteri varlığında yansıtılan çıktıyı görmek isterseniz, **Yalnızca birleştirmeyi Çalıştır**'ı seçin. Aşağı akış işlemleri [yenileme zamanlamasında tanımlandığı](system.md#schedule-tab) şekilde yenilenecek.
 
@@ -118,7 +118,9 @@ Değişiklikleri kullanarak sistemi yenilemek için **Birleştirme ve akış yö
 Daha fazla değişiklik yapmak ve adımı yeniden çalıştırmak için sürmekte olan bir birleştirmeyi iptal edebilirsiniz. **Yenileniyor ...** seçeneğini belirleyin ve görünen yan bölmede **İşi iptal et**'i seçin.
 
 > [!TIP]
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+> Birleştirme sürecini çalıştırdıktan sonra **Görev ayrıntıları** bölmesini açmak için süreç durumunu seçin. Bu; işleme süresi, son işleme tarihi ve görevle ilgili tüm hatalar ve uyarılar hakkında bir genel bakış sunar. Hangi varlıkların eşleşme işlemine katıldığını, çakışma çözümünün başarılı olup olmadığını ve güncelleştirmelerin başarıyla yayımlanıp yayımlanmadığını görmek için **Ayrıntılara göz atın**'ı seçin.  
+> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Görev durumu bağlantısından işlem ayrıntılarına ulaşmak için detaya gitme yolu.":::
 
 ## <a name="next-step"></a>Sonraki Adım
 

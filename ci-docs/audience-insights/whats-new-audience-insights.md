@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263275"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692413"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -26,6 +26,28 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="june-2021-updates"></a>Haziran 2021 güncelleştirmeleri
+
+Haziran 2021'deki güncelleştirmeler, çeşitli özellikler, performans yükseltmeleri ve hata düzeltmelerini içerir.
+
+### <a name="data-ingestion"></a>Veri alımı
+
+- **İyileştirilmiş veri birleştirme işlemi güncelleştirmeleri** Artık [veri birleştirme işlemi](data-unification.md) adımlarında daha ayrıntılı ve iyileştirilmiş dinamik durum güncelleştirmelerini görüntüleyebilirsiniz. Bu özellik, işlem akışını anlamak ve dikkat edilmesi gereken adımlarda eylem gerçekleştirmek için ayrıntılı ilerlemeyi izlemenize olanak sağlar.
+
+### <a name="extensibility"></a>Genişletilebilirlik
+
+- **Segmentleri ve diğer verileri Salesforce Marketing Cloud'a dışarı aktarma** Dışarı aktarma hedeflerimizi [Salesforce Marketing Cloud](export-salesforce.md)'u dahil edecek şekilde genişlettik. Artık segmentleri ve diğer veri türlerini, markalı bir SFTP dışarı aktarma işlemi üzerinden Salesforce Marketing Cloud'a dışarı aktarabilirsiniz. Veri içeri aktarma işlemi, Salesforce'ta tamamen otomatikleştirilebilir ve daha etkili pazarlama kampanyaları oluşturmak için kullanılabilir.  
+ 
+- **Segmentleri ActiveCampaign'e dışarı aktarma** Dışarı aktarma hedeflerimizi [Active Campaign](export-active-campaign.md)'i dahil edecek şekilde genişlettik. Artık ActiveCampaign'de kampanyalar oluşturmak, e-posta pazarlaması çalıştırmak ve belirli müşteri gruplarıyla çalışmak için segmentleri dışarı aktarabilirsiniz.
+ 
+- **Segmentleri Sendinblue'da dışarı aktarma** Dışarı aktarma hedeflerimizi [Sendinblue](export-sendinblue.md)'yu dahil edecek şekilde genişlettik. Artık Sendinblue ile kampanyalar oluşturmak, e-posta pazarlaması çalıştırmak ve belirli müşteri gruplarıyla çalışmak için segmentleri dışarı aktarabilirsiniz.
+ 
+### <a name="ux-updates"></a>UX güncelleştirmeleri 
+
+- **Yeni ve gelişmiş Müşteriler sayfası ve profil ayrıntıları sayfası** İyileştirilmiş kullanıcı deneyimi ve daha iyi performans için Müşteriler sayfasını ve profil ayrıntıları sayfasını yeniden tasarladık. Bu değişiklikler, müşterileri görüntülemenize, sıralamanıza, aramanıza ve filtrelemenize olanak sağlar. Filtreler artık diğer kullanıcılarla ilgili arama sonuçlarını sorunsuzca paylaşmak için URL'de gösterilir. Arama sonuçları segment olarak da kaydedilebilir.    
+  Müşteri profillerine yönelik ayrıntılar sayfası, verileri artık geliştirilmiş okunabilirlik için demografik veriler, kimlikler ve diğer profil öznitelikleri gibi çeşitli alt bölümlerde gruplandırır. Profil ayrıntıları sayfasındaki diğer bölümler artık daha etkileşimlidir. Örneğin, etkinlikler bölümünde artık filtreleme ve sıralamaya izin verilmektedir.
+
 
 ## <a name="may-2021-updates"></a>Mayıs 2021 güncelleştirmeleri
 
@@ -170,7 +192,7 @@ Mart 2021'deki güncelleştirmeler çeşitli özellikler, performans yükseltmel
 
 - **Ortam kopyalama daha fazla veri kaynağı türünü destekler**
 
-  Yöneticiler, ortam yapılandırmalarını aynı kuruluşta yeni bir ortama kopyalayabilir. Bu özellik, bir Common Data Service Data Lake veya Common Data Model klasörüne dayalı veri kaynaklarının kullanıldığı durumlarda ortam kopyalama işlevini genişletir.
+  Yöneticiler, ortam yapılandırmalarını aynı kuruluşta yeni bir ortama kopyalayabilir. Bu özellik, veri kaynaklarının Microsoft Dataverse tarafından yönetilen bir veri gölüne bağlı olduğu veya bir Common Data Model klasörünün kullanıldığı servis talepleri için ortamı kopyalama işlevini genişletir.
 
 ## <a name="january-2021-updates"></a>Ocak 2021 güncelleştirmeleri
 

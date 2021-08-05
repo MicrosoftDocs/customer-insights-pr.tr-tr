@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095626"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559429"
 ---
 # <a name="transactional-churn-prediction-preview"></a>İşlem tabanlı erime tahmini (önizleme)
 
@@ -47,7 +47,7 @@ ms.locfileid: "6095626"
         - **Etkinlik:** Kullanmak istediğiniz etkinliğin adı. Örneğin, bir marketteki "UserAction" adlı alan, müşteri tarafından kullanılan bir kupon olabilir.
         - **Ayrıntılar:** Etkinlikle ilgili ayrıntılı bilgiler. Örneğin, bir marketteki "CouponValue" adlı alan, kuponun para birimi değeri olabilir.
 - Önerilen veri özellikleri:
-    - Yeterli geçmiş veriler: İşlem verileri en az seçili zaman penceresini ikiye katmıyor. Tercihen iki ile üç yıllık abonelik verisi. 
+    - Yeterli geçmiş veriler: İşlem verileri en az seçili zaman penceresini ikiye katmıyor. Tercihen, iki ila üç yıllık işlem geçmişi. 
     - Her müşteri için birden çok satınalma: Ideal olarak her müşteri için en az iki işlem.
     - Müşteri sayısı: en az 10 müşteri profili (tercihen 1.000 benzersiz müşteri). Model 10 adetten az müşteriyi kullanarak başarısız olur ve geçmişteki verileri yetersiz eder.
     - Veri miktarı: sağlanan varlığın veri alanında eksik değerin %20 ' den az olması.

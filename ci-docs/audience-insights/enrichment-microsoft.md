@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305180"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555515"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Müşteri profillerini marka ve ilgi benzerlikleriyle zenginleştirme (önizleme)
 
@@ -27,7 +27,7 @@ Marka benzerlikleri zenginleştirmesini yapılandırmak için **Keşfet** sekmes
 İlgi alanı benzerlikleri zenginleştirmesini yapılandırmak için **Keşfet** sekmesine gidin ve **İlgi alanları** kutucuğunda **Verilerimi zenginleştir**'i seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Markalar ve ilgi alanları](media/BrandsInterest-tile-Hub.png "Markalar ve İlgi alanları")
+   > ![Markalar ve İlgi Alanları kutucukları.](media/BrandsInterest-tile-Hub.png "Markalar ve İlgi alanları")
 
 ## <a name="how-we-determine-affinities"></a>Benzeşimler nasıl belirlenir?
 
@@ -123,7 +123,7 @@ Müşteri verilerinizin boyutuna bağlı olarak bir zenginleştirme çalıştır
 
 Zenginleştirme işlemini çalıştırdıktan sonra toplam zenginleştirilmiş müşteri sayısını ve zenginleştirilmiş müşteri profillerindeki markaların veya ilgi alanlarının bir dökümünü incelemek için **Zenginleştirmelerim**'e gidin.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Zenginleştirme işlemini çalıştırdıktan sonra sonuçların önizlemesi":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Zenginleştirme işlemini çalıştırdıktan sonra sonuçların önizlemesi.":::
 
 Grafikte **Zenginleştirilmiş verileri görüntüle**'yi seçerek zenginleştirilmiş verileri inceleyin. Markalar için zenginleştirilmiş veriler **BrandAffinityFromMicrosoft** varlığına gider. İlgi alanları için veriler **InterestAffinityFromMicrosoft** varlığında bulunur. Bu varlıkları, **veri** > **varlıklarındaki** **zenginleştirme** grubunda da bulabilirsiniz.
 
@@ -131,7 +131,7 @@ Grafikte **Zenginleştirilmiş verileri görüntüle**'yi seçerek zenginleştir
 
 Tek müşteri kartlarında marka ve faiz benzeşimleri de görüntülenebilir. **Müşterilere** gidin ve bir müşteri profili seçin. Müşteri kartında, ilgili müşterinin demografik profilindeki kişilere yakın olan markalar veya ilgi alanları grafiklerini bulabilirsiniz.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Zenginleştirilmiş veri içeren müşteri kartı":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Zenginleştirilmiş veriler içeren müşteri kartı.":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

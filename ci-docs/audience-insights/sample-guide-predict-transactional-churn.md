@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306144"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556285"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>İşlem tabanlı erime tahmini (önizleme) örnek kılavuzu
 
@@ -47,7 +47,7 @@ Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek ka
    - **CreatedOn**: Tarih/Saat/Bölge
 
    [!div class="mx-imgBorder"]
-   ![Doğum Tarihini Tarihe Dönüştürme](media/ecommerce-dob-date.PNG "doğum tarihini tarihe dönüştürme")
+   ![Doğum Tarihini Tarihe Dönüştürün.](media/ecommerce-dob-date.PNG "doğum tarihini tarihe dönüştürme")
 
 1. Sağ bölmedeki **Ad** alanında, **Sorgu** veri kaynağınızı **eCommerceContacts** olarak yeniden adlandırın
 

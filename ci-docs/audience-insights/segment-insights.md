@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306098"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555009"
 ---
 # <a name="segment-insights-preview"></a>Segment içgörüleri (önizleme)
 
@@ -44,7 +44,7 @@ Ayrıca, belirli öznitelikler için çakışmanın nasıl değiştiğini analiz
 Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğinde bu içgörüyle ilgili ayrıntıları bulabilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Segment çakışması içgörü ayrıntıları":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Segment çakışması içgörü ayrıntıları.":::
 
 Analiz sonuçlarını görmek için bir içgörü seçin:
 
@@ -77,7 +77,7 @@ Segment farklılığı, bir segmentin müşterilerinizin kalanından veya başka
 Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğinde bu içgörüyle ilgili ayrıntıları bulabilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Segment farklılığı içgörü ayrıntıları":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Segment farklılığı içgörü ayrıntıları.":::
 
 Analiz sonuçlarını görmek için bir içgörü seçin. Farklılık analizi iki sekme içerir. **Öznitelikler** sekmesi, farklılık olarak kabul edilen profil özniteliklerini listeler. **Ölçümler** sekmesi farklılıkları listeler. Her sekme aşağıdaki ayrıntıları içerir:
 
