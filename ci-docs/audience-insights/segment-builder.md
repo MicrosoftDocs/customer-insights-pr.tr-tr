@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685486"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377812"
 ---
 # <a name="create-and-manage-segments"></a>Segmentler oluşturma ve yönetme
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685486"
 > - Öznitelikleri seçmek için bir yan bölme sürekli olarak kullanılabilecektir.
 > - Varlık ilişkisi yollarını belirleme seçeneği.
 > Yeni segment oluşturucuyu denemek için cihelp@microsoft.com adresine "Request to enable the new segment builder" (Yeni segment oluşturucuyu etkinleştirme isteği) başlığıyla bir e-posta gönderin. Kuruluşunuzun adını ve korumalı alan ortamınızın kimliğini ekleyin.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Segment oluşturucunun öğeleri." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Kuralları ve alt kurallarıyla segmentinizi düzenleyin. Her kural veya alt kural, koşullardan oluşur. Koşulları mantıksal işleçlerle birleştirin
+>
+> 2 - Kurala uygulanacak varlıklar arasındaki [ilişki yolunu](relationships.md) seçin. İlişki yolu, bir koşulda hangi özniteliklerin kullanılabileceğini belirler.
+>
+> 3 - Kuralları ve alt kuralları yönetin. Kuralın konumunu değiştirin veya kuralı silin.
+>
+> 4 - Alt kuralları kullanarak koşullar ekleyin ve doğru iç içe yerleştirme düzeyini oluşturun.
+>
+> 5 - Bağlantılı kurallar için ayarlama işlemleri uygulayın.
+>
+> 6 - Kullanılabilir varlık öznitelikleri eklemek veya özniteliklere bağlı olarak koşul oluşturmak için öznitelik bölmesini kullanın. Bölmede, seçilen kural için kullanılabilen seçilen ilişki yoluna bağlı olarak varlıkların ve özniteliklerin listesi gösterilir.
+>
+> 7 - Mevcut kurallara ve alt kurallara özniteliklere bağlı olarak koşul ekleyin veya bunu yeni bir kural için uygulayın.
+>
+> 8 - Segmenti oluştururken değişiklikleri geri alın ve yineleyin.
 
 Birleşik Müşteri varlığı ve ilgili varlıkları etrafında karmaşık filtreler tanımlayın. Her segment işlendikten sonra, dışarı aktarabileceğiniz ve işlem gerçekleştirebileceğiniz bir müşteri kaydı kümesi oluşturur. Segmentler, **Segmentler** sayfasında yönetilir. 
 
@@ -147,6 +164,6 @@ Hızlı segmentler, daha hızlı Öngörüler için hızlı bir şekilde tek bir
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Segmenti dışarı aktarın](export-destinations.md) ve müşteri düzeyinde öngörüler edinmek için [Müşteri Kartı](customer-card-add-in.md) ve [Bağlayıcılar](export-power-bi.md)'ı keşfedin.
+Segmentleri diğer uygulamalarda kullanmak için [segmenti dışarı aktarın](export-destinations.md) ve [Müşteri Kartı tümleştirmesini](customer-card-add-in.md) keşfedin.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

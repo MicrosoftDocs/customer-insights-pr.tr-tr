@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171188"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035255"
 ---
 # <a name="relationships-between-entities"></a>Varlıklar arasındaki ilişkiler
 
@@ -82,7 +82,7 @@ Bu sayfa mevcut ve yeni ilişkiler için bir dizi seçenek sunar:
 
 ### <a name="explore-the-relationship-visualizer"></a>İlişki görselleştiricisini keşfedin
 
-İlişki görselleştiricisi, bağlı varlıklar ve onların kardinalitesi arasındaki mevcut ilişkilerin ağ diyagramını gösterir.
+İlişki görselleştiricisi, bağlı varlıklar ve onların kardinalitesi arasındaki mevcut ilişkilerin ağ diyagramını gösterir. Bu ayrıca ilişki yolunu görselleştirir.
 
 Görünümü özelleştirmek için, tuval üzerinde sürükleyerek kutuların konumunu değiştirebilirsiniz.
 
@@ -92,6 +92,20 @@ Kullanılabilir seçenekler:
 - **Resim olarak dışarı aktar**: Geçerli görünümü bir resim dosyası olarak kaydedin.
 - **Yatay/dikey düzene geç**: Varlıkların ve ilişkilerin hizalama şeklini değiştirin.
 - **Düzenle**: Özel ilişkilerin özelliklerini düzenleme bölmesinde güncelleştirin ve değişiklikleri kaydedin.
+
+### <a name="relationship-path"></a>İlişki yolu
+
+İlişki yolu, kaynak varlık ile hedef varlık arasında ilişkilerle bağlanan varlıkları açıklar. Bu, birleşik profil varlığından farklı varlıklar içeren bir segment veya ölçüm oluştururken kullanılır ve birleşik profil varlığına ulaşmak için birden çok seçenek vardır.
+
+İlişki yolu, sistemin birleşik profil varlığına hangi ilişki üzerinden erişeceği konusunda bilgilendirir. Farklı ilişki yolları, farklı sonuçlar ortaya koyabilir.
+
+Örneğin, *eCommerce_eCommercePurchases* varlığında birleşik profil *Müşteri* varlığı için aşağıdaki ilişki bulunur:
+
+- eCommerce_eCommercePurchases > Müşteri
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Müşteri
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Müşteri 
+
+İlişki yolu, ölçümler veya segmentler için kurallar oluştururken kullanabileceğiniz varlıkları belirler. Eşleşen kayıtlar tüm varlıkların parçası olması gerektiğinden en uzun ilişki yolunun bulunduğu seçeneğin belirlenmesi muhtemelen daha az sonuç ortaya koyar. Bu örnekte, müşterinin bir satış noktasında (POS_posPurchases) e-ticaret (eCommerce_eCommercePurchases) üzerinden mal satın almış olması ve bağlılık programımıza (loyaltyScheme_loyCustomers) katılması gerekir. İlk seçeneği belirlediğinizde müşterilerin yalnızca bir ek varlıkta bulunması gerektiğinden daha fazla sonuç almanız olasıdır.
 
 ## <a name="manage-existing-relationships"></a>Mevcut ilişkileri yönetin 
 
@@ -105,6 +119,6 @@ Bir ilişki seçin ve aşağıdaki seçeneklerden birini belirleyin:
 
 ## <a name="next-step"></a>Sonraki adım
 
-Sistem ve özel ilişkiler, artık yalıtılmış olmayan birden çok veri kaynağını temel alan [segmentler oluşturmak](segments.md) için kullanılır.
+Sistem ilişkileri ve özel ilişkiler, artık yalıtılmış birden fazla veri kaynağına bağlı olarak [segment](segments.md) ve [ölçüm oluşturmak](measures.md) için kullanılır.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

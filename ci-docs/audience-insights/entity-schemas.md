@@ -1,7 +1,7 @@
 ---
 title: Common Data Model'de Customer Insights varlık şemaları
 description: Common Data Model'da varlıklarla çalışın.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692329"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380767"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model'de varlık şemaları
 
@@ -42,7 +42,7 @@ Daha fazla bilgi için [Common Data Model'deki Customer Insights varlık şemala
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Common Data Model varlık gezginini kullanarak varlıkları görüntüleme
 
-Varlıkları [Common Data Model Varlık Gezgini](https://microsoft.github.io/CDM/)'nde görüntüleyebilirsiniz. **GitHub'dan yükle!** seçeneğini belirleyin düğmesini tıklayın ve Customer Insights varlıklarının ve tanımlarının listesini bulabileceğiniz **foundationcommon** > **crmcommon** > **çözümler** > **customerınsights** bölümüne gidin.
+Varlıkları [Common Data Model Varlık Gezgini](https://microsoft.github.io/CDM/)'nde görüntüleyebilirsiniz. Customer Insights varlıklarının ve tanımlarının listesini almak için Insights Uygulaması bölümünden bir varlık seçin.
 > [!div class="mx-imgBorder"]
 > ![CustomerActivity varlığını gösteren CDM Varlık Gezgini.](media/CDM-entity-navigator.png "CustomerActivity varlığını gösteren CDM varlık Gezgini")
 
