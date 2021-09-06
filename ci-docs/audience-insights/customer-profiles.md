@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554642"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032828"
 ---
 # <a name="customer-profiles"></a>Müşteri profilleri
 
@@ -69,7 +69,7 @@ Müşteri arama sayfasına dönmek için **Müşteriler'e dön**'ü seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Daha fazla veri kaynağı ekleyin](data-sources.md) veya [müşteri segmentleri oluşturun](segments.md).
+Diğer uygulamalarda birleşik profillerle çalışmak için [daha fazla veri kaynağı ekleyin](data-sources.md), [birleşik profilleri zenginleştirin](enrichment-hub.md) veya [segmentler oluşturun](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

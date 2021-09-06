@@ -1,6 +1,6 @@
 ---
-title: Customer Insights verilerini Adobe Deneyim Platformu'na dışa aktarma
-description: Adobe Experience platformunda hedef kitle içgörüleri kesimlerinin nasıl kullanılacağını öğrenin.
+title: Customer Insights verilerini Adobe Experience Platform'a dışarı aktarma
+description: Adobe Experience Platform'da hedef kitle içgörüleri segmentlerini kullanmayı öğrenin.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305548"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032141"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Deneyim Platformu'nda (önizleme) Customer Insights segmentlerini kullanma
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Experience Platform'da Customer Insights segmentlerini kullanma (önizleme)
 
-Dynamics 365 Customer Insights'de hedef kitle içgörüler kullanıcısı olarak, ilgili kitleleri hedefleyerek pazarlama kampanyalarınızı daha verimli hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Deneyim Platformu ve Adobe Campaign Standard gibi uygulamalardaki hedef kitle içgörülerindeki segmentleri kullanmak için bu makalede özetlenen birkaç adımı izlemeniz gerekir.
+Dynamics 365 Customer Insights'de hedef kitle içgörüler kullanıcısı olarak, ilgili kitleleri hedefleyerek pazarlama kampanyalarınızı daha verimli hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Experience Platform'da ve Adobe Campaign Standard gibi uygulamalarda hedef kitle içgörülerindeki bir segmenti kullanmak için bu makalede belirtilen birkaç adımı izlemeniz gerekir.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Bu makalede özetlenen adımların süreç diyagramı.":::
 
 ## <a name="prerequisites"></a>Ön koşullar
 
 -   Dynamics 365 Customer Insights lisansı
--   Adobe Deneyim Platformu lisansı
+-   Adobe Experience Platform lisansı
 -   Adobe Campaign Standard lisansı
 -   Azure Blob Depolama hesabı
 
 ## <a name="campaign-overview"></a>Kampanyaya Genel Bakış
 
-Adobe Deneyim platformunda hedef kitle içgörülerindeki segmentleri nasıl kullanabileceğinizi daha iyi anlamak için, hayali bir örnek kampanyaya bakalım.
+Adobe Experience Platform'da hedef kitle içgörülerindeki segmentleri nasıl kullanabileceğinizi daha iyi anlamanız için hayali bir örnek kampanyaya bakalım.
 
-Şirketinizin ABD'deki müşterilerinize abonelik tabanlı aylık bir servis sunduğunu varsayalım. Önümüzdeki sekiz gün içinde aboneliklerinin yenileme tarihi gelecek olan ancak aboneliğini henüz yenilemeyen müşterileri belirlemek istiyorsunuz. Bu müşterileri tutmak için, Adobe Deneyim Platformunu kullanarak onlara e-postayla bir promosyon teklifi göndermek istiyorsunuz.
+Şirketinizin ABD'deki müşterilerinize abonelik tabanlı aylık bir servis sunduğunu varsayalım. Önümüzdeki sekiz gün içinde aboneliklerinin yenileme tarihi gelecek olan ancak aboneliğini henüz yenilemeyen müşterileri belirlemek istiyorsunuz. Bu müşterileri elde tutmak için Adobe Experience Platform'u kullanarak e-posta aracılığıyla bir tanıtım teklifi göndermek isteyebilirsiniz.
 
 Bu örnekte, promosyon amaçlı e-posta kampanyasını bir kez gerçekleştirmek istiyoruz. Bu makalede, kampanyayı birden çok gerçekleştirme durum örneği ele alınmaz.
 
@@ -93,7 +93,7 @@ Verme hedefini kaydettikten sonra, **veri** > **Dışar aktarmalar**'da bulursun
 Artık [segmenti talep üzerine dışa aktarabilirsiniz](export-destinations.md#run-exports-on-demand). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md) ile de çalışır.
 
 > [!NOTE]
-> Dışa aktarılan segmentteki kayıt sayısının, Adobe Campaign Standard lisansınızda izin verilen sınırın içinde olduğundan emin olun.
+> Dışarı aktarılan segmentteki kayıt sayısının izin verilen Adobe Campaign Standard lisansı sınırı içinde olduğundan emin olun.
 
 Dışa aktarılan veriler, yukarıda yapılandırdığınız Azure Blob depolama kapsayıcısında depolanır. Aşağıdaki klasör yolu, kapsayıcınızda otomatik olarak oluşturulur:
 
@@ -105,29 +105,29 @@ Dışa aktarılan varlıklar için *model.json* *%ExportDestinationName%* düzey
 
 Örnek: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Adobe Deneyim platformunda deneyim veri modelini (XDM) tanımlayın
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Adobe Experience Platform'da Experience Data Model (XDM) tanımlama
 
-Hedef kitle içgörülerindeki verilerin Adobe Deneyim Platformunda kullanılmadan önce, deneyim veri modeli şemasını tanımlamamız ve [gerçek zamanlı müşteri profili için verileri yapılandırmanız gerekir](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Hedef kitle içgörülerinden dışarı aktarılan veriler Adobe Experience Platform'da kullanılmadan önce Experience Data Model şemasını tanımlamamız ve [Gerçek Zamanlı Müşteri Profili için verileri yapılandırmamız](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials) gerekir.
 
 [XDM'nin ne olduğunu](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) öğrenin ve [şema kompozisyonunun temellerini](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema) anlayın.
 
-## <a name="import-data-into-adobe-experience-platform"></a>Verileri Adobe deneyim platformuna içe aktarın
+## <a name="import-data-into-adobe-experience-platform"></a>Verileri Adobe Experience Platform ortamına aktarma
 
-Her şey artık hazır olduğundan, profilleri oluşturmak için hazırlanan hedef kitle verilerini hedef kitle içgörülerinden Adobe Deneyim Platformuna aktarmamız gerekir.
+Artık her şey hazır olduğuna göre, hedef kitle içgörülerinden hazırlanan hedef kitle verilerini Adobe Experience Platform'da içeri aktarmamız gerekir.
 
 Önce, [bir Azure Blob depolama kaynak bağlantısı oluşturun](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Kaynak bağlantısını tanımladıktan sonra hedef kitle içgörülerindeki segment çıktısını Adobe Deneyim Platformuna içe aktarmak için bir bulut depolama toplu iş bağlantısı için [bir veri akışı yapılandırın](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials).
+Kaynak bağlantısını tanımladıktan sonra hedef kitle içgörülerindeki segment çıktısını Adobe Experience Platform'da içeri aktarmak üzere bulut depolama alanı toplu bağlantısı için [bir veri akışı yapılandırın](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials).
 
-## <a name="create-an-audience-in-adobe-campaign-standard"></a>Adobe Campaign Standard'da bir hedef kitle oluşturun
+## <a name="create-an-audience-in-adobe-campaign-standard"></a>Adobe Campaign Standard'da hedef kitle oluşturma
 
-Bu kampanyaya e-posta göndermek için Adobe Campaign Standard'ı kullanacağız. Verileri Adobe Experience Platform'a içe aktardıktan sonra Adobe Deneyim Platformundaki verileri kullanarak Adobe Campaign Standard'da [bir hedef kitle oluşturmamız](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) gerekir.
+Bu kampanya için e-posta göndermek üzere Adobe Campaign Standard'ı kullanacağız. Verileri Adobe Experience Platform'da içeri aktardıktan sonra Adobe Experience Platform'daki verileri kullanarak Adobe Campaign Standard'da [bir hedef kitle oluşturmamız](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) gerekir.
 
 
-Adobe deneyim platformundaki verileri temel alan bir hedef kitle tanımlamak için Adobe Campaign Standard'ta [segment oluşturucunun](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) nasıl kullanılacağını öğrenin.
+Adobe Experience Platform'daki verileri temel alan bir hedef kitle tanımlamak için Adobe Campaign Standard'da [segment oluşturucu kullanmayı](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) öğrenin.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Adobe Campaign Standard'ı kullanarak e-posta oluşturma ve gönderme
 
 E-posta içeriğini oluşturun ve ardından e-postanızı [test edin ve gönderin](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages).
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Adobe Campaign Standard'dan yenileme teklifini içeren örnek e-posta.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Adobe Campaign Standard'da yenileme teklifi içeren örnek e-posta.":::
