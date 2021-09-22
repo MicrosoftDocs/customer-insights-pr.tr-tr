@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Dynamics 365 Customer Insights'ta Etkileşim içgörüleri (önizleme) özelliği
+summary: Web siteleriniz için veri toplayın. Tüm siteleriniz üzerinde etkileşimli olarak müşteri etkileşimlerini ve kullanımı anlayın. Gerçek zamanlı davranış analizlerinizi müşteri profili raporlarıyla zenginleştirmek için, etkileşim öngörüleri ve hedef kitle öngörüleri arasındaki derin tümleştirmeyi kullanın. İlgili müşteri verileriyle gerçek zamanlı davranış verileri almak için Web etkinlikleriyle müşteri profillerini zenginleştirin. Müşteri verilerinizde anında değer oluşturmak için işinizi dönüştürün.
+metadata:
+  title: Etkileşim içgörüleri (önizleme) belgeleri
+  description: Yardım Merkezi'nde, etkileşim Öngörüleri için önemli bağlantılar vardır.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036262"
+landingContent:
+- title: Hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Özelliğe genel bakış
+      url: overview.md
+    - text: Koşullar ve kavramlar
+      url: glossary.md
+    - text: Etkileşim içgörülerini keşfetme
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Ekleme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kullanmaya başlama
+      url: get-started.md
+    - text: Çalışma alanı oluştur
+      url: create-workspace.md
+    - text: Web sitenizi işaretleme
+      url: instrument-website.md
+- title: Raporlar
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Raporları görüntüle
+      url: view-reports.md
+    - text: Özel raporlar oluştur
+      url: custom-reports.md
+    - text: Birleşik profiller raporunu görüntüleme
+      url: profile-reports.md
+    - text: Huni raporlar oluştur
+      url: funnel-reports.md
+- title: Olaylar
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: İyileştirilmiş olaylar oluştur
+      url: refined-events.md
+    - text: Olayları dışarı aktar
+      url: export-events.md
+    - text: Kişisel verileri silme ve dışarı aktarma
+      url: delete-export-personal-data.md
+- title: Geliştirici kaynakları
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Geliştirici kaynakları
+      url: developer-resources.md
+    - text: WebSDK örneği
+      url: websdk-sample.md
+    - text: Gelişmiş web SDK senaryoları
+      url: advanced-SDK-implementation.md
+    - text: Android SDK Numunesi
+      url: get-started-android.md
+    - text: iOS SDK örneği
+      url: get-started-ios.md
+- title: Yönetim
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ortamları ve çalışma alanlarını yönetme
+      url: manage-environments-workspaces.md
+    - text: Hedef kitle içgörülerine bağlanın
+      url: configure-connections.md
+    - text: Tanımlama bilgilerini ve kullanıcı onayını yönetme
+      url: user-consent-storage.md
