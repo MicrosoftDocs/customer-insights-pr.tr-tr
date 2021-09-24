@@ -8,12 +8,12 @@ ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 0d04de418326152dafbbf020e6bb6d3b350ca806
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036535"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474127"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights için ürüne genel bakış
 
@@ -33,5 +33,10 @@ ms.locfileid: "7036535"
 1. Gezinti bölmesinde, **Odağınızı seçin** penceresini açmak için **Tüm uygulamalar**'ı seçin.
 1. Seçtiğiniz özelliğe gitmek için **Şimdi gidin** seçeneğini belirleyin.
 
+## <a name="pricing-and-licensing"></a>Fiyatlandırma ve lisans
+
+Customer Insights, kiracı başına lisanslanır ve birden fazla özellik içerir. Varsayılan kotayı artırmak için ek kapasite ve lisans satın alabilirsiniz. 
+- [Fiyatlandırmaya genel bakış](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
+- Kapasite ve destek hakları: [Dynamics 365 Lisanslama Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=866544)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

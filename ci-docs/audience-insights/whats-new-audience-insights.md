@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035987"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465229"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -26,6 +26,15 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="august-2021-updates"></a>Ağustos 2021 güncelleştirmeleri
+
+Temmuz ve Ağustos 2021'deki güncelleştirmeler yeni bir özellik, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="extensibility"></a>Genişletilebilirlik
+
+- **Segmentleri Klaviyo'da dışarı aktarma** [Dışarı aktarma hedeflerimizi Klaviyo'yu dahil edecek](export-klaviyo.md) şekilde genişlettik. Artık Klaviyo ile kampanyalar oluşturmak, e-posta pazarlaması yapmak ve belirli müşteri gruplarıyla kullanmak için segmentleri dışarı aktarabilirsiniz. 
+
 
 ## <a name="june-2021-updates"></a>Haziran 2021 güncelleştirmeleri
 

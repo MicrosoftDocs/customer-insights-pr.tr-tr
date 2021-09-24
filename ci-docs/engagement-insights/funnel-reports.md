@@ -4,17 +4,17 @@ description: Hedef kitlenin nasıl karar vergetirdiğini anlamak için huni rapo
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032279"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498666"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Hunü raporları oluşturma ve yönetme
 
@@ -158,4 +158,21 @@ Bir huni raporunun adını değiştirebilir, silebilir veya rapordaki adımları
 1. Raporu açmak için bir ad seçin.
 
 1. Kaldırmak istediğiniz adımı ve ardından **Sil**'i seçin.
+
+## <a name="funnel-insights"></a>Huni içgörüleri 
+
+Etkileşim içgörüleri artık müşterilere yönelik huni içgörüleri sunmaktadır. Huni raporunuzdaki adımlar hakkında müşteri davranışıyla ilgili daha fazla bilgi edinmek için huni içgörülerini kullanın. Yeni bir huni raporu oluşturup kaydettiğinizde, raporunuzda otomatik olarak huni içgörüleri üretilir. 
+
+Aşağıdaki kategorilerden herhangi ikisinde de ana ve adım düzeylerinde huni içgörülerini görüntüleyebilirsiniz: 
+
+ - Dönüştürme oranı 
+ - Geçiş süresi 
+ - Tamamlanma süresi 
+
+Müşteri davranışını keşfetmek ve huni raporunuz için bırakma noktalarını ve dönüşümleri daha iyi anlamak için bu içgörüleri kullanın. 
+
+Huni içgörüleri her 24 saatte bir veya huni raporunuzu **Kaydettiğinizde** yeniden hesaplanır. 
+
+> [!NOTE]
+> Huniniz için içgörüleri görüntülemek üzere, her değişiklik yaptığınızda raporunuzu kaydetmeniz gerekir. 
 

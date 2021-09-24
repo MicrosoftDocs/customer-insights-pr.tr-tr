@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesinde varlıkları eşleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035026"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494343"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
@@ -66,7 +66,7 @@ Birleştirilmiş özniteliklerin görünen ad değiştirin. Çıkış varlığı
 
 Birleşik müşteri profilinden öznitelik dışlayın. Alan başka bir işlemde (örneğin, bir segmentteki) kullanılıyorsa, bu işlemlerden müşteri profilinden hariç tutularak bunları kaldırın. 
 
-1. Birleşik alanını seçin.
+1. Birleştirilmiş bir alanı seçin.
   
 1. **Diğer göster**'i ve **Hariç tut**'u seçin.
 
@@ -76,17 +76,40 @@ Birleşik müşteri profilinden öznitelik dışlayın. Alan başka bir işlemde
 
 **Birleştirme** sayfasında, hariç tutulan tüm alanların listesini görmek için **dışlanmış alanlar**'ı seçin. Bu bölme, dışarıda tutulan alanları eklemenize olanak tanır.
 
+## <a name="edit-a-merged-field"></a>Birleştirilmiş bir alanı düzenleyin
+
+1.  Birleştirilmiş bir alanı seçin.
+
+1.  **Diğer göster**'i ve **Düzenle**'yi seçin.
+
+1.  Üç seçenekten birinden alanları nasıl kombine edeceğinizi veya birleştireceğinizi belirtin:
+    - **Önem**: Katılan alanlar için belirtilen önem derecesine dayalı olarak kazanan değeri tanımlar. Bu, varsayılan birleştirme seçeneğidir. Önem derecesini ayarlamak için **Yukarı/aşağı hareket**'i seçin.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Alanları birleştir iletişim kutusunda önem seçeneği."::: 
+    - **En son**: Kazanan değeri, en yeniliği temel alarak belirler. Birleştirme alanları kapsamındaki her bir katılımcı varlık için bir tarih veya sayısal alan olmasını zorunlu tutar.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Alanları birleştir iletişim kutusunda yenilik seçeneği.":::
+    - **En eski**: Kazanan değeri, en eskiliği temel alarak belirler. Birleştirme alanları kapsamındaki her bir katılımcı varlık için bir tarih veya sayısal alan olmasını zorunlu tutar.
+
+1.  Birleştirme işleminde yer alacak başka alanlar da ekleyebilirsiniz.
+
+1.  Birleştirilmiş alanı yeniden adlandırabilirsiniz.
+
+1. Yaptığınız değişiklikleri uygulamak için **Bitti**'yi seçin.
+
+1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
+
 ## <a name="manually-combine-fields"></a>Manuel olarak Birleştirilecek alanlar
 
 Birleştirilmiş bir özniteliği el ile belirtin. 
 
 1. **Birleştirme** sayfasında **Alanları Birleştir**'i seçin.
 
-1. Bir **ad** ve bir **Çıkış alan adı** girin.
+1. **Alanları birleştirme ölçütü** açılır listesinde birleştirme kazanan ilkesini belirleyin.
 
 1. Eklenecek alan seçin. Daha fazla alanı Birleştirmek için **Alanları ekle**'yi seçin.
 
-1. Dışlamayı onaylayın.
+1. Bir **ad** ve bir **Çıkış alan adı** girin.
+
+1. Değişiklikleri uygulamak için **Bitti**'yi seçin.
 
 1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
 
@@ -103,6 +126,27 @@ Bazı varlıklar diğerlerine göre daha fazla ayrıntı içerir. Bir varlık bi
 1. Değişikliği onaylayın.
 
 1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin.
+
+## <a name="configure-customer-id-generation"></a>Müşteri kimliği oluşturmayı yapılandırma 
+
+Birleştirme alanlarını yapılandırdıktan sonra, benzersiz müşteri profili tanımlayıcıları olan CustomerID değerlerinin nasıl oluşturulacağını tanımlayabilirsiniz. Veri birleşme işlemindeki birleştirme adımı benzersiz müşteri profili tanımlayıcısı oluşturur. Tanımlayıcı, veri birleşme işleminden elde edilen *Müşteri* varlığındaki CustomerId'dir. 
+
+Müşteri varlığındaki CustomerId, null olmayan kazanan birincil anahtarların ilk değerinin karmasını temel alır. Bu tuşlar, eşleştir ve birleştir aşamasında kullanılan varlıklardan gelir ve eşleştirme sırasıyla etkilenir.Bu nedenle, üretilen CustomerID, eşleştirme emrinin birincil varlığında birincil anahtar değerinin değiştiği zaman değiştirilebilir. Sonuç olarak, birincil anahtar değeri her zaman aynı müşteriyi temsil etmiyor olabilir.
+
+Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanızı sağlar.
+
+**Benzersiz müşteri kimliğini yapılandır**
+
+1. **Birleştir** > **Birleştir**'e gidin.
+
+1. **Birleştir** sayfasında, **Anahtarlar** sekmesini seçin. 
+
+1. **CustomerId** satırı üzerine gelin ve **Yapılandır** seçeneğini belirleyin.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Kimlik oluşturmayı özelleştirme denetimi.":::
+
+1. Benzersiz bir müşteri kimliği oluşturacak ve daha kararlı olacak şekilde en fazla beş alan seçin. Yapılandırmanızla eşleşmeyen kayıtlar sistem tarafından yapılandırılmış bir kimlik kullanır.  
+
+1. **Bitti**'yi seçin ve değişikliklerinizi uygulamak için birleştirme işlemini çalıştırın.
 
 ## <a name="run-your-merge"></a>Birleştirmenizi çalıştırma
 

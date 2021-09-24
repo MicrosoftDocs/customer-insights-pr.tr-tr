@@ -1,20 +1,20 @@
 ---
 title: Ürün önerisi tahmini
 description: Müşterinin satın alabileceği veya etkileşimde bulunabileceği ürünleri tahmin edin.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034980"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494563"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Ürün önerisi tahmini (önizleme)
 
@@ -89,23 +89,24 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 
 ### <a name="add-required-data"></a>Gerekli verileri ekleyin
 
-1. **Müşteri işlem geçmişi** için **Veri ekle**'yi seçin ve [ön koşullar](#prerequisites) bölümünde açıklanan şekilde işlem/satın alma geçmişi bilgilerini sağlayan varlığı seçin.
+1. **Veri ekle**'yi seçin ve gerekli hareket veya satın alma geçmişi bilgilerini içeren aktivite türünü yan bölmede seçin.
 
-1. Anlamsal alanları, satın alma geçmişi varlığınızdaki özniteliklerle eşleyin ve **İleri**'yi seçin. Alanların açıklamaları için [ön koşullara](#prerequisites) göz atın.
-   > [!div class="mx-imgBorder"]
-   > ![Varlık ilişkisini tanımlayın.](media/product-recommendation-purchasehistorymapping.PNG "Seçili satın alma geçmişi varlığındaki alanlarla eşlenen anlamsal öznitelikleri gösteren satın alma geçmişi sayfası")
+1. **Aktiviteleri seçin**'in altında, hesaplamanın odaklanmasını istediğiniz seçili aktiviteden belirli etkinlikleri seçin.
 
-1. Alanlar doldurulmamışsa satın alma geçmişi varlığınızdan *Müşteri* varlığına olan ilişkiyi yapılandırın.
-    1. **Satın alma geçmişi varlığı**'nı seçin.
-    1. Satın alma geçmişi varlığındaki müşteriyi tanımlayan **Alan**'ı seçin. *Müşteri* varlığınızın birincil müşteri kimliğiyle ilişkilendirilmesi gerekir.
-    1. Birincil müşteri varlığınızla eşleşen **Müşteri varlığı**'nı seçin.
-    1. İlişkiyi açıklayan bir ad girin.
-       > [!div class="mx-imgBorder"]
-       > ![Müşteriyle oluşturulan bir ilişkiyi gösteren satın alma geçmişi sayfası.](media/model-purchase-join.png "Müşteriyle oluşturulan bir ilişkiyi gösteren satın alma geçmişi sayfası")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Anlam türü altında belirli etkinlikleri seçmeyi gösteren yan bölme.":::
+
+1. Etkinliği henüz anlamsal bir türle eşleştirmediyseniz, bunu yapmak için **Düzenle**'yi seçin. Anlamsal etkinliklerin eşlenme destekli deneyim açılır. Verilerinizi, seçili etkinlik türünün karşılık gelen alanlarıyla eşleyin.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Sayfa ayarı etkinlik türü.":::
+
+1. Etkinliği karşılık gelen anlamsal türle eşleştirdikten sonra, devam etmek için **İleri**'yi seçin 
+ 
+1. Anlamsal öznitelikleri, modeli çalıştırmak için gereken alanlarla eşleyin.
 
 1. **Kaydet**'i seçin.
 
 1. **İleri**'yi seçin.
+
 
 ### <a name="configure-product-filters"></a>Ürün filtreleri yapılandırın
 

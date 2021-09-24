@@ -4,17 +4,17 @@ description: Çalışma alanları ve ortamlar oluşturma, yeniden adlandırma ve
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034066"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486063"
 ---
 # <a name="manage-environments-and-workspaces"></a>Ortamları ve çalışma alanlarını yönetme
 
@@ -85,13 +85,11 @@ Bir ortamda birden çok çalışma alanını eşzamanlı olarak tutabilirsiniz. 
 
 1. Erişim vermek ve [rol atamak](user-roles.md) için **üye Ekle**'yi seçin. Şu anda yalnızca **çalışma alanı yöneticisi** kullanılabilir.
 
-1. [hedef kitle içgörülerine bir bağlantı](configure-connections.md) ayarladığınızda , üyenin [kullanıcı profillerine](profile-reports.md) göre raporları görmesine izin vermek için **profil verilerine erişime izin ver**'i seçebilirsiniz.
-
 1. Bunları çalışma alanınıza eklemek için **üye Ekle**'yi seçin.
 
 ## <a name="manage-an-environment"></a>Ortamı yönetme
 
-Ortam Yöneticisi olarak, bir ortama sol gezinti bölmesinden erişebilirsiniz. Ortam ayarlarını, başka ortam yöneticileri, çalışma alanlarını ve [bağlantıları hedef kitle öngörü](configure-connections.md) olarak yapılandırabilirsiniz. Yönetim merkezinde farklı alanlar arasında gezinmek için sekmeler 'i seçin.
+Ortam Yöneticisi olarak, bir ortama sol gezinti bölmesinden erişebilirsiniz. Ortam ayarlarını, diğer ortam yöneticileri ve çalışma alanlarını yapılandırabilirsiniz. Yönetim merkezinde farklı alanlar arasında gezinmek için sekmeler 'i seçin.
 
 :::image type="content" source="media/New-environment.png" alt-text="Ortam yönetim merkezi.":::
 
@@ -123,8 +121,6 @@ Ortam Yöneticisi olarak, bir ortama sol gezinti bölmesinden erişebilirsiniz. 
 
 1. Üyeleri güncellemek ve [rol atamak](user-roles.md) için **üye Ekle**'yi seçin. Şu anda yalnızca **Ortam yöneticisi** kullanılabilir.
 
-1. [hedef kitle içgörülerine bir bağlantı](configure-connections.md) ayarladığınızda , üyenin [kullanıcı profillerine](profile-reports.md) göre raporları görmesine izin vermek için **profil verilerine erişime izin ver**'i seçebilirsiniz.
-
 1. Bunları ortamınıza eklemek için **üye Ekle**'yi seçin.
 
 ### <a name="delete-an-environment"></a>Ortamı silme
@@ -143,7 +139,7 @@ Ortam yöneticileri ortamları silebilir. Ortamı silmeden önce altındaki tüm
 
 Hedef kitle öngörüler için bağlantılar kurma, tümleşik müşteri profillerine dayalı etkileşim içgörülerinde raporları görmenizi sağlar. 
 
-Daha fazla bilgi için bkz. [Bağlantıları yapılandırma](configure-connections.md).
+Daha fazla bilgi için bkz. [Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Kişisel verileri yönetme
 

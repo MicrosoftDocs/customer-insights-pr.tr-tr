@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Yeni ve güncelleştirilmiş özellikler
       href: audience-insights/whats-new-audience-insights.md
-    - name: Yeni ortam oluştur
-      href: audience-insights/get-started-paid.md
+    - name: Kullanmaya başlama
+      items:
+        - name: Hızlı başlangıç kılavuzu
+          href: audience-insights/get-started.md
+        - name: Yeni ortam oluştur
+          href: audience-insights/get-started-paid.md
+        - name: Hedef kitle içgörülerini keşfedin
+          href: audience-insights/home.md
     - name: Modülleri öğrenme
       items:
         - name: Veri alma
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Gelişmiş adresler
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Azure Haritalar ile zenginleştirme
+          href: audience-insights/enrichment-azure-maps.md
         - name: HERE Technologies ile zenginleştirme
           href: audience-insights/enrichment-here.md
         - name: Leadspace ile zenginleştirme
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: API başvuruları
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Hizmet sınırları
-      href: audience-insights/service-limits.md
-    - name: GDPR kapsamında DSR istekleri
-      href: audience-insights/gdpr.md
 - name: Etkileşim içgörüleri (önizleme)
   items:
     - name: Yardım merkezi
       href: engagement-insights/index.yml
     - name: Özelliğe genel bakış
       href: engagement-insights/overview.md
-    - name: Ücretsiz deneme sürümü
-      href: 'https://pi.dynamics.com/'
     - name: Kullanmaya başlama
       items:
-        - name: Kullanmaya başlama
+        - name: Hızlı başlangıç kılavuzu
           href: engagement-insights/get-started.md
         - name: Çalışma alanı oluştur
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Ortamları ve çalışma alanlarını yönetme
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Bağlantıları yapılandırma
-          href: engagement-insights/configure-connections.md
         - name: Tanımlama bilgilerini ve kullanıcı onayını yönetme
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Kişisel verileri silme ve dışarı aktarma
-          href: engagement-insights/delete-export-personal-data.md
     - name: Bölgesel kullanılabilirlik
       href: engagement-insights/regional-availability.md
-    - name: Hizmet sınırları
-      href: engagement-insights/quotas.md
 - name: Hedef kitle ve etkileşim içgörülerini tümleştirme
   items:
     - name: Hedef kitle içgörülerini ve etkileşim içgörülerini bağlama
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Davranış verilerini bölmek için demografik boyutları kullanma
       href: engagement-insights/curate-dimensions.md
+- name: Hizmet sınırları
+  href: service-limits.md
+- name: DSR hakları ve istekleri
+  href: dsr-rights-requests.md
 - name: Destek alın
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'
