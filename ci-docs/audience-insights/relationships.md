@@ -1,20 +1,20 @@
 ---
 title: Varlıklar ve varlık yolları arasındaki ilişkiler
 description: Birden çok veri kaynağındaki varlıklar arasında ilişkiler oluşturun ve bunları yönetin.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035255"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557376"
 ---
 # <a name="relationships-between-entities"></a>Varlıklar arasındaki ilişkiler
 
@@ -93,11 +93,11 @@ Kullanılabilir seçenekler:
 - **Yatay/dikey düzene geç**: Varlıkların ve ilişkilerin hizalama şeklini değiştirin.
 - **Düzenle**: Özel ilişkilerin özelliklerini düzenleme bölmesinde güncelleştirin ve değişiklikleri kaydedin.
 
-### <a name="relationship-path"></a>İlişki yolu
+## <a name="relationship-paths"></a>İlişki yolları
 
-İlişki yolu, kaynak varlık ile hedef varlık arasında ilişkilerle bağlanan varlıkları açıklar. Bu, birleşik profil varlığından farklı varlıklar içeren bir segment veya ölçüm oluştururken kullanılır ve birleşik profil varlığına ulaşmak için birden çok seçenek vardır.
+İlişki yolu, bir kaynak varlık ve bir hedef varlık arasında ilişkiler ile birbirine bağlanan varlıkları açıklar. Bu, birleşik profil varlığından farklı varlıklar içeren bir segment veya ölçüm oluştururken kullanılır ve birleşik profil varlığına ulaşmak için birden çok seçenek vardır. 
 
-İlişki yolu, sistemin birleşik profil varlığına hangi ilişki üzerinden erişeceği konusunda bilgilendirir. Farklı ilişki yolları, farklı sonuçlar ortaya koyabilir.
+İlişki yolu, hangi ilişkilerin birleşik profil varlığına erişebileceği konusunda sisteme bilgi verir. Farklı ilişki yolları, farklı sonuçlar ortaya koyabilir.
 
 Örneğin, *eCommerce_eCommercePurchases* varlığında birleşik profil *Müşteri* varlığı için aşağıdaki ilişki bulunur:
 
@@ -106,6 +106,42 @@ Kullanılabilir seçenekler:
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Müşteri 
 
 İlişki yolu, ölçümler veya segmentler için kurallar oluştururken kullanabileceğiniz varlıkları belirler. Eşleşen kayıtlar tüm varlıkların parçası olması gerektiğinden en uzun ilişki yolunun bulunduğu seçeneğin belirlenmesi muhtemelen daha az sonuç ortaya koyar. Bu örnekte, müşterinin bir satış noktasında (POS_posPurchases) e-ticaret (eCommerce_eCommercePurchases) üzerinden mal satın almış olması ve bağlılık programımıza (loyaltyScheme_loyCustomers) katılması gerekir. İlk seçeneği belirlediğinizde müşterilerin yalnızca bir ek varlıkta bulunması gerektiğinden daha fazla sonuç almanız olasıdır.
+
+### <a name="direct-relationship"></a>Doğrudan ilişki
+
+Bir kaynak varlık yalnızca bir ilişkiye sahip hedef varlığa bağlı olduğu zaman ilişki **doğrudan ilişki** olarak sınıflandırılır.
+
+Örneğin, *eCommerce_eCommercePurchases* adlı bir etkinlik varlığı yalnızca *ContactId* aracılığıyla *eCommerce_eCommerceContacts* varlığına bağlanırsa, bu doğrudan bir ilişkidir.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Kaynak varlık doğrudan hedef varlığa bağlanır.":::
+
+#### <a name="multi-path-relationship"></a>Çok yollu ilişki
+
+**Çok yollu ilişki**, bir kaynak varlığı birden çok hedef varlığa bağlayan özel bir doğrudan ilişki türüdür.
+
+Örneğin, *eCommerce_eCommercePurchases* adlı bir etkinlik varlığı biri *eCommerce_eCommerceContacts* diğeri *loyaltyScheme_loyCustomers* olan iki hedef varlıkla ilişkiliyse bu çok yollu bir ilişkidir.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Kaynak varlık, birden çok atlamalı ilişki aracılığıyla doğrudan birden fazla hedef varlığa bağlanır.":::
+
+### <a name="indirect-relationship"></a>Dolaylı ilişki
+
+Bir kaynak varlık, hedef varlıkla ilişkilendirilmeden önce bir veya daha fazla ek varlıkla ilişkili olursa bu ilişki **doğrudan ilişki** olarak sınıflandırılır.
+
+#### <a name="multi-hop-relationship"></a>Çok atlamalı ilişki
+
+*Çok atlamalı ilişki*, bir kaynak varlığı bir veya daha fazla ara varlık üzerinden bir hedef varlığa bağlamanıza olanak sağlayan *dolaylı bir ilişkidir*.
+
+Örneğin, *eCommerce_eCommercePurchasesWest* adlı bir etkinlik varlığı *eCommerce_eCommercePurchasesEast* adlı bir ara varlığa bağlanırsa ve sonra *eCommerce_eCommerceContacts* adlı bir hedef varlığa bağlanırsa, bu çok atlamalı bir ilişkidir.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Kaynak varlık, bir ara varlıkla doğrudan hedef varlığa bağlanır.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Çok atlamalı, çok yollu ilişki
+
+Çok atlamalı ve çok yollu ilişkiler **çok atlamalı, çok yollu ilişkiler** oluşturmak üzere birlikte kullanılabilir. Bu özel tür, **çoklu atlama** ve **çok yollu ilişkiler** işlevlerini bir araya getirir. Ara varlıklar kullanırken birden çok hedef varlığa bağlanmanıza olanak sağlar.
+
+Örneğin, *eCommerce_eCommercePurchasesWest* adlı bir etkinlik varlığı *eCommerce_eCommercePurchasesEast* adlı bir ara varlığa bağlanırsa ve sonra *eCommerce_eCommerceContacts* ve *loyaltyScheme_loyCustomers* olmak üzere iki hedef varlığa bağlanırsa bu, çok atlamalı, çok yollu ilişkidir.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Kaynak varlık doğrudan bir hedef varlığa bağlanır ve bir ara varlık aracılığıyla başka bir hedef varlığa bağlanır.":::
 
 ## <a name="manage-existing-relationships"></a>Mevcut ilişkileri yönetin 
 

@@ -242,7 +242,7 @@
   items:
     - name: Yardım merkezi
       href: engagement-insights/index.yml
-    - name: Özelliğe genel bakış
+    - name: Etkileşim içgörüleri hakkında
       href: engagement-insights/overview.md
     - name: Kullanmaya başlama
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Bölgesel kullanılabilirlik
       href: engagement-insights/regional-availability.md
-- name: Hedef kitle ve etkileşim içgörülerini tümleştirme
+- name: Verileri özellikler arasında paylaşma
   items:
     - name: Hedef kitle içgörülerini ve etkileşim içgörülerini bağlama
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR hakları ve istekleri
   href: dsr-rights-requests.md
-- name: Destek alın
-  href: 'https://dynamics.microsoft.com/support/'

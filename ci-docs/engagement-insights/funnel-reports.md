@@ -4,17 +4,17 @@ description: Hedef kitlenin nasıl karar vergetirdiğini anlamak için huni rapo
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498666"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558966"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Hunü raporları oluşturma ve yönetme
 
@@ -163,13 +163,23 @@ Bir huni raporunun adını değiştirebilir, silebilir veya rapordaki adımları
 
 Etkileşim içgörüleri artık müşterilere yönelik huni içgörüleri sunmaktadır. Huni raporunuzdaki adımlar hakkında müşteri davranışıyla ilgili daha fazla bilgi edinmek için huni içgörülerini kullanın. Yeni bir huni raporu oluşturup kaydettiğinizde, raporunuzda otomatik olarak huni içgörüleri üretilir. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Huni içgörüleri.":::
+
+> [!NOTE]
+> Huni içgörüleri yalnızca özel boyutları **içermeyen** huni adımları için oluşturulabilir. Huninizdeki tüm adımlar için huni içgörüleri oluşturmak için, huni adımlarınızı oluşturmak üzere kullanıma hazır etkileşim içgörüleri boyutlarını kullanın. 
+
 Aşağıdaki kategorilerden herhangi ikisinde de ana ve adım düzeylerinde huni içgörülerini görüntüleyebilirsiniz: 
 
- - Dönüştürme oranı 
+ - Dönüştürme oranı
+ -    Sonuçlandırma ve Satınalma arasındaki dönüşüm oranı %22'dir.
  - Geçiş süresi 
+ -    Sepet ile Sonuçlandırma arasındaki ortalama geçiş süresi 23 dakikadır. 
  - Tamamlanma süresi 
+ -    Müşterilerin huniyi tamamlaması için geçen ortalama süre 47 dakikadır. 
 
 Müşteri davranışını keşfetmek ve huni raporunuz için bırakma noktalarını ve dönüşümleri daha iyi anlamak için bu içgörüleri kullanın. 
+
+Farklı adımlardaki içgörüleri karşılaştırmak için içgörüler kartlarından **Adım dökümüne bak** veya **Diğer adımlarla karşılaştır** seçeneğini belirleyin. Bu, huninin her adımı için ölçümleri karşılaştıran bir çubuk grafik görüntüler. 
 
 Huni içgörüleri her 24 saatte bir veya huni raporunuzu **Kaydettiğinizde** yeniden hesaplanır. 
 

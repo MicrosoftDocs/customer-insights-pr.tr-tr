@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035439"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558850"
 ---
 # <a name="set-up-a-trial-environment"></a>Deneme ortamı ayarlama 
 
@@ -95,7 +95,7 @@ Artık Customer Insights'ı senaryonuza uyarlamak için alınan verileri kullana
 
 - Deneme sürümleri varsayılan olarak 30 gün boyunca etkindir. Ancak 23. günden sonra deneme sürümünüzde oturum açtığınızda bu süreyi uzatabilirsiniz.
 - Deneme sırasında çıkış verilerini depolamak için kendi Azure Data Lake Storage hesabınızı kullanamazsınız. Ancak bir Data Lake Storage hesabındaki verileri alabilirsiniz.
-- Customer Insights deneme sürümünü başlattığınızda otomatik olarak hazırlanan Dataverse ortamında en fazla 3 GB veri depolayabilirsiniz.
+- Bir Customer Insights deneme sürümünü başlattığınızda otomatik olarak sağlanacak Dataverse ortamında en fazla 3 GB veri saklayabilirsiniz.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Deneme sürümünden ücretli aboneliğe veri kopyalama
 

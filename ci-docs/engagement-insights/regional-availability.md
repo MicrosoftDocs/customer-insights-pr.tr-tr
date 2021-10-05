@@ -4,16 +4,16 @@ description: Hizmetin dağıtıldığı bölgeler ve coğrafi konumlar hakkında
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
+ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483321"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "7564618"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights için bölgesel kullanılabilirlik
 
@@ -21,9 +21,9 @@ ms.locfileid: "7483321"
 
 Etkileşim içgörüleri, Dynamics 365 Customer Insights uygulamasının bir özelliğidir ve müşterilerin verilerini depolamayı seçebilecekleri daha fazla bölgeyi kademeli olarak sunar. Yöneticiler, [yeni bir ortam oluşturduklarında](manage-environments-workspaces.md#create-an-environment) bir bölge seçebilir. 
 
-Etkileşim içgörülerini ilk kez ayarlıyorsanız [rehberli ilk çalıştırma deneyimi](quickstart.md) sırasında bölgeyi seçebilirsiniz. Daha sonra her yeni ortam, verilerin depolanacağı bölgenin seçilmesine olanak tanır.
+Etkileşim içgörülerini ilk kez ayarlıyorsanız [rehberli ilk çalıştırma deneyimi](quickstart.md) sırasında bölgeyi seçebilirsiniz. Daha sonra, her yeni ortam verilerin saklanacağı bölgeyi seçmenize olanak tanır.
 
-Şu anda iki bölge vardır: ABD ve Avrupa. Kullanıcılar, Batı ABD bölgesi ve Kuzey Avrupa bölgesi arasında seçim yapabilir.
+Şu anda ABD ve Avrupa coğrafi bölgelerini destekliyoruz. Kullanıcılar şu bölgeler arasından seçim yapabilir: Batı ABD, Doğu ABD, Kuzey Avrupa ve Batı Avrupa.
 
 Kuruluş, farklı bölgelerde ortamlara sahip olabilir. Örneğin Ortam A, verileri Batı ABD'de ve Ortam B, Kuzey Avrupa'da depolar.
 

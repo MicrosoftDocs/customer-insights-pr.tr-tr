@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487131"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559042"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma
 
@@ -54,6 +54,9 @@ Etkileşim içgörülerinde **Yönetici** > **Ortam** ayarlarını güncelleşti
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Hedef kitle içgörüleri birleşik profil özniteliklerini ve segmentlerini etkinleştirme
 
 Ortamları bağladıktan sonra bağlantılı ortamlar için isteğe bağlı özellikleri seçebilirsiniz. Bu özellikler, müşteri verilerinde etkileşimli analiz için hedef kitle içgörülerindeki birleşik profil özniteliklerini ve segmentlerini etkinleştirir.
+
+> [!IMPORTANT]
+> Hedef kitle içgörüleri segmentlerinin etkileşim içgörülerinde görünmesi için önce [birleştirme ve aşağı akış işlemlerini çalıştırmanız](../audience-insights/merge-entities.md) gerekir. Etkileşim içgörüleriyle paylaşılmak üzere hedef kitle içgörüleri segmentlerini hazırlayan benzersiz bir tablo oluşturduklarından aşağı akış işlemleri önemlidir. (Sistem yenilemesi zamanlanırsa aşağı akış işlemlerini otomatik olarak içerir.)
 
 **Etkileşim içgörülerinde web verilerini analiz etmek için**
 
