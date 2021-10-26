@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Mailchimp'e dışarı aktarma
 description: Bağlantıyı yapılandırmayı ve Mailchimp'a dışa aktarmayı öğrenin.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033563"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618638"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentleri Mailchimp'e aktarma (önizleme)
 
@@ -29,10 +29,10 @@ Haber bültenleri ve e-posta kampanyaları oluşturmak için birleşik müşteri
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Her Mailchimp'e dışarı aktarma işlemi için en fazla 1 milyon profil.
+- Mailchimp'e dışa aktarma başına 1 milyon müşteri profili.
 - Mailchimp'e dışarı aktarma segmentlerle sınırlıdır.
-- 1000000 profilleriyle segmentleri vermek üç saate kadar sürebilir. 
-- Mailchimp'e dışarı aktarabileceğiniz profil sayısı, Mailchimp ile yaptığınız sözleşmeye bağlıdır ve sınırlıdır.
+- 1 milyon müşteri profilli segmentlerin dışa aktarılması üç saate kadar sürebilir. 
+- Mailchimp'e aktarabileceğiniz müşteri profilleri sayısı, Mailchimp ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Mailchimp bağlantısını ayarlayın.
 
@@ -66,7 +66,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **[Mailchimp hedef kitle kimliğinizi](https://mailchimp.com/help/find-audience-id/)** girin
 
-3. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. 
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. 
 
 1. Isteğe bağlı olarak, daha kişiselleştirilmiş e-postalar oluşturmak için **ad** ve **soyadı** verebilirsiniz. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
 

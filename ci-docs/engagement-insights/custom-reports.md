@@ -4,23 +4,23 @@ description: Özel raporlar oluşturmayı öğrenin.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 2540221710786dc1c84b231fbb23b9749b601cc6a2aeb78614e16002302a80a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3fa801bfc8b0aee65c21b90de2423a3d5d5e4e26
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036987"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582902"
 ---
 # <a name="create-and-edit-custom-reports"></a>Özel raporlar oluşturma ve düzenleme
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Hazır raporların yanı sıra, Kullanıcı davranışını anlamanıza yardımcı olması için grafik ve tablo görselleştirmelerine sahip özel raporlar oluşturabilirsiniz. Bu makalede, tablo ve grafik görselleştirmelerini kullanarak gereksinim duyduğunuz verileri içeren bir raporun nasıl oluşturulacağı açıklanmaktadır. 
+Kullanıma hazır (OOB) raporlara ek olarak, kullanıcı davranışını anlamanıza yardımcı olması amacıyla grafik ve tablo görselleştirmeleri içeren özel bir rapor oluşturabilirsiniz. Bu makalede, tablo ve grafik görselleştirmelerini kullanarak gereksinim duyduğunuz verileri içeren bir raporun nasıl oluşturulacağı açıklanmaktadır. OOB raporları hakkında daha fazla bilgi için bkz. [Raporları görüntüleme](view-reports.md).
 
 ## <a name="create-a-custom-report"></a>Özel rapor oluştur
 
@@ -35,11 +35,13 @@ Hazır raporların yanı sıra, Kullanıcı davranışını anlamanıza yardımc
     - Varsayılan bir tablo görselleştirme oluşturmak için komut çubuğunda **görsel Ekle** seçeneğini belirleyin.
     - Veya **rapor editörü** bölmesinden bir sütun, çubuk, çizgi, alan, pasta, halka veya tablo görselleştirme seçin.
 
-1. **Veri** bölmesinde, görüntülemek üzere kullanılabilir **ölçümlerle** (örneğin, sayfa görünümleri) birini seçin. Ardından, görselleştirme üzerinde gösterilecek **boyutları** ekleyin (örneğin, ülke). Aralarından seçim yapılacak ek seçenekler ekleme hakkında daha fazla bilgi için bkz. [Ölçümleri görüntüleme ve oluşturma](metrics.md) ve [Boyutları görüntüleme ve oluşturma](dimensions.md).
+1. **Görselleştirme düzenleyicisi** bölmesindeki **Veri** bölümünde , **Ölçüler** açılan menüsünden kullanılabilir seçeneklerden (örneğin, sayfa görünümleri) birini seçin. Ayrıca, görselleştirme üzerinde gösterilecek **Boyutlar** (örneğin, ülke) ekleyebilirsiniz. Daha fazla bilgi için bkz. [Ölçümleri görüntüleme ve oluşturma](metrics.md) ve [Boyut görüntüleme ve oluşturma](dimensions.md).
 
-1. **Başlık metni** eklemek ve **konumu** , **veri etiketlerini** ve **ekseni** ayarlamak için **görselleştirme editörü** bölmesinde **tasarım** seçeneğini belirleyin.  Ayrıca, başka bir grafik türünü seçerek de görselleştirmeyi değiştirebilirsiniz.
+   :::image type="content" source="media/page-views.png" alt-text="Raporunuz için bir ölçüm seçin.":::
 
-1. Görsel öğenin boyutunu ve konumunu değiştirebilirsiniz:
+1. **Başlık metni** eklemek ve **Başlık** açıp kapatmak için **Görselleştirme düzenleyicisi** bölmesinin **Tasarım** bölümünü seçin.  Görselleştirme türünü, **pasta grafik** gibi başka bir grafik seçerek de değiştirebilirsiniz.
+
+1. Görsel öğenin boyutunu ve konumunu değiştirmek için:
    - Görselleştirmeyi seçin ve ardından boyutunu ayarlamak için köşelerden veya kenarlıklarından birini sürükleyin.
    - Görsel öğeyi seçin ve yeni bir konuma taşıyın. Konumu değiştirmek için ok tuşlarını da kullanabilirsiniz.
 1. Başka bir görselleştirme eklemek için komut çubuğunda **Görsel ekle**'yi seçin.
@@ -47,17 +49,27 @@ Hazır raporların yanı sıra, Kullanıcı davranışını anlamanıza yardımc
 
 1. Özel rapor için bir ad girin ve oluşturmak için **Kaydet**'i seçin.
  
+## <a name="filter-a-custom-report"></a>Özel rapora filtre uygulama
+
+Bir değer veya zaman aralığına odaklanmak için, özel raporda zaman dilimi veya tarih aralığını seçebilirsiniz.
+
+Bir zaman dilimi seçmek için, rapor görünümünün sağ üst köşesinde raporun açılan listesinden bir değer seçin. Ayrıca **Sabit bir tarih aralığı* da seçebilirsiniz.
+
+:::image type="content" source="media/filter-time-date-range.png" alt-text="Zamana veya tarih aralığına göre filtreleyin.":::
+
+Raporların çoğunda, rapora filtre uygulamak üzere bir boyut veya segment seçmek için, **+ Koşul ekle**'yi seçin. Daha fazla bilgi için bkz. [Segment görüntüleme ve oluşturma](segments.md).
+
 ## <a name="edit-a-custom-report"></a>Özel bir raporu düzenleme
 
 1. Özel rapor listesine erişmek için **Çözümle** > **Özel**'e gidin.
 
 1. Özel rapor listesinde, **diğer [...]** seçeneğini belirleyin. 
 
-1. Raporun adını değiştirmek için **Ayrıntıları Düzenle**'yi seçin.
+1. Raporun adını değiştirmek için **Ad düzenle**'yi seçin.
 
-1. Raporun adını seçin ve görsel öğeleri eklemek, kaldırmak, yeniden konumlandırmak veya yeniden boyutlandırmak için **görseli Ekle** ve **Düzenle** seçeneklerini kullanın.
+1. Raporun adını seçin ve görsel öğeleri eklemek, kaldırmak, yeniden konumlandırmak veya yeniden boyutlandırmak için **+Görsel ekle** ve **Düzenle** seçeneklerini kullanın.
 
-1. Görsel öğe özelliklerini değiştirmek için, **...** öğesini seçin ve sonra **görseli Düzenle** öğesini seçin.
+1. Görsel öğe özelliklerini değiştirmek için, görseli seçin, **...** öğesini seçin ve sonra **Görseli düzenleyin**.
 
    :::image type="content" source="media/edit-visual-control.png" alt-text="Özel raporlar için grafik özelliklerini düzenleyin.":::
 
@@ -72,5 +84,6 @@ Hazır raporların yanı sıra, Kullanıcı davranışını anlamanıza yardımc
 1. Raporu kaldırmak için **Sil**'i seçin.
 
 1. Raporu kalıcı olarak kaldırmak için silme işlemini onaylayın.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

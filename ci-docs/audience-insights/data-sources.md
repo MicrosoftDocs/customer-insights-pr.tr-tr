@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032874"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645379"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
@@ -35,7 +35,7 @@ Veri kaynağını, üç ana yolla ekleyebilirsiniz:
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Şirket içi veri kaynaklarından veri ekleme
 
-Audience Insights'daki yerinde veri kaynaklarından alınan veriler Microsoft Power Platform veri akışlarına göre desteklenmektedir. Veri akışları, ortam ayarlanırken [Microsoft Dataverse ortam URL 'Si sağlanarak](get-started-paid.md) Customer Insights'ta etkinleştirilebilir.
+Audience Insights'daki yerinde veri kaynaklarından alınan veriler Microsoft Power Platform veri akışlarına göre desteklenmektedir. Veri akışları, ortam ayarlanırken [Microsoft Dataverse ortam URL 'Si sağlanarak](create-environment.md) Customer Insights'ta etkinleştirilebilir.
 
 Bir Dataverse ortamı Customer Insights ile ilişkilendirdikten sonra oluşturulan veri kaynakları, [Power Platform veri akışlarını](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) kullanır. Veri akışları, veri ağ geçitlerini kullanarak önceden ön bağlanabilirliği destekler. [Yerinde veri ağ geçitlerini kullanmak](/data-integration/gateway/service-gateway-app) üzere bir Dataverse ortamı ilişkilendirilmeden önce varolan veri kaynaklarını kaldırıp yeniden oluşturun.
 

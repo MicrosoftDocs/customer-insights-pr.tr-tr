@@ -1,7 +1,7 @@
 ---
 title: Ortamları oluşturma ve yönetme
 description: Hizmete kaydolmayı ve ortamları yönetmeyi öğrenin.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034201"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645150"
 ---
 # <a name="manage-environments"></a>Ortamları yönet
 
@@ -26,7 +26,7 @@ Ortamları değiştirmek için sayfanın sağ üst köşesindeki **Ortam** denet
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Ortamlara geçiş yapmak için denetimin ekran görüntüsü.":::
 
-Yöneticiler ortamları [oluşturabilir](get-started-paid.md) ve yönetebilir.
+Yöneticiler ortamları [oluşturabilir](create-environment.md) ve yönetebilir.
 
 ## <a name="edit-an-existing-environment"></a>Mevcut bir ortamı düzenleme
 
@@ -36,23 +36,9 @@ Varolan ortamların bazı ayrıntılarını düzenleyebilirsiniz.
 
 2.  **Düzenle** simgesini seçin.
 
-3. **Ortamı düzenle** kutusunda, ortamın **Görünen ad**'ını güncelleştirebilirsiniz ancak **Bölge**'yi veya **Tür**'ü değiştiremezsiniz.
+3. **Ortamı düzenle** kutusunda, ortam ayarlarını güncelleştirebilirsiniz.
 
-4. Bir ortam Azure Data Lake Storage'de veri depolamak üzere yapılandırılmışsa, **Hesap anahtarını** güncelleştirebilirsiniz. Ancak **Hesap adı**'nı veya **Kapsayıcı** adını değiştiremezsiniz.
-
-5. İsteğe bağlı olarak, hesap anahtarı tabanlı bir bağlantıdan kaynak tabanlı veya abonelik tabanlı bir bağlantıya güncelleştirebilirsiniz. Yükseltme işlemi yaptığınızda güncelleştirmeden sonra hesap anahtarına geri dönemezsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). Bağlantıyı güncelleştirdiğinizde **Kapsayıcı** bilgilerini değiştiremezsiniz.
-
-6. İsteğe bağlı olarak, **Microsoft Dataverse ile veri paylaşımı Yapılandır ve ek özellikleri etkinleştir** altında Microsoft Dataverse ortam URL'si sağlayabilirsiniz. Bu yetenekler, Microsoft Dataverse'i temel alan uygulama ve çözümlerle veri paylaşımı, yerinde veri kaynaklarından veri alımı veya [tahminlerin](predictions.md) kullanılmasını içerir. Customer Insights çıktı verilerini Microsoft Dataverse Yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
-
-   > [!NOTE]
-   > - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydettiğinizde, Microsoft Dataverse Yönetilen Data Lake ile veri paylaşımı şu anda desteklenmemektedir.
-   > - Microsoft Dataverse tarafından yönetilen veri gölüyle veri paylaşımını etkinleştirdiğinizde, [varlıktaki eksik değerleri tahmin etme](predictions.md) ve hedef kitle içgörülerindeki (ortamınızda etkinse) PowerBI Katıştırılmış raporlar şu anda desteklenmemektedir.
-
-   Microsoft Dataverse ile veri paylaşımını etkinleştirdikten sonra veri kaynaklarınız ve diğer işlemler için tam yenileme başlatılır. İşlemler çalışır durumdaysa, Microsoft Dataverse ile veri paylaşımını etkinleştirme seçeneğini görmezsiniz. Bu işlemlerin tamamlanmasını bekleyin veya veri paylaşımını etkinleştirmek için iptal edin. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri.":::
-   
-   Veri alımı veya segment oluşturma gibi işlemleri çalıştırdığınızda yukarıda belirttiğiniz depolama hesabında karşılık gelen klasörler oluşturulur. Çalıştırdığınız işleme bağlı olarak veri dosyaları ve model.json dosyaları oluşturulur ve ilgili alt klasörlere eklenir.
+Ortam ayarları hakkında daha fazla bilgi için [Yeni ortam oluşturma](create-environment.md) konusuna bakın.
 
 ## <a name="copy-the-environment-configuration"></a>Ortam yapılandırmasını kopyalama
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Microsoft Advertising'e aktarma
 description: Bağlantıyı yapılandırmayı ve Microsoft Advertising'e aktarmayı öğrenin.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8f8a4cbb9590f9c5311789154319283530e0a10343cccbe9c7aec99765b4fbf2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031496"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618085"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmentleri Microsoft Advertising'e aktarma (önizleme)
 
@@ -29,9 +29,9 @@ Müşteri Eşleştirme hedef kitleleri oluşturmak için Customer Insights segme
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Microsoft Advertising'e aktarma işlemi başına en fazla 500 profili aktarabilirsiniz.
+- Microsoft Advertising'e dışa aktarma başına en fazla 500.000 müşteri profili aktarabilirsiniz.
 - Microsoft Advertising'e aktarma segmentlerle sınırlıdır.
-- 500 K profilin Microsoft Advertising'e aktarılması için en fazla 10 dakika geçmesi gerekebilir. 
+- Microsoft Advertising'e 500.000'e kadar milyona kadar müşteri profili vermenin tamamlanması 10 dakikaya kadar sürebilir. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Microsoft Advertising'e bağlantıyı ayarlama
@@ -68,7 +68,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Microsoft Advertising Müşteri Kimliğinizi ve Hesap Kimliğinizi** girin. Microsoft Advertising'de oturum açtığınızda, URL'nin parametrelerinde Müşteri Kimliği (`cid`) ve Hesap Kimliğini (`aid`) bulabilirsiniz.
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, birleştirilmiş müşteri profilinizde müşterinin e-posta adresini içeren alanı seçin. Microsoft Advertising'e segmentleri aktarmak gerekir.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresi olan alanı seçin. Microsoft Advertising'e segmentleri aktarmak gerekir.
 
 1. **Kaydet**'i seçin.
 

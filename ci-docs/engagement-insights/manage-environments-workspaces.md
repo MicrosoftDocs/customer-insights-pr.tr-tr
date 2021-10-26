@@ -4,17 +4,17 @@ description: Çalışma alanları ve ortamlar oluşturma, yeniden adlandırma ve
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486063"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645470"
 ---
 # <a name="manage-environments-and-workspaces"></a>Ortamları ve çalışma alanlarını yönetme
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486063"
 
 ## <a name="overview"></a>Genel bakış
 
-Bir çalışma alanı, olayları ve raporları nasıl depolacağınıza ve yönetirsiniz. Kullanıcı etkinliklerini gerçek zamanlı olarak görüntüleyebileceğiniz yer. Çalışma alanı oluştururken, çalışma alanına göndermek istediğiniz veri türünü seçersiniz. Web verileri ve mobil uygulamalar şu anda desteklenmektedir.
+Bu konu, çalışma alanlarının ve ortamların önceden oluşturulduktan sonra nasıl yönetileceğini açıklar. 
 
-Ortam, çalışma alanlarınızı ve bağlantılarınızı yönettiğiniz bir boşluktur. Ortamları nasıl kullanacağınız, kuruluşunuza ve kullanım servis talebine bağlıdır. Örneğin, şunları yapabilirsiniz:
+- Bir *çalışma alanı*, olayları ve raporları depolayıp yöneteceğiniz bir alandır. Kullanıcı etkinliklerini gerçek zamanlı olarak görüntüleyebileceğiniz yer. Çalışma alanı oluştururken, çalışma alanına göndermek istediğiniz veri türünü seçersiniz. Web verileri ve mobil uygulamalar şu anda desteklenmektedir. Daha fazla bilgi için bkz. [Çalışma alanı oluşturma ve üye ekleme](create-workspace.md).
 
--   Tek ortam.
--   Test ve üretim için ayrı ortamlar.
--   Kuruluşunuzda her hedef kitle için ilgili olayları içeren belirli takımlar veya departmanlar için ayrı ortamlar.
--   Şirketinizin farklı genel dallarına yönelik ayrı ortamlar.
--   Customer Insights Hedef kitle içgörüleri özelliğine bağlantılar.
+- *Ortam*, çalışma alanlarınızı ve bağlantılarınızı yönettiğiniz bir alandır. Daha fazla bilgi için [Yeni ortam oluşturma](create-new-environment.md) konusuna bakın.
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Bir ortam seçin ve bir çalışma alanı oluşturun 
-
-Her çalışma alanının bir ortamda olması gerekir. Bir çalışma alanı oluştururken önceden varolan bir ortamı veya yeni bir ortam seçebilirsiniz. Sonra, çalışma alanı üyeleri eklemeyi ve veri toplamayı başlatmayı seçebilirsiniz.
-
-**İlk çalışma alanınızı oluşturmak için**
-
-1. Etkileşim içgörülerinde çalışma alanı değiştiriciden **Yeni**'yi seçin. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Customer Insights sayfası çalışma alanı seçici.":::
-
-1. Listeden bir ortam seçin veya **Yeni ortam oluştur** seçeneğini belirleyin.
-
-1. **Çalışma alanı adına** bir ad girin. 
-
-1. Bir Web sitesinde veya mobil uygulamada neler olduğunu ölçmek istediğinize bağlı olarak, oluşturmak istediğiniz ortam türünü seçin. 
-
-1. Üyeleri ekleyebilir ve **Rol** listesinden izin düzeylerini atayabilirsiniz. Ardından çalışma alanını oluşturmak için **son**'u veya kod yüklemek için **ileri**'yi seçin. 
-
-1. Veri almaya başlamak için kod parçacığı kodu yükledikten sonra **Bitti**'yi seçin. 
-
-## <a name="manage-a-workspace"></a>Çalışma alanlarını yönetme
+## <a name="manage-an-existing-workspace"></a>Mevcut çalışma alanını yönetme
 
 Bir ortamda birden çok çalışma alanını eşzamanlı olarak tutabilirsiniz. [Rolünüz](user-roles.md) uygulamasında nasıl çalışabileceğinizi belirler. 
 
  - Çalışma alanını yönetmek için ortam yöneticisi veya çalışma alanı yöneticisi olmanız gerekir.
  - Çalışma alanı yöneticisi olarak, varolan çalışma alanlarını yeniden adlandırabilir veya silebilirsiniz. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Çalışma alanı merkezi.":::
 
 ### <a name="edit-a-workspace-name"></a>Çalışma alanı adını düzenleme
 
@@ -75,7 +53,7 @@ Bir ortamda birden çok çalışma alanını eşzamanlı olarak tutabilirsiniz. 
 
 1. **Çalışma alanını sil**'i seçin. 
 
-1. **Çalışma alanı sil** diyalogunda **SİLİ ONAYLA** girin. 
+1. **Çalışma alanını Sil** iletişim kutusunda, büyük harflerle **SİLMEYİ ONAYLA** yazın. 
 
 1. Çalışma alanını kalıcı olarak silmek için **Sil**'i seçin.
 
@@ -87,27 +65,11 @@ Bir ortamda birden çok çalışma alanını eşzamanlı olarak tutabilirsiniz. 
 
 1. Bunları çalışma alanınıza eklemek için **üye Ekle**'yi seçin.
 
-## <a name="manage-an-environment"></a>Ortamı yönetme
+## <a name="manage-an-existing-environment"></a>Mevcut ortamı yönetme
 
-Ortam Yöneticisi olarak, bir ortama sol gezinti bölmesinden erişebilirsiniz. Ortam ayarlarını, diğer ortam yöneticileri ve çalışma alanlarını yapılandırabilirsiniz. Yönetim merkezinde farklı alanlar arasında gezinmek için sekmeler 'i seçin.
+Ortam yöneticisi olarak, bir ortama sol gezinti bölmesinden erişebilirsiniz. Ortam ayarlarını, diğer ortam yöneticileri ve çalışma alanlarını yapılandırabilirsiniz. Yönetim merkezinde farklı alanlar arasında gezinmek için sekmeler 'i seçin.
 
-:::image type="content" source="media/New-environment.png" alt-text="Ortam yönetim merkezi.":::
-
-### <a name="create-an-environment"></a>Ortam oluşturun
-
-1. Çalışma alanı seçicide **+Yeni**'yi seçin.
-
-1. Rehberli deneyimde, **Ortam** açılan menüsünü açın ve **Yeni ortam oluştur**'u seçin. 
-
-1. **Ortam adı** sağlayın.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Ortam ayrıntılarını belirtmek için rehberli deneyimi kullanın.":::
-
-1. **Bölge**'yi seçin ve **İleri**'yi belirleyin. 
-
-1. Çalışma Alanı adı sağlayın ve oluşturmak istediğiniz çalışma alanı türünü seçin. 
-
-1.  İsteğe bağlı olarak üyeler ekleyin ve kod parçacığını kopyalayarak oluşturma işlemini tamamlayın.
+:::image type="content" source="media/environment-edit.png" alt-text="Ortam yönetim merkezi.":::
 
 ### <a name="rename-an-environment"></a>Ortamı yeniden adlandırma
 
@@ -131,7 +93,7 @@ Ortam yöneticileri ortamları silebilir. Ortamı silmeden önce altındaki tüm
 
 1. **Ortamı sil**'i seçin. 
 
-1. **Çalışma alanı sil** diyalogunda **SİLİ ONAYLA** girin. 
+1. **Çalışma alanını Sil** iletişim kutusunda, büyük harflerle **SİLMEYİ ONAYLA** yazın. 
 
 1. Ortamı kalıcı olarak silmek için **Sil**'i seçin.
 

@@ -1,7 +1,7 @@
 ---
 title: Müşteri etkinlikleri
 description: Müşteri etkinliklerini tanımlayın ve bunları müşteri profillerinde bir zaman çizelgesinde görüntüleyin.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494435"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617993"
 ---
 # <a name="customer-activities"></a>Müşteri etkinlikleri
 
@@ -24,8 +24,7 @@ Aktiviteleri kronolojik olarak listeleyen bir zaman çizelgesi oluşturmak için
 
 Veri kaynaklarınız, birden çok veri kaynağından işlem tabanlı ve aktivite verilerine sahip varlıkları içerir. Bu varlıkları tanımlayın ve müşterinin zaman çizelgesinde görüntülemek istediğiniz aktiviteleri seçin. Hedef aktivitenizi veya aktivitelerinizi içeren varlığı seçin.
 
-> [!NOTE]
-> Varlığın müşteri zaman çizelgesine dahil edilmesi için **Tarih** türünde en az bir özniteliği olması gerekir ve **Tarih** alanları olmayan varlıkları ekleyemezsiniz. Böyle bir varlık bulunmazsa **Aktivite ekle** denetimi devre dışı bırakılır.
+Varlığın müşteri zaman çizelgesine dahil edilmesi için **Tarih** türünde en az bir özniteliği olması gerekir ve **Tarih** alanları olmayan varlıkları ekleyemezsiniz. Böyle bir varlık bulunmazsa **Aktivite ekle** denetimi devre dışı bırakılır.
 
 1. Hedef kitle içgörülerinde, **Veri** > **Etkinlikler**'e gidin.
 
@@ -41,13 +40,16 @@ Veri kaynaklarınız, birden çok veri kaynağından işlem tabanlı ve aktivite
 
 1. **İleri**’yi seçip sonraki adıma geçin.
 
-1. **İlişki** adımında, aktivite verilerinizi ilgili müşteriye bağlamak için ayrıntıları yapılandırın. Bu adım, varlıklar arasındaki bağlantıyı görselleştirir.  
+1. **İlişki** adımında, aktivite verilerinizi karşılık gelen müşteri kaydına bağlamak için ayrıntıları yapılandırın. Bu adım, varlıklar arasındaki bağlantıyı görselleştirir.  
 
    - **İlk**: Aktivite varlığındaki yabancı alan, başka bir varlıkla ilişki kurmak için kullanılacak.
    - **İkinci**: Aktivite varlığınızın ilişkide olacağı karşılık gelen kaynak müşteri varlığı. Yalnızca veri birleşme işleminde kullanılan kaynak müşteri varlıklarına ilişki oluşturabilirsiniz.
    - **Üçüncü**: Bu aktivite varlığı ile seçili kaynak müşteri varlığı arasında bir ilişki zaten varsa, ilişki adı salt okunur modda olur. Böyle bir ilişki yoksa bu kutuda sağladığınız adla yeni bir ilişki oluşturulur.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Varlık ilişkisini tanımlayın.":::
+
+   > [!TIP]
+   > B2B ortamlarında, firma varlıkları ve diğer varlıklar arasında seçim yapabilirsiniz. Bir firma varlığı seçerseniz, ilişki yolu otomatik olarak ayarlanır. Diğer varlıklar için, bir firma varlığına ulaşana kadar bir veya daha fazla ara varlık üzerinden ilişki yolu tanımlamanız gerekir.
 
 1. **İleri**’yi seçip sonraki adıma geçin. 
 
@@ -95,5 +97,34 @@ Bir aktivite seçtiğinizde aşağıdaki eylemler kullanılabilir.
 - **Yeniden Adlandır**: seçili aktivite için farklı bir ad girebileceğiniz bir iletişim kutusu açar. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
 
 - **Sil**: Seçili aktiviteyi silme işlemini onaylamak için bir iletişim kutusu açar. Ayrıca, aktiviteleri seçip ardından Sil simgesini seçerek aynı anda birden fazla aktiviteyi silebilirsiniz. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Müşteri profillerinde etkinlik zaman çizelgelerini görüntüleme
+
+Müşteri etkinliklerini yapılandırdıktan sonra, tüm müşterinizin aktivitelerinin müşteri profilinde bulunması için aktivite yapılandırmasında **Etkinlik zaman çizelgesinde göster**'i seçin.
+
+Bir müşterinin zaman çizelgesini açmak için, **Müşterilere** gidin ve görüntülemek istediğiniz müşteri profilini seçin.
+
+Bir müşteri yapılandırdığınız bir aktiviteye katıldıysa, bunu **Etkinlik zaman çizelgesi** bölümünde bulabilirsiniz.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Müşteri Profillerinde yapılandırılan etkinlikleri görüntüleyin.":::
+
+Aktivite zaman çizelgesinde aktiviteleri filtrelemek için birçok yol vardır:
+
+- Sonuçlarınızı yalnızca seçilen türleri içerecek şekilde daraltmak için bir veya daha fazla aktivite simgesi seçebilirsiniz.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Simgeleri kullanarak türlerine göre aktiviteleri filtreleyin.":::
+
+- Zaman çizelgesi filtrelerinizi yapılandırmak için filtre panelini açmak için **Filtreyi** seçebilirsiniz.
+
+   1. *ActivityType* ve *Tarih*'e göre filtre uygulayabilirsiniz
+   1. Aktivite zaman çizelgesinde filtreleri kullanmak için **Uygula**'yı seçin.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Filtre koşullarını yapılandırmak için filtre panelini kullanın.":::
+
+Filtreleri kaldırmak için, zaman çizelgesine uygulanan her filtrenin yanındaki **x** işaretini seçin veya **Filtreleri temizle** seçeneğini belirleyin.
+
+
+> [!NOTE]
+> Bir müşteri profili bıraktığınızda aktivite filtreleri kaldırılır. Bunları bir müşteri profili üzerinde her açtığınızda uygulamanız gerekir.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

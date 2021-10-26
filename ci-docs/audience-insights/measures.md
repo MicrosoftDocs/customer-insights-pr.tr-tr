@@ -1,7 +1,7 @@
 ---
 title: Ölçüm oluşturma ve yönetme
 description: İşinizin performansını analiz etmek ve yansıtmak için ölçümler tanımlayın.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037032"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623056"
 ---
 # <a name="define-and-manage-measures"></a>Ölçümleri tanımlama ve yönetme
 
@@ -26,15 +26,15 @@ Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini
 
 ## <a name="build-your-own-measure-from-scratch"></a>Kendi ölçünüzü sıfırdan oluşturun
 
-Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı olarak gösterilmektedir. Müşteri varlığıyla bağlantı kurmak için bir ilişki ayarı olan veri varlıklarından gelen veri öznitelikleriyle bir ölçüm oluşturabilirsiniz. 
+Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı olarak gösterilmektedir. Birleşik müşteri profili varlığına bağlanmak için bir ilişki ayarlanmış olan veri varlıklarından veri öznitelikleriyle bir ölçü oluşturabilirsiniz.
+
+# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
 
 1. Hedef kitle içgörülerinde, **Ölçümler**'e gidin.
 
 1. **Yeni**'yi seçin ve **Kendinizinkini oluşturun**'u seçin.
 
 1. **Adı düzenle**'yi seçin ve ölçüm için bir **Ad** verin. 
-   > [!NOTE]
-   > Yeni ölçü yapılandırmanızda yalnızca iki alan (örneğin, CustomerID ve bir hesaplama) varsa, çıkış, sistem tarafından üretilen Customer_Measure adlı varlığa yeni bir sütun olarak eklenir. Birleştirilmiş müşteri profilinde ölçümün değerini de görebilirsiniz. Diğer ölçümler kendi varlıklarını oluşturur.
 
 1. Yapılandırma alanında, **İşlev Seç** açılan menüsünden toplama işlevini seçin. Toplama işlevleri aşağıdakileri içerir: 
    - **Sum**
@@ -73,11 +73,11 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
    1. Hesaplama değerlerini gruplamak istediğiniz veri öznitelikleri eklemek için **Boyutları düzenle**'yi seçin. Örneğin, şehir veya cinsiyet. Varsayılan olarak, *müşteri düzeyinde ölçümler* oluşturmak için *CustomerID* boyutu seçilir. *İş düzeyinde ölçümler* oluşturmak isterseniz varsayılan boyutu kaldırabilirsiniz.
    1. Ölçüme boyutları eklemek için **Bitti**'yi seçin.
 
-1. Verilerinizde bir tamsayıyla değiştirmeniz gereken değerler varsa, örneğin *boş* değeri *0* olarak değiştirin; **kurallar**'ı seçin. Kuralı yapılandırın ve değişiklik olarak yalnızca tam sayı seçtiğinizden emin olun.
+1. Verilerinizde bir tamsayı olarak değiştirmeniz gereken değerler varsa, **Kurallar**' ı seçin. Kuralı yapılandırın ve değişiklik olarak yalnızca tam sayı seçtiğinizden emin olun. Örneğin, *null* değerini *0* olarak değiştirin.
 
 1. Eşlediğiniz veri varlığı ile *Müşteri* varlığı arasında birden fazla yol varsa tanımlanan [varlık ilişkisi yolları](relationships.md)'ndan birini seçmeniz gerekir. Ölçüm sonuçları, seçilen yola bağlı olarak değişebilir. 
    
-   1. **Veri tercihleri**'ni seçin ve ölçümünüzü tanımlamak için kullanılması gereken varlık yolunu seçin. *Müşteri* varlığının yalnızca tek bir yolu varsa Bu denetim gösterilmez.
+   1. **İlişki yolu**'nu seçin ve isteğinizi tanımlamak için kullanılması gereken varlık yolunu seçin. *Müşteri* varlığının yalnızca tek bir yolu varsa Bu denetim gösterilmez.
    1. Seçiminizi uygulamak için **Bitti**'yi seçin. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Ölçüm için varlık yolunu seçin.":::
@@ -92,7 +92,79 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
 
 1. Listede yeni oluşturulan ölçümü görmek için **Ölçümler**'e gidin.
 
+# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+
+1. Hedef kitle içgörülerinde, **Ölçümler**'e gidin.
+
+1. **Yeni**'yi seçin ve **Kendinizinkini oluşturun**'u seçin.
+
+1. **Adı düzenle**'yi seçin ve ölçüm için bir **Ad** verin. 
+
+1. Yapılandırma alanında, **İşlev Seç** açılan menüsünden toplama işlevini seçin. Toplama işlevleri aşağıdakileri içerir: 
+   - **Sum**
+   - **Ortalama**
+   - **Sayı**
+   - **Benzersiz Sayı**
+   - **Maksimum**
+   - **Min**
+   - **İlk**: Veri kaydının ilk değerini alır
+   - **Son**: Veri kaydına eklenen son değeri alır
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Ölçüm hesaplamaları için işleçler.":::
+
+1. Bu ölçümü oluşturmak için ihtiyaç duyduğunuz verileri seçmek için **Öznitelik ekle**'yi seçin.
+   
+   1. **Öznitelikler** sekmesini seçin. 
+   1. Veri varlığı: Ölçmek istediğiniz özniteliği içeren varlığı seçin. 
+   1. Veri özniteliği: Ölçümü hesaplamak için toplama işlevinde kullanmak istediğiniz özniteliği seçin. Bir seferde yalnızca bir öznitelik seçebilirsiniz.
+   1. **Ölçümler** sekmesini seçerek var olan bir ölçümden bir veri özniteliği de seçebilirsiniz. Alternatif olarak, bir varlık veya ölçüm adı arayabilirsiniz. 
+   1. Seçilen özniteliği ölçüme eklemek için **Ekle**'yi seçin.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Hesaplamalarda kullanmak için bir öznitelik seçin.":::
+
+1. Daha karmaşık ölçümler oluşturmak için ölçüm işlevinizde daha fazla öznitelik ekleyebilir veya matematik işleçleri kullanabilirsiniz.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Matematik işleçleriyle karmaşık bir ölçüm oluşturun.":::
+
+1. Filtre eklemek için yapılandırma alanında **Filtre**'yi seçin. 
+  
+   1. **Filtreler** bölmesinin **Öznitelik ekle** bölümünde, filtre oluşturmak için kullanmak istediğiniz özniteliği seçin.
+   1. Seçili her öznitelik için filtreyi tanımlamak üzere filtre işleçlerini ayarlayın.
+   1. Filtreleri ölçüme eklemek için **Uygula**'yı seçin.
+
+1. Boyut eklemek için yapılandırma alanında **Boyut**'u seçin. Boyutlar, ölçüm çıkış varlığında sütunlar olarak gösterilir.
+ 
+   1. Hesaplama değerlerini gruplamak istediğiniz veri öznitelikleri eklemek için **Boyutları düzenle**'yi seçin. Örneğin, şehir veya cinsiyet. Varsayılan olarak, *müşteri düzeyinde ölçümler* oluşturmak için *CustomerID* boyutu seçilir. *İş düzeyinde ölçümler* oluşturmak isterseniz varsayılan boyutu kaldırabilirsiniz.
+   1. Ölçüme boyutları eklemek için **Bitti**'yi seçin.
+
+1. Verilerinizde bir tamsayı olarak değiştirmeniz gereken değerler varsa, **Kurallar**' ı seçin. Kuralı yapılandırın ve değişiklik olarak yalnızca tam sayı seçtiğinizden emin olun. Örneğin, *null* değerini *0* olarak değiştirin.
+
+1. [Hiyerarşiyle firmalar kullanıyorsanız](relationships.md#set-up-account-hierarchies), **Alt firmaları toplama** düğmesini de kullanabilirsiniz.
+   - **Kapalı** olarak ayarlandıysa, ölçü her firma için hesaplanır. Her firma kendi sonucunu alır.
+   - **Açık** olarak ayarlanmışsa , firma hiyerarşisini tercih eden hiyerarşilere göre seçmek için **Düzenle**'yi seçin. Ölçü, alt firmalarla toplanmış olduğundan yalnızca bir sonuç ortaya çıkar.
+
+1. Eşlediğiniz veri varlığı ile *Müşteri* varlığı arasında birden fazla yol varsa tanımlanan [varlık ilişkisi yolları](relationships.md)'ndan birini seçmeniz gerekir. Ölçüm sonuçları, seçilen yola bağlı olarak değişebilir. 
+   
+   1. **İlişki yolu**'nu seçin ve isteğinizi tanımlamak için kullanılması gereken varlık yolunu seçin. *Müşteri* varlığının yalnızca tek bir yolu varsa Bu denetim gösterilmez.
+   1. Seçiminizi uygulamak için **Bitti**'yi seçin. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Ölçüm için varlık yolunu seçin.":::
+
+1. Bir ölçümden bir hesaplamayı **Yenileme**, **Yeniden Adlandırma** veya **Kaldırma** işlemleri için hesaplamada **...** seçeneğini belirleyin.
+
+1. **Önizleme** alanında, filtreleri ve boyutları içeren ölçüm çıkış varlığının veri şemasını görürsünüz. Önizleme, yapılandırmadaki değişikliklere dinamik olarak tepki verir.
+
+1. Yapılandırılan ölçüm sonuçlarını hesaplamak için **Çalıştır**'ı seçin. Geçerli yapılandırmayı koruyup ölçümü daha sonra çalıştırmak isterseniz **Kaydet ve kapat**'ı seçin.
+
+1. Listede yeni oluşturulan ölçümü görmek için **Ölçümler**'e gidin.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Ölçü oluşturmak için şablon kullanma
+
+Sık kullanılan ölçüler oluşturmak için önceden tanımlanmış şablonları kullanabilirsiniz. Şablonların ve destekli bir deneyim hakkında ayrıntılı açıklamalar, etkili ölçüm oluşturulmasına yardımcı olur. Şablonlar *Birleşik aktivite* varlığındaki eşlenmiş veriler üzerinde derleyin . Bu nedenle, bir şablondan ölçü oluşturmadan önce [müşteri aktiviteleri](activities.md) yapılandırdığınızdan emin olun.
+
+# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
 
 Sık kullanılan ölçüler oluşturmak için önceden tanımlanmış şablonları kullanabilirsiniz. Şablonların ve destekli bir deneyim hakkında ayrıntılı açıklamalar, etkili ölçüm oluşturulmasına yardımcı olur. Şablonlar *Birleşik aktivite* varlığındaki eşlenmiş veriler üzerinde derleyin . Bu nedenle, bir şablondan ölçü oluşturmadan önce [müşteri aktiviteleri](activities.md) yapılandırdığınızdan emin olun.
 
@@ -140,6 +212,12 @@ Aşağıdaki yordamda, şablon kullanarak yeni bir ölçü oluşturma adımları
 
 1. Şimdi, ölçümün sonuçlarını hesaplamak için **Çalıştır** seçeneğini seçebilirsiniz. Daha sonra belirginleştirmek için **Taslağı kaydet**'i seçin.
 
+# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+
+Bu özellik yalnızca, bireysel müşterilere birincil hedef kitle olarak oluşturulan ölçüler için kullanılabilir.
+
+---
+
 ## <a name="manage-your-measures"></a>Ölçümlerinizi yönetme
 
 Ölçüler listesini **Ölçüler** sayfasında bulabilirsiniz.
@@ -166,6 +244,5 @@ Aşağıdaki seçenekler için listeden bir ölçüm seçin:
 ## <a name="next-step"></a>Sonraki adım
 
 [Müşteri segmenti](segments.md) oluşturmak için varolan önlemleri kullanabilirsiniz.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

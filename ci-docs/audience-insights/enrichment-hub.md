@@ -1,7 +1,7 @@
 ---
 title: Birleşik müşteri profillerini zenginleştirme
 description: Müşteri verilerinizi zenginleştirmek için özellikleri kullanın.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470048"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617579"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
 
@@ -27,16 +27,26 @@ Zenginleştirme seçenekleriyle çalışmak için hedef kitle içgörülerinde *
 
 Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönetici izinlerine ihtiyacınız vardır. Daha fazla bilgi için bkz. [İzinler](permissions.md).
 
-**Keşfet** sekmesinde aşağıdaki zenginleştirmeleri bulursunuz:
+**Bul** sekmesinde, tüm desteklenen zenginleştirme seçeneklerini bulacaksınız.
 
-- [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
+# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
+
 - Microsoft tarafından sağlanan [markalar](enrichment-microsoft.md)
 - Microsoft tarafından sağlanan [ilgi alanları](enrichment-microsoft.md)
-- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md)
-- Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
+- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md) 
 - Experian tarafından sağlanan [demografik bilgiler](enrichment-experian.md)
-- HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md)
-- Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md)
+- Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md) 
+- [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
+
+# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+
+- Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
+- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md) 
+- HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md) 
+- Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md) 
+- [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
+
+---
 
 **Zenginleştirmelerim** sekmesinde, yapılandırdığınız zenginleştirmeleri görebilir ve özelliklerini düzenleyebilirsiniz.
 
@@ -58,7 +68,7 @@ Listeden seçerek birden çok zenginleştirmeyi aynı anda çalıştırın veya 
 
 ## <a name="enrichments-and-connections"></a>Zenginleştirme ve bağlantılar
 
-Üçüncü taraf zenginleştirmeler, yönetici kimlik bilgileriyle birlikte ayarlanan ve veri aktarımları için izin sağlayan [bağlantılar](connections.md) kullanılarak yapılandırılır. Bağlantı, Yöneticiler ve katkıda bulunanlar tarafından enrichments yapılandırmak için kullanılabilir.  
+Üçüncü taraf zenginleştirmeler, yönetici kimlik bilgileriyle birlikte ayarlanan ve veri aktarımları için izin sağlayan [bağlantılar](connections.md) kullanılarak yapılandırılır. Bu bağlantılar, zenginleştirme yapılandırmak için yöneticiler ve katkıda bulunanlar tarafından kullanılabilir.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Aynı türden birden çok zenginleştirme
 

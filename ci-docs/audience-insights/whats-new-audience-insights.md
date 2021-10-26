@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465229"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606146"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -26,6 +26,20 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="september-2021-updates"></a>Eylül 2021 güncelleştirmeleri
+
+2021 Eylül'deki güncelleştirmeler, yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="activities"></a>Aktiviteler
+
+- **Etkinlik zaman çizelgesi geliştirmeleri** Müşteri profillerinde etkinlik zaman çizelgesine yönelik filtreleri genişlettik. Ayrıca, yeni filtre bölmesini aktivite türüne ve tarihine göre filtrelemek için kullanabilirsiniz. Tarihlere farklı koşullar kullanılarak filtre uygulanabilir. Daha fazla bilgi için bkz. [Müşteri profillerinde etkinlik zaman çizelgelerini görüntüleme](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>İlişki
+
+- **Birden çok atlama ilişkisi desteği** Aktiviteleri yapılandırırken ve varlıklar arasında ilişkiler tanımlayarak çoklu atlama ilişkiler kullanır. Birden çok atlama ilişkileri, iki varlığı bağlamak için ara bir varlık kullanır. Bir aktiviteyi yapılandırırken, aktivite varlığınızı bir ara varlığa ve ardından bir müşteri varlığına bağlamak için birden çok atlama ilişkisi kullanabilirsiniz. Birden fazla atlama ilişkileri öğesini, çok yollu ilişkiler ile birleştirebilirsiniz. Daha fazla bilgi için bkz. [Birden çok atlama ilişkisi](relationships.md#multi-hop-relationship).
+
+- **Birden çok yol ilişkisi desteği** Aktiviteleri yapılandırırken ve varlıklar arasında ilişkiler tanımlayarak çoklu yol ilişkileri kullanır. Birden çok yol ilişkileri kaynak varlığı birden çok varlığa ilişkilendirir. Bir aktiviteyi yapılandırırken, aktivite varlığınızı birden çok müşteri varlığına bağlamak için birden çok yol ilişkisi kullanabilirsiniz. Birden fazla yol ilişkileri öğesini, çok atlamalı ilişkiler ile birleştirebilirsiniz. Daha fazla bilgi için bkz. [Birden çok yol ilişkisi](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Ağustos 2021 güncelleştirmeleri
 

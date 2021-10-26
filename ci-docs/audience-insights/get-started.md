@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466601"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645288"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights hedef kitle içgörüleri özelliğini kullanmaya başlayın
 
@@ -23,7 +23,7 @@ Hedef kitle içgörüleri, müşterilerinizi daha kapsamlı şekilde anlamanıza
 
 ## <a name="step-1-create-an-environment"></a>Adım 1: Bir ortam oluşturun
 
-Başlamak için öncelikle çalışacağınız bir ortam oluşturmanız gerekir. Kuruluşunuz önceden bir lisans satın aldıysa, bkz. [Ödemeli bir abonelikle başlama](get-started-paid.md). Hedef kitle öngörüler için bir deneme sürümü başlatmak için, bkz. [Deneme ortamı kurma](get-started-trial.md). 
+Başlamak için öncelikle çalışacağınız bir ortam oluşturmanız gerekir. Kuruluşunuz önceden bir lisans aldıysa, bkz. [Ortam oluşturma](create-environment.md). Hedef kitle öngörüler için bir deneme sürümü başlatmak için, bkz. [Deneme ortamı kurma](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Adım 2: Hedef kitle içgörülerini keşfedin
 

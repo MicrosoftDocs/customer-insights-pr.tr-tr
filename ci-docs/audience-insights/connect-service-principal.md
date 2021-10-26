@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483549"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645196"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure hizmet sorumlusu kullanarak bir Azure Data Lake Storage hesabına bağlanma
 
 Azure hizmetlerini kullanan otomatik araçlar her zaman kısıtlı izinlere sahip olmalıdır. Azure, uygulamalarda tamamen ayrıcalıklı bir kullanıcı olarak oturum açma olması yerine hizmet sorumluları sağlar. Depolama hesabı anahtarları yerine bir Azure hizmet sorumlusu kullanarak Dynamics 365 Customer Insights'ı Azure Data Lake Storage hesabına bağlamayı öğrenmek için okumaya devam edin. 
 
-Güvenli bir şekilde [veri kaynağı olarak bir Common Data Model klasörü eklemek veya düzenlemek](connect-common-data-model.md) ya da [bir ortam oluşturmak veya güncelleştirmek](get-started-paid.md) için hizmet sorumlusu kullanabilirsiniz.
+Güvenli bir şekilde [veri kaynağı olarak bir Common Data Model klasörü eklemek veya düzenlemek](connect-common-data-model.md) ya da [bir ortam oluşturmak veya güncelleştirmek](create-environment.md) için hizmet sorumlusu kullanabilirsiniz.
 
 > [!IMPORTANT]
 > - Hizmet sorumlusunu kullanacak Data Lake Storage hesabında [hiyerarşik ad alanı etkinleştirilmiş olmalıdır](/azure/storage/blobs/data-lake-storage-namespace).

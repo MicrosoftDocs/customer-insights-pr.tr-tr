@@ -1,7 +1,7 @@
 ---
 title: Hedef kitle içgörülerinde segmentler
 description: Segmentlere ve bunların nasıl oluşturulacağı ve yönetildiği ile ilgili genel bakış.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036397"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617466"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -26,11 +26,19 @@ Bir segment tanımının filtreleriyle eşleşen müşteri profilleri, bir segme
 
 Yeni bir segment oluşturmanın çeşitli yolları vardır: 
 
-- Segment Oluşturucusu ile karmaşık segment: [boş segment](segment-builder.md#create-a-new-segment)
-- Bir işleciyle basit parçalar: [Hızlı segment](segment-builder.md#quick-segments)
-- Benzer müşterileri bulmak için AI destekli yol: [benzer müşteriler](find-similar-customer-segments.md)
-- Bir ölçülere veya özniteliklere dayalı olarak AI destekli öneriler: [ölçümleri iyileştirmek için önerilen segmentler](suggested-segments.md)
-- Aktivitelere dayalı öneriler: [Müşteri etkinliğine dayalı olarak önerilen segmentler](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
+
+- Segment oluşturucusu ile karmaşık segment oluşturma: [Kendiniz oluşturun](segment-builder.md#create-a-new-segment) 
+- Bir işleciyle basit parçalar: [Hızlı segment](segment-builder.md#quick-segments) 
+- Benzer müşterileri bulmak için AI destekli yol: [benzer müşteriler](find-similar-customer-segments.md) 
+- Bir ölçülere veya özniteliklere dayalı olarak AI destekli öneriler: [ölçümleri iyileştirmek için önerilen segmentler](suggested-segments.md) 
+- Aktivitelere dayalı öneriler: [Müşteri etkinliğine dayalı olarak önerilen segmentler](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+
+- Segment oluşturucusu ile karmaşık segment oluşturma: [Kendiniz oluşturun](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Mevcut segmentleri yönetme
 
@@ -70,9 +78,9 @@ Segmentler sayfasından veya [dışarı aktarmalar sayfasından](export-destinat
 
 1. Eylemler açılan listesinden **Dışa Aktarmaları yönet**'i seçin.
 
-1. **Segment için dışarı aktarmalar (önizleme)** sayfası açılır. Geçerli segmenti içeren veya içermeyen dışa aktarmalara göre gruplandırılan tüm yapılandırılmış dışarı aktarmaları görebilirsiniz.
+1. **Segment için dışarı aktarmalar (önizleme)** sayfası açılır. Yapılandırılmış tüm dışarı aktarmalardan geçerli segmenti içerdiklerinden da gruplandırılmış olarak görüntüleyebilirsiniz.
 
-   1. Seçili segmenti bir dışarı aktarmaya eklemek için listeden dışa aktarmayı seçin ve **Segment ekle**'yi seçin.
+   1. Seçili segmenti bir verme öğesine eklemek için, ilgili verme işlemini **Düzenleyerek** karşılık gelen parçayı seçin ve kaydedin. Bağımsız müşteriye ait ortamlarda, dışa aktarma işlemini listeden seçebilir ve aynı sonucu elde etmek için **Segment ekle**'yi seçebilirsiniz.
 
    1. Seçili segmentle yeni bir dışarı aktarma oluşturmak için **Dışarı aktarma ekle**'yi seçin. Dışarı aktarma oluşturma hakkında daha fazla bilgi için bkz. [Yeni dışarı aktarma ayarlama](export-destinations.md#set-up-a-new-export).
 

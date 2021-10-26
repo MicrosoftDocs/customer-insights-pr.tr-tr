@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033242"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605973"
 ---
 # <a name="connections-preview-overview"></a>Bağlantılara (önizleme) genel bakış
 
@@ -47,6 +47,7 @@ Bağlantı eklemek için, [Yönetici izinlere](permissions.md) sahip olmanız ge
 1. **Bağlantıyı ayarla** bölmesinde gerekli ayrıntıları girin. 
    1. **Görünen ad** ve bağlantının türü bir bağlantıyı açıklar. Bu bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
    1. Tam alanlar bağlandığınız hizmete bağlıdır. Belirli bir bağlantının ayrıntıları hakkında bilgi edinmek için hedef hizmetle ilgili makaleyi kullanabilirsiniz.
+   1. Gizlilikleri depolamak için kendi [Key Vault](use-azure-key-vault.md)'unuzu kullanırsanız, **Key Vault kullan** öğesini etkinleştirin ve listeden parolayı seçin.
 
 1. Bağlantı oluşturmak için **Kaydet**'i seçin.
 
@@ -93,3 +94,6 @@ Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunla
 
 1. Silme işleminizi onaylamak için **Kaldır**'ı seçin.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Kendi Key Vault'unuzun yönettiği gizli anahtarlarla bağlantı kurma
+
+Bazı bağlantıların API tuşları veya parolalar gibi gizli anahtarlara ihtiyacı vardır. Bazı bağlantılar, kendi Key Vault'unuzda depolanan gizli anahtarları destekler. Desteklenen bağlantılarla ilgili daha fazla bilgi ve [hedef kitle öngörüler için kendi Key Vault'unuzun nasıl kurulacağını](use-azure-key-vault.md) öğrenin.

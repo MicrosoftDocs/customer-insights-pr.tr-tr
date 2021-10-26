@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesinde varlıkları eşleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494343"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648278"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
@@ -89,7 +91,7 @@ Birleşik müşteri profilinden öznitelik dışlayın. Alan başka bir işlemde
     :::image type="content" source="media/recency-merge-option.png" alt-text="Alanları birleştir iletişim kutusunda yenilik seçeneği.":::
     - **En eski**: Kazanan değeri, en eskiliği temel alarak belirler. Birleştirme alanları kapsamındaki her bir katılımcı varlık için bir tarih veya sayısal alan olmasını zorunlu tutar.
 
-1.  Birleştirme işleminde yer alacak başka alanlar da ekleyebilirsiniz.
+1.  Birleştirme işlemine katılmak üzere daha fazla alan ekleyebilirsiniz.
 
 1.  Birleştirilmiş alanı yeniden adlandırabilirsiniz.
 
@@ -131,7 +133,7 @@ Bazı varlıklar diğerlerine göre daha fazla ayrıntı içerir. Bir varlık bi
 
 Birleştirme alanlarını yapılandırdıktan sonra, benzersiz müşteri profili tanımlayıcıları olan CustomerID değerlerinin nasıl oluşturulacağını tanımlayabilirsiniz. Veri birleşme işlemindeki birleştirme adımı benzersiz müşteri profili tanımlayıcısı oluşturur. Tanımlayıcı, veri birleşme işleminden elde edilen *Müşteri* varlığındaki CustomerId'dir. 
 
-Müşteri varlığındaki CustomerId, null olmayan kazanan birincil anahtarların ilk değerinin karmasını temel alır. Bu tuşlar, eşleştir ve birleştir aşamasında kullanılan varlıklardan gelir ve eşleştirme sırasıyla etkilenir.Bu nedenle, üretilen CustomerID, eşleştirme emrinin birincil varlığında birincil anahtar değerinin değiştiği zaman değiştirilebilir. Sonuç olarak, birincil anahtar değeri her zaman aynı müşteriyi temsil etmiyor olabilir.
+Müşteri varlığındaki CustomerId, null olmayan kazanan birincil anahtarların ilk değerinin karmasını temel alır. Bu tuşlar, eşleştir ve birleştir aşamasında kullanılan varlıklardan gelir ve eşleştirme sırasıyla etkilenir.Bu nedenle, üretilen CustomerID, eşleştirme emrinin birincil varlığında birincil anahtar değerinin değiştiği zaman değiştirilebilir. Bu nedenle, birincil anahtar değeri her zaman aynı müşteriyi temsil ediyor olabilir.
 
 Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanızı sağlar.
 
@@ -139,7 +141,7 @@ Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanız�
 
 1. **Birleştir** > **Birleştir**'e gidin.
 
-1. **Birleştir** sayfasında, **Anahtarlar** sekmesini seçin. 
+1. **Anahtarlar** sekmesini seçin. 
 
 1. **CustomerId** satırı üzerine gelin ve **Yapılandır** seçeneğini belirleyin.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kimlik oluşturmayı özelleştirme denetimi.":::
@@ -147,6 +149,30 @@ Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanız�
 1. Benzersiz bir müşteri kimliği oluşturacak ve daha kararlı olacak şekilde en fazla beş alan seçin. Yapılandırmanızla eşleşmeyen kayıtlar sistem tarafından yapılandırılmış bir kimlik kullanır.  
 
 1. **Bitti**'yi seçin ve değişikliklerinizi uygulamak için birleştirme işlemini çalıştırın.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Profilleri yeni ve kümeler halinde gruplayın
+
+Müşteri profili oluşturma yapılandırma işleminin bir parçası olarak, ilgili profilleri bir kümede gruplamak için kurallar tanımlayabilirsiniz. Şu anda iki tür küme kullanılabilir: ev kümeleri ve özel kümeler. *Müşteri* varlığında *Person.LastName* ve *Location.Adress* semantik alanları varsa, sistem otomatik olarak önceden tanımlanmış kurallara sahip ev türünü seçer. Ayrıca, [eşleşme kurallarına](match-entities.md#define-rules-for-match-pairs) benzer şekilde kendi kurallarınızı ve koşullarına sahip bir küme de oluşturabilirsiniz.
+
+**Ev veya küme tanımlama**
+
+1. **Birleştir** > **Birleştir**'e gidin.
+
+1. **Birleştir** sekmesinde **Gelişmiş** > **Küme oluştur**'u seçin.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Yeni bir küme oluşturmak için denetleyin.":::
+
+1. **Ev** veya **Özel** küme arasında seçim yapın. *Müşteri* varlığında *Person.LastName* ve *Location.Address* adlı semantik alanlar varsa, ev otomatik olarak seçilir.
+
+1. Küme için bir ad girin ve **Bitti**'yi seçin.
+
+1. Oluşturduğunuz kümeyi bulmak için **Kümeler** sekmesini seçin.
+
+1. Kümenizi tanımlamak için kuralları ve koşulları belirtin.
+
+1. Birleştirme işlemini çalıştırmak ve kümeyi oluşturmak için **Çalıştır**'ı seçin.
+
+Birleştirme işlemini çalıştırdıktan sonra, küme tanımlayıcıları *Müşteri* varlığına yeni alanlar olarak eklenir.
 
 ## <a name="run-your-merge"></a>Birleştirmenizi çalıştırma
 

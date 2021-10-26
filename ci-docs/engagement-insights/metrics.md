@@ -4,17 +4,17 @@ description: Ölçümleri oluşturma, düzenleme ve silme.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 79600a14bc7e98dfd066270f19c353fd007e1341
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034293"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623746"
 ---
 # <a name="view-and-create-metrics"></a>Ölçümleri görüntüleme ve oluşturma
 
@@ -38,21 +38,24 @@ Bu sistem ölçümleri, temel olaylardaki mevcut olay özelliklerini temel alır
 1. Sol gezinti bölmesinde **Veri**'ye gidin. 
 1. Çalışma alanındaki tüm ölçümlerin listesini görmek için **Ölçümler** sekmesini seçin. 
    > [!NOTE]
-   > Sistem tarafından oluşturulan ölçümler salt okunurdur. Bunları değiştiremez veya silemezsiniz. Yalnızca özel ölçümler oluşturabilir ve düzenleyebilirsiniz.
+   > Sistem tarafından oluşturulan ölçümler salt okunurdur. Bunları silemez ve düzenleyemezsiniz. Yalnızca özel ölçümler oluşturabilir ve düzenleyebilirsiniz.
 
 ## <a name="create-a-metric"></a>Ölçüm oluşturma
 
 Ortam ve çalışma alanı yöneticileri ölçüm oluşturabilir. Ölçüm oluşturmadan önce olay özelliklerinin çalışma alanına gönderilmesi gerekir. Temel olaylar tarafından gönderilen olay özelliklerine dayalı olarak ölçümler oluşturabilir veya [özel olay özellikleri göndermek](advanced-SDK-implementation.md) için web SDK kullanabilirsiniz.
 
 1. **Veri** > **Ölçümler**'e gidin.
-1. **Yeni ölçüm**'ü seçin.
+1. **Kaynak Kitaplığı** ve **Yeni adsız metrik** iletişim kutusunu açmak için **Yeni ölçüm**'ü seçin.
 
    :::image type="content" source="media/new-metric.png" alt-text="Etkinliğe bir ölçüm ekleyin.":::
 
-1. Biçim için **Tamsayı** veya **Çift** veri türünü seçin. Tamsayı bir tam sayıdır. Çift için bir ve üç ondalık basamak arasında seçim yapabilirsiniz.
-1. **Kaynak Kitaplığı** bölmesinde, ölçümün temeli olarak kullanılacak olay özelliğini bulun.
-1. Formülde kullanmak için özelliğin yanındaki **artı işaretini (+)** seçin. Yalnızca bir özelliği temel alarak bir formül oluşturabilirsiniz. 
-1. Aşağıdakilerden toplama işlevlerinden birini seçin. 
+1. **Yeni adsız metrik** iletişim kutusunda, **Biçim** açılan listesini seçin ve **Tamsayı** veya **Çift** veri türünü seçin. Tamsayı bir tam sayıdır. Çift için bir ve üç ondalık basamak seçebilirsiniz.
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="Yeni ölçüm oluşturma.":::
+   
+5. **Kaynak Kitaplığı** bölmesinde, ölçümün temeli olarak kullanılacak olay özelliğini bulun.
+6. Formülde kullanmak için özelliğin yanındaki **artı işaretini (+)** seçin. Yalnızca bir özelliği temel alarak bir formül oluşturabilirsiniz. 
+7. Aşağıdakilerden toplama işlevlerinden birini seçin. 
 
    - Toplam: tüm değerlerin aritmetik toplamı 
    - Ortalama: tüm değerlerin ortalaması
@@ -68,12 +71,16 @@ Ortam ve çalışma alanı yöneticileri ölçüm oluşturabilir. Ölçüm oluş
 
 ## <a name="edit-a-metric"></a>Ölçüm düzenleme
 
+Yalnızca özel ölçümleri düzenleyebilirsiniz.
+
 1. **Veri** > **Ölçümler**'e gidin.
 1. Listede ölçümü seçin.
 1. Ölçümün tanımını değiştirme
 1. **Kaydet**'i seçin.
 
 ## <a name="change-the-name-of-a-metric"></a>Ölçümün adını değiştirme
+
+Yalnızca özel ölçümlerin adını değiştirebilirsiniz.
 
 1. **Veri** > **Ölçümler**'e gidin.
 1. Ölçüm için **Daha fazla [...]** öğesini ve **Adı düzenle**'yi seçin.
@@ -82,11 +89,15 @@ Ortam ve çalışma alanı yöneticileri ölçüm oluşturabilir. Ölçüm oluş
 
 ## <a name="delete-a-metric"></a>Ölçüm silme
 
+Yalnızca özel ölçümleri silebilirsiniz.
+
 1. **Veri** > **Ölçümler**'e gidin.
 1. Ölçüm için **Daha fazla [...]** öğesini ve **Sil**'i seçin.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Etkinlikten bir ölçüm silin.":::
 
 1. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

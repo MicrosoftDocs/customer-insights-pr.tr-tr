@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Sendinblue'ya aktarma
 description: Bağlantıyı yapılandırmayı ve Sendinblue'ya nasıl dışa aktarılacağını öğrenin.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036079"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617809"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmentleri Sendinblue'ya verme (önizleme)
 
@@ -29,10 +29,10 @@ Kampanyalar oluşturmak, e-posta pazarlaması sağlamak ve Sendinblue ile belirl
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Sendinblue'ya verme başına en 1 milyon profil.
+- Sendinblue'ya dışa aktarma başına 1 milyon müşteri profili.
 - Sendinblue'ya dışa aktarma segmentlerle sınırlıdır.
-- Toplam 1 milyon profili bulunan parçaların verilmesi en fazla 90 dakika sürer. 
-- Sendinblue ile dışa aktarabileceğiniz profil sayısı Sendinblue ile sözleşmenize bağlıdır ve bununla sınırlıdır.
+- Toplam 1 milyon müşteri profilli segmentlerin dışa aktarılması 90 dakika kadar sürebilir. 
+- Sendinblue'ya aktarabileceğiniz müşteri profilleri sayısı, Sendinblue ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Sendinblue bağlantısı ayarla
 
@@ -64,7 +64,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Sendinblue liste kimliği**'nizi girin 
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. 
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. 
 
 1. İsteğe bağlı olarak, daha kişiselleştirilmiş e-postalar oluşturmak için **ad**, **soyadı** ve **Telefon**'u dışa aktarabilirsiniz. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
 

@@ -1,72 +1,97 @@
 ---
-title: İyileştirilmiş olaylar oluştur ve değiştir
-description: İyileştirilmiş olaylar oluşturma ve değiştirme.
+title: Olay oluşturma ve değiştirme
+description: Olay oluşturma ve düzenleme.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 935dc4cd41218842e8406b747daef47de04e337a
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034798"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606283"
 ---
-# <a name="create-and-modify-refined-events"></a>İyileştirilmiş olaylar oluştur ve değiştir
+# <a name="create-and-modify-events"></a>Olay oluşturma ve değiştirme
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Bir olay bir Web sitesindeki etkinlik gibi kullanıcı davranışını temsil eden bir veri.
 
 - Kullanıcı sayfayı görüntülediğinde (görüntüleme olayı) veya içerikle etkileşim kurduğunda (eylem olayı) *temel* olay kayıtları.
 - *İyileştirilmiş* olayı, temel olayın sanal bir görünümdür. Özellikleri kaldırarak ve ekleyerek ya da özellik değerlerine göre olaylara filtre uygulayarak, iyileştirilmiş olaylar tanımlayın.
 
+## <a name="prerequisites"></a>Ön koşullar
+
+Olayları almak için basit bir kod parçacığı kullanarak öncelikle web sitenizin verilerini etkileşim içgörülerine bağlayın. Daha fazla bilgi için bkz. [Web SDK'yı bir web sitesine kurma](instrument-website.md).
+
+ :::image type="content" source="media/new-events-connect-data.png" alt-text="Önce verilerinizi bağlayın.":::
+
+## <a name="create-refined-events"></a>İyileştirilmiş olaylar oluştur
+
 [Dışa aktarma](export-events.md) için temel bir olayın kapsamını azaltmak veya etkilenme için gerekli olmayan özellikleri kaldırmak için, iyileştirilmiş olaylarını kullanın.
 
-## <a name="create-refined-events"></a>Siyah beyaz olaylar oluşturma
+> [!NOTE]
+> Web SDK'yı web sitenize eklediğinizde, temel olaylarınızı görüntüleyebilir ve ayrıntılı olaylar oluşturabilirsiniz. 
 
-Bir temel olaydan iyileştirilmiş olayı oluşturmanın üç yolu vardır. 
+Temel olaylarınızı görüntülemek için:
 
-1. **Veri**> **Olaylar**'a gidin ve aşağıdaki seçeneklerden birini belirleyin:
-    - **Yeni olayları** seçip **İyileştirilmiş olaylar oluştur** öğesini seçin.
-    - Ayrıntılı bir görünüm açmak için temel bir olay seçin ve üst menüden **İyileştirilmiş olaylar oluştur** öğesini seçin.
-    - Bir Temel olaya ait kısayol menüsünü açmak için **daha fazla [...]** seçeneğini belirleyin. Sonra **İyileştirilmiş olaylar oluştur** öğesini seçin.
-    
-    :::image type="content" source="media/create-refined-events-options.png" alt-text="İyileştirilmiş etkinlikler oluşturma seçenekleri.":::
+1. Sol gezinti bölmesinde **Veri**'ye gidin.
 
-1. **İyileştirilmiş olaylar oluştur** iletişim kutusunda, aşağıdaki bilgileri girin:
+1. Çalışma alanındaki tüm olayların listesini görmek için **Olayları** seçin.
 
-- Yeni bir olay oluşturuyorsanız, **Temel olaylar** açılan menüsünden bir olay seçin.
-- **İyileştirilmiş olaylar görünen ad** kutusuna bir ad girin.
-- İsteğe bağlı olarak, önerilen **gerçek adı** boşluk kullanmadan güncelleştirin.
+    :::image type="content" source="media/data-events.png" alt-text="Olayları görüntüleme.":::
 
-3. Ayarlarınızı uygulamak için **Oluştur** öğesini seçin.
+Temel bir olaydan ayrıntılı bir olay oluşturmak için: 
 
-1. İyileştirilmiş olayınızın ayrıntılı görünümünde **Özellikler Düzenle** bölmesini açmak için **Özellikleri Ekle ve Kaldır**'ı seçin. 
+1. **Veri** > **Olaylar**'a gidin ve ekranın üst kısmında bulunan **+ Yeni olaylar**'ı seçin.
 
-1. Göstermek istediğiniz özellikleri ve gizlenmesini istediklerinizi seçmek için onay kutularını kullanın. 
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="İyileştirilmiş etkinliklerin özelliklerini düzenleyin.":::
+1. **Yeni olaylar** iletişim kutusunda, **Detaylı olaylar oluştur**'u seçin ve **İleri**'yi seçin.
+   
+     :::image type="content" source="media/new-events-wizard.png" alt-text="Yeni olaylar sihirbazı.":::
+     
+1. **Yeni olaylar** iletişim kutusunda, aşağıdaki bilgileri girin:
 
-1. Seçiminizi uygulamak için **Onayla**'yı seçin.
+   - **Temel olaylar** açılan kutusundan bir olay seçin.
+   - **İyileştirilmiş olaylar görünen ad** kutusuna bir ad girin.
+   - İsteğe bağlı olarak, önerilen **gerçek adı** boşluk kullanmadan güncelleştirin.
 
-1. Yapılandırmayı kaydetmek için **kaydet**'i seçin.
+1. Ayarlarınızı uygulamak için **Oluştur** öğesini seçin.
 
-## <a name="edit-refined-events"></a>İyileştirilmiş olayları düzenleme
-
-İyileştirilmiş olayın adını ve özelliklerini değiştirebilirsiniz.
+Detaylı olay artık, **Olaylar** listenizde görünür.
 
 ### <a name="edit-event-name"></a>Olay Adını düzenleme
 
-1. **Veriler** > **Olaylar**'a gidin 
-1. Bir olay için **daha fazla [...]** seçin ve **Ad Düzenle**'yi seçin.
-1. Olay adını güncelleştirip **Yeniden Adlandır** seçeneğini belirleyin.
+Bir temel veya detaylı olayın adını ve özelliklerini değiştirebilirsiniz.
 
-### <a name="edit-selected-properties"></a>Seçilen özellikleri düzenleme
+1. **Veriler** > **Olaylar**'a gidin 
+
+1. Bir olay için **daha fazla [...]** seçin ve **Ad Düzenle**'yi seçin.
+    
+     :::image type="content" source="media/create-refined-events-options.png" alt-text="İyileştirilmiş etkinlikler oluşturma seçenekleri.":::
+
+3. Olay adını güncelleştirip **Yeniden Adlandır** seçeneğini belirleyin.
+
+### <a name="view-the-details-of-a-refined-event"></a>Detaylı olayın ayrıntılarını görüntüleme:
+
+1. **Olay** listesinde, temel veya ayrıntılı olayınızı seçin. 
+
+1. **Özellikleri düzenle** bölmesini açmak için ekranın üst kısmında **Özellikleri ekle veya kaldır**'ı seçin. 
+
+     :::image type="content" source="media/add-remove-properties.png" alt-text="Özellik ekle ve kaldır.":::
+
+1. Göstermek istediğiniz özellikleri ve gizlenmesini istediklerinizi seçmek için onay kutularını kullanın. 
+
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="İyileştirilmiş etkinliklerin özelliklerini düzenleyin.":::
+
+1. Seçiminizi uygulamak için **Onayla**'yı seçin ve ardından **Kaydet**'i seçin.
+
+
+### <a name="edit-selected-properties-for-a-refined-event"></a>Detaylı bir olayın seçili özelliklerini düzenleme
 
 1. Ayrıntılı görünümü açmak için **Veril** > **Olaylar**'a gidin ve iyileştirilmiş olaylarını seçin.
 1. **Özellik Ekle veya Kaldır**'ı seçin. 

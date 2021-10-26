@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini LinkedIn Ads'e aktarma
 description: Bağlantıyı yapılandırmayı ve LinkedIn Ads'e aktarmayı öğrenin.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034247"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618315"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentleri LinkedIn Ads'e aktarma (önizleme)
 
@@ -28,9 +28,9 @@ Eşleştirilmiş hedef kitleler oluşturmak için birleşik müşteri profilleri
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- LinkedIn Ads'e aktarma işlemi en fazla 100 K profili aktarabilirsiniz.
+- LinkedIn Ads'e dışa aktarma başına en fazla 100.000 müşteri profili aktarabilirsiniz.
 - LinkedIn Ads'e aktarma segmentlerle sınırlıdır.
-- 100K profilin LinkedIn Ads'e aktarılması için en fazla 10 dakika geçmesi gerekebilir. 
+- LinkedIn Ads'e 100.000'e kadar müşteri profili vermenin tamamlanması 10 dakikaya kadar sürebilir. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>LinkedIn Ads'e bağlantıyı ayarlama
 
@@ -66,7 +66,7 @@ Bu tür bir bağlantıya erişiminiz varsa bir dışarı aktarma işlemi yapıla
 
 1. LinkedIn'de [kişi hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) veya [şirket hedeflemesi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) yapmak için verileri dışarı aktarmayı isteyip istemediğinizi seçin. 
 
-1. **Veri eşleştirme** bölümünde, birleştirilmiş müşteri profilinizde müşterinin e-posta adresini temsil eden alanı seçin. LinkedIn Ads'e segmentleri aktarmak gerekir.
+1. **Veri eşleme** bölümünde, ilgili kişi hedeflemesi için, müşterinin e-posta adresini, Apple Reklam kimliğini, Google Reklam kimliğini, Google Kullanıcı kimliğini veya ad ve soyadı temsil eden en az bir alan seçin. Şirket hedefleme seçeneğini belirlerseniz, bir şirket adı, e-posta etki alanı, LinkedIn sayfası URL'si, Stock simgesi veya Web sitesini temsil eden en az bir alan seçin. Dışa aktarmanızın daha fazla tanımlanabilmesi için başka alanlar seçilebilir. 
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. LinkedIn Campaign Manager'daki eşleşen hedef kitleler, dışarı aktarmak için seçtiğiniz segmentlerin adıyla otomatik olarak oluşturulur. Her segment ayrı bir eşleşen hedef kitleyle sonuçlanır. 
 

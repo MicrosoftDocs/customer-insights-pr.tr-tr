@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse'deki Customer Insights verileri
 description: Customer Insights varlıklarını Microsoft Dataverse'de tablolar olarak kullanın.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032920"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645242"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
@@ -24,11 +24,7 @@ Customer Insights, çıkış verilerinin [Microsoft Dataverse](/powerapps/maker/
 
 **Mevcut Dataverse ortamları olan kuruluşlar**
 
-Zaten Dataverse kullanan kuruluşlar, yönetici hedef kitle içgörülerini ayarlarken [mevcut Dataverse ortamlarından birini kullanabilir](get-started-paid.md). Dataverse ortamına URL sağlarken, yeni hedef kitle içgörüleri ortamlarına eklenir. Mümkün olan en iyi performansı sağlamak için, Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır.
-
-Bir Dataverse ortamı eklemek için, hedef kitle içgörüleri ortamı oluştururken **Gelişmiş ayarlar**'ı genişletin. **Microsoft Dataverse ortam URL**'sini girin ve **Veri paylaşımını etkinleştirmek** için onay kutusunu seçin.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+Zaten Dataverse kullanan kuruluşlar, yönetici hedef kitle içgörülerini ayarlarken [mevcut Dataverse ortamlarından birini kullanabilir](create-environment.md). Dataverse ortamına URL sağlarken, yeni hedef kitle içgörüleri ortamlarına eklenir. Mümkün olan en iyi performansı sağlamak için, Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır.
 
 **Yeni kuruluş**
 

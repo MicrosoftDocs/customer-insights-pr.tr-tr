@@ -1,75 +1,71 @@
 ---
 title: Müşteri profillerini görüntüleme
 description: Birleşik müşteri verilerinizin birleşik bir görünümünü elde edin.
-ms.date: 12/01/2020
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 07d2206372f89cd7dcd9df84c87024a6f87d5eac
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032828"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623293"
 ---
 # <a name="customer-profiles"></a>Müşteri profilleri
 
-**Müşteriler** sayfası, [tüm veri kaynaklarından](data-sources.md) toplanan profil verilerine göre müşterilerinizin birleşik bir görünümünü gösterir. [Bütünleştirilmiş Müşteri varlığını oluşturduğunuzda](data-unification.md) müşteri profilleri kullanılabilir. Müşterilerinizin daha zengin görünümlerini elde etmek için veri bütünleştirme işlemini tamamladığınızdan emin olun. Sayfadan müşterileri aramaları da yapabilirsiniz.
+**Müşteriler** sayfası, birleşmiş müşteri profillerinizin birleşik bir görünümünü gösterir. Müşteri profilleri, [birleştirilmiş müşteri varlığını oluşturduktan](data-unification.md) sonra kullanılabilir. Sayfa, müşteri aramanıza ve bu arama için dizini tanımlamanıza olanak sağlar.
 
-Müşteriler, kişi veya kuruluş (önizleme) olabilir. Her müşteri veya kuruluş profili bir kutucuk ile temsil edilir. Belirli bir müşteri veya kuruluşla ilgili ek bilgileri görmek için bir kutucuk seçin. Ek kayıtları görmek için sayfanın altındaki sayfalandırma denetimlerini kullanın.
+Müşteriler bireyler veya organizasyonlar olabilir. Her müşteri profili bir kutucuk ile temsil edilir. Daha fazla kayıt almak için sayfalandırma denetimlerini kullanın. Kartta, **Arama ve filtre dizininde** tanımlanan *Müşteri* varlığındaki alanlar görüntülenir. [Müşteri ayrıntıları sayfası](customer-profiles.md#customer-details-page) adı verilen adanmış bir sayfada seçili müşteriyle ilgili verileri görmek için bir kutucuk seçin.
 
 > [!div class="mx-imgBorder"] 
-> ![B2C müşteri profilleri.](media/profiles-customers.png "B2C müşteri profilleri")
-
-Kuruluşlar (Önizleme)
-> [!div class="mx-imgBorder"] 
-> ![B2B müşteri profilleri.](media/profile-customers-b2b.png "B2B müşteri profilleri")
+> ![Müşteri sayfası sonuç döşemelerini gösterir](media/customers-page-result-tiles-B2C.png "Müşteri sayfası sonuç döşemelerini gösterir")
 
 > [!NOTE]
-> Gezinmede **Müşteriler**'i seçtiğinizde kutucukları göremiyorsanız yöneticinizin **Dizini ara ve filtrele** ile [en az bir aranabilir öznitelik tanımlaması](search-filter-index.md) gerekir.
+> Gezinti sırasında **Müşterileri** seçerken kutucukları göremiyorsanız, yöneticiniz [Arama ve filtre dizininde](search-filter-index.md) **en az bir aranabilir öznitelik tanımlamalıdır**.
 
 ## <a name="search-for-customers"></a>Müşteri arama
 
-Arama kutusuna bir ad veya başka bir öznitelik girerek müşteri arayın. Arama, yalnızca veri birleştirme işlemi sırasında oluşturulan Müşteri Profili varlığı içinde çalışır.
+Arama kutusuna bir ad veya başka bir öznitelik girerek müşteri arayın. Arama, yalnızca veri birleşme işlemi sırasında oluşturulan _Müşteri_ varlığı içinde çalışır.
 
-Yönetici olarak, **Dizini ara ve filtrele** sayfasını kullanarak aranabilir öznitelikleri yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Dizini ara ve filtreleyi yönetme](search-filter-index.md).
+Yönetici olarak, **Dizini ara ve filtrele** sayfasını kullanarak aranabilir öznitelikleri yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Arama ve filtre dizinini yönet](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Müşterileri filtreleme
 
-Müşterileri, Müşteri Profili varlık alanlarına göre filtreleyebilirsiniz. Aramaya benzer şekilde yöneticinizin önce **Dizini ara ve filtrele** sayfasını kullanarak alanları filtrelenebilir olarak tanımlaması gerekir.
+_Müşteri_ varlık alanlarına göre müşterilere filtre uygulayabilirsiniz. Aramaya benzer şekilde yöneticinizin önce **Dizini ara ve filtrele** sayfasını kullanarak alanları filtrelenebilir olarak tanımlaması gerekir.
 
-1. **Müşteriler** sayfasında, **Filtrele**'yi seçin.
+1. **Müşteriler** sayfasında **Filtreleri göster**'i seçin.
 
-2. Müşterileri filtrelemek istediğiniz özniteliklerin yanındaki kutuları işaretleyin.
+1. Müşterileri filtrelemek istediğiniz özniteliklerin yanındaki kutuları işaretleyin.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Müşteri profilleri.](media/profiles-customers3.png "Müşteri profilleri")
+1. **Müşteriler** sayfasında, **Filtreleri temizle**'yi seçerek filtrelerinizi kaldırın.
 
-3. **Müşteriler** sayfasında, **Filtreleri temizle**'yi seçerek filtrelerinizi kaldırın.
+## <a name="customer-details-page"></a>Müşteri ayrıntıları sayfası
 
-##  <a name="customer-details-page"></a>Müşteri ayrıntıları sayfası
+**Müşteri ayrıntıları sayfası**'nı açmak için müşteri kutucuklarından birini seçin. Bu görünüm, seçilen müşteri için birleşik bilgiler içerir. Müşteri ayrıntıları aşağıdaki içeriği içerir:
 
-**Müşteri ayrıntıları sayfası**'nı açmak için müşteri kutucuklarından birini seçin. Bu görünüm, seçilen müşteri için birleşik bilgiler içerir.
+**Müşteri profili kutucuğu**: Bu kutucuk, birleşik _Müşteri_ varlığındaki farklı değerleri gösterir. Seçili müşteri profili için bir alanın değeri yoksa, bir alan gösterilmez. Kutucuk bölümler halinde yapılandırılmıştır:  
+  - İlk bölümde, önceden tanımlı bir alanlar kümesi ve ardından arama ve filtre dizininin parçası olan tüm alanlar gösterilir. Profilde bu tür alanlar varsa, adresle ilgili tüm alanlar tek bir satır olarak birleştirilir. 
+  - **Bu müşteriye ait ilgili kişiler**: İş hesaplarının ortamları alanında, ikinci bölüm olarak bu müşteriye yönelik tüm ilgili ilgili kişileri görürsünüz. Her ilgili kişi alanlarıyla birlikte gösterilir. Boş alanlar gizlidir.
+  - **Ek alanlar**: Seçili müşterinin kalan alanlarını kimlik hariç gösterir. 
+  - **Kimlikler**: Karşılık gelen varlık adı altındaki tüm kimlikler listelenir. Alanlar, kendilerini kimlikler olarak sınıflayan semantikleri tarafından belirlenir.
 
-Müşteri ayrıntıları şunları içerir:
+**Etkinlik zaman çizelgesi**: Aktiviteleri yapılandırdıysanız verileri gösterir. Zaman çizelgesi görünümü, en son aktiviteden başlayarak, seçili müşterinin kronolojik olarak sıralanmış aktivitelerini içerir. Daha fazla bilgi için bkz. [Müşteri etkinlikleri](activities.md).
 
--   **Müşteri profili kutucuğu:** Bu kutucuk, birleşik müşteri profili varlığından farklı değerleri gösterir. Bu ayrıntılar, e-posta adresi, ad, şehir vb. bilgiler içerebilir. 
+**Öngörüler**:  
+  - **Ölçüler**: Bir veya daha fazla ölçüleri müşteri öznitelik ölçülerini yapılandırdıysanız gösterir. Bunlar, bireysel müşteri düzeyinde müşterilerinize göre hesaplanmış KPI'lar içerir. Daha fazla bilgi için bkz. [Ölçümleri tanımlama ve yönetme](measures.md).
 
--   **Olası ilgi alanları, olası markalar:** Birinci taraf zenginleştirme yapılandırıp yapılandırmadığınızı gösterir. Bu müşterinin sahip olduğu profile benzer bir profile sahip müşterinin markalar için olası ilgi alanlarını ve eğilimlerini temsil eder. Daha fazla bilgi için bkz. [Müşteri profillerini marka ve ilgi alanı benzerlikleriyle zenginleştirme](enrichment-microsoft.md).
+  - **Olası ilgi alanları, olası markalar**: Marka veya ilgi benzeşimi zenginleştirme olarak yapılandırılıp yapılandırılmadığını gösterir. Profili seçilen müşteri profiline benzer diğer müşterilere dayalı olarak markalar için potansiyel ilgi ve benzeşimler temsil eder. Daha fazla bilgi için, bkz. [Marka ve ilgi benzeşimleri ile zengin müşteri profilleri](enrichment-microsoft.md).
 
--   **Ölçümler:** Belirli bir tür için bir veya daha fazla ölçüm yapılandırıp yapılandırmadığınızı gösterir: müşteri özniteliği ölçümleri. Bunlar, bireysel müşteri düzeyinde müşterilerinize göre hesaplanmış KPI'lar içerir. Daha fazla bilgi için bkz. [Ölçümleri tanımlama ve yönetme](measures.md).
-
--   **Etkinlik zaman çizelgesi:** Etkinlikleri yapılandırıp yapılandırmadığınızı gösterir. Zaman çizelgesi görünümü, bu müşterinin etkinliklerini en son etkinlikten başlayarak kronolojik olarak sıralanmış şekilde içerir. Daha fazla bilgi için bkz. [Müşteri etkinlikleri](activities.md).
-
-Müşteri arama sayfasına dönmek için **Müşteriler'e dön**'ü seçin.
+Müşteri arama sayfasına dönmek için **Müşterilere Dön** seçeneğini belirleyin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Diğer uygulamalarda birleşik profillerle çalışmak için [daha fazla veri kaynağı ekleyin](data-sources.md), [birleşik profilleri zenginleştirin](enrichment-hub.md) veya [segmentler oluşturun](segments.md).
+Diğer uygulamalardaki birleştirilmiş müşteri profilleriyle çalışmak için [daha fazla veri kaynağı ekleyin](data-sources.md), [birleştirilmiş profiller zenginleştirin](enrichment-hub.md) veya [segment oluşturun](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini AdRoll'a dışarı aktarma
 description: Bağlantıyı yapılandırmayı ve AdRoll'a dışa aktarmayı öğrenin.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032095"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617423"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentleri AdRoll'a aktarma (önizleme)
 
@@ -28,11 +28,11 @@ Birleşik müşteri profilleri segmentlerini AdRoll'a dışa aktarın ve bunlar�
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- AdRoll'a aynı anda en fazla 250.000 profili dışarı aktarabilirsiniz.
-- 100'den az profili olan segmentleri AdRoll'a dışa aktaramazsınız. 
+- AdRoll'a bir seferde 250.000 müşteri profili verebilirsiniz.
+- AdRoll'a 100'den az müşteri profili olan segmentleri aktaramazsınız. 
 - AdRoll'a dışarı aktarma segmentlerle sınırlıdır.
-- AdRoll'a 250.000'den fazla profili dışa aktarmanın tamamlanması 10 dakika kadar sürebilir. 
-- AdRoll ile dışa aktarabileceğiniz profil sayısı AdRoll ile sözleşmenize bağlıdır.
+- AdRoll'a 250.000'e kadar müşteri profili vermenin tamamlanması 10 dakikaya kadar sürebilir. 
+- AdRoll'a aktarabileceğiniz müşteri profilleri sayısı, AdRoll ile olan sözleşmeye bağlıdır.
 
 ## <a name="set-up-connection-to-adroll"></a>AdRoll bağlantısını ayarlayın
 
@@ -66,7 +66,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Adtop reklam verenin kimliğini** girin. Daha fazla bilgi için bkz. [AdRoll reklam verenin profilleri](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Segmentleri AdRoll'a dışa aktarmak gerekir.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Segmentleri AdRoll'a dışa aktarmak gerekir.
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. En az 100 üye içeren bir segment seçin. Daha küçük segmentleri dışa aktaramazsınız. Buna ek olarak, dışa aktarılacak bir segmentin maksimum boyutu, dışa aktarma başına 250.000 üyedir. 
 

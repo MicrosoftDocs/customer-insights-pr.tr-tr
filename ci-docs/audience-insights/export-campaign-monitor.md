@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verileriniCampaign Monitor'e aktarma
 description: Bağlantıyı yapılandırmayı ve Campaign Monitor'da dışa aktarmayı öğrenin.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031911"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619005"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentleri Campaign Monitor'a aktarma (önizleme)
 
@@ -28,10 +28,10 @@ Birleşik müşteri profillerinin bölümlerini Campaign Monitor'e verin ve bunl
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Campaign Monitor'e verme başına en fazla 1000000 profili verebilirsiniz.
+- Kampanya İzleme'ye verme başına en fazla 1 milyon müşteri profili verebilirsiniz.
 - Campaign Monitor'e verme, segmentlerle sınırlıdır.
-- 1000000 profilin Campaign Monitor'e aktarılması için en fazla 20 dakika geçmesi gerekebilir. 
-- Campaign Monitor'e verebileceğiniz profil sayısı bağımlıdır ve Campaign Monitor ile sözleşmeniz üzerinde sınırlıdır.
+- Kampanya İzleme'ye 1 milyona kadar müşteri profili vermenin tamamlanması 20 dakikaya kadar sürebilir. 
+- Kampanya İzleme'ye aktarabileceğiniz müşteri profilleri sayısı, Kampanya İzleme ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Campaign Monitor'a bağlantı ayarla
 
@@ -66,7 +66,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 1. [**Campaign Monitor liste kimliği**](https://www.campaignmonitor.com/api/getting-started/#your-list-id) girin.    
    API listesi kimliğini görüntülemek için öncelikle Campaign Monitor'deki **hesap ayarlarından** [API anahtarını oluşturun](https://www.campaignmonitor.com/api/getting-started/).  
 
-3. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Campaign Monitor'e segmentleri aktarmak gerekir.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Campaign Monitor'e segmentleri aktarmak gerekir.
 
 1. **Kaydet**'i seçin.
 

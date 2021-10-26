@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557376"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623201"
 ---
 # <a name="relationships-between-entities"></a>Varlıklar arasındaki ilişkiler
 
@@ -67,6 +67,20 @@ Veri alma işlemi sırasında, sistem veri kaynaklarını mevcut ilişkiler içi
    - **Hedef anahtar alanı**: Hedef varlığın anahtar alanı. Örnek: Müşteri, **CustomerID** anahtar alanını kullanabilir.
 
 4. Özel ilişki oluşturmak için **Kaydet**'i seçin.
+
+## <a name="set-up-account-hierarchies"></a>Sesap hiyerarşileri belirleme
+
+Birincil hedef hedef kitle olarak kullanılacak iş hesaplarını kullanmak üzere yapılandırılan ortamlar ilgili iş firmaları için firma hiyerarşilerini yapılandırabilir. Örneğin, ayrı departmanları olan bir şirket. 
+
+Kuruluşlar, firmaları ve İlişkiler birbirleriyle daha iyi yönetmek için firma hiyerarşileri oluşturur. Hedef kitle öngörüler özelliği, önceden girilmiş müşteri verilerinde zaten var olan ana alt firma hiyerarşilerini destekler. Örneğin, Dynamics 365 Sales'dan gelen firmalar. Bu hiyerarşiler , firma hiyerarşisi sekmesi altında hedef kitle öngörülerdeki **İlişkiler** sayfasında yapılandırılabilir.
+
+1. **Veri** > **İlişkiler**'e gidin.
+1. **Firma hiyerarşisi** sekmesini seçin.
+1. **Yeni firma hiyerarşisi**'ni seçin. 
+1. **Firma hiyerarşisi** bölmesinde, hiyerarşi için bir ad girin. Sistem çıkış varlığı için bir ad oluşturur. Çıkış adı varlığının adını değiştirebilirsiniz.
+1. Firma hiyerarşinizi içeren varlığı seçin. Bu genellikle firmaları içeren aynı varlıkta yer almaktadır.
+1. Seçilen varlıktan **Hesap kimliği** ve **Firma ana kimliğini** seçin 
+1. Ayarları uygulamak ve hesap hiyerarşisini sonlandırmak için **Kaydet**'i seçin.
 
 ## <a name="view-relationships"></a>İlişkileri görüntüle
 

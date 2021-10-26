@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Omnisend'e aktarma
 description: Bağlantıyı yapılandırmayı ve Omnisend'e dışa aktarmayı öğrenin.
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 58b54dc24f4656f9dd376415a701539c8796e83e6d4e3c6754f5627ce77c5685
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031790"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619052"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentleri Omnisend'e aktarma (önizleme)
 
@@ -28,9 +28,9 @@ Birleşik müşteri profillerinin segmentlerini Omnisend'e aktarın ve bunları 
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Omnisend'e dışarı aktarma başına en fazla 1 milyon profil aktarabilirsiniz ve bu işlemin tamamlanması 4 saat kadar sürebilir.
+- Omnisend'e uygulamasına tek seferde en fazla 1 milyon müşteri aktarabilirsiniz ve tamamlanması 4 saate kadar sürebilir.
 - Omnisend'e aktarma segmentlerle sınırlıdır.
-- Omnisend'e aktarabileceğiniz profil sayısı Omnisend ile olan sözleşmenize bağlıdır.
+- Omnisend'e aktarabileceğiniz müşteri profilleri sayısı, Omnisend ile olan sözleşmeye bağlıdır.
 
 ## <a name="set-up-connection-to-omnisend"></a>Omnisend bağlantısı ayarlama
 
@@ -62,7 +62,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Dışa aktarma bağlantısı** alanında, Omnisend bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Omnisend'e segmentleri aktarmak gerekir. Isteğe bağlı olarak, daha kişiselleştirilmiş e-postalar oluşturmak için Ad, Soyadı, Adres, Şehir, Eyalet, Posta Kodu ve Ülke/bölgeyi dışarı aktarabilirsiniz. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Omnisend'e segmentleri aktarmak gerekir. Isteğe bağlı olarak, daha kişiselleştirilmiş e-postalar oluşturmak için Ad, Soyadı, Adres, Şehir, Eyalet, Posta Kodu ve Ülke/bölgeyi dışarı aktarabilirsiniz. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
 
 1. **Kaydet**'i seçin.
 

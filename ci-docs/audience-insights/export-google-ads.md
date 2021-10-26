@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558996"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617947"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentleri Google Ads (Önizleme) dışa aktarma
 
@@ -35,9 +35,9 @@ Birleşik müşteri profillerinin segmentlerini bir Google Ads hedef kitle liste
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Google Ads'e dışarı aktarma işlemi için en fazla 1 milyon profil.
+- Google Ads'e dışa aktarma başına 1 milyon müşteri profili.
 - Google Ads'e dışarı aktarma segmentlerle sınırlıdır.
-- Toplam 1 milyon profil bulunan segmentlerin dışarı aktarılması, sağlayıcı tarafındaki sınırlamalar nedeniyle 5 dakika kadar sürebilir. 
+- Tedarikçi tarafındaki kısıtlamalar nedeniyle 1 milyon müşteri profili olan segmentleri dışa aktarma 5 dakika kadar sürebilir. 
 - Google Ads'te eşleştirme 48 saat kadar sürebilir.
 
 ## <a name="set-up-connection-to-google-ads"></a>Google Ads bağlantısı ayarla
@@ -74,7 +74,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **[Google Ads hedef kitle kimliğinizi](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** girin ve Google Ads'e bağlantıyı başlatmak için **Bağlan**'ı seçin.
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin.
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. Toplamda en fazla 1 milyon müşteri profilini Google Ads'e dışarı aktarabilirsiniz.
 

@@ -4,27 +4,33 @@ description: Çalışma alanı üyeleri için kullanılabilir rollere ve izinler
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036717"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645561"
 ---
 # <a name="roles-and-permissions"></a>Roller ve izinler
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Bir çalışma alanı, olayları ve raporları nasıl depolacağınıza ve yönetirsiniz. Üye, bir çalışma alanına erişebilen bir kullanıcıdır. Çalışma alanınıza Üyeler atayabilir, bunların rollerini ve izinlerini tanımlayabilirsiniz. Yönetici rolleri, çalışma alanlarını ve ortamları yönetir ve diğer kullanıcılar için etkileşim içgörülerini yapılandırır. Katkıda bulunan rolleri, katılım içgörülerini yapılandırması gerekmeyen ancak kendi raporlarını, hunilerini veya segmentlerini oluşturmak isteyen analistlere yöneliktir.
+Bir çalışma alanı, olayları ve raporları depolayıp yöneteceğiniz bir alandır. Daha fazla bilgi için bkz. [Çalışma alanı oluşturma ve üye ekleme](create-workspace.md). 
+
+Çalışma alanında aşağıdaki rolleri ve izinler olabilir:
+
+- *Üye* rolleri, bir çalışma alanına erişebilen kullanıcılardır. Çalışma alanınıza Üyeler atayabilir, bunların rollerini ve izinlerini tanımlayabilirsiniz. 
+- *Yönetici* rolleri, çalışma alanlarını ve ortamları yönetir ve diğer kullanıcılar için etkileşim içgörülerini yapılandırır. 
+- *Katılımcı* rolleri, etkileşim içgörülerini yapılandırması gerekmeyen ancak kendi raporlarını, hunilerini veya segmentlerini oluşturmak isteyen analizlere yöneliktir.
 
 ## <a name="permissions"></a>İzinler
   
-Aşağıdaki grafik her rol için izinleri tanımlar. 
+Aşağıdaki tabloda her rolün izinleri tanımlanmıştır. 
 
 | İzin | Ortam yöneticisi | Çalışma alanı yöneticisi | Ortam katılımcısı | Çalışma alanı katılımcısı | 
 |--|--|--|--|--|

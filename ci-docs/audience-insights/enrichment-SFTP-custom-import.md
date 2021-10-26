@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032736"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618729"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Müşteri profillerini özel verilerle zenginleştirme (önizleme)
 
@@ -44,6 +44,8 @@ SFTP özel içeri aktarma zenginleştirmelerini yapılandırmak için aşağıda
 1.  **İleri**'i seçin ve almak istediğiniz veri dosyasının **yolunu** ve **dosya adını** girin.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Veri konumuna girerken ekran görüntüsü.":::
+
+1. **İleri**'yi ve müşteri veri kümesini seçin. Bu, tüm müşteri profilleri veya bir segment olabilir.
 
 1. **İleri**'yi seçin ve Zenginleştirme için bir ad ve çıkış varlığı için bir ad girin. 
 
@@ -123,6 +125,6 @@ Zenginleştirme işlemi tamamlandıktan sonra yeni içeri aktarılan özel zengi
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

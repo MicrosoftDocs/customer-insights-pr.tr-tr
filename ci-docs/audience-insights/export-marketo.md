@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Marketo'ya dışarı aktarma
 description: Bağlantıyı yapılandırmayı ve Marketo'a dışa aktarmayı öğrenin.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033517"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619189"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentleri Marketo'a dışa aktarma (Önizleme)
 
@@ -29,10 +29,10 @@ Marketo ile kampanyalar oluşturmak, e-posta pazarlaması sağlamak ve belirli m
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Her Marketo'ya dışarı aktarma işlemi için en fazla 1 milyon profil.
+- Marketo'ya dışa aktarma başına 1 milyon müşteri profili.
 - Marketo'ya dışarı aktarma segmentlerle sınırlıdır.
-- Toplam 1 milyon profil bulunan segmentlerin dışarı aktarılması 3 saat kadar sürebilir. 
-- Marketo'ya dışarı aktarabileceğiniz profil sayısı, Marketo ile yaptığınız sözleşmeye bağlıdır ve sınırlıdır.
+- Toplam 1 milyon müşteri profilli segmentlerin dışa aktarılması 3 saate kadar sürebilir. 
+- Marketo'ya aktarabileceğiniz müşteri profilleri sayısı, Marketo ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
 
 ## <a name="set-up-connection-to-marketo"></a>Marketo bağlantısı ayarla
 
@@ -64,7 +64,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **[Marketo listesi kimliğinizi](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** girin. Liste kimliği tamamen bir sayısal değerdir. Örneğin, Marketo liste kimliğiniz ST12345A7 ise, sayıların öncesindeki ve sonrasındaki karakteri kaldırıp `12345` girin. 
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. 
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. 
 
 1. Isteğe bağlı olarak, daha kişiselleştirilmiş e-postalar oluşturmak için **ad**, **soyadı**, **şehir**, **eyalet** ve **Ülke/bölge** verebilirsiniz. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
 

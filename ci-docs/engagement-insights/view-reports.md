@@ -4,17 +4,17 @@ description: Sitenizdeki gerçek zamanlı etkinlikleri görmek için kullanılab
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036672"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582946"
 ---
 # <a name="view-reports"></a>Raporları görüntüle
 
@@ -92,12 +92,18 @@ Mobil raporlar, gerçek zamanlı kullanımla, uygulamada ve Kullanıcı kategori
 
 - **Konumlar**, uygulama kullanıcılar hakkında ülkeye, bölgeye ve şehre göre bilgileri gösterir.
 
-## <a name="filter-by-time-or-value"></a>Zamana veya değere göre filtrele
+## <a name="filter-by-time-or-date-range"></a>Zamana veya tarih aralığına göre filtreleyin
 
-Bir web veya mobil raporda bir değer veya zaman dilimine odaklanabilecek zaman dilimi veya değeri seçebilirsiniz. 
+Bir değer veya zaman aralığına odaklanmak için, web veya mobil raporda zaman dilimi veya tarih aralığını seçebilirsiniz. 
 
-- Bir zaman dilimi seçmek için, raporun açılan listesinden **daha fazla [...]** seçeneğini belirleyin. Zaman aralığı seçimi gerçek zamanlı kullanım raporu için devre dışıdır; gerçek zamanlı kullanım raporu için zaman aralığı "Şimdi" dir.
+- Bir zaman dilimi seçmek için, rapor görünümünün sağ üst köşesinde raporun açılan listesinden bir değer seçin. Ayrıca **Sabit bir tarih aralığı** da seçebilirsiniz. 
 
-- Çoğu raporda, seçili değer için rapora filtre uygulamak üzere bir grafikte veya listeden bir değer seçin.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Zamana veya tarih aralığına göre filtreleyin.":::   
+
+- Raporların çoğunda, rapora filtre uygulamak için bir grafikte veya listeden bir değer seçin.
+
+> [!NOTE]
+> Zaman aralığı seçimi gerçek zamanlı kullanım raporu için devre dışıdır; gerçek zamanlı kullanım raporu için zaman aralığı "Şimdi" dir.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

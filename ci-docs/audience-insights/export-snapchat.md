@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Snapchat'e aktarma
 description: Bağlantıyı yapılandırmayı ve Snapchat'a dışa aktarmayı öğrenin.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033426"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618707"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmentleri Snapchat'e aktarma (önizleme)
 
@@ -29,7 +29,7 @@ Birleşik müşteri profillerinin bölümlerini Snapchat'e verin ve bunları rek
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
 - Snapchat'e dışa aktarma kesimlerle sınırlıdır.
-- 1000000 profilin Snapchat'e aktarılması için en fazla 15 dakika geçmesi gerekebilir. 
+- Snapchat'e 1 milyona kadar müşteri profili vermenin tamamlanması 15 dakikaya kadar sürebilir. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Snapchat bağlantısı ayarla
 
@@ -63,7 +63,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. [**Snapchat hedef kitle kimliğini**](https://businesshelp.snapchat.com/s/article/custom-audiences) girin.
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Snapchat'e segmentleri aktarmak gerekir.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Snapchat'e segmentleri aktarmak gerekir.
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. 
 

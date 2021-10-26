@@ -2,8 +2,14 @@
   href: index.yml
 - name: Ürüne genel bakış
   href: overview.md
-- name: Deneme oluşturma
-  href: audience-insights/get-started-trial.md
+- name: Ücretsiz deneme sürümü
+  items:
+    - name: Ücretsiz deneme sürümüne kaydolma
+      href: trial-signup.md
+    - name: Deneme Sürümüyle İlgili SSS
+      href: trial-FAQ.md
+- name: Ödemeli bir lisans ile başlayın
+  href: paid-license.md
 - name: Ortamınıza erişme
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Hedef kitle içgörüleri
@@ -19,9 +25,11 @@
         - name: Hızlı başlangıç kılavuzu
           href: audience-insights/get-started.md
         - name: Yeni ortam oluştur
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Hedef kitle içgörülerini keşfedin
           href: audience-insights/home.md
+    - name: İş hesaplarıyla çalışma
+      href: audience-insights/work-with-business-accounts.md
     - name: Modülleri öğrenme
       items:
         - name: Veri alma
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Müşteri etkinliklerini listeleme
           href: audience-insights/activities.md
+        - name: Anlamsal eşlemeleri tanımlama
+          href: audience-insights/semantic-mappings.md
     - name: Veri zenginleştirme
       items:
         - name: Müşteri profillerini zenginleştirme
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Abonelik erime tahmini
               href: audience-insights/predict-subscription-churn.md
-            - name: İşlem tabanlı erimeyi tahmin etme
+            - name: İşlem erime tahmin etme
               href: audience-insights/predict-transactional-churn.md
             - name: Azure Machine Learning'den özel modeller kullanma
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Abonelik erimesi tahmini için örnek kılavuz
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: İşlem tabanlı erime tahmini için örnek kılavuz
+            - name: Hareket karmaşıklığı için örnek kılavuz tahmin
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Ürün öneri tahmini için örnek kılavuz
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Birden çok ortamı yönetme
           href: audience-insights/manage-environments.md
-        - name: Hizmet Sorumlusunu kullanarak ADLS depolama hesabına bağlanma
-          href: audience-insights/connect-service-principal.md
         - name: Desteklenen diller
           href: audience-insights/supported-languages.md
+        - name: Güvenlik
+          items:
+            - name: Kendi Key Vault'unuzu getirin
+              href: audience-insights/use-azure-key-vault.md
+            - name: Hizmet Sorumlusunu kullanarak ADLS depolama hesabına bağlanma
+              href: audience-insights/connect-service-principal.md
     - name: Genişletilebilirlik
       items:
         - name: Etkileşim içgörülerinden web verilerini tümleştirme
@@ -248,6 +262,8 @@
       items:
         - name: Hızlı başlangıç kılavuzu
           href: engagement-insights/get-started.md
+        - name: Ortam oluşturun
+          href: engagement-insights/create-new-environment.md
         - name: Çalışma alanı oluştur
           href: engagement-insights/create-workspace.md
         - name: Web sitelerinden ve Mobil uygulamalardan olay yakalayın

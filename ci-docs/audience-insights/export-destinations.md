@@ -1,7 +1,7 @@
 ---
 title: Customer Insights'den verileri dışa aktarma
 description: Verileri paylaşmak için dışarı aktarma işlemlerini yönetin.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034706"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623157"
 ---
 # <a name="exports-preview-overview"></a>Dışarı aktarma (önizleme) genel bakışı
 
-**Dışarı aktarmalar** sayfası, tüm yapılandırılmış dışarı aktarımları gösterir. Belirli verileri farklı uygulamalarla paylaşmak için verir. Bunlar arasında müşteri profilleri veya varlıkları, şemaları ve eşleme ayrıntıları yer alabilir. Her dışarı aktarma işlemi [kimlik doğrulamayı ve erişimi yönetmek için bir Yönetici olarak ayarlanmış bir bağlantı](connections.md) ister.
+**Dışarı aktarmalar** sayfası, tüm yapılandırılmış dışarı aktarımları gösterir. Belirli verileri farklı uygulamalarla paylaşmak için verir. Müşteri profillerini, varlıklarını, şemalarını ve eşleme ayrıntılarını da içerebilir. Her dışarı aktarma işlemi [kimlik doğrulamayı ve erişimi yönetmek için bir Yönetici olarak ayarlanmış bir bağlantı](connections.md) ister.
 
 Dışarı aktarmalar sayfasını görüntülemek için **veri** > **dışarı aktarımlara** gidin. Tüm kullanıcı rolleri yapılandırılmış dışa aktarmaları görüntüleyebilir. Verme işlemlerini adlarına, bağlantı adlarına veya bağlantı türlerine göre bulmak için komut çubuğundaki arama alanını kullanın.
 
-## <a name="set-up-a-new-export"></a>Yeni dışa aktarma ayarlayın
+## <a name="export-types"></a>Dışa aktarma türleri
 
+İki ana dışa aktarma türü vardır:  
+
+- **Veri çıkışı aktarmaları**, hedef kitle öngörülerde kullanılabilir olan her türlü varlığı vermenizin sağlar. Vermek üzere seçtiğiniz varlıklar tüm veri alanları, meta veriler, şemalar ve eşleme ayrıntıları ile birlikte verilir. 
+- **Segment dışa aktarmaları**, hedef kitle öngörülerden segment varlıklarını dışa aktarabilmenize izin verir. Segmentler, müşteri profillerinin listesini temsil eder. Verme işlemini yapılandırırken, veri verdiğiniz hedef sisteme bağlı olarak eklenen veri alanlarını seçersiniz. 
+
+### <a name="export-segments"></a>Segmentleri dışarı aktarma
+
+**İş hesapları (B2B) veya bağımsız müşteriler için ortamlarda segmentleri dışa aktarma (B2C)**  
+Çoğu verme seçeneği her iki ortam türünü de destekler. Parçaların çeşitli hedef sistemlere verilmesi belirli gereksinimlere sahiptir. Genel anlamda, müşteri profili segment üyesi, ilgili kişi bilgileri içerir. Bu çoğu zaman tek bir müşteriyle (B2C) oluşturulan segmentler için de geçerlidir, ancak iş hesaplarına (B2B) dayalı olarak segmentler için de servis talebi gerekmez. 
+
+**Segment, iş hesapları için ortamları verir (B2B)**  
+- İş hesaplarının ortam içeriğindeki segmentler *firma* varlığı üzerine kurulmuştur. Firma segmentlerini olduğu gibi vermek için hedef sistemin saf firma kesimlerini desteklemesi gerekir. Bu, dışa aktarma işlemini tanımlarken **şirket** seçeneğini seçerken, [LinkedIn](export-linkedin-ads.md) için de geçerlidir.
+- Tüm diğer hedef sistemler ilgili kişi varlığı için alanlar gerektirir. Firma kesimlerinin ilgili kişilerin verilerini alabilmeleri için, segment tanımınızın ilgili kişi varlığının proje öznitelikleri olması gerekir. [Segmentleri ve proje özniteliklerini yapılandırma](segment-builder.md) hakkında daha fazla bilgi edinin.
+
+**Bireysel müşteriler (B2C) ortamlarında segment verme**  
+- Bireysel müşterilerin ortam içeriğindeki segmentler *birleşik müşteri profili* varlığı üzerine kurulmuştur. Hedef sistemlerin gereksinimlerine uyan her segment (örneğin, bir e-posta adresi) verilebilir.
+
+**Segment verme sınırları**  
+- Üçüncü taraf hedef sistemleri, verebileceğiniz müşteri profilleri sayısını sınırlayabilir. 
+- Bağımsız müşteriler için, dışa aktarma için bir segment seçtiğinizde, segment üyelerinin gerçek sayısını görürsünüz. Bir segment çok büyükse bir uyarı alırsınız. 
+- İş hesaplarında, bir segmentteki firmaların sayısını görürsünüz; ancak tahmin edilecek ilgili kişilerin sayısı gösterilmez. Bazı durumda, bu, verilen parçaya gerçekte hedef sistemin kabul ettiğinden daha fazla müşteri profili içermesinden dolayı olabilir. Hedef sistemlerin sınırlarının aşıldığı sonuçlar, verme işlemini atlar. 
+
+## <a name="set-up-a-new-export"></a>Yeni dışa aktarma ayarlayın  
 Bir verme işlemi kurmak veya düzenlemek için, kullanabileceğiniz bağlantılara sahip olmanız gerekir. Bağlantılar sizin [Kullanıcı rolünüze](permissions.md) bağlıdır:
-- Yöneticilerin tüm bağlantılara erişimi vardır. Ayrıca, verme işlemi ayarlanırken yeni bağlantılar da oluşturabilirler.
-- Katkıda bulunanlar belirli bağlantılara erişim sahibi olabilir. Bunlar yöneticilere bağlantıları yapılandırma ve paylaşma konusunda bağımlıdır. Dışarı aktarmalar listesi, **İzinleriniz** sütununda katkıda bulunanlara bir dışarı aktarmayı yalnızca görüntüleyebileceklerini mi yoksa dışarı aktarmada düzenleme yapıp yapamayacaklarını mı gösterir. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Görüntüleyenler yalnızca varolan dışarı aktarımları görüntüleyebilir, ancak oluşturmaz.
+- **Yöneticilerin** tüm bağlantılara erişimi vardır. Ayrıca, verme işlemi ayarlanırken yeni bağlantılar da oluşturabilirler.
+- **Katkıda bulunanlar** belirli bağlantılara erişim sahibi olabilir. Bunlar yöneticilere bağlantıları yapılandırma ve paylaşma konusunda bağımlıdır. Dışarı aktarmalar listesi, **İzinleriniz** sütununda katkıda bulunanlara bir dışarı aktarmayı yalnızca görüntüleyebileceklerini mi yoksa dışarı aktarmada düzenleme yapıp yapamayacaklarını mı gösterir. Daha fazla bilgi için bkz. [Katkıda bulunanların bir bağlantı kullanmasına izin verme](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Görüntüleyenler** yalnızca varolan dışarı aktarımları görüntüleyebilir; bunları oluşturmaz.
 
 ### <a name="define-a-new-export"></a>Yeni dışa aktarma tanımlama
 
