@@ -1,7 +1,7 @@
 ---
 title: Segmentleri, Segment Oluşturucu kullanarak oluşturun
 description: Müşterileri çeşitli özniteliklere göre gruplandırmak için müşteri segmentleri oluşturun.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623068"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673574"
 ---
 # <a name="create-segments"></a>Segmentler oluşturma
 
@@ -23,6 +23,7 @@ Birleşik Müşteri varlığı ve ilgili varlıkları etrafında karmaşık filt
 > [!TIP]
 > - Hızlı segmentler yalnızca **bağımsız müşterilerin** ortamları içinde desteklenir.    
 > - **Bağımsız müşteriye** dayanan segmentler, segment üyeleri için kullanılabilir ilgili kişi bilgilerini otomatik olarak içerir. **İş hesaplarının** ortamlarında , segmentler firmaları (şirketler veya yan kuruluşlar) temel alır. Bir segmente ilgili kişi bilgilerini dahil etmek için, segment oluşturucusundaki **Proje özellikleri** işlevini kullanın.
+>    - İlgili kişi veri kaynaklarının [anlamsal olarak ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) varlığıyla eşlendiğinden emin olun.
 
 ## <a name="segment-builder"></a>Segment oluşturucu
 
@@ -52,7 +53,7 @@ Yukarıdaki örnek, segmentleme yeteneğini gösterir. Çevrimiçi ortamda en az
 
 Yeni bir segment oluşturmanın çeşitli yolları vardır. Bu bölümde kendi segmentinizi sıfırdan nasıl oluşturacağınız açıklanır. Ayrıca, varolan varlıklara dayanan bir *hızlı segment* oluşturabilir veya *önerilen segmentleri* almak için makine öğrenimi modellerinden yararlanın. Daha fazla bilgi için [Segment genel bakışına](segments.md) gidin.
 
-Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir segment etkin olmayan bir segment olarak kaydedilir. Segment konfigürasyonunu tamamladığınızda, segmenti etkinleştirmek için çalıştırın. Alternatif olarak, bir segmenti, _ *Tüm segmentler** sayfasından da ***Etkinleştirebilirsiniz** _.
+Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir segment etkin olmayan bir segment olarak kaydedilir. Segment konfigürasyonunu tamamladığınızda, segmenti etkinleştirmek için çalıştırın. Ayrıca bir segmenti **Tüm segmentler** sayfasından da **Etkinleştirebilirsiniz**.
 
 1. **Segmentler** sayfasına gidin.
 
@@ -86,17 +87,25 @@ Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir se
 
    VEYA işlecini kullanırken, tüm koşullar ilişki yolundaki varlıklara dayalı olmalıdır.
 
-   - Farklı müşteri kaydı kümeleri oluşturmak için birden çok kural oluşturabilirsiniz. İş servis talebi için gerekli olan müşterileri dahil etmek üzere grupları birleştirebilirsiniz. Yeni bir kural oluşturmak için **Kural ekle**'yi seçin. Özellikle, belirtilen ilişki yolu nedeniyle bir kurala varlık ekleyemiyorsanız, bir kuralı eklemek için öznitelik formunu seçmek üzere yeni bir kural oluşturmanız gerekir.
+   - Farklı müşteri kaydı kümeleri oluşturmak için birden çok kural oluşturabilirsiniz. İş servis talebi için gerekli olan müşterileri dahil etmek üzere grupları birleştirebilirsiniz. Yeni bir kural oluşturmak için **Kural ekle**'yi seçin. Özellikle, belirtilen ilişki yolu nedeniyle bir kurala varlık ekleyemiyorsanız öznitelikleri seçmek için yeni bir kural oluşturmanız gerekir.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Bir segmente yeni bir kural ekleyin ve ayarlama işlecini seçin.":::
 
    - Ayarlanan işleçlerden birini seçin: **Birleşim**, **Kesişim** veya **Hariç**.
 
       - **Birleşim** iki grubu birleştirir.
-      - **Kesişim** iki grubu çakıştırır. Birleştirilen grupta yalnızca iki grupta *ortak olan* veriler korunur.
-      - **Dışında** iki grubu birleştirir. A grubunda yalnızca B grubundaki verilerle *ortak olmayan* veriler korunur.
+      - **Kesişim** iki grubu çakıştırır. Birleşik grupta yalnızca iki grup için de *ortak olan* veriler kalır.
+      - **Dışında** iki grubu birleştirir. A grubunda yalnızca B grubundaki veriler için *ortak olmayan* veriler tutulur.
 
-1. Varsayılan olarak, segmentler, tanımlı filtrelerle eşleşen müşteri profillerinin tüm özniteliklerini içeren çıkış varlığı oluştururlar. Bir segment *müşteri* varlığından başka varlıklara dayanıyorsa çıkış varlığına bu varlıklardan daha fazla nitelik ekleyebilirsiniz. Çıkış varlığına eklenecek öznitelikleri seçmek için **proje öznitelikleri**'ni seçin.  
+1. Varsayılan olarak, segmentler, tanımlı filtrelerle eşleşen müşteri profillerinin tüm özniteliklerini içeren çıkış varlığı oluştururlar. Bir segment *müşteri* varlığından başka varlıklara dayanıyorsa çıkış varlığına bu varlıklardan daha fazla nitelik ekleyebilirsiniz. Çıkış varlığına eklenecek öznitelikleri seçmek için **proje öznitelikleri**'ni seçin. 
+
+   > [!IMPORTANT]
+   > İş hesaplarına dayanan segmentlere yönelik olarak, segmentin ilgili kişi bilgileri gerektiren hedefler için etkinleştirilmesine veya dışarı aktarılmasına olanak sağlamak üzere *ContactProfile* varlığındaki her firmanın bir ya da daha fazla ilgili kişisinin ayrıntılarının bu segmente eklenmesi gerekir. *ContactProfile* varlığı hakkında daha fazla bilgi için bkz. [Anlamsal eşlemeler](semantic-mappings.md).
+   > İlgili kişilerin yansıtılan özniteliklerinin olduğu, iş hesaplarına dayalı bir segment için örnek çıktı şöyle görünebilir: 
+   >
+   > |Kimlik  |Hesap adı  |Gelir  |İlgili kişi adı  | İlgili kişi rolü|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Tedarik yöneticisi]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Çıkış varlığına eklenecek yan bölmede seçilen öngörülen öznitelikler örneği.":::
   
@@ -107,13 +116,14 @@ Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir se
    > - Proje yapmak istediğiniz öznitelik, ilişkide belirtildiği gibi, *Müşteri* varlığındaki bir taneden fazla atlama uzaklıktaysa, oluşturduğunuz segment sorgusunun tüm kuralında o öznitelik kullanılmalıdır. 
    > - Proje yapmak istediğiniz öznitelik, *Müşteri* varlığındaki bir taneden fazla atlama uzaklıktaysa, oluşturduğunuz segment sorgusunun tüm kuralında o öznitelik kullanılması gerekmez. 
    > - **Tasarlanan öznitelikler**, ayarla işleçleri kullanılırken uygulamasında çarpanlarına göre belirlenir.
-   > - İş hesaplarına dayanan segmentler için, bu segmentin, ilgili kişi bilgileri gerektiren hedeflere etkinleştirilmesini veya verilmesine olanak sağlamak üzere, her firmanın bir veya daha fazla ilgili kişisinin segmente eklenmesi gerekir.
 
 1. Segmenti kaydetmeden ve çalıştırmadan önce, segment adının yanındaki **Ayrıntıları düzenle**'yi seçin. Segmentiniz için bir ad girin ve segment için önerilen **Çıkış varlığı adını** güncelleştirin. Ayrıca, segmente bir açıklama da ekleyebilirsiniz.
 
 1. Segmenti kaydetmek için **Çalıştır**'ı seçin, bunu etkinleştirin ve tüm kurallar ve koşullara göre segmentinizi işlemeye başlayın. Aksi takdirde, etkin olmayan bir segment olarak kaydedilir.
-
+   
 1. **Segmentler** sayfasına geri dönmek için **Segmentler'e dön**'ü seçin.
+
+1. Varsayılan olarak, segment bir dinamik segment olarak oluşturulur. Bu, sistem yenilemeleri sırasında segmentin yenilendiği anlamına gelir. [Otomatik yenilemeyi durdurmak](segments.md#manage-existing-segments) için segmenti **Statik hale getir** seçeneğini belirleyerek seçin. Statik segmentler istendiği zaman [el ile yenilenebilir](segments.md#refresh-segments).
 
 > [!TIP]
 > - Segment Oluşturucu, koşullar için işleçler ayarlanırken varlıklardan geçerli değerler önermez. Hangi değerlerin kullanılabilir olduğunu görmek için **Veri** > **Varlıklar**'a gidebilir ve varlık verilerini indirebilirsiniz.

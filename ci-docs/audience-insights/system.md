@@ -1,7 +1,7 @@
 ---
 title: Hedef kitle içgörülerinde sistem yapılandırması
 description: Dynamics 365 Customer Insights hedef kitle içgörüleri özelliğinde sistem ayarları hakkında bilgi edinin.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035940"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651864"
 ---
 # <a name="system-configuration"></a>Sistem yapılandırma
 
@@ -24,9 +24,9 @@ ms.locfileid: "7035940"
 - [API kullanımı](#api-usage-tab)
 - [Hakkında](#about-tab)
 - [Genel](#general-tab)
+- [Güvenlik](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Sistem sayfası.](media/system-tabs.png "Sistem sayfası")
+:::image type="content" source="media/system-tabs.png" alt-text="Sistem sayfasındaki ayarlar sekmesi.":::
 
 ## <a name="status-tab"></a>Durum sekmesi
 
@@ -84,9 +84,15 @@ Tüm [alınan veri kaynaklarınız](data-sources.md) ile ilgili otomatik yenilem
 
 ## <a name="general-tab"></a>Genel sekmesi
 
-**Genel** sekmesinde **Dil** ve **Ülke/Bölge biçimi** olmak üzere iki seçenek vardır.
+**Genel** sekmesinde dili ve ülke/bölge biçimini değiştirebilirsiniz.
 
-Uygulama, [birkaç dili destekler](supported-languages.md). Tercih edilen dili değiştirmek için açılan menüden bir **Dil** seçin.
+Customer Insights [birkaç dili destekler](/dynamics365/get-started/availability). Uygulamada menü, etiket metni ve sistem iletileri gibi öğeleri tercih ettiğiniz dilde görüntülemek için dil tercihiniz kullanılır.
+
+İçeri aktarılan veriler ve el ile girdiğiniz bilgiler çevrilmez.
+
+### <a name="update-the-settings"></a>Ayarları güncelleştirme
+
+Tercih edilen dili değiştirmek için açılan menüden bir **Dil** seçin.
 
 Tarih, saat ve sayılar için tercih ettiğiniz biçimlendirmeyi değiştirmek üzere **Ülke/Bölge biçimi** açılan menüsünü kullanın. Bu alanın altında bir biçimlendirme önizlemesi görüntülenir. Sistem, yeni bir dil seçtiğinizde otomatik olarak bir seçim önerir.
 
@@ -105,6 +111,13 @@ Gerçek zamanlı API kullanımıyla ilgili ayrıntıları bulun ve belirli bir z
 
    [Gerçek zamanlı veri alımı](real-time-data-ingestion.md) kullanan işlemler, gerçek zamanlı API kullanımını görüntülemek için dürbün simgesine sahip bir düğme içerir. Geçerli ortamda gerçek zamanlı API kullanımına yönelik kullanım ayrıntılarını içeren bir yan bölmeyi açmak için düğmeyi seçin.   
    Gerçek zamanlı etkileşimlerinizi en iyi şekilde nasıl sunacağınızı seçmek için **Gerçek zamanlı API kullanımı** bölmesindeki **Gruplama ölçütü** kutusunu kullanın. Verileri API yöntemi, uygun bulunan varlık adı (alınan varlık), oluşturan (etkinliğin kaynağı), sonuç (başarı veya başarısızlık) ya da hata kodlarına göre gruplandırabilirsiniz. Veriler, geçmiş grafiği ve tablo olarak kullanılabilir.
+
+## <a name="security-tab"></a>Güvenlik sekmesi
+
+**Güvenlik** sekmesi, kendi [Azure Key Vault'unuzu](/azure/key-vault/general/basic-concepts) ortama bağlamanıza ve yönetmenize olanak tanır.
+Bir kuruluşun uyumluluk sınırında gizliliklerin kullanılması ve kullanılabilmesi için adanmış Key Vault kullanılabilir. Hedef kitle öngörüler, üçüncü taraf sistemlere [bağlantılar ayarlamak](connections.md) için Azure Key Vault'taki gizli anahtarları kullanabilir.
+
+Daha fazla bilgi için bkz. [Kendi Azure Key Vault'unuzu getirme](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645738"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673415"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Hedef kitle içgörülerinde ortam oluşturma
 
@@ -46,7 +46,7 @@ Destekli bir deneyim, yeni bir ortam için gerekli tüm bilgileri toplamanızda 
 
 Aşağıdaki ayrıntıları sağlayın:
    - **Ad**: Bu ortamın adı. Var olan bir ortamı kopyaladıysanız bu alan zaten doldurulmuş haldedir ancak bunu değiştirebilirsiniz.
-   - **İşinizi seçin**: Yeni ortam için birincil hedef kitleyi seçin. Bağımsız müşterilerle (B2C) veya [iş hesaplarıyla](work-with-business-accounts.md) (B2B) çalışabilirsiniz.
+   - **İşinizi seçin**: Yeni ortam için birincil hedef kitleyi seçin. Bireysel tüketiciler (B-C) veya [iş hesapları](work-with-business-accounts.md) (B-B) ile çalışabilirsiniz.
    - **Tür**: Üretim veya korumalı alan ortamı oluşturmak isteyip istemediğinizi seçin. Korumalı alan ortamları, planlanan veri yenilemeye izin vermez ve uygulama öncesine ve teste yöneliktir. Korumalı alan ortamları, o anda seçili olan üretim ortamıyla aynı birincil hedef kitle kullanır.
    - **Bölge**: Hizmetin dağıtıldığı ve barındırıldığı bölge.
 
@@ -66,7 +66,7 @@ Azure Data Lake Storage uygulamasına veri kaydederek , verilerin bu Azure depol
 > - Azure Data Lake Storage ortamı oluştururken seçtiğiniz aynı Azure bölgesinden gelen firmalar.
 > - *Hiyerarşik ad alanı* etkinleştirilmiş olan Azure Data Lake Storage firmaları.
 
-Bu Azure Data Lake Storage seçeneği için, kaynak tabanlı bir seçenek ile kimlik doğrulaması için abonelik tabanlı bir seçenek arasında seçim yapabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Kapsayıcı** adı olacak `customerinsights` ve değiştirilemez.
+Bu Azure Data Lake Storage seçeneği için, kaynak tabanlı bir seçenek ile kimlik doğrulaması için abonelik tabanlı bir seçenek arasında seçim yapabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusunu kullanarak bir Azure Data Lake Storage hesabına bağlanma](connect-service-principal.md). **Kapsayıcı** adı olacak `customerinsights` ve değiştirilemez.
 
 Veri kullanımı gibi sistem işlemleri tamamlandığında, sistem belirttiğiniz depolama hesabında karşılık gelen klasörleri oluşturur. Veri dosyaları ve *model.json* dosyaları oluşturulur ve işlem adına göre klasörlere eklenir.
 
@@ -76,14 +76,14 @@ Customer Insights'ın birden çok ortamını oluşturur ve bu ortamlardaki çık
    
 **Microsoft Dataverse** adımı, Customer Insights'ı Dataverse ortamınızla bağlamanızı sağlar.
 
-[Kullanıma hazır tahmin modellerini](predictions-overview.md#out-of-box-models) kullanmak için, Dataverse ile veri paylaşımını yapılandırın. Veya kuruluşunuzun yönettiği Microsoft Dataverse ortam URL'sini sağlayarak, yerinde veri kaynaklarından gelen verileri etkinleştirebilirsiniz . Customer Insights çıktı verilerini Dataverse Yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
+[Kullanıma hazır tahmin modellerini](predictions-overview.md#out-of-box-models) kullanmak için, Dataverse ile veri paylaşımını yapılandırın. Veya kuruluşunuzun yönettiği Microsoft Dataverse ortam URL'sini sağlayarak, yerinde veri kaynaklarından gelen verileri etkinleştirebilirsiniz . Customer Insights çıktı verilerini Dataverse tarafından yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri.":::
 
 > [!NOTE]
 > Customer Insights aşağıdaki veri paylaşımı senaryolarını desteklemez:
-> - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydederseniz, Microsoft Dataverse Tarafından Yönetilen Data Lake ile veri paylaşımını etkinleştiremezsiniz.
-> - Microsoft Dataverse Tarafından Yönetilen bir Data Lake ile veri paylaşımını etkinleştirirseniz, [bir varlıkta öngörülen veya eksik değerler oluşturamazsınız](predictions.md).
+> - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydederseniz Dataverse tarafından yönetilen Data Lake ile veri paylaşımını etkinleştiremezsiniz.
+> - Dataverse ile veri paylaşımını etkinleştirirseniz [bir varlıkta tahmin edilen veya eksik değerler oluşturamazsınız](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Adım 4: Ayarları sonlandırın
 
@@ -93,10 +93,10 @@ Ayarların çoğunu daha sonra da değiştirebilirsiniz. Daha fazla bilgi için 
 
 ## <a name="work-with-your-new-environment"></a>Yeni ortamınızla çalışma
 
-Customer Insights'ı yapılandırmaya başlarken yardım almak için aşağıdaki makaleleri inceleyin. 
+Customer Insights'ı yapılandırarak kullanmaya başlamaya yardımcı olmak için aşağıdaki makaleleri gözden geçirin: 
 
 - [Daha fazla kullanıcı ekleme ve izinler atama](permissions.md).
 - [Veri kaynaklarınızı alın](data-sources.md) ve [birleşik müşteri profilleri](customer-profiles.md) elde etmek için bunları [veri birleştirme işlemi](data-unification.md) üzerinden çalıştırın.
 - [Birleşik müşteri profillerini zenginleştirin](enrichment-hub.md) veya [tahmini modeller çalıştırın](predictions-overview.md).
-- Müşteriler ve [ölçümler](measures.md) inceleme KPI'larını gruplandırmak için [segmentler oluşturun](segments.md).
+- KPI'ları gözden geçirmek için müşterileri ve [ölçümleri](measures.md) gruplandırmak üzere [segmentler oluşturun](segments.md).
 - Diğer uygulamalarda verilerinizin alt kümelerini işlemek için [bağlantılar](connections.md) ve [dışarı aktarmalar](export-destinations.md) ayarlayın.

@@ -1,7 +1,7 @@
 ---
 title: Birincil hedef hedef kitle iş hesaplarına başlayın
 description: Birincil hedef hedef kitle iş hesapları Dynamics 365 Customer Insights hakkında bilgi edinin.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645012"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673711"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Hedef kitle öngörülerde iş hesaplarıyla çalışma
 
-Dynamics 365 Customer Insights uygulamasındaki hedef kitle öngörüler özelliği, ortamınızı farklı birincil hedef hedef kitleleri için yapılandırmanıza olanak sağlar: bireysel müşteriler (B2C) ve işletme hesapları (B2B). B2C senaryolarında veriler, kişilerin etrafında ortalanır. B2B için birincil hedef izleyicileri firmalar organizasyonlar veya şirketler ile ilgili kişilerdir. Bu makale, iş hesaplarıyla ilgili bir ortamı kullanmaya başlamanıza yardımcı olur. Ortam odaklanmanıza bağlı olarak, hedef kitle öngörüler içindeki özellik alanlarıyla ilgili farklılıkları listeler. Farklılıklar hakkında daha fazla bilgi için özellik alanlarının belgelerini gözden geçirin. 
+Dynamics 365 Customer Insights'taki hedef kitle öngörüler özelliği, ortamınızı farklı birincil hedef kitleler için yapılandırmanıza olanak sağlar: bireysel tüketiciler (B-C) ve iş hesapları (B-B). B-C senaryolarında veriler, kişilerin etrafında ortalanır. B-B için birincil hedef kitleler, firmalar (kuruluşlar veya şirketler) ve ilgili kişilerdir. Bu makale, iş hesaplarıyla ilgili bir ortamı kullanmaya başlamanıza yardımcı olur. Ortam odaklanmanıza bağlı olarak, hedef kitle öngörüler içindeki özellik alanlarıyla ilgili farklılıkları listeler. Farklılıklar hakkında daha fazla bilgi için özellik alanlarının belgelerini gözden geçirin. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>İş hesapları için ortam oluşturma
 
@@ -32,7 +32,7 @@ Verileri birleştirdikten sonra, [firma hiyerarşilerini belirmeyi](relationship
 
 Kuruluşunuz bireysel müşteriler ve iş firmaları için ortamları tutuyorsa, birincil hedef hedef kitle seçmek için sol bölmedeki değiştiriciyi kullanabilirsiniz.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Bağımsız müşteriler ve iş hesapları arasında birincil hedef hedef kitle değiştirmek için değiştirici.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Bağımsız müşteriler ve iş hesapları arasında birincil hedef hedef kitle değiştirmek için değiştirici.":::
 
 ## <a name="supported-feature-areas"></a>Desteklenen özellik alanları
 

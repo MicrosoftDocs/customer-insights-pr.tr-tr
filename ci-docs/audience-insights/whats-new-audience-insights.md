@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606146"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673888"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -166,7 +166,7 @@ Mart 2021'deki güncelleştirmeler çeşitli özellikler, performans yükseltmel
 - **Segmentleri Constant Contact'a aktarma** Dışa aktarma hedeflerimizi, Constant Contact içerecek şekilde genişlettik. Artık Customer Insights'den Constant Contact listelerine segmentleri verebilir ve bunları pazarlama kampanyalarınız için temel olarak kullanabilirsiniz.   
    Daha fazla bilgi için bkz. [Constant Contact'a aktarma](export-constant-contact.md).
 
-- **Segmentleri RollWorks'a aktarma** Dışa aktarma hedeflerimizi, RollWorks içerecek şekilde genişlettik. Artık Customer Insights'den RollWorks listelerine segmentleri verebilir ve bunları B2B reklamcılığı için temel olarak kullanabilirsiniz.    
+- **Segmentleri RollWorks'a aktarma** Dışa aktarma hedeflerimizi, RollWorks içerecek şekilde genişlettik. Artık segmentleri Customer Insights'tan RollWorks hedef kitlelerine dışarı aktarabilir ve B-B reklamlarınız için temel olarak kullanabilirsiniz.    
    Daha fazla bilgi için bkz. [RollWorks'e aktarma](export-rollworks.md).
 
 - **Segmentleri Snapchat'e aktarma** Dışa aktarma hedeflerimizi, Snapchat içerecek şekilde genişlettik. Artık Customer Insights'den Snapchat listelerine segmentleri verebilir ve bunları reklamcılığı için temel olarak kullanabilirsiniz.     

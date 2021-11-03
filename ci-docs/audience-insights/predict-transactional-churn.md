@@ -1,7 +1,7 @@
 ---
 title: İşlem erime tahmini
 description: Bir müşterinin artık ürünlerinizi veya hizmetlerinizi satın almama riski taşıyıp taşımadığını tahmin edin.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643456"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673069"
 ---
 # <a name="transaction-churn-prediction-preview"></a>İşlem erime tahmini (önizleme)
 
@@ -28,6 +28,32 @@ ms.locfileid: "7643456"
 > Örnek verileri kullanarak bir işlem erime tahmini denemesini deneyin [İşlem erime tahmini (önizleme) örnek kılavuz](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Ön koşullar
+
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
+
+- Customer Insights'ta en azından [Katkıda bulunan izinleri](permissions.md).
+- İşletmeniz için erimenin ne demek olduğunu anlamanıza yardımcı olacak iş bilgisi. Zaman tabanlı erime tanımlarını destekleriz. Bu, bir müşterinin herhangi bir satın alma işlemi yapmadığı belirli bir süre sonunda kaybedildiği anlamına gelir.
+- İşlemleriniz/satın almalarınız ve bunların geçmişleriyle ilgili veriler:
+    - Satın almaları/işlemleri ayırt etmek için işlem tanımlayıcıları.
+    - İşlemleri müşterilerinizle eşleştirmek için müşteri tanımlayıcıları.
+    - İşlemin gerçekleştiği tarihleri tanımlayan işlem etkinlik tarihleri.
+    - Satın almalar/işlemler için anlamsal veri şeması aşağıdaki bilgileri gerektirir:
+        - **İşlem Kimliği**: Bir satın almanın veya bir işlemin benzersiz tanıtıcısı.
+        - **İşlem Tarihi**: Satın alma veya işlemin tarihi.
+        - **İşlemin değeri**: İşlemin/öğenin para birimi/sayısal cinsten tutarı.
+        - (İsteğe bağlı) **Benzersiz ürün kimliği**: Verileriniz satır öğesi düzeyindeyse satın alınan ürün veya hizmetin kimliği.
+        - (İsteğe bağlı) **Bu işlemin iade olup olmadığı**: İşlemin iade olup olmadığını tanımlayan doğru/yanlış alanı. **İşlemin değeri** negatifse bu bilgiyi bir iadeyi anlamak için de kullanırız.
+- (İsteğe bağlı) Müşteri etkinlikleriyle ilgili veriler:
+    - Aynı türdeki etkinlikleri ayıran etkinlik tanımlayıcıları.
+    - Müşterilerinizle etkinlikleri eşleştiren müşteri tanımlayıcıları.
+    - Etkinliğin adını ve tarihini içeren etkinlik bilgileri.
+    - Müşteri etkinliklerinin anlamsal veri şeması aşağıdakileri içerir:
+        - **Birincil anahtar:** Etkinliğin benzersiz tanımlayıcısı. Örneğin, müşterinin ürününüzün bir örneğini denediğini gösteren bir web sitesi ziyareti veya kullanım kaydı.
+        - **Zaman Damgası:** Birincil anahtarla belirtilen olayın tarihi ve saati.
+        - **Etkinlik:** Kullanmak istediğiniz etkinliğin adı. Örneğin, bir marketteki "UserAction" adlı alan, müşteri tarafından kullanılan bir kupon olabilir.
+        - **Ayrıntılar:** Etkinlikle ilgili ayrıntılı bilgiler. Örneğin, bir marketteki "CouponValue" adlı alan, kuponun para birimi değeri olabilir.
+
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
 - Customer Insights'ta en azından [Katkıda bulunan izinleri](permissions.md).
 - İşletmeniz için erimenin ne demek olduğunu anlamanıza yardımcı olacak iş bilgisi. Zaman tabanlı erime tanımlarını destekleriz. Bu, bir müşterinin herhangi bir satın alma işlemi yapmadığı belirli bir süre sonunda kaybedildiği anlamına gelir.
@@ -51,7 +77,7 @@ ms.locfileid: "7643456"
         - **Etkinlik:** Kullanmak istediğiniz etkinliğin adı. Örneğin, bir marketteki "UserAction" adlı alan, müşteri tarafından kullanılan bir kupon olabilir.
         - **Ayrıntılar:** Etkinlikle ilgili ayrıntılı bilgiler. Örneğin, bir marketteki "CouponValue" adlı alan, kuponun para birimi değeri olabilir.
 - (İsteğe bağlı) Müşterilerinizle ilgili veriler:
-    - Bu veriler yalnızca nadiren olmalıdır ve modelin en iyi şekilde uygulandığından emin olmak için daha statik özniteliklere doğru hizalanmalıdır.
+    - Bu veriler, modelin en iyi şekilde uygulandığından emin olmak için daha statik özniteliklere doğru hizalanmalıdır.
     - Müşteri verilerine yönelik semantik veri şeması aşağıdakileri içerir:
         - **CustomerID**: Müşterinin benzersiz tanımlayıcısı.
         - **Oluşturulma Tarihi:** Müşterinin ilk eklendiği tarih.
@@ -59,6 +85,9 @@ ms.locfileid: "7643456"
         - **Ülke:** Müşterinin ülkesi.
         - **Endüstri:** Müşterinin endüstri türü. Örneğin, bir kahveci için "Endüstri" adlı bir alan, müşterinin perakendeci olup olmadığını belirtebilir.
         - **Sınıflandırma:** İşiniz için müşterinin kategorilere ayrılması. Örneğin, kahvecide "ValueSegment" adlı bir alan, müşteri boyutuna bağlı olarak müşteri katmanı olabilir.
+
+---
+
 - Önerilen veri özellikleri:
     - Yeterli geçmiş veriler: İşlem verileri en az seçili zaman penceresini ikiye katmıyor. Tercihen, iki ila üç yıllık işlem geçmişi. 
     - Her müşteri için birden çok satınalma: Ideal olarak her müşteri için en az iki işlem.
@@ -114,6 +143,32 @@ ms.locfileid: "7643456"
 
 1. **İleri**'yi seçin.
 
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Ek veriler ekleme (isteğe bağlı)
+
+Müşteri etkinliği varlığınız ile *Müşteri* varlığı arasındaki ilişkiyi yapılandırın.
+
+1. Müşteri etkinliği tablosundaki müşteriyi tanımlayan alanı seçin. Bu alan, *Müşteri* varlığınızın birincil müşteri kimliği ile doğrudan ilişkili olabilir.
+
+1. Birincil *Müşteri* varlığınız olan varlığı seçin.
+
+1. İlişkiyi açıklayan bir ad girin.
+
+#### <a name="customer-activities"></a>Müşteri etkinlikleri
+
+1. İsteğe bağlı olarak, **Müşteri etkinlikleri** için **Veri ekle**'yi seçin.
+
+1. Kullanmak istediğiniz verileri içeren semantik aktivite türünü seçin ve ardından **Aktiviteler** bölümünde bir veya daha fazla aktivite seçin.
+
+1. Yapılandırmakta olduğunuz müşteri etkinliğinin türüyle eşleşen bir etkinlik türü seçin. **Yeni oluştur** seçeneğini belirleyin ve kullanılabilir bir etkinlik türü seçin veya yeni bir tür oluşturun.
+
+1. **İleri**'yi ve **Kaydet**'i seçin.
+
+1. Eklemek istediğiniz başka müşteri etkinlikleri varsa yukarıdaki adımları tekrarlayın.
+
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Tahmin düzeyini seçin
 
 Çoğu tahmin, müşteri düzeyinde oluşturulur. Bazı durumlarda, bu durum iş ihtiyaçlarınızı karşılayacak kadar ayrıntılı olmayabilir. Bu özelliği, bir müşterinin bir dalında, örneğin bir bütün olarak değil, bir şubeyle ilgili karmaşıklığı önceden tahmin etmek için kullanabilirsiniz.
@@ -122,9 +177,9 @@ ms.locfileid: "7643456"
 
 1. İkincil düzeyini içinden seçmek istediğiniz varlıkları genişletin veya seçili seçeneklere filtre uygulamak için arama filtresi kutusunu kullanın.
 
-1. İkincil düzey olarak kullanılmasını istediğiniz özniteliği seçin ve **Ekle**'yi seçin
+1. İkincil düzey olarak kullanılmasını istediğiniz özniteliği seçin ve ardından **Ekle** seçeneğini belirleyin.
 
-1. **İleri**'yi seçin
+1. **İleri**'yi seçin.
 
 > [!NOTE]
 > Bu bölümde bulunan varlıklar, önceki bölümde seçtiğiniz varlıkla bir ilişkisi olduğundan gösterilir. Eklemek istediğiniz varlığı göremiyorsanız, **İlişkiler** içinde geçerli bir ilişki bulunduğundan emin olun. Bu yapılandırma için yalnızca bire bir ve çoktan bire İlişkiler geçerlidir.
@@ -159,7 +214,7 @@ Müşteri etkinliği varlığınız ile *Müşteri* varlığı arasındaki iliş
 
 1. **İleri**'yi seçin.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Kıyaslama hesaplarının isteğe bağlı bir listesini girin (yalnızca iş hesapları)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Karşılaştırma firmalarının isteğe bağlı bir listesini sağlayın
 
 Kıyaslamalar olarak kullanmak istediğiniz iş müşterilerinin ve firmaların listesini ekleyin. [Bu kıyaslama hesaplarının ayrıntılarını](#review-a-prediction-status-and-results) alacaksınız (erime skoru ve erime tahminini etkileyen en etkili özellikler dahil).
 
@@ -168,6 +223,8 @@ Kıyaslamalar olarak kullanmak istediğiniz iş müşterilerinin ve firmaların 
 1. Kıyaslama görevi gören müşterileri seçin.
 
 1. Devam etmek için **İleri**'yi seçin.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Zamanlamayı ayarlayın ve yapılandırmayı gözden geçirin
 
@@ -201,6 +258,25 @@ Kıyaslamalar olarak kullanmak istediğiniz iş müşterilerinin ve firmaların 
 1. Sonuçlarını incelemek istediğiniz tahminin yanındaki dikey üç noktayı ve **Görünüm**'ü seçin.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Tahminin sonuçlarını görmek için denetimi görüntüleyin.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
+
+1. Sonuçlar sayfası içinde verilerin üç ana bölümü bulunur:
+   - **Eğitim modeli performansı**: A, B veya C olası puanlardır. Bu puan, tahminin performansını gösterir ve çıktı varlığında depolanan sonuçları kullanma kararını verirken size yardımcı olabilir. Puanlar aşağıdaki kurallara göre belirlenir: 
+        - **A**; model, toplam tahminlerin en az %50'sini doğru bir şekilde tahmin ettiğinde ve eriyen müşteriler için doğru tahminlerin yüzdesi taban çizgisi oranından en az %10 daha yüksek olduğunda.
+            
+        - **B**; model, toplam tahminlerin en az %50'sini doğru bir şekilde tahmin ettiğinde ve eriyen müşteriler için doğru tahminlerin yüzdesi taban çizgisinden %10'a kadar yüksek olduğunda.
+            
+        - **C**; model, toplam tahminlerin %50'sinden daha azını doğru bir şekilde tahmin ettiğinde ve eriyen müşteriler için doğru tahminlerin yüzdesi taban çizgisinden daha düşük olduğunda.
+               
+        - **Taban Çizgisi**, model için tahmin zaman aralığı girişini (örneğin, bir yıl) alır ve model, bir ay veya daha kısa bir süreye ulaşana kadar modeli 2'ye bölerek farklı zaman kesirleri oluşturur. Bu zaman diliminde satın alma yapmamış müşteriler için bir iş kuralı oluşturmak üzere bu kesirleri kullanır. Bu müşteriler erimiş kabul edilir. Taban çizgisi modeli olarak, kimin muhtemelen eriyeceğini tahmin etme konusunda en yüksek beceriye sahip zaman tabanlı iş kuralı seçilmiştir.
+            
+    - **Erime olasılığı (müşteri sayısı)**: Tahmin edilen erime risklerine göre müşteri grupları. Bu veriler daha sonra, erime riski yüksek olan müşterilerden bir segment oluşturmak istediğinizde size yardımcı olabilir. Bu tür segmentler, segment üyeliği için ayrımın nerede olması gerektiğini anlamaya yardımcı olur.
+       
+    - **En etkili faktörler**: Tahmininizi oluştururken dikkate alınacak çok sayıda faktör vardır. Modelin oluşturduğu toplu tahminler için faktörlerin her birinin hesaplanan bir önem derecesi vardır. Tahmin sonuçlarınızı doğrulamak için bu faktörleri kullanabilir veya bu bilgileri daha sonra kullanarak müşteri erimesi riskini etkileyebilecek [segmentler oluşturabilirsiniz](segments.md).
+
+
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
 1. Sonuçlar sayfası içinde verilerin üç ana bölümü bulunur:
    - **Eğitim modeli performansı**: A, B veya C olası puanlardır. Bu puan, tahminin performansını gösterir ve çıktı varlığında depolanan sonuçları kullanma kararını verirken size yardımcı olabilir. Puanlar aşağıdaki kurallara göre belirlenir: 
@@ -237,6 +313,11 @@ Kıyaslamalar olarak kullanmak istediğiniz iş müşterilerinin ve firmaların 
        Hesap düzeyinde erimeyi tahmin ettiğinizde, tüm firmalar erime segmentleri için ortalama özellik değerlerini türeterek değerlendirilir. Her firma için ikincil düzeydeki karmaşıklık tahminleri için, karmaşıklık segmentlerinin türemeleri yan bölmede seçilen öğenin ikincil düzeyine bağlıdır. Örneğin, bir maddenin ikincil düzeyi ürün kategorisi = ofis malzemeleri içeriyorsa, erime segmentleri için ortalama özellik değerleri türetirken yalnızca ürün kategorisi olarak ofis tedarikleri bulunan maddeler dikkate alınır. Bu mantık, düşük, orta ve yüksek erime segmentlerinde bulunan ortalama değerlere sahip öğelerin özellik değerleriyle kıyaslamasına olanak sağlamak için uygulanır.
 
        Bazı durumlardaysa, yukarıdaki tanıma dayalı olarak ilgili erime segmentine ait öğeler bulunmadığından, düşük, orta veya yüksek erime segmentlerinin ortalama değeri boştur veya kullanılabilir değildir.
+       
+       > [!NOTE]
+       > Düşük, orta ve yüksek ortalama sütunlarının altındaki değerlerin yorumu, ülke/bölge veya sektör gibi kategorik özellikler için farklıdır. "Ortalama" özelliği değeri kavramı kategorik özellikler için geçerli olmadığından bu sütunlardaki değerler, yan panelde seçilen öğeyle karşılaştırıldığında kategorik özelliğin aynı değerine sahip düşük, orta veya yüksek erime segmentlerindeki müşterilerin oranıdır.
+
+---
 
 ## <a name="manage-predictions"></a>Tahminleri yönetme
 

@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617579"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673023"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
 
@@ -29,7 +29,7 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 
 **Bul** sekmesinde, tüm desteklenen zenginleştirme seçeneklerini bulacaksınız.
 
-# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 
 - Microsoft tarafından sağlanan [markalar](enrichment-microsoft.md)
 - Microsoft tarafından sağlanan [ilgi alanları](enrichment-microsoft.md)
@@ -38,7 +38,7 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 - Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md) 
 - [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
 
-# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
 - Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
 - Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md) 

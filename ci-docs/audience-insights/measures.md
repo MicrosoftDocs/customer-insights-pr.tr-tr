@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623056"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673527"
 ---
 # <a name="define-and-manage-measures"></a>Ölçümleri tanımlama ve yönetme
 
@@ -28,7 +28,7 @@ Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini
 
 Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı olarak gösterilmektedir. Birleşik müşteri profili varlığına bağlanmak için bir ilişki ayarlanmış olan veri varlıklarından veri öznitelikleriyle bir ölçü oluşturabilirsiniz.
 
-# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 
 1. Hedef kitle içgörülerinde, **Ölçümler**'e gidin.
 
@@ -92,7 +92,7 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
 
 1. Listede yeni oluşturulan ölçümü görmek için **Ölçümler**'e gidin.
 
-# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
 1. Hedef kitle içgörülerinde, **Ölçümler**'e gidin.
 
@@ -164,7 +164,7 @@ Bu bölümde, sıfırdan yeni bir ölçüm oluşturma adımları ayrıntılı ol
 
 Sık kullanılan ölçüler oluşturmak için önceden tanımlanmış şablonları kullanabilirsiniz. Şablonların ve destekli bir deneyim hakkında ayrıntılı açıklamalar, etkili ölçüm oluşturulmasına yardımcı olur. Şablonlar *Birleşik aktivite* varlığındaki eşlenmiş veriler üzerinde derleyin . Bu nedenle, bir şablondan ölçü oluşturmadan önce [müşteri aktiviteleri](activities.md) yapılandırdığınızdan emin olun.
 
-# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 
 Sık kullanılan ölçüler oluşturmak için önceden tanımlanmış şablonları kullanabilirsiniz. Şablonların ve destekli bir deneyim hakkında ayrıntılı açıklamalar, etkili ölçüm oluşturulmasına yardımcı olur. Şablonlar *Birleşik aktivite* varlığındaki eşlenmiş veriler üzerinde derleyin . Bu nedenle, bir şablondan ölçü oluşturmadan önce [müşteri aktiviteleri](activities.md) yapılandırdığınızdan emin olun.
 
@@ -212,7 +212,7 @@ Aşağıdaki yordamda, şablon kullanarak yeni bir ölçü oluşturma adımları
 
 1. Şimdi, ölçümün sonuçlarını hesaplamak için **Çalıştır** seçeneğini seçebilirsiniz. Daha sonra belirginleştirmek için **Taslağı kaydet**'i seçin.
 
-# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
 Bu özellik yalnızca, bireysel müşterilere birincil hedef kitle olarak oluşturulan ölçüler için kullanılabilir.
 

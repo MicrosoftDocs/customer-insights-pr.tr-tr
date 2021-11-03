@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623157"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673347"
 ---
 # <a name="exports-preview-overview"></a>Dışarı aktarma (önizleme) genel bakışı
 
@@ -32,14 +32,14 @@ Dışarı aktarmalar sayfasını görüntülemek için **veri** > **dışarı ak
 
 ### <a name="export-segments"></a>Segmentleri dışarı aktarma
 
-**İş hesapları (B2B) veya bağımsız müşteriler için ortamlarda segmentleri dışa aktarma (B2C)**  
-Çoğu verme seçeneği her iki ortam türünü de destekler. Parçaların çeşitli hedef sistemlere verilmesi belirli gereksinimlere sahiptir. Genel anlamda, müşteri profili segment üyesi, ilgili kişi bilgileri içerir. Bu çoğu zaman tek bir müşteriyle (B2C) oluşturulan segmentler için de geçerlidir, ancak iş hesaplarına (B2B) dayalı olarak segmentler için de servis talebi gerekmez. 
+**İş hesapları (B-B) veya bireysel tüketiciler (B-C) için ortamlarda segmentleri dışarı aktarma**  
+Çoğu verme seçeneği her iki ortam türünü de destekler. Parçaların çeşitli hedef sistemlere verilmesi belirli gereksinimlere sahiptir. Genel anlamda, müşteri profili segment üyesi, ilgili kişi bilgileri içerir. Bu genellikle bireysel tüketiciler (B-C) üzerinde oluşturulan segmentler için geçerlidir ancak iş hesaplarına (B-B) dayalı segmentler için geçerli olmayabilir. 
 
-**Segment, iş hesapları için ortamları verir (B2B)**  
+**İş hesapları (B-B) için ortamlarda segment dışarı aktarımları**  
 - İş hesaplarının ortam içeriğindeki segmentler *firma* varlığı üzerine kurulmuştur. Firma segmentlerini olduğu gibi vermek için hedef sistemin saf firma kesimlerini desteklemesi gerekir. Bu, dışa aktarma işlemini tanımlarken **şirket** seçeneğini seçerken, [LinkedIn](export-linkedin-ads.md) için de geçerlidir.
 - Tüm diğer hedef sistemler ilgili kişi varlığı için alanlar gerektirir. Firma kesimlerinin ilgili kişilerin verilerini alabilmeleri için, segment tanımınızın ilgili kişi varlığının proje öznitelikleri olması gerekir. [Segmentleri ve proje özniteliklerini yapılandırma](segment-builder.md) hakkında daha fazla bilgi edinin.
 
-**Bireysel müşteriler (B2C) ortamlarında segment verme**  
+**Bireysel tüketiciler (B-C) için ortamlarda segment dışarı aktarımları**  
 - Bireysel müşterilerin ortam içeriğindeki segmentler *birleşik müşteri profili* varlığı üzerine kurulmuştur. Hedef sistemlerin gereksinimlerine uyan her segment (örneğin, bir e-posta adresi) verilebilir.
 
 **Segment verme sınırları**  
