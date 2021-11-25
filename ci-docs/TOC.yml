@@ -84,6 +84,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Gelişmiş adresler
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Şirket verilerini iyileştirme
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Azure Haritalar ile zenginleştirme
           href: audience-insights/enrichment-azure-maps.md
         - name: HERE Technologies ile zenginleştirme
@@ -250,6 +252,40 @@
           href: audience-insights/apis.md
         - name: API başvuruları
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Onay yönetimi (önizleme)
+  items:
+    - name: Yardım merkezi
+      href: consent-management/index.yml
+    - name: Özelliğe genel bakış
+      href: consent-management/overview.md
+    - name: Kullanmaya başlama
+      items:
+        - name: Kullanmaya başlama
+          href: consent-management/get-started.md
+        - name: Kavramlar ve terminoloji
+          href: consent-management/glossary.md
+    - name: Onay verilerini içeri aktarma
+      items:
+        - name: Onay verilerini içeri aktarma
+          href: consent-management/import-consent-data.md
+        - name: Onay verileri ayarlama ve onay tercihlerini uygulama
+          href: consent-management/set-consent-rules.md
+    - name: Onay verilerini yönetme
+      items:
+        - name: Hedef kitle içgörülerinde onay kurallarını etkinleştirme
+          href: audience-insights/activate-consent.md
+        - name: Hedef kitle içgörüleri segmentlerinde varsayılan onay kurallarını yönetme
+          href: audience-insights/change-default-consent-rules.md
+    - name: Ayarları ve kullanıcıları yönetme
+      items:
+        - name: Sistem ayarlarını yapılandırma
+          href: consent-management/system-settings.md
+        - name: Kullanıcıları ve izinleri yönetme
+          href: consent-management/manage-users.md
+    - name: Onay verilerini kullanma
+      items:
+        - name: Onay verileriyle tahminler oluşturma
+          href: consent-management/predictions-consent-data.md
 - name: Etkileşim içgörüleri (önizleme)
   items:
     - name: Yardım merkezi

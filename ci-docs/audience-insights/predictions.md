@@ -1,7 +1,7 @@
 ---
 title: Tahminleri kullanarak kısmi verileri tamamlama
 description: Eksik müşteri verilerini doldurmak için tahminler kullanın.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,17 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645058"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732507"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Tahminlerle kısmi verilerinizi tamamlama
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Kısmi verilerinizi tahminlerle tamamla (kullanım dışı)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Bu özellik **5 Kasım 2021** itibariyle **kullanımdan kalkacaktır**. Geçerli uygulamalar Özellik kaldırılana kadar çalışmaya devam edecektir ancak aşağıdaki yönergeleri kullanarak yeni tümleştirmeler oluşturamazsınız.
 
 Tahminler, bir müşteri hakkındaki kavrayışınızı artırabilecek tahmini değerleri kolayca oluşturmanıza olanak tanır. **Yönetim Bilgileri** > **Tahminler** sayfasında, hedef kitle içgörülerinin diğer bölümlerinde yapılandırdığınız tahminleri görmek ve bunları daha da özelleştirmek için **Tahminlerim**'i seçebilirsiniz.
 
@@ -60,6 +61,8 @@ Daha fazla bilgi için [Yeni ortam oluşturma](create-environment.md) konusuna b
    > ![Kategorilere eşlenen alan değerlerini gösteren örnek.](media/intelligence-categorymapping.png "Kategorilere eşlenen alan değerlerini gösteren örnek")
 
 8. **Bitti**'yi seçtiğinizde tahmin işlenir. İşleme, verilerin boyutuna ve karmaşıklığına bağlı olarak biraz zaman alır. Sonuçlar, oluşturduğunuz tahminin **Çıkış varlığı adı** temel alınarak yeni bir varlıkta kullanılabilir.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Segment oluştururken tahmin oluşturma
 

@@ -1,7 +1,7 @@
 ---
 title: Power Query bağlayıcısı aracılığıyla veri alma
 description: Power Query temelli veri kaynakları için bağlayıcılar.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643518"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732242"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Bir Power Query veri kaynağına bağlanın
 
@@ -79,6 +79,8 @@ Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı liste
    > [!div class="mx-imgBorder"]
    > ![Seçeneği düzenleyin.](media/edit-option-data-sources.png "Seçeneği düzenle")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. **Power Query - Sorguları düzenle** diyaloğundaki değişikliklerinizi ve dönüşümlerinizi [Yeni veri kaynağı oluştur](#create-a-new-data-source) bölümünde açıklandığı gibi uygulayın.
 
 4. Değişikliklerinizi kaydetmek için düzenlemelerinizi tamamladıktan sonra Power Query uygulamasında **Kaydet**'i seçin.

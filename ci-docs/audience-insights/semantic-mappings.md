@@ -1,7 +1,7 @@
 ---
 title: Anlamsal eşlemeler (Önizleme)
 description: Anlamsal eşlemelerin ve bunların nasıl kullanılacağı genel bakış.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622960"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731967"
 ---
 # <a name="semantic-mappings"></a>Anlamsal eşlemeler
 
@@ -75,8 +75,7 @@ Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şema
 
 1. Daha sonra bir anlamsal eşleme çalıştırmak için anlamsal eşlemeyi seçin ve **Yenile**'yi seçin.
 
-> [!TIP]
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Varolan anlamsal eşlemeleri yönetme
 
@@ -91,5 +90,6 @@ Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şema
 - **Yeniden Adlandır**: Seçili anlamsal eşleme için farklı bir ad girebileceğiniz bir iletişim kutusu açar. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
 
 - **Sil**: Seçili anlamsal eşlemenin silinmesini onaylamak için bir iletişim kutusu açar. Anlamsal eşlemeleri ve sil simgesini seçerek aynı anda birden fazla anlamsal eşlemeyi silebilirsiniz. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

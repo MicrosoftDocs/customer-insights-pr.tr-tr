@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648141"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673666"
 ---
 # <a name="create-a-new-environment"></a>Yeni ortam oluştur 
 
@@ -42,11 +42,11 @@ Ortam, çalışma alanlarınızı ve bağlantılarınızı yönettiğiniz bir bo
 
 1. Belirli web sitesi veya uygulamalar için veri toplamanıza olanak sağlayan bir **Çalışma alanı adı** yazın. Daha fazla bilgi için bkz. [Çalışma alanı oluşturma](create-workspace.md).
 
-1. Oluşturmak istediğiniz **Çalışma alanı türünü** (Web veya Mobil) seçin. 
+1. Oluşturmak istediğiniz **Çalışma alanı türünü** (web veya mobil) seçin. 
 
 1. Bu isteğe bağlı ayarları etkinleştirmek veya devre dışı bırakmak için **Gelişmiş ayarları göster**'i seçin:
 
-   - Web olaylarını önceden kimliği doğrulanmış kullanıcılarla ilişkilendirmek için **Bilinmeyenden bilinene** seçeneğini "etkin" yapın. Daha fazla bilgi için bkz. [Daha önce kimliği doğrulanmış ziyaretçilerin web olaylarını tanı](unknown-to-known.md)
+   - Web olaylarını önceden kimliği doğrulanmış kullanıcılarla ilişkilendirmek için **Bilinmeyenden bilinene** seçeneğini "etkin" yapın. Daha fazla bilgi için bkz. [Daha önce kimliği doğrulanmış ziyaretçilerin web olaylarını tanıma](unknown-to-known.md).
    - Bu çalışma alanı için robotların web trafiğini kaldırmak üzere **Filtre bot trafiğini** "etkin" olarak değiştirin. 
 
 1. Bitirdiğinizde **Tamamla**'yı seçin. 

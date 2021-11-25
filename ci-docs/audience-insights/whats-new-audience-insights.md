@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673888"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753141"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -26,6 +26,41 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="october-2021-updates"></a>Ekim 2021 güncelleştirmeleri
+
+2021 Ekim'deki güncelleştirmeler, yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="b-to-b"></a>B2B
+
+2021 Ekim'den itibaren, Customer Insights'da işletme hesaplarıyla ve bunların ilgili kişileriyle çalışabilirsiniz. Daha önce uygulama, daha çok bireysel tüketicilere yönelik olarak tasarlanmıştı. Yeni bir ortam türü üzerinde B2B senaryolarını desteklemek için bazı özellik alanları güncelleştirildi. Desteklenen B2B özelliklerine genel bakış için bkz. [Hedef kitle içgörülerinde işletme hesaplarıyla çalışma](work-with-business-accounts.md).
+
+Aşağıdaki bölümlerde, iş hesaplarını ve bağımsız tüketicileri desteklemek için uyarlanacak bazı önemli alanlar vurgulanacaktır.
+
+#### <a name="export-segments-based-on-business-accounts"></a>İşletme hesaplarına göre segmentleri dışa aktarma
+
+Hedef kitle içgörülerindeki tüm segment dışa aktarmaları işletme hesapları bağlamında kullanılabilir. Çoğu segment dışarı aktarımları, işletme hesaplarında geçerli olması için temeldeki segmentlerde ek yapılandırma ve [ilgili kişi bilgileri](segment-builder.md#create-a-new-segment) gerektirir. Daha fazla bilgi için bkz. [Segmentleri dışarı aktarma](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>İşletme hesaplarıyla LinkedIn Ads dışarı aktarmasını kullanma
+
+LinkedIn Ads dışarı aktarma işlemi artık, işletme hesapları bağlamında ilgili kişi ve şirket hedefleme için de kullanılabilmektedir. LinkedIn dışarı aktarmasının birincil odağı olarak şirket hedeflemeyi seçtiğinizde, ilgili kişi bilgilerini yansıtmaya gerek kalmadan işletme hesapları üzerinde oluşturulan segmentleri dışarı aktarabilirsiniz. Daha fazla bilgi için, [LinkedIn Ads dışarı aktarma](export-linkedin-ads.md) ve [ilgili kişi hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ile [şirket hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) arasındaki farklarla ilgili belgelere göz atın. 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>İşletme hesaplarına ve bunların hiyerarşisine göre ölçümler oluşturma
+
+Ölçüm oluşturucusu, işletme hesaplarıyla ilgili ölçümler oluşturmanıza ve isteğe bağlı olarak hiyerarşi bilgilerini kullanmanıza olanak sağlar. Hiyerarşi bilgileri, bir firma ve tüm ilgili alt firmalarında bir ölçüm hesaplaması toplamak için kullanılır. Örneğin, hiyerarşisiyle tanımlanan her işletme hesabı grubu için toplam gelir gibi ölçümler oluşturabilirsiniz. Daha fazla bilgi için bkz. [Ölçümleri tanımlama ve yönetme](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>İşletme hesaplarına ve bunların hiyerarşisine göre segmentler oluşturma
+
+Segment oluşturucu, isteğe bağlı olarak segmentteki her firma için ilgili kişi bilgilerini içeren işletme hesapları segmentleri oluşturmanıza olanak sağlar. Ayarlanmış bir firma hiyerarşiniz varsa, segment oluşturmada firma hiyerarşisi bilgilerini kullanabilirsiniz. Daha fazla bilgi için [Yeni segment oluşturma](segment-builder.md#create-a-new-segment) konusuna bakın.
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>İşletme hesaplarınızı, erime eğilimine ilişkin derin içgörülerle koruyun
+
+Müşteri erimesi tahmin modeli artık işletme hesaplarını destekliyor. Yalnızca bir firma için değil, bir firma ve bir ürün ya da servis kategorisi kombinasyonu erime riskini değerlendirebilirsiniz. Bu ekleme, bir firmanın genel olarak mı yoksa yalnızca belirli bir mal veya hizmet kategorisinde mi sizden satın alım yapmayı durdurma olasılığı taşıdığını anlamanıza yardımcı olur. Daha fazla yardımcı olması için bu yapay zeka modelini kullanın; bir hesabın erime eğiliminde olmasına ilişkin nedenleri de listeler. Daha fazla bilgi için bkz. [İşlem erime tahimini (önizleme)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Müşteri görünümünde işletme hesabındaki ilgili kişileri görüntüleme
+
+İşletme hesapları ilgili firmalarla eşlenmişse, Customer Insights uygulaması, müşteri ayrıntıları görünümünün bir parçası olarak bu ilgili kişileri gösterir. Daha fazla bilgi için bkz. [Müşteri profilleri](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Eylül 2021 güncelleştirmeleri
 

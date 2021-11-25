@@ -1,7 +1,7 @@
 ---
 title: Ortamları oluşturma ve yönetme
 description: Hizmete kaydolmayı ve ortamları yönetmeyi öğrenin.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673768"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799659"
 ---
 # <a name="manage-environments"></a>Ortamları yönet
 
@@ -39,6 +39,19 @@ Varolan ortamların bazı ayrıntılarını düzenleyebilirsiniz.
 3. **Ortamı düzenle** kutusunda, ortam ayarlarını güncelleştirebilirsiniz.
 
 Ortam ayarları hakkında daha fazla bilgi için [Yeni ortam oluşturma](create-environment.md) konusuna bakın.
+
+## <a name="connect-to-microsoft-dataverse"></a>Microsoft Dataverse'a bağlan
+   
+**Microsoft Dataverse** adımı, Customer Insights'ı Dataverse ortamınızla bağlamanızı sağlar.
+
+[Kullanıma hazır tahmin modellerini](predictions-overview.md#out-of-box-models) kullanmak için, Dataverse ile veri paylaşımını yapılandırın. Veya kuruluşunuzun yönettiği Microsoft Dataverse ortam URL'sini sağlayarak, yerinde veri kaynaklarından gelen verileri etkinleştirebilirsiniz . Customer Insights çıktı verilerini Dataverse tarafından yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri.":::
+
+> [!NOTE]
+> Customer Insights aşağıdaki veri paylaşımı senaryolarını desteklemez:
+> - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydederseniz Dataverse tarafından yönetilen Data Lake ile veri paylaşımını etkinleştiremezsiniz.
+> - Dataverse ile veri paylaşımını etkinleştirirseniz [bir varlıkta tahmin edilen veya eksik değerler oluşturamazsınız](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Ortam yapılandırmasını kopyalama
 

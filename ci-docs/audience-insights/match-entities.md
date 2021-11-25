@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesi için varlıkları eşleştirme
 description: Varlıkları, veri kümelerini birleştirmek ve birleştirilmiş müşteri profilleri oluşturmak için eşleştir.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648232"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732658"
 ---
 # <a name="match-entities"></a>Varlıkları eşleme
 
@@ -180,10 +180,7 @@ Yinelenenleri kaldırma çıkış varlığı aşağıdaki bilgileri içerir:
 
 Başarılı bir çalıştırmanın sonucunu, Birleşik müşteri profili varlığını, **varlıklar** sayfasında bulabilirsiniz. Birleşik müşteri varlığınız, **profiller** bölümünde **müşteriler** olarak adlandırılır. İlk başarılı eşleşme çalıştırması Birleşik *müşteri* varlığını oluşturur. Sonraki tüm eşleşme çalıştırmaları bu varlığı genişletir.
 
-> [!TIP]
-> Eşleştirme sürecini çalıştırdıktan sonra **Görev ayrıntıları** bölmesini açmak için işlem durumunu seçin. Bu; işleme süresi, son işleme tarihi ve görevle ilgili tüm hatalar ve uyarılar hakkında bir genel bakış sunar. Eşleme işlemine hangi varlıkların katıldığını, onlara hangi kuralların uygulandığını ve güncelleştirmelerin başarılı bir şekilde yayımlanıp yayımlanmadığını görmek için **Ayrıntılara göz atın**'ı seçin.  
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Görev durumu bağlantısından işlem ayrıntılarına ulaşmak için detaya gitme yolu.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Eşleştirmelerinizi inceleme ve doğrulama
 

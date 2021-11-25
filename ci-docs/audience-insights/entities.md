@@ -1,7 +1,7 @@
 ---
 title: Varlıklar ve veri kümeleri
 description: Varlıklar sayfasında verileri görüntüleyin.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033839"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732105"
 ---
 # <a name="entities-in-audience-insights"></a>Hedef kitle içgörülerinde varlıklar
 
@@ -26,9 +26,10 @@ ms.locfileid: "7033839"
 - **Kaynak**: Varlıktan verileri alan veri kaynaklarının türü
 - **Oluşturan**: Varlığı oluşturan kişinin adı
 - **Oluşturma Tarihi**: Varlığın oluşturulma tarihi ve saati
-- **Güncelleştiren**: Varlığı güncelleştiren kişinin adı
-- **Son güncelleştirme**: Varlığın son güncelleştirilme tarihi ve saati
-- **Son yenileme**: Son veri yenileme tarihi ve saati
+- **Güncelleştirildi**: Varlığı güncelleştiren kişinin adı
+- **Durum**: Varlığın son güncelleştirmesiyle ilgili ayrıntılar
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Belirli bir varlığın verilerini keşfetme
 

@@ -1,7 +1,7 @@
 ---
 title: Verileri almak için veri kaynaklarını kullanma
 description: Çeşitli kaynaklardan verilerin nasıl içe aktarıldığını öğrenin.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645379"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732191"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
@@ -48,14 +48,7 @@ Her alınan veri kaynağının adı, durumu ve verilerin bu kaynak için en son 
 > [!div class="mx-imgBorder"]
 > ![Eklenen veri kaynağı.](media/configure-data-datasource-added.png "Eklenen veri kaynağı")
 
-|Status  |Açıklama  |
-|---------|---------|
-|Başarılı   |**Yenilenen** sütununda bir zamandan bahsediliyorsa veri kaynağı başarıyla alınmıştır.
-|Başlatılmadı   |Veri kaynağında henüz alınmış veri yok veya veri kaynağı hala taslak modunda.         |
-|Yenileniyor    |Veri alımı devam ediyor. **Eylem** sütununda **Yenilemeyi durdur**'u seçerek bu işlemi iptal edebilirsiniz. Veri kaynağının yenilenmesinin durdurulması veri kaynağını son yenileme durumuna döndürür.       |
-|Yapılamadı     |Veri alımı hatalarla karşılaştı.         |
-
-Daha fazla ayrıntıyı incelemek için herhangi bir veri kaynağının **Durum** sütunundaki değeri seçin. **İlerleme ayrıntıları** bölmesinde, **Veri kaynakları**'nı genişletin. Hata ayrıntıları ve aşağı akış işlemi güncelleştirmeleri dahil olmak üzere yenileme durumu hakkında daha fazla bilgi için **Ayrıntılara bakın**'ı seçin.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, **Varlıklar** sayfasından incelenebilir. Daha fazla bilgi için bkz. [Varlıklar](entities.md).
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483717"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792004"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Customer Insights özelliklerindeki servis sınırları
 
@@ -26,7 +26,7 @@ Bu makalede, hizmetin güvenilirliğini ve kararlılığını sağlamak için ta
 
 | Area  | Sınırlar  | Notes |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmentler ve ölçüler | 100 segment veya ölçüm. | Etkin [segment](audience-insights/segments.md) ve [ölçümlerin](audience-insights/measures.md) toplam sayısı birlikte 100'ü aşamaz.  |
+| Segmentler, ölçümler ve tahminler | 300  | Birleştirilmiş [segmentler](audience-insights/segments.md), [ölçümler](audience-insights/measures.md) ve [tahminlerin](audience-insights/predictions.md) toplam sayısı 300'ü geçemez.  |
 | İlişki | Varlık yollarındaki ilişkilerde 20 derinlik düzeyi. | Oluşturucu arabirimini kullanarak [segmentler](audience-insights/segments.md) veya [ölçümler](audience-insights/measures.md) oluştururken varlık yolları, başlangıç varlığı ile hedef varlık arasında 20'ye kadar ilişki atlama noktasına sahip olabilir.  |
 
 

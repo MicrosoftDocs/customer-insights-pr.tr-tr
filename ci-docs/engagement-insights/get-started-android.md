@@ -4,17 +4,17 @@ description: Android SDK'nun nasıl kişiselleştirildiğini ve çalıştırıla
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/15/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494299"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655366"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Android SDK'yı kullanmaya başlama
 
@@ -42,12 +42,12 @@ Bir çalışma alanı seçip, Android mobil platformu seçerek ve Android SDK'yi
 
 - Varolan bir çalışma alanınız yoksa, **Yeni Çalışma Alanı**'nı seçin ve [yeni bir çalışma alanı](create-workspace.md) oluşturmak için adımları izleyin.
 
-- Çalışma alanı oluşturduktan sonra, **yönetici** > **çalışma alanı**'na gidin ve **Yükleme Kılavuzu**'nu seçin. 
+- Çalışma alanı oluşturduktan sonra, **yönetici** > **çalışma alanı**'na gidin ve **Yükleme Kılavuzu**'nu seçin.
 
 ## <a name="configure-the-sdk"></a>SDK'yi yapılandırın
 
 SDK'yı indirdikten sonra, olayları etkinleştirmek ve tanımlamak için Android Studio'da onunla çalışabilirsiniz. Bunu yapmanın iki yolu vardır:
-### <a name="option-1-using-jitpack-recommended"></a>Seçenek 1: JitPack kullanma (önerilen)
+### <a name="option-1-use-jitpack-recommended"></a>Seçenek 1: JitPack kullanın (önerilir)
 1. Kökünüz `build.gradle` için JitPack deposu ekleyin:
     ```gradle
     allprojects {
@@ -61,12 +61,12 @@ SDK'yı indirdikten sonra, olayları etkinleştirmek ve tanımlamak için Androi
 1. Bağımlılığı ekleyin:
     ```gradle
     dependencies {
-        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:v1.0.0'
         api 'com.google.code.gson:gson:2.8.1'
     }
     ```
 
-### <a name="option-2-using-download-link"></a>Seçenek 2: Karşıdan yükleme bağlantısını kullanma
+### <a name="option-2-use-download-link"></a>Seçenek 2: İndirme bağlantısını kullanın
 1. [Etkileşim içgörüleri Android SDK'sını](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) indirin ve `eiandroidsdk-debug.aar` dosyayı `libs` klasörüne yerleştirin.
 
 1. Proje düzeyinde `build.gradle` dosyanızı açın ve aşağıdaki kod parçacıklarını ekleyin:
@@ -83,22 +83,23 @@ SDK'yı indirdikten sonra, olayları etkinleştirmek ve tanımlamak için Androi
     }
     ```
 
-1. `AndroidManifest.xml` dosyanızdaki, `manifests` klasöründe bulunan ağ ve internet için izin ekleyin. 
+## <a name="enable-auto-instrumentation"></a>Otomatik enstrümantasyonu etkinleştir
+
+1. `AndroidManifest.xml` dosyanızdaki, `manifests` klasöründe bulunan ağ ve internet için izin ekleyin.
     ```xml
     <manifest>
         ...
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     ```
-    
-1. Etkileşim içgörüleri SDK yapılandırmasını, `AndroidManifest.xml` dosyanız aracılığıyla ayarlayın. 
 
-## <a name="enable-auto-instrumentation"></a>Otomatik enstrümantasyonu etkinleştir
+1. Etkileşim içgörüleri SDK yapılandırmasını, `AndroidManifest.xml` dosyanız aracılığıyla ayarlayın.
+
 1. **Yükleme kılavuzu**'ndan XML kod parçacığı kopyalayın. `Your-Ingestion-Key` otomatik olarak doldurulmalıdır.
 
    > [!NOTE]
    > `${applicationId}` Bölümü değiştirmeniz gerekmez. Bu otomatik olarak doldurulur.
-   
+
 
    ```xml
    <application>
@@ -116,20 +117,24 @@ SDK'yı indirdikten sonra, olayları etkinleştirmek ve tanımlamak için Androi
    </application>
    ```
 
-1. Yukarıdaki `autoCapture` alanını `true` veya `false` olarak ayarlayarak `View` etkinliklerinin otomatik yakalanmasını etkinleştirin veya devre dışı bırakın. Şu anda `Action` olaylarının el ile eklenmesi gerekiyor.
+1. Yukarıdaki `autoCapture` alanını `true` veya `false` olarak ayarlayarak `View` etkinliklerinin otomatik yakalanmasını etkinleştirin veya devre dışı bırakın. 
 
-1. (İsteğe bağlı) Diğer yapılandırmalar uç nokta toplayıcı URL 'sini ayarlamayı içerir. Anahtar meta verileri altına aşağıdaki `AndroidManifest.xml` içinde eklenebilirler:
-    ```xml
+   >[!NOTE]
+   >`Action` olaylarının el ile eklenmesi gerekir.
+
+1. (İsteğe bağlı) Diğer yapılandırmalar uç nokta toplayıcı URL 'sini ayarlamayı içerir. `AndroidManifest.xml` içindeki alma anahtarı meta verileri altından eklenebilirler.
+
+   ```xml
         <meta-data
             android:name="com.microsoft.engagementinsights.endpointUrl"
             android:value="https://some-endpoint-url.com" />
-    ```
+   ```
 
 ## <a name="implement-custom-events"></a>Özel olayları uygulama
 
 SDK'yı başlattıktan sonra, `MainActivity` ortamında olaylarla ve özellikleriyle çalışabilirsiniz.
 
-    
+
 Java:
 ```java
 Analytics analytics = new Analytics();
@@ -141,7 +146,7 @@ var analytics = Analytics()
 ```
 
 ### <a name="set-property-for-all-events-optional"></a>Tüm olaylar için özellik ayarla (isteğe bağlı)
-    
+
 Java:
 ```java
 analytics.setProperty("year", 2021);

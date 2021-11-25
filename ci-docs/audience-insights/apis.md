@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033609"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732288"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
@@ -135,7 +135,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 
 1. Mevcut [Azure uygulama kaydınızı](#create-a-new-app-registration-in-the-azure-portal) kullanarak `AccessToken` belirtecini almak için [Microsoft Kimlik Doğrulaması Kitaplığını (MSAL)](/azure/active-directory/develop/msal-overview) kullanın.
 
-1. Belirtecin kimliğini doğrulayıp başarıyla aldıktan sonra ek **DefaultRequestHeaders "Yetkilendirme"** öğesini **Taşıyıcı <access token>** ve **Ocp-Apim-Subscription-Key** öğesini [Customer Insights ortamınızdaki **abonelik anahtarı**](#get-started-trying-the-customer-insights-apis) olarak ayarlayarak yeni bir `HttpClient` oluşturun veya var olanı kullanın.   
+1. Başarılı bir şekilde kimliği doğruladıktan ve belirteci aldıktan sonra, yeni bir istemci oluşturun veya mevcut bir `HttpClient` kullanın: Ek **DefaultRequestHeaders "Yetkilendirme"** yi **Taşıyıcı "erişim belirteci"** ve **Ocp-Apim-Subscription-Key**'i [Customer Insights ortamınızdan alınan **abonelik anahtarı**](#get-started-trying-the-customer-insights-apis) olarak ayarlayın.   
  
    Uygun olduğunda **Yetkilendirme** üst bilgisini sıfırlayın. Örneğin, belirtecin süresi dolduğunda.
 

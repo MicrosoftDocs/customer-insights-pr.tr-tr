@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesinde varlıkları eşleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648278"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732796"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
@@ -187,10 +187,9 @@ Değişiklikleri kullanarak sistemi yenilemek için **Birleştirme ve akış yö
 
 Daha fazla değişiklik yapmak ve adımı yeniden çalıştırmak için sürmekte olan bir birleştirmeyi iptal edebilirsiniz. **Yenileniyor ...** seçeneğini belirleyin ve görünen yan bölmede **İşi iptal et**'i seçin.
 
-> [!TIP]
-> Birleştirme sürecini çalıştırdıktan sonra **Görev ayrıntıları** bölmesini açmak için süreç durumunu seçin. Bu; işleme süresi, son işleme tarihi ve görevle ilgili tüm hatalar ve uyarılar hakkında bir genel bakış sunar. Hangi varlıkların eşleşme işlemine katıldığını, çakışma çözümünün başarılı olup olmadığını ve güncelleştirmelerin başarıyla yayımlanıp yayımlanmadığını görmek için **Ayrıntılara göz atın**'ı seçin.  
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Görev durumu bağlantısından işlem ayrıntılarına ulaşmak için detaya gitme yolu.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Görev durumu bağlantısından işlem ayrıntılarına ulaşmak için detaya gitme yolu.":::
 
 ## <a name="next-step"></a>Sonraki Adım
 
