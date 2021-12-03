@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618315"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866912"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentleri LinkedIn Ads'e aktarma (önizleme)
 
@@ -28,6 +28,7 @@ Eşleştirilmiş hedef kitleler oluşturmak için birleşik müşteri profilleri
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Customer Insights'taki segmentinizde en az 300 benzersiz profil bulunması gerekir. 
 - LinkedIn Ads'e dışa aktarma başına en fazla 100.000 müşteri profili aktarabilirsiniz.
 - LinkedIn Ads'e aktarma segmentlerle sınırlıdır.
 - LinkedIn Ads'e 100.000'e kadar müşteri profili vermenin tamamlanması 10 dakikaya kadar sürebilir. 

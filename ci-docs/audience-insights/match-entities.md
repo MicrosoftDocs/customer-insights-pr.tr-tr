@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesi için varlıkları eşleştirme
-description: Varlıkları, veri kümelerini birleştirmek ve birleştirilmiş müşteri profilleri oluşturmak için eşleştir.
-ms.date: 11/01/2021
+description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732658"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863835"
 ---
 # <a name="match-entities"></a>Varlıkları eşleme
 
@@ -224,17 +224,24 @@ Eşleştirme parametrelerinin çoğunu yeniden yapılandırabilir ve üzerinde i
 
 ## <a name="specify-custom-match-conditions"></a>Özel eşleştirme koşulları belirleme
 
-Belirli kayıtların her zaman eşleştirilmesi veya hiç eşleştirilmemesi gereken koşulları belirleyebilirsiniz. Bu kurallar standart eşleştirme işlemini geçersiz kılmak için yüklenebilir. Örneğin, kayıtlarımızda John Doe I ve John Doe II varsa, sistem bunları tek bir kişi olarak eşleştirebilir. Özel eşleştirme kuralları, profillerinin farklı kişilere ait olduğunu belirtmenize olanak sağlar. 
+Varsayılan eşleştirme mantığını geçersiz kılan koşullar belirtebilirsiniz. Dört seçenek bulunur: 
+
+|Seçenek  |Description |Örnek  |
+|---------|---------|---------|
+|Her zaman eşleştir     | Her zaman eşleşen değerleri tanımlar.         |  Her zaman *Mike* ve *MikeR*'yi eşleştir.       |
+|Hiçbir zaman eşleştirme     | Hiçbir zaman eşleşmeyen değerleri tanımlar.        | *John* ve *Jonathan*'ı hiçbir zaman eşleştirme.        |
+|Özel atlama     | Sistemin eşleştirme aşamasında her zaman yok sayması gereken değerleri tanımlar. |  *11111* ve *Bilinmeyen* değerlerini eşleştirme sırasında yok say.        |
+|Diğer ad eşlemesi    | Sistemin aynı değer olarak kabul edilmesi gereken değerleri tanımlama.         | *Joe* ve *Joseph*'i eşit say.        |
 
 1. **Veri** > **bütünleştir** > **eşleştir** bölümüne gidin ve **eşleşen kayıt bilgileri** bölümünde **özel Eşleştir**'i seçin.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Özel eşleşme denetiminin vurgulandığı eşleşme kuralları bölümünün ekran görüntüsü.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Özel eşleşme denetiminin vurgulandığı eşleşme kuralları bölümünün ekran görüntüsü.":::
 
-1. Ayarlanmış özel eşleştirme kurallarınız yoksa, daha ayrıntılı bilgi içeren yeni bir **özel eşleştirme** bölmesi görürsünüz.
+1. **Özel** bölmesinde, **Kayıtlar** sekmesine gidin.
 
-1. Hangi kayıtların her zaman eşleştirileceğini veya hiçbir zaman eşleştirilmeyeceğini belirlemek üzere bir şablon dosyası almak için **Şablonu doldurun**'u seçin. "Her zaman eşleştir" kayıtlarını ve "hiçbir zaman eşleştirme" kayıtlarını ayrı olarak ve iki farklı dosyada doldurmanız gerekir.
+1. **Özel tür** açılır menüsünde özel eşleştir seçeneğini belirleyin ve **Şablonu karşıdan yükle** seçeneğini belirleyin. Her eşleştirme seçeneği için ayrı bir şablon gerekir.
 
-1. Şablon, özel eşleştirmede kullanılacak varlığın ve varlık birincil anahtar değerlerinin belirleneceği alanlar içerir. Örneğin, *satış* varlığındaki birincil anahtar *12345*'in *ilgili kişi* varlığındaki birincil anahtar *34567* ile her zaman eşleşmesini istiyorsanız şablonu doldurun:
+1. Şablon dosyası indirilir. Açın ve ayrıntıları doldurun. Şablon, özel eşleştirmede kullanılacak varlığın ve varlık birincil anahtar değerlerinin belirleneceği alanlar içerir. Örneğin, *satış* varlığındaki birincil anahtar *12345*'in *ilgili kişi* varlığındaki birincil anahtar *34567* ile her zaman eşleşmesini istiyorsanız şablonu doldurun:
     - Entity1: Satış
     - Entity1Key: 12345
     - Entity2: İlgili Kişi
@@ -244,26 +251,32 @@ Belirli kayıtların her zaman eşleştirilmesi veya hiç eşleştirilmemesi ger
    
    Bir varlıkta yinelenenleri kaldırma için özel eşleştirme belirtmek isterseniz aynı varlığı, Varlık1 ve Varlık2 olarak sağlayın ve farklı birincil anahtar değerleri ayarlayın.
 
-1. Uygulamak istediğiniz tüm geçersiz kılmaları ekledikten sonra şablon dosyasını kaydedin.
+1. Tüm geçersiz kılmaları ekledikten sonra, şablon dosyasını kaydedin.
 
-1. **Veri** > **Veri kaynakları**'na gidin ve şablon dosyalarını yeni varlıklar olarak alın. Alındıktan sonra Eşleştirme yapılandırmasını belirtmek için bunları kullanabilirsiniz.
+1. **Veri** > **Veri kaynakları**'na gidin ve şablon dosyalarını yeni varlıklar olarak alın.
 
-1. Karşıya yüklenen dosyalar ve varlıklar kullanılabilir olduktan sonra **Özel eşleştirme** seçeneğini yeniden belirleyin. Eklemek istediğiniz varlıkları belirtme seçenekleri görürsünüz. Açılır menüden gerekli varlıkları seçin.
+1. Karşıya yüklenen dosyalar ve varlıklar kullanılabilir olduktan sonra **Özel eşleştirme** seçeneğini yeniden belirleyin. Eklemek istediğiniz varlıkları belirtme seçenekleri görürsünüz. Açılır menüden gerekli varlıkları seçin ve **Bitti**'yi seçin.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Özel eşleştirme senaryosu için geçersiz kılmaları seçebileceğiniz iletişim kutusunun ekran görüntüsü.":::
 
-1. **Her zaman eşleştir** ve **Hiçbir zaman eşleştirme** için kullanmak istediğiniz varlıkları ve **Bitti**'yi seçin.
+1. Özel eşleşmeyi uygulamak, kullanmak istediğiniz eşleştirme seçeneğine bağlıdır. 
+
+   - **Her zaman eşleştir** veya **Hiçbir zaman eşleştirme** için sonraki adıma geçin.
+   - **Özel atlama** veya **Diğer ad eşlemesi** için, var olan eşleştirme kuralında **Düzenle**'yi seçin veya yeni bir kural oluşturun. Normalleştirmeler açılan listede **Özel atlama** veya **Diğer ad eşlemesi** seçeneğini belirleyin ve **Bitti**'yi seçin.
 
 1. Özel eşleştirme yapılandırmasını uygulamak için **Eşleştir** sayfasında **Kaydet**'i seçin.
 
 1. Eşleştirme işlemini başlatmak için **Eşleştir** sayfasında **Çalıştır** seçeneğini belirleyin. Belirtilen diğer eşleşme kuralları, Özel eşleştirme yapılandırması tarafından geçersiz kılınır.
 
-> [!TIP]
-> **Veri** > **varlıklar**'a gidin ve geçersiz kılmaların uygulandığını doğrulamak için **conflationmatchpair** varlığını gözden geçirin.
+### <a name="known-issues"></a>Bilinen sorunlar 
+
+- Self birleştirme, yinelenenleri kaldırma varlıklarında normalleştirilmiş verileri göstermez. Ancak yinelenenleri kaldırma sırasında dahili olarak normalleştirme uygular. Tasarım gereği tüm normalleştirmeler içindir. 
+- Eşleşme kuralı, Diğer ad eşlemesi veya Özel geçişi kullandığı zaman anlamsal tür ayarı **Eşleme** aşamasında kaldırılırsa, normalleştirme uygulanmaz. Bu durum, anlamsal tür bilineceğinden eşleşme kuralında normalleştirme yapılandırıldıktan sonra anlamsal türü temizlediğiniz durumda olur.
+
 
 ## <a name="next-step"></a>Sonraki adım
 
-En az bir eşleştirme çifti için eşleştirme işlemini tamamladıktan sonra verilerinizdeki olası çelişkileri [**Birleştirme**](merge-entities.md) konusuna giderek çözebilirsiniz.
+En az bir eşleşme çifti için eşleştirme işlemini tamamladıktan sonra, [**Birleştirme**](merge-entities.md) adımına geçin.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
