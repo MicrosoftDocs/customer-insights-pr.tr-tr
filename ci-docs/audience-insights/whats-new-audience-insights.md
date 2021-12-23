@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753141"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884286"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
@@ -26,6 +26,18 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="november-2021-updates"></a>Kasım 2021 güncelleştirmeleri
+
+2021 Kasım güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Segment üyeliği artık Dataverse uygulamasında kullanılabilir durumda
+
+Müşteri profilleri için segment üyeliği bilgileri, müşteri profilleri ve öngörüleriyle birlikte artık Dataverse uygulamasında kullanılabilir durumdadır. Dynamics 365 eylem uygulamaları ve model temelli uygulamaları, belirli bir müşteri için segment üyelik ayrıntılarını aramak üzere bu verileri kullanabilir.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Etkinlikler, iş hesapları için ilgili kişi düzeyindeki ayrıntıları destekler
+
+Hangi firma ilgili kişilerinin belirli etkinliklerde yer aldığını daha iyi anlamak için artık iş hesabı etkinliği zaman çizelgelerinizdeki ilgili kişi etkinliklerini yapılandırabilir, görüntüleyebilir ve filtreleyebilirsiniz.
 
 ## <a name="october-2021-updates"></a>Ekim 2021 güncelleştirmeleri
 

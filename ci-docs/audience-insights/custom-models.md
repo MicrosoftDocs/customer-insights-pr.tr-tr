@@ -1,7 +1,7 @@
 ---
 title: Özel makine öğrenimi modelleri | Microsoft Docs
 description: Dynamics 365 Customer Insights'ta Azure Machine Learning uygulamasında özel modellerle çalışın.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032966"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881808"
 ---
 # <a name="custom-machine-learning-models"></a>Özel makine öğrenimi modelleri
+
+> [!NOTE]
+> Machine Learning Studio (klasik) desteği 31 Ağustos 2024 tarihinde sona erecek. Bu tarihe kadar [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning)'e geçmenizi öneririz.
+>
+> 1 Aralık 2021 tarihinden itibaren, yeni Machine Learning Studio (klasik) kaynakları oluşturamayacaksınız. 31 Ağustos 2024 tarihine kadar mevcut Machine Learning Studio (klasik) kaynaklarını kullanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [Azure Machine Learning'e Geçiş](/azure/machine-learning/migrate-overview).
+
 
 **Yönetim Bilgileri** > **Özel modeller**, Azure Machine Learning modellerine göre iş akışlarını yönetmenize olanak tanır. İş akışları, içgörüler oluşturmak istediğiniz verileri seçmenize ve sonuçları birleşik müşteri verilerinizle eşlemenize yardımcı olur. Özel ML modelleri oluşturma hakkında daha fazla bilgi için bkz. [Azure Machine Learning tabanlı modeller kullanma](azure-machine-learning-experiments.md).
 
@@ -24,9 +30,9 @@ ms.locfileid: "7032966"
 
 Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileştirme ve gelir akışı özellikleri sunar. Tahmininizin değerini, sahip olduğu etki ve etik anlamda ortaya çıkabilecek eksiklikler açısından dengelemenizi kesinlikle öneririz. Microsoft'un [Sorumlu Yapay Zekayı nasıl ele aldığı](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6) hakkında daha fazla bilgi edinin. Azure Machine Learning'e özel [sorumlu makine öğrenimi teknikleri ve işlemleri](/azure/machine-learning/concept-responsible-ml) hakkında da bilgi edinebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Şu anda, bu özellik [Machine Learning Studio (klasik)](https://studio.azureml.net) ve [Azure Machine Learning toplu işlem hatları](/azure/machine-learning/concept-ml-pipelines) aracılığıyla yayımlanan web hizmetlerini destekler.
+- Bu özellik, [Azure Machine Learning toplu işlem hatları](/azure/machine-learning/concept-ml-pipelines) aracılığıyla yayımlanan web hizmetlerini destekler.
 
 - Bu özelliği kullanmak için Azure Studio kurulumunuzla ilişkili bir Azure Data Lake Gen2 depolama hesabına ihtiyacınız vardır. Daha fazla bilgi için bkz. [Azure Data Lake Storage 2. Nesil depolama hesabı oluşturma](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 
 1. Azure Machine Learning aboneliğiniz Customer Insights'tan farklı bir kiracıdaysa seçili kuruluş için kimlik bilgilerinizle **Oturum aç**'ı seçin.
 
-1. Web hizmetinizle ilişkili **Çalışma alanları**'nı seçin. Azure Machine Learning v1 (Machine Learning Studio (klasik)) ve Azure Machine Learning v2 (Azure Machine Learning) olmak üzere listelenen iki bölüm vardır. Machine Learning Studio (klasik) web hizmetiniz için doğru olan çalışma alanından emin değilseniz **Herhangi Biri**'ni seçin.
+1. Web hizmetinizle ilişkili **Çalışma alanları**'nı seçin. 
 
-1. Machine Learning Studio (klasik) web hizmetini veya **Modelinizi içeren web hizmeti** açılan menüsünden Azure Machine Learning kanalını seçin. Ardından **İleri**'yi seçin.
-   - [Machine Learning Studio'da (klasik) bir web hizmetini yayımlama](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service) hakkında daha fazla bilgi edinin
-   - [Tasarımcı kullanarak Azure Machine Learning'de bir kanalı yayımlama](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) veya [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) hakkında daha fazla bilgi edinin. Kanalınız [işlem hattı uç noktası](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) altında yayımlanmalıdır.
+1. **Modelinizi içeren web hizmeti** açılan menüsünden Azure Machine Learning işlem hattını seçin. Ardından **İleri**'yi seçin.    
+   [Tasarımcı kullanarak Azure Machine Learning'de bir kanalı yayımlama](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) veya [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) hakkında daha fazla bilgi edinin. Kanalınız [işlem hattı uç noktası](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run) altında yayımlanmalıdır.
 
 1. Her bir **Web hizmeti girişi** için, hedef kitle içgörülerinden eşleşen **Varlık**'ı seçin ve **İleri** seçeneğini belirleyin.
    > [!NOTE]
@@ -62,9 +67,6 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
    > ![İş akışı yapılandırın.](media/intelligence-screen2-updated.png "İş Akışı yapılandır")
 
 1. **Model Çıkış Parametreleri** adımında, aşağıdaki özellikleri ayarlayın:
-   - Machine Learning Studio (klasik)
-      1. Web hizmeti çıkış sonuçlarının akmasını istediğiniz çıkışın **Varlık adı**'nı girin.
-   - Azure Machine Learning
       1. Kanal çıkış sonuçlarının akmasını istediğiniz çıkışın **Varlık adı**'nı girin.
       1. Açılan menüden toplu işlem hattınızın **Çıkış veri deposu parametre adı**'nı seçin.
       1. Açılan menüden toplu işlem hattınızın **Çıkış Yolu parametre adı**'nı seçin.
@@ -93,9 +95,6 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 1. Her bir **Web hizmeti girişi** için, hedef kitle içgörülerinden eşleşen **Varlık**'ı güncelleştirebilirsiniz. Ardından **İleri**'yi seçin.
 
 1. **Model Çıkış Parametreleri** adımında, aşağıdaki özellikleri ayarlayın:
-   - Machine Learning Studio (klasik)
-      1. Web hizmeti çıkış sonuçlarının akmasını istediğiniz çıkışın **Varlık adı**'nı girin.
-   - Azure Machine Learning
       1. Kanal çıkış sonuçlarının akmasını istediğiniz çıkışın **Varlık adı**'nı girin.
       1. Test işlem hattınız için **Çıkış veri deposu parametre adı**'nı seçin.
       1. Test işlem hattınız için **Çıkış Yolu parametre adı**'nı seçin.

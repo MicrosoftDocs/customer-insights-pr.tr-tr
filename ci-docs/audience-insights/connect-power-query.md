@@ -1,7 +1,7 @@
 ---
-title: Power Query bağlayıcısı aracılığıyla veri alma
+title: Power Query bağlayıcısı aracılığıyla veri alma (Video)
 description: Power Query temelli veri kaynakları için bağlayıcılar.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732242"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903864"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Bir Power Query veri kaynağına bağlanın
 
-Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlayıcıların çoğu, Dynamics 365 Customer Insights tarafından desteklenmektedir. Power Query bağlayıcılarına dayalı veri kaynaklarını eklemek, genel olarak sonraki bölümde açıklanan adımları takip eder. Ancak, kullandığınız bağlayıcıya bağlı olarak, farklı bilgiler gereklidir. Daha fazla bilgi için, [Power Query bağlayıcısı referansı](/power-query/connectors/)'ndaki tekil bağlayıcılar hakkındaki belgelere bakın.
+Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlayıcıların çoğu, Dynamics 365 Customer Insights tarafından desteklenmektedir. 
+
+Power Query bağlayıcılarını temel alan veri kaynakları ekleme işlemi genellikle bu bölümde özetlenen adımları izler. Ancak, kullandığınız bağlayıcıya bağlı olarak, farklı bilgiler gereklidir. Daha fazla bilgi için [Power Query bağlayıcı başvurusu](/power-query/connectors/) bölümündeki bireysel bağlayıcılarla ilgili belgelere bakın.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,12 +30,9 @@ Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlay�
 
 1. **Veri Kaynağı ekle**'yi seçin.
 
-1. **Veri içe aktar** yöntemini seçin ve **İleri** öğesini seçin.
+1. **Microsoft Power Query**'yi seçin, ardından **İleri**'yi seçin.
 
-1. Veri kaynağı için bir **Ad** girin ve veri kaynağını oluşturmak için **İleri** öğesini seçin. Yönergeleri adlandırın: 
-   - Bir harfle başlayın.
-   - Yalnızca harfleri ve sayıları kullanın. Özel karakterlere ve boşluklara izin verilmez.
-   - 3 ile 64 arasında karakter kullanın.
+1. Veri kaynağı için bir **Ad** girin ve veri kaynağını oluşturmak için **İleri** öğesini seçin.
 
 1. [Kullanılabilir bağlayıcılardan](#available-power-query-data-sources) birini seçin. Bu örnekte, **Metin/CSV** bağlayıcısını seçiyoruz.
 
@@ -50,7 +49,7 @@ Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlay�
 
 1. **Sorguları düzenle** iletişim kutusunda **Veri al**'ı seçerek veri kaynağınıza ek varlıklar ekleyebilirsiniz.
 
-   Bu dönüşümler özellikle önerilir:
+   Aşağıdaki dönüşümleri kullanmanızı öneririz:
 
    - CSV dosyasından veri alıyorsanız, ilk satır genellikle başlıkları içerir. **Tabloyu dönüştür**'e gidin ve **Başlıkları ilk satır olarak kullan** seçeneğini seçin.
    - Veri türünün uygun şekilde ayarlandığından emin olun.
@@ -61,7 +60,7 @@ Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlay�
 
 ## <a name="available-power-query-data-sources"></a>Kullanılabilir Power Query veri kaynakları
 
-Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı listesi için bkz. [Power Query bağlayıcı referansı](/power-query/connectors/). 
+Customer Insights'a veri içeri aktarmak üzere kullanabileceğiniz bağlayıcıların listesi için [Power Query bağlayıcı başvurusuna](/power-query/connectors/) bakın. 
 
 **Customer Insights (Veri akışları)** sütununda onay işareti bulunan bağlayıcılar, Power Query temelli yeni veri kaynakları oluşturmak için kullanılabilir. Ön koşullar, sınırlamalar ve diğer ayrıntılar hakkında daha fazla bilgi edinmek için ilgili bağlayıcının belgelerini gözden geçirin.
 
@@ -70,7 +69,7 @@ Customer Insights'a aktarmak üzere seçebileceğiniz güncel bağlayıcı liste
 > [!NOTE]
 > Uygulamanın işlemlerinden birinde (örneğin, *segmentlere ayırma*, *eşleştirme* veya *birleştirme*) kullanılmakta olan veri kaynaklarında değişiklik yapmak mümkün olmayabilir. 
 >
-> **Ayarlar** sayfasını kullanarak her etkin işlemin ilerlemesini izleyebilirsiniz. İşlem tamamlandığında **Veri Kaynakları** sayfasına dönebilir ve değişikliklerinizi gerçekleştirebilirsiniz.
+> **Ayarlar** sayfasında, her etkin işlemin ilerlemesini izleyebilirsiniz. İşlem tamamlandığında **Veri Kaynakları** sayfasına dönebilir ve değişikliklerinizi gerçekleştirebilirsiniz.
 
 1. Hedef kitle içgörülerinde, **Veri** > **Veri kaynakları**'na gidin.
 

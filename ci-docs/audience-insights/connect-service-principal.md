@@ -1,7 +1,7 @@
 ---
 title: Hizmet sorumlusu kullanarak bir Azure Data Lake Storage hesabına bağlanma
 description: Kendi veri gölünüze bağlanmak için bir Azure hizmet sorumlusu kullanın.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645196"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900299"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure hizmet sorumlusu kullanarak bir Azure Data Lake Storage hesabına bağlanma
 
-Azure hizmetlerini kullanan otomatik araçlar her zaman kısıtlı izinlere sahip olmalıdır. Azure, uygulamalarda tamamen ayrıcalıklı bir kullanıcı olarak oturum açma olması yerine hizmet sorumluları sağlar. Depolama hesabı anahtarları yerine bir Azure hizmet sorumlusu kullanarak Dynamics 365 Customer Insights'ı Azure Data Lake Storage hesabına bağlamayı öğrenmek için okumaya devam edin. 
+Bu makalede, depolama hesabı anahtarları yerine bir Azure hizmet sorumlusu kullanılarak Dynamics 365 Customer Insights uygulamasının bir Azure Data Lake Storage firmasına nasıl bağlanacağı anlatılmaktadır. 
 
-Güvenli bir şekilde [veri kaynağı olarak bir Common Data Model klasörü eklemek veya düzenlemek](connect-common-data-model.md) ya da [bir ortam oluşturmak veya güncelleştirmek](create-environment.md) için hizmet sorumlusu kullanabilirsiniz.
+Azure hizmetlerini kullanan otomatik araçlar her zaman kısıtlı izinlere sahip olmalıdır. Azure, uygulamalarda tamamen ayrıcalıklı bir kullanıcı olarak oturum açma olması yerine hizmet sorumluları sağlar. Güvenli bir şekilde [Common Data Model klasörünü veri kaynağı olarak eklemek veya düzenlemek](connect-common-data-model.md) ya da [ortam oluşturmak veya güncelleştirmek](create-environment.md) için hizmet sorumlularını kullanabilirsiniz.
 
 > [!IMPORTANT]
 > - Hizmet sorumlusunu kullanacak Data Lake Storage hesabında [hiyerarşik ad alanı etkinleştirilmiş olmalıdır](/azure/storage/blobs/data-lake-storage-namespace).
@@ -28,7 +28,7 @@ Güvenli bir şekilde [veri kaynağı olarak bir Common Data Model klasörü ekl
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Customer Insights için Azure hizmet sorumlusu oluşturma
 
-Hedef kitle içgörüleri veya etkileşim içgörüleri için yeni bir hizmet sorumlusu oluşturmadan önce kuruluşunuzda önceden mevcut olup olmadığını kontrol edin.
+Customer Insights için yeni bir hizmet sorumlusu oluşturmadan önce kuruluşunuzda bir hizmet sorumlusunun zaten var olup olmadığını denetleyin.
 
 ### <a name="look-for-an-existing-service-principal"></a>Mevcut hizmet sorumlusunu arama
 

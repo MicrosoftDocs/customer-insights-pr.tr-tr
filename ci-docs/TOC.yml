@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Gelişmiş adresler
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Şirket verilerini iyileştirme
+        - name: Gelişmiş şirket verileri
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Azure Haritalar ile zenginleştirme
           href: audience-insights/enrichment-azure-maps.md
@@ -94,6 +94,8 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Experian İle zenginleştirme
           href: audience-insights/enrichment-experian.md
+        - name: Office 365 verileriyle zenginleştirme
+          href: audience-insights/enrichment-office.md
         - name: SFTP özel içeri aktarmayla zenginleştirme
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmentler
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Azure Machine Learning ile denemeler
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Azure Machine Learning Studio ile denemeler
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Tahminleri yönetme
           href: audience-insights/manage-predictions.md
         - name: Tahminleri temel alan segmentler oluşturma
@@ -240,6 +240,8 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Hizmet Sorumlusunu kullanarak ADLS depolama hesabına bağlanma
               href: audience-insights/connect-service-principal.md
+            - name: Tanılama günlüklerini dışarı aktarma
+              href: audience-insights/diagnostics.md
     - name: Genişletilebilirlik
       items:
         - name: Etkileşim içgörülerinden web verilerini tümleştirme

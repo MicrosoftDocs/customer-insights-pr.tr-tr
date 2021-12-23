@@ -1,7 +1,7 @@
 ---
 title: Azure Machine Learning denemeleri
 description: Dynamics 365 Customer Insights'ta Azure Machine Learning tabanlı modeller kullanın.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033196"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881762"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Azure Machine Learning tabanlı modeller kullanma
 
-Dynamics 365 Customer Insights'taki birleşik veriler, işle ilgili ek içgörüler oluşturabilen makine öğrenimi modelleri geliştirmek için bir kaynaktır. Customer Insights, kendi özel modellerinizi kullanmanız için Machine Learning Studio (klasik) ve Azure Machine Learning ile tümleştirilir. Machine Learning Studio'da (klasik) oluşturulan deneme örnekleri için [Machine Learning Studio (klasik) denemeleri](machine-learning-studio-experiments.md) makalesine başvurun. 
+Dynamics 365 Customer Insights'taki birleşik veriler, işle ilgili ek içgörüler oluşturabilen makine öğrenimi modelleri geliştirmek için bir kaynaktır. Customer Insights, size ait özel modelleri kullanmak için Azure Machine Learning ile tümleştirilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insights'taki birleşik veriler, işle ilgili ek içgörü
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure Machine Learning tasarımcısıyla çalışma
 
-Azure Machine Learning tasarımcısı, Machine Learning Studio (klasik) ile benzer şekilde veri kümelerini ve modülleri sürükleyip bırakabileceğiniz bir görsel tuval sağlar. Tasarımcıdan oluşturulan bir toplu işlem hattı, uygun şekilde yapılandırılması durumunda Customer Insights ile tümleştirilebilir. 
+Azure Machine Learning tasarımcısı, veri kümelerini ve modülleri sürükleyip bırakabileceğiniz görsel bir tuval sağlar. Tasarımcıdan oluşturulan bir toplu işlem hattı, uygun şekilde yapılandırılması durumunda Customer Insights ile tümleştirilebilir. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure Machine Learning SDK'sı ile çalışma
 

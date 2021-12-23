@@ -1,20 +1,20 @@
 ---
-title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi
+title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (Video)
 description: Bu eklentiye sahip Dynamics 365 uygulamalarındaki hedef kitle öngörülerdeki verileri gösterin.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792050"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904037"
 ---
 # <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
 
@@ -34,7 +34,7 @@ Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görün
   - **Ölçü denetimi**: Müşteri öznitelikleri türünde [yapılandırılmış ölçüler](measures.md) gerektiriyor.
   - **İstihbarat denetimi**: [Tahminler](predictions.md) veya [özel modeller](custom-models.md) kullanılarak oluşturulan veriler gerekir.
   - **Müşteri ayrıntıları denetimi**: Profildeki tüm alanlar birleşik müşteri profilinde kullanılabilir.
-  - **Zenginleştirme denetimi**: Müşteri profillerine uygulanmış etkin [zenginleştirmeler](enrichment-hub.md) gerektirir. Kart eklentisi şu zenginleştirmeleri destekler: Microsoft tarafından sağlanan [Markalar](enrichment-microsoft.md), Microsoft tarafından sağlanan [İlgi Alanları](enrichment-microsoft.md).
+  - **Zenginleştirme denetimi**: Müşteri profillerine uygulanmış etkin [zenginleştirmeler](enrichment-hub.md) gerektirir. Kart eklentisi şu zenginleştirmeleri destekler: Microsoft tarafından sağlanan [Markalar](enrichment-microsoft.md), Microsoft tarafından sağlanan [İlgi Alanları](enrichment-microsoft.md) ve Microsoft tarafından sağlanan [Office etkileşim verileri](enrichment-office.md).
   - **İlgili kişiler denetimi**: İlgili kişiler türünde anlamsal varlık tanımı gerekir.
   - **Zaman çizelgesi denetimi**: [Yapılandırılmış etkinlikler](activities.md) gerektirir.
 

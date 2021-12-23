@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse'te tablolara bağlanma
 description: Yönetilen bir Microsoft Dataverse data lake'ten verileri içe aktarın.
-ms.date: 07/23/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,22 +9,25 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: ffeccffd0e353cb5490b537552d585c184ad672f9c806e673bd04743214ad068
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033104"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900175"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse yönetilen veri gölündeki verilere bağlanma
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Bu makalede, Dataverse kullanıcılarının Dataverse tarafından yönetilen bir veri gölündeki analitik varlıklarına nasıl hızlı bir şekilde bağlanabilecekleri hakkında bilgiler sağlanmaktadır. Devam etmek ve yönetilen gölde kullanılabilir varlıkların listesini görmek için, Dataverse kuruluşu üzerinde bir yönetici olmanız gerekir.
+Bu makalede, Dataverse kullanıcılarının Microsoft Dataverse tarafından yönetilen bir göldeki analiz varlıklarına nasıl hızlı bir şekilde bağlanabileceği hakkında bilgiler verilmektedir. 
+
+> [!NOTE]
+> Devam etmek ve yönetilen gölde bulunan varlıkların listesini görüntülemek için Dataverse kuruluşunda yönetici olmanız gerekir.
 
 ## <a name="important-considerations"></a>Dikkat edilmesi gereken önemli hususlar
 
-Azure Data Lake Storage gibi çevrimiçi hizmetlerde depolanan veriler, verilerin işlendiği veya depolandığı Dynamics 365 Customer Insights'tan farklı bir konumda depolanabilir. Çevrimiçi hizmetlerde depolanan verileri içeri aktararak veya verilere bağlanarak verilerin Dynamics 365 Customer Insights'a aktarılabileceğini ve uygulamada depolanabileceğini kabul edersiniz. [Microsoft Güven Merkezi'nde daha fazla bilgi edinin.](https://www.microsoft.com/trust-center)
+Azure Data Lake Storage gibi çevrimiçi hizmetlerde depolanan veriler, verilerin işlendiği veya depolandığı Dynamics 365 Customer Insights'tan farklı bir konumda depolanabilir. Çevrimiçi hizmetlerde depolanan verileri içeri aktararak veya verilere bağlanarak, verilerin Dynamics 365 Customer Insights uygulamasına aktarılabileceğini ve uygulamada depolanabileceğini kabul edersiniz.  [Microsoft Güven Merkezi'ni ziyaret ederek daha fazla bilgi edinin](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Bir Dataverse yönetilen gölüne bağlanma
 
@@ -32,12 +35,9 @@ Azure Data Lake Storage gibi çevrimiçi hizmetlerde depolanan veriler, verileri
 
 2. **Veri Kaynağı ekle**'yi seçin.
 
-3. **Microsoft Dataverse tarafından yönetilen veri gölüne bağlan**'ı seçin ve **İleri** seçeneğini belirleyin.
+3. **Microsoft Dataverse** öğesini seçin ve **İleri**'yi seçin.
 
-4. Veri kaynağı için bir **ad** girin ve **İleri**'yi seçin. Yönergeleri adlandırın: 
-   - Bir harfle başlayın.
-   - Yalnızca harfleri ve sayıları kullanın. Özel karakterlere ve boşluklara izin verilmez.
-   - 3 ile 64 arasında karakter kullanın.
+4. Veri kaynağı için bir **ad** girin ve **İleri**'yi seçin. 
 
 5. Dataverse kuruluşu için **Sunucu adresini** sağlayın ve **Oturum aç**'ı seçin.
 

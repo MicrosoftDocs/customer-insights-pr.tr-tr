@@ -1,7 +1,7 @@
 ---
 title: Power Query tabanlı veri kaynakları için artımlı yenileme
 description: Power Query tabanlı büyük veri kaynakları için yeni ve güncelleştirilmiş verileri yenileyin.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377858"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900309"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query tabanlı veri kaynakları için artımlı yenileme
+
+Bu makalede, Power Query'yi temel alan veri kaynakları için artımlı yenilemenin nasıl yapılandırılacağı anlatılmaktadır.
 
 Veri kaynakları için artımlı yenileme aşağıdaki avantajları sağlar:
 
@@ -30,9 +32,9 @@ Hedef kitle içgörüleri, artımlı alımı destekleyen Power Query üzerinden 
 
 1. [Power Query tabanlı yeni veri kaynağı oluşturma](connect-power-query.md).
 
-1. Veri kaynağı için bir Ad girin.
+1. Veri kaynağı için bir **Ad** girin.
 
-1. Azure SQL veritabanı gibi artımlı yenilemeyi destekleyen bir veri kaynağı seçin.
+1. [Azure SQL veritabanı](/power-query/connectors/azuresqldatabase) gibi artımlı yenilemeyi destekleyen bir veri kaynağı seçin.
 
 1. Alınacak varlıkları veya tabloları seçin.
 

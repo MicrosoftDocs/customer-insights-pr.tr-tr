@@ -1,7 +1,7 @@
 ---
 title: Verileri almak için veri kaynaklarını kullanma
 description: Çeşitli kaynaklardan verilerin nasıl içe aktarıldığını öğrenin.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732191"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900403"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
@@ -25,19 +25,22 @@ Dynamics 365 Customer Insights uygulamasındaki hedef kitle içgörü özelliği
 
 ## <a name="add-a-data-source"></a>Veri kaynağı ekle
 
-Hangi seçeneği seçtiğinize bağlı olarak, veri kaynağı ekleme hakkındaki ayrıntılı makalelere başvurun.
+Belirlediğiniz seçeneğe bağlı olarak, bir veri kaynağının nasıl ekleneceğini öğrenmek için ayrıntılı makalelere bakın.
 
-Veri kaynağını, üç ana yolla ekleyebilirsiniz:
+Aşağıdaki veri kaynaklarını ekleyebilirsiniz:
 
-- [Baştan sona düzinelerce Power Query bağlayıcısı](connect-power-query.md)
-- [Common Data Model klasöründen](connect-common-data-model.md)
-- [Kendi Microsoft Dataverse gölünüzden](connect-dataverse-managed-lake.md)
+- [Power Query bağlayıcıları](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse gölü](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Deneme sürümünü kullanıyorsanız içeri aktarma yöntemleri bölümünde bir **Customer Insights veri kitaplığı** seçeneği bulunur. Çeşitli endüstriler için kullanılabilen bir örnek veri kümesini seçmek üzere bu seçeneği belirleyin. Daha fazla bilgi için bkz. [Dynamics 365 Customer Insights deneme sürümü](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Şirket içi veri kaynaklarından veri ekleme
 
-Audience Insights'daki yerinde veri kaynaklarından alınan veriler Microsoft Power Platform veri akışlarına göre desteklenmektedir. Veri akışları, ortam ayarlanırken [Microsoft Dataverse ortam URL 'Si sağlanarak](create-environment.md) Customer Insights'ta etkinleştirilebilir.
+Audience Insights'daki yerinde veri kaynaklarından alınan veriler Microsoft Power Platform veri akışlarına göre desteklenmektedir. Ortam kurulumu sırasında [Microsoft Dataverse ortam URL'sini sağlayarak](create-environment.md) Customer Insights'ta Veri akışlarını etkinleştirebilirsiniz.
 
-Bir Dataverse ortamı Customer Insights ile ilişkilendirdikten sonra oluşturulan veri kaynakları, [Power Platform veri akışlarını](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) kullanır. Veri akışları, veri ağ geçitlerini kullanarak önceden ön bağlanabilirliği destekler. [Yerinde veri ağ geçitlerini kullanmak](/data-integration/gateway/service-gateway-app) üzere bir Dataverse ortamı ilişkilendirilmeden önce varolan veri kaynaklarını kaldırıp yeniden oluşturun.
+Dataverse ortamını Customer Insights ile ilişkilendirdikten sonra oluşturulan veri kaynakları, varsayılan olarak [Power Platform veri akışlarını](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) kullanır. Veri akışları, veri ağ geçitlerini kullanarak önceden ön bağlanabilirliği destekler. Dataverse ortamı [şirket içi veri ağ geçitleri kullanılarak](/data-integration/gateway/service-gateway-app) ilişkilendirilmeden önce var olan veri kaynaklarını kaldırabilir ve yeniden oluşturabilirsiniz.
 
 Varolan Power BI veya Power Apps ortamdan gelen veri geçitleri görünür ve Customer Insights'ta yeniden kullanabilirsiniz. Veri kaynakları sayfasında, yerinde veri ağ geçitlerini görüntüleyebileceğiniz ve yapılandırabileceğiniz Microsoft Power Platform ortama gitmek için bağlantılar gösterilir.
 
