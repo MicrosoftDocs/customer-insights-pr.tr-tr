@@ -1,5 +1,5 @@
 ---
-title: Abonelik erime tahmini (Video)
+title: Abonelik erime tahmini (video içerir)
 description: Bir müşterinin artık şirketinizin abonelik ürünlerini veya hizmetlerini kullanmama riski taşıyıp taşımadığını tahmin edin.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904049"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967725"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Abonelik erime tahmini (önizleme)
 
@@ -77,7 +77,7 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
 1. İşletmenizin, bir müşteriyi kayıp durumunda kabul edildiği **Abonelik sona erdikten sonra geçen gün** sayısını girin. Bu dönem genellikle müşteriyi kaybetmeme amacı taşıyan teklifler veya diğer pazarlama faaliyetleriyle ilgili iş etkinlikleriyle bağlantılıdır.
 1. **Kaybı tahmin etmek üzere gelecekte bakılacak gün sayısı** için sayı girerek tahmin için gün sayısı belirleyin. Örneğin, pazarlama elde tutma çabalarınızı düzenlemek için müşterilerinizin gelecek 90 gün içindeki erime riskinizi tahmin etmek için. Karmaşıklık tehlikesini daha uzun veya daha kısa bir süre için tahmin etmek, iş gereksinimlerinize bağlı olarak, karmaşıklığı riskli profilinizdeki faktörlerin daha zor olmasını zorlaştırır. Devam etmek için **İleri**'yi seçin
    >[!TIP]
-   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Kaydet ve Kapat**'ı seçebilirsiniz. Devam etmek için taslak tahminini **Tahminlerim** sekmesinde bulabilirsiniz.
+   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Taslağı kaydet**'i seçebilirsiniz. Devam etmek için taslak tahminini **Tahminlerim** sekmesinde bulabilirsiniz.
 
 ### <a name="add-required-data"></a>Gerekli verileri ekleyin
 

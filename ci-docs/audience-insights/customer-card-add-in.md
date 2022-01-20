@@ -1,7 +1,7 @@
 ---
-title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (Video)
+title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (video içerir)
 description: Bu eklentiye sahip Dynamics 365 uygulamalarındaki hedef kitle öngörülerdeki verileri gösterin.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904037"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945451"
 ---
 # <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
 
@@ -27,12 +27,12 @@ Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görün
 ## <a name="prerequisites"></a>Ön koşullar
 
 - Eklenti yalnızca satış veya müşteri hizmetleri, sürüm 9.0 ve daha sonraki sürümler gibi Dynamics 365 model güdümlü uygulamalarla çalışır.
-- Dynamics 365 verilerinizin, [Microsoft Dataverse bağlayıcıyı kullanarak Dynamics 365 uygulamasından alması](connect-power-query.md) gerektiği hedef kitle içgörüleri müşteri profilleriyle eşleşmesi gerekir.
+- Dynamics 365 verilerinizin hedef kitle içgörüleri müşteri profilleriyle eşleşmesi için [bunların Microsoft Dataverse bağlayıcı kullanılarak Dynamics 365 uygulamasından alınmasını](connect-power-query.md) öneririz. Dynamics 365 ilgili kişilerini (veya firmalarını) almak için farklı bir yöntem kullanıyorsanız `contactid` (veya `accountid`) alanının [veri birleştirme işleminin eşleme adımında ilgili veri kaynağı için birincil anahtar](map-entities.md#select-primary-key-and-semantic-type-for-attributes) olarak ayarlandığından emin olmanız gerekir. 
 - Müşteri kartı eklentisinin tüm Dynamics 365 kullanıcıları verileri görmek için hedef kitle içgörülerinde [kullanıcıların eklenmesi](permissions.md) gerekir.
 - Hedef kitle içgörülerinde [yapılandırılan arama ve filtre özellikleri](search-filter-index.md) , verilerin çalışması için arama yapmak amacıyla gereklidir.
 - Her eklenti denetimi hedef kitle öngörüler içindeki belirli verilere dayanır. Bazı veriler ve denetimler yalnızca belirli türlerdeki ortamlarda kullanılabilir. Eklenti yapılandırması, seçilen ortam türü nedeniyle denetim kullanılamıyorsa size bildirir. [Ortam kullanma durumları](work-with-business-accounts.md) daha fazla bilgi edinin.
   - **Ölçü denetimi**: Müşteri öznitelikleri türünde [yapılandırılmış ölçüler](measures.md) gerektiriyor.
-  - **İstihbarat denetimi**: [Tahminler](predictions.md) veya [özel modeller](custom-models.md) kullanılarak oluşturulan veriler gerekir.
+  - **İstihbarat denetimi**: [Tahminler veya özel modeller](predictions-overview.md) kullanılarak oluşturulan veriler gerekir.
   - **Müşteri ayrıntıları denetimi**: Profildeki tüm alanlar birleşik müşteri profilinde kullanılabilir.
   - **Zenginleştirme denetimi**: Müşteri profillerine uygulanmış etkin [zenginleştirmeler](enrichment-hub.md) gerektirir. Kart eklentisi şu zenginleştirmeleri destekler: Microsoft tarafından sağlanan [Markalar](enrichment-microsoft.md), Microsoft tarafından sağlanan [İlgi Alanları](enrichment-microsoft.md) ve Microsoft tarafından sağlanan [Office etkileşim verileri](enrichment-office.md).
   - **İlgili kişiler denetimi**: İlgili kişiler türünde anlamsal varlık tanımı gerekir.

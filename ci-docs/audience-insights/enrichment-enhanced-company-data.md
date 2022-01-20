@@ -1,7 +1,7 @@
 ---
 title: Şirket verilerinin iyileştirilmesi
 description: Microsoft'un modelleriyle şirket verilerini zenginleştirin ve normalleştirin.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813941"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927606"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>İyileştirilmiş şirket verileriyle şirket profillerini zenginleştirme
 
@@ -83,6 +83,16 @@ Zenginleştirme işlemini başlatmak için, komut çubuğundan **Çalıştır**'
 Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşteri profilleri verisini; **Zenginleştirmelerim** altında gözden geçirebilirsiniz. Ayrıca, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını da bulacaksınız.
 
 **Zenginleştirilmiş verileri görüntüle**'yi seçerek her zenginleştirilmiş profilin ayrıntılı görünümüne erişebilirsiniz.
+
+### <a name="overview-card"></a>Genel bakış kartı
+
+Genel bakış kartı, zenginleştirmenin kapsamıyla ilgili ayrıntıları gösterir. 
+
+* **İşlenen ve değiştirilen müşteriler**: Başarıyla zenginleştirilen müşteri profillerinin sayısı.
+
+* **İşlenen ve değiştirilmeyen müşteriler**: Tanınan ancak değiştirilmeyen müşteri profillerinin sayısı. Genellikle giriş verileri geçerli olduğunda ve zenginleştirme ile iyileştirilemediğinde gerçekleştirilir.
+
+* **İşlenmeyen ve değiştirilmeyen müşteriler**: Tanınmayan profillerin sayısı. Genellikle geçersiz veya zenginleştirme tarafından desteklenmeyen giriş verileri içindir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

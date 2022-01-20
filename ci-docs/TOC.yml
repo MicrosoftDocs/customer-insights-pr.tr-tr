@@ -80,7 +80,7 @@
       items:
         - name: Müşteri profillerini zenginleştirme
           href: audience-insights/enrichment-hub.md
-        - name: Marka ve ilgi benzerlikleri
+        - name: Markalar ve ilgi alanları
           href: audience-insights/enrichment-microsoft.md
         - name: Gelişmiş adresler
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: İşlem erime tahmin etme
               href: audience-insights/predict-transactional-churn.md
+            - name: Müşteri geri bildirimlerinde duyarlılığı analiz etme
+              href: audience-insights/sentiment-analysis.md
             - name: Azure Machine Learning'den özel modeller kullanma
               href: audience-insights/custom-models.md
             - name: Kısmen eksik verileri tamamlama

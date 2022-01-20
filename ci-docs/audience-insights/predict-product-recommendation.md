@@ -1,7 +1,7 @@
 ---
 title: Ürün önerisi tahmini
 description: Müşterinin satın alabileceği veya etkileşimde bulunabileceği ürünleri tahmin edin.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494563"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967863"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Ürün önerisi tahmini (önizleme)
 
@@ -79,11 +79,11 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 1. Müşteriye önermek istediğiniz **Ürün sayısını** ayarlayın. Bu değer, teslim yönteminizin verileri nasıl doldurduğuna bağlıdır. Üç ürün önerebiliyorsanız değeri buna göre ayarlayın.
    
    >[!TIP]
-   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Kaydet ve Kapat**'ı seçebilirsiniz. **Tahminlerim** sekmesinde taslak tahminini bulabilirsiniz.
+   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Taslağı kaydet**'i seçebilirsiniz. **Tahminlerim** sekmesinde taslak tahminini bulabilirsiniz.
 
-1. **Müşterilerin yakın zamanda satın aldıkları ürünleri öner** seçeneğini tercih edebilirsiniz.
+1. **Beklenen tekrarlanan satın alma** alanında müşterilerin yakın zamanda satın aldığı ürünleri eklemek isteyip istemediğinizi seçin.
 
-1. Yakın zamanda satın alınan ürünleri *önermeyi* seçerseniz **Geriye dönük bakılacak aralık** seçeneğini ayarlayın. Bu ayar, ürünü kullanıcıya yeniden önermeden önce modelin dikkate aldığı zaman dilimini belirtir. Örneğin, bir müşterinin her iki yılda bir dizüstü bilgisayar satın aldıklarını belirtebilirsiniz. Bu pencere, son iki yıl için satın alma geçmişine bakar ve bir madde bulduklarında, bu öğeye önerilerden filtre uygulanır.
+1. **Geriye dönük bakılacak aralık**'ı ayarlayın. Bu ayar, ürünü kullanıcıya yeniden önermeden önce modelin dikkate aldığı zaman dilimini belirtir. Örneğin, bir müşterinin her iki yılda bir dizüstü bilgisayar satın aldıklarını belirtebilirsiniz. Bu pencere, son iki yıl için satın alma geçmişine bakar ve bir madde bulduklarında, bu öğeye önerilerden filtre uygulanır.
 
 1. **İleri**'yi seçin
 

@@ -1,7 +1,7 @@
 ---
-title: İşlem erime tahmini (Video)
+title: İşlem erime tahmini (video içerir)
 description: Bir müşterinin artık ürünlerinizi veya hizmetlerinizi satın almama riski taşıyıp taşımadığını tahmin edin.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904096"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967771"
 ---
 # <a name="transaction-churn-prediction-preview"></a>İşlem erime tahmini (önizleme)
 
@@ -103,10 +103,10 @@ ms.locfileid: "7904096"
 
 1. **Müşteri erimesi modeli (önizleme)** kutucuğunu seçin ve **Bu modeli kullan** seçeneğini belirleyin.
 
-1. **Müşteri erimesi modeli** bölmesinde, **İşlem**'i seçin ve **Başlarken**' i seçin.
+1. **Müşteri erimesi modeli** (önizleme) bölmesinde, **İşlem**'i seçin ve **Başlarken**' i seçin.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Müşteri erimesi modeli bölmesindeki seçili hareket seçeneğiyle ekran görüntüsü.":::
-
+ 
 ### <a name="name-model"></a>Modeli adlandır
 
 1. Modeli diğer modellerden ayırmak için bir ad girin.
@@ -117,11 +117,11 @@ ms.locfileid: "7904096"
 
 ### <a name="define-customer-churn"></a>Müşteri erimesini tanımlayın
 
-1. **Gelecekte eriyebilecek müşterileri tanımlayın** alanında kayıpları tahmin etmek için gün aralığı belirleyin. Örneğin, pazarlamayı elde tutma çabalarınıza yön vermesi için önümüzdeki 90 gün içinde erime riskine sahip müşterileri tahmin edin. Daha uzun veya daha kısa bir süre için erime riskini tahmin etmek erime riski, profilinizdeki faktörleri ele almayı zorlaştırabilir ancak bu, özel iş gereksinimlerinize göre değişir.
+1. **Tahmin zaman aralığı**'nı ayarlayın. Örneğin, pazarlamayı elde tutma çabalarınıza yön vermesi için önümüzdeki 90 gün içinde erime riskine sahip müşterileri tahmin edin. Daha uzun veya daha kısa bir süre için erime riskini tahmin etmek erime riski, profilinizdeki faktörleri ele almayı zorlaştırabilir ancak bu, özel iş gereksinimlerinize göre değişir.
    >[!TIP]
-   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Kaydet ve Kapat**'ı seçebilirsiniz. Devam etmek için taslak tahminini **Tahminlerim** sekmesinde bulabilirsiniz.
+   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Taslağı kaydet**'i seçebilirsiniz. Devam etmek için taslak tahminini **Tahminlerim** sekmesinde bulabilirsiniz.
 
-1. **Şu aralıkta satın alma yapmaması durumunda müşteri erimiş kabul edilir:** alanına erimeyi tanımlamak için gün sayısını girin. Örneğin, bir müşteri son 30 gün içinde hiç satın alma işlemi yapmadıysa bu durumdaki müşteriler işletmeniz için kaybedilmiş olarak kabul edilebilir. 
+1. **Erime tanımı** alanına erimenin tanımlanacağı gün sayısını girin. Örneğin, bir müşteri son 30 gün içinde hiç satın alma işlemi yapmadıysa bu durumdaki müşteriler işletmeniz için kaybedilmiş olarak kabul edilebilir. 
 
 1. Devam etmek için **İleri**'yi seçin.
 
@@ -129,19 +129,16 @@ ms.locfileid: "7904096"
 
 1. **Veri ekle**'yi seçin ve gerekli hareket veya satın alma geçmişi bilgilerini içeren aktivite türünü yan bölmede seçin.
 
-1. **Aktiviteleri seçin**'in altında, hesaplamanın odaklanmasını istediğiniz seçili aktiviteden belirli etkinlikleri seçin.
+1. **Etkinlik seç** altında, hesaplamanın odaklanmasını istediğiniz seçili etkinlik türünden belirli etkinlikleri seçin.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Anlam türü altında belirli etkinlikleri seçmeyi gösteren yan bölme.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Anlam türü altında belirli etkinlikleri seçmeyi gösteren yan bölme.":::
 
-1. Etkinliği henüz anlamsal bir türle eşleştirmediyseniz, bunu yapmak için **Düzenle**'yi seçin. Anlamsal etkinliklerin eşlenme destekli deneyim açılır. Verilerinizi, seçili etkinlik türünün karşılık gelen alanlarıyla eşleyin.
+   Etkinliği henüz anlamsal bir türle eşleştirmediyseniz, bunu yapmak için **Düzenle**'yi seçin. Anlamsal etkinliklerin eşlenme destekli deneyim açılır. Verilerinizi, seçili etkinlik türünün karşılık gelen alanlarıyla eşleyin.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Sayfa ayarı etkinlik türü.":::
+1. Anlamsal öznitelikleri, modeli çalıştırmak için gereken alanlarla eşleyin. Aşağıdaki alanlar doldurulmamışsa satın alma geçmişi varlığınızdan *Müşteri* varlığına olan ilişkiyi yapılandırın. **Kaydet**'i seçin.
 
-1. Etkinliği karşılık gelen anlamsal türle eşleştirdikten sonra, devam etmek için **İleri**'yi seçin
+1. **Gerekli verileri ekleyin** adımında, daha fazla etkinlik eklemek istemiyorsanız devam etmek için **İleri**'yi seçin.
 
-1. Anlamsal öznitelikleri, modeli çalıştırmak için gereken alanlarla eşleyin. Aşağıdaki alanlar doldurulmamışsa satın alma geçmişi varlığınızdan *Müşteri* varlığına olan ilişkiyi yapılandırın.
-
-1. **İleri**'yi seçin.
 
 # <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 

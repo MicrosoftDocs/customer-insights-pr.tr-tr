@@ -1,7 +1,7 @@
 ---
-title: Gelişmiş adres zenginleştirmesi (Video)
+title: Gelişmiş adres zenginleştirmesi (video içerir)
 description: Microsoft'un modelleriyle müşteri profillerinin adres bilgilerini zenginleştirin ve normalleştirin.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2158d80aa088c5bf8589fb7d23586496e2d8b855
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903983"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934947"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Müşteri profillerinin gelişmiş adreslerle zenginleştirilmesi
 
@@ -101,6 +101,16 @@ Zenginleştirme işlemini başlatmak için, komut çubuğundan **Çalıştır**'
 Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşteri profilleri verisini; **Zenginleştirmelerim** altında gözden geçirebilirsiniz. Ayrıca, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını da bulacaksınız.
 
 **Zenginleştirilmiş verileri görüntüle**'yi seçerek her zenginleştirilmiş profilin ayrıntılı görünümüne erişebilirsiniz.
+
+### <a name="overview-card"></a>Genel bakış kartı
+
+Genel bakış kartı, zenginleştirmenin kapsamıyla ilgili ayrıntıları gösterir. 
+
+* **İşlenen ve değiştirilen müşteriler**: Başarıyla zenginleştirilen müşteri profillerinin sayısı.
+
+* **İşlenen ve değiştirilmeyen müşteriler**: Tanınan ancak değiştirilmeyen müşteri profillerinin sayısı. Genellikle giriş verileri geçerli olduğunda ve zenginleştirme ile iyileştirilemediğinde gerçekleştirilir.
+
+* **İşlenmeyen ve değiştirilmeyen müşteriler**: Tanınmayan profillerin sayısı. Genellikle geçersiz veya zenginleştirme tarafından desteklenmeyen giriş verileri içindir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417229"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975148"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Dynamics 365 Marketing'deki segmentleri kullanma (önizleme)
 
@@ -45,7 +45,7 @@ Dataverse kuruluşunda gerçek zamanlı müşteri yolculuğu düzenlemesi için 
 
 1. **Sunucu yönetici hesabı** bölümünde, **Oturum aç**'ı seçin ve bir Dynamics 365 Marketing hesabı belirleyin.
 
-1. Müşteri kimliği alanını Dynamics 365 İlgili Kişi Kimliği ile eşleyin.
+1. Müşteri varlığındaki İlgili Kişi Kimliği alanını Dynamics 365 İlgili Kişi Kimliği ile eşleyin.
 
 1. Bağlantıyı tamamlamak için **Kaydet**'i seçin. 
 

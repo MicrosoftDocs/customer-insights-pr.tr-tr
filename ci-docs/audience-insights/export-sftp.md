@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini SFTP ana bilgisayarlarına dışarı aktarma (Video)
+title: Customer Insights verilerini SFTP ana bilgisayarlarına dışarı aktarma (video içerir)
 description: Bağlantıyı yapılandırmayı ve SFTP konumuna dışa aktarmayı öğrenin.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb73c49cf87657b71e0c2f5934662b062eeffb21
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904153"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934955"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentleri ve diğer verileri SFTP'ye aktarma (önizleme)
 
@@ -28,6 +28,7 @@ Müşteri verilerinizi güvenli bir Dosya Aktarım Protokolü (SFTP) konumuna ve
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Güvenlik duvarlarının arkasındaki SFTP hedefleri şu anda desteklenmemektedir. 
 - Dışarı aktarmanın çalışma zamanı sistem performansınıza bağlıdır. Sunucunuzun en düşük yapılandırması için iki CPU çekirdeği ve 1 GB bellek öneririz. 
 - 100 milyona kadar müşteri profiline sahip varlıkların dışarı aktarılması önerilen en düşük yapılandırma olan iki CPU çekirdeği ve 1 GB bellek kullanıldığında 90 dakika sürebilir. 
 
