@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesinde varlıkları eşleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732796"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
 Birleştirme aşaması, veri bütünleştirme sürecindeki son aşamadır. Amacı, çelişen veriler arasında mutabakat sağlamaktır. Çakışan verilere örnek olarak veri kümelerinizden ikisinde bulunan ancak her birinde biraz farklı görünen bir müşteri adı ("Grant Marshall" ile "Grant Marshal" gibi) veya biçim olarak farklılık gösteren bir telefon numarası (617-803-091X ile 617803091X gibi) gösterilebilir. Bu çakışan veri noktalarının birleştirilmesi özniteliğe karşılık öznitelik temelinde yapılır.
@@ -99,11 +94,13 @@ Birleşik müşteri profilinden öznitelik dışlayın. Alan başka bir işlemde
 
 1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
 
-## <a name="manually-combine-fields"></a>Manuel olarak Birleştirilecek alanlar
+## <a name="combine-fields-manually"></a>Grupları el ile birleştirme
 
-Birleştirilmiş bir özniteliği el ile belirtin. 
+Birleştirilmiş bir özniteliği el ile belirtin.
 
-1. **Birleştirme** sayfasında **Alanları Birleştir**'i seçin.
+1. **Birleştirme** sayfasında **Birleştir**'i seçin.
+
+1. **Alanlar** seçeneğini belirleyin.
 
 1. **Alanları birleştirme ölçütü** açılır listesinde birleştirme kazanan ilkesini belirleyin.
 
@@ -114,6 +111,26 @@ Birleştirilmiş bir özniteliği el ile belirtin.
 1. Değişiklikleri uygulamak için **Bitti**'yi seçin.
 
 1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
+
+## <a name="combine-a-group-of-fields"></a>Alan grubunu birleştirme
+
+Bir alan grubunu tek bir birim olarak ele alın. Örneğin, kayıtlarımız Adres1, Adres2, Şehir, Eyalet ve Posta kodu alanlarını içeriyorsa. Verilerimizi daha eksiksiz hale getireceğini düşünerek farklı bir kaydın Adres2 alanını birleştirmek istemeyiz
+
+1. **Birleştirme** sayfasında **Birleştir**'i seçin.
+
+1. **Alan grubu** seçeneğini belirleyin.
+
+1. **Grupları sıralama ölçütü** açılır listesinde birleştirme kazanan ilkesini belirleyin.
+
+1. **Ekle**'yi seçin ve alanlara daha fazla alan veya ek grup eklemek isteyip istemediğinize karar verin.
+
+1. Birleştirilen her alan için **Ad** ve **Çıkış adı** sağlayın.
+
+1. Alan grubu için **Ad** belirtin. 
+
+1. Değişiklikleri uygulamak için **Bitti**'yi seçin.
+
+1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin.
 
 ## <a name="change-the-order-of-fields"></a>Alanların sırasını değiştirme
 

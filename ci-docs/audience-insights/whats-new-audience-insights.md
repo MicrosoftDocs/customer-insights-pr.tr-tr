@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
-description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 12/02/2021
+description: 'Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884286"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 En son güncelleştirmeleri bildirmekten heyecan duyuyoruz! Bu makalede genel önizleme özellikleri, genel kullanılabilirlik geliştirmeleri ve özellik güncelleştirmeleri özetlenmektedir. Uzun vadeli özellik planlarını görmek için [Dynamics 365 ve Power Platform sürüm planları](/dynamics365/release-plans/) konusuna bakın.
 
@@ -26,6 +21,50 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+
+## <a name="december-2021-updates"></a>Aralık 2021 güncelleştirmeleri
+
+2021 Aralık güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insights günlüklerini Azure İzleyici'ye iletme
+
+Customer Insights Azure İzleyici ile doğrudan tümleştirme sağlar. Bu özellik, denetim olaylarını ve operasyonel olayları içerir. Azure İzleyici kaynak günlükleri, günlükleri izlemenize ve Azure Depolama, Azure Log Analytics'e göndermenize veya bunları Azure Event Hubs'a aktarmanıza olanak tanır.
+
+Daha fazla bilgi için bkz. [Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletimi (Önizleme)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Etkileşim verileriyle müşteri profillerini zenginleştirme
+
+Müşteri firması profillerinizi Office 365 uygulamaları aracılığıyla etkileşim bilgileriyle zenginleştirmek için Microsoft Office 365 uygulamasından gelen verileri kullanın. Etkileşim verileri, firma düzeyinde toplanan e-posta ve toplantı etkinliklerinden oluşur. Örneğin, bir iş hesabından gelen e-postaların sayısı veya firmayla yapılan toplantıların sayısı. Bireysel kullanıcılarla ilgili veri paylaşılmaz. Bu zenginleştirme şu bölgelerde kullanılabilir: Birleşik Krallık, Avrupa, Kuzey Amerika.
+
+Daha fazla bilgi için bkz. [Müşteri profillerini etkileşim verileriyle zenginleştirme (önizleme)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Gelişmiş veri birleştirme özellikleri
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Ayrı öznitelik düzeyinde çakışma çözümleme ilkelerini etkinleştirme
+
+Bir varlık içindeki yinelenen müşteri kayıtlarını kaldırırken, tam bir kaydı kazanan olarak seçmek zorunda olmak istemeyebilirsiniz. Artık her öznitelik için kuralları temel alarak çeşitli kayıtlardan en iyi alanları birleştirmenize olanak tanıyoruz. Örneğin, en son e-postayı VE farklı kayıtlardan en eksiksiz adresi tutmayı seçebilirsiniz. 
+
+Artık tek bir varlık içindeki yinelenenleri kaldırırken ve kayıtları birleştirirken her öznitelik için ayrı birleştirme kuralları tanımlayabilirsiniz. Daha önce, yalnızca tek bir birleştirme kuralı seçmenize olanak tanıyorduk (verileri yeni olma verilerinin eksiksizliğini temel alarak tutma) ve bu kural kayıt düzeyinde tüm özniteliklere uygulanıyordu. Bu, tutmak istediğiniz verilerin bir kısmı kayıt A'da ve başka işe yarar veriler kayıt B'de bulunduğunda uygun değildi.
+
+Daha fazla bilgi için bkz. [Eşleştirme varlığında yinelenenleri kaldırma işlemi tanımlama](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Eşleştirme için özel kurallar
+
+Kayıtların EŞLEŞTİRİLMEMESİ için genel kurallara için bir özel durum belirtmeniz gereken durumlar vardır. Bu durum, birden fazla kişi yeterince bilgiyi paylaştığında ortaya çıkar; böylece sistem onları tek bir birey olarak eşleştirir. Örneğin, aynı soyadına sahip olan, aynı şehirde yaşayan ve aynı doğum tarihini paylaşan ikizler.
+
+Özel durumlar, hatalı veri birleştirmenin birleşme kurallarında ele alınmasını sağlar. Bir kurala birden çok özel durum ekleyebilirsiniz.
+
+Daha fazla bilgi için bkz. [Kurala özel durum ekleme](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Ek çakışma çözümleme ilkeleri sağlama ve özniteliklerin gruplandırılmasını etkinleştirme
+
+Bu özellik, bir alan grubunu tek bir birim olarak ele almanızı sağlar. Örneğin, kayıtlarımız Adres1, Adres2, Şehir, Eyalet ve Posta kodu alanlarını içeriyorsa. Verilerimizi daha eksiksiz hale getireceğini düşünerek farklı bir kaydın Adres2 alanını birleştirmek istemeyiz.
+
+Artık bir grup ilgili alanı birleştirebilir ve gruba tek bir birleştirme ilkesi uygulayabilirsiniz. 
+
+Daha fazla bilgi için bkz. [Alan grubunu birleştirme](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Kasım 2021 güncelleştirmeleri
 

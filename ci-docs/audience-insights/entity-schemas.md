@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380767"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model'de varlık şemaları
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) bildirimli bir belirtimdir ve iş ile üretkenlik uygulamalarında yaygın olarak kullanılan kavram ve aktiviteleri temsil eden standart varlıkların bir tanımıdır. Bu model, gözlemsel ve analitik veriler için genişletilmektedir. Common Data Model, (Firma, İş Birimi, Servis Talebi, İlgili Kişi, Müşteri Adayı, Fırsat ve Ürün gibi) iyi tanımlanmış, modüler ve genişletilebilir iş varlıklarının yanı sıra satıcılar, çalışanlar ve müşterilerle etkileşimler ve servis düzeyi sözleşmeleri gibi aktiviteler sağlar. Herhangi biri, işle ilgili ek fikirler yakalamak için Common Data Model tanımlarını oluşturabilir ve genişletebilir.
 
