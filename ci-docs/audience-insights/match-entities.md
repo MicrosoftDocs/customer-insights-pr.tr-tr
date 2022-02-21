@@ -1,7 +1,7 @@
 ---
 title: Veri birleştirmesi için varlıkları eşleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098859"
 ---
-
 # <a name="match-entities"></a>Varlıkları eşleme
 
 Eşleştirme aşaması veri kümelerinizin birleşik bir müşteri profili veri kümesiyle nasıl birleştirileceğini belirtir. Veri birleştirme işlemindeki [eşleme adımını](map-entities.md) tamamladıktan sonra, varlıklarınızı eşlemeye hazırsınız demektir. Eşleştirme aşaması için en az iki eşlenmiş varlık gerekir.
@@ -24,13 +29,7 @@ Eşleştirme sayfası üç bölümden oluşur:
 
 ## <a name="specify-the-match-order"></a>Eşleştirme sırasını belirtme
 
-**Veri** > **Birleştir** > **Eşleştir**'e gidin ve eşleştirme aşamasına başlamak için **Sırayı ayarla**'yı seçin.
-
-Her eşleştirme iki veya daha fazla varlığı tek ve konsolide bir varlığa birleştirir. Aynı zamanda, benzersiz müşteri kayıtlarını tutar. Örneğin, birincil varlık **eCommerce:eCommerceContacts** ve ikinci varlık **loyaltyscheme:loycustomers** olarak iki varlık seçtik. Varlıkların sırası, sistemin kayıtları hangi sırada eşleştirmeyi deneyeceğini belirtir.
-
-:::image type="content" source="media/match-page.png" alt-text="Veri birleşme işleminin Bütünleştir alanında eşleşme sayfasının ekran görüntüsü.":::
-  
-*ECommerce: eCommerceContacts* birincil varlığı, sonraki varlık *loyaltyscheme:loycustomers* ile eşleştirilir. Birden fazla varlığı taşımanız durumunda ilk eşleştirme adımından kaynaklanan veri kümesi takip eden varlıkla eşleştirilir.
+Her eşleştirme iki veya daha fazla varlığı tek ve konsolide bir varlığa birleştirir. Aynı zamanda, benzersiz müşteri kayıtlarını tutar. Eşleşme sırası, sistemin kayıtları eşleştirmeye çalıştığı sırayı gösterir.
 
 > [!IMPORTANT]
 > Birincil varlığınız olarak seçtiğiniz varlık, birleşik profil veri kümesinin temelini oluşturur. Eşleştirme aşamasında seçilen ek varlıklar bu varlığa eklenir. Bu, Birleşik varlığın Bu varlığa eklenen *tüm* verileri içerdiği anlamına gelmez.
@@ -38,9 +37,18 @@ Her eşleştirme iki veya daha fazla varlığı tek ve konsolide bir varlığa b
 > Varlıklarınızın hiyerarşisini seçmenize yardımcı olabilecek iki önemli nokta vardır:
 >
 > - Müşterileriniz hakkında en eksiksiz ve güvenilir profil verilerine sahip varlığı birincil varlık olarak seçin.
-> - Birincil varlık olarak diğer varlıklarla (örneğin, ad, telefon numarası veya e-posta adresi) ortak olan çeşitli özniteliklere sahip varlığı seçin.
+> - Diğer varlıklarla birden fazla ortak özniteliği (ör. ad, telefon numarası veya e-posta adresi) olan varlığı birincil varlık olarak seçin.
 
-Eşleştirme sırasını belirttikten sonra, **veri** > **bütünleştirme** > **Eşleştirme** kısmındaki **Eşleşen kayıt bilgileri** bölümünde tanımlanmış eşleşme çiftlerini görürsünüz. Temel ölçümler, eşleştirme işlemi tamamlanıncaya kadar boş olacaktır.
+1. **Veri** > **Birleştir** > **Eşleştir**'e gidin ve eşleştirme aşamasına başlamak için **Sırayı ayarla**'yı seçin.
+1. **Varlık sırası**'nı seçin. Örneğin, **eCommerce:eCommerceContacts** öğesini birincil varlık, **LoyaltyScheme:loyCustomers** öğesini ise ikincil varlık olarak seçin. 
+1. Varlıktaki her kaydın benzersiz bir müşteri olması ve takip eden her bir varlıkla eşleşmesi için **Tümünü dahil et**'i seçin.
+1. **Bitti**'yi seçin. 
+
+Eşleşme sırasını belirttikten sonra, **Veriler** > **Birleştir** > **Eşleştir**'deki **Eşleşen kayıtların ayrıntıları** bölümünde tanımlı eşleşme çiftleri gösterilir. Eşleşme işlemi tamamlanıncaya kadar temel ölçümler boştur.
+
+:::image type="content" source="media/match-page.png" alt-text="Veri birleşme işleminin Bütünleştir alanında eşleşme sayfasının ekran görüntüsü.":::
+  
+*ECommerce: eCommerceContacts* birincil varlığı, sonraki varlık *loyaltyscheme:loycustomers* ile eşleştirilir. Birden fazla varlığı taşımanız durumunda ilk eşleştirme adımından kaynaklanan veri kümesi takip eden varlıkla eşleştirilir.
 
 ## <a name="define-rules-for-match-pairs"></a>Eşleşme çiftleri için kurallar tanımlama
 
@@ -50,7 +58,7 @@ Bir varlık adının yanında **kurallar gerekli** uyarısının bulunması, bir
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Kurallar eklemeye yönelik denetimin vurgulandığı eşleşen kayıt bilgileri bölümünün ekran görüntüsü.":::
 
-1. Eşleştirme kurallarını tanımlamak için, **eşleşen kayıt bilgileri** bölümünde bir varlığın altında **Kurallar Ekle**'yi seçin.
+1. Eşleşme kurallarını tanımlamak için **Eşleşen kayıtların ayrıntıları** bölümündeki bir varlığın altında **Kural ekle**'yi seçin.
 
 1. **Kural Oluştur** bölmesinde, kural için koşulları yapılandırın.
 
@@ -61,15 +69,15 @@ Bir varlık adının yanında **kurallar gerekli** uyarısının bulunması, bir
    - **Varlık/alan (ikinci satır)**: İlk satırda belirtilen varlık özniteliğiyle ilgili bir öznitelik seçin.
 
    - **Normalleştir**: Seçili öznitelikler için aşağıdaki normalleştirme seçeneklerini belirleyin. 
-     - Boşluk: Tüm boşlukları kaldırır. *Hello   World*, *HelloWorld* olur.
+     - Rakamlar: Roma rakamları gibi diğer rakam sistemleri Arap rakamlarına dönüştürülür. *VIII*, *8* olur.
      - Semboller: Tüm simgeleri ve özel karakterleri kaldırır. *Head&Shoulder*'i *HeadShoulder* olur.
      - Metni küçük harf yap: Tüm karakterleri küçük harflere dönüştürür. *TÜMÜ BÜYÜK HARF ve Başlık Düzeni* *tümü büyük harf ve başlık düzeni* olur.
+     - Tür (Telefon, Ad, Adres, Kuruluş): Adlar, unvanlar, telefon numaraları, adresler vb. bilgileri standartlaştırır. 
      - Unicode'dan ASCII karakterlerine: Unicode gösterimini ASCII karakterlerine dönüştürür. */u00B2*, *2* olur.
-     - Rakamlar: Roma rakamları gibi diğer rakam sistemleri Arap rakamlarına dönüştürülür. *VIII*, *8* olur.
-     - Samantik türleri: Adları, unvanları, telefon numaralarını, adresleri, vb. standartlaştırır 
+     - Boşluk: Tüm boşlukları kaldırır. *Hello   World*, *HelloWorld* olur.
 
    - **Duyarlılık**: Bu koşul için uygulanacak duyarlılık düzeyini ayarlar. 
-     - **Temel**: *düşük*, *Orta*, *yüksek* ve *tam* seçeneklerinden birini seçin. Yalnızca yüzde 100 eşleşen kayıtları eşleştirmek için **Tam** seçeneğini belirleyin. Yüzde 100 aynı olmayan kayıtları eşleştirmek için diğer düzeylerden birini seçin.
+     - **Temel**: *düşük*, *Orta*, *yüksek* ve *tam* seçeneklerinden birini seçin. Yalnızca yüzde 100 eşleşen kayıtları eşleştirmek için **Tam**'ı seçin. Yüzde 100 aynı olmayan kayıtları eşleştirmek için diğer düzeylerden birini seçin.
      - **Özel**: Kayıtların eşleşmesi gereken bir yüzde ayarlayın. Sistem yalnızca bu eşiği geçen kayıtları eşleştirir.
 
 1. Kural için bir **Ad** belirtin.
@@ -84,7 +92,7 @@ Bir varlık adının yanında **kurallar gerekli** uyarısının bulunması, bir
 
 Varlıkları yalnızca öznitelikler birden fazla koşulu karşılıyorsa eşleştirmek için eşleştirme kuralına daha fazla koşul ekleyin. Koşullar bir mantıksal VE işleciyle bağlanır ve bu nedenle yalnızca tüm koşullar karşılanıyorsa yürütülür.
 
-1. **Veri** > **bütünleştir** > **Eşleştir**'e gidin ve koşul eklemek istediğiniz kuralda **Düzenle**'yi seçin.
+1. **Veri** > **Birleştir** > **Eşleştir**'e gidin ve koşul eklemek istediğiniz kuralda **Düzenle**'yi seçin.
 
 1. **Kuralı düzenle** bölmesinde, **Koşul ekle**'yi seçin.
 
@@ -92,7 +100,7 @@ Varlıkları yalnızca öznitelikler birden fazla koşulu karşılıyorsa eşle�
 
 ### <a name="add-rules-to-a-match-pair"></a>Eşleştirme çiftine kural ekleme
 
-Eşleşme kuralları koşul kümelerini temsil eder. Varlıkları birden fazla özniteliğe bağlı koşullara göre eşleştirmek için daha fazla kural ekleyin
+Eşleşme kuralları koşul kümelerini temsil eder. Varlıkları birden fazla özniteliğe bağlı koşullara göre eşleştirmek için daha fazla kural ekleyin.
 
 1.  **Veri** > **bütünleştir** > **Eşleştir**'e gidin ve kural eklemek istediğiniz varlıkta **Kural ekle**'yi seçin.
 
@@ -117,7 +125,7 @@ Varlıkların işlenme sırasını değiştirmek amacıyla eşleştirme kurallar
 
 [Çapraz varlık eşleştirme kurallarına](#define-rules-for-match-pairs) ek olarak yinelenenleri kaldırma kurallarını da belirtebilirsiniz. *Yinelenenleri kaldırma*, kayıtları eşleştirirken kullanılan başka bir işlemdir. Yinelenen kayıtları tanımlar ve bunları tek bir kayıt halinde birleştirir. Kaynak kayıtları, farklı kimliklerle birleştirilmiş kayda bağlanır.
 
-Yinelenenleri kaldırma işlemi yapılan kayıt, çapraz varlık eşleştirme işleminde kullanılır. Yinelenenleri kaldırma işlemi tek tek varlıklarda yapılır ve eşleştirme çiftlerinde kullanılan her varlık için yapılandırılabilir.
+Yinelemeleri kaldırılan kayıtlar, varlıklar arası eşleşme işlemi için kullanılır. Yinelenenleri kaldırma işlemi varlıklarda ayrı ayrı gerçekleştirilir ve eşleşme çiftlerindeki her bir varlık için yapılandırılabilir.
 
 Yinelenenleri kaldırma kurallarını belirtmek zorunlu değildir. Böyle bir kural yapılandırılmamışsa sistem tanımlı kurallar uygulanır. Gelişmiş performans için varlık verilerini çapraz varlık eşleştirmeye geçirmeden önce tüm kayıtları tek bir kayıt halinde birleştirirler.
 

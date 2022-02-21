@@ -2,6 +2,22 @@
   href: index.yml
 - name: Ürüne genel bakış
   href: overview.md
+- name: Öğrenme kataloğu
+  items:
+    - name: Kullanmaya başlayın
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Veri alma
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Birleşik müşteri profili oluşturma
+      href: /learn/modules/unified-customer-profile/
+    - name: Hedef kitle içgörüleri ile çalışma
+      href: /learn/modules/working-with-customer-insights/
+    - name: Verileri zenginleştirme ve tahminlerde bulunma
+      href: /learn/modules/enrich-data/
+    - name: Harici bağlantıları yönetme
+      href: /learn/modules/configure-third-party-connections/
+    - name: Customer Insights'ı yönetme
+      href: /learn/modules/administer-customer-data-platform/
 - name: Ücretsiz deneme sürümü
   items:
     - name: Ücretsiz deneme sürümüne kaydolma
@@ -30,21 +46,11 @@
           href: audience-insights/home.md
     - name: İş hesaplarıyla çalışma
       href: audience-insights/work-with-business-accounts.md
-    - name: Modülleri öğrenme
-      items:
-        - name: Veri alma
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Birleşik müşteri profili oluşturma
-          href: /learn/modules/unified-customer-profile/
-        - name: Uygulamayla çalışma
-          href: /learn/modules/working-with-customer-insights/
-        - name: Verileri ve tahminleri zenginleştirme
-          href: /learn/modules/enrich-data/
     - name: Veri kaynakları
       items:
         - name: Veri kaynaklarına genel bakış
           href: audience-insights/data-sources.md
-        - name: Power Query bağlayıcılarıyla veri kaynakları ekleme
+        - name: Power Query bağlayıcıları aracılığıyla veri kaynakları ekleme
           href: audience-insights/connect-power-query.md
         - name: Veri kaynağı olarak bir Common Data Model klasörü ekleme
           href: audience-insights/connect-common-data-model.md
@@ -164,7 +170,7 @@
               href: audience-insights/export-adroll.md
             - name: Autopilot
               href: audience-insights/export-autopilot.md
-            - name: Azure Blob Depolama
+            - name: Azure Blob Storage
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage 2. Nesil
               href: audience-insights/export-azure-data-lake-storage-gen2.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR hakları ve istekleri
   href: dsr-rights-requests.md
+- name: Destek alın
+  href: /power-platform/admin/get-help-support

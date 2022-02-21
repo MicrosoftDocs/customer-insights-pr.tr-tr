@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892362"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088137"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Hedef kitle içgörülerinde ortam oluşturma
 
@@ -28,7 +28,7 @@ Kuruluşlar, her Customer Insights lisansı için *iki* ortam oluşturabilir. Ku
 
 ## <a name="create-a-new-environment"></a>Yeni ortam oluştur
 
-Customer Insights için abonelik lisansı satın aldıktan sonra Microsoft 365 kiracısının genel yöneticisi, kendisini ortamı oluşturmaya davet eden bir e-posta alır. Başlamak için [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) adresine gidin. 
+Customer Insights için abonelik lisansı satın aldıktan sonra, Microsoft 365 kiracısının genel yöneticisi ortam oluşturmaya davet edildiği bir e-posta alır. Başlamak için [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) adresine gidin. 
 
 Destekli bir deneyim, yeni bir ortam için gerekli tüm bilgileri toplamanızda size yardımcı olur. Ortam oluşturmak veya yönetmek için hedef kitle öngörüler içinde [yönetici izinlere](permissions.md) sahip olmanız gerekir.
 
@@ -64,7 +64,7 @@ Azure Data Lake Storage uygulamasına veri kaydederek , verilerin bu Azure depol
 > Customer Insights şu anda aşağıdakileri destekler:
 > - Microsoft Dataverse tarafından yönetilen bir Data Lake içinde depolanan Power BI veri akışlarından alınan varlıklar.  
 > - Azure Data Lake Storage ortamı oluştururken seçtiğiniz aynı Azure bölgesinden gelen firmalar.
-> - *Hiyerarşik ad alanı* etkinleştirilmiş olan Azure Data Lake Storage firmaları.
+> - *Hiyerarşik ad alanı* etkinleştirilmiş, 2. Nesil Azure Data Lake Storage hesapları. Azure Data Lake 1. Nesil depolama hesapları desteklenmez.
 
 Bu Azure Data Lake Storage seçeneği için, kaynak tabanlı bir seçenek ile kimlik doğrulaması için abonelik tabanlı bir seçenek arasında seçim yapabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusunu kullanarak bir Azure Data Lake Storage hesabına bağlanma](connect-service-principal.md). **Kapsayıcı** adı olacak `customerinsights` ve değiştirilemez.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900299"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088171"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure hizmet sorumlusu kullanarak bir Azure Data Lake Storage hesabına bağlanma
 
@@ -23,7 +23,7 @@ Bu makalede, depolama hesabı anahtarları yerine bir Azure hizmet sorumlusu kul
 Azure hizmetlerini kullanan otomatik araçlar her zaman kısıtlı izinlere sahip olmalıdır. Azure, uygulamalarda tamamen ayrıcalıklı bir kullanıcı olarak oturum açma olması yerine hizmet sorumluları sağlar. Güvenli bir şekilde [Common Data Model klasörünü veri kaynağı olarak eklemek veya düzenlemek](connect-common-data-model.md) ya da [ortam oluşturmak veya güncelleştirmek](create-environment.md) için hizmet sorumlularını kullanabilirsiniz.
 
 > [!IMPORTANT]
-> - Hizmet sorumlusunu kullanacak Data Lake Storage hesabında [hiyerarşik ad alanı etkinleştirilmiş olmalıdır](/azure/storage/blobs/data-lake-storage-namespace).
+> - Hizmet sorumlusunu kullanacak Data Lake Storage hesabı, 2. Nesil olmalıdır ve [hiyerarşik ad alanı etkinleştirilmiş](/azure/storage/blobs/data-lake-storage-namespace) olmalıdır. Azure Data Lake 1. Nesil depolama hesapları desteklenmez.
 > - Hizmet sorumlusu oluşturmak için Azure aboneliğinizde yönetici izinlerine sahip olmanız gerekir.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Customer Insights için Azure hizmet sorumlusu oluşturma

@@ -1,6 +1,6 @@
 ---
 title: Power Query bağlayıcısı aracılığıyla veri alma (video içerir)
-description: Power Query temelli veri kaynakları için bağlayıcılar.
+description: Power Query tabanlı veri kaynağı bağlayıcıları.
 ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
+ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7935002"
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8092096"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Bir Power Query veri kaynağına bağlanın
+# <a name="connect-to-a-power-query-data-source"></a>Power Query veri kaynağına bağlanma
 
-Power Query, veri almak için geniş bir bağlayıcı kümesi sunar. Bu bağlayıcıların çoğu, Dynamics 365 Customer Insights tarafından desteklenmektedir. 
+Power Query, veri almak için çeşitli bağlayıcılar sunar. Bu bağlayıcıların çoğu, Dynamics 365 Customer Insights tarafından desteklenmektedir. 
 
-Power Query bağlayıcılarını temel alan veri kaynakları ekleme işlemi genellikle bu bölümde özetlenen adımları izler. Ancak, kullandığınız bağlayıcıya bağlı olarak, farklı bilgiler gereklidir. Daha fazla bilgi için [Power Query bağlayıcı başvurusu](/power-query/connectors/) bölümündeki bireysel bağlayıcılarla ilgili belgelere bakın.
+Power Query bağlayıcılarını temel alan veri kaynakları ekleme işleminde genellikle bu bölümde özetlenen adımlar izlenir. Ancak, kullandığınız bağlayıcıya bağlı olarak, farklı bilgiler gereklidir. Daha fazla bilgi için [Power Query bağlayıcı başvurusu](/power-query/connectors/) bölümündeki bireysel bağlayıcılarla ilgili belgelere bakın.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -30,7 +30,7 @@ Power Query bağlayıcılarını temel alan veri kaynakları ekleme işlemi gene
 
 1. **Veri Kaynağı ekle**'yi seçin.
 
-1. **Microsoft Power Query**'yi seçin, ardından **İleri**'yi seçin.
+1. **Microsoft Power Query**'i seçin.
 
 1. Veri kaynağı için bir **Ad** girin ve veri kaynağını oluşturmak için **İleri** öğesini seçin.
 
@@ -40,21 +40,21 @@ Power Query bağlayıcılarını temel alan veri kaynakları ekleme işlemi gene
 
 1. **Veriyi dönüştür** öğesini seçin. Bu adımda, veri kaynağınıza varlıklar eklersiniz. Varlıklar veri kümeleridir. Birden çok veri kümesi içeren bir veritabanınız varsa her veri kümesi bu veritabanının kendi varlığıdır.
 
-1. **Power Query - Sorguları Düzenle** diyaloğu, verileri incelemenizi ve geliştirmenizi sağlar. Seçtiğiniz veri kaynağında sistemlerin belirlediği varlıklar sol bölmede görüntülenir.
+1. **Power Query - Sorguları düzenle** iletişim kutusunda verileri inceleyebilir ve geliştirebilirsiniz. Seçtiğiniz veri kaynağında sistemlerin belirlediği varlıklar sol bölmede görüntülenir.
 
    > [!div class="mx-imgBorder"]
    > ![Sorguları düzenle iletişim kutusu.](media/data-manager-configure-edit-queries.png "Sorguları düzenle diyaloğu")
 
-1. Ayrıca verilerinizi dönüştürebilirsiniz. Düzenlenecek veya dönüştürülecek bir varlık seçin. Dönüşümleri uygulamak için Power Query penceresindeki seçenekleri kullanın. Her dönüşüm **Uygulanan adımlar** altında listelenir. Power Query, çok sayıda önceden oluşturulmuş dönüştürme seçeneği sunar. Daha fazla bilgi için bkz. [Power Query Dönüştürmeleri](/power-query/power-query-what-is-power-query#transformations).
-
-1. **Sorguları düzenle** iletişim kutusunda **Veri al**'ı seçerek veri kaynağınıza ek varlıklar ekleyebilirsiniz.
+1. Ayrıca verilerinizi dönüştürebilirsiniz. Düzenlenecek veya dönüştürülecek bir varlık seçin. Dönüşümleri uygulamak için Power Query penceresindeki seçenekleri kullanın. Her dönüşüm **Uygulanan adımlar** altında listelenir. Power Query, çok sayıda önceden oluşturulmuş dönüşüm seçeneği sunar. Daha fazla bilgi için [Power Query Dönüşümleri](/power-query/power-query-what-is-power-query#transformations) başlıklı makaleye bakın.
 
    Aşağıdaki dönüşümleri kullanmanızı öneririz:
 
-   - CSV dosyasından veri alıyorsanız, ilk satır genellikle başlıkları içerir. **Tabloyu dönüştür**'e gidin ve **Başlıkları ilk satır olarak kullan** seçeneğini seçin.
-   - Veri türünün uygun şekilde ayarlandığından emin olun.
+   - CSV dosyasından veri alıyorsanız, ilk satır genellikle başlıkları içerir. **Dönüşüm**'e gidin ve **İlk satırı üst bilgi olarak kullan**'ı seçin.
+   - Veri türünün uygun şekilde ayarlandığından emin olun. Örneğin, tarih alanları için bir tarih türü seçin.
 
-1. Dönüşümleri kaydetmek için Power Query penceresinin altındaki **Kaydet**'i seçin. Kaydettikten sonra, veri kaynağınızı **Veri** > **Veri kaynakları** öğesinde bulacaksınız.
+1. **Sorguları düzenle** iletişim kutusunda veri kaynağınıza ek varlıklar eklemek için **Ana Sayfa**'ya gidin ve **Veri al**'ı seçin.
+
+1. Dönüşümleri kaydetmek için Power Query penceresinin alt kısmında **Kaydet**'i seçin. Kaydettikten sonra, veri kaynağınızı **Veri** > **Veri kaynakları** öğesinde bulacaksınız.
 
 1. **Veri kaynakları** sayfasında, yeni veri kaynağının **Yenileniyor** durumunda olduğunu fark edeceksiniz.
 
@@ -62,9 +62,9 @@ Power Query bağlayıcılarını temel alan veri kaynakları ekleme işlemi gene
 
 Customer Insights'a veri içeri aktarmak üzere kullanabileceğiniz bağlayıcıların listesi için [Power Query bağlayıcı başvurusuna](/power-query/connectors/) bakın. 
 
-**Customer Insights (Veri akışları)** sütununda onay işareti bulunan bağlayıcılar, Power Query temelli yeni veri kaynakları oluşturmak için kullanılabilir. Ön koşullar, sınırlamalar ve diğer ayrıntılar hakkında daha fazla bilgi edinmek için ilgili bağlayıcının belgelerini gözden geçirin.
+**Customer Insights (Veri akışları)** sütununda onay işareti bulunan bağlayıcılar, Power Query tabanlı yeni veri kaynakları oluşturmak için kullanılabilir. Ön koşullar, sınırlamalar ve diğer ayrıntılar hakkında daha fazla bilgi edinmek için ilgili bağlayıcının belgelerini gözden geçirin.
 
-## <a name="edit-power-query-data-sources"></a>Power Query veri kaynaklarını düzenle
+## <a name="edit-power-query-data-sources"></a>Power Query veri kaynaklarını düzenleme
 
 > [!NOTE]
 > Uygulamanın işlemlerinden birinde (örneğin, *segmentlere ayırma*, *eşleştirme* veya *birleştirme*) kullanılmakta olan veri kaynaklarında değişiklik yapmak mümkün olmayabilir. 
@@ -80,9 +80,9 @@ Customer Insights'a veri içeri aktarmak üzere kullanabileceğiniz bağlayıcı
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. **Power Query - Sorguları düzenle** diyaloğundaki değişikliklerinizi ve dönüşümlerinizi [Yeni veri kaynağı oluştur](#create-a-new-data-source) bölümünde açıklandığı gibi uygulayın.
+3. [Yeni veri kaynağı oluşturma](#create-a-new-data-source) bölümünde açıklanan şekilde, **Power Query - Sorguları düzenle** iletişim kutusunda değişikliklerinizi ve dönüşümlerinizi uygulayın.
 
-4. Değişikliklerinizi kaydetmek için düzenlemelerinizi tamamladıktan sonra Power Query uygulamasında **Kaydet**'i seçin.
+4. Değişikliklerinizi kaydetmek için düzenlemelerinizi tamamladıktan sonra Power Query'de **Kaydet**'i seçin.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

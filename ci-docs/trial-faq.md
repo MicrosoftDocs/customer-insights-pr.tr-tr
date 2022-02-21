@@ -3,18 +3,18 @@ title: Deneme SSS - Dynamics 365 Customer Insights
 description: Customer Insights deneme sürümü kurulumu ve yönetimi ile ilgili sık sorulan soruların çözümleri. Platforma ve uygulamaya özgü sorunları gidermeyi öğrenin.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642920"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115992"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights deneme sürümüyle ilgili SSS
 
@@ -43,7 +43,7 @@ Deneme sürümüne kaydolduğunuzda deneme sürümü ayrıntılarını içeren b
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Deneme sürümüne nasıl daha fazla kullanıcı ekleyebilirim?
 
-Kullanıcı eklemek için deneme sürümü yöneticisi hesabını kullanarak [Microsoft 365 yönetim merkezine](https://admin.microsoft.com) gidin. Deneme sürümü lisans sınırına kadar kullanıcı eklemek için [yönetim merkezi kılavuzunu](/microsoft-365/admin/add-users/add-users) izleyin. Eklediğiniz kullanıcının zaten bir Microsoft 365 hesabı varsa deneme sürümü kuruluşunda bu kullanıcıya uygun bir güvenlik rolü atayın. Daha fazla bilgi için bkz. [Bir kullanıcıya güvenlik rolü atama](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Kullanıcı eklemek için deneme sürümünün yönetici hesabını kullanarak [Microsoft 365 yönetim merkezine](https://admin.microsoft.com) gidin. Deneme sürümü lisans sınırına kadar kullanıcı eklemek için [yönetim merkezi kılavuzunu](/microsoft-365/admin/add-users/add-users) izleyin. Eklediğiniz kullanıcının zaten bir Microsoft 365 hesabı varsa deneme sürümü kuruluşunda bu kullanıcıya uygun güvenlik rolünü atayın. Daha fazla bilgi için bkz. [Kullanıcıya güvenlik rolü atama](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Deneme ortamıma kaç kullanıcı ekleyebilirim?
 
@@ -63,7 +63,7 @@ Doğrudan uygulamadaki deneme sürümünü genişletebilirsiniz. Deneme süreniz
 
 Genel olarak, Customer Insights'ın ücretli sürümüne yükseltirken kendi verilerinizle yeni bir başlangıç yapmanız önerilir. 
 
-Isteğe bağlı olarak, hedef kitle öngörüleri kullanıyorsanız, Customer Insights'ı satın alırsanız verilerinizi bir deneme ortamından kopyalayabilirsiniz. Ayarları deneme ortamından ücretli ortama geçirmek için Customer Insights deneme sürümünün yöneticisi ve Microsoft 365 kiracınızın genel yöneticisi veya kuruluşunuzda Dynamics 365 yöneticisi olmanız gerekir. 
+Isteğe bağlı olarak, hedef kitle öngörüleri kullanıyorsanız, Customer Insights'ı satın alırsanız verilerinizi bir deneme ortamından kopyalayabilirsiniz. Ayarları deneme ortamından ücretli ortama geçirmek için Customer Insights deneme sürümünün yöneticisi ve Microsoft 365 kiracınızın genel yöneticisi veya Dynamics 365 yöneticisi olmanız gerekir. 
 
 Ücretli Customer Insights kurulumunuzda ilk kez oturum açtıktan sonra yeni bir ortam oluşturmanız istenir. Bu işlemde, mevcut bir ortamdaki yapılandırmayı kopyalamayı ve ayarların çoğunu geçirmeyi seçebilirsiniz. Yukarıda bahsedilen izinlere sahipseniz deneme ortamı bu listede gösterilir. Daha fazla bilgi için bkz. [Ortam yapılandırmasını kopyalama](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +82,9 @@ Deneme sürümüne kaydolduktan sonra uygulamanın ana ekranına ulaşırsınız
 
 Customer Insights özelliklerinin çoğu özelliği deneme sürümü içinde bulunmaktadır.
 
-Aşağıdaki özellik kullanılamaz: 
+Aşağıdaki özellikler **kullanılamaz**: 
 - Kendi Azure Data Lake Storage hesabınızı kullanan yeni ortamlar oluşturamazsınız.
+- Deneme ortamını silemezsiniz. 
 
 ### <a name="how-long-does-the-trial-last"></a>Deneme sürümü ne kadar sürer?
 

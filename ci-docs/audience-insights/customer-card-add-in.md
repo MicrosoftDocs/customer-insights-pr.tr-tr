@@ -1,7 +1,7 @@
 ---
 title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (video içerir)
 description: Bu eklentiye sahip Dynamics 365 uygulamalarındaki hedef kitle öngörülerdeki verileri gösterin.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085272"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
 
 
@@ -113,5 +118,26 @@ Müşteri Kartı Eklentisi otomatik olarak yükseltilmez. En son sürüme yükse
 
 1. Yükseltme işlemi başlatıldıktan sonra yükseltme tamamlanana kadar bir yükleniyor göstergesi görürsünüz. Daha yeni bir sürüm yoksa yükseltme işlemi bir hata iletisi gösterir.
 
+## <a name="troubleshooting"></a>Sorun giderme
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Müşteri Kartı Eklentisi'ndeki denetimler verileri bulamıyor
+
+**Sorun:**
+
+Kimlik alanları doğru yapılandırılmış olsa bile denetimler, hiçbir müşterinin verilerini bulamıyor.  
+
+**Çözüm:**
+
+1. Kart Eklentisi'ni yönergelere uygun olarak yapılandırdığınızdan emin olun: [Müşteri Kartı Eklentisi'ni Yapılandırma](#configure-the-customer-card-add-in) 
+
+1. Veri alımı yapılandırmasını gözden geçirin. İlgili kişi kimliği GUID bilgisini içeren Dynamics 365 sisteminin veri kaynağını düzenleyin. İlgili kişi GUID bilgisi, Power Query düzenleyicisinde büyük harflerle gösteriliyorsa aşağıdaki adımları deneyin: 
+    1. Veri kaynağını Power Query Düzenleyicisi'nde açmak için veri kaynağını düzenleyin.
+    1. İlgili kişi kimliği sütununu seçin.
+    1. Kullanılabilir eylemleri görmek için üst bilgi çubuğunda **Dönüştür**'ü seçin.
+    1. **Küçük harf**'i seçin. Şimdi tablodaki GUID'lerin küçük harfle gösterildiğinden emin olun.
+    1. Veri kaynağını kaydedin.
+    1. Değişiklikleri GUID'e yaymak için veri alımı, birleştirme ve aşağı akış işlemlerini çalıştırın. 
+
+Tam yenilemeyi tamamladıktan sonra, Müşteri Kartı Eklentisi denetimleri beklenen verileri göstermelidir. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732288"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100164"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
@@ -35,7 +35,7 @@ Bu makalede, Customer Insights API'lerine nasıl erişileceği,, bir Azure Uygul
  
    API'lerin etkinleştirilmesi, kurulumunuz için API isteklerinde kullanılacak birincil ve ikincil abonelik anahtarı oluşturur. **Yönetici** > **İzinler** > **API'ler**'de **Birincil oluştur** veya **İkincil Oluştur**'u seçerek anahtarları yeniden oluşturabilirsiniz.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights API'lerini etkinleştirin.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. [API'leri denemek](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) için **API'lerimizi keşfedin**'i seçin.
 
@@ -49,7 +49,7 @@ Bu makalede, Customer Insights API'lerine nasıl erişileceği,, bir Azure Uygul
 
 Bir süre sonra aşağıda HTTP yanıtı görüntülenir.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="API'ler nasıl test edilir?":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Azure portalında yeni uygulama kaydı oluşturma
 
@@ -65,7 +65,7 @@ Bu adımlar, temsilci seçilen izinleri kullanarak bir Azure uygulamasında Cust
 
 1. Yeni Uygulama kaydınızda, **API izinleri**'ne gidin.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Uygulama kaydında API izinleri nasıl ayarlanır?":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Yan bölmede **İzin ekle**'yi ve **Customer Insights**'ı seçin.
 
@@ -77,7 +77,7 @@ Bu adımlar, temsilci seçilen izinleri kullanarak bir Azure uygulamasında Cust
 
 API'ye isteğinizle birlikte göndermek üzere bir taşıyıcı belirteç almak için Microsoft Kimlik Doğrulaması Kitaplığı (MSAL) ile bu uygulama kaydının Uygulama/İstemci Kimliğini kullanabilirsiniz.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici onayı verme":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 MSAL hakkında daha fazla bilgi için bkz. [Microsoft Kimlik Doğrulaması Kitaplığı'na Genel Bakış (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Azure'da uygulama kaydı hakkında daha fazla bilgi için, bkz. [Uygulama kaydet
 
 1. Uygulama kaydını tamamlamak için **Şunun için yönetici onayı ver...** seçeneğini belirleyin.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Yönetici onayı verme":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Sonuç olarak, Customer Insights'a uygulama kaydının adını kullanıcı olarak eklemeniz gerekir.  
    
@@ -129,7 +129,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
  
    Alternatif olarak, **NuGet Paket Yöneticisi Konsolu**'nda bu komutu çalıştırın: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="NuGet paketini Visual Studio projesine ekleyin.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>C# istemci kitaplığını kullanma
 
@@ -141,7 +141,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 
 1. Bu `HttpClient` istemcisini `CustomerInsights` istemcisinin yapısına aktarın.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="httpclient örneği.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Müşteri ile (örneğin, `GetAllInstancesAsync` gibi) "uzantı yöntemleri" için görüşmeler yapın. Temel `Microsoft.Rest.HttpOperationResponse` öğesine erişim tercih ediliyorsa (örneğin, `GetAllInstancesWithHttpMessagesAsync` gibi) "http ileti yöntemlerini" kullanın.
 

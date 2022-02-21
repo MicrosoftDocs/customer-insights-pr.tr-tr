@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090947"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Dynamics 365 Sales'daki segmentleri kullanma (önizleme)
 
 
 
 Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sales ile promosyonları göndermek için müşteri verilerinizi kullanın.
+
+## <a name="known-limitations"></a>Bilinen sınırlamalar
+
+- Dynamics 365 Sales'a dışa aktarma işlemleri, segment başına 100.000 üye ile sınırlıdır.
+- Dynamics 365 Sales'a segment dışa aktarma işlemlerinin tamamlanması yaklaşık 3 saat sürebilir. 
 
 ## <a name="prerequisite-for-connection"></a>Bağlantı için ön koşul
 

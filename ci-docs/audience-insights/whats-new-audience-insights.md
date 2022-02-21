@@ -1,7 +1,7 @@
 ---
 title: Yeni ve gelecek özellikler
-description: 'Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.'
-ms.date: 01/27/2022
+description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088309"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
 
@@ -21,6 +26,17 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+
+## <a name="january-2022-updates"></a>Ocak 2022 güncelleştirmeleri
+
+2022 Ocak güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata düzeltmeleri içerir.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Müşterinizin geri bildirimi için yaklaşım analizi
+
+Customer Insights, müşteri yaklaşımını sentezlemek ve hedeflenen iyileştirmeler için fırsat olarak belirli iş bölümleri tanımlamak üzere yapay zeka tabanlı yeni bir özellik sunar. Müşterilerinizin yazılı geri bildirimlerini analiz ederek, düşük bir maliyet karşılığında doğru içgörüler edinebilirsiniz. Her müşteri kimliği için iki türetilmiş içgörü oluşturan Doğal Dil İşleme (NL) modelleriyle güçlendirilen yaklaşım analizi. Yaklaşım puanı (-5 ila 5 arasında) ve ilgili iş bölümlerinin listesi. 
+
+Daha fazla bilgi için bkz. [Müşteri geri bildirimlerinde yaklaşımı analiz etme (Önizleme)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Aralık 2021 güncelleştirmeleri
@@ -37,7 +53,7 @@ Daha fazla bilgi için bkz. [Dynamics 365 Customer Insights'ta Azure İzleyici i
 
 Müşteri firması profillerinizi Office 365 uygulamaları aracılığıyla etkileşim bilgileriyle zenginleştirmek için Microsoft Office 365 uygulamasından gelen verileri kullanın. Etkileşim verileri, firma düzeyinde toplanan e-posta ve toplantı etkinliklerinden oluşur. Örneğin, bir iş hesabından gelen e-postaların sayısı veya firmayla yapılan toplantıların sayısı. Bireysel kullanıcılarla ilgili veri paylaşılmaz. Bu zenginleştirme şu bölgelerde kullanılabilir: Birleşik Krallık, Avrupa, Kuzey Amerika.
 
-Daha fazla bilgi için bkz. [Müşteri profillerini etkileşim verileriyle zenginleştirme (önizleme)](enrichment-office.md)
+Daha fazla bilgi için bkz. [Müşteri profillerini etkileşim verileriyle zenginleştirme (Önizleme)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Gelişmiş veri birleştirme özellikleri
 

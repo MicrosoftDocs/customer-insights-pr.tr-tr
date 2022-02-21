@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645606"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116038"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma
 
@@ -25,7 +25,7 @@ Etkileşim içgörülerinde daha fazla analiz seçeneği için hedef kitle içg�
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- Hedef kitle içgörüleri profilleri, size ait bir Azure Data Lake Storage hesabında veya [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;tarafından yönetilen veri gölünde depolanmalıdır. 
+- Hedef kitle içgörüleri profilleri, size ait bir Azure Data Lake Storage hesabında veya [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;tarafından yönetilen veri gölünde depolanmalıdır. 
 - Hedef kitle içgörüleri ortamınızda ilişkili bir Dataverse ortamı bulunmalıdır. Bu ortam aynı zamanda veri depolama için Dataverse kullanıyorsa hedef kitle içgörülerinde **Veri paylaşımını etkinleştir** seçeneğini işaretlediğinizden emin olun. Daha fazla bilgi için bkz. [Hedef kitle öngörüler içinde bir ortam oluşturma ve yapılandırma](../audience-insights/create-environment.md).
 - Etkileşim içgörüleri ve hedef kitle içgörüleri ortamları için yönetici izinlerinizin olması gerekir.
 - Bağlantılı ortamlar aynı coğrafi bölgede bulunmalıdır.
