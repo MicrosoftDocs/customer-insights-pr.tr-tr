@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046647"
 ---
-
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
 Birleştirme aşaması, veri bütünleştirme sürecindeki son aşamadır. Amacı, çelişen veriler arasında mutabakat sağlamaktır. Çakışan verilere örnek olarak veri kümelerinizden ikisinde bulunan ancak her birinde biraz farklı görünen bir müşteri adı ("Grant Marshall" ile "Grant Marshal" gibi) veya biçim olarak farklılık gösteren bir telefon numarası (617-803-091X ile 617803091X gibi) gösterilebilir. Bu çakışan veri noktalarının birleştirilmesi özniteliğe karşılık öznitelik temelinde yapılır.

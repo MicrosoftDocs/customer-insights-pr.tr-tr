@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008789"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Müşteri geri bildirimlerinde duyarlılığı analiz etme (Önizleme)
 
 Müşteriler günümüzde yüksek kaliteli ürünler, hizmetler ve deneyimler bekler. Bunlar özellikle geri bildirimlerini paylaşan müşterilerdir. Kuruluşların artan veri hacmini, doğruluğu azaltmadan ve yüksek işçilik maliyetleri olmadan analiz etmesi oldukça zordur. Dynamics 365 Customer Insights, müşteri geri bildirimleri için kuruluşların verilerini daha doğru ve daha düşük maliyetle analiz etmelerini sağlayan bir duygu analizi modeli sunar.
