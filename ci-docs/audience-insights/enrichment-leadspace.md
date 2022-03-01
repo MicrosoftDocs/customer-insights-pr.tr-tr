@@ -1,79 +1,50 @@
 ---
 title: Üçüncü taraf Leadspace zenginleştirme ile şirket profillerini zenginleştirme
 description: Leadspace üçüncü taraf zenginleştirmesi hakkında genel bilgiler.
-ms.date: 09/30/2021
-ms.reviewer: mhart
+ms.date: 11/24/2020
+ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
+ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673282"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4668747"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace ile şirket profillerini zenginleştirme (önizleme)
 
-Leadspace, B-B Müşteri Veri Platformu sağlayan bir veri bilimi şirketidir. Verilerini zenginleştirmeniz için firmalara göre birleşik müşteri profilleri bulunan ortamları etkinleştirir. Şirket boyutu, konum veya endüstri gibi özniteliklere sahip *Müşteri profillerini* zenginleştirebilirsiniz. Başlık, kişi veya e-posta doğrulaması gibi özniteliklere sahip *İlgili kişi profilleri* zenginleştirin.
+Leadspace, B2B Müşteri Veri Platformu sağlayan bir veri bilimi şirketidir. Şirketlerin birleşik müşteri profillerine sahip müşteri verilerini zenginleştirmesine olanak tanır. Zenginleştirmeler; şirket boyutu, konum, sektör ve daha fazlası gibi ek içgörüler içerir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
 Leadspace'i yapılandırmak için aşağıdaki ön koşullar karşılanmalıdır:
 
-- Etkin bir Leadspace lisansınız var.
-- Firmalara göre [birleştirilmiş müşteri profilleri](customer-profiles.md) vardır.
-- Leadspace bağlantısı önceden bir Yönetici tarafından yapılandırılmış olabilir veya [Yönetici](permissions.md#administrator) izinlere ve "kalıcı tuş" (**Leadspace belirteci** olarak adlandırılır) sahip olmanız gerekir. Ürünle ilgili ayrıntıları öğrenmek için doğrudan [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) ile iletişime geçin.
+- Etkin bir Leadspace lisansınız ve "kalıcı anahtarınız" olmalıdır (**Leadspace belirteci** denir). Ürünleri hakkında ayrıntılı bilgi için doğrudan [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) ile iletişime geçin.
+- [Yönetici](permissions.md#administrator) izinlerine sahip olmalısınız.
+- Şirketler için [birleşik müşteri profillerine](customer-profiles.md) sahip olmanız.
 
-## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
+## <a name="configuration"></a>Yapılandırma
 
 1. Hedef kitle içgörülerinde, **Veri** > **Zenginleştirme**'ye gidin.
 
-1. Leadspace kutucuğunda **verilerimi zenginleştir** ve **Başlarken**'i seçin.
+1. Leadspace kutucuğundaki **Verilerimi zenginleştir** seçeneğini belirleyin.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace kutucuğunun ekran görüntüsü.":::
 
-1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi ve **Leadspace**'i seçerek bir bağlantı oluşturabilirsiniz. 
+1. **Başla**'yı seçin ve ardından etkin bir **Leadspace belirteci** (kalıcı anahtar) girin. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin. **Leadspace'e Bağlan**'ı seçerek her iki girişi de onaylayın.
 
-1. Bağlantı seçimini onaylamak için **Leadspace bağlantısı**'nı seçin.
-
-1. **İleri**'ye ve Leadspace'dan şirket verileriyle zenginleştirmek istediğiniz **müşteri veri kümesi** seçin. Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
-
-    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Müşteri veri kümesi seçerken ekran görüntüsü.":::
-
-1. **İleri**'i seçin ve Leadspace uygulamasından eşleşen şirket verilerini aramak için Birleşik profillerinizden hangi alan türlerinin kullanılacağını tanımlayın. **Şirket adı** alanı gereklidir. Daha yüksek bir eşleşme doğruluğu için **Şirket web sitesi** ve **Şirket konumu** alanları da eklenebilir.
+1. **Verileri eşle**'yi seçin ve birleşik profillerinizden hangi alanların Leadspace'ten eşleşen şirket verilerini aramak için kullanılması gerektiğini tanımlayın. **Şirket adı** alanı gereklidir. Daha yüksek bir eşleşme doğruluğu için **Şirket web sitesi** ve **Şirket konumu** alanları da eklenebilir.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace alanı eşleme bölmesi.":::
-
-1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
-
-1. Zenginleştirmek istediğiniz *İlgili kişi profilleri* varsa, onay kutusunu seçin. Hedef kitle öngörüleri, gerekli alanları otomatik olarak eşler.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Öncü alan ilgili kişi kayıtlarını zenginleştirme.":::
- 
-1. Zenginleştirme için bir ad girin ve seçimlerinizi inceledikten sonra **zenginleştirmeyi kaydet** seçeneğini belirleyin.
-
-
-## <a name="configure-the-connection-for-leadspace"></a>Bağlantıyı Leadspace için yapılandırma 
-
-Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zenginleştirme yapılandırırken **Bağlantı Ekle**'yi seçin *veya* **yönetici** > **Bağlantılar**'a gidip Leadspace kutucuğunda **Ayarla**'yı seçin.
-
-1. **Başlarken**'i seçin. 
-
-1. **Görünen ad** kutusunda bağlantı için bir ad girin.
-
-1. Geçerli bir Leadspace belirteci girin.
-
-1. **Kabul ediyorum**'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
-
-1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
-
-1. Doğrulamayı tamamladıktan sonra, **Kaydet**'i seçin.
    
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Leadspace bağlantı yapılandırma sayfası.":::
+1. Alan eşlemesini tamamlamak için **Uygula**'yı seçin.
+
+1. Şirket profillerini zenginleştirmek için **Çalıştır**'ı seçin. Zenginleştirmenin ne kadar süreceği birleşik müşteri profillerinin sayısına bağlı olarak değişir.
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
@@ -85,13 +56,9 @@ Daha fazla bilgi için bkz. [Leadspace API'leri](https://support.leadspace.com/h
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Zenginleştirilmiş müşteri verilerinizle geliştirin. Müşterilerinize, kişiselleştirilmiş deneyimler sunmak için; [parçalar](segments.md), [ölçümler](measures.md) oluşturun ve hatta [veriyi dışa aktar](export-destinations.md) öğesini kullanın.
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 
 Dynamics 365 Customer Insights uygulamasının Leadspace'e veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak Leadspace'in sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
 Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

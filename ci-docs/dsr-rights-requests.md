@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732704"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483716"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri
 
@@ -79,14 +79,7 @@ Kiracı yöneticisi verileri dışarı aktarmak için aşağıdaki adımları iz
 2. İstenen kullanıcı için verileri dışarı aktarma onayını kabul edin.
 3. Dışarı aktarılan verileri kiracı yöneticisi e-posta adresi üzerinden alın.
 
-## <a name="consent-management-preview"></a>Onay yönetimi (önizleme)
-
-Onay yönetimi özelliği kullanıcı verilerini doğrudan toplamaz. Yalnızca diğer uygulamalarda kullanıcıların sağladığı onay verilerini alır ve işler.
-
-Belirli kullanıcılarla ilgili onay verilerini kaldırmak için, bu verileri onay yönetimi özelliğine alınan veri kaynaklarından kaldırın. Veri kaynağını yeniledikten sonra, kaldırılan veriler Onay Merkezi'nden de silinir. Onay varlığını kullanan uygulamalar, [yenilemeden](audience-insights/system.md#refresh-processes) sonra kaynakta kaldırılan verileri de siler. Veri sahibi isteğine yanıt verdikten sonra, kullanıcı verileri tüm diğer işlemlerden ve uygulamalardan kaldırmak için veri kaynaklarını hızlıca yenilemenizi öneririz.
-
-
-## <a name="engagement-insights-preview"></a>Etkileşim içgörüleri (önizleme)
+## <a name="engagement-insights"></a>Etkileşim içgörüleri
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Son kullanıcıya yönelik bilgileri içeren olay verilerini silmek ve vermek
 

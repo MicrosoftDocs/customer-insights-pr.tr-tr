@@ -1,7 +1,7 @@
 ---
 title: Common Data Model verilerini Azure Data Lake hesabına bağlama
 description: Azure Data Lake Storage kullanarak Common Data Model verileriyle çalışın.
-ms.date: 01/25/2022
+ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a871d65bd79d3246984e23fb52210c8dc7259b8
-ms.sourcegitcommit: 7a99f3490e6582c2bc2b38019ed1898348b0eaba
+ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "8027076"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033150"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Common Data Model klasörünü Azure Data Lake hesabına bağlama
 
@@ -24,15 +24,13 @@ Bu makalede, Azure Data Lake Storage Gen2 hesabınızı kullanarak Common Data M
 
 - Azure Data Lake'teki verilerin Common Data Model standardını izlemesi gerekir. Diğer biçimler Şu anda desteklenmiyor.
 
-- Veri alımı yalnızca Azure Data Lake *Gen2* depolama hesaplarını destekler. Veri almak için Azure Data Lake 1. Nesil depolama hesaplarını kullanamazsınız.
-
-- Azure Data Lake Storage hesabında [hiyerarşik ad alanının etkinleştirilmiş](/azure/storage/blobs/data-lake-storage-namespace) olması gerekir.
+- Veri alımı yalnızca Azure Data Lake *Gen2* depolama hesaplarını destekler. Veri almak için Azure Data Lake Gen1 depolama hesaplarını kullanamazsınız.
 
 - Azure hizmet sorumlusu ile kimlik doğrulaması yapmak için Azure hizmet sorumlusunun kiracınızda yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md).
 
 - Bağlayıp veri almak istediğiniz Azure Data Lake, Dynamics 365 Customer Insights ortamıyla aynı Azure bölgesinde olmalıdır. Farklı bir Azure bölgesindeki bir veri gölünden Common Data Model klasörüne bağlantılar desteklenmez. Ortamın Azure bölgesini öğrenmek için hedef kitle içgörülerinde **Yönetici** > **Sistem** > **Hakkında**'ya gidin.
 
-- Çevrimiçi hizmetlerde depolanan veriler, verilerin Dynamics 365 Customer Insights uygulamasında işlendiği veya depolandığı konumdan farklı bir konumda depolanabilir. Çevrimiçi hizmetlerde depolanan verileri içeri aktararak veya verilere bağlanarak, verilerin Dynamics 365 Customer Insights uygulamasına aktarılabileceğini ve uygulamada depolanabileceğini kabul edersiniz.  [Microsoft Güven Merkezi'ni ziyaret ederek daha fazla bilgi edinin](https://www.microsoft.com/trust-center).
+- Çevrimiçi hizmetlerde depolanan veriler, verilerin Dynamics 365 Customer Insights'ta işlendiği veya depolandığı konumdan farklı bir konumda depolanabilir. Çevrimiçi hizmetlerde depolanan verileri içeri aktararak veya verilere bağlanarak verilerin Dynamics 365 Customer Insights'a aktarılabileceğini ve uygulamada depolanabileceğini kabul edersiniz. [Microsoft Güven Merkezi'nde daha fazla bilgi edinin.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Common Data Model klasörüne bağlan
 
@@ -40,11 +38,12 @@ Bu makalede, Azure Data Lake Storage Gen2 hesabınızı kullanarak Common Data M
 
 1. **Veri Kaynağı ekle**'yi seçin.
 
-1. **Azure Data Lake Storage**'ı seçin, veri kaynağı için bir **Ad** girin ve ardından **İleri**'yi seçin.
+1. **Common Data Model klasörüne bağlan**'ı seçin, veri kaynağı için bir **Ad** girin ve **İleri**'yi seçin. Yönergeleri adlandırın: 
+   - Bir harfle başlayın.
+   - Yalnızca harfleri ve sayıları kullanın. Özel karakterlere ve boşluklara izin verilmez.
+   - 3 ile 64 arasında karakter kullanın.
 
-   - İstenirse, sektörünüzle ilgili örnek veri kümelerinden birini seçin ve ardından **İleri**'yi seçin. 
-
-1. Kimlik doğrulaması için kaynak tabanlı seçeneğini veya abonelik tabanlı seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Sunucu adresi**'ni girin, **Oturum aç**'ı seçin ve ardından **İleri**'yi seçin.
+1. Kimlik doğrulaması için kaynak tabanlı seçeneğini veya abonelik tabanlı seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure hizmet sorumlusu ile hedef kitle içgörülerini Azure Data Lake Storage Gen2 hesabına bağlama](connect-service-principal.md). **Kapsayıcı** bilgilerini girin ve **İleri**'yi seçin.
    > [!div class="mx-imgBorder"]
    > ![Azure Data Lake için yeni bağlantı ayrıntılarının girileceği iletişim kutusu.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -57,11 +56,11 @@ Bu makalede, Azure Data Lake Storage Gen2 hesabınızı kullanarak Common Data M
    > [!NOTE]
    > Ortamda başka bir veri kaynağıyla ilişkilendirilmiş model.json veya manifest.json dosyaları, listede görüntülenmez.
 
-1. Seçili model.json veya manifest.json dosyasında kullanılabilir varlıkların bir listesini görürsünüz. Kullanılabilir varlıklar listesini inceleyip seçiminizi yapın, ardından **Kaydet**'i seçin. Seçili tüm varlıklar yeni veri kaynağından alınır.
+1. Seçili model.json veya manifest.json dosyasında kullanılabilir varlıkların listesini elde edersiniz. Kullanılabilir varlıklar listesinden inceleyip seçebilir ve **Kaydet**'i seçebilirsiniz. Seçili tüm varlıklar yeni veri kaynağından alınır.
    > [!div class="mx-imgBorder"]
    > ![model.json dosyasının varlık listesini gösteren iletişim kutusu.](media/review-entities.png)
 
-8. Hangi veri varlıkları için veri profili oluşturmayı etkinleştirmek istediğinizi belirtin, ardından **Kaydet**'i seçin. Veri profili oluşturma analizleri ve diğer yetenekleri etkinleştirir. Varlıktaki tüm öznitelikleri seçmek üzere varlığın tamamını veya tercih ettiğiniz belirli öznitelikleri seçebilirsiniz. Varsayılan olarak, veri profili oluşturmak için varlık etkinleştirilmez.
+8. Hangi veri varlıkları için veri profili oluşturmayı etkinleştirmek istediğinizi belirtin ve **Kaydet**'i seçin. Veri profili oluşturma analizleri ve diğer yetenekleri etkinleştirir. Varlıktaki tüm öznitelikleri seçmek üzere varlığın tamamını veya tercih ettiğiniz belirli öznitelikleri seçebilirsiniz. Varsayılan olarak, veri profili oluşturmak için varlık etkinleştirilmez.
    > [!div class="mx-imgBorder"]
    > ![Veri profili oluşturmayı gösteren iletişim kutusu.](media/dataprofiling-entities.png)
 

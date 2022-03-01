@@ -1,20 +1,20 @@
 ---
 title: Hedef kitle içgörülerinde segmentler
 description: Segmentlere ve bunların nasıl oluşturulacağı ve yönetildiği ile ilgili genel bakış.
-ms.date: 11/01/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978083"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617466"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -26,7 +26,7 @@ Bir segment tanımının filtreleriyle eşleşen müşteri profilleri, bir segme
 
 Yeni bir segment oluşturmanın çeşitli yolları vardır: 
 
-# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
+# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
 
 - Segment oluşturucusu ile karmaşık segment oluşturma: [Kendiniz oluşturun](segment-builder.md#create-a-new-segment) 
 - Bir işleciyle basit parçalar: [Hızlı segment](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Yeni bir segment oluşturmanın çeşitli yolları vardır:
 - Bir ölçülere veya özniteliklere dayalı olarak AI destekli öneriler: [ölçümleri iyileştirmek için önerilen segmentler](suggested-segments.md) 
 - Aktivitelere dayalı öneriler: [Müşteri etkinliğine dayalı olarak önerilen segmentler](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
+# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
 
 - Segment oluşturucusu ile karmaşık segment oluşturma: [Kendiniz oluşturun](segment-builder.md#create-a-new-segment)
 
@@ -65,7 +65,8 @@ Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
 **Segmentler** sayfasında **Tümünü yenile**'yi seçerek bir defada tüm segmentleri yenileyebilir veya bunları seçtiğinizde bir ya da birden çok segmenti yenileyebilir ve seçeneklerden **Yenile**'yi seçebilirsiniz. Alternatif olarak, **Yönetici** > **Sistem** > **Zamanla**'da yinelenen bir yenileme yapılandırabilirsiniz.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
 
 ## <a name="export-segments"></a>Segmentleri dışarı aktarma
 
@@ -104,6 +105,5 @@ Alt kısım, segment üyelerinin bir listesini içerir.
 > Bu listede görünen alanlar, segment varlıklarınızın özniteliklerini temel alır.
 >
 >Liste, eşleştirilen segment üyelerinin önizlemesidir ve segmentinizin ilk 100 kaydını gösterir, böylece hızlı bir şekilde değerlendirebilir ve gerekirse tanımlarını inceleyebilirsiniz. Tüm eşleştirilen kayıtları görmek için [segmenti dışarı aktarmanız](export-destinations.md) gerekir.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

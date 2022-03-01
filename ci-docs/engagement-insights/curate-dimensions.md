@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466372"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461127"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Davranış verilerini bölmek için demografik boyutları kullanma
 
@@ -29,7 +29,7 @@ Etkileşim içgörüleri kullanıcıları, birleşik profil demografik boyutlar�
 - Müşteri profillerinin oluşturulduğu hedef kitle içgörüleri ortamıyla bağlantılı müşteri profili verilerine sahip olduğunuz bir etkileşim içgörüleri ortamı. Daha fazla bilgi için: [Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Hedef kitle içgörüleri ile etkileşim içgörüleri ortamları arasında bağlantı oluşturduktan sonra yalnızca etkileşim içgörülerinde boyutlar olarak faydalı olabilecek müşteri profili özelliklerine özgü veriler isteyebilirsiniz. Daha fazla bilgi için [Hedef kitle içgörüleri birleşik profil özniteliklerini ve segmentlerini etkinleştirme](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments) bölümüne gidin.
+> Hedef kitle içgörüleri ile etkileşim içgörüleri ortamları arasında bağlantı oluşturduktan sonra yalnızca etkileşim içgörülerinde boyutlar olarak faydalı olabilecek müşteri profili özelliklerine özgü veriler isteyebilirsiniz. Daha fazla bilgi için [Hedef kitle içgörüleri birleşik profil özniteliklerini ve segmentlerini etkinleştirme](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments) bölümüne gidin.<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Yeni bir özel rapor oluşturma
 

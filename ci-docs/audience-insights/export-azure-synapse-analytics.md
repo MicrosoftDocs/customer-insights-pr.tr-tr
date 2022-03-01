@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Azure Synapse Analytics'e aktarma
 description: Bağlantıyı Azure Synapse Analytics'e yapılandırmayı öğrenin.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951066"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327388"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Azure Synapse Analytics'e verileri dışarı aktar (Önizleme)
 
@@ -49,8 +49,6 @@ Azure'da:
 
 ### <a name="configure-a-connection"></a>Bağlantı yapılandırma
 
-Bağlantı oluşturmak için Customer Insights'taki hizmet sorumlusu ve kullanıcı hesabının Synapse Analytics çalışma alanının bulunduğu *kaynak grubu* üzerinde **Okuyucu** izinlerinin olması gerekir. Ayrıca, Synapse Analytics çalışma alanındaki hizmet sorumlusu ve kullanıcının **Synapse Yöneticisi** izinlerinin olması gerekir. 
-
 1. **Yönetici** > **Bağlantılar** gidin.
 
 1. **Bağlantı Ekle**'yı seçin ve **Azure Synapse Analytics**'i seçin veya bağlantıyı yapılandırmak için **Azure Synapse Analytics** kutucuğunda **Kur**'u seçin.
@@ -65,7 +63,7 @@ Bağlantı oluşturmak için Customer Insights'taki hizmet sorumlusu ve kullanı
 
 ### <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
-Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Dışarı aktarmayı paylaşılan bir bağlantıyla yapılandırmak için Customer Insights'ta en az **Katılımcı** izninizin olması gerekir. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
 
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 
@@ -84,8 +82,6 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
 Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz.
-
-Synapse Analytics'e dışarı aktarılan verileri sorgulamak için dışarı aktarma çalışma alanındaki hedef depolamaya **Depolama Blobu Veri Okuyucusu** erişiminizin olması gerekir. 
 
 ### <a name="update-an-export"></a>Verme güncelleştirme
 

@@ -1,20 +1,20 @@
 ---
 title: Varlıklar ve varlık yolları arasındaki ilişkiler
 description: Birden çok veri kaynağındaki varlıklar arasında ilişkiler oluşturun ve bunları yönetin.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623201"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171188"
 ---
 # <a name="relationships-between-entities"></a>Varlıklar arasındaki ilişkiler
 
@@ -68,20 +68,6 @@ Veri alma işlemi sırasında, sistem veri kaynaklarını mevcut ilişkiler içi
 
 4. Özel ilişki oluşturmak için **Kaydet**'i seçin.
 
-## <a name="set-up-account-hierarchies"></a>Sesap hiyerarşileri belirleme
-
-Birincil hedef hedef kitle olarak kullanılacak iş hesaplarını kullanmak üzere yapılandırılan ortamlar ilgili iş firmaları için firma hiyerarşilerini yapılandırabilir. Örneğin, ayrı departmanları olan bir şirket. 
-
-Kuruluşlar, firmaları ve İlişkiler birbirleriyle daha iyi yönetmek için firma hiyerarşileri oluşturur. Hedef kitle öngörüler özelliği, önceden girilmiş müşteri verilerinde zaten var olan ana alt firma hiyerarşilerini destekler. Örneğin, Dynamics 365 Sales'dan gelen firmalar. Bu hiyerarşiler , firma hiyerarşisi sekmesi altında hedef kitle öngörülerdeki **İlişkiler** sayfasında yapılandırılabilir.
-
-1. **Veri** > **İlişkiler**'e gidin.
-1. **Firma hiyerarşisi** sekmesini seçin.
-1. **Yeni firma hiyerarşisi**'ni seçin. 
-1. **Firma hiyerarşisi** bölmesinde, hiyerarşi için bir ad girin. Sistem çıkış varlığı için bir ad oluşturur. Çıkış adı varlığının adını değiştirebilirsiniz.
-1. Firma hiyerarşinizi içeren varlığı seçin. Bu genellikle firmaları içeren aynı varlıkta yer almaktadır.
-1. Seçilen varlıktan **Hesap kimliği** ve **Firma ana kimliğini** seçin 
-1. Ayarları uygulamak ve hesap hiyerarşisini sonlandırmak için **Kaydet**'i seçin.
-
 ## <a name="view-relationships"></a>İlişkileri görüntüle
 
 İlişkiler sayfası oluşturulan tüm ilişkileri listeler. Her satır kaynak varlık, hedef varlık ve kardinalite hakkında ayrıntılar da içeren bir ilişkiyi temsil eder. 
@@ -96,7 +82,7 @@ Bu sayfa mevcut ve yeni ilişkiler için bir dizi seçenek sunar:
 
 ### <a name="explore-the-relationship-visualizer"></a>İlişki görselleştiricisini keşfedin
 
-İlişki görselleştiricisi, bağlı varlıklar ve onların kardinalitesi arasındaki mevcut ilişkilerin ağ diyagramını gösterir. Bu ayrıca ilişki yolunu görselleştirir.
+İlişki görselleştiricisi, bağlı varlıklar ve onların kardinalitesi arasındaki mevcut ilişkilerin ağ diyagramını gösterir.
 
 Görünümü özelleştirmek için, tuval üzerinde sürükleyerek kutuların konumunu değiştirebilirsiniz.
 
@@ -106,56 +92,6 @@ Kullanılabilir seçenekler:
 - **Resim olarak dışarı aktar**: Geçerli görünümü bir resim dosyası olarak kaydedin.
 - **Yatay/dikey düzene geç**: Varlıkların ve ilişkilerin hizalama şeklini değiştirin.
 - **Düzenle**: Özel ilişkilerin özelliklerini düzenleme bölmesinde güncelleştirin ve değişiklikleri kaydedin.
-
-## <a name="relationship-paths"></a>İlişki yolları
-
-İlişki yolu, bir kaynak varlık ve bir hedef varlık arasında ilişkiler ile birbirine bağlanan varlıkları açıklar. Bu, birleşik profil varlığından farklı varlıklar içeren bir segment veya ölçüm oluştururken kullanılır ve birleşik profil varlığına ulaşmak için birden çok seçenek vardır. 
-
-İlişki yolu, hangi ilişkilerin birleşik profil varlığına erişebileceği konusunda sisteme bilgi verir. Farklı ilişki yolları, farklı sonuçlar ortaya koyabilir.
-
-Örneğin, *eCommerce_eCommercePurchases* varlığında birleşik profil *Müşteri* varlığı için aşağıdaki ilişki bulunur:
-
-- eCommerce_eCommercePurchases > Müşteri
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Müşteri
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Müşteri 
-
-İlişki yolu, ölçümler veya segmentler için kurallar oluştururken kullanabileceğiniz varlıkları belirler. Eşleşen kayıtlar tüm varlıkların parçası olması gerektiğinden en uzun ilişki yolunun bulunduğu seçeneğin belirlenmesi muhtemelen daha az sonuç ortaya koyar. Bu örnekte, müşterinin bir satış noktasında (POS_posPurchases) e-ticaret (eCommerce_eCommercePurchases) üzerinden mal satın almış olması ve bağlılık programımıza (loyaltyScheme_loyCustomers) katılması gerekir. İlk seçeneği belirlediğinizde müşterilerin yalnızca bir ek varlıkta bulunması gerektiğinden daha fazla sonuç almanız olasıdır.
-
-### <a name="direct-relationship"></a>Doğrudan ilişki
-
-Bir kaynak varlık yalnızca bir ilişkiye sahip hedef varlığa bağlı olduğu zaman ilişki **doğrudan ilişki** olarak sınıflandırılır.
-
-Örneğin, *eCommerce_eCommercePurchases* adlı bir etkinlik varlığı yalnızca *ContactId* aracılığıyla *eCommerce_eCommerceContacts* varlığına bağlanırsa, bu doğrudan bir ilişkidir.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="Kaynak varlık doğrudan hedef varlığa bağlanır.":::
-
-#### <a name="multi-path-relationship"></a>Çok yollu ilişki
-
-**Çok yollu ilişki**, bir kaynak varlığı birden çok hedef varlığa bağlayan özel bir doğrudan ilişki türüdür.
-
-Örneğin, *eCommerce_eCommercePurchases* adlı bir etkinlik varlığı biri *eCommerce_eCommerceContacts* diğeri *loyaltyScheme_loyCustomers* olan iki hedef varlıkla ilişkiliyse bu çok yollu bir ilişkidir.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="Kaynak varlık, birden çok atlamalı ilişki aracılığıyla doğrudan birden fazla hedef varlığa bağlanır.":::
-
-### <a name="indirect-relationship"></a>Dolaylı ilişki
-
-Bir kaynak varlık, hedef varlıkla ilişkilendirilmeden önce bir veya daha fazla ek varlıkla ilişkili olursa bu ilişki **doğrudan ilişki** olarak sınıflandırılır.
-
-#### <a name="multi-hop-relationship"></a>Çok atlamalı ilişki
-
-*Çok atlamalı ilişki*, bir kaynak varlığı bir veya daha fazla ara varlık üzerinden bir hedef varlığa bağlamanıza olanak sağlayan *dolaylı bir ilişkidir*.
-
-Örneğin, *eCommerce_eCommercePurchasesWest* adlı bir etkinlik varlığı *eCommerce_eCommercePurchasesEast* adlı bir ara varlığa bağlanırsa ve sonra *eCommerce_eCommerceContacts* adlı bir hedef varlığa bağlanırsa, bu çok atlamalı bir ilişkidir.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="Kaynak varlık, bir ara varlıkla doğrudan hedef varlığa bağlanır.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Çok atlamalı, çok yollu ilişki
-
-Çok atlamalı ve çok yollu ilişkiler **çok atlamalı, çok yollu ilişkiler** oluşturmak üzere birlikte kullanılabilir. Bu özel tür, **çoklu atlama** ve **çok yollu ilişkiler** işlevlerini bir araya getirir. Ara varlıklar kullanırken birden çok hedef varlığa bağlanmanıza olanak sağlar.
-
-Örneğin, *eCommerce_eCommercePurchasesWest* adlı bir etkinlik varlığı *eCommerce_eCommercePurchasesEast* adlı bir ara varlığa bağlanırsa ve sonra *eCommerce_eCommerceContacts* ve *loyaltyScheme_loyCustomers* olmak üzere iki hedef varlığa bağlanırsa bu, çok atlamalı, çok yollu ilişkidir.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Kaynak varlık doğrudan bir hedef varlığa bağlanır ve bir ara varlık aracılığıyla başka bir hedef varlığa bağlanır.":::
 
 ## <a name="manage-existing-relationships"></a>Mevcut ilişkileri yönetin 
 
@@ -169,6 +105,6 @@ Bir ilişki seçin ve aşağıdaki seçeneklerden birini belirleyin:
 
 ## <a name="next-step"></a>Sonraki adım
 
-Sistem ilişkileri ve özel ilişkiler, artık yalıtılmış birden fazla veri kaynağına bağlı olarak [segment](segments.md) ve [ölçüm oluşturmak](measures.md) için kullanılır.
+Sistem ve özel ilişkiler, artık yalıtılmış olmayan birden çok veri kaynağını temel alan [segmentler oluşturmak](segments.md) için kullanılır.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

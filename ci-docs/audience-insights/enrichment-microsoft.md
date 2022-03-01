@@ -1,7 +1,7 @@
 ---
 title: Microsoft'tan alınan verilerle zenginleştirmeniz gereken müşteri profilleri
-description: Müşteri verilerinizi benzeşimler ve görünürlük payı ile zenginleştirmek için Microsoft'un özel verilerini kullanın.
-ms.date: 11/11/2021
+description: Microsoft'tan gelen ve müşteri verilerinizi marka ve faiz benzeşimleri ile zenginleştirmek için özel verileri kullanın.
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,29 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
-ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "7793727"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305180"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Müşteri profillerini benzeşimler ve görünürlük payıyla zenginleştirin (önizleme)
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Müşteri profillerini marka ve ilgi benzerlikleriyle zenginleştirme (önizleme)
 
-Müşteri verilerinizi marka benzeşimleri, ilgi alanı benzeşimleri ve görünürlük payı (SoV) ile zenginleştirmek için Microsoft'un özel verilerini kullanın. Bu benzeşimler ve SoV, müşterilerinize benzer demografik bilgilere sahip kişilerin verilerini temel alır. Bu bilgiler, müşterilerinizi belirli markalar ve ilgi alanlarındaki benzeşimlerine veya SoV'ye göre daha iyi anlamanıza ve segmentlere ayırmanıza yardımcı olur.
+Microsoft'tan gelen ve müşteri verilerinizi marka ve faiz benzeşimleri ile zenginleştirmek için özel verileri kullanın. Bu benzerlikler, müşterilerinizle benzer demografideki kişilerden alınan verilere bağlıdır. Bu bilgiler, belirli markalar ve ilgi alanları için benzeşimleri esas alarak müşterilerinizi daha iyi anlamanıza ve segmentlemenize yardımcı olur.
 
 Hedef kitle içgörülerinde, [zenginleştirmeleri yapılandırmak ve görüntülemek](enrichment-hub.md) için **Veri** > **Zenginleştirme**'ye gidin.
 
-Marka benzeşimlerini ve SoV zenginleştirmesini yapılandırmak için **Keşfet** sekmesine gidin ve **Markalar** kutucuğunda **Verilerimi zenginleştir**'i seçin.
+Marka benzerlikleri zenginleştirmesini yapılandırmak için **Keşfet** sekmesine gidin ve **Markalar** kutucuğunda **Verilerimi zenginleştir**'i seçin.
 
-İlgi alanı benzeşimlerini ve SoV zenginleştirmesini yapılandırmak için **Keşfet** sekmesine gidin ve **İlgi Alanları** kutucuğunda **Verilerimi zenginleştir**'i seçin.
+İlgi alanı benzerlikleri zenginleştirmesini yapılandırmak için **Keşfet** sekmesine gidin ve **İlgi alanları** kutucuğunda **Verilerimi zenginleştir**'i seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Markalar ve İlgi Alanları kutucukları.](media/BrandsInterest-tile-Hub.png "Markalar ve İlgi Alanı kutucukları")
+   > ![Markalar ve ilgi alanları](media/BrandsInterest-tile-Hub.png "Markalar ve İlgi alanları")
 
-## <a name="how-we-determine-affinities-and-sov"></a>Benzeşimleri ve SoV'yi belirleme yöntemimiz
+## <a name="how-we-determine-affinities"></a>Benzeşimler nasıl belirlenir?
 
-Çeşitli demografik segmentlerde (yaşa, cinsiyete veya konuma göre tanımlanmış) markalar ve ilgi alanlarına yönelik benzeşimleri ve SoV'yi bulmak için Microsoft'un çevrimiçi arama verilerini kullanırız. Benzeşim veya SoV'nin belirlenmesinde marka veya ilgi alanı için çevrimiçi arama hacmi temel alınır. Ancak her biri müşterilerinizi anlamak için farklı bir bakış açısı sağlar.
-
-- Benzeşim, demografik segmentler arasında karşılaştırma yapmak için kullanılır. Bu bilgileri kullanarak, diğer segmentlerle karşılaştırıldığında belirli bir marka veya ilgi alanı için en yüksek benzeşime sahip demografik segmentleri belirleyebilirsiniz.
-
-- Görünürlük payı, seçtiğiniz markalar veya ilgi alanları arasında karşılaştırma yapmak için kullanılır. Bu bilgileri kullanarak, seçtiğiniz diğer markalara veya ilgi alanlarıyla karşılaştırıldığında belirli bir demografik segment için hangi markanın veya ilgi alanının en yüksek görünürlük payına sahip olduğunu belirleyebilirsiniz.
+Çeşitli nüfus niteliği kesimleri (yaş, cinsiyet veya konum tarafından tanımlanan) arasında markalar ve ilgi alanları arasında benzeşimler bulmak için Microsoft 'un çevrimiçi arama verilerini kullanırız. Marka veya ilgi alanına ilişkin çevrimiçi arama hacmi bir nüfus niteliği segmentinin diğer segmentlere kıyasla o marka veya ilgi alanına ne kadar benzediğini belirler.
 
 ## <a name="affinity-level-and-score"></a>Benzeşim düzeyi ve puanı
 
@@ -52,10 +48,6 @@ Her zenginleştirilmiş müşteri profilinde iki ilgili değer sağlarız: yakı
 |Düşük     | 1-34        |
 
 Benzeşimi ölçmek istediğiniz ayrıntı düzeyine bağlı olarak benzeşim düzeyini veya puanını kullanabilirsiniz. Benzeşim puanı size daha hassas kontrol sağlar.
-
-## <a name="share-of-voice-sov"></a>Görünürlük payı (SoV)
-
-SoV, 100 puanlı bir ölçekle hesaplanır. Her zenginleştirilmiş müşteri profili için tüm markalar veya ilgi alanları genelinde toplam SoV değeri en fazla 100'dür. Benzeşimlerin aksine SoV, seçtiğiniz markalara ve ilgi alanlarına bağlıdır. Örneğin, seçilen markalar ('Microsoft', 'GitHub') markalarına karşılık ('Microsoft', 'LinkedIn') markaları ise "Microsoft" için SoV değerleri farklı olabilir.
 
 ## <a name="supported-countriesregions"></a>Desteklenen ülkeler/bölgeler
 
@@ -90,7 +82,7 @@ Varsayılan zenginleştirme tercihlerinizi inceleyin ve gerektiği gibi güncell
 
 ### <a name="select-entity-to-enrich"></a>Zenginleştirilecek varlığı seçme
 
-**Zenginleştirilmiş varlık** seçeneğini belirleyin ve Microsoft'un verileriyle zenginleştirmek istediğiniz veri kümesini seçin. Tüm müşteri profillerinizi zenginleştirmek için Müşteri varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
+**Zenginleştirilmiş valrık**'a ve Microsoft'dan şirket verileriyle zenginleştirmek istediğiniz müşteri veri kümesi seçin. Tüm müşteri profillerinizi zenginleştirmek için Müşteri varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
 
 ### <a name="map-your-fields"></a>Alanlarınızı eşleyin
 
@@ -124,25 +116,26 @@ Nüfus nitelikleri için markaları, ilgi alanlarını ve alan eşleşmesini yap
 
 Müşteri verilerinizin boyutuna bağlı olarak bir zenginleştirme çalıştırmasının tamamlanması birkaç dakika sürebilir.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden birinin **Ayrıntılarını gör**'ü seçtikten sonra ek bilgiler bulacaksınız: işlem süresi, son işlem tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
 Zenginleştirme işlemini çalıştırdıktan sonra toplam zenginleştirilmiş müşteri sayısını ve zenginleştirilmiş müşteri profillerindeki markaların veya ilgi alanlarının bir dökümünü incelemek için **Zenginleştirmelerim**'e gidin.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Zenginleştirme işlemini çalıştırdıktan sonra sonuçların önizlemesi.":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Zenginleştirme işlemini çalıştırdıktan sonra sonuçların önizlemesi":::
 
-Zamanla zenginleştirilmiş müşteri profillerinin sayısını ve zenginleştirilmiş varlıkların önizlemelerini içeren bir grafik bulursunuz. **Benzeşim Düzeyi** veya **Görünürlük Payı** grafiklerinde **Daha fazla göster** seçeneğini belirleyerek, zenginleştirilmiş verileri inceleyin. Markalara yönelik zenginleştirilmiş veriler **BrandAffinityFromMicrosoft** ve **BrandShareOfVoiceFromMicrosoft** varlıklarına gider. İlgi alanlarına yönelik veriler **InterestAffinityFromMicrosoft** ve **InterestShareOfVoiceFromMicrosoft** varlıklarında bulunur. Bu varlıkları, **veri** > **varlıklarındaki** **zenginleştirme** grubunda da bulabilirsiniz.
+Grafikte **Zenginleştirilmiş verileri görüntüle**'yi seçerek zenginleştirilmiş verileri inceleyin. Markalar için zenginleştirilmiş veriler **BrandAffinityFromMicrosoft** varlığına gider. İlgi alanları için veriler **InterestAffinityFromMicrosoft** varlığında bulunur. Bu varlıkları, **veri** > **varlıklarındaki** **zenginleştirme** grubunda da bulabilirsiniz.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Müşteri kartındaki zenginleştirme verilerine bakın
 
-Marka ve ilgi alanı SoV'si, bağımsız müşteri kartlarında da görüntülenebilir. **Müşterilere** gidin ve bir müşteri profili seçin. Müşteri kartında, ilgili müşterinin demografik profilindeki kişileri temel alan marka veya ilgi alanı SoV'si grafiklerini bulabilirsiniz.
+Tek müşteri kartlarında marka ve faiz benzeşimleri de görüntülenebilir. **Müşterilere** gidin ve bir müşteri profili seçin. Müşteri kartında, ilgili müşterinin demografik profilindeki kişilere yakın olan markalar veya ilgi alanları grafiklerini bulabilirsiniz.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Zenginleştirilmiş veriler içeren müşteri kartı.":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Zenginleştirilmiş veri içeren müşteri kartı":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

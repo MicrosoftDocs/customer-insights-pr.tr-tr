@@ -2,30 +2,8 @@
   href: index.yml
 - name: Ürüne genel bakış
   href: overview.md
-- name: Öğrenme kataloğu
-  items:
-    - name: Kullanmaya başlayın
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Veri alma
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Birleşik müşteri profili oluşturma
-      href: /learn/modules/unified-customer-profile/
-    - name: Hedef kitle içgörüleri ile çalışma
-      href: /learn/modules/working-with-customer-insights/
-    - name: Verileri zenginleştirme ve tahminlerde bulunma
-      href: /learn/modules/enrich-data/
-    - name: Harici bağlantıları yönetme
-      href: /learn/modules/configure-third-party-connections/
-    - name: Customer Insights'ı yönetme
-      href: /learn/modules/administer-customer-data-platform/
-- name: Ücretsiz deneme sürümü
-  items:
-    - name: Ücretsiz deneme sürümüne kaydolma
-      href: trial-signup.md
-    - name: Deneme Sürümüyle İlgili SSS
-      href: trial-FAQ.md
-- name: Ödemeli bir lisans ile başlayın
-  href: paid-license.md
+- name: Deneme oluşturma
+  href: audience-insights/get-started-trial.md
 - name: Ortamınıza erişme
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Hedef kitle içgörüleri
@@ -41,16 +19,24 @@
         - name: Hızlı başlangıç kılavuzu
           href: audience-insights/get-started.md
         - name: Yeni ortam oluştur
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Hedef kitle içgörülerini keşfedin
           href: audience-insights/home.md
-    - name: İş hesaplarıyla çalışma
-      href: audience-insights/work-with-business-accounts.md
+    - name: Modülleri öğrenme
+      items:
+        - name: Veri alma
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Birleşik müşteri profili oluşturma
+          href: /learn/modules/unified-customer-profile/
+        - name: Uygulamayla çalışma
+          href: /learn/modules/working-with-customer-insights/
+        - name: Verileri ve tahminleri zenginleştirme
+          href: /learn/modules/enrich-data/
     - name: Veri kaynakları
       items:
         - name: Veri kaynaklarına genel bakış
           href: audience-insights/data-sources.md
-        - name: Power Query bağlayıcıları aracılığıyla veri kaynakları ekleme
+        - name: Power Query bağlayıcılarıyla veri kaynakları ekleme
           href: audience-insights/connect-power-query.md
         - name: Veri kaynağı olarak bir Common Data Model klasörü ekleme
           href: audience-insights/connect-common-data-model.md
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Müşteri etkinliklerini listeleme
           href: audience-insights/activities.md
-        - name: Anlamsal eşlemeleri tanımlama
-          href: audience-insights/semantic-mappings.md
     - name: Veri zenginleştirme
       items:
         - name: Müşteri profillerini zenginleştirme
           href: audience-insights/enrichment-hub.md
-        - name: Markalar ve ilgi alanları
+        - name: Marka ve ilgi benzerlikleri
           href: audience-insights/enrichment-microsoft.md
         - name: Gelişmiş adresler
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Gelişmiş şirket verileri
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Azure Haritalar ile zenginleştirme
           href: audience-insights/enrichment-azure-maps.md
         - name: HERE Technologies ile zenginleştirme
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Experian İle zenginleştirme
           href: audience-insights/enrichment-experian.md
-        - name: Office 365 verileriyle zenginleştirme
-          href: audience-insights/enrichment-office.md
         - name: SFTP özel içeri aktarmayla zenginleştirme
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmentler
@@ -134,10 +114,8 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Abonelik erime tahmini
               href: audience-insights/predict-subscription-churn.md
-            - name: İşlem erime tahmin etme
+            - name: İşlem tabanlı erimeyi tahmin etme
               href: audience-insights/predict-transactional-churn.md
-            - name: Müşteri geri bildirimlerinde duyarlılığı analiz etme
-              href: audience-insights/sentiment-analysis.md
             - name: Azure Machine Learning'den özel modeller kullanma
               href: audience-insights/custom-models.md
             - name: Kısmen eksik verileri tamamlama
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Abonelik erimesi tahmini için örnek kılavuz
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Hareket karmaşıklığı için örnek kılavuz tahmin
+            - name: İşlem tabanlı erime tahmini için örnek kılavuz
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Ürün öneri tahmini için örnek kılavuz
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Azure Machine Learning ile denemeler
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Azure Machine Learning Studio ile denemeler
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Tahminleri yönetme
           href: audience-insights/manage-predictions.md
         - name: Tahminleri temel alan segmentler oluşturma
@@ -170,7 +150,7 @@
               href: audience-insights/export-adroll.md
             - name: Autopilot
               href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
+            - name: Azure Blob Depolama
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage 2. Nesil
               href: audience-insights/export-azure-data-lake-storage-gen2.md
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Birden çok ortamı yönetme
           href: audience-insights/manage-environments.md
-        - name: Güvenlik
-          items:
-            - name: Kendi Key Vault'unuzu getirin
-              href: audience-insights/use-azure-key-vault.md
-            - name: Hizmet Sorumlusunu kullanarak ADLS depolama hesabına bağlanma
-              href: audience-insights/connect-service-principal.md
-            - name: Tanılama günlüklerini dışarı aktarma
-              href: audience-insights/diagnostics.md
+        - name: Hizmet Sorumlusunu kullanarak ADLS depolama hesabına bağlanma
+          href: audience-insights/connect-service-principal.md
+        - name: Desteklenen diller
+          href: audience-insights/supported-languages.md
     - name: Genişletilebilirlik
       items:
         - name: Etkileşim içgörülerinden web verilerini tümleştirme
@@ -262,52 +238,16 @@
           href: audience-insights/apis.md
         - name: API başvuruları
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Onay yönetimi (önizleme)
-  items:
-    - name: Yardım merkezi
-      href: consent-management/index.yml
-    - name: Özelliğe genel bakış
-      href: consent-management/overview.md
-    - name: Kullanmaya başlama
-      items:
-        - name: Kullanmaya başlama
-          href: consent-management/get-started.md
-        - name: Kavramlar ve terminoloji
-          href: consent-management/glossary.md
-    - name: Onay verilerini içeri aktarma
-      items:
-        - name: Onay verilerini içeri aktarma
-          href: consent-management/import-consent-data.md
-        - name: Onay verileri ayarlama ve onay tercihlerini uygulama
-          href: consent-management/set-consent-rules.md
-    - name: Onay verilerini yönetme
-      items:
-        - name: Hedef kitle içgörülerinde onay kurallarını etkinleştirme
-          href: audience-insights/activate-consent.md
-        - name: Hedef kitle içgörüleri segmentlerinde varsayılan onay kurallarını yönetme
-          href: audience-insights/change-default-consent-rules.md
-    - name: Ayarları ve kullanıcıları yönetme
-      items:
-        - name: Sistem ayarlarını yapılandırma
-          href: consent-management/system-settings.md
-        - name: Kullanıcıları ve izinleri yönetme
-          href: consent-management/manage-users.md
-    - name: Onay verilerini kullanma
-      items:
-        - name: Onay verileriyle tahminler oluşturma
-          href: consent-management/predictions-consent-data.md
 - name: Etkileşim içgörüleri (önizleme)
   items:
     - name: Yardım merkezi
       href: engagement-insights/index.yml
-    - name: Etkileşim içgörüleri hakkında
+    - name: Özelliğe genel bakış
       href: engagement-insights/overview.md
     - name: Kullanmaya başlama
       items:
         - name: Hızlı başlangıç kılavuzu
           href: engagement-insights/get-started.md
-        - name: Ortam oluşturun
-          href: engagement-insights/create-new-environment.md
         - name: Çalışma alanı oluştur
           href: engagement-insights/create-workspace.md
         - name: Web sitelerinden ve Mobil uygulamalardan olay yakalayın
@@ -366,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Bölgesel kullanılabilirlik
       href: engagement-insights/regional-availability.md
-- name: Verileri özellikler arasında paylaşma
+- name: Hedef kitle ve etkileşim içgörülerini tümleştirme
   items:
     - name: Hedef kitle içgörülerini ve etkileşim içgörülerini bağlama
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -379,4 +319,4 @@
 - name: DSR hakları ve istekleri
   href: dsr-rights-requests.md
 - name: Destek alın
-  href: /power-platform/admin/get-help-support
+  href: 'https://dynamics.microsoft.com/support/'

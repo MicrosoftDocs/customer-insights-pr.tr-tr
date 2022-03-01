@@ -2,19 +2,19 @@
 title: Gerçek zamanlı veri alımı ve sınırlamalar
 description: Hedef kitle içgörülerindeki gerçek zamanlı özellikler hakkında genel bilgiler.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035301"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689199"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Gerçek zamanlı veri alımı (önizleme)
 
@@ -54,7 +54,7 @@ Gerçek zamanlı API, kaynak sisteminizden (tek bir kaynak kaydı) birleşik mü
 
 Gerçek zamanlı API'ye bağlanmanın iki yolu vardır:
 
-- [Dynamics 365 Customer Insights bağlayıcısını](/connectors/customerinsights/) kullanılarak [dolaylı olarak](#connect-via-the-dynamics-365-customer-insights-connector)
+- [Dynamics 365 Customer Insights bağlayıcısını](https://docs.microsoft.com/connectors/customerinsights/) kullanılarak [dolaylı olarak](#connect-via-the-dynamics-365-customer-insights-connector)
 - kodla [doğrudan](#connect-directly-to-the-real-time-api)
 
 Her iki yol da aşağıdaki ön koşulları paylaşır:
@@ -66,13 +66,13 @@ Her iki yol da aşağıdaki ön koşulları paylaşır:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Dynamics 365 Customer Insights bağlayıcısıyla bağlanma
 
-Gerçek zamanlı API, kod yazmak ve dağıtmak gerekmeden verileri özel bir Power Platform bağlayıcısından veya [Dynamics 365 Customer Insights bağlayıcısından](/connectors/customerinsights/) alabilir.    
-Bağlayıcı, API ile aynı gerçek zamanlı eylemleri gerçekleştirebilir. Premium bağlayıcılar için geçerli bir lisansınızın olması gerekir. Daha fazla bilgi için bkz. [Power Apps ve Power Automate'i lisanslama hakkında SSS](/power-platform/admin/powerapps-flow-licensing-faq).
+Gerçek zamanlı API, kod yazmak ve dağıtmak gerekmeden verileri özel bir Power Platform bağlayıcısından veya [Dynamics 365 Customer Insights bağlayıcısından](https://docs.microsoft.com/connectors/customerinsights/) alabilir.    
+Bağlayıcı, API ile aynı gerçek zamanlı eylemleri gerçekleştirebilir. Premium bağlayıcılar için geçerli bir lisansınızın olması gerekir. Daha fazla bilgi için bkz. [Power Apps ve Power Automate'i lisanslama hakkında SSS](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps ve/veya Power Automate](/connectors/)
-- Azure [Logic Apps](/azure/connectors/apis-list)
+- Power Platform [Power Apps ve/veya Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
 
-Akış oluşturma hakkında ayrıntılı bilgi için bkz. [Power Automate belgeleri](/power-automate/).
+Akış oluşturma hakkında ayrıntılı bilgi için bkz. [Power Automate belgeleri](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Gerçek zamanlı API'ye doğrudan bağlanma
 
@@ -83,7 +83,6 @@ Parametreler ve yanıtlar dahil olmak üzere bu API'nin ayrıntılarına [Custom
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Telemetriyle gerçek zamanlı kullanımınızı anlama
 
-Gerçek zamanlı API'ye yönelik isteklerin hacmine genel bir bakış ve sistemin karşılaşabileceği sorunlar hakkında bilgi edinin. [Gerçek zamanlı telemetriye erişebilirsiniz](system.md#api-usage-tab). 
+Gerçek zamanlı API'ye yönelik isteklerin hacmine genel bir bakış ve sistemin karşılaşabileceği sorunlar hakkında bilgi edinin. **Yönetici** > **Sistem** > **API kullanımı**'na giderek [gerçek zamanlı telemetriye erişebilirsiniz](system.md#api-usage-tab). **İşlemler** tablosunda, gerçek zamanlı yöntemleri kullanan API işlemlerinin satırları, gerçek zamanlı API kullanımını görüntülemek için bir düğme içerir. Düğme, bir dürbün simgesi ile görselleştirilmiştir. Geçerli ortamda gerçek zamanlı API kullanımına yönelik kullanım ayrıntılarını içeren bir yan bölmeyi açmak için düğmeyi seçin.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Son 24 saatten son 30 güne kadar olan zaman çizelgesinde gerçek zamanlı etkileşimlerinizi en iyi nasıl sunacağınızı seçmek için **Gruplama ölçütü** seçicisini kullanın. Verileri API yöntemi, uygun bulunan varlık adı (alınan varlık), oluşturan (etkinliğin kaynağı), sonuç (başarı veya başarısızlık) ya da hata kodlarına göre gruplandırabilirsiniz. Veriler, geçmiş grafiği ve tablo olarak kullanılabilir.

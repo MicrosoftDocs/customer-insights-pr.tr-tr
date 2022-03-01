@@ -1,5 +1,5 @@
 ---
-title: AI ile benzer müşteriler bulma (video içerir)
+title: Yapay zeka ile benzer müşterileri bulma
 description: Yapay zeka ile benzer müşteri segmentleri bulun.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,18 +9,16 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934864"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034568"
 ---
 # <a name="similar-customers-preview"></a>Benzer Müşteriler (önizleme)
 
 Bu özellik, yapay zekayı kullanarak müşteri tabanınızdaki benzer müşterileri bulmanıza olanak tanır. Bu özelliği kullanmak için en az bir segment oluşturmanız gerekir. Var olan bir segmentin ölçütlerini genişletmek, bu segmente benzeyen müşteriler bulmaya yardımcı olur.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Benzer müşteriler bul* işleminde, verileri değerlendirmek ve bu verilere dayalı tahminler yapmak için otomatik araçlar kullanılır ve bu nedenle, bu terim Genel Veri Koruma Yönetmeliği ("GDPR") tarafından tanımlandığından profil oluşturma yöntemi olarak kullanma özelliği bulunur. Müşterinin verileri işlemek için bu özelliği kullanması, GDPR'ye veya diğer yasalara ya da düzenlemelere tabi olabilir. Tahminler dahil olmak üzere Dynamics 365 Customer Insights kullanımınızın gizlilik, kişisel veriler, biyometrik veriler, veri koruması ve iletişim gizliliği ile ilgili yasalar gibi tüm geçerli yasa ve düzenlemelere uymasını sağlamaktan sorumlusunuz.

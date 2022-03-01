@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977761"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304996"
 ---
 # <a name="connections-preview-overview"></a>Bağlantılara (önizleme) genel bakış
 
@@ -47,7 +47,6 @@ Bağlantı eklemek için, [Yönetici izinlere](permissions.md) sahip olmanız ge
 1. **Bağlantıyı ayarla** bölmesinde gerekli ayrıntıları girin. 
    1. **Görünen ad** ve bağlantının türü bir bağlantıyı açıklar. Bu bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
    1. Tam alanlar bağlandığınız hizmete bağlıdır. Belirli bir bağlantının ayrıntıları hakkında bilgi edinmek için hedef hizmetle ilgili makaleyi kullanabilirsiniz.
-   1. Gizlilikleri depolamak için kendi [Key Vault](use-azure-key-vault.md)'unuzu kullanırsanız, **Key Vault kullan** öğesini etkinleştirin ve listeden parolayı seçin.
 
 1. Bağlantı oluşturmak için **Kaydet**'i seçin.
 
@@ -94,6 +93,3 @@ Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunla
 
 1. Silme işleminizi onaylamak için **Kaldır**'ı seçin.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Kendi Key Vault'unuzun yönettiği gizli anahtarlarla bağlantı kurma
-
-Bazı bağlantıların API tuşları veya parolalar gibi gizli anahtarlara ihtiyacı vardır. Bazı bağlantılar, kendi Key Vault'unuzda depolanan gizli anahtarları destekler. Desteklenen bağlantılarla ilgili daha fazla bilgi ve [hedef kitle öngörüler için kendi Key Vault'unuzun nasıl kurulacağını](use-azure-key-vault.md) öğrenin.

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights verilerini Klaviyo'ya dışarı aktarma
 description: Bağlantıyı yapılandırmayı ve Klaviyo'ya nasıl dışarı aktarılacağını öğrenin.
-ms.date: 10/08/2021
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619097"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7385812"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Segment listelerini Klaviyo'ya dışarı aktarma (önizleme)
 
@@ -28,10 +28,10 @@ Birleşik müşteri profillerinin segmentlerini Klaviyo'ya dışarı aktarın ve
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Klaviyo'ya dışa aktarma başına en fazla 100.000 müşteri profili aktarabilirsiniz.
+- İşlem başına Klaviyo'ya en fazla 100.000 profil dışarı aktarabilirsiniz.
 - Klaviyo'ya dışarı aktarma, segmentlerle sınırlıdır.
-- Klaviyo'ya 1 milyona kadar müşteri profili vermenin tamamlanması 20 dakikaya kadar sürebilir. 
-- Klaviyo'ya aktarabileceğiniz müşteri profilleri sayısı, Klaviyo ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
+- Klaviyo'ya en fazla 1 milyon profili dışarı aktarmanın tamamlanması 20 dakika kadar sürebilir. 
+- Klaviyo ile dışarı aktarabileceğiniz profil sayısı Klaviyo ile sözleşmenize bağlıdır ve bununla sınırlıdır.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Klaviyo bağlantısını ayarlama
 
@@ -67,7 +67,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. [**Klaviyo Liste Kimliğinizi**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID) girin.     
 
-3. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Bunun için segmentleri Klaviyo'ya dışarı aktarmak gerekir.
+3. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Bunun için segmentleri Klaviyo'ya dışarı aktarmak gerekir.
 
 1. **Kaydet**'i seçin.
 

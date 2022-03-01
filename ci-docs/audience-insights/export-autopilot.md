@@ -1,49 +1,42 @@
 ---
 title: Customer Insights verilerini Autopilot'a dışarı aktarma
-description: Bağlantıyı yapılandırmayı ve Autopilot'a dışa aktarmayı öğrenin.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Autopilot'a bağlantının nasıl yapılandırılacağını öğrenin.
+ms.date: 12/08/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 33a8cd1ae4a77ce2248bc2805d25687c9a2c2732
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618453"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269262"
 ---
-# <a name="export-segments-to-autopilot-preview"></a>Segmentleri Autopilot'a dışa aktarma (Önizleme)
+# <a name="connector-for-autopilot-preview"></a>Autopilot için bağlayıcı (önizleme)
 
 Birleşik müşteri profillerinin segmentlerini Autopilot'a aktarın ve bunları Autopilot'ta e-posta pazarlaması için kullanın. 
 
-## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 -   [Autopilot hesabınızın](https://www.autopilothq.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
 -   Hedef kitle içgörülerinde [yapılandırılmış segmentleriniz](segments.md) olmalıdır.
 -   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
-## <a name="known-limitations"></a>Bilinen sınırlamalar
+## <a name="connect-to-autopilot"></a>Autopilot'a bağlanma
 
-- Autopilot'a en fazla 100.000 müşteri profili aktarabilirsiniz.
-- Autopilot'a aktarma segmentlerle sınırlıdır.
-- Autopilot'a 100.000'e kadar müşteri profili vermenin tamamlanması birkaç saat kadar sürebilir. 
-- Autopilot'a aktarabileceğiniz müşteri profilleri sayısı, Autopilot ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
+1. **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
 
-## <a name="set-up-connection-to-autopilot"></a>Autopilot bağlantısı ayarla
+1. **Autopilot** altında, **Ayarla**'yı seçin.
 
-1. **Yönetici** > **Bağlantılar** gidin.
+1. Dışarı aktarma hedefinize **Görünen ad** alanında tanınabilir bir ad verin.
 
-1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **Autopilot**'u seçin.
+   :::image type="content" source="media/export-autopilot.PNG" alt-text="Autopilot bağlantısı için yapılandırma bölmesi.":::
 
-1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
-
-1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. [Autopilot API anahtarınızı](https://autopilot.docs.apiary.io/#) girin.
+1. **Autopilot API anahtarınızı** [Autopilot API anahtarı](https://autopilot.docs.apiary.io/#) girin.
 
 1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
 
@@ -51,27 +44,26 @@ Birleşik müşteri profillerinin segmentlerini Autopilot'a aktarın ve bunları
 
 1. **Kendinizi dışarı aktarma kullanıcısı olarak ekleyin**'i seçin ve Customer Insights kimlik bilgilerinizi girin.
 
-1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
+1. Dışarı aktarmayı yapılandırmak için **İleri**'yi seçin.
 
-## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
+## <a name="configure-the-connector"></a>Bağlayıcıyı yapılandırma
 
-Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
-
-1. **Veri** > **Dışa aktarmalar**'a gidin.
-
-1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
-
-1. **Dışa aktarma bağlantısı** alanında, Autopilot bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
-
-1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. **Ad**, **Soyadı** gibi diğer isteğe bağlı alanlar için aynı adımları tekrarlayın.
+1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. **Ad**, **Soyadı** gibi diğer isteğe bağlı alanlar için aynı adımları tekrarlayın.
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. Autopilot'a **toplamda 100.000'den fazla müşteri profilini aktarmamayı kesinlikle öneririz**. 
 
 1. **Kaydet**'i seçin.
 
-Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
+## <a name="export-the-data"></a>Verileri dışarı aktarma
 
-Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
+[Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
+
+## <a name="known-limitations"></a>Bilinen sınırlamalar
+
+- Toplamda 100.000'e kadar müşteri profilini Autopilot'a aktarabilirsiniz.
+- Autopilot'a aktarma segmentlerle sınırlıdır.
+- 100.000'e kadar profili Autopilot'a aktarma işleminin tamamlanması birkaç saat kadar sürebilir. 
+- Autopilot'a aktarabileceğiniz profil sayısı, Autopilot ile yaptığınız sözleşmeye bağlıdır ve bu sözleşmeyle sınırlıdır.
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 

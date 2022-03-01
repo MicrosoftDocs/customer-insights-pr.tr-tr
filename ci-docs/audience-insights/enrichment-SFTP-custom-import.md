@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618729"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304674"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Müşteri profillerini özel verilerle zenginleştirme (önizleme)
 
@@ -45,8 +45,6 @@ SFTP özel içeri aktarma zenginleştirmelerini yapılandırmak için aşağıda
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Veri konumuna girerken ekran görüntüsü.":::
 
-1. **İleri**'yi ve müşteri veri kümesini seçin. Bu, tüm müşteri profilleri veya bir segment olabilir.
-
 1. **İleri**'yi seçin ve Zenginleştirme için bir ad ve çıkış varlığı için bir ad girin. 
 
 1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
@@ -66,7 +64,7 @@ Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zengin
 1. Doğrulama tamamlandığında, bağlantı, **Kaydet** seçilerek kaydedilebilir.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian bağlantısı yapılandırma sayfası.](media/enrichment-SFTP-connection.png "Experian bağlantı Yapılandırması sayfası")
+   > ![Experian bağlantı Yapılandırması sayfası](media/enrichment-SFTP-connection.png "Experian bağlantı Yapılandırması sayfası")
 
 
 ## <a name="defining-field-mappings"></a>Alan eşlemelerini tanımlama 
@@ -125,6 +123,6 @@ Zenginleştirme işlemi tamamlandıktan sonra yeni içeri aktarılan özel zengi
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,18 +4,18 @@ description: Yardım kaynaklarının hızlı bir şekilde başlatılmasına gene
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 10/01/2021
+ms.date: 12/21/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: 5ee1567cea834670a16aaa3253912b7957ce26b3
+ms.sourcegitcommit: 86739a3f238162fc96837270b5d184e648fab15c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623701"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "7405382"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Dynamics 365 Customer Insights etkileşim içgörüleri özelliğini (genel önizleme) kullanmaya başlama
 
@@ -25,63 +25,47 @@ Etkileşim içgörüleri özelliği, Web sitenizde müşteri davranışını top
 
 ## <a name="step-1-review-prerequisites"></a>Adım 1: Önkoşulları gözden geçirin
 
-Önce etkin bir Microsoft Azure Active Directory (AAD) Kullanıcı hesabınızın olması gerekir. Daha sonra, bir etkileşim Öngörüler çalışma alanı ayarlamadan önce aşağıdaki makaleleri okuyun.
+Önce etkin bir Microsoft Azure Active Directory Kullanıcı hesabınızın olması gerekir. Daha sonra, bir etkileşim Öngörüler çalışma alanı ayarlamadan önce aşağıdaki makaleleri okuyun.
 
-- Microsoft'un [Hizmet Koşulları](terms-of-service.md) inceleyip kabul edin.  
-- [Tanımlama bilgilerini ve Kullanıcı iznini Yönet](user-consent-storage.md) makalesini okuyun. Ardından, kullanıcı izin bildirimini güncelleştirmeniz gerekip gerekmediğini değerlendirin. Daha önceden "temel olmayan" tanımlama bilgisi yoksa, muhtemelen site ilkenizin güncelleştirmeniz gerekir.
+- Microsoft'un [hizmet koşulları](terms-of-service.md) inceleyip kabul edin.  
+- [Tanımlama bilgilerini ve Kullanıcı iznini Yönet](user-consent-storage.md) makalesini okuyun. Bu makaleyi gözden geçirdikten sonra, Kullanıcı izin bildirimini güncelleştirmeniz gerekip gerekmediğini değerlendirin. Daha önceden "temel olmayan" tanımlama bilgisi yoksa, muhtemelen site ilkenizin güncelleştirmeniz gerekir.
 - Önemli hüküm ve kavramlara hızlı bir giriş için [sözlüğü](glossary.md) inceleyin.
 
 ## <a name="step-2-explore-engagement-insights"></a>Adım 2: Etkileşim içgörülerini keşfedin
 
-Hedef kitle içgörülerini ilk kez ziyaret ettiğinizde, ayarları yapılandırabilir, ilkeleri inceleyebilir ve özelliği keşfedebilirsiniz.
+Katılım öngörüleri ilk kez ziyaret ettiğinizde, ayarları yapılandırabilir, ilkeleri inceleyebilir ve ürünü keşfedebilirsiniz.
 
-1. Microsoft AAD Kullanıcısı (okul veya iş) hesabınızı kullanarak, [etkileşim içgörüleri özellik portalında](https://home.ci.ai.dynamics.com/app/engagement-insights) oturum açın.
+1. Microsoft Azure Active Directory kullanıcı hesabınızı kullanarak, [etkileşim içgörüleri yetenek portalı](https://pi.dynamics.com)'nda oturum açın. (Okulunuz veya iş hesabınız olabilir.)
 
-1. Bölgenizi seçin ve e-posta güncelleştirmelerini ve tekliflerini almayı kabul etmek istiyorsanız kutuyu işaretleyin.
+1. Bölgenizi seçin ve güncelleştirmeleri almak ve e-postayla teklif vermek isteyip istemediğinizi belirtmek için onay kutusunu kullanın.
 
-1. Etkileşim içgörüleri (önizleme) **Kullanma koşulları** ve **Gizlilik bildirimini** inceleyin ve bu ayarları kabul etmek için **Demoyu keşfet**'i seçin.
+1. **Etkileşim içgörüleri (Önizleme) kullanma koşulları** ve **Gizlilik bildirimini** gözden geçirin ve kabul etmek için **gösteriyi keşfedin**'i seçin.
 
 1. Ürün, örnek veri kümesi kullanarak keşfedin.
 
-##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Adım 3: Çalışma alanı ayarlama ve raporlar oluşturma
+##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Adım 3: çalışma alanı ayarlayın ve Web sitenize kod ekleyin
 
-Çalışma alanı, kullanıcı etkinliklerini gerçek zamanlı olarak görüntüleyebileceğiniz ve raporları depolayabildiğiniz ve yönetebileceğiniz bir alandır. Kullanıcılardan gelen etkinlik verileri olan *olayları* toplamaya başlamak için Web sitenize kod ekleyin .
+Çalışma alanı, Kullanıcı etkinliklerini gerçek zamanlı olarak görüntüleyebileceğiniz ve raporları saklayabildiğiniz ve yönetebildiğiniz bir alandır. Kullanıcılardan gelen etkinlik verileri olan *olayları* toplamaya başlamak için Web sitenize kod ekleyin .
 
 1. [Çalışma alanı oluşturun](create-workspace.md) ve üyeler ekleyin.
 
-1. Çalışma alanınıza gelen kullanıcı etkinliklerini görmek için, [web sitenize](instrument-website.md) veya [mobil uygulamanıza kod ekleyin](developer-resources.md#capture-events-from-mobile-apps).
+1. Çalışma alanınıza gelen kullanıcı etkinliklerini görmek için, [Web sitenize](instrument-website.md) veya [mobil uygulamanıza kod ekleyin](developer-resources.md#capture-events-from-mobile-apps).
 
-1. Etkin kullanıcıları tarayıcıya, cihaza, işletim sistemine, konuma ve dile göre gösteren [gerçek zamanlı raporu](view-reports.md) görüntüleyin. Kendi görselleştirmelerini oluşturmak için [özel raporlar](custom-reports.md) da oluşturabilirsiniz.
-
-1. Ziyaretçileri yeniye göre sıralamak ve kullanıcıları döndürmek için [boyutlar](dimensions.md), kullanıcı davranışını daha iyi anlamak için [ölçümler](metrics.md), özellik veya web sitesi etkileşimlerine göre ziyaretçi alt kümelerini tanımlamak için [segmentler](segments.md) oluşturun.
+1. Etkin kullanıcıları tarayıcıya, aygıta, işletim sistemine, konuma ve dile göre gösteren [gerçek zamanlı bir raporu](view-reports.md) görüntüleyin. Kendi görselleştirmelerini oluşturmak için [özel raporlar](custom-reports.md) da oluşturabilirsiniz.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Adım 4: diğer kanallara veri verme
 
-Web analizi verilerinizin her bir şekilde, *iyileştirilmiş olaylar* (sanal görünüm) oluşturabilirsiniz. Ardından, Azure Data Lake Storage uygulamasına filtre uygulayın ve dışarı aktarın. Dışarı aktarılan verileri veri kaynağı olarak alabilirsiniz.
+Web analizi verilerinizin her bir şekilde, *iyileştirilmiş olaylar* (sanal görünüm) oluşturabilirsiniz. Ardından, Azure Data Lake Storage uygulamasına filtre uygulayın ve dışarı aktarın. Dışarı aktarılan verileri veri kaynağı olarak alabilirsiniz. Daha fazla bilgi için bkz. [Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma](integrate-audience-insights-engagement-insights.md).
 
 1. Dışa aktarma için [iyileştirilmiş olaylar oluşturun](refined-events.md).
 
-1. Azure Data Lake Storage'a [ verileri aktarma](export-events.md).
-
-1. İki özellik arasında veri paylaşmak için [hedef kitle içgörüleri ve etkileşim içgörüleri arasında bir bağlantı oluşturun](integrate-audience-insights-engagement-insights.md).
-
-1. [Önceden kimliği doğrulanmış kullanıcıların web olaylarını](unknown-to-known.md) **bilinmeyenden bilinene** özelliğiyle tanıma.
+1. Data Lake Storage'a [verileri dışa aktarın](export-events.md).
 
 1. [Kişisel bilgiler içeren olay verilerinin nasıl silineceğini ve verileceğini](delete-export-personal-data.md) öğrenin.
-
-## <a name="step-5-create-and-manage-funnel-reports"></a>Adım 5: Huni raporlarını oluşturma ve yönetme
-
-Bir huni raporu, web siteniz veya mobil uygulamanız üzerinden bir müşteri yolculuğu sırasında ortaya çıkan adımlar hakkında bilgiler toplar. Sistemde bulunmayan profil raporları ve özel raporlar oluşturmanın yanı sıra, satın almadan önce müşterilerinizin aldığı yolları belirlemek için bir huni raporu da oluşturabilirsiniz. 
-
-1. Kararları bildirmek ve iyileştirme ve süreç geliştirmeleri için alanları tanımlamak üzere bir [huni raporu oluşturun](funnel-reports.md).
-
-1. Mobil uygulamanızı etkileşim öngörüleri [Android SDK](get-started-android.md) veya [iOS SDK](get-started-ios.md) ile seçtikten sonra, çapraz kanal huni raporları oluşturun.
-
-1. [Huni raporunuzdaki](funnel-reports.md#funnel-insights) adımlar hakkında müşteri davranışıyla ilgili daha fazla bilgi edinmek için huni içgörülerini kullanın.
  
-## <a name="step-6-stay-connected"></a>Adım 6: Bağlı kalın
+## <a name="step-5-stay-connected"></a>Adım 5: Bağlı kalın
 
-Etkin katılımınızı takdir ediyoruz ve sonraki sürümlerin geliştirilmesi sırasında ilgili görüşleri göz önünde bulunduruyoruz. Görüşünüzü paylaşın ve aşağıdaki kanallardan birine göre sorunları bildirin:
+Gelecekteki sürümlerin geliştirilmesi sırasında tüm ilgili görüşleri göz önünde bulundurmanız ve etkin katılımınızı beğendik. Görüşünüzü paylaşın ve aşağıdaki kanallardan birine göre sorunları bildirin:
 - [Topluluk](https://go.microsoft.com/fwlink/?linkid=2141648)
 - [Geri bildirim gönderme](https://go.microsoft.com/fwlink/?linkid=2143222)
 - [Destek isteme](https://go.microsoft.com/fwlink/?linkid=2145734) 

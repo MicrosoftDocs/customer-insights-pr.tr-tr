@@ -1,7 +1,7 @@
 ---
 title: Şirket verilerinin iyileştirilmesi
 description: Microsoft'un modelleriyle şirket verilerini zenginleştirin ve normalleştirin.
-ms.date: 01/19/2022
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010953"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813941"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>İyileştirilmiş şirket verileriyle şirket profillerini zenginleştirme
 
@@ -82,17 +82,7 @@ Zenginleştirme işlemini başlatmak için, komut çubuğundan **Çalıştır**'
 
 Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşteri profilleri verisini; **Zenginleştirmelerim** altında gözden geçirebilirsiniz. Ayrıca, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını da bulacaksınız.
 
-**Zenginleştirilmiş müşteriler önizlemesi** kutucuğunda zenginleştirilen verilerin bir örneğini görebilirsiniz. **Daha fazla göster**'i ve **Veriler** sekmesini seçerek her zenginleştirilen profilin ayrıntılı görünümüne erişin.
-
-### <a name="overview-card"></a>Genel bakış kartı
-
-Genel bakış kartı, zenginleştirmenin kapsamıyla ilgili ayrıntıları gösterir. 
-
-* **İşlenen ve değiştirilen şirketler**: Başarıyla zenginleştirilen müşteri şirketi profillerinin sayısı.
-
-* **İşlenen ve değiştirilmeyen şirketler**: Tanınan ancak değiştirilmeyen müşteri şirketi profillerinin sayısı. Bu, genellikle giriş verileri geçerli olduğunda ve zenginleştirmeyle iyileştirilemediğinde gerçekleştirilir.
-
-* **İşlenmeyen ve değiştirilmeyen şirketler**: Tanınmayan müşteri şirketi profillerinin sayısı. Bu, genellikle geçersiz veya zenginleştirme tarafından desteklenmeyen giriş verileri içindir.
+**Zenginleştirilmiş verileri görüntüle**'yi seçerek her zenginleştirilmiş profilin ayrıntılı görünümüne erişebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
