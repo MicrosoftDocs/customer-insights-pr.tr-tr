@@ -1,24 +1,26 @@
 ---
 title: Customer Insights verilerini Google Ads'e dışarı aktarma
 description: Bağlantıyı yapılandırmayı ve Google Ads'a dışa aktarmayı öğrenin.
-ms.date: 03/03/2021
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
+ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604301"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227034"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentleri Google Ads (Önizleme) dışa aktarma
 
 Birleşik müşteri profillerinin segmentlerini bir Google Ads hedef kitle listesine dışa aktarın ve bunları Google Arama, Gmail, YouTube ve Google Görüntülü Reklam Ağı'nda reklam vermek için kullanın. 
+
+> [!IMPORTANT]
+> Şu anda, yalnızca yeni bir bağlantı oluşturabilir ve zaten onaylanmış bir Google Ads Geliştirici belirtecine sahipseniz verileri Google Ads'e aktarabilirsiniz. İlke değişiklikleri nedeniyle, Google Ads dışarı aktarmasını kısa süre içinde güncelleştirecek ve deneyiminizin sürekliliğini sağlamak ve Google Ads'e aktarma işlemini basitleştirmek amacıyla geliştirici belirteci gerektirmeyen bir dışarı aktarma seçeneği sunacağız. Yeni dışarı aktarma seçeneğine daha kolay geçiş yapmak için, Google Ads'e daha fazla bağlantı ayarlamamanızı öneririz.
 
 ## <a name="prerequisites-for-connection"></a>Bağlantı için ön koşullar
 
@@ -32,9 +34,9 @@ Birleşik müşteri profillerinin segmentlerini bir Google Ads hedef kitle liste
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Google Ads'e dışarı aktarma işlemi için en fazla 1 milyon profil.
+- Google Ads'e dışa aktarma başına 1 milyon müşteri profili.
 - Google Ads'e dışarı aktarma segmentlerle sınırlıdır.
-- Toplam 1 milyon profil bulunan segmentlerin dışarı aktarılması, sağlayıcı tarafındaki sınırlamalar nedeniyle 5 dakika kadar sürebilir. 
+- Tedarikçi tarafındaki kısıtlamalar nedeniyle 1 milyon müşteri profili olan segmentleri dışa aktarma 5 dakika kadar sürebilir. 
 - Google Ads'te eşleştirme 48 saat kadar sürebilir.
 
 ## <a name="set-up-connection-to-google-ads"></a>Google Ads bağlantısı ayarla
@@ -71,7 +73,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **[Google Ads hedef kitle kimliğinizi](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** girin ve Google Ads'e bağlantıyı başlatmak için **Bağlan**'ı seçin.
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin.
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. Toplamda en fazla 1 milyon müşteri profilini Google Ads'e dışarı aktarabilirsiniz.
 

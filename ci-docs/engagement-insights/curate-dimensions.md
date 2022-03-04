@@ -2,18 +2,17 @@
 title: Davranış verilerini bölmek için demografik boyutları kullanma (düzenlenmiş boyutlar)
 description: Hedef kitle içgörüleri müşteri profili özelliklerini etkinleştirmek için birleşik profil düzenlenmiş boyutlarını kullanın.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461127"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233072"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Davranış verilerini bölmek için demografik boyutları kullanma
 
@@ -29,7 +28,7 @@ Etkileşim içgörüleri kullanıcıları, birleşik profil demografik boyutlar�
 - Müşteri profillerinin oluşturulduğu hedef kitle içgörüleri ortamıyla bağlantılı müşteri profili verilerine sahip olduğunuz bir etkileşim içgörüleri ortamı. Daha fazla bilgi için: [Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Hedef kitle içgörüleri ile etkileşim içgörüleri ortamları arasında bağlantı oluşturduktan sonra yalnızca etkileşim içgörülerinde boyutlar olarak faydalı olabilecek müşteri profili özelliklerine özgü veriler isteyebilirsiniz. Daha fazla bilgi için [Hedef kitle içgörüleri birleşik profil özniteliklerini ve segmentlerini etkinleştirme](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments) bölümüne gidin.<!--note from editor: Suggested. -->
+> Hedef kitle içgörüleri ile etkileşim içgörüleri ortamları arasında bağlantı oluşturduktan sonra yalnızca etkileşim içgörülerinde boyutlar olarak faydalı olabilecek müşteri profili özelliklerine özgü veriler isteyebilirsiniz. Daha fazla bilgi için [Hedef kitle içgörüleri birleşik profil özniteliklerini ve segmentlerini etkinleştirme](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments) bölümüne gidin.
 
 ## <a name="create-a-new-custom-report"></a>Yeni bir özel rapor oluşturma
 

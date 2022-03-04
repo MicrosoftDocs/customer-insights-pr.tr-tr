@@ -1,20 +1,23 @@
 ---
-title: Veri birleştirme için varlıkları eşleme
-description: Birleştirilmiş müşteri profilleri oluşturmak için verileri eşleyin.
-ms.date: 09/25/2020
-ms.service: customer-insights
+title: Veri birleşme için varlıkları ve öznitelikleri eşleme
+description: Verileri birleşik müşteri profiline eşlemek için varlıklar, öznitelikler, birincil anahtarlar ve anlamsal türleri seçin.
+ms.date: 10/18/2020
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+ms.topic: tutorial
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+searchScope:
+- ci-map
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407212"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354982"
 ---
 # <a name="map-entities-and-attributes"></a>Varlıkları ve öznitelikleri eşleme
 
@@ -35,14 +38,14 @@ Veri bütünleştirmenin genel akışı hakkında daha fazla bilgi için bkz. [B
 3. *Eşleştirme* ve *birleştirme* aşamalarında kullanmak istediğiniz varlıkları ve öznitelikleri seçin. Gerekli öznitelikleri bir varlıktan tek tek seçebilir veya varlık düzeyinde **Tüm alanları dahil et** onay kutusunu işaretleyerek bir varlıktan tüm öznitelikleri dahil edebilirsiniz. Veri bütünleştirme sürecinden yararlanmak için en az iki varlık seçmenizi öneririz.
 
    > [!div class="mx-imgBorder"]
-   > ![Varlık örneği ekleme](media/data-manager-configure-map-add-entities-example.png "Varlık örneği ekleme")
+   > ![Varlık ekleme örneği.](media/data-manager-configure-map-add-entities-example.png "Varlık örneği ekleme")
 
    Bu örnekte, **eCommerceContacts** ve **loyCustomers** varlıklarını ekleyeceğiz. Bu varlıkları seçerek, çevrimiçi işletme müşterilerinin hangisinin bağlılık programı üyesi olduğu konusunda içgörü elde edebilirsiniz.
    
    Eşlemek istediğiniz gerekli öznitelikleri seçmek için tüm öznitelikler ve varlıklar genelinde anahtar sözcükler üzerinde arama yapabilirsiniz.
    
      > [!div class="mx-imgBorder"]
-   > ![Arama alanları örneği](media/data-manager-configure-map-search-fields-example.png "Arama alanları örneği")
+   > ![Arama alanları örneği.](media/data-manager-configure-map-search-fields-example.png "Arama alanları örneği")
 
 4. Seçimlerinizi onaylamak için **Uygula**'yı seçin.
 
@@ -55,7 +58,7 @@ Varlıklarınızı seçtikten sonra **Eşleme** sayfası gözden geçirmeniz iç
 - **Öznitelik anlamsal türü**: E-posta adresi veya adı gibi özniteliklerinizin kategorileri. Semantiğin akıllı tahmini için yapay zeka modelleri kullanmak, zamandan tasarruf etmek ve doğruluğu geliştirmek üzere **Akıllı eşleme** seçeneğini **AÇIK** olarak ayarlayın. Akıllı eşleme, **Tür** alanındaki yapay zeka tabanlı semantik önerisini vurgular. Bunu **KAPALI** olarak ayarlarsanız düzenli eşleme önerilerimizi görürsünüz. Kullanılabilir seçenekler listesinden bir semantik türü seçebilir ve önerilen seçimi geçersiz kılabilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> ![Öznitelik türü ve semantik tahmini](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Öznitelik türü ve semantik tahmini")
+> ![Öznitelik türü ve semantik tahmini.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Öznitelik türü ve semantik tahmini")
 
 Özel anlamsal tür eklemek de mümkündür. Bu öznitelik için tür alanını seçin ve özel anlamsal tür adınızı yazın. Bu şekilde, sistem tarafından tanımlanan öznitelik türlerini de değiştirebilirsiniz.
 
@@ -64,7 +67,7 @@ Bir anlamsal türün otomatik olarak tanımlandığı tüm öznitelikler **Eşle
 Anlamsal bir türle otomatik olarak eşlenmeyen öznitelikler, **Eşlenmemiş alanlardaki verileri tanımlayın** bölümünde gruplanır. Eşlenmemiş öznitelikler için anlamsal tür alanını seçin veya özel öznitelik türü adınızı girin.
 
 > [!div class="mx-imgBorder"]
-> ![Birincil anahtar ve öznitelik türü](media/data-manager-configure-map-add-attributes.png "Birincil anahtar ve öznitelik türü")
+> ![Birincil anahtar ve öznitelik türü.](media/data-manager-configure-map-add-attributes.png "Birincil anahtar ve öznitelik türü")
 
 > [!NOTE]
 > Müşteri kartında müşteri adını doldurmak için bir alan, Person.FullName anlamsal türüne eşlenmelidir. Aksi takdirde müşteri kartları adsız olarak görünür. 
@@ -76,7 +79,7 @@ Anlamsal bir türle otomatik olarak eşlenmeyen öznitelikler, **Eşlenmemiş al
 2. **Alanları düzenle** bölmesinde, öznitelik ve varlık ekleyin veya kaldırın. Özniteliklerinizi ve ilgilendiğiniz varlıkları bulup seçmek için aramayı veya kaydırmayı kullanın. Zaten eşlenmiş olan öznitelikleri veya varlıkları kaldıramazsınız.
 
    > [!div class="mx-imgBorder"]
-   > ![Öznitelik ekleme veya kaldırma](media/configure-data-map-edit.png "Öznitelik ekleme veya kaldırma")
+   > ![Öznitelik ekleyin veya kaldırın.](media/configure-data-map-edit.png "Öznitelik ekleme veya kaldırma")
 
 3. **Uygula**'yı seçin.
 
@@ -94,7 +97,7 @@ Birleştirmeyle adımlarına devam edin ve görüntü URL'sini içeren özniteli
 
 Kuruluşlar (Önizleme) için öznitelik türü "Organization.Name" ile eşlenmelidir
 > [!div class="mx-imgBorder"]
-> ![Birincil anahtar ve öznitelik türü B2B](media/configure-data-map-edit-b2b.png "Birincil anahtar ve öznitelik türü B2B")
+> ![Birincil anahtar ve B-B öznitelik türü.](media/configure-data-map-edit-b2b.png "Birincil anahtar ve B-B öznitelik türü")
 
 ## <a name="next-step"></a>Sonraki adım
 
@@ -102,3 +105,6 @@ Veri bütünleştirme sürecinin bir parçası olarak **Eşleştir** sayfasına 
 
 > [!TIP]
 > Şu videoyu inceleyin: [Başlarken: Birleşik Müşteri Profili Oluşturma](https://youtu.be/oBfGEhucAxs).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

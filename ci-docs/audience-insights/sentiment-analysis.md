@@ -1,20 +1,19 @@
 ---
-title: Müşteri geri bildirimi için anlam çözümlemesi
+title: Müşteri geri bildirimi için duygu analizi
 description: Dynamics 365 Customer Insights'ta müşteri geri bildirimlerinde bir duygu analizi modelini nasıl kullanacağınızı öğrenin.
 ms.date: 12/23/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: b06613b00a512a31479f9d30d539a010e17d33ba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951093"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231489"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Müşteri geri bildirimlerinde duyarlılığı analiz etme (Önizleme)
 
@@ -38,7 +37,7 @@ Modellerin sonuçlarına güvenebilmenizi sağlamak için modellerin karar verme
 
 İki **Doğal Dil İşleme (NLP) modeli** kullanıyoruz: İlk modelde her geri bildirim yorumuna bir duyarlılık puanı atanır. İkinci modelde her geri bildirim tüm ilgili iş bölümleriyle ilişkilendirilir. Modeller, sosyal medya, perakende, restoran, tüketici ürünleri ve otomotiv endüstrilerindeki kaynaklardan gelen genel veriler üzerinde eğitilir.    
   
-- Modeli geri bildirim verileriyle ilişkilendirilecek önceden tanımlanmış iş bölümleri şunları içerir:
+Modeli geri bildirim verileriyle ilişkilendirilecek önceden tanımlanmış iş bölümleri şunları içerir:
 -   Hesap yönetimi
 -   Sonuçlandırma ve ödeme
 -   Müşteri desteği

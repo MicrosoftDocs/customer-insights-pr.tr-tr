@@ -3,18 +3,20 @@ title: Customer Insights verilerini Dynamics 365 Marketing'e dışarı aktarma
 description: Bağlantıyı yapılandırmayı ve Dynamics 365 Marketing'da dışa aktarmayı öğrenin.
 ms.date: 08/24/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2ec9f1cc11fdab5ff313bb3041d2b158ed6ca67
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046771"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353935"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Dynamics 365 Marketing'deki segmentleri kullanma (önizleme)
 

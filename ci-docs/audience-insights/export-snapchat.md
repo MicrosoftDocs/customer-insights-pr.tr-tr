@@ -1,22 +1,21 @@
 ---
 title: Customer Insights verilerini Snapchat'e aktarma
 description: Bağlantıyı yapılandırmayı ve Snapchat'a dışa aktarmayı öğrenin.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 7eac3307b3f82b6c5ebc3d66d6563ae50696ed65
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760655"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227272"
 ---
-# <a name="export-segment-lists-to-snapchat-preview"></a>Segment listelerini Snapchat (Önizleme) içine aktar
+# <a name="export-segments-to-snapchat-preview"></a>Segmentleri Snapchat'e aktarma (önizleme)
 
 Birleşik müşteri profillerinin bölümlerini Snapchat'e verin ve bunları reklamcılık için kullanın. 
 
@@ -29,7 +28,7 @@ Birleşik müşteri profillerinin bölümlerini Snapchat'e verin ve bunları rek
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
 - Snapchat'e dışa aktarma kesimlerle sınırlıdır.
-- 1000000 profilin Snapchat'e aktarılması için en fazla 15 dakika geçmesi gerekebilir. 
+- Snapchat'e 1 milyona kadar müşteri profili vermenin tamamlanması 15 dakikaya kadar sürebilir. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Snapchat bağlantısı ayarla
 
@@ -63,7 +62,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. [**Snapchat hedef kitle kimliğini**](https://businesshelp.snapchat.com/s/article/custom-audiences) girin.
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Snapchat'e segmentleri aktarmak gerekir.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Snapchat'e segmentleri aktarmak gerekir.
 
 1. Dışarı aktarmak istediğiniz segmentleri seçin. 
 

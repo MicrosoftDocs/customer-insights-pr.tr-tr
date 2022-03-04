@@ -1,22 +1,21 @@
 ---
 title: Ürün önerisi tahmini
 description: Müşterinin satın alabileceği veya etkileşimde bulunabileceği ürünleri tahmin edin.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494563"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355821"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Ürün önerisi tahmini (önizleme)
+# <a name="product-recommendation-prediction"></a>Ürün önerisi tahmini
 
 Ürün öneri modeli, tahmini ürün önerileri kümesi oluşturur. Öneriler, önceki satın alma davranışını ve benzer satın alma düzenleri olan müşterileri temel alır. Yeni ürün önerisi tahminlerini **Yönetim Bilgileri** > **Tahminler** sayfasında oluşturabilirsiniz. Oluşturduğunuz diğer tahminleri görmek için **Tahminlerim**'i seçin.
 
@@ -54,7 +53,7 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 
 > [!NOTE]
 > - Model, müşterilerinizin hareket geçmişini gerektiriyor. Bir hareketin tanımı oldukça esnektir. Kullanıcı-ürün etkileşimini açıklayan tüm veriler, giriş olarak çalışabilirler. Örneğin, ürün satın alma, bir sınıfı alma veya bir olaya katılan.
-> - Şu anda yalnızca bir işlem geçmişi varlığı yapılandırılabilir. Birden çok satın alma varlığı varsa, veri alımından önce Power Query alın.
+> - Şu anda yalnızca bir işlem geçmişi varlığı yapılandırılabilir. Birden çok satın alma varlığı varsa bunları veri alımından önce Power Query'de birleştirin.
 > - Sipariş ve sipariş ayrıntıları farklı varlıklarsa modelde kullanmadan önce bunlara katılın. Model yalnızca bir varlıktaki sipariş kimliği veya makbuz kimliğiyle çalışmaz.
 
 
@@ -62,7 +61,7 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 
 1. Customer Insights'ta **Yönetim Bilgileri** > **Tahminler**'e gidin.
 
-1. **Ürün önerileri modeli (önizleme)** kutucuğunu seçin ve **Bu modeli kullan** seçeneğini belirleyin.
+1. **Ürün önerileri modeli** kutucuğunu seçin ve **Bu modeli kullan** seçeneğini belirleyin.
    > [!div class="mx-imgBorder"]
    > ![Bu modeli kullan düğmesinin bulunduğu Ürün Önerisi modeli kutucuğu.](media/product-recommendation-usethismodel.PNG "Bu modeli kullan düğmesinin bulunduğu Ürün Önerisi modeli kutucuğu")
 
@@ -79,11 +78,11 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 1. Müşteriye önermek istediğiniz **Ürün sayısını** ayarlayın. Bu değer, teslim yönteminizin verileri nasıl doldurduğuna bağlıdır. Üç ürün önerebiliyorsanız değeri buna göre ayarlayın.
    
    >[!TIP]
-   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Kaydet ve Kapat**'ı seçebilirsiniz. **Tahminlerim** sekmesinde taslak tahminini bulabilirsiniz.
+   > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Taslağı kaydet**'i seçebilirsiniz. **Tahminlerim** sekmesinde taslak tahminini bulabilirsiniz.
 
-1. **Müşterilerin yakın zamanda satın aldıkları ürünleri öner** seçeneğini tercih edebilirsiniz.
+1. **Beklenen tekrarlanan satın alma** alanında müşterilerin yakın zamanda satın aldığı ürünleri eklemek isteyip istemediğinizi seçin.
 
-1. Yakın zamanda satın alınan ürünleri *önermeyi* seçerseniz **Geriye dönük bakılacak aralık** seçeneğini ayarlayın. Bu ayar, ürünü kullanıcıya yeniden önermeden önce modelin dikkate aldığı zaman dilimini belirtir. Örneğin, bir müşterinin her iki yılda bir dizüstü bilgisayar satın aldıklarını belirtebilirsiniz. Bu pencere, son iki yıl için satın alma geçmişine bakar ve bir madde bulduklarında, bu öğeye önerilerden filtre uygulanır.
+1. **Geriye dönük bakılacak aralık**'ı ayarlayın. Bu ayar, ürünü kullanıcıya yeniden önermeden önce modelin dikkate aldığı zaman dilimini belirtir. Örneğin, bir müşterinin her iki yılda bir dizüstü bilgisayar satın aldıklarını belirtebilirsiniz. Bu pencere, son iki yıl için satın alma geçmişine bakar ve bir madde bulduklarında, bu öğeye önerilerden filtre uygulanır.
 
 1. **İleri**'yi seçin
 

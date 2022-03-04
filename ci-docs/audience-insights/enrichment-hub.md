@@ -1,21 +1,25 @@
 ---
 title: Birleşik müşteri profillerini zenginleştirme
 description: Müşteri verilerinizi zenginleştirmek için özellikleri kullanın.
-ms.date: 09/30/2021
+ms.date: 02/07/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673023"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355407"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
 
@@ -37,14 +41,17 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 - Experian tarafından sağlanan [demografik bilgiler](enrichment-experian.md)
 - Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md) 
 - [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
+- HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md) 
 
 # <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
 - Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
 - Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md) 
+- Microsoft tarafından sağlanan [iyileştirilmiş şirket verileri](enrichment-enhanced-company-data.md)
 - HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md) 
 - Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md) 
 - [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
+- Microsoft tarafından sağlanan [Firma etkileşim verileri](enrichment-office.md)
 
 ---
 

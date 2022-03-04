@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645515"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350247"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Dynamics 365 Customer Insights ücretsiz deneme sürümüne kaydolma
 
@@ -32,23 +31,12 @@ Deneme sürümünün yüklenmesi birkaç dakika sürer ve ardından uygulamayı 
 
 Deneme sürümü ortamı, ücretli sürümdeki özellikleri içerir. Aşağıdaki bağlantılar bazı temel özellikler konusunda size yol gösterir.
 
-### <a name="audience-insights"></a>Hedef kitle içgörüleri
-
 - [Hedef kitle öngörüler için hızlı başlangıç.](audience-insights/get-started.md)
 - [Daha fazla kullanıcı ekleme ve izinler atama.](audience-insights/permissions.md)
 - [Veri kaynaklarınızı alın](audience-insights/data-sources.md) ve [birleşik müşteri profilleri](audience-insights/customer-profiles.md) elde etmek için bunları [veri birleştirme işlemi](audience-insights/data-unification.md) üzerinden çalıştırın.
 - [Birleşik müşteri profillerini zenginleştirin](audience-insights/enrichment-hub.md) veya [tahmini modeller çalıştırın](audience-insights/predictions-overview.md).
 - Müşteriler ve [ölçümler](audience-insights/measures.md) inceleme KPI'larını gruplandırmak için [segmentler oluşturun](audience-insights/segments.md).
 - Diğer uygulamalarda verilerinizin alt kümelerini işlemek için [bağlantılar](audience-insights/connections.md) ve [dışarı aktarmalar](audience-insights/export-destinations.md) ayarlayın.
-
-### <a name="engagement-insights"></a>Etkileşim içgörüleri
-
-- [Etkileşim öngörüler için hızlı başlangıç.](engagement-insights/get-started.md)
-- [Çalışma alanı oluşturun](engagement-insights/create-workspace.md) ve üyeler ekleyin.
-- [Web sitenize kod ekleyin](engagement-insights/instrument-website.md)veya [mobil uygulamanıza](engagement-insights/developer-resources.md#capture-events-from-mobile-apps) kod ekleyin.
-- [Gerçek zamanlı raporu görüntüleyin](engagement-insights/view-reports.md)veya [özel raporlar oluşturun](engagement-insights/custom-reports.md).
-- Dışa aktarma için [iyileştirilmiş olaylar oluşturun](engagement-insights/refined-events.md).
-- Azure Data Lake Storage'a [ verileri aktarma](engagement-insights/export-events.md).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

@@ -1,32 +1,37 @@
 ---
 title: Hedef kitle içgörülerinde segmentler
 description: Segmentlere ve bunların nasıl oluşturulacağı ve yönetildiği ile ilgili genel bakış.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617466"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8356007"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
 Segmentler, müşterilerinizi demografik, işlem tabanlı veya davranışsal özniteliklere göre gruplamanıza olanak tanır. İş hedeflerinize ulaşmak için tanıtım kampanyalarını, satış etkinliklerini ve müşteri desteği eylemlerini hedeflemek üzere segmentleri kullanabilirsiniz.
 
-Bir segment tanımının filtreleriyle eşleşen müşteri profilleri, bir segmentin *üyeleri* olarak ifade edilir . Bazı [hizmet sınırları](service-limits.md) geçerlidir.
+Bir segment tanımının filtreleriyle eşleşen müşteri profilleri, bir segmentin *üyeleri* olarak ifade edilir . Bazı [hizmet sınırları](/dynamics365/customer-insights/service-limits) geçerlidir.
 
 ## <a name="create-a-new-segment"></a>Yeni segment oluşturma
 
 Yeni bir segment oluşturmanın çeşitli yolları vardır: 
 
-# <a name="individual-customers-b2c"></a>[Ayrı müşteriler (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 
 - Segment oluşturucusu ile karmaşık segment oluşturma: [Kendiniz oluşturun](segment-builder.md#create-a-new-segment) 
 - Bir işleciyle basit parçalar: [Hızlı segment](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Yeni bir segment oluşturmanın çeşitli yolları vardır:
 - Bir ölçülere veya özniteliklere dayalı olarak AI destekli öneriler: [ölçümleri iyileştirmek için önerilen segmentler](suggested-segments.md) 
 - Aktivitelere dayalı öneriler: [Müşteri etkinliğine dayalı olarak önerilen segmentler](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[İşletme hesapları (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
 - Segment oluşturucusu ile karmaşık segment oluşturma: [Kendiniz oluşturun](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
 **Segmentler** sayfasında **Tümünü yenile**'yi seçerek bir defada tüm segmentleri yenileyebilir veya bunları seçtiğinizde bir ya da birden çok segmenti yenileyebilir ve seçeneklerden **Yenile**'yi seçebilirsiniz. Alternatif olarak, **Yönetici** > **Sistem** > **Zamanla**'da yinelenen bir yenileme yapılandırabilirsiniz.
 
-> [!TIP]
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Segmentleri dışarı aktarma
 
@@ -106,4 +110,5 @@ Alt kısım, segment üyelerinin bir listesini içerir.
 >
 >Liste, eşleştirilen segment üyelerinin önizlemesidir ve segmentinizin ilk 100 kaydını gösterir, böylece hızlı bir şekilde değerlendirebilir ve gerekirse tanımlarını inceleyebilirsiniz. Tüm eşleştirilen kayıtları görmek için [segmenti dışarı aktarmanız](export-destinations.md) gerekir.
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

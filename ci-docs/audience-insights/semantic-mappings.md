@@ -1,28 +1,30 @@
 ---
 title: Anlamsal eşlemeler (Önizleme)
 description: Anlamsal eşlemelerin ve bunların nasıl kullanılacağı genel bakış.
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622960"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353981"
 ---
-# <a name="semantic-mappings"></a>Anlamsal eşlemeler
+# <a name="semantic-mappings-preview"></a>Anlamsal eşlemeler (Önizleme)
 
 Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şemalara eşlemenizi sağlar. Bu şemalar, veri özniteklerinizi daha iyi anlaması için hedef kitle öngörülerine yardımcı olur. Anlamsal eşleme ve sağlanan veriler, hedef kitle öngörüler içinde yeni öngörü ve özellikleri etkinleştirir. Aktivite verilerinizi şemalara eşlemek için, [aktiviteler](activities.md) belgelerini gözden geçirin.
 
 **İş hesaplarına dayalı ortamlarda anlamsal eşlemeler şu anda etkin durumdadır**. *ContactProfile*, hedef kitle öngörülerinde şu anda kullanılabilir olan tek anlamsal eşleme türüdür.
 
-## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Bir ContactProfile anlamsal varlık eşlemesi tanımlayın
+## <a name="define-a-contactprofile-semantic-entity-mapping"></a>ContactProfile anlamsal varlık eşlemesi tanımlayın
 
 1. Hedef kitle öngörülerinde **Veri** > **Anlamsal eşlemeler (önizleme)** öğesine gidin.
 
@@ -75,8 +77,7 @@ Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şema
 
 1. Daha sonra bir anlamsal eşleme çalıştırmak için anlamsal eşlemeyi seçin ve **Yenile**'yi seçin.
 
-> [!TIP]
-> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies). İşin tüm ilerleme ayrıntılarını görmek için işlem durumunu seçebilirsiniz. İşin görevlerinden biri için **Ayrıntılara bakın** seçeneğini belirledikten sonra ek bilgiler bulursunuz: işleme süresi, son işleme tarihi ve görevle ilişkili tüm hatalar ve uyarılar.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Varolan anlamsal eşlemeleri yönetme
 
@@ -91,5 +92,41 @@ Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şema
 - **Yeniden Adlandır**: Seçili anlamsal eşleme için farklı bir ad girebileceğiniz bir iletişim kutusu açar. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
 
 - **Sil**: Seçili anlamsal eşlemenin silinmesini onaylamak için bir iletişim kutusu açar. Anlamsal eşlemeleri ve sil simgesini seçerek aynı anda birden fazla anlamsal eşlemeyi silebilirsiniz. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>İlgili kişi düzeyinde etkinlikler oluşturmak için ContactProfile anlamsal varlık eşlemesi kullanma
+
+*ContactProfile* anlamsal varlık eşlemesi oluşturduktan sonra ilgili kişilerin etkinliklerini yakalayabilirsiniz. Bu, her bir aktiviteden sorumlu olan bir firmanın etkinlik zaman çizelgesinde ilgili kişilerin etkinliklerini görmenizi sağlar. Çoğu adım, tipik etkinlik eşleme yapılandırmasını izler.
+
+   > [!NOTE]
+   > İlgili kişi düzeyindeki etkinliklerin çalışması için etkinlik verilerinizdeki tüm kayıtların hem **AccountID** hem de **ContactID** özniteliklerine sahip olmanız gerekir.
+
+1. [*ContactProfile* anlamsal varlık eşlemesi tanımlayın.](#define-a-contactprofile-semantic-entity-mapping) ve anlamsal eşlemeyi çalıştırın.
+
+1. Hedef kitle içgörülerinde, **Veri** > **Etkinlikler**'e gidin.
+
+1. Yeni bir etkinlik oluşturmak için **Etkinlik Ekle**'yi seçin.
+
+1. Etkinliğe bir ad verin, kaynak etkinlik varlığını seçin ve etkinlik varlığının birincil anahtarını seçin.
+
+1. **İlişkiler** adımında, ilgili kişi verilerinizi bir aracı varlık olarak kullanarak etkinlik kaynağı verileriniz ile firmalar arasında dolaylı bir ilişki oluşturun. Daha fazla bilgi için [doğrudan ve dolaylı ilişki yolları](relationships.md#relationship-paths) bölümüne bakın.
+   - *Satın Almalar* adlı bir etkinlik için örnek ilişki:
+      - **ContactID** özniteliğinde **Satın Almalar Kaynak Etkinlik Verileri** > **İlgili Kişi Verileri**
+      - **AccountID** özniteliğinde **İlgili Kişi Verileri** > **Firma Verileri**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="İlişki kurulumu örneği.":::
+
+1. İlişkileri kurduktan sonra **İleri**'yi seçin ve etkinlik eşleme yapılandırmanızı tamamlayın. Etkinlik oluşturma ile ilgili ayrıntılı adımlar için [etkinlik tanımlama](activities.md) bölümüne bakın.
+
+1. Etkinlik eşlemelerinizi çalıştırın.
+
+1. İlgili kişi düzeyindeki etkinlikleriniz artık müşteri zaman çizelgenizde görüntülenir.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="İlgili kişi etkinlikleri yapılandırması sonrasındaki nihai sonuç":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>İlgili kişi düzeyinde etkinlik zaman çizelgesi filtrelemesi
+
+İlgili kişi düzeyinde etkinlik eşlemesi yapılandırıldıktan ve çalıştırıldıktan sonra müşterileriniz için etkinlik zaman çizelgesi güncelleştirilir. Üzerinde işlem yaptıkları etkinlikler için *ContactProfile* yapılandırmanıza bağlı olarak müşterilerinizin kimliklerini veya adlarını içerir. İlgilendiğiniz belirli ilgili kişileri görmek için etkinlikleri zaman çizelgesinde ilgili kişilere göre filtreleyebilirsiniz. Ek olarak, **Etkinlikler İlgili Kişi ile eşlenmedi** öğesini seçerek belirli bir ilgili kişiye atanmamış tüm etkinlikleri görebilirsiniz.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="İlgili kişi düzeyindeki etkinlikler için filtreleme seçenekleri kullanılabilir.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

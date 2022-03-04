@@ -3,18 +3,17 @@ title: SFTP özel içeri aktarmayla zenginleştirme
 description: SFTP özel içeri aktarma zenginleştirmesi hakkında genel bilgiler.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304674"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229662"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Müşteri profillerini özel verilerle zenginleştirme (önizleme)
 
@@ -45,6 +44,8 @@ SFTP özel içeri aktarma zenginleştirmelerini yapılandırmak için aşağıda
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Veri konumuna girerken ekran görüntüsü.":::
 
+1. **İleri**'yi ve müşteri veri kümesini seçin. Bu, tüm müşteri profilleri veya bir segment olabilir.
+
 1. **İleri**'yi seçin ve Zenginleştirme için bir ad ve çıkış varlığı için bir ad girin. 
 
 1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
@@ -64,7 +65,7 @@ Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zengin
 1. Doğrulama tamamlandığında, bağlantı, **Kaydet** seçilerek kaydedilebilir.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian bağlantı Yapılandırması sayfası](media/enrichment-SFTP-connection.png "Experian bağlantı Yapılandırması sayfası")
+   > ![Experian bağlantısı yapılandırma sayfası.](media/enrichment-SFTP-connection.png "Experian bağlantı Yapılandırması sayfası")
 
 
 ## <a name="defining-field-mappings"></a>Alan eşlemelerini tanımlama 
@@ -123,6 +124,6 @@ Zenginleştirme işlemi tamamlandıktan sonra yeni içeri aktarılan özel zengi
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

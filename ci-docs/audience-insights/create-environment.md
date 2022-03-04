@@ -1,21 +1,23 @@
 ---
 title: Customer Insights'ta ortam oluşturma
 description: Dynamics 365 Customer Insights için lisanslı abonelikle ortam oluşturma adımları.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088137"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354119"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Hedef kitle içgörülerinde ortam oluşturma
 
@@ -76,12 +78,14 @@ Customer Insights'ın birden çok ortamını oluşturur ve bu ortamlardaki çık
    
 **Microsoft Dataverse** adımı, Customer Insights'ı Dataverse ortamınızla bağlamanızı sağlar.
 
-[Kullanıma hazır tahmin modellerini](predictions-overview.md#out-of-box-models) kullanmak için, Dataverse ile veri paylaşımını yapılandırın. Veya kuruluşunuzun yönettiği Microsoft Dataverse ortam URL'sini sağlayarak, yerinde veri kaynaklarından gelen verileri etkinleştirebilirsiniz . Customer Insights çıktı verilerini Dataverse tarafından yönetilen Data Lake ile paylaşmak için **Veri paylaşımını etkinleştir**'i seçin.
+Dynamics 365 Marketing veya Power Apps'teki model temelli uygulamalar gibi Dataverse'i temel alan iş uygulamalarıyla veri (profiller ve içgörüler) paylaşmak için kendi Microsoft Dataverse ortamınızı sağlayın. Kendi Dataverse ortamınız yoksa bu alanı boş bıraktığınızda sizin için bir ortam hazırlarız.
+
+Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve ağ geçitlerini kullanarak şirket içi veri kaynaklarından veri almanıza](data-sources.md#add-data-from-on-premises-data-sources) olanak tanır. Ayrıca bir Dataverse ortamına bağlanarak [kullanıma hazır tahmin modellerini](predictions-overview.md?tabs=b2c#out-of-box-models) de kullanabilirsiniz.
 
 > [!IMPORTANT]
 > Veri paylaşımını etkinleştirmek için Customer Insights ve Dataverse uygulamasının aynı bölgede olması gerekir.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Microsoft Dataverse ile veri paylaşımını etkinleştirmek için yapılandırma seçenekleri.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="net yeni kurulumlar için otomatik etkinleştirilen Microsoft Dataverse ile veri paylaşımı.":::
 
 > [!NOTE]
 > Customer Insights aşağıdaki veri paylaşımı senaryolarını desteklemez:

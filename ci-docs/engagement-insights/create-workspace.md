@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645334"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229101"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Yeni bir çalışma alanı oluşturma ve üye ekleme
 
@@ -26,17 +25,17 @@ Bir çalışma alanı, hedef kitle daha iyi anlaması için kullanıcı etkinli�
 
 ## <a name="create-a-new-workspace"></a>Yeni çalışma alanı oluştur
 
-Çalışma alanı oluşturma işlemi *ortamın* çalışma alanınızı düzenlemek için kurulumunu içerir. Bir ortam bir veya daha fazla çalışma alanı içerebilen bir alandır. Çalışma alanlarınızı ve Customer Insights hedef kitle öngörüler özelliklerine yönelik bağlantıları yönetmek için bir ortam kullanabilirsiniz.
+Çalışma alanı oluşturma işlemi *ortamın* çalışma alanınızı düzenlemek için kurulumunu içerir. Bir ortam bir veya daha fazla çalışma alanı içerebilen bir alandır. Çalışma alanlarınızı ve hedef kitle içgörüleri özelliğine bağlantılarınızı yönetmek için bir ortam kullanabilirsiniz.
 
-1. Çalışma alanı değiştiricisinden **yeni**'yi seçin.
+1. Çalışma alanı değiştiricisinden **+Yeni**'yi seçin.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Gezinti bölmesinde ve açıklamasında belirtme çizgisine sahip Customer Insights sayfası.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Gezinti bölmesinde ve açıklamada açıklama balonu bulunan Customer Insights sayfası.":::
 
 1. **Çalışma alanı** bölmesinde, bir **Çalışma alanı adı** girin.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Çalışma alanı adı yazın.":::
 
-1. Ölçmek istediğiniz platform türünü (Web veya mobil) seçin.
+1. Ölçmek istediğiniz platform türünü (web veya mobil) seçin.
 
 1. Bu isteğe bağlı ayarları etkinleştirmek veya devre dışı bırakmak için **Gelişmiş ayarları göster**'i seçin:
 

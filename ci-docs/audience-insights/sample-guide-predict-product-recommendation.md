@@ -3,26 +3,29 @@ title: Ürün önerisi tahmini örnek kılavuzu
 description: Kullanıma hazır ürün önerisi tahmini modelini denemek için bu örnek kılavuzu kullanın.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035209"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354671"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Ürün önerisi tahmini (önizleme) örnek kılavuzu
+# <a name="product-recommendation-prediction-sample-guide"></a>Ürün önerisi tahmini örnek kılavuzu
 
 Aşağıda sağlanan örnek verileri kullanarak size uçtan uca ürün önerisi tahmininin bir örneğini açıklayacağız.
 
 ## <a name="scenario"></a>Senaryo
 
-Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek kaliteli kahve ve kahve makineleri üreten bir şirkettir. Amaçları, yinelenen müşterilerine hangi ürünleri önermeleri gerektiğini anlamaktır. Müşterilerin hangi ürünleri **satın alma olasılıklarının** daha yüksek olduğunu bilmek belirli ürünlere odaklanarak pazarlama çalışmalarından tasarruf etmelerine yardımcı olabilir.
+Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee web sitesi üzerinden satış yapan bir şirkettir. Amaçları, yinelenen müşterilerine hangi ürünleri önermeleri gerektiğini anlamaktır. Müşterilerin hangi ürünleri **satın alma olasılıklarının** daha yüksek olduğunu bilmek belirli ürünlere odaklanarak pazarlama çalışmalarından tasarruf etmelerine yardımcı olabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -31,7 +34,7 @@ Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek ka
 
 ## <a name="task-1---ingest-data"></a>Görev 1: Veri alma
 
-Özellikle [veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) başlıklı makaleleri inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar.
+Özellikle [Veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) makalelerini inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Müşteri verilerini eCommerce platformundan alma
 

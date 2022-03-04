@@ -1,40 +1,47 @@
 ---
 title: Customer Insights verilerini AdRoll'a dışarı aktarma
-description: AdRoll'a bağlantının nasıl yapılandırılacağını öğrenin.
-ms.date: 02/15/2021
+description: Bağlantıyı yapılandırmayı ve AdRoll'a dışa aktarmayı öğrenin.
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
-ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
+ms.openlocfilehash: 3a318750077c71a17e5a47c40722f6153e6640f3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "5697098"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227644"
 ---
-# <a name="connector-for-adroll-preview"></a>AdRoll için bağlayıcı (önizleme)
+# <a name="export-segments-to-adroll-preview"></a>Segmentleri AdRoll'a aktarma (önizleme)
 
 Birleşik müşteri profilleri segmentlerini AdRoll'a dışa aktarın ve bunları reklam için kullanın. 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
 
 -   [AdRoll hesabınızın](https://www.adroll.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
 -   Hedef kitle içgörülerinde [yapılandırılmış segmentleriniz](segments.md) olmalıdır.
 -   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
-## <a name="connect-to-adroll"></a>AdRoll'a bağlan
+## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-1. **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+- AdRoll'a bir seferde 250.000 müşteri profili verebilirsiniz.
+- AdRoll'a 100'den az müşteri profili olan segmentleri aktaramazsınız. 
+- AdRoll'a dışarı aktarma segmentlerle sınırlıdır.
+- AdRoll'a 250.000'e kadar müşteri profili vermenin tamamlanması 10 dakikaya kadar sürebilir. 
+- AdRoll'a aktarabileceğiniz müşteri profilleri sayısı, AdRoll ile olan sözleşmeye bağlıdır.
 
-1. **AdRoll** altında, **Ayarla**'yı seçin.
+## <a name="set-up-connection-to-adroll"></a>AdRoll bağlantısını ayarlayın
 
-1. Dışarı aktarma hedefinize **Görünen ad** alanında tanınabilir bir ad verin.
+1. **Yönetici** > **Bağlantılar** gidin.
 
-   :::image type="content" source="media/AdRoll_config.PNG" alt-text="AdRoll bağlantısı için yapılandırma bölmesi.":::
+1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **AdRoll**'u seçin.
+
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
 
@@ -44,32 +51,35 @@ Birleşik müşteri profilleri segmentlerini AdRoll'a dışa aktarın ve bunlar�
 
 1. **Kendinizi dışarı aktarma kullanıcısı olarak ekleyin**'i seçin ve Customer Insights kimlik bilgilerinizi girin.
 
-1. **AdRoll Reklamveren Kimliği**'nizi girin[AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
 
-1. Dışarı aktarmayı yapılandırmak için **İleri**'yi seçin.
+## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
-## <a name="configure-the-connector"></a>Bağlayıcıyı yapılandırma
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Segmentleri AdRoll'a dışa aktarmak gerekir.
+1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-1. Dışarı aktarmak istediğiniz segmentleri seçin. En az 100 üye içeren bir segment seçin. Daha küçük segmentleri dışa aktaramazsınız. Buna ek olarak, dışa aktarılacak bir segmentin maksimum boyutu, dışa aktarma başına 250'000 üyedir. 
+1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
+
+1. **Dışa aktarma bağlantısı** alanında, AdRoll bölümünden bir bağlantı seçin. Bu bölüm adını görmüyorsanız, bu tür hiçbir bağlantı kullanabilirsiniz.
+
+1. **Adtop reklam verenin kimliğini** girin. Daha fazla bilgi için bkz. [AdRoll reklam verenin profilleri](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Segmentleri AdRoll'a dışa aktarmak gerekir.
+
+1. Dışarı aktarmak istediğiniz segmentleri seçin. En az 100 üye içeren bir segment seçin. Daha küçük segmentleri dışa aktaramazsınız. Buna ek olarak, dışa aktarılacak bir segmentin maksimum boyutu, dışa aktarma başına 250.000 üyedir. 
 
 1. **Kaydet**'i seçin.
 
-## <a name="export-the-data"></a>Verileri dışarı aktarma
+Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
-[Verileri isteğe bağlı olarak dışarı aktarabilirsiniz](export-destinations.md). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. 
 
-## <a name="known-limitations"></a>Bilinen sınırlamalar
+[Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
 
-- Dışa aktarma başına 250.000'e kadar profili AdRoll'a aktarabilirsiniz.
-- 100'den az profili olan segmentleri AdRoll'a dışa aktaramazsınız. 
-- AdRoll'a dışarı aktarma segmentlerle sınırlıdır.
-- AdRoll'a 250.000'den fazla profili dışa aktarmanın tamamlanması 10 dakika kadar sürebilir. 
-- AdRoll'a dışarı aktarabileceğiniz profil sayısı, AdRoll ile yaptığınız sözleşmeye bağlıdır ve sınırlıdır.
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 
 Dynamics 365 Customer Insights uygulamasının AdRoll'a veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak AdRoll'un sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman bu dışarı aktarma hedefini kaldırabilir.
+Dynamics 365 Customer Insights yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman bu dışarı aktarma hedefini kaldırabilir.

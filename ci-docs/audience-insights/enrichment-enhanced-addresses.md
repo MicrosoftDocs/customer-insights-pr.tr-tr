@@ -1,20 +1,25 @@
 ---
 title: Gelişmiş adres zenginleştirmesi (video içerir)
 description: Microsoft'un modelleriyle müşteri profillerinin adres bilgilerini zenginleştirin ve normalleştirin.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934947"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353660"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Müşteri profillerinin gelişmiş adreslerle zenginleştirilmesi
 
@@ -100,17 +105,17 @@ Zenginleştirme işlemini başlatmak için, komut çubuğundan **Çalıştır**'
 
 Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşteri profilleri verisini; **Zenginleştirmelerim** altında gözden geçirebilirsiniz. Ayrıca, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını da bulacaksınız.
 
-**Zenginleştirilmiş verileri görüntüle**'yi seçerek her zenginleştirilmiş profilin ayrıntılı görünümüne erişebilirsiniz.
+**Zenginleştirilmiş müşteriler önizlemesi** kutucuğunda zenginleştirilen verilerin bir örneğini görebilirsiniz. **Daha fazla göster**'i ve **Veriler** sekmesini seçerek her zenginleştirilen profilin ayrıntılı görünümüne erişin.
 
 ### <a name="overview-card"></a>Genel bakış kartı
 
 Genel bakış kartı, zenginleştirmenin kapsamıyla ilgili ayrıntıları gösterir. 
 
-* **İşlenen ve değiştirilen müşteriler**: Başarıyla zenginleştirilen müşteri profillerinin sayısı.
+* **İşlenen ve değiştirilen adresler**: Adreslerle başarıyla zenginleştirilen müşteri profillerinin sayısı.
 
-* **İşlenen ve değiştirilmeyen müşteriler**: Tanınan ancak değiştirilmeyen müşteri profillerinin sayısı. Genellikle giriş verileri geçerli olduğunda ve zenginleştirme ile iyileştirilemediğinde gerçekleştirilir.
+* **İşlenen ve değiştirilmeyen adresler**: Tanınan ancak değiştirilmeyen adres içeren müşteri profillerinin sayısı. Genellikle giriş verileri geçerli olduğunda ve zenginleştirmeyle iyileştirilemediğinde gerçekleştirilir.
 
-* **İşlenmeyen ve değiştirilmeyen müşteriler**: Tanınmayan profillerin sayısı. Genellikle geçersiz veya zenginleştirme tarafından desteklenmeyen giriş verileri içindir.
+* **İşlenmeyen ve değiştirilmeyen adresler**: Tanınmayan adres içeren müşteri profillerinin sayısı. Genellikle geçersiz veya zenginleştirme tarafından desteklenmeyen giriş verileri içindir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -3,18 +3,17 @@ title: GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri | Microsoft Docs
 description: Dynamics 365 Customer Insights hedef kitle içgörüleri özelliği için Veri Sahibi İstekleri'ni yanıtlama.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483716"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350293"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri
 
@@ -79,71 +78,78 @@ Kiracı yöneticisi verileri dışarı aktarmak için aşağıdaki adımları iz
 2. İstenen kullanıcı için verileri dışarı aktarma onayını kabul edin.
 3. Dışarı aktarılan verileri kiracı yöneticisi e-posta adresi üzerinden alın.
 
-## <a name="engagement-insights"></a>Etkileşim içgörüleri
+## <a name="consent-management-preview"></a>Onay yönetimi (önizleme)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Son kullanıcıya yönelik bilgileri içeren olay verilerini silmek ve vermek
+Onay yönetimi özelliği kullanıcı verilerini doğrudan toplamaz. Yalnızca diğer uygulamalarda kullanıcıların sağladığı onay verilerini alır ve işler.
 
-Aşağıdaki bölümlerde kişisel verileri içerebilecek olay verilerinin nasıl silineceği ve verileceği açıklanmaktadır.
+Belirli kullanıcılarla ilgili onay verilerini kaldırmak için, bu verileri onay yönetimi özelliğine alınan veri kaynaklarından kaldırın. Veri kaynağını yeniledikten sonra, kaldırılan veriler Onay Merkezi'nden de silinir. Onay varlığını kullanan uygulamalar, [yenilemeden](audience-insights/system.md#refresh-processes) sonra kaynakta kaldırılan verileri de siler. Veri sahibi isteğine yanıt verdikten sonra, kullanıcı verileri tüm diğer işlemlerden ve uygulamalardan kaldırmak için veri kaynaklarını hızlıca yenilemenizi öneririz.
 
-Verileri silmek veya dışa aktarmak için:
 
-1. Kişisel bilgileri içeren verilerin yer aldığı etiketi olay özellikleri.
-2. Belirli değerlerle ilişkili verileri silin veya dışa aktarın (örneğin: belirtilen kullanıcı KIMLIĞI).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Etiket ve güncelleştirme olayı özellikleri
+### Deleting and exporting event data containing end user identifiable information
 
-Kişisel veriler, olay özellik düzeyinde etiketlenir. Önce, özellikleri silme veya verme için kabul edilmekte olarak etiketleyin.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Bir olay özelliğini kişisel bilgiler içerecek şekilde etiketlemek için şu adımları izleyin:
+To delete or export data:
 
-1. Olayı içeren çalışma alanını açın.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Seçilen çalışma alanındaki olayların listesini görmek için **Veriler** > **Olaylar** veri olaylarına gidin.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Etiketlemek istediğiniz olayı seçin.
+1. Select the event you want to tag.
 
-1. Seçili olayın tüm özelliklerinin listelendiği bölmesini açmak için **özellikleri düzenle**'yi seçin.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Seçeneğini belirleyin **...** ve ardından **özellik güncelleştirme** iletişim kutusuna erişmek için **Düzenle**'yi seçin.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Etkinliği düzenleyin.](engagement-insights/media/edit-event.png "Olayı düzenle")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. **Özellik güncelleştirme** penceresinde, sağ üst köşedeki **...** öğesini seçin ve ardından **EUII içerir** kutusunu seçin. Değişikliklerinizi kaydetmek için **Güncelle**'yi seçin.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Değişikliklerinizi kaydedin.](engagement-insights/media/update-property.png "Yaptığınız değişiklikleri kaydedin")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Olay şemasının her değiştiği veya yeni bir olay oluşturduğunuzda, gerekirse ilişkili olay özelliklerini ve etiketi değerlendirmeniz ya da kişisel verileri içerecek şekilde etiketi geri yapmanız önerilir.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>Etiketli olay verilerini silme veya verme
+#### Delete or export tagged event data
 
-Önceki adımda açıklanan tüm olay özellikleri uygun şekilde etiketlenmişse, ortam yöneticisi etiketli olay verileriyle ilgili silme isteği verebilir.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-EUII silme veya dışa aktarma isteklerini yönetmek için
+To manage EUII deletion or export requests
 
-1. **Yönetici** > **Ortam** > **Ayarlar**'e gidin.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. **Son Kullanıcı tanımlanabilen bilgileri yönetme (EUII)** bölümünde, **EUII Yönet** seçeneğini belirleyin.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Silme
+##### Deletion
 
-Silme işlemi için, **Son Kullanıcı tanımlanabilen bilgileri (EUII) sil** bölümüne, virgülle ayrılmış kullanıcı kimlikleri listesi girebilirsiniz. Bu kimlikler daha sonra, geçerli ortamdaki tüm projelerin tüm etiketlenmiş olay özellikleriyle, tam dize eşleştirmesi aracılığıyla karşılaştırılır. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Özellik değeri sağlanan kimliklerden biriyle eşleşiyorsa, ilişkili olay kalıcı olarak silinir. Bu eylemin geri yankı nedeniyle, **Sil**'i seçtikten sonra silme işlemini onaylamanız gerekir.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-**Son kullanıcı tanınabilir bilgileri (EUII) dışa aktar** bölümündeki olay özellik değerlerini tanımlamaya girdiğinde, dışa aktarma işlemi silme işlemiyle aynıdır. Buna ek olarak, verme hedefini belirtmek için bir **Azure Blob depolama URL**'si sağlamanız gerekir. Azure Blob URL'si bir [paylaşılan erişim imzası (SAS)](/azure/storage/common/storage-sas-overview) içermelidir.
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-**Dışa aktar**'ı seçtikten sonra, geçerli ekibin eşleşen etiketli özellikleri içeren tüm olayları verme hedefine CSV biçiminde verilir.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>İyi uygulamalar
+### Good practices
 
-* Kişisel veri içeren herhangi bir olay göndermekten kaçınılmasını deneyin.
-* EUII verileri içeren olaylar göndermeniz gerekirse, olayların sayısını ve EUıı Data içeren olay özelliklerini sınırlayın. İdeal olarak, bu tür bir olayla kendinizi sınırlayın.
-* Olabildiğince az kişinin gönderilen kişisel verilere erişimi olduğundan emin olun.
-* Kişisel verileri içeren olaylar için, belirli bir kullanıcıya (örneğin, bir kullanıcı kimliği) kolayca bağlantılandırılan benzersiz bir tanımlayıcı sunmak için bir özellik ayarladığınızdan emin olun. Bu, verilerin bir altına eklenmesini ve doğru verileri verilmesini veya silinmesini kolaylaştırır.
-* Kişisel verileri içerecek şekilde, her olay için bir özelliğini etiketleyin. Yalnızca benzersiz tanıtıcı içeren ideal bir tanesi.
-* Ayrıntılı değerler içeren özellikleri (örneğin, tüm istek gövdesi) etiketetmeyin. Etkileşim içgörüleri özelliği, hangi olayların silineceğini veya verileceğini saptarken tam dize eşleştirmesi kullanır.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

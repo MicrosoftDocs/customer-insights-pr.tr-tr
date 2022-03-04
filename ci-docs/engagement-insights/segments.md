@@ -4,17 +4,16 @@ description: Segment oluşturma, düzenleme, silme ve segmentlerin kullanılaca�
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e99c04e6c92d8ca16c2d69957e0f5b7dba0ac757
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036172"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225400"
 ---
 # <a name="view-and-create-segments"></a>Segmentleri görüntüleme ve oluşturma
 
@@ -44,22 +43,27 @@ Bu bölümde, sıfırdan *boş bir segmentin* nasıl oluşturulacağı açıklan
 
 1. **Yeni segment**'i seçin.
 
-1. **Kaynak kitaplığında**, filtre ölçütü olarak kullanmak istediğiniz özniteliği seçin. Şu anda yalnızca boyutlara dayalı segmentler oluşturabilirsiniz.
+1. **Kaynak Kitaplığı**'nda, filtre uygulamak istediğiniz özniteliğin yanındaki (+) seçeneğini belirleyin. Şu anda yalnızca boyutlara dayalı segmentler oluşturabilirsiniz.
 
-1. Seçili öznitelik için bir işleç ve bir değer seçin. Aşağıdaki işlemler desteklenmektedir:
+   :::image type="content" source="media/create-new-segment.png" alt-text="Yeni segment oluşturma.":::
+
+1. **Kural** bölümünde, seçili öznitelik için bir işleç ve bir değer seçin. Aşağıdaki işlemler desteklenmektedir:
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Yeni segmentiniz için bir işleç seçin.":::
+
    - **eşit**: değerleri içermek için tam bir eşleşme gerektirir. Tek bir değer için **şuna eşit** ve birden çok değer eklemek için **herhangi biri** kullanır.
    - **eşit değil**: değerleri dışarıda bırakmak için tam bir eşleşme gerektirir. Tek bir değer için **şuna eşit** ve birden çok değer eklemek için **herhangi biri** kullanır.
    - **ile başlar**: eşleşen değerlerin başındaki dize.
    - **ile biter**: eşleşen değerlerin sonundaki dize.
    - **içerir**: eşleşen değerlerin içerdiği bir dize.
 
-1. Gruba daha fazla koşul eklemek için iki mantıksal işleç kullanabilirsiniz. Tasarlanan öznitelikler, ayarla işleçleri kullanılırken uygulamasında çarpanlarına göre belirlenir.
+1. Bir gruba daha fazla koşul eklemek için mantıksal işleçler kullanabilirsiniz. Tasarlanan öznitelikler, ayarla işleçleri kullanılırken uygulamasında çarpanlarına göre belirlenir.
    - **VE** işleci: Her iki koşul da segmentlere ayırma işleminin bir parçası olarak karşılanmalıdır. Bu seçenek en çok farklı varlıklardaki koşulları tanımladığınızda kullanışlıdır.
    - **VEYA** işleci: Her iki koşuldan birinin segmentlere ayırma işleminin bir parçası olarak karşılanması gerekir. Bu seçenek en çok aynı varlık için birden çok koşul tanımladığınızda kullanışlıdır.
 
 1. **Kaydet**'i seçin ve segmenti adlandırın. 
 
-Segment, Segmentler sayfasında listelenir ve çalışma alanındaki tüm raporlara ve hunilere uygulanabilir.
+Segment, **Segmentler** sayfasında listelenir ve çalışma alanındaki tüm raporlara ve hunilere uygulanabilir.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Raporda veya hunide segment kullanma
 
@@ -67,7 +71,7 @@ Segmentteki koşullara göre filtrelemek için, segmentleri bir rapora veya bir 
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Hangi parçaların uygulanacağını seçmek için genişletilmiş bir açılan liste içeren bir sayfa görüntüler.":::
 
-Bir segment uygulamak için, raporu veya huniyi açın. **Koşulu ekle**'yi ve **Segmente göre filtrele**'yi seçin. Uygulamak istediğiniz listeden segmenti seçin. Segment rapora uygulanır. Grafik segmenti desteklemiyorsa bir hata gösterir.
+Bir segment uygulamak için, raporu veya huniyi açın. **+ Koşulu ekle**'yi ve **Segmente göre filtrele**'yi seçin. Uygulamak istediğiniz listeden segmenti seçin. Segment rapora uygulanır. Grafik segmenti desteklemiyorsa bir hata gösterir. Daha fazla bilgi için bkz. [Huni raporu oluşturma ve yönetme](funnel-reports.md).
  
 Bir rapora veya huniye *en fazla üç segment* uygulayabilirsiniz.
 
@@ -91,5 +95,7 @@ Bir rapora veya huniye *en fazla üç segment* uygulayabilirsiniz.
 1. Segment listesinde, **Diğer [...]** seçeneğini belirleyin. 
 1. Açılan listeden **Sil**'i seçin.
 1. Onaylamak için **Sil**'i seçin.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

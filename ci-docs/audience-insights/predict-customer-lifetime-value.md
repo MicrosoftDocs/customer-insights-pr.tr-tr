@@ -3,20 +3,24 @@ title: Müşteri yaşam süresi değeri (CLV) tahmini
 description: Gelecekteki etkin müşterilerin gelir potansiyelini tahmin edin.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035393"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355813"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Müşteri yaşam süresi değeri (CLV) tahmini (Önizleme)
+# <a name="customer-lifetime-value-clv-prediction"></a>Müşteri yaşam süresi değeri (CLV) tahmini
 
 Tek tek etkin müşterilerin gelecekteki belirli bir dönemde işinize kazandıracağı olası değeri (geliri) tahmin edin. Bu özellik çeşitli hedeflere ulaşmanıza yardımcı olabilir: 
 - Yüksek değerli müşterileri belirleme ve bu içgörüyü işleme
@@ -65,7 +69,7 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
     - Veri tamlığı: Giriş verilerindeki gerekli alanlarda %20'den az eksik değer   
 
 > [!NOTE]
-> - Model, müşterilerinizin hareket geçmişini gerektiriyor. Şu anda yalnızca bir işlem geçmişi varlığı yapılandırılabilir. Birden çok satın alma/işlem varlığı varsa, veri alımından önce Power Query alabilirsiniz.
+> - Model, müşterilerinizin hareket geçmişini gerektiriyor. Şu anda yalnızca bir işlem geçmişi varlığı yapılandırılabilir. Birden çok satın alma/işlem varlığı varsa bunları veri alımından önce Power Query'de birleştirebilirsiniz.
 > - Ancak, ek müşteri etkinliği verileri (isteğe bağlı) için, model tarafından değerlendirilmek üzere istediğiniz kadar müşteri etkinliği varlığı ekleyebilirsiniz.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Müşteri Yaşam Süresi Değeri tahmini oluşturma
@@ -74,7 +78,7 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
 
 1. **Müşteri yaşam süresi değeri** kutucuğunu seçin ve **Modeli kullan** seçeneğini belirleyin. 
 
-1. **Müşteri yaşam süresi değeri (önizleme)** bölmesinde, **Başlayın**'ı seçin.
+1. **Müşteri yaşam süresi değeri** bölmesinde **Başlarken**'i seçin.
 
 1. Bunları diğer modeller veya varlıklarından ayırt etmek için **Bu modeli adlandırın** ve **Çıkış varlığı adı**'nı seçin.
 

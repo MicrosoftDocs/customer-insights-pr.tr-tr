@@ -3,26 +3,25 @@ title: İşlem tabanlı erime tahmini örnek kılavuzu
 description: Kullanıma hazır işlem tabanlı erime tahmini modelini denemek için bu örnek kılavuzu kullanın.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029469"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354625"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>İşlem tabanlı erime tahmini (önizleme) örnek kılavuzu
+# <a name="transactional-churn-prediction-sample-guide"></a>İşlem tabanlı erime tahmini örnek kılavuzu
 
-Bu kılavuzda, aşağıda sağlanan verileri kullanarak Customer Insights'ta uçtan uca İşlem Tabanlı Erime tahmini örneği açıklanmaktadır. Bu kılavuzda kullanılan tüm veriler gerçek müşteri verileri değildir ve Customer Insights aboneliğinizde *Demo* ortamında bulunan Contoso veri kümesi parçasıdır.
+Bu kılavuzda, aşağıda sağlanan verileri kullanarak Customer Insights'ta uçtan uca İşlem Tabanlı Erime tahmini örneği açıklanmaktadır. Bu kılavuzda kullanılan verilerin tamamı gerçek olmayan müşteri verileridir ve Customer Insights Aboneliğinizdeki *Demo* ortamında bulunan Contoso veri kümesinin bir parçasıdır.
 
 ## <a name="scenario"></a>Senaryo
 
-Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek kaliteli kahve ve kahve makineleri üreten bir şirkettir. Amaçları, ürünlerini düzenli olarak satın alan müşterilerden hangilerinin sonraki 60 gün içinde etkin müşteri olmayı bırakacağını öğrenmektir. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
+Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee web sitesi üzerinden satış yapan bir şirkettir. Amaçları, ürünlerini düzenli olarak satın alan müşterilerden hangilerinin sonraki 60 gün içinde etkin müşteri olmayı bırakacağını öğrenmektir. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -31,7 +30,7 @@ Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek ka
 
 ## <a name="task-1---ingest-data"></a>Görev 1: Veri alma
 
-Özellikle [veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) başlıklı makaleleri inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar. 
+Özellikle [Veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) makalelerini inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Müşteri verilerini eCommerce platformundan alma
 
@@ -149,7 +148,7 @@ Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Görev 3: İşlem tabanlı erime tahmini yapılandırma
 
-Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çalıştırabiliriz. Ayrıntılı adımlar için [Abonelik erimesi tahmini (önizleme)](predict-subscription-churn.md) başlıklı makaleye bakın. 
+Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çalıştırabiliriz. Ayrıntılı adımlar için [Abonelik erime tahmini](predict-subscription-churn.md) makalesine bakın. 
 
 1. **Yönetim Bilgileri** > **Keşfet**'e gidin ve **Müşteri erimesi modeli**'ni seçerek kullanın.
 

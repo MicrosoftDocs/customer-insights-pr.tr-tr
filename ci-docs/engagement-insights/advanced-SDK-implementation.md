@@ -4,17 +4,16 @@ description: Web sitenizin bir SDK ile birlikte çalışırken dikkate alınacak
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 11/12/2020
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a083d8215f295af0884257a016b62b8c7e4ab2c7
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036352"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227222"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Gelişmiş Web SDK araçları
 
@@ -33,20 +32,20 @@ SDK, her olayla gönderilebilecek Kullanıcı bilgilerini tanımlamanıza olanak
 - **authType** : kimliği doğrulanmış kullanıcı kimliğini almak için kullanılan kimlik doğrulama türü.
 - **name**: Kullanıcının adı.
 - **email**: Kullanıcının e-posta adresi.
-    
-Aşağıdaki örnek, kullanıcı bilgileri gönderirken bir kod kod parçacığı gösterir. * ile belirtilen işlevleri gördüğünüz yerde, bu değerleri çağırma uygulamanıza göre değiştirin:  
+
+Aşağıdaki örnek, kullanıcı bilgileri gönderirken bir kod kod parçacığı gösterir. Önünde bir yıldız * simgesi olan işlevleri gördüğünüzde, işlevi özel uygulamanız ile değiştirin:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     user:{
@@ -58,25 +57,25 @@ window, document
 […]
 ```
 
-SDK'de `setUser(user: IUser)` API'yi çağırarak Kullanıcı bilgilerini de belirtebilirsiniz. `setUser API` çağrısından sonra gönderilen telemetri Kullanıcı bilgilerini içerir.
+Ayrıca `setUser(user: IUser)` API'sını çağırarak kullanıcı bilgilerini de belirtebilirsiniz. `setUser` API'sı çağrıldıktan sonra gönderilen telemetri kullanıcı bilgilerini içerir.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Her olay için özel özellikler ekleme
 
-SDK, her olayla gönderilebilecek özel özellikleri belirtmenize olanak sağlar. Özel özellikleri, anahtar-değer çiftlerini içeren bir nesne olarak belirtebilirsiniz (Bu değer, `string | number | boolean` türünde olabilir). Nesne, kod parçacığı yapılandırmasındaki `src`, `name` ve `cfg` ile bnzeyen `props` olarak adlandırılan bir özelliğe eklenebilir. 
+SDK, her olayla gönderilebilecek özel özellikleri belirtmenize olanak sağlar. Özel özellikleri, anahtar-değer çiftlerini içeren bir nesne olarak belirtebilirsiniz (Bu değer, `string | number | boolean` türünde olabilir). `props` olarak adlandırılan özelliğe nesneyi ekleyebilirsiniz; kod parçacığı yapılandırmasındaki `src`, `name` ve `cfg` ile aynı şekilde.
 
 Aşağıdaki örnek, özel özellikleri gönderirken bir kod kod parçacığı gösterir:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     props:{
@@ -87,7 +86,7 @@ window, document
 […]
 ```
 
-SDK'de `setProperty(name: string, value: string | number | boolean)` API'yi çağırarak ayrıca özel özellikleri belirtebilirsiniz .
+Ayrıca `setProperty(name: string, value: string | number | boolean)` API'sını çağırarak özel özellikleri ayrı olarak da belirtebilirsiniz.
 
 ## <a name="sending-custom-events"></a>Özel olaylar gönderme
 

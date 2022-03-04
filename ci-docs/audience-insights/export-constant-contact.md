@@ -1,20 +1,19 @@
 ---
 title: Customer Insights verilerini Constant Contact'a aktarma
 description: Bağlantıyı yapılandırmayı ve Constant Contact'da dışa aktarmayı öğrenin.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124297"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226427"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentleri Constant Contact'a aktarma (önizleme)
 
@@ -28,10 +27,10 @@ Birleşik müşteri profillerinin bölümlerini Constant Contact'a verin ve bunl
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Constant Contact'a verme başına en fazla 1000000 profili verebilirsiniz.
+- Sürekli İletişim'e verme başına en fazla 1 milyon müşteri profili verebilirsiniz.
 - Constant Contact'a verilmesi kesimlerle sınırlıdır.
-- 1000000 profilin Constant Contact'e aktarılması için en fazla 1 saat geçmesi gerekebilir. 
-- Constant Contact'e verebileceğiniz profil sayısı bağımlıdır ve Constant Contactile sözleşmeniz üzerinde sınırlıdır.
+- Sürekli İletişim'e 1 milyona kadar müşteri profili vermenin tamamlanması 1 saate kadar sürebilir. 
+- Sürekli İletişim'e aktarabileceğiniz müşteri profilleri sayısı, Sürekli İletişim ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Constant Contact'a bağlantı ayarlayın
 
@@ -47,7 +46,7 @@ Birleşik müşteri profillerinin bölümlerini Constant Contact'a verin ve bunl
 
 1. Constant Contact Bağlantısı başlatmak için **Bağlan**'nı seçin.
 
-1. **Constant Contact ile kimlik doğrulaması** seçin ve Constant Contact için yönetici kimlik bilgilerinizi sağlayın. 
+1. **Constant Contact ile kimlik doğrula**'yı seçin ve Constant Contact için yönetici kimlik bilgilerinizi sağlayın. 
 
 1. **Kendinizi dışarı aktarma kullanıcısı olarak ekleyin**'i seçin ve Customer Insights kimlik bilgilerinizi girin.
 
@@ -65,7 +64,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. [**Constant Contact liste kimliği**](https://app.constantcontact.com/pages/contacts/ui#lists) girin. URL 'de liste kimliğini bulmak için Constant Contact listesini açın.
 
-1. **Veri eşleştirme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden birleşik müşteri profilinizdeki alanı seçin. Constant Contact'e segmentleri aktarmak gerekir.
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Constant Contact'e segmentleri aktarmak gerekir.
 
 1. İsteğe bağlı olarak, daha kişiselleştirilmiş e-postalar oluşturmak için Ad ve Soyadı'nı ek alanlar olarak dışarı aktarabilirsiniz. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
 

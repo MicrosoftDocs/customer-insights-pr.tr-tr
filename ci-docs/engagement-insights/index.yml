@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Dynamics 365 Customer Insights'ta (önizleme) etkileşim içgörüleri özellikleri
-summary: Web siteleriniz için veri toplayın. Tüm siteleriniz üzerinde etkileşimli olarak müşteri etkileşimlerini ve kullanımı anlayın. Gerçek zamanlı davranış analizlerinizi müşteri profili raporlarıyla zenginleştirmek için, etkileşim öngörüleri ve hedef kitle öngörüleri arasındaki derin tümleştirmeyi kullanın. İlgili müşteri verileriyle gerçek zamanlı davranış verileri almak için Web etkinlikleriyle müşteri profillerini zenginleştirin. Müşteri verilerinizde anında değer oluşturmak için işinizi dönüştürün.
+title: Etkileşim içgörüleri önizlemesi sonu
+summary: Dynamics 365 Customer Insights etkileşim içgörüleri özelliği önizlemesi 15 Şubat 2022 tarihinde sona erdi. Bu değişiklik, Customer Insights deneme sürümü deneyiminin artık huni ve diğer raporlama işlevlerini oluşturma olanağı içermediği anlamına gelmektedir. Sizi Microsoft Müşteri Verileri Platformu (CDP) olan Customer Insights uygulamasının diğer birçok özelliğini keşfedip değerlendirmeye davet ediyoruz. Özellik önizlemesinin sonu hakkında sorularınız varsa lütfen doğrudan Microsoft Hesabı ekibinize başvurun. Hesap Ekibiniz, yaklaşan başlatmalar hakkında sizi güncel tutar. Teşekkürler!
 metadata:
   title: Etkileşim içgörüleri (önizleme) belgeleri
   description: Yardım Merkezi'nde, etkileşim Öngörüleri için önemli bağlantılar vardır.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494208"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350523"
 landingContent:
-- title: Hakkında
+- title: İletişime geçme
   linkLists:
   - linkListType: overview
     links:
-    - text: Özellik yararları
-      url: overview.md
-    - text: Terimler sözlüğü
-      url: glossary.md
-    - text: Yeni ve güncelleştirilmiş özellikler
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
-- title: Ekleme
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Kullanmaya başlama
-      url: get-started.md
-    - text: Çalışma alanı oluştur
-      url: create-workspace.md
-    - text: Web sitenizi işaretleme
-      url: instrument-website.md
-- title: Raporları görüntüleme ve filtreleme
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Raporları görüntüleyin
-      url: view-reports.md
-    - text: Birleşik profiller raporunu görüntüleme
-      url: profile-reports.md
-    - text: Raporlara filtre uygulamak için hedef kitle segmentlerini kullanma
-      url: integrate-audience-insights-segments.md
-- title: Analiz et
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Huni raporlar oluştur
-      url: funnel-reports.md
-    - text: Davranışsal verileri çözümleme
-      url: curate-dimensions.md
-    - text: Özel raporlar oluştur
-      url: custom-reports.md
-    - text: İyileştirilmiş olaylar oluştur
-      url: refined-events.md
-    - text: Olayları dışarı aktar
-      url: export-events.md
-- title: Geliştirici kaynakları
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Geliştirici kaynakları
-      url: developer-resources.md
-    - text: WebSDK örneği
-      url: websdk-sample.md
-    - text: Gelişmiş web SDK senaryoları
-      url: advanced-SDK-implementation.md
-    - text: Android SDK Numunesi
-      url: get-started-android.md
-    - text: iOS SDK örneği
-      url: get-started-ios.md
-- title: Yönetim
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Ortamları ve çalışma alanlarını yönetme
-      url: manage-environments-workspaces.md
-    - text: Hedef kitle içgörülerine bağlanın
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Tanımlama bilgilerini ve kullanıcı onayını yönetme
-      url: user-consent-storage.md
-    - text: Kişisel verileri silme ve dışarı aktarma
-      url: delete-export-personal-data.md
-    - text: Hizmet sınırları
-      url: ../service-limits.md
+    - text: Dynamics 365 topluluğuna katılma
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Fikirlerinizi paylaşın
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Sorun bildir
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

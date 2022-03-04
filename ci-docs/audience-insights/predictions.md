@@ -1,24 +1,28 @@
 ---
 title: Tahminleri kullanarak kısmi verileri tamamlama
 description: Eksik müşteri verilerini doldurmak için tahminler kullanın.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645058"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354027"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Tahminlerle kısmi verilerinizi tamamlama
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Kısmi verilerinizi tahminlerle tamamla (kullanım dışı)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Bu özellik **5 Kasım 2021** itibariyle **kullanımdan kalkacaktır**. Geçerli uygulamalar Özellik kaldırılana kadar çalışmaya devam edecektir ancak aşağıdaki yönergeleri kullanarak yeni tümleştirmeler oluşturamazsınız.
 
 Tahminler, bir müşteri hakkındaki kavrayışınızı artırabilecek tahmini değerleri kolayca oluşturmanıza olanak tanır. **Yönetim Bilgileri** > **Tahminler** sayfasında, hedef kitle içgörülerinin diğer bölümlerinde yapılandırdığınız tahminleri görmek ve bunları daha da özelleştirmek için **Tahminlerim**'i seçebilirsiniz.
 
@@ -60,6 +64,8 @@ Daha fazla bilgi için [Yeni ortam oluşturma](create-environment.md) konusuna b
    > ![Kategorilere eşlenen alan değerlerini gösteren örnek.](media/intelligence-categorymapping.png "Kategorilere eşlenen alan değerlerini gösteren örnek")
 
 8. **Bitti**'yi seçtiğinizde tahmin işlenir. İşleme, verilerin boyutuna ve karmaşıklığına bağlı olarak biraz zaman alır. Sonuçlar, oluşturduğunuz tahminin **Çıkış varlığı adı** temel alınarak yeni bir varlıkta kullanılabilir.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Segment oluştururken tahmin oluşturma
 
@@ -110,7 +116,7 @@ Bu akışın bir parçası olarak Müşteri Memnuniyeti veya Satın Alma Tutarı
 
 ## <a name="edit-a-prediction"></a>Tahmini düzenleme
 
-Tahmini oluşturduktan sonra modelinizin etkinliğini artırmak için AI Builder içinde modeli özelleştirebilirsiniz.  
+Tahmin oluşturduktan sonra modelinizin verimliliğini artırmak için AI Builder'da modeli özelleştirebilirsiniz.  
 
 1. Hedef kitle içgörülerinde, **Yönetim Bilgileri** > **Tahminler** > **Tahminlerim**'e gidin.
 
@@ -118,14 +124,14 @@ Tahmini oluşturduktan sonra modelinizin etkinliğini artırmak için AI Builder
 
 3. **Eylemler** sütununda üç noktayı ve **Görüntüle**'yi seçin.
 
-4. **AI Builder'da özelleştir**'i seçin.
+4. **AI Builder'da Özelleştir**'i seçin.
 
 5. AI Builder'da modelinizi güncelleştirin. [AI builder'da modelleri yönetme hakkında daha fazla bilgi edinin](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Tahmini tekrar çalıştırdığınızda oluşturduğunuz güncelleştirilmiş model kullanılır.
 
 > [!NOTE]
-> AI Builder'da oluşturulan yeni modeller, model yukarıda listelenen deneyimlerden oluşturulmadığı sürece hedef kitle içgörülerinde gösterilmez.
+> AI Builder'da oluşturulan yeni modeller, model yukarıda listelenen deneyimlerden oluşturulmadıkça hedef kitle içgörülerinde görüntülenmez.
 
 ## <a name="remove-a-prediction"></a>Tahmini kaldırma
 

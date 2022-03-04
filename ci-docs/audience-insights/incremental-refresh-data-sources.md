@@ -1,22 +1,24 @@
 ---
 title: Power Query tabanlı veri kaynakları için artımlı yenileme
-description: Power Query tabanlı büyük veri kaynakları için yeni ve güncelleştirilmiş verileri yenileyin.
+description: Power Query'yi temel alan büyük veri kaynakları için yeni ve güncelleştirilmiş verileri yenileyin.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900309"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353729"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query tabanlı veri kaynakları için artımlı yenileme
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query'yi temel alan veri kaynakları için artımlı yenileme
 
 Bu makalede, Power Query'yi temel alan veri kaynakları için artımlı yenilemenin nasıl yapılandırılacağı anlatılmaktadır.
 
@@ -28,9 +30,9 @@ Veri kaynakları için artımlı yenileme aşağıdaki avantajları sağlar:
 
 ## <a name="configure-incremental-refresh"></a>Artımlı yenilemeyi yapılandır
 
-Hedef kitle içgörüleri, artımlı alımı destekleyen Power Query üzerinden içeri aktarılan veri kaynakları için artımlı yenilemeye olanak tanır. Örneğin, tarih ve saat alanlarıyla birlikte, veri kayıtlarının en son ne zaman güncelleştirildiği zamanı gösteren Azure SQL veritabanları.
+Hedef kitle içgörüleri, Power Query üzerinden içeri aktarılan ve artımlı alımı destekleyen veri kaynakları için artımlı yenilemeye izin verir. Örneğin, tarih ve saat alanlarıyla birlikte, veri kayıtlarının en son ne zaman güncelleştirildiği zamanı gösteren Azure SQL veritabanları.
 
-1. [Power Query tabanlı yeni veri kaynağı oluşturma](connect-power-query.md).
+1. [Power Query'yi temel alan yeni bir veri kaynağı oluşturma](connect-power-query.md).
 
 1. Veri kaynağı için bir **Ad** girin.
 

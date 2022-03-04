@@ -1,29 +1,28 @@
 ---
 title: Microsoft Teams için bot
 description: Bot yardımıyla Microsoft Teams'te birleşik müşteri profillerini arayın.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407208"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232126"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Dynamics 365 Customer Insights için Teams botu (önizleme)
 
 Botun Teams kanallarında birleşik müşteri profillerini aramasını sağlamak için Microsoft Teams ile bağlanın.
 
 > [!div class="mx-imgBorder"]
-> ![Müşteri kaydını gösteren Teams botu](media/teams-bot.png "Müşteri kaydını gösteren Teams botu")
+> ![Müşteri kaydını gösteren Teams botu.](media/teams-bot.png "Müşteri kaydını gösteren Teams botu")
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Botu ayarlamak ve yapılandırmak için aşağıdaki önkoşulların karşılanması gerekir:
 
@@ -31,7 +30,10 @@ Botu ayarlamak ve yapılandırmak için aşağıdaki önkoşulların karşılanm
 - [Birleştirme işleminin](data-unification.md) tamamlanması.
 - Alanların [arama ve filtre dizinine](search-filter-index.md) eklenmesi.
 - Customer Insights ve Teams'in aynı kuruluşta olması.
+- Ortamınızın birincil hedef kitlesi, bağımsız müşterilere ayarlanmıştır. İşletme hesapları desteklenmez.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Botu yapılandırma
 
 1. Hedef kitle içgörülerinde, **Yönetici** > **Dışarı Aktarma Hedefleri**'ne gidin.
@@ -52,3 +54,6 @@ Bot, birleşik müşteri profilleri için arama özellikleri sağlar.
 - Kuruluşunuz aynı kuruluşta birden çok Customer Insights ortamı kullanıyorsa botu bağlamak istediğiniz ortamı seçmek için **switchinstance** girebilirsiniz.
 
 - Bot için kullanılabilir komutların bir listesini görmek üzere **yardım** girin.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

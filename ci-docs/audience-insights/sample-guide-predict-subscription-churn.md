@@ -3,26 +3,28 @@ title: Abonelik erimesi tahmini örnek kılavuzu
 description: Kullanıma hazır abonelik erimesi tahmin modelini denemek için bu örnek kılavuzu kullanın.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306327"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355637"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Abonelik erimesi tahmini (önizleme) örnek kılavuzu
+# <a name="subscription-churn-prediction-sample-guide"></a>Abonelik erimesi tahmini örnek kılavuzu
 
 Aşağıda sağlanan örnek verileri kullanarak size uçtan uca abonelik erimesi tahmininin bir örneğini açıklayacağız. 
 
 ## <a name="scenario"></a>Senaryo
 
-Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek kaliteli kahve ve kahve makineleri üreten bir şirkettir. Yakın zamanda müşterilerinin düzenli olarak kahve alması için bir abonelik işi başlattılar. Hedefleri, abone olan müşterilerin sonraki birkaç ay içinde aboneliklerini iptal edip etmeyeceğini anlamaktır. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
+Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee web sitesi üzerinden satış yapan bir şirkettir. Yakın zamanda müşterilerinin düzenli olarak kahve alması için bir abonelik işi başlattılar. Hedefleri, abone olan müşterilerin sonraki birkaç ay içinde aboneliklerini iptal edip etmeyeceğini anlamaktır. Hangi müşterilerinin **erime olasılığı** olduğunu öğrenmek, daha az pazarlama çalışması yaparak bu müşterileri korumaya odaklanmalarına yardımcı olabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -31,7 +33,7 @@ Contoso, Contoso Coffee web sitesi üzerinden satışını yaptığı yüksek ka
 
 ## <a name="task-1---ingest-data"></a>Görev 1: Veri alma
 
-Özellikle [veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) başlıklı makaleleri inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar. 
+Özellikle [Veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) makalelerini inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Müşteri verilerini eCommerce platformundan alma
 
@@ -168,7 +170,7 @@ Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Görev 3: Abonelik erimesi tahminini yapılandırma
 
-Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çalıştırabiliriz. Ayrıntılı adımlar için [Abonelik erimesi tahmini (önizleme)](predict-subscription-churn.md) başlıklı makaleye bakın. 
+Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çalıştırabiliriz. Ayrıntılı adımlar için [Abonelik erime tahmini](predict-subscription-churn.md) makalesine bakın. 
 
 1. **Yönetim Bilgileri** > **Keşfet**'e gidin ve **Müşteri erimesi modeli**'ni seçerek kullanın.
 

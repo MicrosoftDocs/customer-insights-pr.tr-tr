@@ -4,17 +4,16 @@ metadata:
   author: m-hartmann
   description: Yardım içeriğiyle başlamak için ilgili makaleleri bulun.
   ms.author: mhart
-  ms.date: 10/29/2020
-  ms.service: customer-insights
+  ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598503"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350493"
 title: Dynamics 365 Customer Insights belgeleri
-summary: Başlamak için yardımcı kaynaklar bulun ve Customer Insights özellikleri ve yetenekleri hakkında bilgi edinin.
+summary: Başlamak için faydalı kaynaklar bulun ve Customer Insights özellikleri ve yetenekleri hakkında bilgi edinin.
 landingContent:
 - title: Customer Insights ile tanışma
   linkLists:
@@ -23,50 +22,28 @@ landingContent:
     - text: Customer Insights'a genel bakış
       url: overview.md
     - text: Yayın planları
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Ortamınıza erişme
-      url: https://home.ci.ai.dynamics.com/
-- title: Hedef kitle içgörülerini kullanmaya başlama
+      url: /dynamics365/release-plans/
+    - text: CDP'yi keşfetme
+      url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Customer Insights öğrenme yolu
+      url: /learn/paths/build-customer-insights/
+- title: Customer Insights kullanmaya başlayın
   linkLists:
   - linkListType: get-started
     links:
     - text: Deneme sürümü için kaydol
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Yenilikler
+    - text: Hedef kitle etkileşimlerindeki yenilikler
       url: audience-insights/whats-new-audience-insights.md
-    - text: Hedef kitle içgörüleri belgeleri
-      url: audience-insights/index.yml
-- title: İletişime geçme
-  linkLists:
-  - linkListType: overview
+    - text: Hızlı başlangıç kılavuzu
+      url: audience-insights/get-started.md
+  - linkListType: learn
     links:
-    - text: Dynamics 365 topluluğuna katılma
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
-    - text: Fikirlerinizi paylaşın
-      url: https://go.microsoft.com/fwlink/?linkid=2074172
-    - text: Bir sorun bildirin
-      url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Hedef kitle içgörüleri eğitimleri
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Yeni ortam oluşturun
-      url: audience-insights/home.md
-    - text: Birleşik müşteri profili oluşturma
-      url: /learn/modules/unified-customer-profile/
-    - text: Uygulamayla çalışma
-      url: /learn/modules/working-with-customer-insights/
-- title: Hedef kitle içgörüleri verilerini dışarı aktarma
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Dışarı aktarma hedeflerini ayarlama
-      url: audience-insights/export-destinations.md
-    - text: Dynamics 365 uygulamalarında müşteri kartları
-      url: audience-insights/customer-card-add-in.md
-    - text: Power BI bağlayıcısı
-      url: audience-insights/export-power-bi.md
-- title: Hedef kitle içgörülerini yönetme
+    - text: Kullanmaya başlayın
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Customer Insights'ı yönetme
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -76,33 +53,17 @@ landingContent:
       url: audience-insights/permissions.md
     - text: Birden çok ortamı yönetme
       url: audience-insights/manage-environments.md
-- title: Etkileşim içgörüleri hakkında (önizleme)
+  - linkListType: learn
+    links:
+    - text: Customer Insights'ı yönetme
+      url: /learn/modules/administer-customer-data-platform/
+- title: İletişime geçme
   linkLists:
   - linkListType: overview
     links:
-    - text: Özelliğe genel bakış
-      url: engagement-insights/overview.md
-    - text: Koşullar ve kavramlar
-      url: engagement-insights/glossary.md
-    - text: Başlayın
-      url: engagement-insights/get-started.md
-- title: Etkileşim içgörüleri için raporlar (önizleme)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Raporları görüntüle
-      url: engagement-insights/view-reports.md
-    - text: Özel raporlar oluşturma
-      url: engagement-insights/custom-reports.md
-    - text: Birleşik profiller raporunu görüntüleme
-      url: engagement-insights/profile-reports.md
-- title: Etkileşim içgörüleri için olaylar (önizleme)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Siyah beyaz olaylar oluşturma
-      url: engagement-insights/refined-events.md
-    - text: Olayları dışarı aktarma
-      url: engagement-insights/export-events.md
-    - text: Kişisel verileri silme ve dışarı aktarma
-      url: engagement-insights/delete-export-personal-data.md
+    - text: Dynamics 365 topluluğuna katılma
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Fikirlerinizi paylaşın
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Sorun bildir
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

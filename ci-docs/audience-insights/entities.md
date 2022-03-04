@@ -1,59 +1,67 @@
 ---
 title: Varlıklar ve veri kümeleri
 description: Varlıklar sayfasında verileri görüntüleyin.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732105"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355357"
 ---
 # <a name="entities-in-audience-insights"></a>Hedef kitle içgörülerinde varlıklar
 
 [Veri kaynaklarınızı yapılandırdıktan](data-sources.md) sonra, alınan verilerin kalitesini değerlendirmek için **Varlıklar** sayfasına gidin. Varlıklar, veri kümeleri olarak kabul edilir. Dynamics 365 Customer Insights'ın birçok özelliği, bu varlıklar etrafında oluşturulmuştur. Bunları yakından incelemek, bu özelliklerin çıktılarını doğrulamanıza yardımcı olabilir.
 
-**Varlıklar** sayfası, varlıkları listeler ve çeşitli sütunlar içerir:
+**Varlıklar** sayfası, varlıkları listeler ve şu sütunları içerir:
 
-- **Adı**: Veri varlığınızın adı. Varlık adının yanında bir uyarı simgesi görürseniz bu, o varlığa ait verilerin başarıyla yüklenmediği anlamına gelir.
-- **Kaynak**: Varlıktan verileri alan veri kaynaklarının türü
-- **Oluşturan**: Varlığı oluşturan kişinin adı
-- **Oluşturma Tarihi**: Varlığın oluşturulma tarihi ve saati
-- **Güncelleştirildi**: Varlığı güncelleştiren kişinin adı
-- **Durum**: Varlığın son güncelleştirmesiyle ilgili ayrıntılar
+- **Ad**: Veri varlığının adı. Varlık adının yanında bir uyarı simgesi görürseniz bu, o varlığa ait verilerin başarıyla yüklenmediği anlamına gelir.
+- **Kaynak**: Varlığı besleyen veri kaynağının türü.
+- **Güncelleştirildi**: Varlığın en son güncelleştirildiği zaman.
+- **Durum**: Varlığın son güncelleştirmesiyle ilgili ayrıntılar.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Belirli bir varlığın verilerini keşfetme
 
-Varlıktaki farklı alanları ve kayıtları keşfetmek için bir varlık seçin.
+1. Hedef kitle içgörülerinde, **Veri** > **Varlıklar**'a gidin.
+1. **Varlıklar** sayfasından, ayrıntılar sayfasını açmak için bir varlık seçin.  
+1. Varlıktaki farklı alanları ve kayıtları keşfedin.
 
-> [!div class="mx-imgBorder"]
-> ![Varlık seçin.](media/data-manager-entities-data.png "Bir varlık seçin")
-
-- **Veri** sekmesi, varlığın bağımsız kayıtlarıyla ilgili ayrıntıları listeleyen bir tablo görüntüler.
+- **Öznitelikler** sekmesi varsayılan olarak seçilir ve seçilen varlığın, alan adları, veri türleri ve türler gibi ayrıntılarını gözden geçirmek için bir tablo gösterir. **Tür** sütunu, sistem tarafından otomatik olarak tanımlanan veya kullanıcılar tarafından [el ile eşlenen](map-entities.md) Common Data Model ile ilişkilendirilmiş türleri gösterir. Bu türler, özniteliklerin veri türlerinden farklı olabilen anlamsal türlerdir. Örneğin, aşağıdaki *E-posta* alanında *Metin* veri türü vardır ancak (anlamsal) Common Data Model türü *E-posta* veya *EmailAddress* olabilir.
 
 > [!div class="mx-imgBorder"]
 > ![Alanlar tablosu.](media/data-manager-entities-fields.PNG "Alanlar tablosu")
 
-- **Öznitelikler** sekmesi varsayılan olarak seçilir ve seçilen varlığın, alan adları, veri türleri ve türler gibi ayrıntılarını gözden geçirmek için bir tablo gösterir. **Tür** sütunu, sistem tarafından otomatik olarak tanımlanan veya kullanıcılar tarafından [el ile eşlenen](map-entities.md) Common Data Model ile ilişkilendirilmiş türleri gösterir. Bu türler, özniteliklerin veri türlerinden farklı olabilen anlamsal türlerdir. Örneğin, aşağıdaki *E-posta* alanında *Metin* veri türü vardır ancak (anlamsal) Common Data Model türü *E-posta* veya *EmailAddress* olabilir.
-
 > [!NOTE]
-> Her iki tablo da varlığınızın verilerinin yalnızca bir örneğini gösterir. Veri kümesinin tamamını görüntülemek için **Veri kaynakları** sayfasına gidin, bir varlık seçin, **Düzenle** seçeneğini belirleyin ve ardından [Veri kaynakları](data-sources.md)'nda açıklandığı gibi Power Query düzenleyicisiyle bu varlığın verilerini görüntüleyin.
+> Bu sayfa, varlığınıza ait verilerin yalnızca bir örneğini gösterir. Veri kümesinin tamamını görüntülemek için **Veri kaynakları** sayfasına gidin, bir varlık seçin, **Düzenle** seçeneğini belirleyin ve ardından [Veri kaynaklarında](data-sources.md) açıklandığı gibi Power Query düzenleyicisiyle bu varlığın verilerini görüntüleyin.
 
-Varlıktaki alınan veriler hakkında daha fazla bilgi edinmek isterseniz **Özet** sütunu, verileriniz için geçerli olan boş değerler, eksik değerler, benzersiz değerler, sayılar ve dağıtımlar gibi verilerin bazı önemli özelliklerini sağlar.
-
-Verilerin özetini görmek için grafik simgesini seçin.
+Varlıktaki alınan veriler hakkında daha fazla bilgi edinmek isterseniz **Özet** sütunu, verileriniz için geçerli olan boş değerler, eksik değerler, benzersiz değerler, sayılar ve dağıtımlar gibi verilerin bazı önemli özelliklerini sağlar. Verilerin özetini görmek için grafik simgesini seçin.
 
 > [!div class="mx-imgBorder"]
 > ![Özet simgesi.](media/data-manager-entities-summary.png "Veri özeti tablosu")
+
+- **Veri** sekmesi, varlığın bağımsız kayıtlarıyla ilgili ayrıntıları listeleyen bir tablo görüntüler. Listelenen ayrıntılar, varlığın veri türüne bağlıdır.
+
+> [!div class="mx-imgBorder"]
+> ![Varlık seçin.](media/data-manager-entities-data.png "Bir varlık seçin")
+
+- **Raporlar** sekmesi (bazı varlıklar için kullanılabilir), bir rapor oluşturarak verilerinizi görselleştirmenizi sağlar ve şu sütunları içerir:
+
+  - **Rapor adı**: Raporun adı.
+  - **Oluşturan**: Varlığı oluşturan kişinin adı.
+  - **Oluşturulma tarihi**: Varlığın oluşturulma tarihi ve saati.
+  - **Düzenleyen**: Varlığı değiştiren kişinin adı.
+  - **Düzenlendi**: Varlığın değiştirilme tarihi ve saati. 
 
 ## <a name="entity-specific-information"></a>Varlığa özel bilgiler
 
@@ -65,7 +73,9 @@ Alınan bir veri kaynağındaki alanlar bozuk veriler içerebilir. Bozuk alanlar
 
 Örneğin, bir "doğum günü" sütununda veri türü "tarih" olarak ayarlanmıştır. Müşteri kaydında doğum günü "1.1.19777" olarak girilmiştir. Sistem bu kaydı bozuk olarak işaretler. Birisi artık kaynak sistemdeki doğum gününü "1977" olarak değiştirebilir. Veri kaynaklarının otomatik olarak yenilemesinden sonra, alan artık geçerli bir biçime sahiptir ve kayıt, bozuk varlıktan kaldırılır. 
 
-**Veriler** > **Varlıklar**'a gidin ve **Sistem** bölümünde bozuk varlıkları arayın. Bozuk varlıkların adlandırma şeması: "DataSourceName_EntityName_corrupt".
+**Veriler** > **Varlıklar**'a gidin ve **Sistem** bölümünde bozuk varlıkları arayın. Bozuk varlıkların adlandırma şeması: "DataSourceName_EntityName_corrupt". Tüm bozuk alanları ve tek kayıt düzeyindeki nedeni tanımlamak için bozuk bir varlık seçin.
+> [!div class="mx-imgBorder"]
+> ![Bozulma nedeni.](media/corruption-reason.png "Bozulma Nedeni")
 
 Customer Insights yine de bozuk varlıkları işler. Ancak bunlar, birleşik verilerle çalışırken sorunlara neden olabilir.
 
@@ -73,8 +83,7 @@ Bozuk kayıtları açığa çıkarmak için alınan verilerde aşağıdaki denet
 
 - Alanın değeri, sütununun veri türüyle eşleşmiyor.
 - Alanlar, sütunların beklenen şemayla eşleşmemesine neden olan karakterler içeriyor. Örneğin: yanlış biçimlendirilmiş tırnak işaretleri, kaçışsız tırnak işaretleri veya yeni satır karakterleri.
-- Datetime/date/datetimeoffset sütunları varsa ve standart ISO biçimine uymuyorsa bunların biçiminin modelde belirtilmesi gerekir.
-
+- Datetime/date/datetimeoffset sütunları varsa ve standart ISO biçimine uygun değillerse biçimlerinin model içinde belirtilmesi gerekir.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

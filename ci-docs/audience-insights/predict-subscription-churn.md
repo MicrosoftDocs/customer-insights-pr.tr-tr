@@ -3,20 +3,19 @@ title: Abonelik erime tahmini (video içerir)
 description: Bir müşterinin artık şirketinizin abonelik ürünlerini veya hizmetlerini kullanmama riski taşıyıp taşımadığını tahmin edin.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967725"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354721"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Abonelik erime tahmini (önizleme)
+# <a name="subscription-churn-prediction"></a>Abonelik kaybı tahmini
 
 Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünlerini veya hizmetlerini kullanmama riski taşıyıp taşımadığını tahmin etmeye yardımcı olur. Yeni abonelik erime tahminini **Yönetim Bilgileri** > **Tahminler** sayfasında oluşturabilirsiniz. Oluşturduğunuz diğer tahminleri görmek için **Tahminlerim**'i seçin.
 
@@ -63,7 +62,7 @@ Abonelik erime tahmini bir müşterinin artık şirketinizin abonelik ürünleri
 ## <a name="create-a-subscription-churn-prediction"></a>Abonelik erime tahmini oluşturma
 
 1. Hedef kitle içgörülerinde, **Yönetim Bilgileri** > **Tahminler**'e gidin.
-1. **Abonelik erime modeli (önizleme)** kutucuğunu ve **Bu modeli kullan**'ı seçin.
+1. **Abonelik erime modeli** kutucuğunu seçin ve **Bu modeli kullan** seçeneğini belirleyin.
    > [!div class="mx-imgBorder"]
    > ![Bu modeli kullan düğmesiyle Abonelik Erimesi modeli kutucuğu.](media/subscription-churn-usethismodel.PNG "Bu modeli kullan düğmesiyle Abonelik Erime modeli kutucuğu")
 
