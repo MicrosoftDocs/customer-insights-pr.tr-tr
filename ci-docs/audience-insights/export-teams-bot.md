@@ -1,19 +1,20 @@
 ---
 title: Microsoft Teams için bot
 description: Bot yardımıyla Microsoft Teams'te birleşik müşteri profillerini arayın.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: e563619f40be859f3f02638adbd60b80423182b3
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232126"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554412"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Dynamics 365 Customer Insights için Teams botu (önizleme)
 
@@ -30,10 +31,7 @@ Botu ayarlamak ve yapılandırmak için aşağıdaki önkoşulların karşılanm
 - [Birleştirme işleminin](data-unification.md) tamamlanması.
 - Alanların [arama ve filtre dizinine](search-filter-index.md) eklenmesi.
 - Customer Insights ve Teams'in aynı kuruluşta olması.
-- Ortamınızın birincil hedef kitlesi, bağımsız müşterilere ayarlanmıştır. İşletme hesapları desteklenmez.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Botu yapılandırma
 
 1. Hedef kitle içgörülerinde, **Yönetici** > **Dışarı Aktarma Hedefleri**'ne gidin.

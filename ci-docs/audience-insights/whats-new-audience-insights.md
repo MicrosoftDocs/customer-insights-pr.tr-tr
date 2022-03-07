@@ -1,23 +1,24 @@
 ---
 title: Yeni ve gelecek özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 03/02/2022
+ms.date: 08/31/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232728"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465229"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ın hedef kitle içgörüleri özelliğindeki yenilikler
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 En son güncelleştirmeleri bildirmekten heyecan duyuyoruz! Bu makalede genel önizleme özellikleri, genel kullanılabilirlik geliştirmeleri ve özellik güncelleştirmeleri özetlenmektedir. Uzun vadeli özellik planlarını görmek için [Dynamics 365 ve Power Platform sürüm planları](/dynamics365/release-plans/) konusuna bakın.
 
@@ -25,122 +26,6 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
-
-
-## <a name="january-2022-updates"></a>Ocak 2022 güncelleştirmeleri
-
-2022 Ocak güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata düzeltmeleri içerir.
-
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Müşterinizin geri bildirimi için yaklaşım analizi
-
-Customer Insights, müşteri yaklaşımını sentezlemek ve hedeflenen iyileştirmeler için fırsat olarak belirli iş bölümleri tanımlamak üzere yapay zeka tabanlı yeni bir özellik sunar. Müşterilerinizin yazılı geri bildirimlerini analiz ederek, düşük bir maliyet karşılığında doğru içgörüler edinebilirsiniz. Her müşteri kimliği için iki türetilmiş içgörü oluşturan Doğal Dil İşleme (NL) modelleriyle güçlendirilen yaklaşım analizi. Yaklaşım puanı (-5 ila 5 arasında) ve ilgili iş bölümlerinin listesi. 
-
-Daha fazla bilgi için bkz. [Müşteri geri bildirimlerinde yaklaşımı analiz etme (Önizleme)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Aralık 2021 güncelleştirmeleri
-
-2021 Aralık güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insights günlüklerini Azure İzleyici'ye iletme
-
-Customer Insights Azure İzleyici ile doğrudan tümleştirme sağlar. Bu özellik, denetim olaylarını ve operasyonel olayları içerir. Azure İzleyici kaynak günlükleri, günlükleri izlemenize ve Azure Depolama, Azure Log Analytics'e göndermenize veya bunları Azure Event Hubs'a aktarmanıza olanak tanır.
-
-Daha fazla bilgi için bkz. [Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletimi (Önizleme)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Etkileşim verileriyle müşteri profillerini zenginleştirme
-
-Müşteri firması profillerinizi Office 365 uygulamaları aracılığıyla etkileşim bilgileriyle zenginleştirmek için Microsoft Office 365 uygulamasından gelen verileri kullanın. Etkileşim verileri, firma düzeyinde toplanan e-posta ve toplantı etkinliklerinden oluşur. Örneğin, bir iş hesabından gelen e-postaların sayısı veya firmayla yapılan toplantıların sayısı. Bireysel kullanıcılarla ilgili veri paylaşılmaz. Bu zenginleştirme şu bölgelerde kullanılabilir: Birleşik Krallık, Avrupa, Kuzey Amerika.
-
-Daha fazla bilgi için bkz. [Müşteri profillerini etkileşim verileriyle zenginleştirme (Önizleme)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Gelişmiş veri birleştirme özellikleri
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Ayrı öznitelik düzeyinde çakışma çözümleme ilkelerini etkinleştirme
-
-Bir varlık içindeki yinelenen müşteri kayıtlarını kaldırırken, tam bir kaydı kazanan olarak seçmek zorunda olmak istemeyebilirsiniz. Artık her öznitelik için kuralları temel alarak çeşitli kayıtlardan en iyi alanları birleştirmenize olanak tanıyoruz. Örneğin, en son e-postayı VE farklı kayıtlardan en eksiksiz adresi tutmayı seçebilirsiniz. 
-
-Artık tek bir varlık içindeki yinelenenleri kaldırırken ve kayıtları birleştirirken her öznitelik için ayrı birleştirme kuralları tanımlayabilirsiniz. Daha önce, yalnızca tek bir birleştirme kuralı seçmenize olanak tanıyorduk (verileri yeni olma verilerinin eksiksizliğini temel alarak tutma) ve bu kural kayıt düzeyinde tüm özniteliklere uygulanıyordu. Bu, tutmak istediğiniz verilerin bir kısmı kayıt A'da ve başka işe yarar veriler kayıt B'de bulunduğunda uygun değildi.
-
-Daha fazla bilgi için bkz. [Eşleştirme varlığında yinelenenleri kaldırma işlemi tanımlama](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Eşleştirme için özel kurallar
-
-Kayıtların EŞLEŞTİRİLMEMESİ için genel kurallara için bir özel durum belirtmeniz gereken durumlar vardır. Bu durum, birden fazla kişi yeterince bilgiyi paylaştığında ortaya çıkar; böylece sistem onları tek bir birey olarak eşleştirir. Örneğin, aynı soyadına sahip olan, aynı şehirde yaşayan ve aynı doğum tarihini paylaşan ikizler.
-
-Özel durumlar, hatalı veri birleştirmenin birleşme kurallarında ele alınmasını sağlar. Bir kurala birden çok özel durum ekleyebilirsiniz.
-
-Daha fazla bilgi için bkz. [Kurala özel durum ekleme](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Ek çakışma çözümleme ilkeleri sağlama ve özniteliklerin gruplandırılmasını etkinleştirme
-
-Bu özellik, bir alan grubunu tek bir birim olarak ele almanızı sağlar. Örneğin, kayıtlarımız Adres1, Adres2, Şehir, Eyalet ve Posta kodu alanlarını içeriyorsa. Verilerimizi daha eksiksiz hale getireceğini düşünerek farklı bir kaydın Adres2 alanını birleştirmek istemeyiz.
-
-Artık bir grup ilgili alanı birleştirebilir ve gruba tek bir birleştirme ilkesi uygulayabilirsiniz. 
-
-Daha fazla bilgi için bkz. [Alan grubunu birleştirme](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Kasım 2021 güncelleştirmeleri
-
-2021 Kasım güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Segment üyeliği artık Dataverse uygulamasında kullanılabilir durumda
-
-Müşteri profilleri için segment üyeliği bilgileri, müşteri profilleri ve öngörüleriyle birlikte artık Dataverse uygulamasında kullanılabilir durumdadır. Dynamics 365 eylem uygulamaları ve model temelli uygulamaları, belirli bir müşteri için segment üyelik ayrıntılarını aramak üzere bu verileri kullanabilir.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Etkinlikler, iş hesapları için ilgili kişi düzeyindeki ayrıntıları destekler
-
-Hangi firma ilgili kişilerinin belirli etkinliklerde yer aldığını daha iyi anlamak için artık iş hesabı etkinliği zaman çizelgelerinizdeki ilgili kişi etkinliklerini yapılandırabilir, görüntüleyebilir ve filtreleyebilirsiniz.
-
-## <a name="october-2021-updates"></a>Ekim 2021 güncelleştirmeleri
-
-2021 Ekim'deki güncelleştirmeler, yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
-
-### <a name="b-to-b"></a>B2B
-
-2021 Ekim'den itibaren, Customer Insights'da işletme hesaplarıyla ve bunların ilgili kişileriyle çalışabilirsiniz. Daha önce uygulama, daha çok bireysel tüketicilere yönelik olarak tasarlanmıştı. Yeni bir ortam türü üzerinde B2B senaryolarını desteklemek için bazı özellik alanları güncelleştirildi. Desteklenen B2B özelliklerine genel bakış için bkz. [Hedef kitle içgörülerinde işletme hesaplarıyla çalışma](work-with-business-accounts.md).
-
-Aşağıdaki bölümlerde, iş hesaplarını ve bağımsız tüketicileri desteklemek için uyarlanacak bazı önemli alanlar vurgulanacaktır.
-
-#### <a name="export-segments-based-on-business-accounts"></a>İşletme hesaplarına göre segmentleri dışa aktarma
-
-Hedef kitle içgörülerindeki tüm segment dışa aktarmaları işletme hesapları bağlamında kullanılabilir. Çoğu segment dışarı aktarımları, işletme hesaplarında geçerli olması için temeldeki segmentlerde ek yapılandırma ve [ilgili kişi bilgileri](segment-builder.md#create-a-new-segment) gerektirir. Daha fazla bilgi için bkz. [Segmentleri dışarı aktarma](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>İşletme hesaplarıyla LinkedIn Ads dışarı aktarmasını kullanma
-
-LinkedIn Ads dışarı aktarma işlemi artık, işletme hesapları bağlamında ilgili kişi ve şirket hedefleme için de kullanılabilmektedir. LinkedIn dışarı aktarmasının birincil odağı olarak şirket hedeflemeyi seçtiğinizde, ilgili kişi bilgilerini yansıtmaya gerek kalmadan işletme hesapları üzerinde oluşturulan segmentleri dışarı aktarabilirsiniz. Daha fazla bilgi için, [LinkedIn Ads dışarı aktarma](export-linkedin-ads.md) ve [ilgili kişi hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ile [şirket hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) arasındaki farklarla ilgili belgelere göz atın. 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>İşletme hesaplarına ve bunların hiyerarşisine göre ölçümler oluşturma
-
-Ölçüm oluşturucusu, işletme hesaplarıyla ilgili ölçümler oluşturmanıza ve isteğe bağlı olarak hiyerarşi bilgilerini kullanmanıza olanak sağlar. Hiyerarşi bilgileri, bir firma ve tüm ilgili alt firmalarında bir ölçüm hesaplaması toplamak için kullanılır. Örneğin, hiyerarşisiyle tanımlanan her işletme hesabı grubu için toplam gelir gibi ölçümler oluşturabilirsiniz. Daha fazla bilgi için bkz. [Ölçümleri tanımlama ve yönetme](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>İşletme hesaplarına ve bunların hiyerarşisine göre segmentler oluşturma
-
-Segment oluşturucu, isteğe bağlı olarak segmentteki her firma için ilgili kişi bilgilerini içeren işletme hesapları segmentleri oluşturmanıza olanak sağlar. Ayarlanmış bir firma hiyerarşiniz varsa, segment oluşturmada firma hiyerarşisi bilgilerini kullanabilirsiniz. Daha fazla bilgi için [Yeni segment oluşturma](segment-builder.md#create-a-new-segment) konusuna bakın.
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>İşletme hesaplarınızı, erime eğilimine ilişkin derin içgörülerle koruyun
-
-Müşteri erimesi tahmin modeli artık işletme hesaplarını destekliyor. Yalnızca bir firma için değil, bir firma ve bir ürün ya da servis kategorisi kombinasyonu erime riskini değerlendirebilirsiniz. Bu ekleme, bir firmanın genel olarak mı yoksa yalnızca belirli bir mal veya hizmet kategorisinde mi sizden satın alım yapmayı durdurma olasılığı taşıdığını anlamanıza yardımcı olur. Daha fazla yardımcı olması için bu yapay zeka modelini kullanın; bir hesabın erime eğiliminde olmasına ilişkin nedenleri de listeler. Daha fazla bilgi için bkz. [İşlem erime tahimini (önizleme)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Müşteri görünümünde işletme hesabındaki ilgili kişileri görüntüleme
-
-İşletme hesapları ilgili firmalarla eşlenmişse, Customer Insights uygulaması, müşteri ayrıntıları görünümünün bir parçası olarak bu ilgili kişileri gösterir. Daha fazla bilgi için bkz. [Müşteri profilleri](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>Eylül 2021 güncelleştirmeleri
-
-2021 Eylül'deki güncelleştirmeler, yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
-
-### <a name="activities"></a>Aktiviteler
-
-- **Etkinlik zaman çizelgesi geliştirmeleri** Müşteri profillerinde etkinlik zaman çizelgesine yönelik filtreleri genişlettik. Ayrıca, yeni filtre bölmesini aktivite türüne ve tarihine göre filtrelemek için kullanabilirsiniz. Tarihlere farklı koşullar kullanılarak filtre uygulanabilir. Daha fazla bilgi için bkz. [Müşteri profillerinde etkinlik zaman çizelgelerini görüntüleme](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>İlişki
-
-- **Birden çok atlama ilişkisi desteği** Aktiviteleri yapılandırırken ve varlıklar arasında ilişkiler tanımlayarak çoklu atlama ilişkiler kullanır. Birden çok atlama ilişkileri, iki varlığı bağlamak için ara bir varlık kullanır. Bir aktiviteyi yapılandırırken, aktivite varlığınızı bir ara varlığa ve ardından bir müşteri varlığına bağlamak için birden çok atlama ilişkisi kullanabilirsiniz. Birden fazla atlama ilişkileri öğesini, çok yollu ilişkiler ile birleştirebilirsiniz. Daha fazla bilgi için bkz. [Birden çok atlama ilişkisi](relationships.md#multi-hop-relationship).
-
-- **Birden çok yol ilişkisi desteği** Aktiviteleri yapılandırırken ve varlıklar arasında ilişkiler tanımlayarak çoklu yol ilişkileri kullanır. Birden çok yol ilişkileri kaynak varlığı birden çok varlığa ilişkilendirir. Bir aktiviteyi yapılandırırken, aktivite varlığınızı birden çok müşteri varlığına bağlamak için birden çok yol ilişkisi kullanabilirsiniz. Birden fazla yol ilişkileri öğesini, çok atlamalı ilişkiler ile birleştirebilirsiniz. Daha fazla bilgi için bkz. [Birden çok yol ilişkisi](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Ağustos 2021 güncelleştirmeleri
 
@@ -267,7 +152,7 @@ Mart 2021'deki güncelleştirmeler çeşitli özellikler, performans yükseltmel
 - **Segmentleri Constant Contact'a aktarma** Dışa aktarma hedeflerimizi, Constant Contact içerecek şekilde genişlettik. Artık Customer Insights'den Constant Contact listelerine segmentleri verebilir ve bunları pazarlama kampanyalarınız için temel olarak kullanabilirsiniz.   
    Daha fazla bilgi için bkz. [Constant Contact'a aktarma](export-constant-contact.md).
 
-- **Segmentleri RollWorks'a aktarma** Dışa aktarma hedeflerimizi, RollWorks içerecek şekilde genişlettik. Artık segmentleri Customer Insights'tan RollWorks hedef kitlelerine dışarı aktarabilir ve B-B reklamlarınız için temel olarak kullanabilirsiniz.    
+- **Segmentleri RollWorks'a aktarma** Dışa aktarma hedeflerimizi, RollWorks içerecek şekilde genişlettik. Artık Customer Insights'den RollWorks listelerine segmentleri verebilir ve bunları B2B reklamcılığı için temel olarak kullanabilirsiniz.    
    Daha fazla bilgi için bkz. [RollWorks'e aktarma](export-rollworks.md).
 
 - **Segmentleri Snapchat'e aktarma** Dışa aktarma hedeflerimizi, Snapchat içerecek şekilde genişlettik. Artık Customer Insights'den Snapchat listelerine segmentleri verebilir ve bunları reklamcılığı için temel olarak kullanabilirsiniz.     

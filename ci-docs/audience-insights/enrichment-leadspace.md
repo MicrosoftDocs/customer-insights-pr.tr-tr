@@ -1,31 +1,32 @@
 ---
 title: Üçüncü taraf Leadspace zenginleştirme ile şirket profillerini zenginleştirme
 description: Leadspace üçüncü taraf zenginleştirmesi hakkında genel bilgiler.
-ms.date: 09/30/2021
+ms.date: 04/09/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230658"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7031727"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace ile şirket profillerini zenginleştirme (önizleme)
 
-Leadspace, B-B Müşteri Veri Platformu sağlayan bir veri bilimi şirketidir. Verilerini zenginleştirmeniz için firmalara göre birleşik müşteri profilleri bulunan ortamları etkinleştirir. Şirket boyutu, konum veya endüstri gibi özniteliklere sahip *Müşteri profillerini* zenginleştirebilirsiniz. Başlık, kişi veya e-posta doğrulaması gibi özniteliklere sahip *İlgili kişi profilleri* zenginleştirin.
+Leadspace, B2B Müşteri Veri Platformu sağlayan bir veri bilimi şirketidir. Şirketlerin birleşik müşteri profillerine sahip müşteri verilerini zenginleştirmesine olanak tanır. Zenginleştirmeler; şirket büyüklüğü, konum, sektör gibi birçok öznitelik içerir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
 Leadspace'i yapılandırmak için aşağıdaki ön koşullar karşılanmalıdır:
 
 - Etkin bir Leadspace lisansınız var.
-- Firmalara göre [birleştirilmiş müşteri profilleri](customer-profiles.md) vardır.
-- Leadspace bağlantısı önceden bir Yönetici tarafından yapılandırılmış olabilir veya [Yönetici](permissions.md#administrator) izinlere ve "kalıcı tuş" (**Leadspace belirteci** olarak adlandırılır) sahip olmanız gerekir. Ürünle ilgili ayrıntıları öğrenmek için doğrudan [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) ile iletişime geçin.
+- Şirketler için [birleşik müşteri profillerine](customer-profiles.md) sahip olmanız.
+- Leadspace bağlantısı önceden bir Yönetici tarafından yapılandırılmış olabilir veya [Yönetici](permissions.md#administrator) izinlere ve "kalıcı tuş" (**Leadspace belirteci** olarak adlandırılır) sahip olmanız gerekir. Ürünle ilgili ayrıntıları öğrenmek için doğrudan [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) ile iletişime geçin.
 
 ## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 
@@ -49,10 +50,6 @@ Leadspace'i yapılandırmak için aşağıdaki ön koşullar karşılanmalıdır
 
 1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
 
-1. Zenginleştirmek istediğiniz *İlgili kişi profilleri* varsa, onay kutusunu seçin. Hedef kitle öngörüleri, gerekli alanları otomatik olarak eşler.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Öncü alan ilgili kişi kayıtlarını zenginleştirme.":::
- 
 1. Zenginleştirme için bir ad girin ve seçimlerinizi inceledikten sonra **zenginleştirmeyi kaydet** seçeneğini belirleyin.
 
 
@@ -84,8 +81,7 @@ Daha fazla bilgi için bkz. [Leadspace API'leri](https://support.leadspace.com/h
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Zenginleştirilmiş müşteri verilerinizle geliştirin. [Segmentler](segments.md) ve [ölçüler](measures.md) oluşturun ve hatta müşterilerinize kişiselleştirilmiş deneyimler sunmak için [verileri dışa aktarın](export-destinations.md).
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 

@@ -3,20 +3,20 @@ title: Müşterilerinizin birleşmiş bir görünümünü oluşturma
 description: Tek bir ana veri kümesi müşteri profili oluşturmak için verilerinizle veri birleşme işlemine gidin.
 ms.date: 10/18/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 searchScope:
-- ci-map
-- customerInsights
-ms.openlocfilehash: 2012d32494ccd4639cbffbb81d4f6eac1258e23b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+- ci-unify
+ms.openlocfilehash: c5422c9b60c21923caf4d9dc9baeec575cba093f
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353843"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977483"
 ---
 # <a name="data-unification-overview"></a>Veri birleştirmeye genel bakış
 

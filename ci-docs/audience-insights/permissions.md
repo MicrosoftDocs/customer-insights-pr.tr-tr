@@ -3,21 +3,18 @@ title: Kullanıcı izinlerini yönetme
 description: İzinler ve kullanıcı rolleri hakkında bilgi edinin.
 ms.date: 03/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-searchScope:
-- ci-permissions
-- ci-system-security
-- customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 430ad902a5a75552243bc4a094361a749364383717278f687dd6e8ef33749c6f
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355961"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7028338"
 ---
 # <a name="user-permissions"></a>Kullanıcı izinleri
 

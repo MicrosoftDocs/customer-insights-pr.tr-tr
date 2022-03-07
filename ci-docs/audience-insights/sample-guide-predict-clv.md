@@ -3,17 +3,18 @@ title: Müşteri yaşam süresi değeri tahmin örnek kılavuzu
 description: Müşteri yaşam süresi değeri tahmin modelini denemek için bu örnek kılavuzu kullanın.
 ms.date: 05/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354855"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306373"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Müşteri yaşam süresi değeri (CLV) tahmin örnek kılavuzu
 
@@ -21,7 +22,7 @@ Bu kılavuzda, örnek veriler kullanılarak Customer Insights'ta Müşteri yaşa
 
 ## <a name="scenario"></a>Senaryo
 
-Contoso, yüksek kaliteli kahve ve kafeterya makinesi üreten bir şirkettir. Ürünleri Contoso Coffee web sitesi üzerinden satarlar. Şirket, müşterilerinin önümüzdeki 12 ay içinde üretebilecekleri değeri (geliri) öğrenmek istemektedir. Önümüzdeki 12 ay içinde müşterilerinin sağlayacağı beklenen değeri bilmek, pazarlama çabalarını yüksek değerli müşterilere yönlendirmelerine yardımcı olacaktır.
+Contoso, yüksek kaliteli kahve ve kahve makineleri üreten bir firmadır. Ürünleri Contoso Coffee web sitesi üzerinden satmaktadır. Şirket, müşterilerinin önümüzdeki 12 ay içinde üretebilecekleri değeri (geliri) öğrenmek istemektedir. Önümüzdeki 12 ay içinde müşterilerinin sağlayacağı beklenen değeri bilmek, pazarlama çabalarını yüksek değerli müşterilere yönlendirmelerine yardımcı olacaktır.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -30,7 +31,7 @@ Contoso, yüksek kaliteli kahve ve kafeterya makinesi üreten bir şirkettir. Ü
 
 ## <a name="task-1---ingest-data"></a>Görev 1: Veri alma
 
-[Veri alımı hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) makalelerini inceleyin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar.
+[Veri alma hakkında](data-sources.md) ve [Power Query bağlayıcılarını kullanarak veri kaynaklarını içeri aktarma](connect-power-query.md) makalelerini gözden geçirin. Aşağıdaki bilgiler, veri alımı hakkında genel olarak bilgi sahibi olduğunuzu varsayar.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Müşteri verilerini eCommerce platformundan alma
 
@@ -163,7 +164,7 @@ Verileri aldıktan sonra, artık birleştirilmiş müşteri profili oluşturmak 
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Görev 3 - Müşteri yaşam süresi değeri tahmini yapılandırma
 
-Birleşik müşteri profilleri ile artık müşteri yaşam süresi değer tahmini çalıştırabiliriz. Ayrıntılı adımlar için bkz. [Müşteri Yaşam Süresi Değeri tahmini](predict-customer-lifetime-value.md).
+Birleşik müşteri profilleri ile artık müşteri yaşam süresi değer tahmini çalıştırabiliriz. Ayrıntılı adımlar için bkz. [Müşteri Yaşam Süresi Değer tahmini (önizleme)](predict-customer-lifetime-value.md).
 
 1. **Zeka**  > **Tahminler**'e gidin ve **Müşteri yaşam süresi değer modeli**'ni seçin.
 

@@ -1,22 +1,20 @@
 ---
 title: Makine öğrenimi destekli önerilen segmentler
 description: Makine öğreniminin, müşteri özniteliklerine göre yeni ve ilginç segmentler bulmanıza yardımcı olmasını sağlayın.
-ms.date: 10/15/2021
+ms.date: 02/01/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-searchScope:
-- ci-segment-suggestions
-- customerInsights
-ms.openlocfilehash: 82345a7d7cf7fd38d74080552799de0b92461d78
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353613"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7028384"
 ---
 # <a name="suggested-segments-preview"></a>Önerilen segmentler (önizleme)
 
@@ -25,7 +23,7 @@ Yapay zeka modelinin yardımıyla müşterilerinizin ilginç segmentlerini keşf
 > [!NOTE]
 > Önerilen segmentler özelliği, verileri değerlendirmek ve bu verilere göre tahminler yapmak için otomatik araçlar kullanır ve bu nedenle, bu terim Genel Veri Koruma Yönetmeliği ("GDPR") kapsamında tanımlandığı gibi bir profil oluşturma yöntemi olarak kullanılma yeteneğine sahiptir. Verileri işlemek için bu özelliği kullanmanız, GDPR veya diğer yasa ya da düzenlemelere tabi olabilir. Bu özellik dahil olmak üzere Dynamics 365 Customer Insights kullanımınızın gizlilik, kişisel veriler, biyometrik veriler, veri koruması ve iletişim gizliliği ile ilgili yasalar gibi tüm geçerli yasa ve düzenlemelere uymasını sağlamak sizin sorumluluğunuzdadır.
 
-:::image type="content" source="media/suggested-segments.png" alt-text="Yan bölmede bir önerinin ayrıntılarını gösteren önerilen segmentler sayfası.":::
+:::image type="content" source="media/suggested-segments-details.png" alt-text="Yan bölmedeki bir önerinin ayrıntılarını gösteren Customer Insights'taki önerilen segmentler sayfası.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>KPI'larınızı iyileştirmek için önerilen segmentler
 
@@ -51,7 +49,7 @@ Birincil öznitelik olarak bir sayısal öznitelik veya kategorik öznitelik se�
 
 Birincil öznitelik olarak *yıllık gelir* veya *üyelik süresi* gibi sayısal bir öznitelik ile sistem, tüm müşterilerle karşılaştırıldığında sayısal özniteliğin daha yüksek veya daha düşük ortalama değere sahip olduğu segmentler önerir.
 
-Birincil öznitelik olarak *müşteri memnuniyeti* gibi kategorik bir öznitelik, aynı kategoriye ait olan tüm müşterilerin yüzdesine kıyasla belirli bir kategoriye ait müşteri yüzdesinin daha yüksek veya daha düşük olduğu önerilen segmentlerle sonuçlanır. Örneğin, *müşteri memnuniyeti* birincil öznitelik olarak seçilmiştir ve üç kategoriden oluşur (*Düşük*, *Orta* ve *Yüksek*). Her kategori için, aynı kategorideki tüm müşterilerin oranıyla karşılaştırıldığında bu kategoriye ait daha yüksek veya düşük müşteri yüzdesi olan segmentler önerilir. Tüm müşterilerin %22'sinin *Yüksek* memnuniyeti varsa bu kategori için yalnızca %22 ile karşılaştırıldığında *Yüksek* memnuniyeti olan daha yüksek veya düşük müşteri oranına sahip segmentler önerilir. Benzer şekilde, segmentler istatistiksel olarak anlamlı ise diğer kategorilerin (*Düşük* ve *Orta*) her biri için önerilir.
+Birincil öznitelik olarak *müşteri memnuniyeti* gibi kategorik bir öznitelik, aynı kategoriye ait olan tüm müşterilerin yüzdesine kıyasla belirli bir kategoriye ait müşteri yüzdesinin daha yüksek veya daha düşük olduğu önerilen segmentlerle sonuçlanır. Örneğin, *müşteri memnuniyeti* birincil öznitelik olarak seçilmiştir ve üç kategoriden oluşur (*Düşük*, *Orta* ve *Yüksek*). Her kategori için aynı kategorideki tüm müşterilerin oranıyla karşılaştırıldığında o kategoriye ait müşteri yüzdesinin belirgin şekilde daha yüksek veya daha düşük olduğu segmentler önerilir. Tüm müşterilerin %22'si *Yüksek* memnuniyete sahipse o kategori için yalnızca %22'ye kıyasla *Yüksek* memnuniyeti olan müşterilerin belirgin şekilde daha yüksek veya daha düşük orana sahip olduğu segmentler önerilir. Benzer şekilde, segmentler istatistiksel olarak anlamlı ise diğer kategorilerin (*Düşük* ve *Orta*) her biri için önerilir.
 
 > [!NOTE]
 > Şu anda yalnızca 10 kategoriye kadar olan birincil kategorik öznitelikleri destekliyoruz. 10'dan fazla kategoriye sahip birincil özniteliği temel alan segment önerileri görmek isterseniz kategori sayısını 10 veya daha aza indirmek için bazı kategorileri gruplandırmanızı öneririz. Bu sınırlama yalnızca birincil öznitelikler için geçerlidir. Kategorik öznitelikleri etkilemek için şu anda en fazla 100 kategoriyi destekliyoruz.
@@ -79,7 +77,7 @@ Birincil öznitelik olarak *müşteri memnuniyeti* gibi kategorik bir öznitelik
 
 Yapay zeka modeli, önerileri oluşturduktan sonra **Segmentler** > **Öneriler (önizleme)**'de listelendiğini görebilirsiniz.
  
-Bu önerinin ayrıntılarını gözden geçirmek için önerilen bir segment seçin. Yapay zeka modelinin seçili segmenti önermek için öğrendiği öznitelik değerlerini veya kuralları da inceleyebilirsiniz.
+Ortalama değer ile segment üyelerinin sayısının karşılaştırması dahil olmak üzere bu önerinin ayrıntılarını incelemek için bir önerilen segment seçin. Yapay zeka modelinin seçili segmenti önermek için öğrendiği öznitelik değerlerini veya kuralları da inceleyebilirsiniz.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Öneriyi bir segment olarak kaydetme
 

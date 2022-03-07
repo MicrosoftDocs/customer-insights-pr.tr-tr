@@ -1,24 +1,20 @@
 ---
 title: Veri birleştirmesinde varlıkları eşleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
-ms.date: 01/28/2022
+ms.date: 09/14/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-match
-- ci-merge
-- ci-relationships
-- customerInsights
-ms.openlocfilehash: c7743104bf89d9a2a741f1b358a89ed0240be024
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355869"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494343"
 ---
 # <a name="merge-entities"></a>Varlıkları birleştirme
 
@@ -93,7 +89,7 @@ Birleşik müşteri profilinden öznitelik dışlayın. Alan başka bir işlemde
     :::image type="content" source="media/recency-merge-option.png" alt-text="Alanları birleştir iletişim kutusunda yenilik seçeneği.":::
     - **En eski**: Kazanan değeri, en eskiliği temel alarak belirler. Birleştirme alanları kapsamındaki her bir katılımcı varlık için bir tarih veya sayısal alan olmasını zorunlu tutar.
 
-1.  Birleştirme işlemine katılmak üzere daha fazla alan ekleyebilirsiniz.
+1.  Birleştirme işleminde yer alacak başka alanlar da ekleyebilirsiniz.
 
 1.  Birleştirilmiş alanı yeniden adlandırabilirsiniz.
 
@@ -101,13 +97,11 @@ Birleşik müşteri profilinden öznitelik dışlayın. Alan başka bir işlemde
 
 1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
 
-## <a name="combine-fields-manually"></a>Grupları el ile birleştirme
+## <a name="manually-combine-fields"></a>Manuel olarak Birleştirilecek alanlar
 
-Birleştirilmiş bir özniteliği el ile belirtin.
+Birleştirilmiş bir özniteliği el ile belirtin. 
 
-1. **Birleştirme** sayfasında **Birleştir**'i seçin.
-
-1. **Alanlar** seçeneğini belirleyin.
+1. **Birleştirme** sayfasında **Alanları Birleştir**'i seçin.
 
 1. **Alanları birleştirme ölçütü** açılır listesinde birleştirme kazanan ilkesini belirleyin.
 
@@ -118,26 +112,6 @@ Birleştirilmiş bir özniteliği el ile belirtin.
 1. Değişiklikleri uygulamak için **Bitti**'yi seçin.
 
 1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin. 
-
-## <a name="combine-a-group-of-fields"></a>Alan grubunu birleştirme
-
-Bir alan grubunu tek bir birim olarak ele alın. Örneğin, kayıtlarımız Adres1, Adres2, Şehir, Eyalet ve Posta kodu alanlarını içeriyorsa. Verilerimizi daha eksiksiz hale getireceğini düşünerek farklı bir kaydın Adres2 alanını birleştirmek istemeyiz
-
-1. **Birleştirme** sayfasında **Birleştir**'i seçin.
-
-1. **Alan grubu** seçeneğini belirleyin.
-
-1. **Grupları sıralama ölçütü** açılır listesinde birleştirme kazanan ilkesini belirleyin.
-
-1. **Ekle**'yi seçin ve alanlara daha fazla alan veya ek grup eklemek isteyip istemediğinize karar verin.
-
-1. Birleştirilen her alan için **Ad** ve **Çıkış adı** sağlayın.
-
-1. Alan grubu için **Ad** belirtin. 
-
-1. Değişiklikleri uygulamak için **Bitti**'yi seçin.
-
-1. Değişiklikleri işlemek için **Kaydet** ve **Çalıştır**'a seçin.
 
 ## <a name="change-the-order-of-fields"></a>Alanların sırasını değiştirme
 
@@ -157,7 +131,7 @@ Bazı varlıklar diğerlerine göre daha fazla ayrıntı içerir. Bir varlık bi
 
 Birleştirme alanlarını yapılandırdıktan sonra, benzersiz müşteri profili tanımlayıcıları olan CustomerID değerlerinin nasıl oluşturulacağını tanımlayabilirsiniz. Veri birleşme işlemindeki birleştirme adımı benzersiz müşteri profili tanımlayıcısı oluşturur. Tanımlayıcı, veri birleşme işleminden elde edilen *Müşteri* varlığındaki CustomerId'dir. 
 
-Müşteri varlığındaki CustomerId, null olmayan kazanan birincil anahtarların ilk değerinin karmasını temel alır. Bu tuşlar, eşleştir ve birleştir aşamasında kullanılan varlıklardan gelir ve eşleştirme sırasıyla etkilenir.Bu nedenle, üretilen CustomerID, eşleştirme emrinin birincil varlığında birincil anahtar değerinin değiştiği zaman değiştirilebilir. Bu nedenle, birincil anahtar değeri her zaman aynı müşteriyi temsil ediyor olabilir.
+Müşteri varlığındaki CustomerId, null olmayan kazanan birincil anahtarların ilk değerinin karmasını temel alır. Bu tuşlar, eşleştir ve birleştir aşamasında kullanılan varlıklardan gelir ve eşleştirme sırasıyla etkilenir.Bu nedenle, üretilen CustomerID, eşleştirme emrinin birincil varlığında birincil anahtar değerinin değiştiği zaman değiştirilebilir. Sonuç olarak, birincil anahtar değeri her zaman aynı müşteriyi temsil etmiyor olabilir.
 
 Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanızı sağlar.
 
@@ -165,7 +139,7 @@ Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanız�
 
 1. **Birleştir** > **Birleştir**'e gidin.
 
-1. **Anahtarlar** sekmesini seçin. 
+1. **Birleştir** sayfasında, **Anahtarlar** sekmesini seçin. 
 
 1. **CustomerId** satırı üzerine gelin ve **Yapılandır** seçeneğini belirleyin.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kimlik oluşturmayı özelleştirme denetimi.":::
@@ -173,30 +147,6 @@ Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanız�
 1. Benzersiz bir müşteri kimliği oluşturacak ve daha kararlı olacak şekilde en fazla beş alan seçin. Yapılandırmanızla eşleşmeyen kayıtlar sistem tarafından yapılandırılmış bir kimlik kullanır.  
 
 1. **Bitti**'yi seçin ve değişikliklerinizi uygulamak için birleştirme işlemini çalıştırın.
-
-## <a name="group-profiles-into-households-or-clusters"></a>Profilleri yeni ve kümeler halinde gruplayın
-
-Müşteri profili oluşturma yapılandırma işleminin bir parçası olarak, ilgili profilleri bir kümede gruplamak için kurallar tanımlayabilirsiniz. Şu anda iki tür küme kullanılabilir: ev kümeleri ve özel kümeler. *Müşteri* varlığında *Person.LastName* ve *Location.Adress* semantik alanları varsa, sistem otomatik olarak önceden tanımlanmış kurallara sahip ev türünü seçer. Ayrıca, [eşleşme kurallarına](match-entities.md#define-rules-for-match-pairs) benzer şekilde kendi kurallarınızı ve koşullarına sahip bir küme de oluşturabilirsiniz.
-
-**Ev veya küme tanımlama**
-
-1. **Birleştir** > **Birleştir**'e gidin.
-
-1. **Birleştir** sekmesinde **Gelişmiş** > **Küme oluştur**'u seçin.
-
-   :::image type="content" source="media/create-cluster.png" alt-text="Yeni bir küme oluşturmak için denetleyin.":::
-
-1. **Ev** veya **Özel** küme arasında seçim yapın. *Müşteri* varlığında *Person.LastName* ve *Location.Address* adlı semantik alanlar varsa, ev otomatik olarak seçilir.
-
-1. Küme için bir ad girin ve **Bitti**'yi seçin.
-
-1. Oluşturduğunuz kümeyi bulmak için **Kümeler** sekmesini seçin.
-
-1. Kümenizi tanımlamak için kuralları ve koşulları belirtin.
-
-1. Birleştirme işlemini çalıştırmak ve kümeyi oluşturmak için **Çalıştır**'ı seçin.
-
-Birleştirme işlemini çalıştırdıktan sonra, küme tanımlayıcıları *Müşteri* varlığına yeni alanlar olarak eklenir.
 
 ## <a name="run-your-merge"></a>Birleştirmenizi çalıştırma
 
@@ -211,9 +161,10 @@ Değişiklikleri kullanarak sistemi yenilemek için **Birleştirme ve akış yö
 
 Daha fazla değişiklik yapmak ve adımı yeniden çalıştırmak için sürmekte olan bir birleştirmeyi iptal edebilirsiniz. **Yenileniyor ...** seçeneğini belirleyin ve görünen yan bölmede **İşi iptal et**'i seçin.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Görev durumu bağlantısından işlem ayrıntılarına ulaşmak için detaya gitme yolu.":::
+> [!TIP]
+> Birleştirme sürecini çalıştırdıktan sonra **Görev ayrıntıları** bölmesini açmak için süreç durumunu seçin. Bu; işleme süresi, son işleme tarihi ve görevle ilgili tüm hatalar ve uyarılar hakkında bir genel bakış sunar. Hangi varlıkların eşleşme işlemine katıldığını, çakışma çözümünün başarılı olup olmadığını ve güncelleştirmelerin başarıyla yayımlanıp yayımlanmadığını görmek için **Ayrıntılara göz atın**'ı seçin.  
+> Görevler/işlemler için [altı tür durum](system.md#status-types) vardır. Ayrıca çoğu işlem [diğer aşağı yönlü işlemlere bağlıdır](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Görev durumu bağlantısından işlem ayrıntılarına ulaşmak için detaya gitme yolu.":::
 
 ## <a name="next-step"></a>Sonraki Adım
 

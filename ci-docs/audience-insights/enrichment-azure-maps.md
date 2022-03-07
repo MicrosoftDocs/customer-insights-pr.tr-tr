@@ -3,17 +3,18 @@ title: Azure Haritalar'dan konum verileri ile zenginleştirmiş müşteri profil
 description: Azure Haritalar birinci taraf zenginleştirme hakkında genel bilgiler.
 ms.date: 08/31/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226473"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466786"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Azure Haritalar ile müşteri profillerini zenginleştirme (Önizleme)
 
@@ -85,7 +86,7 @@ Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşter
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Zenginleştirilmiş müşteri verilerinizle geliştirin. Müşterilerinize, kişiselleştirilmiş deneyimler sunmak için; [parçalar](segments.md), [ölçümler](measures.md) oluşturun ve hatta [veriyi dışa aktar](export-destinations.md) öğesini kullanın.
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 
