@@ -2,18 +2,17 @@
 title: Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma
 description: Verilerin iki yönlü paylaşımını sağlamak için hedef kitle içgörüleri ile etkileşim içgörüleri arasında etkin bir bağlantı oluşturun.
 ms.date: 09/08/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 56adc206d83bc6e34a55f11383393b5ac66da531
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487131"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229896"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Hedef kitle içgörüleri ile etkileşim içgörüleri arasında bağlantı oluşturma
 
@@ -25,8 +24,8 @@ Etkileşim içgörülerinde daha fazla analiz seçeneği için hedef kitle içg�
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- Hedef kitle içgörüleri profilleri, size ait bir Azure Data Lake Storage hesabında veya [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;tarafından yönetilen veri gölünde depolanmalıdır. 
-- Hedef kitle içgörüleri ortamınızda ilişkili bir Dataverse ortamı bulunmalıdır. Bu ortam aynı zamanda veri depolama için Dataverse kullanıyorsa hedef kitle içgörülerinde **Veri paylaşımını etkinleştir** seçeneğini işaretlediğinizden emin olun. Daha fazla bilgi için bkz. [Hedef kitle içgörülerinde ücretli ortam oluşturma ve yapılandırma](../audience-insights/get-started-paid.md).
+- Hedef kitle içgörüleri profilleri, size ait bir Azure Data Lake Storage hesabında veya [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;tarafından yönetilen veri gölünde depolanmalıdır. 
+- Hedef kitle içgörüleri ortamınızda ilişkili bir Dataverse ortamı bulunmalıdır. Bu ortam aynı zamanda veri depolama için Dataverse kullanıyorsa hedef kitle içgörülerinde **Veri paylaşımını etkinleştir** seçeneğini işaretlediğinizden emin olun. Daha fazla bilgi için bkz. [Hedef kitle öngörüler içinde bir ortam oluşturma ve yapılandırma](../audience-insights/create-environment.md).
 - Etkileşim içgörüleri ve hedef kitle içgörüleri ortamları için yönetici izinlerinizin olması gerekir.
 - Bağlantılı ortamlar aynı coğrafi bölgede bulunmalıdır.
 
@@ -54,6 +53,9 @@ Etkileşim içgörülerinde **Yönetici** > **Ortam** ayarlarını güncelleşti
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Hedef kitle içgörüleri birleşik profil özniteliklerini ve segmentlerini etkinleştirme
 
 Ortamları bağladıktan sonra bağlantılı ortamlar için isteğe bağlı özellikleri seçebilirsiniz. Bu özellikler, müşteri verilerinde etkileşimli analiz için hedef kitle içgörülerindeki birleşik profil özniteliklerini ve segmentlerini etkinleştirir.
+
+> [!IMPORTANT]
+> Hedef kitle içgörüleri segmentlerinin etkileşim içgörülerinde görünmesi için önce [birleştirme ve aşağı akış işlemlerini çalıştırmanız](../audience-insights/merge-entities.md) gerekir. Etkileşim içgörüleriyle paylaşılmak üzere hedef kitle içgörüleri segmentlerini hazırlayan benzersiz bir tablo oluşturduklarından aşağı akış işlemleri önemlidir. (Sistem yenilemesi zamanlanırsa aşağı akış işlemlerini otomatik olarak içerir.)
 
 **Etkileşim içgörülerinde web verilerini analiz etmek için**
 

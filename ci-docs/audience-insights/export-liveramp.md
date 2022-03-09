@@ -1,37 +1,38 @@
 ---
 title: LiveRamp bağlayıcı
-description: Verileri LiveRamp'e dışarı aktarmayı öğrenin.
-ms.date: 12/02/2020
-ms.reviewer: kishorem
-ms.service: customer-insights
+description: Bağlantıyı yapılandırmayı ve LiveRamp'da dışa aktarmayı öğrenin.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-ms
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 64d781f52e8124fc3e83a7b84f468830c5249cfd
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4c0f58083e8486d2042d8efcc8b3690020efb1c3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270182"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226376"
 ---
-# <a name="liverampreg-connector-preview"></a>LiveRamp&reg; bağlayıcısı (önizleme)
+# <a name="export-segments-to-liverampreg-preview"></a>Segmentleri LiveRamp'a&reg; dışa aktarma (Önizleme)
 
-Dijital, sosyal ve TV ekosistemlerindeki 500'den fazla platformla bağlanmak için LiveRamp'te verilerinizi etkinleştirin. Kampanyalarınızı hedeflemek, durdurmak ve kişiselleştirmek için LiveRamp'te verilerinizle çalışın.
+Dijital, sosyal ve TV'lerde 500 platformdan fazla bağlantı kurmak için verilerinizi LiveRamp'da etkinleştirin. Kampanyalarınızı hedeflemek, durdurmak ve kişiselleştirmek için LiveRamp'te verilerinizle çalışın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
 
 - Bu bağlayıcıyı kullanmak için LiveRamp aboneliğine ihtiyacınız vardır.
 - Abonelik almak için doğrudan [LiveRamp'e başvurun](https://liveramp.com/contact/). [LiveRamp Katılımı hakkında daha fazla bilgi edinin](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>LiveRamp'e bağlanma
+## <a name="set-up-connection-to-liveramp"></a>LiveRamp bağlantısı ayarla
 
-1. Hedef kitle içgörülerinde, **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **LiveRamp** kutucuğunda **Ayarla**'yı seçin.
+1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **LiveRamp**'ı seçin.
 
-1. **görünen ad** alanına hedef tarafından tanınabilir bir ad verin.
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. LiveRamp Secure FTP (SFTP) hesabınız için **Kullanıcı Adı** ve **Parola** sağlayın.
 Bu kimlik bilgileri, LiveRamp Katılımı kimlik bilgilerinizden farklı olabilir.
@@ -40,15 +41,25 @@ Bu kimlik bilgileri, LiveRamp Katılımı kimlik bilgilerinizden farklı olabili
 
 1. Başarılı doğrulama işleminden sonra **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin.
 
-1. LiveRamp bağlayıcısını ayarlamak için **İleri**'yi seçin.
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
 
-## <a name="configure-the-connector"></a>Bağlayıcıyı yapılandırma
+## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
+
+Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+
+1. **Veri** > **Dışa aktarmalar**'a gidin.
+
+1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
+
+1. **Dışa aktarma bağlantısı** alanında, LiveRamp bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
 
 1. Kimlik çözümü için LiveRamp'e göndermek üzere **Anahtar tanımlayıcınızı seçin** alanında **E-posta**, **Ad ve adres** veya **Telefon** seçeneğini belirleyin.
+   > [!div class="mx-imgBorder"]
+   > ![Öznitelik eşlemesi olan LiveRamp bağlayıcısı.](media/export-liveramp-segments.png "Öznitelik eşlemesi olan LiveRamp bağlayıcısı")
 
-1. Seçilen anahtar tanımlayıcı için birleşik müşteri varlığınızdaki karşılık gelen öznitelikleri eşleyin.
+1. Seçili anahtar tanımlayıcısı için *Müşteri* varlığınızdan karşılık gelen öznitelikleri eşleyin.
 
-1. LiveRamp'e göndermek üzere ek öznitelikler eşlemek için **Öznitelik ekle**'yi seçin.
+1. LiveRamp'e göndermek için daha fazla **Öznitelik Ekle** seçeneğini belirleyin.
 
    > [!TIP]
    > LiveRamp'e daha fazla anahtar tanımlayıcı özniteliği göndermek muhtemelen daha yüksek eşleştirme oranı elde etmenizi sağlar.
@@ -57,13 +68,10 @@ Bu kimlik bilgileri, LiveRamp Katılımı kimlik bilgilerinizden farklı olabili
 
 1. **Kaydet**'i seçin.
 
-> [!div class="mx-imgBorder"]
-> ![Öznitelik eşlemesi olan LiveRamp bağlayıcısı](media/export-liveramp-segments.png "Öznitelik eşlemesi olan LiveRamp bağlayıcısı")
+Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
-## <a name="export-the-data"></a>Verileri dışarı aktarma
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
 
-İşlem için tüm önkoşullar tamamlanmışsa dışarı aktarma kısa süre içinde başlar. Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md#schedule-tab) ile de çalışır.
-Dışarı aktarma işlemi başarılı şekilde tamamlandığında verilerinizi etkinleştirmek ve dağıtmak için LiveRamp Katılımı'nda oturum açabilirsiniz.
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 

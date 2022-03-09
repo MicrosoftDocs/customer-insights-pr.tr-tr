@@ -2,19 +2,21 @@
 title: Mevcut segmentler için segment içgörüleri
 description: Farkları ve ortak yanları görmek için mevcut segmentlerde içgörüler edinin.
 ms.date: 06/10/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d731d21462b5a31aba0653f87e299d98373bbf49
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 8ae832c69c89bee08b8ef36ed99233b6e8e5a0f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270044"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355591"
 ---
 # <a name="segment-insights-preview"></a>Segment içgörüleri (önizleme)
 
@@ -44,13 +46,13 @@ Ayrıca, belirli öznitelikler için çakışmanın nasıl değiştiğini analiz
 Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğinde bu içgörüyle ilgili ayrıntıları bulabilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Segment çakışması içgörü ayrıntıları":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Segment çakışması içgörü ayrıntıları.":::
 
 Analiz sonuçlarını görmek için bir içgörü seçin:
 
 - Analiz için seçili segmentlerle çakışan üye sayısı.
 - Segmentlerden birine eklenen ancak kalan segmentlere eklenmeyen üye sayısı.
-- Çakışma analizini yapılandırırken alanları seçtiyseniz bunları ilgili sekmelerde bulabilirsiniz. İlgili herhangi bir öznitelik düzeyini seçmek için filtre açılan menüsünü kullanabilirsiniz, alttaki tablo ilgili verileri gösterir.
+- Çakışma analizini yapılandırırken alanları seçtiyseniz bunları ilgili sekmelerde bulabilirsiniz. Herhangi bir öznitelik ilgi düzeyini seçmek için filtre açılır menüsünü kullanabilirsiniz ve alttaki tablo ilgili verileri gösterecektir.
 
 ## <a name="segment-differentiators"></a>Segment farklılaştırıcılar
 
@@ -77,7 +79,7 @@ Segment farklılığı, bir segmentin müşterilerinizin kalanından veya başka
 Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğinde bu içgörüyle ilgili ayrıntıları bulabilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Segment farklılığı içgörü ayrıntıları":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Segment farklılığı içgörü ayrıntıları.":::
 
 Analiz sonuçlarını görmek için bir içgörü seçin. Farklılık analizi iki sekme içerir. **Öznitelikler** sekmesi, farklılık olarak kabul edilen profil özniteliklerini listeler. **Ölçümler** sekmesi farklılıkları listeler. Her sekme aşağıdaki ayrıntıları içerir:
 

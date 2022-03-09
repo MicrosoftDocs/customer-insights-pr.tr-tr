@@ -4,17 +4,16 @@ description: Hedef kitlenin nasıl karar vergetirdiğini anlamak için huni rapo
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032279"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226285"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Hunü raporları oluşturma ve yönetme
 
@@ -158,4 +157,31 @@ Bir huni raporunun adını değiştirebilir, silebilir veya rapordaki adımları
 1. Raporu açmak için bir ad seçin.
 
 1. Kaldırmak istediğiniz adımı ve ardından **Sil**'i seçin.
+
+## <a name="funnel-insights"></a>Huni içgörüleri 
+
+Etkileşim içgörüleri artık müşterilere yönelik huni içgörüleri sunmaktadır. Huni raporunuzdaki adımlar hakkında müşteri davranışıyla ilgili daha fazla bilgi edinmek için huni içgörülerini kullanın. Yeni bir huni raporu oluşturup kaydettiğinizde, raporunuzda otomatik olarak huni içgörüleri üretilir. 
+
+:::image type="content" source="media/funnel-insights.png" alt-text="Huni içgörüleri.":::
+
+> [!NOTE]
+> Huni içgörüleri yalnızca özel boyutları **içermeyen** huni adımları için oluşturulabilir. Huninizdeki tüm adımlar için huni içgörüleri oluşturmak için, huni adımlarınızı oluşturmak üzere kullanıma hazır etkileşim içgörüleri boyutlarını kullanın. 
+
+Aşağıdaki kategorilerden herhangi ikisinde de ana ve adım düzeylerinde huni içgörülerini görüntüleyebilirsiniz: 
+
+ - Dönüştürme oranı
+ -    Sonuçlandırma ve Satınalma arasındaki dönüşüm oranı %22'dir.
+ - Geçiş süresi 
+ -    Sepet ile Sonuçlandırma arasındaki ortalama geçiş süresi 23 dakikadır. 
+ - Tamamlanma süresi 
+ -    Müşterilerin huniyi tamamlaması için geçen ortalama süre 47 dakikadır. 
+
+Müşteri davranışını keşfetmek ve huni raporunuz için bırakma noktalarını ve dönüşümleri daha iyi anlamak için bu içgörüleri kullanın. 
+
+Farklı adımlardaki içgörüleri karşılaştırmak için içgörüler kartlarından **Adım dökümüne bak** veya **Diğer adımlarla karşılaştır** seçeneğini belirleyin. Bu, huninin her adımı için ölçümleri karşılaştıran bir çubuk grafik görüntüler. 
+
+Huni içgörüleri her 24 saatte bir veya huni raporunuzu **Kaydettiğinizde** yeniden hesaplanır. 
+
+> [!NOTE]
+> Huniniz için içgörüleri görüntülemek üzere, her değişiklik yaptığınızda raporunuzu kaydetmeniz gerekir. 
 

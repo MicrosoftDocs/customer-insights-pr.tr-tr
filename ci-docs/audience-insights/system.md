@@ -1,72 +1,100 @@
 ---
 title: Hedef kitle içgörülerinde sistem yapılandırması
 description: Dynamics 365 Customer Insights hedef kitle içgörüleri özelliğinde sistem ayarları hakkında bilgi edinin.
-ms.date: 02/12/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595404"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354257"
 ---
-# <a name="system-configuration"></a>Sistem yapılandırma
+# <a name="system-configuration"></a>Sistem yapılandırması
+
+Hedef kitle içgörülerinde sistem yapılandırmalarına erişmek için sol gezinti çubuğundan **Yönetici** > **Sistem**'i seçerek sistem görevlerinin ve işlemlerin listesini görüntüleyin.
 
 **Sistem** sayfası, aşağıdaki sekmeleri içerir:
-- [Durum](#status-tab)
+- [Status](#status-tab)
 - [Zamanlama](#schedule-tab)
 - [API kullanımı](#api-usage-tab)
 - [Hakkında](#about-tab)
 - [Genel](#general-tab)
+- [Güvenlik](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Sistem sayfası](media/system-tabs.png "Sistem sayfası")
+:::image type="content" source="media/system-tabs.png" alt-text="Sistem sayfasındaki ayarlar sekmesi.":::
 
 ## <a name="status-tab"></a>Durum sekmesi
 
-**Durum sekmesi**; veri alımı, veri dışarı aktarma işlemleri ve diğer bazı önemli ürün işlemlerinin ilerlemesini izlemenizi sağlar. Etkin işlemlerin tam olduğundan emin olmak için bu sekmedeki bilgileri gözden geçirin.
+**Durum sekmesi** görevlerin ilerlemesini, veri alımınızı, veri dışarı aktarmalarını ve diğer önemli ürün işlemlerini izlemenize olanak tanır. Etkin görevlerinizin ve süreçlerinizin eksiksiz olduğundan emin olmak için bu sekmedeki bilgileri gözden geçirin.
 
-Bu sekmede, çeşitli işlemler için durum ve işleme bilgilerini içeren tablolar bulunur. Her tablo, görevin **Adını** ve ilgili varlığını, en son çalıştırma **Durumunu** ve **Son güncelleştirme** zamanını izler.
+Bu sekmede, çeşitli işlemler için durum ve işleme bilgilerini içeren tablolar bulunur. Her tablo, görevin **Adını** ve ilgili varlığını, en son çalıştırma **Durumunu** ve **Son güncelleştirme** zamanını izler. Görev veya işlem adını seçerek, son birkaç çalıştırmanın ayrıntılarını görüntüleyebilirsiniz. 
 
-Görevlerin adını seçerek son birkaç çalıştırmanın ayrıntılarını görüntüleyin.
+**İlerleme ayrıntıları** bölmesini açmak için **Durum** sütunundaki görev veya işlemin yanında bulunan durumu seçin.
 
-### <a name="status-types"></a>Durum türleri
+   :::image type="content" source="media/system-progress-details.png" alt-text="Sistem ilerleme ayrıntıları bölmesi":::
 
-Görevler için altı tür durum vardır. Aşağıdaki durum türleri ayrıca *Eşleşme*, *Birleştirme*, *Veri kaynakları*, *Segmentler*, *Ölçümler*, *Zenginleştirme*, *Aktiviteler* ve *Tahminler* sayfalarında da gösterilir:
+### <a name="status-definitions"></a>Durum tanımları
 
-- **İşleniyor:** Görev devam ediyor. Durum, Başarılı veya Başarısız olarak değişebilir.
-- **Başarılı:** Görev başarıyla tamamlandı.
-- **Atlandı:** Görev atlandı. Bu görevin bağımlı olduğu aşağı yönlü işlemlerden biri veya daha fazlası başarısız oldu veya atlandı.
-- **Başarısız:** Görevin işlenmesi başarısız oldu.
-- **İptal edildi:** İşlem, tamamlanmadan önce kullanıcı tarafından iptal edildi.
-- **Kuyruğa Alındı:** İşleme kuyruğa alınır ve tüm yukarı akış görevleri tamamlandığında başlar. Daha fazla bilgi için bkz. [Yenileme ilkeleri](#refresh-policies).
+Sistem, görevler ve işlemler için aşağıdaki durumları kullanır:
 
-### <a name="refresh-policies"></a>Yenileme ilkeleri
+|Status  |Tanım  |
+|---------|---------|
+|İptal edildi |İşlem bitmeden önce kullanıcı tarafından iptal edildi.   |
+|Yapılamadı   |Veri alımı hatalarla karşılaştı.         |
+|Hata  |İşleme başarısız oldu.  |
+|Başlatılmadı   |Veri kaynağında henüz alınmış veri yok veya veri kaynağı hala taslak modunda.         |
+|İşleme  |Görev veya işlem devam ediyor.  |
+|Yenileniyor    |Veri alımı devam ediyor. **Eylem** sütununda **Yenilemeyi durdur**'u seçerek bu işlemi iptal edebilirsiniz. Veri kaynağının yenilenmesinin durdurulması veri kaynağını son yenileme durumuna döndürür.       |
+|Atlandı  |Görev veya işlem atlandı. Bu görevin bağımlı olduğu aşağı yönlü işlemlerden biri veya daha fazlası başarısız oldu veya atlandı.|
+|Başarılı  |Görev veya işlem başarıyla tamamlandı. Veri kaynakları için, **Yenilendi** sütunda bir saat belirtildiğinde verilerin başarıyla alındığı anlamına gelir.|
+|Kuyruğa alındı | İşlem sıraya alınır ve tüm yukarı akış görevleri ve işlemleri tamamlandıktan sonra başlar. Daha fazla bilgi için bkz. [İşlemleri yenileme](#refresh-processes).|
 
-Bu listede, ana işlemlerin her biri için yenileme ilkeleri gösterilmektedir:
+### <a name="refresh-processes"></a>İşlemleri yenileme
 
-- **Veri kaynakları:** [Yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Başka bir işleme bağlı değildir. Eşleşme, bu işlemin başarıyla tamamlanmasına bağlıdır.
-- **Eşleşme:** [Yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Eşleşme tanımında kullanılan veri kaynaklarının işlenmesine bağlıdır. Birleştirme, bu işlemin başarıyla tamamlanmasına bağlıdır.
-- **Birleştirme**: [Yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Eşleşme işleminin tamamlanmasına bağlıdır. Segmentler, ölçümler, zenginleştirme, arama, aktiviteler, tahminler ve veri hazırlama bu sürecin başarıyla tamamlanmasına bağlıdır.
-- **Segmentler**: El ile (tek seferlik yenileme) ve [yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Birleştirmeye bağlıdır. Öngörüler, işlenmesine bağlıdır.
-- **Ölçümler**: El ile (tek seferlik yenileme) ve [yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Birleştirmeye bağlıdır.
-- **Aktiviteler**: El ile (tek seferlik yenileme) ve [yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Birleştirmeye bağlıdır.
-- **Zenginleştirme**: El ile (tek seferlik yenileme) ve [yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Birleştirmeye bağlıdır.
-- **Arama**: El ile (tek seferlik yenileme) ve [yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Birleştirmeye bağlıdır.
-- **Veri hazırlama**: [Yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Birleştirmeye bağlıdır.
-- **Öngörüler**: El ile (tek seferlik yenileme) ve [yapılandırılmış zamanlama](#schedule-tab)'ya göre çalışır. Segmentlere bağlıdır.
+Görev ve işlem yenilemesi [yapılandırılan zamanlamaya](#schedule-tab) göre çalıştırılır. 
 
-Görevin durumunu, içinde bulunduğu işin tüm ilerleme ayrıntılarını görmek için seçin. Yukarıdaki yenileme ilkeleri, **Atlandı** veya **Kuyruğa Alındı** görevini ele almak için neler yapabileceğinizi anlamanıza yardımcı olabilir.
+|İşlem  |Açıklama  |
+|---------|---------|
+|Etkinlik  |El ile çalışır (tek seferlik yenileme). Birleştirme işlemine bağlıdır. Öngörüler, işlenmesine bağlıdır.|
+|Analiz bağlantısı |El ile çalışır (tek seferlik yenileme). Segmentlere bağlıdır.  |
+|Analiz hazırlığı |El ile çalışır (tek seferlik yenileme). Segmentlere bağlıdır.  |
+|Veri hazırlama   |Birleştirmeye bağlıdır.   |
+|Veri kaynakları   |Başka bir işleme bağlı değildir. Eşleşme, bu işlemin başarıyla tamamlanmasına bağlıdır.  |
+|Zenginleştirmeler   |El ile çalışır (tek seferlik yenileme). Birleştirme işlemine bağlıdır. |
+|Dışarı aktarma hedefleri |El ile çalışır (tek seferlik yenileme). Segmentlere bağlıdır.  |
+|İçgörüler |El ile çalışır (tek seferlik yenileme). Segmentlere bağlıdır.  |
+|Yönetim bilgileri   |Birleştirmeye bağlıdır.   |
+|Eşleştir |Eşleşme tanımında kullanılan veri kaynaklarının işlenmesine bağlıdır.      |
+|Ölçümler  |El ile çalışır (tek seferlik yenileme). Birleştirme işlemine bağlıdır.  |
+|Adres Mektup Birleştirme   |Eşleşme işleminin tamamlanmasına bağlıdır. Segmentler, ölçümler, zenginleştirme, arama, aktiviteler, tahminler ve veri hazırlama bu sürecin başarıyla tamamlanmasına bağlıdır.   |
+|Profiller   |El ile çalışır (tek seferlik yenileme). Birleştirme işlemine bağlıdır. |
+|Arama yap   |El ile çalışır (tek seferlik yenileme). Birleştirme işlemine bağlıdır. |
+|Segmentler  |El ile çalışır (tek seferlik yenileme). Birleştirme işlemine bağlıdır. Öngörüler, işlenmesine bağlıdır.|
+|Sistem   |Eşleşme işleminin tamamlanmasına bağlıdır. Segmentler, ölçümler, zenginleştirme, arama, aktiviteler, tahminler ve veri hazırlama bu sürecin başarıyla tamamlanmasına bağlıdır.   |
+|Kullanıcı  |El ile çalışır (tek seferlik yenileme). Varlıklara bağlıdır.  |
+
+Bir işlemin durumunu, içinde olduğu tüm işin ilerleme ayrıntılarını görmek için seçin. Yukarıdaki yenileme işlemleri, **Atlanan** veya **Kuyruğa alınan** bir görev veya işlem için ne yapabileceğinizi anlamanıza yardımcı olur.
 
 ## <a name="schedule-tab"></a>Zamanlama sekmesi
 
 Tüm [alınan veri kaynaklarınız](data-sources.md) ile ilgili otomatik yenilemeleri zamanlamak için **Zamanla** sekmesini kullanın. Otomatik yenilemeler, veri kaynaklarınızdaki güncelleştirmelerin birleşik müşteri profillerinize yansımasına yardımcı olur.
+
+> [!NOTE]
+> Sizin tarafınızdan yönetilen veri kaynakları, kendi zamanlamalarında yenilenir. Sizin tarafından yönetilen veri kaynaklarının yenilenmesini zamanlamak için **Veri kaynakları** sayfasından bu belirli veri kaynağında yenileme ayarlarını yapılandırın.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Veri akışı yenileme ayarları.":::
 
 1. Hedef kitle içgörülerinde, **Yönetici** > **Sistem**'e gidin ve **Zamanla** sekmesini seçin.
 
@@ -84,9 +112,15 @@ Tüm [alınan veri kaynaklarınız](data-sources.md) ile ilgili otomatik yenilem
 
 ## <a name="general-tab"></a>Genel sekmesi
 
-**Genel** sekmesinde **Dil** ve **Ülke/Bölge biçimi** olmak üzere iki seçenek vardır.
+**Genel** sekmesinde dili ve ülke/bölge biçimini değiştirebilirsiniz.
 
-Uygulama, [birkaç dili destekler](supported-languages.md). Tercih edilen dili değiştirmek için açılan menüden bir **Dil** seçin.
+Customer Insights [birçok dili destekler](/dynamics365/get-started/availability). Uygulamada menü, etiket metni ve sistem iletileri gibi öğeleri tercih ettiğiniz dilde görüntülemek için dil tercihiniz kullanılır.
+
+İçeri aktarılan veriler ve el ile girdiğiniz bilgiler çevrilmez.
+
+### <a name="update-the-settings"></a>Ayarları güncelleştirme
+
+Tercih edilen dili değiştirmek için açılan menüden bir **Dil** seçin.
 
 Tarih, saat ve sayılar için tercih ettiğiniz biçimlendirmeyi değiştirmek üzere **Ülke/Bölge biçimi** açılan menüsünü kullanın. Bu alanın altında bir biçimlendirme önizlemesi görüntülenir. Sistem, yeni bir dil seçtiğinizde otomatik olarak bir seçim önerir.
 
@@ -94,7 +128,7 @@ Seçimlerinizi onaylamak için **Kaydet**'i seçin.
 
 ## <a name="api-usage-tab"></a>API kullanımı sekmesi
 
-Gerçek zamanlı API kullanımıyla ilgili ayrıntıları bulun ve belirli bir zaman diliminde hangi olayların gerçekleştiğini görün. **Zaman dilimi seçin** açılan menüsünde, zaman dilimini seçin. 
+Gerçek zamanlı API kullanımıyla ilgili ayrıntıları bulun ve belirli bir zaman diliminde hangi olayların gerçekleştiğini görün. **Bir zaman dilimi seç** açılır menüsünde zaman dilimi seçersiniz. 
 
 **API kullanımı** üç bölüm içerir: 
 - **API çağrıları**: seçilen zaman diliminde API'ye yapılan toplu çağrı sayısını görselleştiren bir grafik.
@@ -103,8 +137,15 @@ Gerçek zamanlı API kullanımıyla ilgili ayrıntıları bulun ve belirli bir z
 
 -  **İşlemler**: kullanılabilir her API işlemi için satırları ve işlemlerin kullanımıyla ilgili ayrıntıları içeren bir tablo. [API başvurusuna](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) gitmek için bir işlem adı seçebilirsiniz.
 
-   [Gerçek zamanlı veri alımı](real-time-data-ingestion.md) kullanan işlemler, gerçek zamanlı API kullanımını görüntülemek için dürbün simgesine sahip bir düğme içerir. Geçerli ortamda gerçek zamanlı API kullanımına yönelik kullanım ayrıntılarını içeren bir yan bölmeyi açmak için düğmeyi seçin.   
+   [Gerçek zamanlı veri alımı](real-time-data-ingestion.md) kullanan işlemler, gerçek zamanlı API kullanımını görmek için kullanabileceğiniz dürbün simgesi bulunan bir düğme içerir. Geçerli ortamda gerçek zamanlı API kullanımına yönelik kullanım ayrıntılarını içeren bir yan bölmeyi açmak için düğmeyi seçin.   
    Gerçek zamanlı etkileşimlerinizi en iyi şekilde nasıl sunacağınızı seçmek için **Gerçek zamanlı API kullanımı** bölmesindeki **Gruplama ölçütü** kutusunu kullanın. Verileri API yöntemi, uygun bulunan varlık adı (alınan varlık), oluşturan (etkinliğin kaynağı), sonuç (başarı veya başarısızlık) ya da hata kodlarına göre gruplandırabilirsiniz. Veriler, geçmiş grafiği ve tablo olarak kullanılabilir.
+
+## <a name="security-tab"></a>Güvenlik sekmesi
+
+**Güvenlik** sekmesi, kendi [Azure Key Vault'unuzu](/azure/key-vault/general/basic-concepts) ortama bağlamanıza ve yönetmenize olanak tanır.
+Bir kuruluşun uyumluluk sınırında gizliliklerin kullanılması ve kullanılabilmesi için adanmış Key Vault kullanılabilir. Hedef kitle öngörüler, üçüncü taraf sistemlere [bağlantılar ayarlamak](connections.md) için Azure Key Vault'taki gizli anahtarları kullanabilir.
+
+Daha fazla bilgi için bkz. [Kendi Azure Key Vault'unuzu getirme](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

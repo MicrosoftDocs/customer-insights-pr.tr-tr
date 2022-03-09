@@ -1,20 +1,19 @@
 ---
 title: Segmentler için onay kurallarını etkinleştirme
 description: Hedef kitle içgörülerinde onay verilerini bağlamak ve onay denetimlerini etkinleştirmek için şu adımları izleyin. Yönetici, onay denetimlerini de devre dışı bırakabilir.
-ms.date: 11/03/2021
-ms.service: customer-insights
+ms.date: 11/12/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 4b55c82229b1a6189c0dd67d145386344286df8a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790799"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227517"
 ---
 # <a name="activate-consent-rules"></a>Onay kurallarını etkinleştirme
 
@@ -49,3 +48,6 @@ Hedef kitle içgörülerinde onay verilerini kullanmayı durdurmak için, bir y�
 1. **Onay (önizleme)** sekmesini seçin.
 
 1. **Onay denetimlerini etkinleştir** bölümünde iki durumlu düğmeyi **Kapalı** olarak ayarlayın.
+
+> [!TIP]
+> Onay yönetimi özelliğini kullanmayı durdurmak için bkz. [Onay Merkezi'nde sistem ayarları (önizleme)](../consent-management/system-settings.md).
