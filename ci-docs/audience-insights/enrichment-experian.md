@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229993"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376716"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian'dan (Önizleme) nüfus nitelikleriyle zenginleştirme müşteri profilleri
 
@@ -25,7 +25,7 @@ Experian'ı yapılandırmak için aşağıdaki ön koşullar karşılanmalıdır
 
 - Etkin bir Experian aboneliğiniz olması gerekir. Abonelik almak için doğrudan [Experian ile bağlantı kurun](https://www.experian.com/marketing-services/contact). [Experian Veri Zenginleştirme hakkında daha fazla bilgi edinin](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage)
 
-- Bir Experian bağlantısı zaten bir Yönetici tarafından yapılandırılmış olabilir *veya* [Yönetici](permissions.md#administrator) izinlere sahip olmanız gerekir. Ayrıca, sizin için oluşturulan Experian SSH etkin güvenli aktarım (ST) hesabınız için Kullanıcı kimlği, taraf kimlği ve model numarası gerekir.
+- Bir Experian bağlantısı zaten bir Yönetici tarafından yapılandırılmış olabilir *veya* [Yönetici](permissions.md#admin) izinlere sahip olmanız gerekir. Ayrıca, sizin için oluşturulan Experian SSH etkin güvenli aktarım (ST) hesabınız için Kullanıcı kimlği, taraf kimlği ve model numarası gerekir.
 
 ## <a name="supported-countriesregions"></a>Desteklenen ülkeler/bölgeler
 

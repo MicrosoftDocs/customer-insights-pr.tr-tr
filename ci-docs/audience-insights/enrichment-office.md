@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228498"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376854"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Etkileşim verileriyle müşteri profillerini zenginleştirme (önizleme)
 
@@ -28,7 +28,7 @@ Zenginleştirmeyi yapılandırmak için aşağıdaki ön koşulların karşılan
 - Etkin bir Office 365 bulut lisansınızın olması gerekir.
 - [İş hesaplarına](work-with-business-accounts.md) dayalı [birleşik müşteri profillerine](customer-profiles.md) sahip olmanız gerekir.
 - Customer Insights ortamınızda [eklenmiş Microsoft Dataverse kuruluşu](create-environment.md#step-3-connect-to-microsoft-dataverse) olması gerekir.
-- [Yönetici](permissions.md#administrator) izinlerine sahip olmalısınız.
+- [Yönetici](permissions.md#admin) izinlerine sahip olmalısınız.
 - Dynamics 365 uygulamaları içinden Office 365 verilerini kullanarak **Kuruluş Öngörüleri** sağlamak için Office 365 kiracı yöneticinizden onay almış veya onay alabilecek durumda olmanız gerekir.
 
 ## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma

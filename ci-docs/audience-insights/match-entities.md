@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355177"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376946"
 ---
 # <a name="match-entities"></a>Varlıkları eşleme
 
@@ -180,7 +180,19 @@ Yinelenenleri kaldırma çıkış varlığı aşağıdaki bilgileri içerir:
   - Deduplication_WinnerId: Bu alan, tanımlanan gruplardan veya kümelerden kazanan kimliğini içerir. Deduplication_WinnerId bir kaydın Birincil anahtar değeriyle aynıysa bu, kaydın kazanan kayıt olduğu anlamına gelir.
 - Yinelenenleri kaldırma kurallarını tanımlamak için kullanılan alanlar.
 - Yinelenenleri kaldırma kurallarından hangilerinin uygulandığını ve eşleştirme algoritması tarafından döndürülen puanı gösteren Kural ve Puan alanları.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Zenginleştirilmiş varlıkları dahil etme (Önizleme)
+
+Varlıkları veri kaynağı düzeyinde zenginleştirdiyseniz eşleştirme işlemini çalıştırmadan önce bu varlıkları seçin. Zenginleştirilmiş varlıklar, birleştirme sonuçlarınızı iyileştirebilir. Daha fazla bilgi için bkz. [Veri kaynakları için zenginleştirme](data-sources-enrichment.md). 
+
+Zenginleştirilmiş varlık, orijinal veri kaynağı alanlarını ve zenginleştirilmiş alanları içerir. Bu nedenle, zenginleştirilmiş varlıkla çalışmayı seçerseniz mevcut yapılandırma etkilenmez. Ancak, bunun yerine zenginleştirilmiş alanları kullanmak için eşleşme kurallarını güncelleştirmeniz gerekebilir.
+
+1. **Veri** > **Birleştir** > **Eşleştir**'e gidin ve sayfanın üst kısmındaki **Zenginleştirilmiş varlıkları kullan**'ı seçin.
+
+1. **Zenginleştirilmiş varlıkları kullan** bölmesinden bir veya daha fazla zenginleştirilmiş varlık seçin.
+
+1. **Bitti**'yi seçin. Kaynak varlığın kullanıldığı her yerde (eşleşme sırası veya kurallar gibi) kaynak varlık otomatik olarak zenginleştirilmiş varlığa değiştirilir.
+  
 ## <a name="run-the-match-process"></a>Eşleştirme işlemini çalıştırma
 
 Çapraz varlık eşleştirme ve yinelenenleri kaldırma kuralları dahil olmak üzere eşleştirme kurallarını yapılandırdıktan sonra eşleştirme işlemini çalıştırabilirsiniz. 

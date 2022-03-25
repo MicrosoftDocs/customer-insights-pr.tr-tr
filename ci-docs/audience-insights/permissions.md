@@ -1,7 +1,7 @@
 ---
 title: Kullanıcı izinlerini yönetme
 description: İzinler ve kullanıcı rolleri hakkında bilgi edinin.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355961"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376762"
 ---
 # <a name="user-permissions"></a>Kullanıcı izinleri
 
@@ -48,7 +48,7 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. Hedef kitle 
 - **Zenginleştirme** sayfasından yapılandırmayı yönetin ve müşteri profillerini zenginleştirin (yalnızca birinci taraf zenginleştirmeleri için).
 - Katkıda bulunanlar ile paylaşılan bağlantılara göre, verme işlemlerini yönetin ve oluşturun. [Yöneticilerin, verme amacıyla bir bağlantı kullanmalarına nasıl izin verdiği hakkında daha fazla bilgi edinin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Yönetici
+## <a name="admin"></a>Yönetici
 
 - Tüm izinler Katılımcı tarafından kullanılabilir.
 - Sistem işlemleriniz için çalışma dili ve yenileme zamanlamaları da dahil olmak üzere **Sistem** sayfasındaki ayarları değiştirin.
@@ -60,6 +60,12 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. Hedef kitle 
 - **Müşteri Kartı Eklentisi**'ni yükleyin ve kullanın.
 - **Power Apps bağlayıcısı**'nı ekleyin ve kullanın.
 - [Customer Insights API'leri](apis.md)'nin kullanımını etkinleştirin.
+- Başka bir yöneticiye [ortam sahipliği atayın](manage-environments.md#change-the-owner-of-an-environment).
+
+## <a name="admin-owner"></a>Yönetici (sahip)
+
+- Tüm izinler, yöneticinin kullanımına sunulur.
+- Ortamı [sıfırlayın ve silin](manage-environments.md#reset-an-existing-environment).
 
 ## <a name="assign-roles-and-permissions"></a>Rolleri ve izinleri atama
 

@@ -8,16 +8,18 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229427"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376378"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>İyileştirilmiş şirket verileriyle şirket profillerini zenginleştirme
 
 Şirket profillerinizi düzeltmek, bunlara ekleme yapmak ve standartlaşmak için Microsoft'un modellerini ve derlenmiş şirket verilerini kullanın. Daha iyi doğruluk ve içgörüler için [Common Data Model biçimini](/common-data-model/schema/core/applicationcommon/account) kullanacağız.
+
+Ayrıca, veri birleştirme işleminde eşleşme doğruluğunu iyileştirmek için [veri kaynaklarındaki şirket verilerini iyileştirebilirsiniz](data-sources-enrichment.md). 
 
 ## <a name="how-we-enhance-company-data"></a>Şirket verilerinizi iyileştirme yöntemimiz
 
@@ -71,7 +73,7 @@ Gelişmiş verilerle ilgili birkaç sınırlama vardır. Aşağıdaki listede ye
 
 1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
 
-1. Zenginleştirme için ve çıkış varlığı için bir ad girin.
+1. Zenginleştirme için bir ad ve çıkış varlığı değerini girin.
 
 1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230406"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376394"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 
@@ -25,7 +25,7 @@ HERE Technologies zenginleştirmelerini yapılandırmak için aşağıdaki ön k
 
 - Etkin bir HERE Technologies aboneliğiniz olması gerekir. Abone olmak için [buradan kaydolabilir](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) veya [HERE Technologies ile doğrudan iletişime geçebilirsiniz](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [HERE Technologies Konum Zenginleştirme hakkında daha fazla bilgi edinin.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- HERE [bağlantısı](connections.md) kullanılabilir *veya* [Yönetici](permissions.md#administrator) izinleriniz ve HERE Technologies API anahtarınız vardır.
+- HERE [bağlantısı](connections.md) kullanılabilir *veya* [Yönetici](permissions.md#admin) izinleriniz ve HERE Technologies API anahtarınız vardır.
 
 ## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 

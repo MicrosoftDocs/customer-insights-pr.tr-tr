@@ -1,7 +1,7 @@
 ---
 title: Ortamları oluşturma ve yönetme
 description: Hizmete kaydolmayı ve ortamları yönetmeyi öğrenin.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354303"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376900"
 ---
 # <a name="manage-environments"></a>Ortamları yönet
-
-
 
 ## <a name="switch-environments"></a>Ortamları değiştirme
 
@@ -98,9 +96,29 @@ Veri kaynaklarını yeniledikten sonra **Veriler** > **Birleştir**'e gidin. Bur
 
 Veri birleşme işlemi tamamlanınca **Ölçümler**'e ve **Segmentler**'e gidip onları da yenileyin.
 
+## <a name="change-the-owner-of-an-environment"></a>Ortam sahibini değiştirme
+
+Customer Insights'ta birkaç kullanıcı yönetici izinlerine sahip olabilirken yalnızca bir kullanıcı ortamın sahibidir. Varsayılan olarak, başlangıçta bir ortamı oluşturan yöneticidir. Ortam yöneticisi olarak yönetici izinlerine sahip başka bir kullanıcıya sahiplik atayabilirsiniz.
+
+1. Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin.
+
+1. **Düzenle** simgesini seçin.
+
+1. **Ortamı düzenle** kutusunda, **Temel bilgiler** adımına gidin.
+
+1. **Ortam sahibini değiştir** alanında, ortamın yeni sahibini seçin.  
+
+1. Değişiklikleri uygulamak için **İncele ve bitir**'i, ardından **Güncelleştir**'i seçin. 
+
+## <a name="claim-ownership-of-an-environment"></a>Ortam sahipliği talep etme
+
+Bir ortamın sahibi kuruluştan ayrılırsa veya kullanıcı hesabı silinirse ortam, sahibi olmayan bir durumda kalır. Yönetici izinlerine sahip bir kullanıcı sahipliği talep edebilir ve ortamın yeni sahibi olabilir. Ortamın sahibi olmaya devam edebilir veya [sahipliği başka bir yöneticiye devredebilir](#change-the-owner-of-an-environment). 
+
+Asıl sahip kuruluştan ayrıldığında sahiplik talebinde bulunmak için Customer Insights'ta her sayfanın üst kısmında görüntülenen **Sahipliği al** düğmesini seçin.
+
 ## <a name="reset-an-existing-environment"></a>Mevcut bir ortamı sıfırlama
 
-Yönetici olarak, tüm yapılandırmaları silmek ve alınan verileri kaldırmak isterseniz ortamı boş bir durum olarak sıfırlayabilirsiniz.
+Ortamın sahibi olarak, tüm yapılandırmaları silmek ve alınan verileri kaldırmak istiyorsanız ortamı boş bir duruma sıfırlayabilirsiniz.
 
 1.  Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin. 
 
@@ -112,7 +130,7 @@ Yönetici olarak, tüm yapılandırmaları silmek ve alınan verileri kaldırmak
 
 ## <a name="delete-an-existing-environment"></a>Varolan bir ortamı silme
 
-Yönetici olarak, yönettiğiniz bir ortamı silebilirsiniz.
+Ortamın sahibi olarak, yönettiğiniz bir ortamı silebilirsiniz.
 
 1.  Uygulamanın üst bilgisindeki **Ortam** seçiciyi seçin.
 

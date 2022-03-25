@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229056"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455976"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps bağlayıcısı (önizleme)
 
@@ -38,6 +38,8 @@ Customer Insights'ı veri bağlantısı olarak ekledikten sonra Power Apps'te a�
 ### <a name="retrievable-entities"></a>Alınabilir varlıklar
 
 Yalnızca **Müşteri**, **UnifiedActivity**, **Segmentler** ve **ContactProfile** varlıklarını Power Apps bağlayıcısı üzerinden alabilirsiniz. ContactProfile, işletme hesapları için şu anda yalnızca hedef kitle öngörüleri örneklerinde kullanılabilir. Diğer varlıklar ise temeldeki bağlayıcının bu varlıkları Power Automate tetikleyicileri aracılığıyla desteklediğinden gösterilir.
+
+60 saniyede en fazla 100 çağrı gerçekleştirebilirsiniz. $skip parametresini kullanarak API uç noktasına birden çok çağrı gerçekleştirebilirsiniz. [$skip parametresi hakkında daha fazla bilgi edinin](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Temsilci
 

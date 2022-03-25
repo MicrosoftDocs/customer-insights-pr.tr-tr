@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350155"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8456022"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Customer Insights'ı satın aldıktan sonra başlayın
 
@@ -39,7 +39,4 @@ Hizmeti ve özellikleri denemek istiyorsanız bkz. [Deneme ortamı ayarlama](tri
 
 ## <a name="create-your-own-environment"></a>Kendi ortamınızı oluşturun
 
-İlk oturumunuzu açtıktan sonra, örnek veri içeren bir ortam görürsünüz. Bu verileri, özellikleri keşfetmek ve uygulamayla alıştırmak için kullanabilirsiniz. Kendi verilerinizi kullanmak için [ortam oluşturmanız](audience-insights/get-started-paid.md) gerekir.
-
-
-
+İlk oturumunuzu açtıktan sonra, örnek veri içeren bir ortam görürsünüz. Bu verileri, özellikleri keşfetmek ve uygulamayla alıştırmak için kullanabilirsiniz. Kendi verilerinizi kullanmak için [ortam oluşturmanız](/dynamics365/customer-insights/audience-insights/create-environment) gerekir.

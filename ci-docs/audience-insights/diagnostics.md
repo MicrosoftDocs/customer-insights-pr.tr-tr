@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354432"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376440"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (Önizleme)
 
@@ -37,7 +37,7 @@ Customer Insights, aşağıdaki olay günlüklerini gönderir:
 Customer Insights'ta tanılamayı yapılandırmak için aşağıdaki ön koşulların karşılanması gerekir:
 
 - Etkin bir [Azure Aboneliğine](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) sahip olmanız gerekir.
-- Customer Insights'ta [Yönetici](permissions.md#administrator) izinlerine sahip olmanız gerekir.
+- Customer Insights'ta [Yönetici](permissions.md#admin) izinlerine sahip olmanız gerekir.
 - Azure'daki hedef kaynakta **Katkıda Bulunan** ve **Kullanıcı Erişim Yöneticisi** rolüne sahip olmanız gerekir. Kaynak; Azure Depolama hesabı, Azure Olay Hub'ı veya Azure Log Analytics çalışma alanı olabilir. Daha fazla bilgi için bkz. [Azure portalı kullanarak Azure rol atamalarını ekleme veya kaldırma](/azure/role-based-access-control/role-assignments-portal).
 - Azure Depolama, Azure Olay Hub'ı veya Azure Log Analytics için [hedef gereksinimleri](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) karşılanmalıdır.
 - Kaynağın ait olduğu kaynak grubunda en azından **Okuyucu** rolüne sahip olmalısınız.
@@ -132,7 +132,7 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 | `resultSignature` | String    | İsteğe bağlı          | Olayın sonuç durumu. İşlem bir REST API çağrısına karşılık geliyorsa bu HTTP durum kodudur.        | `200`             |
 | `durationMs`      | Uzun      | İsteğe bağlı          | İşlemin milisaniye cinsinden süresi.     | `133`     |
 | `callerIpAddress` | String    | İsteğe bağlı          | İşlem, genel kullanıma yönelik bir IP adresinden gelen API çağrısına karşılık geliyorsa arayan IP adresi.                                                 | `144.318.99.233`         |
-| `identity`        | String    | İsteğe bağlı          | İşlemi yapan kullanıcının veya uygulamanın kimliğini açıklayan JSON nesnesi.       | [Kimlik](#identity-schema) bölümüne bakın.     |  |
+| `identity`        | String    | İsteğe bağlı          | İşlemi yapan kullanıcının veya uygulamanın kimliğini açıklayan JSON nesnesi.       | [Kimlik](#identity-schema) bölümüne bakın.     |  
 | `properties`      | String    | İsteğe bağlı          | Belirli bir olay kategorisinde daha fazla özellik içeren JSON nesnesi.      | [Özellikler](#api-properties-schema) bölümüne bakın.    |
 | `level`           | String    | Zorunlu          | Olayın önem derecesi.    | `Informational`, `Warning`, `Error` veya `Critical`.           |
 | `uri`             | String    | İsteğe bağlı          | Mutlak istek URI'si.    |               |
@@ -239,7 +239,7 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 | `properties.startTimestamp`                  | Evet      | Evet  | UTC Zaman Damgası`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Evet      | Evet  | UTC Zaman Damgası`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Evet      | Evet  | UTC Zaman Damgası`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Evet      | Evet  | Customer Insights `instanceId` değeri                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Evet      | Evet  | Customer Insights `instanceId` değeri                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Evet  | - OperationType = `Export` için tanımlayıcı, dışarı aktarma yapılandırmasının GUID değeridir. <br> - OperationType = `Enrichment` için zenginleştirmenin GUID değeridir. <br> - OperationType `Measures` ve `Segmentation` için tanımlayıcı, varlık adıdır. |
 | `properties.friendlyName`                    | No       | Evet  | Dışarı aktarmanın veya işlenen varlığın kullanıcı tarafından okunabilir adı.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Evet  | isteğe bağlı. Daha ayrıntılı hata iletisi.                                                                                                                                                                                                                  |

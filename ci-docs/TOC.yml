@@ -58,6 +58,8 @@
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Azure Synapse Analytics ekleme
           href: audience-insights/connect-synapse.md
+        - name: Veri kaynakları için zenginleştirme
+          href: audience-insights/data-sources-enrichment.md
         - name: Veri kaynakları için artımlı yenileme
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Gerçek zamanlı veri alımı
@@ -100,6 +102,8 @@
           href: audience-insights/enrichment-here.md
         - name: Leadspace ile zenginleştirme
           href: audience-insights/enrichment-leadspace.md
+        - name: LiveRamp ile zenginleştirme
+          href: audience-insights/enrichment-liveramp.md
         - name: Experian İle zenginleştirme
           href: audience-insights/enrichment-experian.md
         - name: Office 365 verileriyle zenginleştirme

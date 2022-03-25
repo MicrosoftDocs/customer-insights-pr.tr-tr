@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355915"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376532"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Kendi Azure Key Vault'unuzu getirin (önizleme)
 
@@ -31,7 +31,7 @@ Hedef kitle öngörülerde Key Vault yapılandırmak için aşağıdaki önkoşu
 
 - Etkin bir Azure aboneliğiniz olması gerekir.
 
-- Hedef kitle içgörülerinde [Yönetici](permissions.md#administrator) rolüne sahipsiniz. [Hedef kitle öngörülerde kullanıcı izinleri](permissions.md#assign-roles-and-permissions) hakkında daha fazla bilgi edinin.
+- Hedef kitle içgörülerinde [Yönetici](permissions.md#admin) rolüne sahipsiniz. [Hedef kitle öngörülerde kullanıcı izinleri](permissions.md#assign-roles-and-permissions) hakkında daha fazla bilgi edinin.
 
 - Key Vault'ta veya Key Vault'un ait olduğu kaynak grubunda yer alan [Katılımcı](/azure/role-based-access-control/built-in-roles#contributor) ve [Kullanıcı Erişim Yöneticisi](/azure/role-based-access-control/built-in-roles#user-access-administrator) rolleriniz vardır. Daha fazla bilgi için bkz. [Azure portalı kullanarak Azure rol atamalarını ekleme veya kaldırma](/azure/role-based-access-control/role-assignments-portal). Kullanıcı, Key Vault'taki Yönetici role erişimi sağlamıyorsa, rol tabanlı erişim denetimi izinlerini, Dynamics 365 Customer Insights Azure servis ilkesi için ayrı olarak ayarlamanız gerekir. Bağlantılandırılması gereken Key Vault için [Azure hizmet sorumlusunu kullanmak](connect-service-principal.md) üzere adımları izleyin.
 
