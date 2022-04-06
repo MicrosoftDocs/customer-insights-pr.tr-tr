@@ -1,23 +1,23 @@
 ---
 title: Customer Insights'ta ortam oluşturma
 description: Dynamics 365 Customer Insights için lisanslı abonelikle ortam oluşturma adımları.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354119"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491942"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Hedef kitle içgörülerinde ortam oluşturma
 
@@ -83,14 +83,16 @@ Dynamics 365 Marketing veya Power Apps'teki model temelli uygulamalar gibi Datav
 Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve ağ geçitlerini kullanarak şirket içi veri kaynaklarından veri almanıza](data-sources.md#add-data-from-on-premises-data-sources) olanak tanır. Ayrıca bir Dataverse ortamına bağlanarak [kullanıma hazır tahmin modellerini](predictions-overview.md?tabs=b2c#out-of-box-models) de kullanabilirsiniz.
 
 > [!IMPORTANT]
-> Veri paylaşımını etkinleştirmek için Customer Insights ve Dataverse uygulamasının aynı bölgede olması gerekir.
+> 1. Veri paylaşımını etkinleştirmek için Customer Insights ve Dataverse uygulamasının aynı bölgede olması gerekir.
+> 1. Dataverse ortamında genel yönetici rolüne sahip olmanız gerekir. Bu [Dataverse ortamının ilişkilendirildiği](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) güvenlik grupları olup olmadığını doğrulayın ve bu güvenlik gruplarına eklendiğinizden emin olun.
+> 1. Bu Dataverse ortamıyla zaten ilişkilendirilmiş olan mevcut bir Customer Insights ortamı yok. [Dataverse ortamına varolan bir bağlantının nasıl](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment) kaldırılacağını öğrenin.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="net yeni kurulumlar için otomatik etkinleştirilen Microsoft Dataverse ile veri paylaşımı.":::
 
-> [!NOTE]
-> Customer Insights aşağıdaki veri paylaşımı senaryolarını desteklemez:
-> - Tüm verileri kendi Azure Data Lake Storage'ınıza kaydederseniz Dataverse tarafından yönetilen Data Lake ile veri paylaşımını etkinleştiremezsiniz.
-> - Dataverse ile veri paylaşımını etkinleştirirseniz [bir varlıkta tahmin edilen veya eksik değerler oluşturamazsınız](predictions.md).
+Kendi Azure Data Lake Storage'ınızdan Microsoft Dataverse ile veri paylaşımını etkinleştirme hakkında daha fazla bilgi için bkz. [Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse)'e bağlanma.
+
+Customer Insights aşağıdaki veri paylaşımı senaryolarını desteklemez:
+- Dataverse ile veri paylaşımını etkinleştirirseniz [bir varlıkta tahmin edilen veya eksik değerler oluşturamazsınız](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Adım 4: Ayarları sonlandırın
 

@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Deneme Sürümüyle İlgili SSS
       href: trial-FAQ.md
-- name: Ödemeli bir lisans ile başlayın
-  href: paid-license.md
 - name: Ortamınıza erişme
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Hedef kitle içgörüleri
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Yeni ve güncelleştirilmiş özellikler
       href: audience-insights/whats-new-audience-insights.md
-    - name: Kullanmaya başlama
+    - name: Kullanmaya başlayın
       items:
         - name: Hızlı başlangıç kılavuzu
           href: audience-insights/get-started.md
+        - name: Ödemeli bir lisans ile başlayın
+          href: paid-license.md
         - name: Yeni ortam oluştur
           href: audience-insights/create-environment.md
         - name: Hedef kitle içgörülerini keşfedin
           href: audience-insights/home.md
-    - name: İş hesaplarıyla çalışma
-      href: audience-insights/work-with-business-accounts.md
+        - name: İş hesaplarıyla çalışma
+          href: audience-insights/work-with-business-accounts.md
     - name: Veri kaynakları
       items:
         - name: Veri kaynaklarına genel bakış
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Gerçek zamanlı veri alımı
           href: audience-insights/real-time-data-ingestion.md
-        - name: Varlıkları ve veri kümelerini anlama
-          href: audience-insights/entities.md
     - name: Veri birleştirme
       items:
         - name: Veri birleştirmeye genel bakış
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Varlıkları birleştirme
           href: audience-insights/merge-entities.md
-        - name: Birleşik müşteri profillerini inceleme
-          href: audience-insights/customer-profiles.md
-        - name: Birleşik müşteri profillerini filtreleme
-          href: audience-insights/search-filter-index.md
-        - name: İlişkiler ve bağlantılı varlıklar oluşturma
-          href: audience-insights/relationships.md
-        - name: Müşteri etkinliklerini listeleme
-          href: audience-insights/activities.md
-        - name: Anlamsal eşlemeleri tanımlama
-          href: audience-insights/semantic-mappings.md
     - name: Veri zenginleştirme
       items:
         - name: Müşteri profillerini zenginleştirme
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: SFTP özel içeri aktarmayla zenginleştirme
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Birleşik profiller
+      items:
+        - name: Birleşik müşteri profillerini inceleme
+          href: audience-insights/customer-profiles.md
+        - name: Birleşik müşteri profillerini filtreleme
+          href: audience-insights/search-filter-index.md
+        - name: Müşteri etkinliklerini tanımlama
+          href: audience-insights/activities.md
     - name: Segmentler
       items:
         - name: Segmentlere genel bakış
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -198,12 +196,14 @@
               href: audience-insights/export-dotdigital.md
             - name: Dynamics 365 Marketing
               href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
+            - name: Dynamics 365 for Sales
               href: audience-insights/export-dynamics365-sales.md
             - name: Facebook Ads Yöneticisi
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Varlıklar
+      items:
+        - name: Varlıkları anlama
+          href: audience-insights/entities.md
+        - name: Common Data Model'de varlık şemalarını inceleme
+          href: audience-insights/entity-schemas.md
+        - name: Dataverse'deki Customer Insights verileri
+          href: audience-insights/customer-insights-dataverse.md
+        - name: İlişkiler ve bağlantılı varlıklar oluşturma
+          href: audience-insights/relationships.md
+        - name: Anlamsal eşlemeleri tanımlama
+          href: audience-insights/semantic-mappings.md
     - name: Yönetim
       items:
         - name: Sistem yapılandırmasını ayarlama
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Birden çok ortamı yönetme
           href: audience-insights/manage-environments.md
-        - name: Güvenlik
-          items:
-            - name: Kendi Key Vault'unuzu getirin
-              href: audience-insights/use-azure-key-vault.md
-            - name: Hizmet Sorumlusunu kullanarak ADLS depolama hesabına bağlanma
-              href: audience-insights/connect-service-principal.md
-            - name: Tanılama günlüklerini dışarı aktarma
-              href: audience-insights/diagnostics.md
-    - name: Genişletilebilirlik
+        - name: Kendi Key Vault'unuzu getirin
+          href: audience-insights/use-azure-key-vault.md
+        - name: Hizmet Sorumlusunu kullanarak depolama hesabına bağlanma
+          href: audience-insights/connect-service-principal.md
+        - name: Tanılama günlüklerini dışarı aktarma
+          href: audience-insights/diagnostics.md
+        - name: Hizmet sınırları
+          href: service-limits.md
+        - name: DSR hakları ve istekleri
+          href: dsr-rights-requests.md
+    - name: API'ler
       items:
         - name: Common Data Model'de varlık şemalarını inceleme
           href: audience-insights/entity-schemas.md
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Etkileşim içgörüleri (önizleme)
   href: engagement-insights/overview.md
-- name: Hizmet sınırları
-  href: service-limits.md
-- name: DSR hakları ve istekleri
-  href: dsr-rights-requests.md
 - name: Destek alın
   href: /power-platform/admin/get-help-support

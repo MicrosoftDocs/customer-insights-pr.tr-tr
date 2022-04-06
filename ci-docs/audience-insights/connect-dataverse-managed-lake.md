@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse'te tablolara bağlanma
 description: Yönetilen bir Microsoft Dataverse data lake'ten verileri içe aktarın.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,14 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354166"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464129"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse yönetilen veri gölündeki verilere bağlanma
-
-
 
 Bu makalede, Dataverse kullanıcılarının Microsoft Dataverse tarafından yönetilen bir göldeki analiz varlıklarına nasıl hızlı bir şekilde bağlanabileceği hakkında bilgiler verilmektedir. 
 
@@ -29,7 +27,8 @@ Bu makalede, Dataverse kullanıcılarının Microsoft Dataverse tarafından yön
 
 ## <a name="important-considerations"></a>Dikkat edilmesi gereken önemli hususlar
 
-Azure Data Lake Storage gibi çevrimiçi hizmetlerde depolanan veriler, verilerin işlendiği veya depolandığı Dynamics 365 Customer Insights'tan farklı bir konumda depolanabilir. Çevrimiçi hizmetlerde depolanan verileri içeri aktararak veya verilere bağlanarak, verilerin Dynamics 365 Customer Insights uygulamasına aktarılabileceğini ve uygulamada depolanabileceğini kabul edersiniz.  [Microsoft Güven Merkezi'ni ziyaret ederek daha fazla bilgi edinin](https://www.microsoft.com/trust-center).
+1. Azure Data Lake Storage gibi çevrimiçi hizmetlerde depolanan veriler, verilerin işlendiği veya depolandığı Dynamics 365 Customer Insights'tan farklı bir konumda depolanabilir. Çevrimiçi hizmetlerde depolanan verileri içeri aktararak veya verilere bağlanarak, verilerin Dynamics 365 Customer Insights uygulamasına aktarılabileceğini ve uygulamada depolanabileceğini kabul edersiniz.  [Microsoft Güven Merkezi'ni ziyaret ederek daha fazla bilgi edinin](https://www.microsoft.com/trust-center).
+2. Yalnızca [değişiklik izlemenin](/power-platform/admin/enable-change-tracking-control-data-synchronization) etkin olduğu Dataverse varlıkları görünür. Bu varlıklar, Dataverse yönetilen veri gölüne aktarılabilir ve Customer Insights'ta kullanılabilir. Kullanıma hazır Dataverse tablolarında değişiklik izleme özelliği varsayılan olarak etkindir. Özel tablolar için değişiklik izlemeyi etkinleştirmeniz gerekir. Bir Dataverse tablosunun değişiklik izleme için etkin olup olmadığını kontrol etmek için [Power Apps](https://make.powerapps.com) > **Veri** > **Tablolar**'a gidin. İlgilendiğiniz tabloyu bulun ve seçin. **Ayarlar** > **Gelişmiş seçenekler**'e gidin ve **Değişiklik izleme** ayarını gözden geçirin.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Bir Dataverse yönetilen gölüne bağlanma
 

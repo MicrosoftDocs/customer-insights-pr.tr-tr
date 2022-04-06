@@ -1,19 +1,19 @@
 ---
 title: Desteklenen tahmin senaryolarına genel bakış
 description: Dynamics 365 Customer Insights uygulamasının kapsadığı tahmin senaryoları ve seçenekleri.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228268"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487559"
 ---
 # <a name="predictions-overview"></a>Tahminlere genel bakış
 
@@ -36,6 +36,11 @@ Verileri tahmin ederek başlamanın en kolay yolu, genellikle kullanıma hazır 
 - [İşlem erimesi](predict-transactional-churn.md): Bir müşterinin belirli bir zaman diliminde artık ürünlerinizi veya hizmetlerinizi satın alıp almayacağını tahmin eder.
 
 ---
+
+> [!TIP]
+> İş kullanım örneğinin doğru şekilde bilgilendirmesini sağlamak için kullanıma hazır modelleri güncelleştirilmiş verilerle düzenli olarak yenilemenizi öneririz. Sistem yeni veya güncelleştirilmiş veri kaynakların aldığında veriler anlık olarak yenilenir. Ancak, modeller bu durumda yalnızca yeniden puanlanır ve mevcut eğitim verilerini kullanmaya devam eder.
+> 
+> Yapılandırma deneyiminde model yeniden eğitme zamanlamasını ayarlayarak bir **Güncelleştirme zamanlaması** yapılandırabilirsiniz. Model, istediğiniz zaman değiştirebileceğiniz bu zamanlamada yeniden eğitilir ve yeniden puanlanır.
 
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learning tümleştirmesi

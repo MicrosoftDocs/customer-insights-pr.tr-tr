@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354914"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523761"
 ---
 # <a name="customer-profiles"></a>Müşteri profilleri
 
 **Müşteriler** sayfası, birleşmiş müşteri profillerinizin birleşik bir görünümünü gösterir. Müşteri profilleri, [birleştirilmiş müşteri varlığını oluşturduktan](data-unification.md) sonra kullanılabilir. Sayfa, müşteri aramanıza ve bu arama için dizini tanımlamanıza olanak sağlar.
 
-Müşteriler bireyler veya organizasyonlar olabilir. Her müşteri profili bir kutucuk ile temsil edilir. Daha fazla kayıt almak için sayfalandırma denetimlerini kullanın. Kartta, **Arama ve filtre dizininde** tanımlanan *Müşteri* varlığındaki alanlar görüntülenir. [Müşteri ayrıntıları sayfası](customer-profiles.md#customer-details-page) adı verilen adanmış bir sayfada seçili müşteriyle ilgili verileri görmek için bir kutucuk seçin.
+Müşteriler bireyler veya organizasyonlar olabilir. Her müşteri profili bir kutucuk ile temsil edilir. Daha fazla kayıt almak için sayfalandırma denetimlerini kullanın. Kartta, **Arama ve filtre dizininde** tanımlanan *Müşteri* varlığındaki alanlar görüntülenir. Her karttaki alanların sırası sistem tarafından seçilir.
+
+[Müşteri ayrıntıları sayfası](customer-profiles.md#customer-details-page) adı verilen adanmış bir sayfada seçili müşteriyle ilgili verileri görmek için bir kutucuk seçin.
 
 > [!div class="mx-imgBorder"] 
 > ![Müşteri sayfası sonuç döşemelerini gösterir](media/customers-page-result-tiles-B2C.png "Müşteri sayfası sonuç döşemelerini gösterir")

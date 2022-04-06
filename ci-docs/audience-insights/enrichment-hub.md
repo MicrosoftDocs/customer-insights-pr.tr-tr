@@ -1,7 +1,7 @@
 ---
 title: Birleşik müşteri profillerini zenginleştirme
 description: Müşteri verilerinizi zenginleştirmek için özellikleri kullanın.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372743"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8492003"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
 
@@ -97,5 +97,19 @@ Zenginleştirme durumunu görmek için
 1. **İlerleme ayrıntıları** bölmesinde, **Zenginleştirmelerim** bölümünü genişletin. 
 1. İlerlemeyi görmek istediğiniz zenginleştirme altından **Ayrıntıları görüntüle**'yi seçin. 
 1. **Görev ayrıntıları** bölmesinde, zenginleştirmenizi ve durumlarını güncelleştirmekte yer alan işlemleri görmek için **Ayrıntıları göster**'i seçin. 
+
+## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+
+Tamamlanan bir zenginleştirme çalıştırmasından sonra, zenginleştirme sonuçlarını gözden geçirebilirsiniz.
+
+1. **Veriler** > **Zenginleştirme**'ye gidin. 
+1. Hakkında bilgi almak istediğiniz zenginleştirmeyi seçin.
+
+Tüm zenginleştirmeler zenginleştirilmiş profillerin sayısı, oluşturulan zenginleştirme varlığının önizlemesi ve zaman içinde zenginleştirilmiş profillerin sayısı gibi temel bilgileri gösterir. Varsa, **Alana göre zenginleştirilen müşteri sayısı**, her zenginleştirilmiş alanın kapsamında ayrıntılı bilgiler sağlar.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Zenginleştirme sonuçları sayfası.":::
+
+Bazı zenginleştirmeler, zenginleştirme türüne özel bilgileri de gösterir. Daha fazla bilgi için ilgili zenginleştirmenin belgelerine başvurun.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

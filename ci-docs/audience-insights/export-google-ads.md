@@ -1,42 +1,37 @@
 ---
 title: Customer Insights verilerini Google Ads'e dışarı aktarma
 description: Bağlantıyı yapılandırmayı ve Google Ads'a dışa aktarmayı öğrenin.
-ms.date: 09/27/2021
+ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227034"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523829"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentleri Google Ads (Önizleme) dışa aktarma
 
 Birleşik müşteri profillerinin segmentlerini bir Google Ads hedef kitle listesine dışa aktarın ve bunları Google Arama, Gmail, YouTube ve Google Görüntülü Reklam Ağı'nda reklam vermek için kullanın. 
 
-> [!IMPORTANT]
-> Şu anda, yalnızca yeni bir bağlantı oluşturabilir ve zaten onaylanmış bir Google Ads Geliştirici belirtecine sahipseniz verileri Google Ads'e aktarabilirsiniz. İlke değişiklikleri nedeniyle, Google Ads dışarı aktarmasını kısa süre içinde güncelleştirecek ve deneyiminizin sürekliliğini sağlamak ve Google Ads'e aktarma işlemini basitleştirmek amacıyla geliştirici belirteci gerektirmeyen bir dışarı aktarma seçeneği sunacağız. Yeni dışarı aktarma seçeneğine daha kolay geçiş yapmak için, Google Ads'e daha fazla bağlantı ayarlamamanızı öneririz.
 
 ## <a name="prerequisites-for-connection"></a>Bağlantı için ön koşullar
 
 -   [Google Ads hesabınızın](https://ads.google.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
--   [Onaylanmış bir Google Ads geliştirici belirteciniz](https://developers.google.com/google-ads/api/docs/first-call/dev-token) var. 
 -   [Müşteri eşleştirme Ilkesinin](https://support.google.com/adspolicy/answer/6299717) gereksinimlerini karşılarsınız.
 -   [Yeniden pazarlama listesi boyutlarının](https://support.google.com/google-ads/answer/7558048) gereksinimlerini karşılarsınız.
--   Google Ads'te mevcut hedef kitleler ve ilgili kimlikler olmalıdır. Daha fazla bilgi için bkz. [Google Ads hedef kitleleri](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   [Yapılandırılmış segmentleriniz](segments.md) olmalıdır.
--   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, bir e-posta adresini, adı ve soyadını temsil eden alanlar içerir.
+-   Dışarı aktarılan segmentlerdeki Unified Customer Profile öğeleri e-posta adresi, telefon, mobil reklam veren kimliği, üçüncü taraf kullanıcı kimliği veya adresi temsil eden alanlar içerir.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Google Ads'e dışa aktarma başına 1 milyon müşteri profili.
 - Google Ads'e dışarı aktarma segmentlerle sınırlıdır.
-- Tedarikçi tarafındaki kısıtlamalar nedeniyle 1 milyon müşteri profili olan segmentleri dışa aktarma 5 dakika kadar sürebilir. 
+- Tedarikçi tarafındaki kısıtlamalar nedeniyle 1 milyon müşteri profili olan segmentleri dışa aktarma 30 dakika kadar sürebilir. 
 - Google Ads'te eşleştirme 48 saat kadar sürebilir.
 
 ## <a name="set-up-connection-to-google-ads"></a>Google Ads bağlantısı ayarla
@@ -50,8 +45,6 @@ Birleşik müşteri profillerinin segmentlerini bir Google Ads hedef kitle liste
 1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. **[Google Ads müşteri kimliğinizi](https://support.google.com/google-ads/answer/1704344)** girin.
-
-1. **[Google Ads tarafından onaylanan geliştirici belirtecini](https://developers.google.com/google-ads/api/docs/first-call/dev-token)** girin.
 
 1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
 
@@ -71,11 +64,11 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Dışa aktarma bağlantısı** alanında, Google Ads bölümünden bir bağlantı seçin. Bu bölüm adını görmüyorsanız, bu tür hiçbir bağlantı kullanabilirsiniz.
 
-1. **[Google Ads hedef kitle kimliğinizi](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** girin ve Google Ads'e bağlantıyı başlatmak için **Bağlan**'ı seçin.
+1. Yeni bir hedef kitle oluşturmak isterseniz Google Hedef Kitle Kimliği alanını boş bırakın. Google Ads hesabınızda otomatik olarak yeni bir hedef kitle oluşturur ve dışarı aktarılan segmentin adını kullanırız. Mevcut bir Google Ads hedef kitlesini güncelleştirmek isterseniz [Google Ads hedef kitle kimliğinizi](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.) girin
 
-1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin.
+1. **Veri eşleştirme** bölümünde, dışarı aktarılacak bir veya daha fazla veri alanı seçin ve Customer Insights'ta karşılık gelen veri alanlarını temsil eden alanı seçin.
 
-1. Dışarı aktarmak istediğiniz segmentleri seçin. Toplamda en fazla 1 milyon müşteri profilini Google Ads'e dışarı aktarabilirsiniz.
+1. Dışarı aktarmak istediğiniz segmentleri seçin. 
 
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 

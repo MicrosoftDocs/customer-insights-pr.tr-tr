@@ -1,7 +1,7 @@
 ---
 title: Verileri almak için veri kaynaklarını kullanma
 description: Çeşitli kaynaklardan verilerin nasıl içe aktarıldığını öğrenin.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354073"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464098"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
@@ -47,7 +47,18 @@ Dataverse ortamını Customer Insights ile ilişkilendirdikten sonra oluşturula
 
 Varolan Power BI veya Power Apps ortamdan gelen veri geçitleri görünür ve Customer Insights'ta yeniden kullanabilirsiniz. Veri kaynakları sayfasında, yerinde veri ağ geçitlerini görüntüleyebileceğiniz ve yapılandırabileceğiniz Microsoft Power Platform ortama gitmek için bağlantılar gösterilir.
 
+> [!IMPORTANT]
+> Ağ geçitlerinizin en son sürümüne güncelleştirildiğinden emin olun. Bir güncelleştirme yükleyebilir ve ağ geçidi ekranında görüntülenen komuttan doğrudan yeniden yapılandırabilir ya da [en son sürümü indirebilirsiniz](https://powerapps.microsoft.com/downloads/). En son ağ geçidi sürümünü kullanmıyorsanız, veri akışı yenilemesi şuna benzer bir hata iletisiyle başarısız olur: **Anahtar sözcük desteklenmiyor: yapılandırma özellikleri. Parametre adı: anahtar sözcük**.
+
 ## <a name="review-ingested-data"></a>Alınan verilerin gözden geçirilmesi
+Ortamınız Power Platform veri akışları içeriyorsa **Veri Kaynakları** sayfasında üç bölüm listelenir: 
+- **Paylaşıldı**: Tüm Customer Insights yöneticileri tarafından yönetilebilen veri kaynakları. Power BI veri akışları, kendi depolama hesabınız ve Dataverse yönetilen veri gölüne ekleme, paylaşılan veri kaynaklarına örnektir.
+- **Benim tarafımdan yönetilen**: Power Platform veri akışları oluşturulur ve yalnızca sizin tarafından yönetilebilir. Diğer Customer Insights yöneticileri bu veri akışlarını yalnızca görüntüleyebilir ancak düzenleyemez, yenileyemez veya silemez.
+- **Başkaları tarafından yönetilen**: Diğer yöneticiler tarafından oluşturulan Power Platform veri akışları. Bunları yalnızca görüntüleyebilirsiniz. Bu, herhangi bir yardım için erişebileceğiniz veri akışı sahibini listeler.
+> [!NOTE]
+> Tüm varlıklar, diğer kullanıcılar tarafından görüntülenebilir ve kullanılabilir. Kullanıcı bağlamsallığı, bu veri akışlarından kaynaklanan varlıklar değil yalnızca veri kaynakları için geçerlidir.
+
+Hiçbir Power Platform veri akışı kullanılmıyorsa, hiçbir grup veya bölüm görmezsiniz. **Veri Kaynakları** sayfası yalnızca tüm veri kaynaklarının listesini içerir.
 
 Her alınan veri kaynağının adı, durumu ve verilerin bu kaynak için en son yenilenme zamanını göreceksiniz. Veri kaynakları listesini her bir sütuna göre sıralayabilirsiniz.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232015"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487560"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentleri Marketo'a dışa aktarma (Önizleme)
 
@@ -63,7 +63,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **[Marketo listesi kimliğinizi](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** girin. Liste kimliği tamamen bir sayısal değerdir. Örneğin, Marketo liste kimliğiniz ST12345A7 ise, sayıların öncesindeki ve sonrasındaki karakteri kaldırıp `12345` girin. 
 
-1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. 
+1. **Veri eşleştirme** bölümünde, müşterinin e-posta adresini veya müşterinin Marketo kimliğini temsil eden en az bir alan seçin. 
 
 1. Isteğe bağlı olarak, daha kişiselleştirilmiş e-postalar oluşturmak için **ad**, **soyadı**, **şehir**, **eyalet** ve **Ülke/bölge** verebilirsiniz. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
 

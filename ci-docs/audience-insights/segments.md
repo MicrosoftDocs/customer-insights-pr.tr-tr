@@ -1,7 +1,7 @@
 ---
 title: Hedef kitle içgörülerinde segmentler
 description: Segmentlere ve bunların nasıl oluşturulacağı ve yönetildiği ile ilgili genel bakış.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8356007"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508590"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -68,7 +68,9 @@ Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
 ## <a name="refresh-segments"></a>Segmentleri yenileme
 
-**Segmentler** sayfasında **Tümünü yenile**'yi seçerek bir defada tüm segmentleri yenileyebilir veya bunları seçtiğinizde bir ya da birden çok segmenti yenileyebilir ve seçeneklerden **Yenile**'yi seçebilirsiniz. Alternatif olarak, **Yönetici** > **Sistem** > **Zamanla**'da yinelenen bir yenileme yapılandırabilirsiniz.
+**Segmentler** sayfasında **Tümünü yenile**'yi seçerek bir defada tüm segmentleri yenileyebilir veya bunları seçtiğinizde bir ya da birden çok segmenti yenileyebilir ve seçeneklerden **Yenile**'yi seçebilirsiniz. Alternatif olarak, **Yönetici** > **Sistem** > **Zamanla**'da yinelenen bir yenileme yapılandırabilirsiniz. Yinelenen yenileme yapılandırıldığında aşağıdaki kurallar uygulanır:
+- **Dinamik** veya **Genişletme** türündeki tüm segmentler ayarlanan sıklkta otomatik olarak yenilenir. Yenileme tamamlandığında **Durum** segmenti yenilerken herhangi bir sorun olup olmadığını gösterir. **Son yenileme**, son başarılı yenileme işleminin zaman damgasını gösterir. Hata oluşursa, ne olduğuyla ilgili ayrıntıları görmek için hatayı seçin.
+- **Statik** türündeki segmentler otomatik olarak *yenilenmez*. **Son yenilenme** statik segmentlerin son kez el ile çalıştırıldığı veya yenilendiği zamanın zaman damgasını gösterir.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

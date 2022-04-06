@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376440"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523693"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (Önizleme)
 
@@ -230,7 +230,7 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Evet      | Evet  | `WorkflowEvent`, olayı her zaman iş akışı olayı olarak işaretler.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Evet      | Evet  | Çalıştırılan iş akışının tanımlayıcısı. İş akışı yürütmesindeki tüm iş akışı ve görev olayları aynı `workflowJobId` değerine sahiptir.                                                                                                                                   |
-| `properties.operationType`                   | Evet      | Evet  | İşlemin tanımlayıcısı için bkz. [İşlem türleri].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Evet      | Evet  | İşlemin tanımlayıcısı, bkz. [İşlem türleri](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Evet      | No   | Yalnızca iş akışı. İş akışının tetiklediği görev sayısı.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Evet      | No   | isteğe bağlı. Yalnızca iş akışı olayları. İş akışını tetikleyen Azure Active Directory [kullanıcının objectId değeri](/azure/marketplace/find-tenant-object-id#find-user-object-id), ayrıca bkz. `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Evet      | No   | `full` veya `incremental` yenileme.                                                                                                                                                                                                                            |
