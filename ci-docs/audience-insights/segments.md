@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508590"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529563"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -47,24 +47,30 @@ Yeni bir segment oluşturmanın çeşitli yolları vardır:
 
 ## <a name="manage-existing-segments"></a>Mevcut segmentleri yönetme
 
-Tüm kaydedilmiş segmentlerinizi görüntülemek ve bunları yönetmek için **segmentler** sayfasına gidin.
+Tüm kaydedilmiş segmentlerinizi görüntülemek ve bunları yönetmek için **Segmentler** sayfasına gidin.
 
 Her bölüm, segment hakkında ek bilgiler içeren bir satırla temsil edilir.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Seçenekler açılan listesi ve kullanılabilir seçenekler içeren seçili segment.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Seçenekler açılan listesi ve kullanılabilir seçenekler içeren seçili segment." lightbox="media/segments-selected-segment.png":::
 
-Segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
+Bir segment seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
 - Segment üyelerinin bir önizlemesi olan üye sayısı eğilimi de dahil olmak üzere segment ayrıntılarını **görüntüleyin**.
+- Üyelerin listesini .CSV dosyası olarak **indirin**.
 - Özelliklerini değiştirmek için segmenti **düzenleyin**.
 - Bir segmentin **yinelemesini oluşturun**. Özelliklerini hemen düzenlemeyi veya yinelemeyi kaydetmeyi seçebilirsiniz.
 - En son verileri dahil etmek için segmenti **yenileyin**.
-- Segmenti **Etkinleştirin** veya **Devre dışı bırakın**. Segmentlerin etkin veya etkin değil olmak üzere iki olası durumu vardır. Bu durumlar, bir segmenti düzenlerken kullanışlıdır. Etkin olmayan segmentler için segment tanımı vardır ancak tanım henüz herhangi bir müşteri içermemektedir. Segmenti etkinleştirdiğinizde durumu "etkin değil" durumundan"etkin" durumuna değişir ve segment tanımına uyan müşterileri aramaya başlar. [Zamanlanan yenileme](system.md#schedule-tab) yapılandırılırsa etkin olmayan segmentlerde **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir. Etkin olmayan bir segment etkinleştirildiğinde, yenilenir ve zamanlanan yenilemelere dahil edilir.
+- Segmenti **Etkinleştirin** veya **Devre dışı bırakın**. Etkin olmayan segmentler için segment tanımı vardır ancak tanım henüz herhangi bir müşteri içermemektedir. Etkin segment, segment tanımıyla eşleşen müşterileri arar. [Zamanlanan yenileme](system.md#schedule-tab) yapılandırılırsa etkin olmayan segmentlerde **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir. Etkin olmayan bir segment etkinleştirildiğinde, yenilenir ve zamanlanan yenilemelere dahil edilir.
   Alternatif olarak, belirli bir segmentin etkinleştirilmesi ve devre dışı bırakılması için gelecekte bir tarih ve saat belirtmek üzere **Etkinleştir/Devre Dışı Bırak** açılır menüsündeki **Daha sonra zamanla** işlevselliğini de kullanabilirsiniz.
+- Segmentteki **[benzer müşterileri bulma](find-similar-customer-segments.md)**.
 - Segmenti **yeniden adlandırın**.
+- Segmentte [etiketleri yönetmek için](work-with-tags-columns.md#manage-tags) **Etiket**.
 - Üyelerin listesini .CSV dosyası olarak **indirin**.
 - Dışarı aktarmalarla ilgili segmenti görmek ve yönetmek için **Dışarı aktarmaları yönetin**. [Dışarı aktarmalar hakkında daha fazla bilgi edinin.](export-destinations.md)
 - Segmenti **silin**.
+- Görüntülenen [sütunları özelleştirmek için](work-with-tags-columns.md#customize-columns) **Sütunlar**.
+- [Etiketlere göre filtre uygulamak için](work-with-tags-columns.md#filter-on-tags) **Filtre**.
+- Segment adına göre arama yapmak için **Arama adı**.
 
 ## <a name="refresh-segments"></a>Segmentleri yenileme
 

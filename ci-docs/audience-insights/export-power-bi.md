@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225583"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552080"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI (önizleme) için bağlayıcı
 
@@ -72,6 +72,6 @@ Yinelenen ilişkiler kaldırıldıktan sonra Power BI bağlayıcısını yeniden
 
 AA/GG/YYYY gibi tarih biçimine sahip alanlar içeren varlıkları yüklerken uyumsuz yerel biçimler nedeniyle hatalarla karşılaşabilirsiniz. Bu uyumsuzluk, Power BI Desktop dosyanız İngilizce'den (Amerika Birleşik Devletleri) başka bir yerel ayara değiştirildiğinde meydana gelir çünkü hedef kitle içgörülerindeki tarih alanları ABD biçiminde kaydedilir.
 
-Power BI Desktop dosyası, veriler alınırken uygulanan tek bir yerel ayara sahiptir. Bu tarih alanlarının doğru yorumlanmasını sağlamak için .BPI dosyasının yerel ayarını İngilizce (Amerika Birleşik Devletleri) olarak belirleyin. [Power BI Desktop dosyasının yerel ayarının nasıl değiştirileceğini öğrenin](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Power BI Desktop dosyası, veriler alınırken uygulanan tek bir yerel ayara sahiptir. Bu tarih alanlarının doğru yorumlanmasını sağlamak için .BPI dosyasının yerel ayarını İngilizce (Amerika Birleşik Devletleri) olarak belirleyin. [Power BI Desktop dosyasının yerel ayarının nasıl değiştirileceğini öğrenin](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,23 +1,23 @@
 ---
 title: AI ile benzer müşteriler bulma (video içerir)
 description: Yapay zeka ile benzer müşteri segmentleri bulun.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355269"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561594"
 ---
 # <a name="similar-customers-preview"></a>Benzer Müşteriler (önizleme)
 
@@ -36,6 +36,8 @@ Bu özellik, yapay zekayı kullanarak müşteri tabanınızdaki benzer müşteri
 
 1. Yeni segmentiniz için önerilen adı inceleyin ve gerekirse değiştirin.
 
+1. İsteğe bağlı olarak, yeni segmente [etiketler](work-with-tags-columns.md#manage-tags) ekleyin.
+
 1. Yeni segmentinizi tanımlayan alanları inceleyin. Bu alanlar, sistemin kaynak segmentiniz için benzer müşteriler bulmaya çalışacağı temeli tanımlar. Sistem varsayılan olarak önerilen alanları seçer.
   Model performansını belirgin şekilde azaltabilen alanlar otomatik olarak dışlanır:
   
@@ -44,9 +46,9 @@ Bu özellik, yapay zekayı kullanarak müşteri tabanınızdaki benzer müşteri
 
 1. Yeni segmentinize **Tüm müşterileri** mi yoksa yalnızca **Belirli mevcut segmentteki** müşterileri mi eklemek istediğinizi seçin.
 
-1. **Kaynak segmentte herkesi çıkar** onay kutusunu seçerek kaynak segmentinizdeki müşterileri çıkarın.
-
 1. Varsayılan olarak sistem, çıktınızda hedef kitle boyutunun yalnızca %20'sini eklemeyi önerir. Bu eşiği gerektiği gibi düzenleyin. Eşiği artırmak, duyarlığı azaltır.
+
+1. **Benzer özniteliklere sahip müşterilere ek olarak kaynak segmentinizden üyeler ekle** onay kutusunu seçerek müşterileri kaynak segmentinize dahil edin.
 
 1. Veri kümesini analiz eden bir ikili sınıflandırma görevi (makine öğrenimi yöntemi) başlatmak için sayfanın alt kısmında **Çalıştır**'ı seçin.
 
@@ -67,7 +69,7 @@ Diğer segmentlerle yaptığınız gibi [benzer bir segmentin çıktısıyla ça
 
 Benzer bir segmenti yenilemek için **Segmentler** sayfasında seçin ve eylem çubuğunda **Yenile** seçeneğini belirleyin.
 
-Benzer bir segmenti düzenlemek, verilerinizi yeniden işler. Önceden oluşturulan segment, yenilenen verilerle güncelleştirilir.    
+Benzer bir segmenti düzenlemek, verilerinizi yeniden işler. Önceden oluşturulan segment, yenilenen verilerle güncelleştirilir.
 Benzer bir segmenti düzenlemek için **Segmentler** sayfasında seçin ve eylem çubuğunda **Düzenle** seçeneğini belirleyin. Değişikliklerinizi uygulayın ve işlemeyi başlatmak için **Çalıştır**'ı seçin.
 
 ## <a name="delete-a-similar-segment"></a>Benzer bir segmenti silme
@@ -84,6 +86,5 @@ Benzer bir segmenti düzenlemek için **Segmentler** sayfasında seçin ve eylem
 - 0,85 ile 1 arasındaki benzerlik puanları, sistemin *çok benzer* olarak sınıflandırdığı müşterilerdir
 
 Benzerlik puanları 0,4 altında olan müşteriler, model çıktısına dahil edilmez. Sistem bunları kaynak segmente yeterince benzetmez.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

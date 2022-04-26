@@ -1,19 +1,19 @@
 ---
 title: Customer Insights verilerini Azure Synapse Analytics'a dışarı aktarma
 description: Azure Synapse Analytics'te bağlantının nasıl yapılandırılacağını öğrenin.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231336"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560411"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Verileri Azure Synapse Analytics'e dışarı aktarma (Önizleme)
 
@@ -28,21 +28,21 @@ Customer Insights'tan Azure Synapse'a bağlantıyı yapılandırmak için aşağ
 
 ## <a name="prerequisites-in-customer-insights"></a>Customer Insights'ta önkoşullar
 
-* Hedef kitle içgörülerinde **Yönetici** rolüne sahipsiniz. [Hedef kitle içgörülerde kullanıcı izinlerini ayarlama](permissions.md#assign-roles-and-permissions) hakkında daha fazla bilgi edinin
+* Azure Active Directory (AD) kullanıcı hesabınız Customer Insights'ta bir **Yönetici** rolüne sahiptir. [Hedef kitle içgörülerde kullanıcı izinlerini ayarlama](permissions.md#assign-roles-and-permissions) hakkında daha fazla bilgi edinin
 
 Azure'da: 
 
 - Etkin bir Azure aboneliği.
 
-- Yeni bir Azure Data Lake Storage Gen2 hesabı kullanıyorsanız, *hedef kitle içgörüler için hizmet sorumlusunun*, **Depolama Blob Verileri Katkıda Bulunan** izinlerine ihtiyacı vardır. [Hedef kitle içgörüler için Azure hizmet sorumlusu ile bir Azure Data Lake Storage Gen2 hesabına bağlanma](connect-service-principal.md) hakkında daha fazla bilgi edinin. Data Lake Storage Gen2 [hiyerarşik ad alanı](/azure/storage/blobs/data-lake-storage-namespace) etkinleştirilmiş **olmalıdır**.
+- Yeni bir Azure Data Lake Storage 2. Nesil hesabı kullanıyorsanız *Customer Insights servis sorumlusu* için **Depolama Blobu Veri Katılımcısı** izinleri gerekir. [Hedef kitle içgörüler için Azure hizmet sorumlusu ile bir Azure Data Lake Storage 2. Nesil hesabına bağlanma](connect-service-principal.md) hakkında daha fazla bilgi edinin. Data Lake Storage 2. Nesil [hiyerarşik ad alanı](/azure/storage/blobs/data-lake-storage-namespace) etkinleştirilmiş **olmalıdır**.
 
-- Azure Synapse Çalışma alanının bulunduğu kaynak grubunda, *hizmet sorumlusunun* ve *hedef kitle içgörüler için kullanıcıya* en az **Okuyucu** izin atanması gerekir. Daha fazla bilgi için bkz. [Azure portal kullanarak Azure rolleri atama](/azure/role-based-access-control/role-assignments-portal).
+- Azure Synapse workspace bulunan kaynak grubunda *hizmet sorumlusuna* ve *Customer Insights'ta yönetici izinleri olan Azure AD kullanıcısına* en az **Okuyucu** izinleri atanmalıdır. Daha fazla bilgi için bkz. [Azure portal kullanarak Azure rolleri atama](/azure/role-based-access-control/role-assignments-portal).
 
-- *Kullanıcının*, verilerin bulunduğu ve Azure Synapse çalışma alanına bağlı olduğu Azure Data Lake Storage Gen2 hesabında **Depolama Blob Verileri Katkıda Bulunan** izinlerine ihtiyacı vardır. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
+- *Customer Insights'ta yönetici izinleri olan Azure AD kullanıcısının* verilerin bulunduğu ve Azure Synapse workspace'e bağlı olan Azure Data Lake Storage 2. Nesil hesabında **Depolama Blobu Veri Katılımcısı** izinlerinin olması gerekir. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
 
-- *[Azure Synapse çalışma alanı yönetilen kimliğin](/azure/synapse-analytics/security/synapse-workspace-managed-identity)*, verilerin bulunduğu ve Azure Synapse çalışma alanına bağlı olduğu Azure Data Lake Storage Gen2 hesabında **Depolama Blob Verileri Katkıda Bulunan** izinlerine ihtiyacı vardır. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
+- *[Azure Synapse workspace yönetilen kimliğinin](/azure/synapse-analytics/security/synapse-workspace-managed-identity)*, verilerin bulunduğu ve Azure Synapse çalışma alanına bağlı olduğu Azure Data Lake Storage 2. Nesil hesabında **Depolama Blob Verileri Katkıda Bulunan** izinlerine ihtiyacı vardır. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
 
-- Azure Synapse Çalışma alanında, *hedef kitle içgörüler için hizmet sorumlusunun*, **Synapse Yönetici** rolünün atanması gerekir. Daha fazla bilgi için, bkz. [Synapse çalışma alanınıza erişim denetimi ayarlama](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Azure Synapse workspace'te *Customer Insights için hizmet sorumlusuna* **Synapse Yöneticisi** rolünün atanmış olması gerekir. Daha fazla bilgi için, bkz. [Synapse workspace'e erişim denetimini ayarlama](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Azure Synapse'e bağlantı kurma ve dışa aktarma
 

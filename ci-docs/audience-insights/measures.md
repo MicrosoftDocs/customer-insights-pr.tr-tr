@@ -1,12 +1,12 @@
 ---
 title: Ölçümleri anlama ve yönetme
 description: Ölçümlerin, işletmenizin performansını analiz edip yansıtmaya nasıl yardımcı olacağını öğrenin.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359819"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529701"
 ---
 # <a name="measures-overview"></a>Ölçümlere genel bakış
 
@@ -27,7 +27,7 @@ ms.locfileid: "8359819"
 
 Ölçümler, çeşitli işleçlere ve basit eşleşme seçeneklerine sahip bir veri sorgusu platformu olan [ölçüm oluşturucuyu kullanarak](measure-builder.md) oluşturulur. Verileri filtrelemenizi, sonuçları gruplamanızı, [varlık ilişkisi yollarını](relationships.md) algılamanızı ve çıktıyı önizlemenizi sağlar. Sık kullanılan ölçümleri verimli şekilde yapılandırmak için [önceden tanımlanmış şablonları kullanabilirsiniz](measure-templates.md).
 
-Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini planlamak için ölçüm oluşturucuyu kullanın. Örneğin, *müşteri başına toplam harcama* ve *müşteri başına toplam iade* ölçümü oluşturmak, yüksek harcaması olan ancak yüksek iadesi de olan bir müşteri grubunun belirlenmesine yardımcı olur. Sonraki en iyi eylemleri yönetmek için bu ölçümlere bağlı olarak [segment oluşturabilirsiniz](segments.md). 
+Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini planlamak için ölçüm oluşturucuyu kullanın. Örneğin, *müşteri başına toplam harcama* ve *müşteri başına toplam iade* ölçümü oluşturmak, yüksek harcaması olan ancak yüksek iadesi de olan bir müşteri grubunun belirlenmesine yardımcı olur. Sonraki en iyi eylemleri yönetmek için bu ölçümlere bağlı olarak [segment oluşturabilirsiniz](segments.md).
 
 ## <a name="manage-your-measures"></a>Ölçümlerinizi yönetme
 
@@ -35,18 +35,17 @@ Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini
 
 Ölçüm türü, oluşturan, oluşturma tarihi, durum ve durum hakkında bilgiler bulabilirsiniz. Listeden bir ölçü seçtiğinizde, çıktıyı önizleyebilir ve bir CSV dosyası indirebilirsiniz.
 
-Tüm ölçümlerinizi aynı anda yenilemek için belirli bir ölçüm seçmeden **Tümünü yenile**'yi seçin.
+:::image type="content" source="media/measures-actions.png" alt-text="Tek ölçümleri yönetmek için eylemler."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Tek ölçümleri yönetmek için eylemler.":::
+Bir ölçü seçtiğinizde aşağıdaki eylemler kullanılabilir:
 
-Aşağıdaki seçenekler için listeden bir ölçüm seçin:
-
-- Ayrıntılarını görmek için ölçüm adını seçin.
 - Ölçümün yapılandırmasını **düzenleyin**.
-- En son verileri göre ölçümü **yenileyin**.
+- Ölçümü **yineleme**. Özelliklerini hemen düzenlemeyi veya yinelemeyi kaydetmeyi seçebilirsiniz.
+- En son verileri göre ölçümü **yenileyin**. Tüm ölçümlerinizi aynı anda yenilemek için tüm ölçümleri ve ardından **Yenile**'yi seçin.
 - Ölçümü **yeniden adlandırın**.
-- Ölçümü **silin**.
 - **Etkinleştirin** veya **Devre Dışı Bırakın**. Etkin olmayan ölçümler [zamanlanmış yenileme](system.md#schedule-tab) sırasında yenilenmez.
+- Segmentte [etiketleri yönetmek için](work-with-tags-columns.md#manage-tags) **Etiket**.
+- Ölçümü **silin**.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

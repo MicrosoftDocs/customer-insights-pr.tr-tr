@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse'deki Customer Insights verileri
 description: Customer Insights varlıklarını Microsoft Dataverse'de tablolar olarak kullanın.
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355453"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547650"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
-Customer Insights, çıkış verilerinin [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)'de kullanılabilir olmasını sağlar. Bu tümleştirme, az kod gerektiren/kodsuz bir yaklaşım aracılığıyla kolay veri paylaşımına ve özel geliştirmeye olanak tanır. Çıkış varlıkları, Dataverse'de tablolar olarak kullanılabilir. Bu tablolar [Power Automate aracılığıyla otomatik iş akışları](/power-automate/getting-started), [model temelli uygulamalar](/powerapps/maker/model-driven-apps/) ve Power Apps aracılığıyla [tuval uygulamaları](/powerapps/maker/canvas-apps/) gibi senaryolara olanak sağlar. Dataverse tablolarını temel alan herhangi bir uygulama için verileri kullanabilirsiniz. Geçerli uygulama esas olarak, belirtilen bir müşteri kimliği için kullanılabilir hedef kitle içgörüleri varlıklarındaki verilerin getirilebileceği aramaları destekler.
+Customer Insights, çıkış verilerinin [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)'de kullanılabilir olmasını sağlar. Bu tümleştirme, az kod gerektiren/kodsuz bir yaklaşım aracılığıyla kolay veri paylaşımına ve özel geliştirmeye olanak tanır. [Çıkış varlıkları](#output-entities) Dataverse ortamında tablolar olarak kullanılabilir. Verileri, Dataverse tablolarını temel alan başka bir uygulama için kullanabilirsiniz. Bu tablolar, Power Automate aracılığıyla otomatikleştirilmiş iş akışları veya Power Apps ile uygulama oluşturma gibi senaryoları etkinleştirir. Geçerli uygulama genel olarak belirli bir müşteri kimliği için verilerin kullanılabilir Customer Insights varlıklarından alınabileceği aramaları destekler.
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Customer Insights'a Dataverse ortamı ekleme
 
-**Mevcut Dataverse ortamları olan kuruluşlar**
+**Mevcut kuruluş**
 
-Zaten Dataverse kullanan kuruluşlar, yönetici hedef kitle içgörülerini ayarlarken [mevcut Dataverse ortamlarından birini kullanabilir](create-environment.md). Dataverse ortamına URL sağlarken, yeni hedef kitle içgörüleri ortamlarına eklenir. Mümkün olan en iyi performansı sağlamak için, Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır.
+Yöneticiler Customer Insights ortamı oluştururken Customer Insights 'ı [mevcut Dataverse ortamını kullanacak](create-environment.md) şekilde yapılandırabilir. Dataverse ortamına URL sağlarken, yeni hedef kitle içgörüleri ortamlarına eklenir. Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır. 
+
+Mevcut Dataverse ortamını kullanmak istemiyorsanız sistem, kiracınızdaki Customer Insights verileri için yeni bir ortam oluşturur. 
+
+> [!NOTE]
+> Kuruluşlarınız kiracılarında zaten Dataverse kullanıyorsa, [Dataverse ortam oluşturma işleminin bir yönetici tarafından denetlendiğini](/power-platform/admin/control-environment-creation) unutmamak önemlidir. Örneğin, kuruluş hesabınızla yeni bir hedef kitle içgörüleri ortamı ayarlıyorsanız ve yönetici, yöneticiler dışındaki herkes için Dataverse deneme ortamları oluşturmayı devre dışı bırakmışsa yeni bir deneme ortamı oluşturamazsınız.
+> 
+> Customer Insights'da oluşturulan Dataverse deneme ortamları 3 GB depolama alanına sahiptir ve kiracıya verilen genel kapasiteden ayrıdır. Ücretli abonelikler, veritabanı için 15 GB ve dosya depolaması için 20 GB Dataverse destek hakkı alırlar.
 
 **Yeni kuruluş**
 
-Customer Insights'ı ayarlarken yeni bir kuruluş oluşturursanız, otomatik olarak yeni bir Dataverse ortamı elde edersiniz.
-
-> [!NOTE]
-> Kuruluşlarınız kiracılarında zaten Dataverse kullanıyorsa, [Dataverse ortam oluşturma işleminin bir yönetici tarafından denetlendiğini](/power-platform/admin/control-environment-creation.md) unutmamak önemlidir. Örneğin, kuruluş hesabınızla yeni bir hedef kitle içgörüleri ortamı ayarlıyorsanız ve yönetici, yöneticiler dışındaki herkes için Dataverse deneme ortamları oluşturmayı devre dışı bırakmışsa yeni bir deneme ortamı oluşturamazsınız.
-> 
-> Customer Insights'da oluşturulan Dataverse deneme ortamları 3 GB depolama alanına sahiptir ve kiracıya verilen genel kapasiteden ayrıdır. Ücretli abonelikler, veritabanı için 15 GB ve dosya depolaması için 20 GB Dataverse destek hakkı alırlar.
+Customer Insights'ı ayarlarken yeni bir kuruluş oluşturursanız sistem, kuruluşunuzda sizin için otomatik olarak yeni bir Dataverse ortamı oluşturur.
 
 ## <a name="output-entities"></a>Çıkış varlıkları
 
@@ -129,11 +131,11 @@ Bu tablo, model tahminlerinin çıkışını içerir.
 
 Bu tablo, müşteri profillerinin segment üyeliği bilgilerini içerir.
 
-| Column        | Type | Description                        |
+| Column        | Type | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Müşteri Profili Kimliği        |
-| SegmentProvider      | String       | Segmentleri yayımlayan uygulama. Varsayılan: Hedef kitle içgörüleri         |
-| SegmentMembershipType | String       | Bu segment üyeliği kaydının müşteri türü. Müşteri, İlgili Kişi veya Firma gibi birden çok türü destekler. Varsayılan: Müşteri  |
-| Segmentler       | JSON Dizesi  | Müşteri profilinin üyesi olduğu benzersiz segmentler listesi      |
-| msdynci_identifier  | String   | Segment üyeliği kaydının benzersiz tanıtıcısı. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | String       | Müşteri Profili Kimliği        |
+| SegmentProvider      | String       | Segmentleri yayımlayan uygulama. Varsayılan: Hedef kitle içgörüleri         |
+| SegmentMembershipType | String       | Bu segment üyeliği kaydının müşteri türü. Müşteri, İlgili Kişi veya Firma gibi birden çok türü destekler. Varsayılan: Müşteri  |
+| Segmentler       | JSON Dizesi  | Müşteri profilinin üyesi olduğu benzersiz segmentler listesi      |
+| msdynci_identifier  | String   | Segment üyeliği kaydının benzersiz tanımlayıcısı. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | `msdynci_identifier` öğesinden oluşturulan deterministik GUID          |

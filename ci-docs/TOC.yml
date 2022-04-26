@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Hedef kitle içgörülerini keşfedin
           href: audience-insights/home.md
+        - name: Etiketler ve sütunlarla çalışma
+          href: audience-insights/work-with-tags-columns.md
         - name: İş hesaplarıyla çalışma
           href: audience-insights/work-with-business-accounts.md
     - name: Veri kaynakları
