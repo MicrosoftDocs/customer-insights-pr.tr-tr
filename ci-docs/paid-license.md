@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8456022"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641878"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Customer Insights'ı satın aldıktan sonra başlayın
 
@@ -34,9 +34,8 @@ Hizmeti ve özellikleri denemek istiyorsanız bkz. [Deneme ortamı ayarlama](tri
 
 1. [Customer Insights uygulama URL](https://home.ci.ai.dynamics.com)'sine gidin.
 1. İş veya okul hesabınızla oturum açın. 
-1. Servis koşullarını kabul edin ve Customer Insights örneğiniz için içerik tercihlerini ayarlayın.
-1. Seçili yeteneğiniz için başlangıç sayfasına ulaşana kadar, odaklanacak bir yetenek seçin.
+1. Servis koşullarını kabul edin ve Customer Insights ortamınız için içerik tercihlerini ayarlayın.
 
 ## <a name="create-your-own-environment"></a>Kendi ortamınızı oluşturun
 
-İlk oturumunuzu açtıktan sonra, örnek veri içeren bir ortam görürsünüz. Bu verileri, özellikleri keşfetmek ve uygulamayla alıştırmak için kullanabilirsiniz. Kendi verilerinizi kullanmak için [ortam oluşturmanız](/dynamics365/customer-insights/audience-insights/create-environment) gerekir.
+İlk oturumunuzu açtıktan sonra, örnek veri içeren bir ortam görürsünüz. Bu verileri, özellikleri keşfetmek ve uygulamayla alıştırmak için kullanabilirsiniz. Kendi verilerinizi kullanmak için [ortam oluşturmanız](create-environment.md) gerekir.

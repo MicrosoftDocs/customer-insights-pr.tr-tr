@@ -2,6 +2,8 @@
   href: index.yml
 - name: Ürüne genel bakış
   href: overview.md
+- name: Yeni ve güncelleştirilmiş özellikler
+  href: whats-new-customer-insights.md
 - name: Öğrenme kataloğu
   items:
     - name: Kullanmaya başlayın
@@ -10,7 +12,7 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Birleşik müşteri profili oluşturma
       href: /learn/modules/unified-customer-profile/
-    - name: Hedef kitle içgörüleri ile çalışma
+    - name: Customer Insights ile çalışma
       href: /learn/modules/working-with-customer-insights/
     - name: Verileri zenginleştirme ve tahminlerde bulunma
       href: /learn/modules/enrich-data/
@@ -26,275 +28,269 @@
       href: trial-FAQ.md
 - name: Ortamınıza erişme
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Hedef kitle içgörüleri
+- name: Kullanmaya başlayın
   items:
-    - name: Yardım merkezi
-      href: audience-insights/index.yml
-    - name: Özelliğe genel bakış
-      href: audience-insights/overview.md
-    - name: Yeni ve güncelleştirilmiş özellikler
-      href: audience-insights/whats-new-audience-insights.md
-    - name: Kullanmaya başlayın
+    - name: Hızlı başlangıç kılavuzu
+      href: get-started.md
+    - name: Ödemeli bir lisans ile başlayın
+      href: paid-license.md
+    - name: Yeni ortam oluştur
+      href: create-environment.md
+    - name: Customer Insights'ı keşfetme
+      href: home.md
+    - name: Etiketler ve sütunlarla çalışma
+      href: work-with-tags-columns.md
+    - name: İş hesaplarıyla çalışma
+      href: work-with-business-accounts.md
+    - name: Dynamics 365 Marketing ile tümleştirme
+      href: marketing-get-started.md
+- name: Veri kaynakları
+  items:
+    - name: Veri kaynaklarına genel bakış
+      href: data-sources.md
+    - name: Power Query bağlayıcıları aracılığıyla veri kaynakları ekleme
+      href: connect-power-query.md
+    - name: Veri kaynağı olarak bir Common Data Model klasörü ekleme
+      href: connect-common-data-model.md
+    - name: Dataverse yönetilen veri gölü ekleme
+      href: connect-dataverse-managed-lake.md
+    - name: Azure Synapse Analytics ekleme
+      href: connect-synapse.md
+    - name: Veri kaynakları için zenginleştirme
+      href: data-sources-enrichment.md
+    - name: Veri kaynakları için artımlı yenileme
+      href: incremental-refresh-data-sources.md
+    - name: Gerçek zamanlı veri alımı
+      href: real-time-data-ingestion.md
+- name: Veri birleştirme
+  items:
+    - name: Veri birleştirmeye genel bakış
+      href: data-unification.md
+    - name: Varlıkları ve öznitelikleri eşleme
+      href: map-entities.md
+    - name: Varlıkları eşleme
+      href: match-entities.md
+    - name: Varlıkları birleştirme
+      href: merge-entities.md
+- name: Veri zenginleştirme
+  items:
+    - name: Müşteri profillerini zenginleştirme
+      href: enrichment-hub.md
+    - name: Markalar ve ilgi alanları
+      href: enrichment-microsoft.md
+    - name: Gelişmiş adresler
+      href: enrichment-enhanced-addresses.md
+    - name: Gelişmiş şirket verileri
+      href: enrichment-enhanced-company-data.md
+    - name: Azure Haritalar ile zenginleştirme
+      href: enrichment-azure-maps.md
+    - name: Dun & Bradstreet ile zenginleştirme
+      href: enrichment-dnb.md
+    - name: HERE Technologies ile zenginleştirme
+      href: enrichment-here.md
+    - name: Leadspace ile zenginleştirme
+      href: enrichment-leadspace.md
+    - name: LiveRamp ile zenginleştirme
+      href: enrichment-liveramp.md
+    - name: Experian İle zenginleştirme
+      href: enrichment-experian.md
+    - name: Office 365 verileriyle zenginleştirme
+      href: enrichment-office.md
+    - name: SFTP özel içeri aktarmayla zenginleştirme
+      href: enrichment-SFTP-custom-import.md
+- name: Birleşik profiller
+  items:
+    - name: Birleşik müşteri profillerini inceleme
+      href: customer-profiles.md
+    - name: Birleşik müşteri profillerini filtreleme
+      href: search-filter-index.md
+    - name: Müşteri etkinliklerini tanımlama
+      href: activities.md
+- name: Segmentler
+  items:
+    - name: Segmentlere genel bakış
+      href: segments.md
+    - name: Segmentler oluşturma
+      href: segment-builder.md
+    - name: Ölçülere göre önerilen segmentler
+      href: suggested-segments.md
+    - name: Aktivite göre önerilen segmentler
+      href: suggested-segments-activity.md
+    - name: Segmentlerle ilgili içgörüler alma
+      href: segment-insights.md
+    - name: Benzer müşterileri bul
+      href: find-similar-customer-segments.md
+- name: Ölçümler
+  items:
+    - name: Ölçümlere genel bakış
+      href: measures.md
+    - name: Yeni ölçüm oluşturma
+      href: measure-builder.md
+    - name: Ölçüm şablonu kullanma
+      href: measure-templates.md
+- name: Tahminler
+  items:
+    - name: Yapay zeka yardımıyla verileri tahmin edin
       items:
-        - name: Hızlı başlangıç kılavuzu
-          href: audience-insights/get-started.md
-        - name: Ödemeli bir lisans ile başlayın
-          href: paid-license.md
-        - name: Yeni ortam oluştur
-          href: audience-insights/create-environment.md
-        - name: Hedef kitle içgörülerini keşfedin
-          href: audience-insights/home.md
-        - name: Etiketler ve sütunlarla çalışma
-          href: audience-insights/work-with-tags-columns.md
-        - name: İş hesaplarıyla çalışma
-          href: audience-insights/work-with-business-accounts.md
-    - name: Veri kaynakları
+        - name: Tahmin modellerine genel bakış
+          href: predictions-overview.md
+        - name: Müşteri yaşam süresi değerini (CLV) tahmin etme
+          href: predict-customer-lifetime-value.md
+        - name: Ürün önerilerini tahmin etme
+          href: predict-product-recommendation.md
+        - name: Abonelik erime tahmini
+          href: predict-subscription-churn.md
+        - name: İşlem erime tahmin etme
+          href: predict-transactional-churn.md
+        - name: Müşteri geri bildirimlerinde duyarlılığı analiz etme
+          href: sentiment-analysis.md
+        - name: Azure Machine Learning'den özel modeller kullanma
+          href: custom-models.md
+        - name: Kısmen eksik verileri tamamlama
+          href: predictions.md
+    - name: Örnek kılavuzlar
       items:
-        - name: Veri kaynaklarına genel bakış
-          href: audience-insights/data-sources.md
-        - name: Power Query bağlayıcıları aracılığıyla veri kaynakları ekleme
-          href: audience-insights/connect-power-query.md
-        - name: Veri kaynağı olarak bir Common Data Model klasörü ekleme
-          href: audience-insights/connect-common-data-model.md
-        - name: Dataverse yönetilen veri gölü ekleme
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Azure Synapse Analytics ekleme
-          href: audience-insights/connect-synapse.md
-        - name: Veri kaynakları için zenginleştirme
-          href: audience-insights/data-sources-enrichment.md
-        - name: Veri kaynakları için artımlı yenileme
-          href: audience-insights/incremental-refresh-data-sources.md
-        - name: Gerçek zamanlı veri alımı
-          href: audience-insights/real-time-data-ingestion.md
-    - name: Veri birleştirme
+        - name: CLV tahmini için örnek kılavuz
+          href: sample-guide-predict-clv.md
+        - name: Abonelik erimesi tahmini için örnek kılavuz
+          href: sample-guide-predict-subscription-churn.md
+        - name: Hareket karmaşıklığı için örnek kılavuz tahmin
+          href: sample-guide-predict-transactional-churn.md
+        - name: Ürün öneri tahmini için örnek kılavuz
+          href: sample-guide-predict-product-recommendation.md
+        - name: Azure Machine Learning ile denemeler
+          href: azure-machine-learning-experiments.md
+    - name: Tahminleri yönetme
+      href: manage-predictions.md
+    - name: Tahminleri temel alan segmentler oluşturma
+      href: prediction-based-segment.md
+- name: Dışarı aktarma seçenekleri
+  items:
+    - name: Dışarı aktarmalar
       items:
-        - name: Veri birleştirmeye genel bakış
-          href: audience-insights/data-unification.md
-        - name: Varlıkları ve öznitelikleri eşleme
-          href: audience-insights/map-entities.md
-        - name: Varlıkları eşleme
-          href: audience-insights/match-entities.md
-        - name: Varlıkları birleştirme
-          href: audience-insights/merge-entities.md
-    - name: Veri zenginleştirme
+        - name: Dışa aktarmalara genel bakış
+          href: export-destinations.md
+        - name: Etkin Kampanyalar
+          href: export-active-campaign.md
+        - name: AdRoll
+          href: export-adroll.md
+        - name: Autopilot
+          href: export-autopilot.md
+        - name: Azure Blob Storage
+          href: export-azure-blob-storage.md
+        - name: Azure Data Lake Storage 2. Nesil
+          href: export-azure-data-lake-storage-gen2.md
+        - name: Azure Synapse Analytics
+          href: export-azure-synapse-analytics.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
+        - name: Braze
+          href: export-braze.md
+        - name: Campaign Monitor
+          href: export-campaign-monitor.md
+        - name: Constant Contact
+          href: export-constant-contact.md
+        - name: DotDigital
+          href: export-dotdigital.md
+        - name: Dynamics 365 Marketing
+          href: export-dynamics365-marketing.md
+        - name: Dynamics 365 for Sales
+          href: export-dynamics365-sales.md
+        - name: Facebook Ads Yöneticisi
+          href: export-facebook.md
+        - name: Google Ads
+          href: export-google-ads.md
+        - name: Iterable
+          href: export-iterable.md
+        - name: Klaviyo
+          href: export-klaviyo.md
+        - name: LinkedIn Ads
+          href: export-linkedin-ads.md
+        - name: LiveRamp
+          href: export-liveramp.md
+        - name: MailChimp
+          href: export-mailchimp.md
+        - name: Marketo
+          href: export-marketo.md
+        - name: Microsoft Advertising
+          href: export-microsoft-advertising.md
+        - name: Omnisend
+          href: export-omnisend.md
+        - name: RollWorks
+          href: export-rollworks.md
+        - name: Salesforce Marketing Cloud
+          href: export-salesforce.md
+        - name: SendGrid
+          href: export-sendgrid.md
+        - name: SendInBlue
+          href: export-sendinblue.md
+        - name: Snapchat
+          href: export-snapchat.md
+        - name: SFTP
+          href: export-sftp.md
+    - name: Diğer kullanımlar
       items:
-        - name: Müşteri profillerini zenginleştirme
-          href: audience-insights/enrichment-hub.md
-        - name: Markalar ve ilgi alanları
-          href: audience-insights/enrichment-microsoft.md
-        - name: Gelişmiş adresler
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Gelişmiş şirket verileri
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Azure Haritalar ile zenginleştirme
-          href: audience-insights/enrichment-azure-maps.md
-        - name: HERE Technologies ile zenginleştirme
-          href: audience-insights/enrichment-here.md
-        - name: Leadspace ile zenginleştirme
-          href: audience-insights/enrichment-leadspace.md
-        - name: LiveRamp ile zenginleştirme
-          href: audience-insights/enrichment-liveramp.md
-        - name: Experian İle zenginleştirme
-          href: audience-insights/enrichment-experian.md
-        - name: Office 365 verileriyle zenginleştirme
-          href: audience-insights/enrichment-office.md
-        - name: SFTP özel içeri aktarmayla zenginleştirme
-          href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Birleşik profiller
-      items:
-        - name: Birleşik müşteri profillerini inceleme
-          href: audience-insights/customer-profiles.md
-        - name: Birleşik müşteri profillerini filtreleme
-          href: audience-insights/search-filter-index.md
-        - name: Müşteri etkinliklerini tanımlama
-          href: audience-insights/activities.md
-    - name: Segmentler
-      items:
-        - name: Segmentlere genel bakış
-          href: audience-insights/segments.md
-        - name: Segmentler oluşturma
-          href: audience-insights/segment-builder.md
-        - name: Ölçülere göre önerilen segmentler
-          href: audience-insights/suggested-segments.md
-        - name: Aktivite göre önerilen segmentler
-          href: audience-insights/suggested-segments-activity.md
-        - name: Segmentlerle ilgili içgörüler alma
-          href: audience-insights/segment-insights.md
-        - name: Benzer müşterileri bul
-          href: audience-insights/find-similar-customer-segments.md
-    - name: Ölçümler
-      items:
-        - name: Ölçümlere genel bakış
-          href: audience-insights/measures.md
-        - name: Yeni ölçüm oluşturma
-          href: audience-insights/measure-builder.md
-        - name: Ölçüm şablonu kullanma
-          href: audience-insights/measure-templates.md
-    - name: Tahminler
-      items:
-        - name: Yapay zeka yardımıyla verileri tahmin edin
-          items:
-            - name: Tahmin modellerine genel bakış
-              href: audience-insights/predictions-overview.md
-            - name: Müşteri yaşam süresi değerini (CLV) tahmin etme
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Ürün önerilerini tahmin etme
-              href: audience-insights/predict-product-recommendation.md
-            - name: Abonelik erime tahmini
-              href: audience-insights/predict-subscription-churn.md
-            - name: İşlem erime tahmin etme
-              href: audience-insights/predict-transactional-churn.md
-            - name: Müşteri geri bildirimlerinde duyarlılığı analiz etme
-              href: audience-insights/sentiment-analysis.md
-            - name: Azure Machine Learning'den özel modeller kullanma
-              href: audience-insights/custom-models.md
-            - name: Kısmen eksik verileri tamamlama
-              href: audience-insights/predictions.md
-        - name: Örnek kılavuzlar
-          items:
-            - name: CLV tahmini için örnek kılavuz
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Abonelik erimesi tahmini için örnek kılavuz
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Hareket karmaşıklığı için örnek kılavuz tahmin
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Ürün öneri tahmini için örnek kılavuz
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Azure Machine Learning ile denemeler
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: Tahminleri yönetme
-          href: audience-insights/manage-predictions.md
-        - name: Tahminleri temel alan segmentler oluşturma
-          href: audience-insights/prediction-based-segment.md
-    - name: Dışarı aktarma seçenekleri
-      items:
-        - name: Dışarı aktarmalar
-          items:
-            - name: Dışa aktarmalara genel bakış
-              href: audience-insights/export-destinations.md
-            - name: Etkin Kampanyalar
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: Autopilot
-              href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage 2. Nesil
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Braze
-              href: audience-insights/export-braze.md
-            - name: Campaign Monitor
-              href: audience-insights/export-campaign-monitor.md
-            - name: Constant Contact
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: Dynamics 365 Marketing
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 for Sales
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Ads Yöneticisi
-              href: audience-insights/export-facebook.md
-            - name: Google Ads
-              href: audience-insights/export-google-ads.md
-            - name: Iterable
-              href: audience-insights/export-iterable.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: LinkedIn Ads
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: MailChimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid
-              href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: Diğer kullanımlar
-          items:
-            - name: Dynamics 365 için Müşteri Kartı Eklentisi
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (bot)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
-    - name: Varlıklar
-      items:
-        - name: Varlıkları anlama
-          href: audience-insights/entities.md
-        - name: Common Data Model'de varlık şemalarını inceleme
-          href: audience-insights/entity-schemas.md
-        - name: Dataverse'deki Customer Insights verileri
-          href: audience-insights/customer-insights-dataverse.md
-        - name: İlişkiler ve bağlantılı varlıklar oluşturma
-          href: audience-insights/relationships.md
-        - name: Anlamsal eşlemeleri tanımlama
-          href: audience-insights/semantic-mappings.md
-    - name: Yönetim
-      items:
-        - name: Sistem yapılandırmasını ayarlama
-          href: audience-insights/system.md
-        - name: Kullanıcı izinleri atama
-          href: audience-insights/permissions.md
-        - name: Bağlantılara genel bakış
-          href: audience-insights/connections.md
-        - name: Birden çok ortamı yönetme
-          href: audience-insights/manage-environments.md
-        - name: Kendi Key Vault'unuzu getirin
-          href: audience-insights/use-azure-key-vault.md
-        - name: Hizmet Sorumlusunu kullanarak depolama hesabına bağlanma
-          href: audience-insights/connect-service-principal.md
-        - name: Tanılama günlüklerini dışarı aktarma
-          href: audience-insights/diagnostics.md
-        - name: Hizmet sınırları
-          href: service-limits.md
-        - name: DSR hakları ve istekleri
-          href: dsr-rights-requests.md
-    - name: API'ler
-      items:
-        - name: Common Data Model'de varlık şemalarını inceleme
-          href: audience-insights/entity-schemas.md
-        - name: Dataverse'deki Customer Insights verileri
-          href: audience-insights/customer-insights-dataverse.md
-        - name: API'lerle çalışma
-          href: audience-insights/apis.md
-        - name: API başvuruları
-          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Onay yönetimi (önizleme)
+        - name: Dynamics 365 için Müşteri Kartı Eklentisi
+          href: customer-card-add-in.md
+        - name: Microsoft Teams (bot)
+          href: export-teams-bot.md
+        - name: Power Apps
+          href: export-power-apps.md
+        - name: Power Automate
+          href: export-power-automate.md
+        - name: Power BI
+          href: export-power-bi.md
+- name: Varlıklar
+  items:
+    - name: Varlıkları anlama
+      href: entities.md
+    - name: Common Data Model'de varlık şemalarını inceleme
+      href: entity-schemas.md
+    - name: Dataverse'deki Customer Insights verileri
+      href: customer-insights-dataverse.md
+    - name: İlişkiler ve bağlantılı varlıklar oluşturma
+      href: relationships.md
+    - name: Anlamsal eşlemeleri tanımlama
+      href: semantic-mappings.md
+- name: Yönetim
+  items:
+    - name: Sistem yapılandırmasını ayarlama
+      href: system.md
+    - name: Güvenlik ayarlarını yapılandırma
+      href: security-overview.md
+    - name: Kullanıcı izinleri atama
+      href: permissions.md
+    - name: Bağlantılara genel bakış
+      href: connections.md
+    - name: Birden çok ortamı yönetme
+      href: manage-environments.md
+    - name: Kendi Key Vault'unuzu getirin
+      href: use-azure-key-vault.md
+    - name: Hizmet Sorumlusunu kullanarak depolama hesabına bağlanma
+      href: connect-service-principal.md
+    - name: Tanılama günlüklerini dışarı aktarma
+      href: diagnostics.md
+    - name: Hizmet sınırları
+      href: service-limits.md
+    - name: DSR hakları ve istekleri
+      href: dsr-rights-requests.md
+- name: API'ler
+  items:
+    - name: API'lerle çalışma
+      href: apis.md
+    - name: API başvuruları
+      href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Onay yönetimi (Önizleme)
   items:
     - name: Yardım merkezi
       href: consent-management/index.yml
     - name: Özelliğe genel bakış
       href: consent-management/overview.md
-    - name: Kullanmaya başlama
+    - name: Kullanmaya başlayın
       items:
-        - name: Kullanmaya başlama
+        - name: Kullanmaya başlayın
           href: consent-management/get-started.md
         - name: Kavramlar ve terminoloji
           href: consent-management/glossary.md
@@ -306,10 +302,10 @@
           href: consent-management/set-consent-rules.md
     - name: Onay verilerini yönetme
       items:
-        - name: Hedef kitle içgörülerinde onay kurallarını etkinleştirme
-          href: audience-insights/activate-consent.md
-        - name: Hedef kitle içgörüleri segmentlerinde varsayılan onay kurallarını yönetme
-          href: audience-insights/change-default-consent-rules.md
+        - name: Customer Insights'ta onay kurallarını etkinleştirme
+          href: activate-consent.md
+        - name: Customer Insights segmentleriyle varsayılan onay kurallarını yönetin
+          href: change-default-consent-rules.md
     - name: Ayarları ve kullanıcıları yönetme
       items:
         - name: Sistem ayarlarını yapılandırma
@@ -320,7 +316,5 @@
       items:
         - name: Onay verileriyle tahminler oluşturma
           href: consent-management/predictions-consent-data.md
-- name: Etkileşim içgörüleri (önizleme)
-  href: engagement-insights/overview.md
 - name: Destek alın
   href: /power-platform/admin/get-help-support
