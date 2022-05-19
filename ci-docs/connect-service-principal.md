@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647702"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739186"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure hizmet sorumlusu kullanarak bir Azure Data Lake Storage hesabına bağlanma
 
@@ -40,7 +40,7 @@ Customer Insights için yeni bir hizmet sorumlusu oluşturmadan önce kuruluşun
 
 3. **Yönet** altında **Kurumsal Uygulamalar**'ı seçin.
 
-4. `Dynamics 365 AI for Customer Insights` adlı Microsoft başvuru kimliği `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` öğesini arayın.
+4. `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` ile başlayan bir **Uygulama kimliği** için bir filtre ekleyin veya `Dynamics 365 AI for Customer Insights` adını arayın.
 
 5. Eşleşen bir kayıt bulursanız bu, hizmet sorumlusunun önceden mevcut olduğu anlamına gelir. 
    

@@ -1,23 +1,22 @@
 ---
 title: Segmentler için onay kurallarını etkinleştirme
 description: Dynamics 365 Customer Insights'ta onay verilerini bağlamak ve onay denetimlerini etkinleştirmek için şu adımları izleyin. Yönetici, onay denetimlerini de devre dışı bırakabilir.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647572"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755194"
 ---
 # <a name="activate-consent-rules"></a>Onay kurallarını etkinleştirme
 
-[Onay Merkezi (önizleme)](consent-management/overview.md), değişik kaynaklardan gelen onay verilerini uyumlu hale getirmenize yardımcı olur. Varsayılan onay denetimlerini uygulamak için birleşik *Onay* varlığını kullanın. Onay Merkezi'nde onay verilerini içeri aktardıktan ve bu veriler için kuralları yapılandırdıktan sonra, *Onay* varlığı Dynamics 365 Customer Insights ile otomatik olarak eşitlenir.
+[Onay Merkezi (önizleme)](consent-management/overview.md), değişik kaynaklardan gelen onay verilerini uyumlu hale getirmenize yardımcı olur. Varsayılan onay denetimlerini uygulamak için birleşik *Onay* varlığını kullanın. Onay verilerini içe aktarıp eşleme kurallarını yapılandırdıktan sonra, *Onay* varlığı Dynamics 365 Customer Insights ile otomatik olarak eşitlenir.
 
 ## <a name="enable-consent-checks"></a>Onay denetimlerini etkinleştir
 

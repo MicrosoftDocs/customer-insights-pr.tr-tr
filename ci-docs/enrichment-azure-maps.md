@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647523"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755378"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Azure Haritalar ile müşteri profillerini zenginleştirme (Önizleme)
 
@@ -51,7 +51,7 @@ Azure Haritalar veri zenginleştirmeyi yapılandırmak için aşağıdaki önko�
 
 1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
 
-1. **Gelişmiş Ayarlar**'ı değiştirmek isteyip istemediğinizi değerlendirin. Bunlar, Gelişmiş kullanım örneklerini ele alması için en fazla esnekliği sağlamak amacıyla sağlanmıştır, ancak çoğu durumda varsayılan değerler yeterli olacaktır:
+1. **Gelişmiş Ayarlar**'ı değiştirmek isteyip istemediğinizi değerlendirin. Bu ayarlar, Gelişmiş kullanım örneklerini ele alması için en fazla esnekliği sağlamak amacıyla sağlanmıştır, ancak çoğu durumda varsayılan değerler yeterli olacaktır:
    - **Adres türleri**: Varsayılan davranış, eksik bile olsa, zenginleştirmenin en iyi adres eşleşmesini döndürmesidir. Yalnızca tam adresler almak için &mdash;örneğin, ev numarasını içeren adresler&mdash; **Nokta Adresleri** hariç tüm onay kutularını temizleyin. 
    - **Dil**: Varsayılan olarak adresler, adresin ait olduğu belirlendiği bölgenin dilinde döndürülür. Standartlaştırılmış bir adres dili uygulamak için, açılır menüden dili seçin. Örneğin, **İngilizce**'yi seçmek, **København, Danmark** yerine, **Copenhagen, Denmark** döndürür.
 
@@ -89,7 +89,7 @@ Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşter
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 
-Dynamics 365 Customer Insights'ı Azure Haritalar'a veri aktarması için etkinleştirdiğinizde, kişisel veriler gibi önemli olası veriler de dahil olmak üzere Dynamics 365 Customer Insights için uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, bu tür verileri yönergelinizde aktaracaktır, ancak sizin sahip olabileceğiniz gizlilik ve güvenlik yükümlülüklerini Azure Haritalar'ın karşılamasını güvence altına alırsınız. Daha fazla bilgi için [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732)'ne gidin.
+Dynamics 365 Customer Insights'ı Azure Haritalar'a veri aktarması için etkinleştirdiğinizde, kişisel veriler gibi önemli olası veriler de dahil olmak üzere Dynamics 365 Customer Insights için uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri alır, ancak Azure Haritalar'ın sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini yerine getirmesini sağlamaktan siz sorumlusunuz. Daha fazla bilgi için [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732)'ne gidin.
 Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

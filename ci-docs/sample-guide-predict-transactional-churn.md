@@ -1,19 +1,19 @@
 ---
 title: İşlem tabanlı erime tahmini örnek kılavuzu
 description: Kullanıma hazır işlem tabanlı erime tahmini modelini denemek için bu örnek kılavuzu kullanın.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647905"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741343"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>İşlem tabanlı erime tahmini örnek kılavuzu
 
@@ -86,69 +86,13 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 
 1. Veri kaynağını kaydedin.
 
-
 ## <a name="task-2---data-unification"></a>Görev 2: Veri birleştirme
 
-Verileri aldıktan sonra birleşik müşteri profili oluşturmak için **Eşleme/Eşleştirme/Birleştirme** işlemine başlayabilirsiniz. Daha fazla bilgi için bkz. [Veri birleştirme](data-unification.md).
-
-### <a name="map"></a>Eşleme
-
-1. Verileri aldıktan sonra, eCommerce ve Bağlılık verilerindeki ilgili kişileri ortak veri türleriyle eşleyin. **Veri** > **Birleştir** > **Eşle**'ye gidin.
-
-1. Müşteri profilini temsil eden **eCommerceContacts** ve **loyCustomers** varlıklarını seçin. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="ecommerce ve bağlılık veri kaynaklarını birleştirin.":::
-
-1. **eCommerceContacts** için birincil anahtar olarak **ContactId** öğesini ve **loyCustomers** için birincil anahtar olarak **LoyaltyID** öğesini seçin.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="LoyaltyId öğesini birincil anahtar olarak birleştirin.":::
-
-### <a name="match"></a>Eşleştir
-
-1. **Eşleştir** sekmesine gidin ve **Sırayı Ayarla**'yı seçin.
-
-1. **Birincil** açılan listede **eCommerceContacts : eCommerce**'ü birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
-
-1. **Varlık 2** açılır listesinde **loyCustomers:LoyaltyScheme**'iyi seçin ve tüm kayıtları ekleyin.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Eşleştirilen eCommerce ve Bağlılık öğelerini birleştirin.":::
-
-1. **Yeni kural oluştur**'u seçin
-
-1. FullName kullanarak ilk koşulunuzu ekleyin.
-
-   * eCommerceContacts için açılır alanında **Tam Ad**'ı seçin.
-   * loyCustomers için açılır alanında **Tam Ad**'ı seçin.
-   * **Normalleştir** açılan listesini ve **Tür (Telefon, Ad, Adres, ...)** öğesini seçin.
-   * **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
-
-1. Yeni kural için **FullName, Email** adını girin.
-
-   * **Koşul Ekle**'yi seçerek e-posta adresi için ikinci bir koşul ekleyin.
-   * Varlık eCommerceContacts için açılır menüde **E-posta**'yı seçin.
-   * Varlık loyCustomers için açılır menüde **E-posta**'yı seçin. 
-   * Normalleştir alanını boş bırakın. 
-   * **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Ad ve e-posta için eşleştirilen kuralı birleştirin.":::
-
-7. **Kaydet** ve **Çalıştır**'ı seçin.
-
-### <a name="merge"></a>Adres Mektup Birleştirme
-
-1. **Birleştir** sekmesine gidin.
-
-1. **loyCustomers** için **ContactId** varlığında, görünen adı alınan diğer kimliklerden ayırt etmek için **ContactIdLOYALTY** olarak değiştirin.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="contactid öğesini bağlılık kimliği olarak yeniden adlandırın.":::
-
-1. Birleştirme İşlemini başlatmak için **Kaydet** ve **Çalıştır**'ı seçin.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Görev 3: İşlem tabanlı erime tahmini yapılandırma
 
-Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çalıştırabiliriz. Ayrıntılı adımlar için [Abonelik erime tahmini](predict-subscription-churn.md) makalesine bakın. 
+Unified customer profile ile birlikte, artık hareket erime tahmin çalıştırabiliriz. Ayrıntılı adımlar için [Hareket erime tahmini](predict-transactional-churn.md) makalesine bakın. 
 
 1. **Yönetim Bilgileri** > **Keşfet**'e gidin ve **Müşteri erimesi modeli**'ni seçerek kullanın.
 
@@ -180,7 +124,7 @@ Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çal
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Görev 4: Model sonuçlarını ve açıklamaları inceleme
 
-Modelin verilerin eğitimini ve puanlamasını tamamlamasını bekleyin. Şimdi abonelik erimesi modeli açıklamalarını inceleyebilirsiniz. Daha fazla bilgi için bkz. [Tahmin durumunu ve sonuçları inceleme](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Modelin verilerin eğitimini ve puanlamasını tamamlamasını bekleyin. Artık erime modeli açıklamalarını gözden geçirebilirsiniz. Daha fazla bilgi için bkz. [Tahmin durumunu ve sonuçları inceleme](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Görev 5: Yüksek erime riskli müşterilerin olduğu bir segment oluşturma
 
@@ -192,14 +136,12 @@ Model tarafından oluşturulan varlığı temel alan yeni bir segment oluşturab
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Model çıkışı ile bir segment oluşturun.":::
 
-1. **OOBSubscriptionChurnPrediction** uç noktasını seçin ve segmenti tanımlayın: 
+1. **OOBeCommerceChurnPrediction** uç nokta seçin ve segmenti tanımlayın: 
    - Alan: ChurnScore
    - İşleç: büyüktür
    - Değer: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Abonelik erimesi segmenti ayarlayın.":::
 
-Artık bu abonelik işi için yüksek erime riskli müşterileri tanımlayan dinamik olarak güncelleştirilen bir segmente sahipsiniz.
+Artık yüksek karmaşıklığı riskli müşterileri tanımlayan dinamik olarak güncelleştirilmiş bir segmentiniz vardır.
 
 Daha fazla bilgi için bkz. [Segmentler oluşturma ve yönetme](segments.md).
 

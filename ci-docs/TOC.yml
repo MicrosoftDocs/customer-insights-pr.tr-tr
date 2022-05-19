@@ -66,12 +66,18 @@
   items:
     - name: Veri birleştirmeye genel bakış
       href: data-unification.md
-    - name: Varlıkları ve öznitelikleri eşleme
+    - name: Kaynak alanları seçin
       href: map-entities.md
-    - name: Varlıkları eşleme
+    - name: Yinelenen kayıtları kaldır
+      href: remove-duplicates.md
+    - name: Eşleşme koşulları
       href: match-entities.md
-    - name: Varlıkları birleştirme
+    - name: Müşteri alanları birleştirme
       href: merge-entities.md
+    - name: Veri birleştirmeyi gözden geçir
+      href: review-unification.md
+    - name: Birleştirme ayarlarını güncelleştirme
+      href: data-unification-update.md
 - name: Veri zenginleştirme
   items:
     - name: Müşteri profillerini zenginleştirme
@@ -282,6 +288,8 @@
       href: apis.md
     - name: API başvuruları
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData örnek sorgular
+      href: odata-examples.md
 - name: Onay yönetimi (Önizleme)
   items:
     - name: Yardım merkezi

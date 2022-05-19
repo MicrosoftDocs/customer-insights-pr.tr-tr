@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647692"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755333"
 ---
 # <a name="connections-preview-overview"></a>Bağlantılara (önizleme) genel bakış
 
@@ -24,15 +24,15 @@ Bağlantılar, Customer Insights üzerinden ve aracılığıyla veri paylaşım�
 
 Bağlantılar oluşturmak ve görüntülemek için **Yönetim** > **bağlantılar**'a gidin.
 
-**Bağlantılar** sekmesi, tüm etkin bağlantıları size gösterir. Liste her bağlantı için bir satır gösterir. 
+**Bağlantılar** sekmesi, tüm etkin bağlantıları size gösterir. Liste her bağlantı için bir satır gösterir.
 
 Hızlı bir genel bakış, açıklama alın ve **bul** sekmesindeki her genişletilebilirlik seçeneğiyle neler yapabileceğinizi öğrenin.
 
-### <a name="exports"></a>Dışarı aktarma işlemleri
+## <a name="exports"></a>Dışarı aktarma işlemleri
 
 Yalnızca Yöneticiler yeni bağlantılar yapılandırabilir, ancak varolan bağlantıları kullanmak için katkıda bulunanların erişimine izin verebilirler. Yöneticiler verilerin nereye gidebileceğini denetler; katkı sağlayanlar, yükü ve sıklığı tanımlar. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Zenginleştirmeler
+## <a name="enrichments"></a>Zenginleştirmeler
 
 Yalnızca Yöneticiler yeni bağlantılar yapılandırabilir, ancak oluşturulan bağlantılar her zaman Yöneticiler ve katkıda bulunanlar tarafından kullanılabilir. Yöneticiler kimlik bilgilerini yönetir ve veri aktarımına izin verir. Bağlantılar, Yöneticiler ve katkıda bulunanlar tarafından zenginleştirme yapılandırmak için kullanılabilir.
 
@@ -46,7 +46,7 @@ Bağlantı eklemek için, [Yönetici izinlere](permissions.md) sahip olmanız ge
 
 1. Yeni bir bağlantı oluşturmak için **Bağlantı ekle**'yi seçin. Açılan menüden, oluşturmak istediğiniz bağlantı türünü seçin.
 
-1. **Bağlantıyı ayarla** bölmesinde gerekli ayrıntıları girin. 
+1. **Bağlantıyı ayarla** bölmesinde gerekli ayrıntıları girin.
    1. **Görünen ad** ve bağlantının türü bir bağlantıyı açıklar. Bu bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
    1. Tam alanlar bağlandığınız hizmete bağlıdır. Belirli bir bağlantının ayrıntıları hakkında bilgi edinmek için hedef hizmetle ilgili makaleyi kullanabilirsiniz.
    1. Gizlilikleri depolamak için kendi [Key Vault](use-azure-key-vault.md)'unuzu kullanırsanız, **Key Vault kullan** öğesini etkinleştirin ve listeden parolayı seçin.
@@ -59,7 +59,7 @@ Bağlantı eklemek için, [Yönetici izinlere](permissions.md) sahip olmanız ge
 
 Verme bağlantısını ayarlarken veya düzenlerken [dışarı aktarımları](export-destinations.md) tanımlamak için hangi kullanıcıların bu belirli bağlantıyı kullanmasına izin verileceğini seçersiniz. Varsayılan olarak, bir bağlantı Yönetici rolüne sahip kullanıcılar tarafından kullanılabilir. **Bu bağlantıyı kullanabilecek kişileri seçin** altında bu ayarı değiştirebilirsiniz ve bu bağlantıyı kullanmak için katılımcı rolüne sahip kullanıcılara izin verebilirsiniz.
 
-- Katkıda bulunanlar bağlantıyı görüntüleyemez veya düzenleyemez. Bir dışa aktarma işlemi oluştururken, yalnızca görünen ad ve türünü görürler.
+- Katkıda bulunanlar bağlantıyı görüntüleyemez veya düzenleyemez. Dışa aktarma oluştururken yalnızca görünen ad ve türünü görürler.
 - Bir bağlantıyı paylaşarak, katkı sağlayanlar bir bağlantı kullanmalarına izin verir. Katkıda bulunanlar, verme işlemlerini ayarlarken paylaşılan bağlantıları görürler. Bu, belirli bir bağlantıyı kullanan her bir verme işlemini yönetebilir.
 - Bu ayarı, katkıda bulunanlar tarafından önceden tanımlanmış olan dışarı aktarımları korurken değiştirebilirsiniz.
 
@@ -77,7 +77,7 @@ Verme bağlantısını ayarlarken veya düzenlerken [dışarı aktarımları](ex
 
 ## <a name="remove-a-connection"></a>Bağlantı kaldırma
 
-Kaldırmakta olduğunuz bağlantı zenginleştirme veya dışarı aktarımlar tarafından kullanılıyorsa önce Bu parolaları ayırmanız veya kaldırmanız gerekir. Kaldır iletişim kutusu sizi ilgili zenginleştirme veya dışa aktarımlara yönlendirecektir. 
+Kaldırmakta olduğunuz bağlantı zenginleştirme veya dışarı aktarımlar tarafından kullanılıyorsa, önce Bu parolaları ayırmanız veya kaldırmanız gerekir. Kaldır iletişim kutusu sizi ilgili zenginleştirme veya dışa aktarımlara yönlendirecektir.
 
 Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunları, [zenginleştirme](enrichment-hub.md) veya [dışarı aktarmalar](export-destinations.md) sayfasında bunlara başka bir bağlantı ekleyerek yeniden etkinleştirebilirsiniz.
 
@@ -91,7 +91,7 @@ Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunla
 
    1. Bu bağlantıyı kullanarak zenginleştirme veya verme işlemleri varsa bağlantının hangi öğeleri göreceğini görmek için düğmesini seçin.
       - **Dışarı aktarımlar:** Bağlantıyı kaldırabilmeniz için, verme işlemlerini kaldırmayı veya sökmenizi seçebilirsiniz. Bir verme işlemini kesmek için, Yöneticiler **Bağlantıyı Kes** eylemini kullanabilir. Bu eylem, seçilen tek ve birden çok verme için kullanılabilir. Bağlantıyı keserek verme yapılandırmasını koruyabilir ancak başka bir bağlantı eklenene kadar çalıştırılamaz.
-      - **Zenginleştirmeler:** Bağlantıyı kaldırabilmeniz için, zenginleştirme işlemlerini kaldırmayı veya sökmenizi seçebilirsiniz. 
+      - **Zenginleştirmeler:** Bağlantıyı kaldırabilmeniz için, zenginleştirme işlemlerini kaldırmayı veya sökmenizi seçebilirsiniz.
    1. Bağlantının daha fazla bağımlılığı yoksa, **yönetici** > **bağlantıları**'na dönün ve bağlantıyı kaldırmayı yeniden deneyin.
 
 1. Silme işleminizi onaylamak için **Kaldır**'ı seçin.

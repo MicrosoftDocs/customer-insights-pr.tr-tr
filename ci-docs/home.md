@@ -1,7 +1,7 @@
 ---
 title: Customer Insights ana sayfası
 description: Giriş sayfasında uygulamayı keşfetmeye başlayın.
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647872"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743437"
 ---
 # <a name="explore-customer-insights"></a>Customer Insights'ı keşfetme
 
-Aşağıdaki URL'de, [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) yapabilirsiniz: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Aşağıdaki URL'de, [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) sayfasına erişebilirsiniz: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-**Giriş** sayfasında [eşleme](map-entities.md), [eşleştirme](match-entities.md) ve [birleştirme](merge-entities.md) aşamalarını tamamladıktan sonra segmentlere, ölçümlere ve zenginleştirme verilerine (yapılandırılmışsa) genel bakış gösterilmektedir.
+**Giriş** sayfası, anahtar özelliklerin yapılandırma sürecinde size yol gösterir ve parçaların, ölçülerin ve zenginleştirme verilerine genel bakış sağlar.
 
 :::image type="content" source="media/home-page.png" alt-text="Örnek içgörüleri gösteren Giriş ekranının ekran görüntüsü.":::
 
-Customer Insights'taki temel kontroller:
+## <a name="left-side-pane"></a>Sol taraf bölmesi
 
-- Sol bölme: Bir B2C ve B2B ortamınız varsa birincil hedef kitle arasında geçiş yapın
+Customer Insights'ı farklı alanlar arasında gezinmek için sol bölmeyi kullanın. 
 
-- Sol bölme: Farklı alanlar arasında gezinmek için sol bölmeyi kullanın ve birincil hedef kitleyi seçin
+Iş hesaplarıyla ve bağımsız tüketicilerle çalışıyorsanız, odaklanmanızı uygun şekilde ayarlamak için birincil hedef kitle seçebilirsiniz. 
 
-- Başlık: Hangi ortamda çalıştığınızı öğrenin ve yönetici olarak ortamları yönetin
+## <a name="application-header"></a>Uygulama başlığı
 
-- Başlık: Customer Insights için kişisel ayarları belirtin ve yardım alın seçeneklerini belirleyin
+**Ortam** seçici, uygulamasında çalıştığınız ortamı gösterir ve Yönetici olarak ortam oluşturmanıza veya yönetmenize olanak sağlar.
 
-Artık giriş sayfasında aşağıdaki bölümleri görüntüleyebilirsiniz:
+Gülen yüz simgesi **Geri bildirim** denetimidir. Customer Insights deneyiminizi bize bildirmek için bunu seçin. Beğendiklerinizi ve neyi nasıl geliştirebileceğimizi öğrenmek için size etkin şekilde dinleniriz ve bunun için size teşekkür ederiz.
 
-- **En son segmentler**, tanımladığınız demografik, davranışsal veya işlemsel özniteliklere dayalı müşteri gruplarını gösterir. [Segmentler oluşturmak](segments.md), müşteri tabanınızı gruplandırmanıza ve iş etkinliklerinizi daha iyi hedeflemenize yardımcı olur.
+Bir dişli simgesiyle temsil edilen **Ayarlar** denetimi, Customer Insights için oturum ayrıntılarını toplamanıza ve Microsoft 365 profilinizin genel ayarlarını yapılandırmanıza olanak sağlar. 
 
-- **En son işletme ölçümleri**, tanımladığınız [ana performans göstergelerinin (KPIs)](measures.md) bulunduğu kutucukları gösterir. Örneğin, bir müşterinin ortalama erime olasılığı veya müşteri başına ortalama çevrimiçi harcama.
+Bir soru işareti simgesi ile görselleştirilmiş **Yardım** seçenekleri, bağlamsal yardım bağlantıları ve diğer yardımcı kaynaklar sağlar.
 
-- **Son zenginleştirmeler**, en son tamamlanan zenginleştirme çalışmalarının sonuçlarını listeler. [Zenginleştirmeler](enrichment-hub.md) müşteri tabanınız hakkında bilgi ekler. Örneğin, benzeşim bulunan ilgi alanlarını ve markaları anlayarak.
+Profil resminiz, Microsoft 365 profilinizin **Firma yöneticisini** açar. Kişisel ayarlarınızı yönetmek için **Hesabım**'ı seçin.
+
+## <a name="getting-started-with-customer-insights-section"></a>Customer Insights kullanmaya başlayın bölümü
+
+Bu bölümde, Customer Insights ortamınızı ayarlama işlemini gözden geçirme sürecinde size yardımcı olacak kartlar yer almaktadır. 
+
+1. **Veri ekle** kartı, veri alma işlemi için size yardımcı olur. Customer Insights, [müşterilerinizle ilgili verilere gitmek için çeşitli seçenekleri](data-sources.md) destekler. Başlamak için **Veri kaynaklarını ekle**'yi seçin.
+1. İlk veri alma işlemi başarıyla tamamlandıktan sonra verileri uyumlu hale getirmek ve farklı kaynaklardan [unified customer profile oluşturmak](data-unification.md) için **Veri bütünleştirme** kartını kullanabilirsiniz. 
+1. Unified customer profile ile birlikte, artık **Verileri analiz et** seçeneğini inceleme ve ek öngörüler elde etme zamanı. KPI'ları izlemek için [iş ölçüleri](measures.md) oluşturmaya çalışın, belirli hedef kitlelerine ulaşmak için [segmentleri tanımlayın](segments.md) veya AI yardımı ile [tahminleri konfigüre edin](predictions-overview.md).
+1. Müşteri verileri içe aktarma, birleştirme ve düzgün şekilde yapılandırmayı tamamladığınıza göre veriler üzerinden eyleme geçmek için [çeşitli dışa aktarma hedeflerimizi](export-destinations.md) kullanabilirsiniz. Sık kullandığınız servislerinizi bağlamak için **Bağlantıları ekle**'ye gidin. Örneğin, giden pazarlama kampanyaları oluşturmak için verileri, Dynamics 365 Marketing'e verin. 
+
+## <a name="your-customer-insights-section"></a>Müşteri içgörüleriniz bölümü
+
+- **Segmentler**, tanımladığınız demografik, davranışsal veya işlemsel özniteliklere dayalı müşteri gruplarını gösterir. [Segmentler oluşturmak](segments.md), müşteri tabanınızı gruplandırmanıza ve iş etkinliklerinizi daha iyi hedeflemenize yardımcı olur.
+
+- **İşletme ölçümleri**, tanımladığınız [ana performans göstergelerinin (KPIs)](measures.md) bulunduğu kutucukları gösterir. Örneğin, bir müşterinin ortalama erime olasılığı veya müşteri başına ortalama çevrimiçi harcama.
+
+- **Zenginleştirmeler**, en son tamamlanan zenginleştirme çalışmalarının sonuçlarını listeler. [Zenginleştirmeler](enrichment-hub.md) müşteri tabanınız hakkında bilgi ekler. Örneğin, benzeşim bulunan ilgi alanlarını ve markaları anlayarak.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

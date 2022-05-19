@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647882"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741203"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate bağlayıcısı (önizleme)
 
@@ -25,14 +25,14 @@ Verileriniz değiştiğinde belirli olayları otomatik olarak gerçekleşecek ş
 
 ## <a name="power-automate-triggers"></a>Power Automate tetikleyicileri
 
-Bulut akışları oluşturmak ve bildirimler veya daha fazla gelişmiş eylem gibi yinelenen görevleri otomatikleştirmek için tetikleyiciler kullanın. 
+Bulut akışları oluşturmak ve bildirimler veya daha fazla gelişmiş eylem gibi yinelenen görevleri otomatikleştirmek için tetikleyiciler kullanın.
 
-- Veri kaynağını yenileme işlemi başarısız olduğunda tetikleyin. 
+- Veri kaynağını yenileme işlemi başarısız olduğunda tetikleyin.
 - Veri kaynağını yenileme işlemi başarılı olduğunda tetikleyin.
 - Bir segmentte bir eşik geçildiğinde tetikleyin. Tetikleyici, eşiğin üzerine geçme ile sınırlıdır.
 - İş ölçümündeki eşik geçildiğinde tetikleyin. Yalnızca Boyutu olmayan iş ölçümleri desteklenir. Tetikleyici, eşiğin üzerine geçme ile sınırlıdır.
 - (Veri kaynaklarının, segmentlerin, ölçümlerin...) yenileme işlemi tamamen bittiğinde tetikleyin.
-- Birleşme işleminin (eşleme, eşleşme, birleştirme) yenilenmesi tamamlandığında tetiklenir.
+- Birleşme işleminin yenilenmesi tamamlandığında tetiklenir.
 
 [Power Automate'te tetikleyicilerinizi yapılandırma](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

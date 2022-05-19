@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647555"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755660"
 ---
 # <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
-
-
 
 Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görünümünü edinin. Desteklenen bir Dynamics 365 uygulamasında Müşteri Kartı Eklentisi yüklüyse, müşteri profili alanlarını, öngörüleri ve etkinlik zaman çizelgesini görüntülemeyi seçebilirsiniz. Eklenti, Customer Insights'den, bağlı Dynamics 365 uygulamasındaki verileri etkilemeden verileri alır.
 
@@ -31,7 +29,7 @@ Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görün
 ## <a name="prerequisites"></a>Ön koşullar
 
 - Eklenti yalnızca satış veya müşteri hizmetleri, sürüm 9.0 ve daha sonraki sürümler gibi Dynamics 365 model güdümlü uygulamalarla çalışır.
-- Dynamics 365 verilerinizin Customer Insights müşteri profilleriyle eşleşmesi için [bunların Microsoft Dataverse bağlayıcı kullanılarak Dynamics 365 uygulamasından alınmasını](connect-power-query.md) öneririz. Dynamics 365 ilgili kişilerini (veya firmalarını) almak için farklı bir yöntem kullanıyorsanız `contactid` (veya `accountid`) alanının [veri birleştirme işleminin eşleme adımında ilgili veri kaynağı için birincil anahtar](map-entities.md#select-primary-key-and-semantic-type-for-attributes) olarak ayarlandığından emin olmanız gerekir. 
+- Dynamics 365 verilerinizin Customer Insights müşteri profilleriyle eşleşmesi için [bunların Microsoft Dataverse bağlayıcı kullanılarak Dynamics 365 uygulamasından alınmasını](connect-power-query.md) öneririz. Dynamics 365 ilgili kişilerini (veya firmalarını) almak için farklı bir yöntem kullanıyorsanız `contactid` (veya `accountid`) alanının [veri birleştirme işleminin eşleme adımında ilgili veri kaynağı için birincil anahtar](map-entities.md#select-primary-key-and-semantic-type-for-attributes) olarak ayarlandığından emin olmanız gerekir.
 - Müşteri Kartı Eklentisinin tüm Dynamics 365 kullanıcılarının verileri görmesini sağlamak için Customer Insights'ta [kullanıcı olarak eklenmesi](permissions.md) gerekir.
 - [Customer Insights'ta yapılandırılan arama ve filtre özellikleri](search-filter-index.md), verilerin çalışması için arama yapmak üzere gereklidir.
 - Her eklenti denetimi Customer Insights içindeki belirli verilere dayanır. Bazı veriler ve denetimler yalnızca belirli türlerdeki ortamlarda kullanılabilir. Eklenti yapılandırması, seçilen ortam türü nedeniyle denetim kullanılamıyorsa size bildirir. [Ortam kullanma durumları](work-with-business-accounts.md) daha fazla bilgi edinin.
@@ -132,16 +130,16 @@ Kimlik alanları doğru yapılandırılmış olsa bile denetimler, hiçbir müş
 
 **Çözüm:**
 
-1. Kart Eklentisi'ni yönergelere uygun olarak yapılandırdığınızdan emin olun: [Müşteri Kartı Eklentisi'ni Yapılandırma](#configure-the-customer-card-add-in) 
+1. Kart Eklentisi'ni yönergelere uygun olarak yapılandırdığınızdan emin olun: [Müşteri Kartı Eklentisi'ni Yapılandırma](#configure-the-customer-card-add-in)
 
-1. Veri alımı yapılandırmasını gözden geçirin. İlgili kişi kimliği GUID bilgisini içeren Dynamics 365 sisteminin veri kaynağını düzenleyin. İlgili kişi GUID bilgisi, Power Query düzenleyicisinde büyük harflerle gösteriliyorsa aşağıdaki adımları deneyin: 
+1. Veri alımı yapılandırmasını gözden geçirin. İlgili kişi kimliği GUID bilgisini içeren Dynamics 365 sisteminin veri kaynağını düzenleyin. İlgili kişi GUID bilgisi, Power Query düzenleyicisinde büyük harflerle gösteriliyorsa aşağıdaki adımları deneyin:
     1. Veri kaynağını Power Query Düzenleyicisi'nde açmak için veri kaynağını düzenleyin.
     1. İlgili kişi kimliği sütununu seçin.
     1. Kullanılabilir eylemleri görmek için üst bilgi çubuğunda **Dönüştür**'ü seçin.
     1. **Küçük harf**'i seçin. Şimdi tablodaki GUID'lerin küçük harfle gösterildiğinden emin olun.
     1. Veri kaynağını kaydedin.
-    1. Değişiklikleri GUID'e yaymak için veri alımı, birleştirme ve aşağı akış işlemlerini çalıştırın. 
+    1. Değişiklikleri GUID'e yaymak için veri alımı, birleştirme ve aşağı akış işlemlerini çalıştırın.
 
-Tam yenilemeyi tamamladıktan sonra, Müşteri Kartı Eklentisi denetimleri beklenen verileri göstermelidir. 
+Sistem tam yenilemeyi tamamladıktan sonra, Müşteri Kartı Eklentisi denetimleri beklenen verileri göstermelidir.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

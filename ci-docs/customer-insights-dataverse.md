@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 85995cbd7f797810bfb6ecdc8a24d56542f0b5a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647552"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741389"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
@@ -54,7 +54,7 @@ Customer Insights'ın bazı çıktı varlıkları, Dataverse'de tablolar olarak 
 
 ### <a name="customerprofile"></a>Müşteri profili
 
-Bu tablo, Customer Insights'dan gelen birleştirilmiş müşteri profilini içerir. Birleştirilmiş bir müşteri profilinin şeması, birleştirme işleminde kullanılan varlıklara ve özniteliklere bağlıdır. Bir müşteri profili şeması genellikle [CustomerProfile'ın Common Data Model tanımındaki](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) özniteliklerin alt kümesini içerir.
+Bu tablo, Customer Insights'dan gelen birleştirilmiş müşteri profilini içerir. Unified customer profile şeması, veri birleşme işleminde kullanılan varlıklara ve özniteliklere bağlıdır. Bir müşteri profili şeması genellikle [CustomerProfile'ın Common Data Model tanımındaki](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) özniteliklerin alt kümesini içerir.
 
 ### <a name="alternatekey"></a>AlternateKey
 

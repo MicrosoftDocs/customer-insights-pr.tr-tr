@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647531"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755286"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (Önizleme)
 
@@ -27,8 +27,8 @@ Customer Insights, aşağıdaki olay günlüklerini gönderir:
 - **Denetim Olayları**
   - **APIEvent**: Dynamics 365 Customer Insights kullanıcı arabirimi aracılığıyla gerçekleştirilen değişiklik izlemeyi etkinleştirir.
 - **Operasyonel Olaylar**
-  - **WorkflowEvent**: İş akışı, kişinin [Veri Kaynaklarını](data-sources.md) kurmasını, [birleştirmesini](data-unification.md), [zenginleştirmesini](enrichment-hub.md) ve son olarak verileri diğer sistemlere [dışarı aktarmasını](export-destinations.md) sağlar. Tüm bu adımlar tek tek gerçekleştirilebilir (örneğin, tek bir dışarı aktarma tetiklenebilir) veya düzenlenebilir (ör. ek zenginleştirmeleri alacak olan birleştirme sürecini tetikleyen veri kaynaklarından veri yenileme ve işlem gerçekleştirildiğinde verileri başka bir sisteme aktarma). Daha ayrıntılı bilgi için bkz. [WorkflowEvent Şeması](#workflow-event-schema).
-  - **APIEvent**: Dynamics 365 Customer Insights müşteri kurulumlarına yapılan tüm API çağrıları. Daha ayrıntılı bilgi için bkz. [APIEvent Şeması](#api-event-schema).
+  - **WorkflowEvent**: İş akışı, [Veri Kaynaklarını](data-sources.md) kurmanıza, [birleştirmenize](data-unification.md), [zenginleştirmenize](enrichment-hub.md) ve son olarak verileri diğer sistemlere [dışarı aktarmanızı](export-destinations.md) sağlar. Bu adımların tümü tek bir şekilde yapılabilir (örneğin, tek bir verme işlemini tetikler). Ayrıca, sistemli de çalıştırabilir (örneğin, zenginleştirme işlemini tetikleyen veri kaynaklarından veri yenilemesi yapabilir ve bir kez verileri başka bir sisteme verir). Daha fazla bilgi için bkz. [WorkflowEvent Şeması](#workflow-event-schema).
+  - **APIEvent**: Dynamics 365 Customer Insights müşteri kurulumlarına yapılan tüm API çağrıları. Daha fazla bilgi için bkz. [APIEvent Şeması](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Tanılama ayarların yapma
 
@@ -55,7 +55,7 @@ Customer Insights'ta tanılamayı yapılandırmak için aşağıdaki ön koşull
 
 1. Hedef kaynakla Azure aboneliğinin **Kiracı**'sını seçin ve **Oturum aç**'ı seçin.
 
-1. **Kaynak türü**'nü seçin (Depolama hesabı, Olay Hub'ı veya günlük analizi).
+1. **Kaynak türü**'nü seçin (Depolama hesabı, olay hub'ı veya günlük analizi).
 
 1. Hedef kaynak için **Abonelik**'i seçin.
 
@@ -182,7 +182,7 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 
 ### <a name="workflow-event-schema"></a>İş akışı olay şeması
 
-İş akışı birden çok adım içerir. [Veri kaynaklarını al](data-sources.md), [birleştir](data-unification.md), [zenginleştir](enrichment-hub.md) ve verileri [dışarı aktar](export-destinations.md). Tüm bu adımlar, tek tek çalıştırılabilir veya aşağıdaki işlemlerle birlikte düzenlenebilir. 
+İş akışı birden çok adım içerir. [Veri kaynaklarını al](data-sources.md), [birleştir](data-unification.md), [zenginleştir](enrichment-hub.md) ve verileri [dışarı aktar](export-destinations.md). Tüm bu adımlar, tek tek çalıştırılabilir veya aşağıdaki işlemlerle birlikte düzenlenebilir.
 
 #### <a name="operation-types"></a>İşlem türleri
 
@@ -215,7 +215,7 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 | `time`          | Zaman damgası | Zorunlu          | Olayın zaman damgası (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Zorunlu          | Olayı oluşturan kurulumun ResourceId değeri.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Zorunlu          | Bu olay tarafından temsil edilen işlemin adı. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Başvuru için [İşlem Türleri](#operation-types) bölümüne bakın. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Zorunlu          | Olayın günlük kategorisi. İş akışı olayları için her zaman `Operational`                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Zorunlu          | Olayın günlük kategorisi. İş akışı olayları için her zaman `Operational`                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Zorunlu          | Olayın durumu. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Uzun      | İsteğe bağlı          | İşlemin milisaniye cinsinden süresi.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | İsteğe bağlı          | Belirli bir olay kategorisinde daha fazla özellik içeren JSON nesnesi.                                                                                        | [İş Akışı Özellikleri](#workflow-properties-schema) alt bölümüne bakın                                                                                                       |

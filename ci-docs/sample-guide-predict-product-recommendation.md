@@ -1,7 +1,7 @@
 ---
 title: Ürün önerisi tahmini örnek kılavuzu
 description: Kullanıma hazır ürün önerisi tahmini modelini denemek için bu örnek kılavuzu kullanın.
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647825"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762710"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Ürün önerisi tahmini örnek kılavuzu
 
@@ -40,7 +40,7 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 
 1. **eCommerce** adlı bir veri kaynağı oluşturun, içeri aktarma seçeneğini belirleyin ve **Text/CSV** bağlayıcısını seçin.
 
-1. eCommerce ilgili kişileri https://aka.ms/ciadclasscontacts URL'sini girin.
+1. eCommerce ilgili kişileri URL'sini girin: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
 
 1. Verileri düzenlerken **Dönüştür**'ü ve ardından **İlk Satırı Üst Bilgi Olarak Kullan**'ı seçin.
 
@@ -50,15 +50,15 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Doğum tarihini tarihe dönüştürün.":::
 
-5. Sağ bölmedeki "Ad" alanında, **Sorgu** veri kaynağınızı **eCommerceContacts** olarak yeniden adlandırın
+1. Sağ bölmedeki "Ad" alanında, **Sorgu** veri kaynağınızı **eCommerceContacts** olarak yeniden adlandırın
 
-6. Veri kaynağını **kaydedin**.
+1. Veri kaynağını **kaydedin**.
 
 ### <a name="ingest-online-purchase-data"></a>Çevrimiçi satın alma verilerini alma
 
 1. Aynı **eCommerce** veri kaynağına başka bir veri kümesi ekleyin. **Text/CSV** bağlayıcısını yeniden seçin.
 
-1. **Çevrimiçi Satın Almalar** verileri https://aka.ms/ciadclassonline URL'sini girin.
+1. **Çevrimiçi Satın Almalar** verileri URL'sini girin [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
 
 1. Verileri düzenlerken **Dönüştür**'ü ve ardından **İlk Satırı Üst Bilgi Olarak Kullan**'ı seçin.
 
@@ -70,12 +70,11 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 
 1. Veri kaynağını **kaydedin**.
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Müşteri verilerini bağlılık şemasından alma
 
 1. **LoyaltyScheme** adlı bir veri kaynağı oluşturun, içeri aktarma seçeneğini belirleyin ve **Text/CSV** bağlayıcısını seçin.
 
-1. eCommerce ilgili kişileri https://aka.ms/ciadclasscustomerloyalty URL'sini girin.
+1. eCommerce ilgili kişileri URL'sini girin [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
 
 1. Verileri düzenlerken **Dönüştür**'ü ve ardından **İlk Satırı Üst Bilgi Olarak Kullan**'ı seçin.
 
@@ -90,64 +89,11 @@ Contoso, yüksek kaliteli kahve ve kahve makineleri üreten ve Contoso Coffee we
 
 ## <a name="task-2---data-unification"></a>Görev 2: Veri birleştirme
 
-Verileri aldıktan sonra, artık birleştirilmiş müşteri profili oluşturmak için veri birleştirme işlemine başlıyoruz. Daha fazla bilgi için bkz. [Veri birleştirme](data-unification.md).
-
-### <a name="map"></a>Eşleme
-
-1. Verileri aldıktan sonra, eCommerce ve Bağlılık verilerindeki ilgili kişileri ortak veri türleriyle eşleyin. **Veri** > **Birleştir** > **Eşle**'ye gidin.
-
-2. Müşteri profilini temsil eden **eCommerceContacts** ve **loyCustomers** varlıklarını seçin.
-
-   ![ecommerce ve bağlılık veri kaynaklarını birleştirin.](media/unify-ecommerce-loyalty.png)
-
-3. **eCommerceContacts** için birincil anahtar olarak **ContactId** öğesini ve **loyCustomers** için birincil anahtar olarak **LoyaltyID** öğesini seçin.
-
-   ![LoyaltyId öğesini birincil anahtar olarak birleştirin.](media/unify-loyaltyid.png)
-
-### <a name="match"></a>Eşleştir
-
-1. **Eşleştir** sekmesine gidin ve **Sırayı Ayarla**'yı seçin.
-
-2. **Birincil** açılan listede **eCommerceContacts : eCommerce**'ü birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
-
-3. **Varlık 2** açılır listesinde **loyCustomers:LoyaltyScheme**'iyi seçin ve tüm kayıtları ekleyin.
-
-   ![Eşleştirilen eCommerce ve Bağlılık öğelerini birleştirin.](media/unify-match-order.png)
-
-4. **Yeni kural oluştur**'u seçin
-
-5. FullName kullanarak ilk koşulunuzu ekleyin.
-
-   - eCommerceContacts için açılır alanında **Tam Ad**'ı seçin.
-   - loyCustomers için açılır alanında **Tam Ad**'ı seçin.
-   - **Normalleştir** açılan listesini ve **Tür (Telefon, Ad, Adres, ...)** öğesini seçin.
-   - **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
-
-6. Yeni kural için **FullName, Email** adını girin.
-
-   - **Koşul Ekle**'yi seçerek e-posta adresi için ikinci bir koşul ekleyin.
-   - Varlık eCommerceContacts için açılır menüde **E-posta**'yı seçin.
-   - Varlık loyCustomers için açılır menüde **E-posta**'yı seçin.
-   - Normalleştir alanını boş bırakın.
-   - **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
-
-   ![Ad ve e-posta için eşleştirilen kuralı birleştirin.](media/unify-match-rule.png)
-
-7. **Kaydet** ve **Çalıştır**'ı seçin.
-
-### <a name="merge"></a>Adres Mektup Birleştirme
-
-1. **Birleştir** sekmesine gidin.
-
-1. **loyCustomers** için **ContactId** varlığında, görünen adı alınan diğer kimliklerden ayırt etmek için **ContactIdLOYALTY** olarak değiştirin.
-
-   ![contactid öğesini bağlılık kimliği olarak yeniden adlandırın.](media/unify-merge-contactid.png)
-
-1. Birleştirme İşlemini başlatmak için **Kaydet** ve **Çalıştır**'ı seçin.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>Görev 3: Ürün önerisi tahmini yapılandırma
 
-Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çalıştırabiliriz.
+Unified customer profile ile birlikte, artık ürün öneri tahmin çalıştırabiliriz.
 
 1. **Yönetim Bilgileri** > **Tahmin**'e gidin, **Ürün önerisi**'ni seçin.
 
@@ -162,27 +108,36 @@ Birleştirilmiş müşteri profilleri ile artık abonelik erimesi tahminini çal
    - **Beklenen yinelenen satın almalar**: Müşterilerinizin daha önce satın aldığı ürünleri öneriye eklemek istediğinizi belirtmek için **Evet**'i seçin.
 
    - **Geriye dönük bakılacak aralık:** En az **365 gün** seçin. Bu ayar, modelin önerilerde giriş olarak kullanmak için müşteri etkinliğinde geriye dönük bakılması gereken süreyi tanımlar.
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Ürün öneri modeli için model tercihleri.":::
 
-1. **Gerekli veriler** seçeneğini belirleyin ve satın alma geçmişi için **Veri ekle**'yi seçin.
+1. **Gerekli veriler ekle** adımında, **Veri ekle**'yi seçin.
 
-1. **eCommercePurchases : eCommerce** varlığını ekleyin ve eCommerce'deki alanları modelin gerektirdiği ilgili alanlarla eşleyin.
+1. **Veri ekle** bölmesinde, satın alma geçmişi varlığı olarak **SalesOrderLine** seçin. Bu noktada, büyük olasılıkla henüz yapılandırılmamış olabilir. Aşağıdaki adımları izleyerek etkinlik oluşturmak için bölmedeki bağlantıyı açın:
+   1. **Aktivite adı** girin ve **Aktivite varlığı** olarak *eCommercePurchases:eCommerce* seçeneğini belirleyin. **Birincil anahtar**, *PurchaseId* öğesidir.
+   1. *eCommerceContacts:eCommerce varlığı* ile ilişkiyi tanımlayın ve adlandırın ve yabancı anahtar olarak **ContactId** öğesini seçin.
+   1. Etkinlik birleştirme işlemi için **Olay etkinliğini**, *TotalPrice* olarak belirleyin ve zaman damgasını *PurchasedOn* olarak ayarlayın. [Müşteri faaliyetlerinde](activities.md) özetlendiği gibi daha fazla alan belirtebilirsiniz.
+   1. **Aktivite türü** için *SalesOrderLine* öğesini seçin. Aşağıdaki etkinlik alanlarını eşleyin:
+      - Sipariş satırı kimliği: PurchaseId
+      - Sipariş Kimliği: PurchaseId
+      - Sipariş verileri: PurchasedOn
+      - Ürün Kimliği: ProductId
+      - Tutar: TotalPrice
+   1. Model yapılandırmasına yeniden geçmeden önce aktiviteyi gözden geçirin ve sonlandırın.
 
-1. **eCommercePurchases : eCommerce** varlığını **eCommerceContacts : eCommerce** ile birleştirin.
+1. **Aktiviteleri seç** adımında, **Aktiviteler** bölümünde yeni oluşturulan aktiviteyi seçin. **İleri**'yi seçin ve özellik eşlemesi önceden doldurulur. **Kaydet**'i seçin.
 
-   ![eCommerce varlıklarını birleştirin.](media/model-purchase-join.png)
+1. Bu örnek kılavuzda, ürün bilgisi verileri olmadığı için **Ürün bilgilerini ekle** ve **Ürün filtreleri** ayarlanmış olarak atlanıyoruz.
 
-1. Model zamanlamasını ayarlamak için **İleri**'yi seçin.
+1. **Veri güncelleştirmeleri** adımında model zamanlamasını ayarlayın.
 
    Modelin, alınan yeni veriler olduğunda yeni desenler öğrenmesi için düzenli olarak eğitilmesi gerekir. Bu örnek için, **Aylık**'ı seçin.
 
-1. Tüm ayrıntıları inceledikten sonra **Kaydet ve Çalıştır**'ı seçin.
-
+1. Tüm ayrıntıları inceledikten sonra **Kaydet ve Çalıştır**'ı seçin. Modelin ilk kez çalıştırılması birkaç dakika sürer.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Görev 4: Model sonuçlarını ve açıklamaları inceleme
 
-Modelin verilerin eğitimini ve puanlamasını tamamlamasını bekleyin. Şimdi ürün öneri modeli açıklamalarını inceleyebilirsiniz. Daha fazla bilgi için bkz. [Tahmin durumunu ve sonuçları inceleme](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Modelin verilerin eğitimini ve puanlamasını tamamlamasını bekleyin. Şimdi ürün öneri modeli açıklamalarını inceleyebilirsiniz. Daha fazla bilgi için bkz. [Tahmin durumunu ve sonuçları inceleme](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>Görev 5: Çok satın alınan ürünlerden oluşan bir segment oluşturma
 
@@ -190,21 +145,19 @@ Modelin verilerin eğitimini ve puanlamasını tamamlamasını bekleyin. Şimdi 
 
 Model tarafından oluşturulan varlığı temel alan yeni bir segment oluşturabilirsiniz.
 
-1. **Segmentler**'e gidin. **Yeni**'yi ve **Şuradan oluştur** > **Yönetim Bilgileri**'ni seçin.
+1. **Segmentler**'e gidin. **Yeni**'yi seçin ve **Zeka'dan oluştur**'u belirleyin.
 
    ![Model çıkışı ile bir segment oluşturun.](media/segment-intelligence.png)
 
 1. **OOBProductRecommendationModelPrediction** uç noktasını seçin ve segmenti tanımlayın:
 
    - Alan: ProductID
-   - İşleç: Değer
    - Değer: İlk üç ürün kimliğini seçin
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Model sonuçlarından bir segment oluşturun.":::
 
-Artık, en çok önerilen üç ürünü satın almaya daha istekli olan müşterileri tanımlaya ve dinamik olarak güncelleştirilen bir segmentiniz var 
+Şimdi, en çok önerilen üç ürünü satın almakla ilgilenebilecek müşterileri tanımlayan dinamik olarak güncelleştirilmiş bir segmentiniz vardır.
 
 Daha fazla bilgi için bkz. [Segmentler oluşturma ve yönetme](segments.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

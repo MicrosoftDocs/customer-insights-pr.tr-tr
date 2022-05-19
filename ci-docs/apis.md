@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647655"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755474"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights, Customer Insights'ndeki verilerinize göre kendi
 > [!IMPORTANT]
 > Bu API'lerin ayrıntıları, [Customer Insights API'leri başvurusunda](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) listelenir. İşlemler, parametreler ve yanıtlar hakkında ek bilgiler içerirler.
 
-Bu makalede, Customer Insights API'lerine nasıl erişileceği,, bir Azure Uygulaması Kaydı nasıl oluşturulacağı ve kullanılabilir istemci kitaplıklarıyla nasıl başlanır açıklanmaktadır.
+Bu makalede, Customer Insights API'lerine nasıl erişileceği, bir Azure Uygulama Kaydı oluşturulması ve istemci kitaplıklarına başlama açıklanmaktadır.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Customer Insights API'lerini denemeye başlama
 
@@ -83,13 +83,13 @@ API'ye isteğinizle birlikte göndermek üzere bir taşıyıcı belirteç almak 
 
 MSAL hakkında daha fazla bilgi için bkz. [Microsoft Kimlik Doğrulaması Kitaplığı'na Genel Bakış (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Azure'da uygulama kaydı hakkında daha fazla bilgi için, bkz. [Uygulama kaydetme](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Azure'da uygulama kaydı hakkında daha fazla bilgi için, bkz. [Uygulama kaydetme](/graph/auth-register-app-v2).
 
 İstemci kitaplıklarımızda API'leri kullanma hakkında bilgi için, bkz. [Customer Insights istemci kitaplıkları](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Sunucudan sunucuya uygulama izinleri
 
-[Uygulama kaydı bölümünde](#create-a-new-app-registration-in-the-azure-portal), kimlik doğrulaması için kullanıcının oturum açmasının gerektiği bir uygulamanın nasıl kaydedileceği açıklanmaktadır. Kullanıcı etkileşimi gerektirmeyen ve sunucuda çalıştırılabilen bir uygulama kaydını nasıl oluşturacağınızı öğrenin.
+[Uygulama kaydı bölümünde](#create-a-new-app-registration-in-the-azure-portal), kimlik doğrulaması için kullanıcının oturum açmasının gerektiği bir uygulamanın nasıl kaydedileceği açıklanmaktadır. Kullanıcı etkileşimi gerekmeyen ve bir sunucu üzerinde çalıştırılabilecek bir uygulama kaydı oluşturmayı öğrenin.
 
 1. Azure portalındaki Uygulama kaydınızda **API izinleri**'ne gidin.
 
@@ -112,6 +112,10 @@ Azure'da uygulama kaydı hakkında daha fazla bilgi için, bkz. [Uygulama kaydet
    Customer Insights'ı açın, **Yönetici** > **İzinler**'e gidin ve **Kullanıcı ekle**'yi seçin.
 
 1. Uygulama kaydınızın adını arayıp arama sonuçlarından seçin ve **Kaydet**'i seçin.
+
+## <a name="sample-queries"></a>Örnek sorgular
+
+API'lerle çalışacak şekilde OData örneklerinin kısa bir listesini hazırladık: [OData sorgu örnekleri](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights istemci kitaplıkları
 
@@ -137,7 +141,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 
 1. Mevcut [Azure uygulama kaydınızı](#create-a-new-app-registration-in-the-azure-portal) kullanarak `AccessToken` belirtecini almak için [Microsoft Kimlik Doğrulaması Kitaplığını (MSAL)](/azure/active-directory/develop/msal-overview) kullanın.
 
-1. Başarılı bir şekilde kimliği doğruladıktan ve belirteci aldıktan sonra, yeni bir istemci oluşturun veya mevcut bir `HttpClient` kullanın: Ek **DefaultRequestHeaders "Yetkilendirme"** yi **Taşıyıcı "erişim belirteci"** ve **Ocp-Apim-Subscription-Key**'i [Customer Insights ortamınızdan alınan **abonelik anahtarı**](#get-started-trying-the-customer-insights-apis) olarak ayarlayın.   
+1. Başarılı bir şekilde kimliği doğruladıktan ve belirteci aldıktan sonra, yeni bir istemci oluşturun veya mevcut bir `HttpClient` kullanın: **DefaultRequestHeaders "Yetkilendirme"** yi **Taşıyıcı "erişim belirteci"** ve **Ocp-Apim-Subscription-Key**'i [Customer Insights ortamınızdan alınan **abonelik anahtarı**](#get-started-trying-the-customer-insights-apis) olarak ayarlayın.   
  
    Uygun olduğunda **Yetkilendirme** üst bilgisini sıfırlayın. Örneğin, belirtecin süresi dolduğunda.
 
@@ -147,7 +151,7 @@ NuGet.org adresindeki C# istemci kitaplıklarını nasıl kullanmaya başlayaca�
 
 1. Müşteri ile (örneğin, `GetAllInstancesAsync` gibi) "uzantı yöntemleri" için görüşmeler yapın. Temel `Microsoft.Rest.HttpOperationResponse` öğesine erişim tercih ediliyorsa (örneğin, `GetAllInstancesWithHttpMessagesAsync` gibi) "http ileti yöntemlerini" kullanın.
 
-1. Bu yöntem birden çok türü (örneğin, `IList<InstanceInfo>` ve`ApiErrorResult`) döndürebileceğinden yanıt, `object` türü olabilir. Dönüş türünü kontrol etmek için nesneleri işlem için [API ayrıntıları sayfasında](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) belirtilen yanıt türlerine güvenle dönüştürebilirsiniz.    
+1. Bu yöntem birden çok türü (örneğin, `IList<InstanceInfo>` ve`ApiErrorResult`) döndürebileceğinden yanıt, `object` türü olabilir. Dönüş türünü denetlemek için, [API ayrıntıları sayfasında](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) belirtilen yanıt türlerinde bu işlemin kullanıldığı nesneleri kullanırsınız.    
    
    İstek hakkında daha fazla bilgi gerekiyorsa ham yanıt nesnesine erişmek için **http ileti yöntemlerini** kullanın.
 

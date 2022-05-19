@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647745"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757410"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segment listesini ve diğer verileri Azure Blob depolama'ya ver (Önizleme)
 
@@ -44,7 +44,7 @@ Blob Depolama Customer Insights verilerinizi depolamak veya verilerinizi diğer 
 Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Azure Blob Depolama hesabı için geçici silme ayarını açtıysanız dışarı aktarmalar başarısız olur. Verileri bloblara dışarı aktarmak için geçici silmeyi kapatın. Daha fazla bilgi için bkz. [Blob geçici silmeyi etkinleştirme](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Azure Blob Depolama hesabı için geçici silme ayarını açtıysanız dışarı aktarmalar başarısız olur. Verileri bloblara dışarı aktarmak için geçici silmeyi kapatın. Daha fazla bilgi için bkz. [Blob geçici silmeyi etkinleştirme](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 

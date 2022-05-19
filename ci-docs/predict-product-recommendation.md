@@ -1,25 +1,25 @@
 ---
 title: Ürün önerisi tahmini
 description: Müşterinin satın alabileceği veya etkileşimde bulunabileceği ürünleri tahmin edin.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647952"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762756"
 ---
 # <a name="product-recommendation-prediction"></a>Ürün önerisi tahmini
 
 Ürün öneri modeli, tahmini ürün önerileri kümesi oluşturur. Öneriler, önceki satın alma davranışını ve benzer satın alma düzenleri olan müşterileri temel alır. Yeni ürün önerisi tahminlerini **Yönetim Bilgileri** > **Tahminler** sayfasında oluşturabilirsiniz. Oluşturduğunuz diğer tahminleri görmek için **Tahminlerim**'i seçin.
 
-Ürün önerileri yerel yasalara ve düzenlemelerine ve müşteri beklentilerine tabi olabilir, bu da modelin özellikle dikkate almak için kurulmamıştır.  Bu öngörü yeteneğinin bir kullanıcısı olarak, uygun yasalar veya yönetmelerle uyumlu olduğunuzdan emin olmak ve önerebilecekleriniz için **müşteri beklentileri için önerileri gözden geçirmeniz gerekir**. 
+Ürün önerileri yerel yasalara ve düzenlemelerine ve müşteri beklentilerine tabi olabilir, bu da modelin özellikle dikkate almak için kurulmamıştır.  Bu öngörü yeteneğinin bir kullanıcısı olarak, uygun yasalar veya yönetmelerle uyumlu olduğunuzdan emin olmak ve önerebilecekleriniz için **müşteri beklentileri için önerileri gözden geçirmeniz gerekir**.
 
 Ayrıca bu modelin çıktısı, ürün kimliğine göre de önerilerde bulunur. Teslimat mekanizmanız, öngörülen ürün kimliklerini, müşterilerinizin yerelleştirmesini, görüntü içeriğini ve diğer işletmeye özgü içeriğini ve davranışını hesaba ulaştırması için uygun içerikle eşlemeniz gerekir.
 
@@ -33,29 +33,31 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 
 - İşinize yönelik farklı ürün türlerini ve müşterilerinizin bunlarla nasıl etkileşim kurduğunu anlamak için iş bilgileri. Müşterileriniz tarafından önceden satın alınan ürünleri önermeyi ve yeni ürünlere yönelik önerileri destekliyoruz.
 
+- Ortamınız her **bir tüketici** birincil hedef kitle için yapılandırılmalıdır.
+
 - İşlemler, satın almalar ve bunların geçmişleriyle ilgili veriler:
-    - Satın almaları veya işlemleri ayırt etmek için işlem tanımlayıcıları.
-    - İşlemleri müşterilerinizle eşlemek için müşteri tanımlayıcıları.
-    - İşlemin gerçekleştiği tarihleri belirten işlem etkinlik tarihleri.
-    - Hareketle ilgili ürün kimliği bilgileri.
-    - Seçmeli Ürün filtresini kullanmak için bir ürün kataloğu veri varlığı.
-    - (İsteğe bağlı) Bir işlemin iade olup olmadığı.
-    - Anlamsal veri şeması aşağıdaki bilgileri gerektirir:
-        - **İşlem Kimliği:** Bir satın almanın veya bir işlemin benzersiz tanıtıcısı.
-        - **İşlem Tarihi:** Satın alma veya işlemin tarihi.
-        - **İşlemin değeri:** Satın alma veya işlemin sayısal değeri.
-        - **Benzersiz ürün kimliği:** Verileriniz satır öğesi düzeyindeyse satın alınan ürün veya hizmetin kimliği.
-        - (İsteğe bağlı) **Satınalma veya iade:** *doğru* değerinin, bir hareketin iade olduğunu belirlediği bir Boole alanı. Satın alma veya iade verileri sağlanmadıysa, model ve **işlemin değeri** negatifse, bu bilgiler de bir geri dönüş olduğunu gösterecektir.
+  - Satın almaları veya işlemleri ayırt etmek için işlem tanımlayıcıları.
+  - İşlemleri müşterilerinizle eşlemek için müşteri tanımlayıcıları.
+  - İşlemin gerçekleştiği tarihleri belirten işlem etkinlik tarihleri.
+  - Hareketle ilgili ürün kimliği bilgileri.
+  - Seçmeli Ürün filtresini kullanmak için bir ürün kataloğu veri varlığı.
+  - (İsteğe bağlı) Bir işlemin iade olup olmadığı.
+  - Anlamsal veri şeması aşağıdaki bilgileri gerektirir:
+    - **İşlem Kimliği:** Bir satın almanın veya bir işlemin benzersiz tanıtıcısı.
+    - **İşlem Tarihi:** Satın alma veya işlemin tarihi.
+    - **İşlemin değeri:** Satın alma veya işlemin sayısal değeri.
+    - **Benzersiz ürün kimliği:** Verileriniz satır öğesi düzeyindeyse satın alınan ürün veya hizmetin kimliği.
+    - (İsteğe bağlı) **Satınalma veya iade:** *doğru* değerinin, bir hareketin iade olduğunu belirlediği bir Boole alanı. Satın alma veya iade verileri sağlanmadıysa, model ve **işlemin değeri** negatifse, bu bilgiler de bir geri dönüş olduğunu gösterecektir.
 - Önerilen veri özellikleri:
-    - Yeterli geçmiş veri: işlemsel verilerin en az bir yılı, birkaç mevsimsellik eklemek için iki-üç yıldır.
-    - Her müşteri için birden çok satın alma: İdeal olarak her müşteri için en az üç veya daha fazla işlem.
-    - Müşteri sayısı: en az 100 müşteri (tercihen 10.000 müşteri). Model 100 adetten az müşteriyi kullanarak başarısız olacak.
+  - Yeterli geçmiş veri: işlemsel verilerin en az bir yılı, birkaç mevsimsellik eklemek için iki-üç yıldır.
+  - Her müşteri için birden çok satın alma: İdeal olarak her müşteri için en az üç veya daha fazla işlem.
+  - Müşteri sayısı: en az 100 müşteri (tercihen 10.000 müşteri). Model 100 adetten az müşteriyi kullanarak başarısız olacak.
 
 > [!NOTE]
+>
 > - Model, müşterilerinizin hareket geçmişini gerektiriyor. Bir hareketin tanımı oldukça esnektir. Kullanıcı-ürün etkileşimini açıklayan tüm veriler, giriş olarak çalışabilirler. Örneğin, ürün satın alma, bir sınıfı alma veya bir olaya katılan.
 > - Şu anda yalnızca bir işlem geçmişi varlığı yapılandırılabilir. Birden çok satın alma varlığı varsa bunları veri alımından önce Power Query'de birleştirin.
 > - Sipariş ve sipariş ayrıntıları farklı varlıklarsa modelde kullanmadan önce bunlara katılın. Model yalnızca bir varlıktaki sipariş kimliği veya makbuz kimliğiyle çalışmaz.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Ürün önerisi tahmini oluşturma
 
@@ -76,7 +78,7 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 ### <a name="define-product-recommendation-configuration"></a>Ürün önerisi yapılandırmasını tanımlama
 
 1. Müşteriye önermek istediğiniz **Ürün sayısını** ayarlayın. Bu değer, teslim yönteminizin verileri nasıl doldurduğuna bağlıdır. Üç ürün önerebiliyorsanız değeri buna göre ayarlayın.
-   
+
    >[!TIP]
    > Tahmini taslak olarak kaydetmek için istediğiniz zaman **Taslağı kaydet**'i seçebilirsiniz. **Tahminlerim** sekmesinde taslak tahminini bulabilirsiniz.
 
@@ -98,14 +100,13 @@ Bu özelliği denemekle ilgileniyorsanız ancak aşağıdaki gereksinimleri tama
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Sayfa ayarı etkinlik türü.":::
 
-1. Etkinliği karşılık gelen anlamsal türle eşleştirdikten sonra, devam etmek için **İleri**'yi seçin 
- 
+1. Etkinliği karşılık gelen anlamsal türle eşleştirdikten sonra, devam etmek için **İleri**'yi seçin.
+
 1. Anlamsal öznitelikleri, modeli çalıştırmak için gereken alanlarla eşleyin.
 
 1. **Kaydet**'i seçin.
 
 1. **İleri**'yi seçin.
-
 
 ### <a name="configure-product-filters"></a>Ürün filtreleri yapılandırın
 
@@ -113,11 +114,11 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
 
 1. **Ürün bilgilerini ekle** adımında, ürün kataloğunuzu her ürün için bilgileriyle birlikte ekleyin. Gereken bilgileri eşleyin ve **İleri**'yi seçin.
 
-3. **Ürün filtreleri** adımında, aşağıdaki seçenekler arasından seçim yapın.
+1. **Ürün filtreleri** adımında, aşağıdaki seçenekler arasından seçim yapın.
 
-   * **Filtre yok**: Tüm ürünleri ürün önerisi tahmin kullanın.
+   - **Filtre yok**: Tüm ürünleri ürün önerisi tahmin kullanın.
 
-   * **Belirli ürün filtrelerini tanımlayın**: ürün öneri tahmin belirli ürünleri kullanın.
+   - **Belirli ürün filtrelerini tanımlayın**: ürün öneri tahmin belirli ürünleri kullanın.
 
 1. **İleri**'yi seçin.
 
@@ -126,7 +127,7 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Ürün filtreleri için seçmek üzere ürün kataloğu varlığındaki öznitelikli bölümü gösteren yan bölme.":::
 
 1. Ürün filtresinin kullanmak isteyip istemediğinizi, ürün kataloğundaki öznitelik seçiminizi mantıksal olarak birleştirmek için **ve** veya **veya** bağlayıcılarına istediğinizi seçin.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Ürün filtrelerinin örnek yapılandırması mantıksal ve bağlayıcılarla birleştirilir.":::
 
 1. **İleri**'yi seçin.
@@ -150,7 +151,7 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
 1. İncelemek istediğiniz tahmini seçin.
    - **Tahmin adı:** Oluştururken girilen tahmin adı.
    - **Tahmin türü:** Tahmin için kullanılan modelin türü
-   - **Çıkış varlığı:** Tahminin çıktısının depolanacağı varlığın adı. Bu ada sahip bir varlığı **Veri** > **Varlıklar** bölümünden bulabilirsiniz.    
+   - **Çıkış varlığı:** Tahminin çıktısının depolanacağı varlığın adı. Bu ada sahip bir varlığı **Veri** > **Varlıklar** bölümünden bulabilirsiniz.
       Çıkış varlığındaki *puan*, önerinin bir nicelik ölçüsüdür. Model, daha düşük puanı olan ürünler üzerinde daha yüksek puan içeren ürünler önerir.
    - **Tahmin edilen alan:** Bu alan yalnızca bazı tahmin türleri için doldurulur ve ürün önerisi tahmin için kullanılmaz.
    - **Durum:** Tahminin geçerli çalıştırma durumu.
@@ -171,28 +172,27 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
             - **A** "K'daki başarı" ölçümü temelden en az %10 büyükse modelin **A** kalitesinde olduğu kabul edilir. 
             - **B** "K'daki başarı" ölçümü temelden %0 ile %10 arasında büyükse modelin **B** kalitesinde olduğu kabul edilir.
             - **C** "K'daki başarı" ölçümü temelden azsa modelin **C** kalitesinde olduğu kabul edilir.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Model performansı sonucunun görünümü.](media/product-recommendation-modelperformance.PNG "Model performansı sonucunun görünümü")
             - **Temel**: Model, tüm müşteriler arasında satın alma sayısına göre en çok önerilen ürünleri alır ve model tarafından tanımlanan öğrenilmiş kuralları kullanarak müşteriler için bir öneri kümesi oluşturur. Ardından tahminler ürünü satın alan müşteri sayısına göre hesaplanarak en çok satın alınan ürünlerle karşılaştırılır. Müşterinin önerilen ürünlerinde en çok satın alınan ürünlerde de görülen en az bir ürünü varsa bunlar temelin bir parçası olarak kabul edilir. Toplam 100 müşteri arasında 10'u önerilen bir ürünü satın alırsa temeli %10 olur.
             - **K'daki başarı**: Öneriler, işlemlerin doğrulama dönemi kümesi kullanılarak tüm müşteriler için oluşturulur ve işlemlerin doğrulama kümesiyle karşılaştırılır. Örneğin, 12 aylık bir dönemde 12. ay veri doğrulama kümesi olarak ayrılabilir. Model, önceki 11 aydan öğrendiklerini temel alarak 12. ayda satın alabileceğiniz en az bir ürünü tahmin ederse müşterinin "K'daki başarı" ölçümü artmış olur.
-    
+
     1. **En önerilmiş ürünler (çıkarıldı olarak):** Müşterileriniz için öngörülen en önde gelen beş ürün.
        > [!div class="mx-imgBorder"]
        > ![En çok önerilen ilk 5 ürünü gösteren grafik.](media/product-recommendation-topproducts.PNG "En çok önerilen 5 ürünü gösteren grafik")
-    
+
     1. **Temel öneri etmenleri:** Model, ürün önerileri yapmak için müşterilerin hareket geçmişini kullanır. Geçmişteki satın almalara dayalı olarak desenler öğrenir ve müşteriler ve ürünler arasında benzerlikler bulur. Bu benzerlikler daha sonra ürün önerileri oluşturmak için kullanılır.
-    Aşağıda, modelin oluşturduğu bir ürün önerisini etkileyebilecek etmenler yer verilmiştir. 
-        - **Geçmiş hareketler**: Geçmişte satın alma düzenleri ürün önerileri oluşturmak için model tarafından kullanıldı. Örneğin, bir kimse _Surface Book 3_ ve _Surface kalem_ satın aldıysa, model _Surface Arc faresi_ önerebilir. Bu modelde, çok sayıda müşteri _Surface Book 3_ ve _Surface Pen_ satın aldıktan sonra bir _Surface Arc faresi_ satın aldıysa ortaya çıkmıştı.
-        - **Müşteri benzerlik** : önerilen bir ürün, tarihsel olarak benzer satınalma modelleri gösteren diğer müşteriler tarafından satın alındı. Örneğin, John, Jennifer ve atacan yakın zamanda _Surface kulaklıklar 2_ çünkü satın alınan _Surface Headphones 2_'dir. Bu, Kemal'in benzer satın alma desenleri olduğundan Özlem ve Atacan'a benzedikleri için modeldir.
-        - **Ürün benzerlik**: Önerilen bir ürün, müşterinin daha önce satın aldığı diğer ürünlere benzer. Model iki ürünü bir birlikte satın aldıkları veya benzer müşteriler tarafından benzer olacak şekilde nitelendirir. Örneğin birisi önceden _USB-C - USB adaptörü_ satın aldığından ve model, _USB Depolama sürücüsünün_, geçmiş satın alma desenlerine bağlı olarak _USB-C - USB adaptörü_ ile benzer olduğunu düşünüoyorsa _USB Depolama Sürücüsü_ önerisi alır.
+    Aşağıda, modelin oluşturduğu bir ürün önerisini etkileyebilecek etmenler yer verilmiştir.
+        - **Geçmiş hareketler**: Geçmişte satın alma düzenleri ürün önerileri oluşturmak için model tarafından kullanıldı. Örneğin, bir kimse *Surface Book 3* ve *Surface kalem* satın aldıysa, model *Surface Arc faresi* önerebilir. Bu modelde, çok sayıda müşteri *Surface Book 3* ve *Surface Pen* satın aldıktan sonra bir *Surface Arc faresi* satın aldıysa ortaya çıkmıştı.
+        - **Müşteri benzerlik** : önerilen bir ürün, tarihsel olarak benzer satınalma modelleri gösteren diğer müşteriler tarafından satın alındı. Örneğin, John, Jennifer ve atacan yakın zamanda *Surface kulaklıklar 2* çünkü satın alınan *Surface Headphones 2*'dir. Bu, Kemal'in benzer satın alma desenleri olduğundan Özlem ve Atacan'a benzedikleri için modeldir.
+        - **Ürün benzerlik**: Önerilen bir ürün, müşterinin daha önce satın aldığı diğer ürünlere benzer. Model iki ürünü bir birlikte satın aldıkları veya benzer müşteriler tarafından benzer olacak şekilde nitelendirir. Örneğin birisi önceden *USB-C - USB adaptörü* satın aldığından ve model, *USB Depolama sürücüsünün*, geçmiş satın alma desenlerine bağlı olarak *USB-C - USB adaptörü* ile benzer olduğunu düşünüoyorsa *USB Depolama Sürücüsü* önerisi alır.
 
         Her ürün önerisi, bu etkenlerin bir veya daha fazlası tarafından etkilenir. Bir rol oynanan her etkileyen faktörünün bir grafikte görselleştirilmiş olduğu önerilerin yüzdesi. Aşağıdaki örnekte, önerilerin %100'ü geçmiş hareketlerle, %60 müşteri benzerliği ve %22 ürün benzerliğini takip ederek etkileyendir. Etkileyen etkenlerin tam olarak katkı yüzdesini görmek için Grafikteki çubukların üzerinde gezdirin.
 
         > [!div class="mx-imgBorder"]
         > ![Temel öneri etkenleri.](media/product-recommendation-keyrecommendationfactors.png "Ürün önerileri üretmek için modelin öğrendikleri önemli öneri etmenleri")
-       
-     
+
    1. **Veri istatistikleri**: Modelin kabul edildiği hareket, müşteri ve ürün sayısının genel görünümünü verir. Bu, desenleri öğrenmek ve ürün önerileri üretmek için kullanılan giriş verilerini temel alır.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ Bazen, oluşturduğunuz tahmin türü için yalnızca belirli ürünleri yararl�
 ## <a name="manage-predictions"></a>Tahminleri yönetme
 
 Tahminleri optimize etmek, sorunları gidermek, yenilemek veya silmek mümkündür. Bir tahmini daha hızlı ve daha güvenilir hale getirmeyi öğrenmek için giriş verileri kullanılabilirlik raporunu gözden geçirin. Daha fazla bilgi için bkz. [Tahminleri yönetme](manage-predictions.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

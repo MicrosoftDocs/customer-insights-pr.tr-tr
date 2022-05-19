@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647562"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712926"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Customer Insights'ta ortam oluşturma
 
@@ -63,8 +63,7 @@ Aşağıdaki ayrıntıları sağlayın:
 Azure Data Lake Storage uygulamasına veri kaydederek , verilerin bu Azure depolama hesabı için uygun coğrafi konumda aktarılacağını ve depolandığını kabul etmiş olursunuz. Bu konum, verilerin Dynamics 365 Customer Insights'ta saklandığı yerden farklı olabilir. Daha fazla bilgi: [Microsoft Güven Merkezi](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights şu anda aşağıdakileri destekler:
-> - Microsoft Dataverse tarafından yönetilen bir Data Lake içinde depolanan Power BI veri akışlarından alınan varlıklar.  
+> Customer Insights şu anda aşağıdakileri destekler:  
 > - Azure Data Lake Storage ortamı oluştururken seçtiğiniz aynı Azure bölgesinden gelen firmalar.
 > - *Hiyerarşik ad alanı* etkinleştirilmiş, 2. Nesil Azure Data Lake Storage hesapları. Azure Data Lake 1. Nesil depolama hesapları desteklenmez.
 
@@ -80,7 +79,7 @@ Customer Insights'ın birden çok ortamını oluşturur ve bu ortamlardaki çık
 
 Dynamics 365 Marketing veya Power Apps'teki model temelli uygulamalar gibi Dataverse'i temel alan iş uygulamalarıyla veri (profiller ve içgörüler) paylaşmak için kendi Microsoft Dataverse ortamınızı sağlayın. Kendi Dataverse ortamınız yoksa bu alanı boş bıraktığınızda sizin için bir ortam hazırlarız.
 
-Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve ağ geçitlerini kullanarak şirket içi veri kaynaklarından veri almanıza](data-sources.md#add-data-from-on-premises-data-sources) olanak tanır. Ayrıca bir Dataverse ortamına bağlanarak [kullanıma hazır tahmin modellerini](predictions-overview.md?tabs=b2c#out-of-box-models) de kullanabilirsiniz.
+Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve ağ geçitlerini kullanarak şirket içi veri kaynaklarından veri almanıza](data-sources.md#add-data-from-on-premises-data-sources) olanak tanır.
 
 > [!IMPORTANT]
 > 1. Veri paylaşımını etkinleştirmek için Customer Insights ve Dataverse uygulamasının aynı bölgede olması gerekir.

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647835"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740743"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Kısmi verilerinizi tahminlerle tamamla (kullanım dışı)
 
@@ -37,7 +37,7 @@ Kuruluşunuzun tahminler özelliğini kullanabilmesi için aşağıdaki ön koş
 
 1. Kuruluşunuzun [Microsoft Dataverse uygulamasında ayarlanmış](/ai-builder/build-model#prerequisites) bir kurulumu vardur ve bu, Customer Insights ile aynı kuruluştadır.
 
-2. Hedef kitle içgörü ortamınız Dataverse kurulumunuza eklenir.
+2. Customer Insights ortamınız Dataverse kurulumunuza eklenir.
 
 Daha fazla bilgi için [Yeni ortam oluşturma](create-environment.md) konusuna bakın.
 

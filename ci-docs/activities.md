@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647662"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755522"
 ---
 # <a name="customer-activities"></a>Müşteri etkinlikleri
 
-Aktiviteleri kronolojik olarak listeleyen bir zaman çizelgesi oluşturmak için Dynamics 365 Customer Insights uygulamasında [çeşitli veri kaynaklarından](data-sources.md) müşteri etkinliklerini birleştirin. [Müşteri kartı eklentisi](customer-card-add-in.md) çözümü ile Dynamics 365 uygulamalarına zaman çizelgesini veya bir Power BI panoyu dahil edin.
+Dynamics 365 Customer Insights uygulamasındaki [çeşitli veri kaynaklarından](data-sources.md) müşteri aktivitelerini birleştirin. Kronolojik olarak etkinlikleri listeleyen bir zaman çizelgesi oluşturun. [Müşteri kartı eklentisi](customer-card-add-in.md) çözümü ile Dynamics 365 uygulamalarına zaman çizelgesini dahil edin.
 
 ## <a name="define-an-activity"></a>Aktivite tanımlama
 
@@ -78,7 +78,7 @@ Varlığın müşteri zaman çizelgesine dahil edilmesi için **Tarih** türünd
 
 1. Sonraki adıma geçmek için **ileri** öğesini seçin. Etkinlik türü **Diğer** olarak ayarlanmış olarak aktiviteyi şimdi kaydetmek için **Bitir ve gözden geçir**'i seçebilirsiniz. 
 
-1. **Aktivite türü** adımında, aktivite türünü seçin ve isteğe bağlı olarak Customer Insights'ın diğer alanlarında kullanmak üzere bazı aktivite türlerini anlam olarak eşlemek istiyorsanız öğesini seçin. Şu anda, *Geri Bildirim*, *Bağlılık*, *SalesOrder*, *SalesOrderLine* ve *Abonelik* etkinlik türleri alanları eşlemek için anlaşma sonrasında anlamsal olarak eşleştirilir. Aktivite türü yeni aktivite için uygun değilse, *Diğer* veya  özel bir aktivite türü için *Yeni oluştur*'u seçebilirsiniz.
+1. **Aktivite türü** adımında, aktivite türünü seçin ve isteğe bağlı olarak Customer Insights'ın diğer alanlarında kullanmak üzere bazı aktivite türlerini anlam olarak eşlemek istiyorsanız öğesini seçin. Şu anda, alanlara eşleştirmeyi kabul ettikten sonra *Geri Bildirim*, *Bağlılık*, *SalesOrder*, *SalesOrderLine* ve *Abonelik* faaliyet türleri anlamsalları destekler. Aktivite türü yeni aktivite için uygun değilse, *Diğer* veya  özel bir aktivite türü için *Yeni oluştur*'u seçebilirsiniz.
 
 1. Sonraki adıma geçmek için **ileri** öğesini seçin. 
 

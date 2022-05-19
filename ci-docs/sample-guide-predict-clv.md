@@ -1,19 +1,19 @@
 ---
 title: Müşteri yaşam süresi değeri tahmin örnek kılavuzu
 description: Müşteri yaşam süresi değeri tahmin modelini denemek için bu örnek kılavuzu kullanın.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647832"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740835"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Müşteri yaşam süresi değeri (CLV) tahmin örnek kılavuzu
 
@@ -102,64 +102,7 @@ Contoso, yüksek kaliteli kahve ve kafeterya makinesi üreten bir şirkettir. Ü
 
 ## <a name="task-2---data-unification"></a>Görev 2: Veri birleştirme
 
-Verileri aldıktan sonra, artık birleştirilmiş müşteri profili oluşturmak için veri birleştirme işlemine başlıyoruz. Daha fazla bilgi için bkz. [Veri birleştirme](data-unification.md).
-
-### <a name="map"></a>Eşleme
-
-1. Verileri aldıktan sonra, eCommerce ve Bağlılık verilerindeki ilgili kişileri ortak veri türleriyle eşleyin. **Veri** > **Birleştir** > **Eşle**'ye gidin.
-
-1. Müşteri profilini temsil eden **eCommerceContacts** ve **loyCustomers** varlıklarını seçin. Ardından **Uygula**'yı seçin.
-
-   ![ecommerce ve bağlılık veri kaynaklarını birleştirin.](media/unify-ecommerce-loyalty.png)
-
-1. **eCommerceContacts** için birincil anahtar olarak **ContactId** öğesini ve **loyCustomers** için birincil anahtar olarak **LoyaltyID** öğesini seçin.
-
-   ![LoyaltyId öğesini birincil anahtar olarak birleştirin.](media/unify-loyaltyid.png)
-
-1. **Kaydet**'i seçin.
-
-### <a name="match"></a>Eşleştir
-
-1. **Eşleştir** sekmesine gidin ve **Sırayı Ayarla**'yı seçin.
-
-1. **Birincil** açılan listede **eCommerceContacts : eCommerce**'ü birincil kaynak olarak seçin ve tüm kayıtları ekleyin.
-
-1. **Varlık 2** açılır listesinde **loyCustomers:LoyaltyScheme**'iyi seçin ve tüm kayıtları ekleyin.
-
-   ![Eşleştirilen eCommerce ve Bağlılık öğelerini birleştirin.](media/unify-match-order.png)
-
-1. **Kural ekle**'yi seçin
-
-1. FullName kullanarak ilk koşulunuzu ekleyin.
-
-   - eCommerceContacts için açılır alanında **Tam Ad**'ı seçin.
-   - loyCustomers için açılır alanında **Tam Ad**'ı seçin.
-   - **Normalleştir** açılan menüsüni seçin ve **Tür (Telefon, Ad, Adres, ...)** öğesini seçin.
-   - **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
-
-1. Yeni kural için **FullName, Email** adını girin.
-
-   - **Koşul Ekle**'yi seçerek e-posta adresi için ikinci bir koşul ekleyin.
-   - Varlık eCommerceContacts için açılır menüde **E-posta**'yı seçin.
-   - Varlık loyCustomers için açılır menüde **E-posta**'yı seçin.
-   - Normalleştir alanını boş bırakın.
-   - **Duyarlık Düzeyi**: **Temel** ve **Değer**: **Yüksek** olarak ayarlayın.
-
-   ![Ad ve e-posta için eşleştirilen kuralı birleştirin.](media/unify-match-rule.png)
-
-1. **Bitti**'yi seçin.
-
-1. **Kaydet** ve **Çalıştır**'ı seçin.
-
-### <a name="merge"></a>Adres Mektup Birleştirme
-
-1. **Birleştir** sekmesine gidin.
-
-1. **loyCustomers** için **ContactId** varlığında, görünen adı alınan diğer kimliklerden ayırt etmek için **ContactIdLOYALTY** olarak değiştirin.
-
-   ![contactid öğesini bağlılık kimliği olarak yeniden adlandırın.](media/unify-merge-contactid.png)
-
-1. **Kaydet**'i ve **Birleştirme ve aşağı akış işlemlerini çalıştır**'ı seçin.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Görev 3 - Müşteri yaşam süresi değeri tahmini yapılandırma
 

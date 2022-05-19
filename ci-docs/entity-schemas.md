@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647712"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757456"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Common Data Model'de varlık şemaları
 
@@ -23,7 +23,7 @@ ms.locfileid: "8647712"
 
 Bu, uygulamaların ve veri tümleştiricilerinin birleşik bir veri tanımı sağlayarak daha kolay iş birliği yapmasına olanak tanıyan bir paylaşılan veri modelidir. Common Data Model; standart varlıklar, ilişkiler, hiyerarşiler, nitelikler ve daha fazlası bulunan zengin bir meta veri sistemi içerir. Dynamics 365 uygulamalarından kaynaklık ve 260 standart varlıklarla GitHub'da açık kaynaklarım arasında yer alır. Dahili ve harici iş ortaklarından oluşan geniş bir sistem, Common Data Model için endüstriye özel kavramlara katkıda bulunur.
 
-Çok sayıda sistem ve platform, Power BI veri akışları ve Azure Data Services dahil olmak üzere Common Data Model'i bugün uygular. Microsoft Dataverse, Dynamics 365, Power Apps, Power BI ve bir sonraki Azure veri hizmetlerinde zaten destekleniyor ve [Open Data Initiative](https://www.microsoft.com/open-data-initiative)'e doğrudan değer kazandırıyor.
+Çok sayıda sistem ve platform, Power BI veri akışları ve Azure Data Services dahil olmak üzere Common Data Model'i bugün uygular. Microsoft Dataverse, Dynamics 365, Power Apps, Power BI ve bir sonraki Azure veri hizmetlerinde zaten destekleniyor ve [Open Data Initiative](https://dynamics.microsoft.com/en-us/open-data-initiative/)'e doğrudan değer kazandırıyor.
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insights varlık şemaları
 

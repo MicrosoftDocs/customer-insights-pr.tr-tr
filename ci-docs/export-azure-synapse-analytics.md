@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647595"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741527"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Verileri Azure Synapse Analytics'e dışarı aktarma (Önizleme)
 
@@ -34,7 +34,7 @@ Azure'da:
 
 - Etkin bir Azure aboneliği.
 
-- Yeni bir Azure Data Lake Storage 2. Nesil hesabı kullanıyorsanız *Customer Insights servis sorumlusu* için **Depolama Blobu Veri Katılımcısı** izinleri gerekir. [Hedef kitle içgörüler için Azure hizmet sorumlusu ile bir Azure Data Lake Storage 2. Nesil hesabına bağlanma](connect-service-principal.md) hakkında daha fazla bilgi edinin. Data Lake Storage 2. Nesil [hiyerarşik ad alanı](/azure/storage/blobs/data-lake-storage-namespace) etkinleştirilmiş **olmalıdır**.
+- Yeni bir Azure Data Lake Storage 2. Nesil hesabı kullanıyorsanız *Customer Insights servis sorumlusu* için **Depolama Blobu Veri Katılımcısı** izinleri gerekir. [Customer Insights için Azure hizmet sorumlusu ile bir Azure Data Lake Storage 2. Nesil hesabına bağlanma](connect-service-principal.md) hakkında daha fazla bilgi edinin. Data Lake Storage 2. Nesil [hiyerarşik ad alanı](/azure/storage/blobs/data-lake-storage-namespace) etkinleştirilmiş **olmalıdır**.
 
 - Azure Synapse workspace bulunan kaynak grubunda *hizmet sorumlusuna* ve *Customer Insights'ta yönetici izinleri olan Azure AD kullanıcısına* en az **Okuyucu** izinleri atanmalıdır. Daha fazla bilgi için bkz. [Azure portal kullanarak Azure rolleri atama](/azure/role-based-access-control/role-assignments-portal).
 
