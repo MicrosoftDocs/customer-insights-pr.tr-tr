@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647915"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800350"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Sıfırdan ölçümler oluşturmak için ölçüm oluşturucuyu kullanma
 
@@ -88,7 +88,7 @@ Tek tek müşteri düzeyinde (müşteri özniteliği, müşteri ölçümü) veya
 
 1. Ölçüm için daha fazla hesaplama eklemek üzere **Yeni hesaplama**'yı seçin. Yeni hesaplamalar için yalnızca aynı varlık yolundaki varlıkları kullanabilirsiniz. Daha fazla hesaplama, ölçüm çıkış varlığında yeni sütunlar olarak gösterilir.
 
-1. Bir ölçümden bir hesaplamayı **Yenileme**, **Yeniden Adlandırma** veya **Kaldırma** işlemleri için hesaplamada **...** seçeneğini belirleyin.
+1. Bir ölçüdeki hesaplamayı **çoğaltmak**, **yeniden adlandırmak** veya **kaldırmak** için hesaplamada dikey üç noktayı (&vellip;) seçin.
 
 1. **Önizleme** alanında, filtreleri ve boyutları içeren ölçüm çıkış varlığının veri şemasını görürsünüz. Önizleme, yapılandırmadaki değişikliklere dinamik olarak tepki verir.
 
@@ -158,7 +158,7 @@ Tek tek firma düzeyinde (müşteri ölçümü) veya tüm firmalar düzeyinde (i
    1. **İlişki yolu**'nu seçin ve isteğinizi tanımlamak için kullanılması gereken varlık yolunu seçin. *Müşteri* varlığının yalnızca tek bir yolu varsa Bu denetim gösterilmez.
    1. Seçiminizi uygulamak için **Bitti**'yi seçin.
 
-1. Bir ölçümden bir hesaplamayı **Yenileme**, **Yeniden Adlandırma** veya **Kaldırma** işlemleri için hesaplamada **...** seçeneğini belirleyin.
+1. Bir ölçüdeki hesaplamayı **çoğaltmak**, **yeniden adlandırmak** veya **kaldırmak** için hesaplamada dikey üç noktayı (&vellip;) seçin.
 
 1. **Önizleme** alanında, filtreleri ve boyutları içeren ölçüm çıkış varlığının veri şemasını görürsünüz. Önizleme, yapılandırmadaki değişikliklere dinamik olarak tepki verir.
 

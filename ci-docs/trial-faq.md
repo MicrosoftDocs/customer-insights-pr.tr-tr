@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641832"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833792"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights deneme sürümüyle ilgili SSS
 
@@ -62,9 +62,9 @@ Doğrudan uygulamadaki deneme sürümünü genişletebilirsiniz. Deneme süreniz
 
 Genel olarak, Customer Insights'ın ücretli sürümüne yükseltirken kendi verilerinizle yeni bir başlangıç yapmanız önerilir. 
 
-İsteğe bağlı olarak, Customer Insights kullanıyorsanız, Customer Insights'ı satın alırsanız verilerinizi bir deneme ortamından kopyalayabilirsiniz. Ayarları deneme ortamından ücretli ortama geçirmek için Customer Insights deneme sürümünün yöneticisi ve Microsoft 365 kiracınızın genel yöneticisi veya Dynamics 365 yöneticisi olmanız gerekir. 
+İsteğe bağlı olarak, Customer Insights kullanıyorsanız, Customer Insights'ı satın alırsanız verilerinizi bir deneme ortamından kopyalayabilirsiniz. Ayarları deneme ortamından ücretli ortama geçirmek için Customer Insights deneme sürümünün yöneticisi ve Microsoft 365 kiracınızın genel yöneticisi veya Dynamics 365 yöneticisi olmanız gerekir.
 
-Ücretli Customer Insights kurulumunuzda ilk kez oturum açtıktan sonra yeni bir ortam oluşturmanız istenir. Bu işlemde, mevcut bir ortamdaki yapılandırmayı kopyalamayı ve ayarların çoğunu geçirmeyi seçebilirsiniz. Yukarıda bahsedilen izinlere sahipseniz deneme ortamı bu listede gösterilir. Daha fazla bilgi için bkz. [Ortam yapılandırmasını kopyalama](manage-environments.md#copy-the-environment-configuration).
+Ücretli Customer Insights kurulumunuzda ilk kez oturum açtıktan sonra yeni bir ortam oluşturmanız istenir. Bu işlemde, mevcut bir ortamdaki yapılandırmayı kopyalamayı ve ayarların çoğunu geçirmeyi seçebilirsiniz. Yukarıda bahsedilen izinlere sahipseniz deneme ortamı bu listede gösterilir. Daha fazla bilgi için bkz. [Ortam yapılandırmasını kopyalama](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Deneme sürümü sınırları ve kotaları nelerdir?
 
@@ -81,9 +81,10 @@ Deneme sürümüne kaydolduktan sonra uygulamanın ana ekranına ulaşırsınız
 
 Customer Insights özelliklerinin çoğu özelliği deneme sürümü içinde bulunmaktadır.
 
-Aşağıdaki özellikler **kullanılamaz**: 
+Aşağıdaki özellikler **kullanılamaz**:
+
 - Kendi Azure Data Lake Storage hesabınızı kullanan yeni ortamlar oluşturamazsınız.
-- Deneme ortamını silemezsiniz. 
+- Deneme ortamını silemezsiniz.
 
 ### <a name="how-long-does-the-trial-last"></a>Deneme sürümü ne kadar sürer?
 

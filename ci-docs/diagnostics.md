@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755286"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807605"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (Önizleme)
 
@@ -38,7 +38,7 @@ Customer Insights'ta tanılamayı yapılandırmak için aşağıdaki ön koşull
 
 - Etkin bir [Azure Aboneliğine](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) sahip olmanız gerekir.
 - Customer Insights'ta [Yönetici](permissions.md#admin) izinlerine sahip olmanız gerekir.
-- Azure'daki hedef kaynakta **Katkıda Bulunan** ve **Kullanıcı Erişim Yöneticisi** rolüne sahip olmanız gerekir. Kaynak; Azure Depolama hesabı, Azure Olay Hub'ı veya Azure Log Analytics çalışma alanı olabilir. Daha fazla bilgi için bkz. [Azure portalı kullanarak Azure rol atamalarını ekleme veya kaldırma](/azure/role-based-access-control/role-assignments-portal).
+- Azure'daki hedef kaynakta **Katkıda Bulunan** ve **Kullanıcı Erişim Yöneticisi** rolüne sahip olmanız gerekir. Kaynak; Azure Data Lake Storage hesabı, Azure Olay Hub'ı veya Azure Log Analytics çalışma alanı olabilir. Daha fazla bilgi için bkz. [Azure portalı kullanarak Azure rol atamalarını ekleme veya kaldırma](/azure/role-based-access-control/role-assignments-portal). Bu izin, Customer Insights'ta tanılama ayarlarını yapılandırırken gereklidir; bu da başarılı kurulumdan sonra değiştirilebilir.
 - Azure Depolama, Azure Olay Hub'ı veya Azure Log Analytics için [hedef gereksinimleri](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) karşılanmalıdır.
 - Kaynağın ait olduğu kaynak grubunda en azından **Okuyucu** rolüne sahip olmalısınız.
 

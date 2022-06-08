@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740743"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800674"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Kısmi verilerinizi tahminlerle tamamla (kullanım dışı)
 
@@ -95,7 +95,7 @@ Bu akışın bir parçası olarak Müşteri Memnuniyeti veya Satın Alma Tutarı
 
 2. İncelemek istediğiniz tahmini seçin.
 
-3. **Eylemler** sütununda üç noktayı ve **Görüntüle**'yi seçin.
+3. **Eylemler** sütununda dikey üç noktayı ( &vellip;) seçin ve **Görüntüle**'yi seçin.
 
 4. Tahmin görünümünüzde bir dizi veri noktası görürsünüz.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Tahmin oluşturduktan sonra modelinizin verimliliğini artırmak için AI Builde
 
 2. Düzenlemek istediğiniz tahmini seçin.
 
-3. **Eylemler** sütununda üç noktayı ve **Görüntüle**'yi seçin.
+3. **Eylemler** sütununda dikey üç noktayı ( &vellip;) seçin ve **Görüntüle**'yi seçin.
 
 4. **AI Builder'da Özelleştir**'i seçin.
 
@@ -139,7 +139,7 @@ Tahmini tekrar çalıştırdığınızda oluşturduğunuz güncelleştirilmiş m
 
 2. Silmek istediğiniz tahmini seçin.
 
-3. **Eylemler** sütununda üç noktayı ve **Sil**'i seçin.
+3. **Eylemler** sütununda dikey üç noktayı ( &vellip;) seçin ve **Sil**'i seçin.
 
 4. Silme işlemini onaylayın.
 
@@ -153,7 +153,7 @@ Bir hata nedeniyle Dataverse işlemini tamamlayamazsanız işlemi el ile tamamla
 - Uygulama izinleri verilmedi.
     1. [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) uygulamasına gidin.
     1. **Ortam** seçin.
-    1. İzni eklemek istediğiniz ortamın yanındaki üç noktayı ve **Ayarlar**'ı seçin.
+    1. İzin eklemek istediğiniz ortamın yanındaki dikey üç noktayı (&vellip;) seçin ve **Ayarlar** seçeneğini belirleyin.
     1. **Kullanıcılar + izinler**'i genişletin ve **Kullanıcılar**'ı seçin.
     1. **+ Yeni**'yi ve **Kullanıcı**'yı seçin.
     1. Önceden seçilmediyse **Uygulama Kullanıcısı**'nı seçin ve aşağıdaki bilgileri girin:

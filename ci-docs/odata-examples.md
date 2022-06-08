@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights API'leri için OData örnekleri
 description: Verileri incelemek üzere Customer Insights API'lerini sorgulamak için genel olarak kullanılan Açık Veri Protokolü (OData) örnekleri.
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740050"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808485"
 ---
 # <a name="odata-query-examples"></a>OData sorgu örnekleri
 
@@ -33,16 +33,15 @@ Sorgu örneklerini hedef ortamlarda çalışmak için değiştirmeniz gerekir:
 
 Aşağıdaki tabloda *Müşteri* varlığına yönelik bir örnek sorgu kümesi yer almaktadır.
 
-
 |Sorgu türü |Örnek  | Not  |
 |---------|---------|---------|
 |Tek müşteri kimliği     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Alternatif anahtar    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  Alternatif anahtarlar, birleşik müşteri varlığında korunur       |
+|Alternatif anahtar    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternatif anahtarlar, birleşik müşteri varlığında korunur       |
 |Yeni bir ölçüm başlatmak için   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |In    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
 |Alternatif Anahtar + Giriş   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Arama yap  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Bir arama dizesi için ilk 10 sonucu verir      |
-|Segment üyeliği  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | Segmentasyon varlıktan önceden belirlenmiş satır sayısı döndürür.      |
+|Segment üyeliği  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Segmentasyon varlıktan önceden belirlenmiş satır sayısı döndürür.      |
 
 ## <a name="unified-activity"></a>Birleşik etkinlik
 
@@ -53,7 +52,7 @@ Aşağıdaki tabloda *UnifiedActivity* varlığına yönelik bir örnek sorgu k�
 |CID etkinliği     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Belirli bir müşteri profilinin faaliyetlerini listeler |
 |Etkinlik zaman dilimi    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Zaman dilimi müşteri profili aktiviteleri       |
 |Etkinlik türü    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
-|Görünen ada göre faaliyet     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|Görünen ada göre faaliyet     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Etkinlik sıralama    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Artan veya azalan düzende etkinlikleri sıralama       |
 |Segment üyeliğinden genişletilen aktivite  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
@@ -67,3 +66,13 @@ Aşağıdaki tabloda diğer varlıklara yönelik bir örnek sorgu kümesi yer al
 |CID zenginleştirilmiş markaları    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
 |CID zenginleştirilmiş ilgi alanları    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
 |Yan Tümcede + Genişlet     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |
+
+## <a name="not-supported-odata-queries"></a>Desteklenmeyen OData sorguları
+
+Aşağıdaki sorgular Customer Insights tarafından desteklenmez:
+
+- Alınan kaynak varlıklardaki `$filter`. Yalnızca, Customer Insights'ın oluşturduğu sistem varlıklarında $filter sorguları çalıştırabilirsiniz.
+- `$search` sorgusundan `$expand`. Örnek: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- Yalnızca özniteliklerin bir alt kümesi seçilmişse `$select` sorgusundan `$expand`. Örnek: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
+- Belirli bir müşteriyle ilgili olarak `$expand` zenginleştirilmiş marka veya ilgi alanı benzeşimleri. Örnek: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- Tahmin modeli çıkış varlıklarını alternatif anahtar ile sorgulayın. Örnek: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

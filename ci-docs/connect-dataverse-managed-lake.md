@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647565"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800203"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse yönetilen veri gölündeki verilere bağlanma
 
@@ -62,7 +62,7 @@ Farklı bir Dataverse veri gölüne bağlanmak için [yeni bir veri kaynağı ol
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-2. Güncelleştirmek istediğiniz veri kaynağı yanındaki üç noktayı seçin.
+2. Güncelleştirmek istediğiniz veri kaynağının yanındaki dikey üç noktayı ( &vellip;) seçin.
 
 3. Listeden **Düzenle** seçeneği belirleyin.
 

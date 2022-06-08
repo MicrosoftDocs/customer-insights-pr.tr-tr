@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739232"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800490"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
@@ -76,7 +76,7 @@ Veri kaynağını isteğe bağlı olarak yenilemek için şu adımları izleyin:
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-2. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı seçin ve açılır listeden **Yenile**'yi seçin.
+2. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı (&vellip;) seçin ve açılır listeden **Yenile**'yi seçin.
 
 3. Veri kaynağı şimdi el ile yenileme için tetiklenir. Bir veri kaynağı yenileme, hem varlık şemasını hem de veri kaynağı belirtilen tüm varlıklar için verileri güncelleştirir.
 
@@ -86,7 +86,7 @@ Veri kaynağını isteğe bağlı olarak yenilemek için şu adımları izleyin:
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-2. Kaldırmak istediğiniz veri kaynağı yanındaki dikey üç noktayı seçin ve açılır menüden **Sil**'yi seçin.
+2. Kaldırmak istediğiniz veri kaynağı yanındaki dikey üç noktayı (&vellip;) seçin ve açılır menüden **Sil**'i seçin.
 
 3. Silme işlemini onaylayın.
 

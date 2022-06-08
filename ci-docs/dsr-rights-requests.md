@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641540"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808591"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri
 
@@ -41,7 +41,7 @@ Customer Insights yöneticisi, veri kaynağında silinen müşteri verilerini ka
 1. Dynamics 365 Customer Insights'a oturum açın.
 2. **Veri** > **Veri kaynakları** öğesine gidin
 3. Silinen müşteri verilerini içeren listedeki her veri kaynağı için:
-   1. (...) öğesini seçin ve ardından **Yenile** seçeneğini belirleyin.
+   1. Dikey üç noktayı (&vellip;) seçin ve ardından **Yenile**'yi seçin.
    2. **Durum** altında veri kaynağının durumunu denetleyin. Onay işareti, yenilemenin başarılı olduğu anlamına gelir. Uyarı üçgeni, bir sorun oluştuğu anlamına gelir. Uyarı üçgeni görüntülenirse D365CI@microsoft.com'a başvurun.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Customer Insights yöneticisi, veri kaynağında silinen müşteri verilerini ka
 Customer Insights yöneticisi, Customer Insights kullanıcı verilerini silmek için aşağıdaki adımları izleyebilir:
 
 1. Dynamics 365 Customer Insights'a oturum açın.
-2. **Yönetici** > **İzinler**'e gidin.
+2. **Yönetici** > **Güvenlik** > **İzinler**'e gidin.
 3. Silmek istediğiniz kullanıcının onay kutusunu işaretleyin.
 4. **Kaldır** seçeneğini belirleyin.
 

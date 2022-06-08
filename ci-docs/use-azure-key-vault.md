@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653501"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763603"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Kendi Azure Key Vault'unuzu getirin (önizleme)
 
@@ -89,9 +89,9 @@ Aşağıdaki [dışa aktarma](export-destinations.md) bağlantıları desteklenm
 
 | Tür        | İzinler          |
 | ----------- | -------------------- |
-| Tuş         | [Anahtarları Al](/rest/api/keyvault/get-keys), [Anahtar Al](/rest/api/keyvault/get-key)                                 |
-| Gizli dizi      | [Gizli Anahtarlar Al](/rest/api/keyvault/get-secrets), [Gizli Anahtar Al](/rest/api/keyvault/get-secret)                     |
-| Sertifika | [Sertifikalar Al](/rest/api/keyvault/get-certificates), [Sertifika Al](/rest/api/keyvault/get-certificate) |
+| Tuş         | [Anahtarları Al](/rest/api/keyvault/keys/get-keys/get-keys), [Anahtar Al](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Gizli dizi      | [Gizli Anahtarlar Al](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Gizli Anahtar Al](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Sertifika | [Sertifikalar Al](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Sertifika Al](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Yukarıdaki değerler, yürütme sırasında listelenmesi ve okunması gereken minimumdur.
 

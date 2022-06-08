@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700961"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833654"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'teki yenilikler
 
@@ -58,6 +58,7 @@ LiveRamp, kimlik çözümlemesi ve müşteri verilerinin konsolidasyonunu sağla
 Daha fazla bilgi için bkz. [Müşteri profillerini LiveRamp'ten gelen kimlik verileriyle zenginleştirme (Önizleme)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Etiketler ve filtrelerle segmentleri ve ölçümleri düzenleme
+
 Kuruluşunuzda çok sayıda segment veya ölçüm varsa doğru olanı bulmak bazen zor olabilir. Bu yeni özellik, etiketleri ve sütunları kullanarak listeleri düzenlemenize olanak tanır. Verileri hızlı ve kolayca bulmaya ve görünümleri özelleştirmeye yardımcı olur.
 
 Daha fazla bilgi için bkz. [Etiketler ve sütunlarla çalışma](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Daha fazla bilgi için bkz. [Etiketler ve sütunlarla çalışma](work-with-tags
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Kendi depolama hesabınızı kullanırken Dataverse ile veri paylaşımını etkinleştirme
 
 Ortamınız Customer Insights verilerini depolamak için Azure Data Lake Storage kullanıyorsa veri paylaşımının Microsoft Dataverse ile etkinleştirilmesi için bazı ek yapılandırmalar gerekir.
-Önceden Dataverse ile veri paylaşımını yalnızca verileriniz yönetilen veri gölümüzde depolandığında etkinleştirebiliyordunuz. 
+Önceden Dataverse ile veri paylaşımını yalnızca verileriniz yönetilen veri gölümüzde depolandığında etkinleştirebiliyordunuz.
 
-Daha fazla bilgi için bkz. [Kendi Azure Data Lake Storage'ınızdan Dataverse ile veri paylaşımını etkinleştirme (Önizleme)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Daha fazla bilgi için bkz. [Kendi Azure Data Lake Storage'ınızdan Dataverse ile veri paylaşımını etkinleştirme (Önizleme)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Yeni dışarı aktarma hedefleri: Iterable ve Braze
 
@@ -81,7 +82,6 @@ Bağlı hizmetlerdeki API'lerin değiştirilmesi bağlayıcıların güvenilir v
 
 - Google Ads: Google Ads dışarı aktarma bağlayıcısının yeni sürümü, kimlik doğrulama deneyimini basitleştirerek otomatik olarak yeni Google Ads hedef kitleleri oluşturmanıza olanak tanır. 
 - Marketo: Marketo dışarı aktarma bağlayıcısının yeni sürümü, Marketo Kimliği için destek sağlayarak veri tekrarını önlemenize, mevcut kayıtları güncelleştirmenize ve Marketo'da yeni kayıtlar oluşturmanıza olanak tanır. 
-
 
 ## <a name="february-2022-updates"></a>Şubat 2022 güncelleştirmeleri
 

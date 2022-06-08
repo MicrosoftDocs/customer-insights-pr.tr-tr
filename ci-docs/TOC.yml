@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Öğrenme kataloğu
   items:
-    - name: Kullanmaya başlayın
+    - name: Microsoft Müşteri Verileri Platformu Uzmanı Olarak Onaylanma
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Customer Insights kullanmaya başlayın
       href: /learn/modules/get-started-customer-data-platform/
     - name: Veri alma
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Ödemeli bir lisans ile başlayın
       href: paid-license.md
-    - name: Yeni ortam oluştur
-      href: create-environment.md
     - name: Customer Insights'ı keşfetme
       href: home.md
     - name: Etiketler ve sütunlarla çalışma
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Common Data Model'de varlık şemalarını inceleme
       href: entity-schemas.md
-    - name: Dataverse'deki Customer Insights verileri
-      href: customer-insights-dataverse.md
     - name: İlişkiler ve bağlantılı varlıklar oluşturma
       href: relationships.md
     - name: Anlamsal eşlemeleri tanımlama
       href: semantic-mappings.md
+- name: Ortamlar
+  items:
+    - name: Yeni ortam oluştur
+      href: create-environment.md
+    - name: Microsoft Dataverse'a bağlan
+      href: customer-insights-dataverse.md
+    - name: Kendi Azure Data Lake Storage modelinizi kullanma
+      href: own-data-lake-storage.md
+    - name: Ortam ayarlarını yönetme
+      href: manage-environments.md
+    - name: Hizmet Sorumlusunu kullanarak depolama hesabına bağlanma
+      href: connect-service-principal.md
 - name: Yönetim
   items:
     - name: Sistem yapılandırmasını ayarlama
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Kullanıcı izinleri atama
       href: permissions.md
-    - name: Bağlantılara genel bakış
-      href: connections.md
-    - name: Birden çok ortamı yönetme
-      href: manage-environments.md
     - name: Kendi Key Vault'unuzu getirin
       href: use-azure-key-vault.md
-    - name: Hizmet Sorumlusunu kullanarak depolama hesabına bağlanma
-      href: connect-service-principal.md
     - name: Tanılama günlüklerini dışarı aktarma
       href: diagnostics.md
-    - name: Hizmet sınırları
-      href: service-limits.md
-    - name: DSR hakları ve istekleri
-      href: dsr-rights-requests.md
+    - name: Bağlantılara genel bakış
+      href: connections.md
 - name: API'ler
   items:
     - name: API'lerle çalışma
@@ -324,5 +328,9 @@
       items:
         - name: Onay verileriyle tahminler oluşturma
           href: consent-management/predictions-consent-data.md
+- name: Hizmet sınırları
+  href: service-limits.md
+- name: DSR hakları ve istekleri
+  href: dsr-rights-requests.md
 - name: Destek alın
   href: /power-platform/admin/get-help-support

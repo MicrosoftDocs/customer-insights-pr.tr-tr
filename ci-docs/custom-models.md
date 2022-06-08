@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647615"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800444"
 ---
 # <a name="custom-machine-learning-models"></a>Özel makine öğrenimi modelleri
 
@@ -92,7 +92,7 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 
 ## <a name="edit-a-workflow"></a>İş akışını düzenle
 
-1. **Özel Modeller** sayfasında, daha önce oluşturduğunuz bir iş akışının yanındaki **Eylemler** sütunundaki dikey üç noktayı seçin ve buradan **Düzenle** seçeneğini belirleyin.
+1. **Özel Modeller** sayfasında, daha önce oluşturduğunuz bir iş akışının yanındaki **Eylemler** sütunundaki dikey üç noktayı (&vellip;) seçin ve buradan **Düzenle** seçeneğini belirleyin.
 
 1. İş akışınızın tanınabilen adını **Görünen ad** alanında güncelleştirebilirsiniz ancak yapılandırılmış web hizmetini veya işlem hattını değiştiremezsiniz. **İleri**'yi seçin.
 
@@ -108,7 +108,7 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 
 ## <a name="run-a-workflow"></a>İş akışını çalıştırma
 
-1. **Özel Modeller** sayfasında, daha önce oluşturduğunuz bir iş akışının yanındaki **Eylemler** sütunundaki dikey üç noktayı seçin.
+1. **Özel Modeller** sayfasında, daha önce oluşturduğunuz bir iş akışının yanındaki **Eylemler** sütunundaki dikey üç noktayı (&vellip;) seçin.
 
 1. **Çalıştır** seçin.
 
@@ -116,7 +116,7 @@ Tahminler, daha iyi müşteri deneyimleri oluşturma, iş yeteneklerini iyileşt
 
 ## <a name="delete-a-workflow"></a>İş akışını silin
 
-1. **Özel Modeller** sayfasında, daha önce oluşturduğunuz bir iş akışının yanındaki **Eylemler** sütunundaki dikey üç noktayı seçin.
+1. **Özel Modeller** sayfasında, daha önce oluşturduğunuz bir iş akışının yanındaki **Eylemler** sütunundaki dikey üç noktayı (&vellip;) seçin.
 
 1. **Sil**'i seçin ve silme işleminizi onaylayın.
 

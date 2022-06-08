@@ -1,43 +1,113 @@
 ---
-title: Microsoft Dataverse'deki Customer Insights verileri
-description: Customer Insights varlıklarını Microsoft Dataverse'de tablolar olarak kullanın.
-ms.date: 04/05/2022
+title: Microsoft Dataverse'deki Customer Insights verileriyle çalışma
+description: Customer Insights ve Microsoft Dataverse'e nasıl bağlanılacağını öğrenin ve Dataverse'e aktarılan çıkış varlıklarını anlayın.
+ms.date: 05/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: wimohabb
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741389"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833700"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
-Customer Insights, çıkış verilerinin [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)'de kullanılabilir olmasını sağlar. Bu tümleştirme, az kod gerektiren/kodsuz bir yaklaşım aracılığıyla kolay veri paylaşımına ve özel geliştirmeye olanak tanır. [Çıkış varlıkları](#output-entities) Dataverse ortamında tablolar olarak kullanılabilir. Verileri, Dataverse tablolarını temel alan başka bir uygulama için kullanabilirsiniz. Bu tablolar, Power Automate aracılığıyla otomatikleştirilmiş iş akışları veya Power Apps ile uygulama oluşturma gibi senaryoları etkinleştirir. Geçerli uygulama genel olarak belirli bir müşteri kimliği için verilerin kullanılabilir Customer Insights varlıklarından alınabileceği aramaları destekler.
+Customer Insights, çıkış varlıklarını [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) olarak kullanılabilir hale getirme seçeneğini sunar. Bu tümleştirme, az kod gerektiren/kodsuz bir yaklaşım aracılığıyla kolay veri paylaşımına ve özel geliştirmeye olanak tanır. [Çıkış varlıkları](#output-entities) Dataverse ortamında tablolar olarak kullanılabilir. Verileri, Dataverse tablolarını temel alan başka bir uygulama için kullanabilirsiniz. Bu tablolar, Power Automate aracılığıyla otomatikleştirilmiş iş akışları veya Power Apps ile uygulama oluşturma gibi senaryoları etkinleştirir.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Customer Insights'a Dataverse ortamı ekleme
+Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve ağ geçitlerini kullanarak şirket içi veri kaynaklarından veri almanıza](data-sources.md#add-data-from-on-premises-data-sources) olanak tanır.
 
-**Mevcut kuruluş**
+## <a name="prerequisites"></a>Önkoşullar
 
-Yöneticiler Customer Insights ortamı oluştururken Customer Insights 'ı [mevcut Dataverse ortamını kullanacak](create-environment.md) şekilde yapılandırabilir. Dataverse ortamına URL sağlayarak, bu yeni Customer Insights ortamına ekleniyor. Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır. 
+- Customer Insights ve Dataverse ortamları aynı bölgede barındırılmalıdır.
+- Dataverse ortamında genel yönetici rolüne sahip olmanız gerekir. Bu [Dataverse ortamının ilişkilendirildiği](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) güvenlik grupları olup olmadığını doğrulayın ve bu güvenlik gruplarına eklendiğinizden emin olun.
+- Bağlanmak istediğiniz Dataverse ortamıyla zaten ilişkilendirilmiş olan başka bir Customer Insights ortamı yok. [Dataverse ortamına varolan bir bağlantının nasıl](#remove-an-existing-connection-to-a-dataverse-environment) kaldırılacağını öğrenin.
+- Bir Microsoft Dataverse ortamı yalnızca tek bir depolama hesabına bağlanabilir. Ortamı yalnızca [Azure Data Lake Storage'ı kullanmak üzere ](own-data-lake-storage.md) yapılandırırsanız geçerlidir.
 
-Mevcut Dataverse ortamını kullanmak istemiyorsanız sistem, kiracınızdaki Customer Insights verileri için yeni bir ortam oluşturur. 
+## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Bir Dataverse ortamını Customer Insights'a bağlama
 
-> [!NOTE]
-> Kuruluşlarınız zaten kiracılarında Dataverse kullanıyorsa, [Dataverse ortamı oluşturmasının bir yönetici tarafından kontrol edildiğini](/power-platform/admin/control-environment-creation) hatırlamak önemlidir. Örneğin, kuruluş hesabınız içinde yeni bir Customer Insights ortamı kuruyorsanız ve yöneticiniz, yöneticiler dışındaki kişiler için Dataverse deneme ortamı oluşturmayı devre dışı bıraktıysa yeni bir deneme ortamı oluşturamazsınız.
-> 
-> Customer Insights'da oluşturulan Dataverse deneme ortamları 3 GB depolama alanına sahiptir ve kiracıya verilen genel kapasiteden ayrıdır. Ücretli abonelikler, veritabanı için 15 GB ve dosya depolaması için 20 GB Dataverse destek hakkı alırlar.
+**Microsoft Dataverse** adımı [bir Customer Insights ortamı oluştururken](create-environment.md) Customer Insights'ı Dataverse ortamınızla bağlamanızı sağlar.
 
-**Yeni kuruluş**
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="net yeni ortamlar için otomatik etkinleştirilen Microsoft Dataverse ile veri paylaşımı.":::
 
-Customer Insights'ı ayarlarken yeni bir kuruluş oluşturursanız sistem, kuruluşunuzda sizin için otomatik olarak yeni bir Dataverse ortamı oluşturur.
+Yöneticiler, varolan Dataverse ortamını bağlamak için Customer Insights'ı yapılandırabilirler. Dataverse ortamına URL sağlayarak, bu yeni Customer Insights ortamına ekleniyor.
+
+Mevcut Dataverse ortamını kullanmak istemiyorsanız sistem, kiracınızdaki Customer Insights verileri için yeni bir ortam oluşturur. [Power Platform yöneticileri ortamları kimlerin oluşturabileceğini ve yönetebileceğini denetleyebilir](/power-platform/admin/control-environment-creation). Yeni bir Customer Insights ortamı ayarladığınızda ve yönetici, yöneticiler dışındaki herkes için Dataverse ortamı oluşturmayı devre dışı bıraktıysa yeni bir ortam oluşturamayabilirsiniz.
+
+Veri paylaşımı onay kutusunu seçerek Dataverse ile **veri paylaşımını etkinleştirin**.
+
+Kendi Data Lake Storage hesabınızı kullanıyorsanız **İzin tanımlayıcısına** da sahip olmanız gerekir. İzin tanımlayıcısını edinme hakkında daha fazla bilgi için aşağıdaki bölümü gözden geçirin.
+
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Veri paylaşımını Dataverse ile kendi Azure Data Lake Storage'ınızdan etkinleştirme (Önizleme)
+
+Ortamınızda [kendi Azure Data Lake Storage hesabınız kullanılırken](own-data-lake-storage.md) Microsoft Dataverse ile veri paylaşımının etkinleştirilmesi fazladan bazı yapılandırma yapılmasını gerektirir. Customer Insights ortamını ayarlayan kullanıcının en azından, Azure Data Lake Storage hesabındaki *CustomerInsights* kapsayıcısında **Depolama Blobu Veri Okuyucusu** izinlerine sahip olması gerekir.
+
+1. Azure aboneliğinizde biri **Okuyucu** güvenlik grubu diğeri **Katılımcı** güvenlik grubu olmak üzere iki güvenlik grubu oluşturun ve her iki güvenlik grubu için de sahip olarak Microsoft Dataverse hizmetini ayarlayın.
+2. Depolama hesabınızdaki CustomerInsights kapsayıcısında Erişim Denetimi Listesini (ACL) bu güvenlik grupları aracılığıyla yönetin. Microsoft Dataverse hizmetini ve Dynamics 365 Marketing gibi Dataverse tabanlı iş uygulamalarını **Salt okuma** izinleriyle **Okuyucu** güvenlik grubuna ekleyin. Profiller ve içgörüler yazmak için **okuma ve yazma** izinleri vermek üzere *yalnızca* Customers Insights uygulamasınını **Katılımcı** güvenlik grubuna ekleyin.
+
+### <a name="limitations"></a>Sınırlamalar
+
+Kendi Azure Data Lake Storage hesabınızla Dataverse'ü kullanırken iki sınırlama vardır:
+
+- Bir Dataverse kuruluşu ile Azure Data Lake Storage hesabı arasında bire bir eşleme vardır. Bir Dataverse kuruluşu depolama hesabına bağlandıktan sonra, başka bir depolama hesabına bağlanamaz. Bu sınırlama, Dataverse'ün birden fazla depolama hesabını doldurmasını engeller.
+- Bir güvenlik duvarının arkasında olduğundan, Azure Data Lake Storage hesabınıza erişmek için Azure Özel Bağlantı kurulumu gerekiyorsa veri paylaşımı çalışmayacaktır. Dataverse şu anda Özel Bağlantı üzerinden özel uç noktalara bağlantıyı desteklememektedir.
+
+### <a name="set-up-powershell"></a>PowerShell'i ayarlama
+
+PowerShell komut dosyalarını çalıştırmak için öncelikle PowerShell'i uygun şekilde ayarlamanız gerekir.
+
+1. [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2)'ın en son sürümünü yükleyin.
+   1. Bilgisayarınızda, klavyenizdeki Windows tuşunu seçin, **Windows PowerShell** için arama yapın ve **Yönetici olarak çalıştır**'ı seçin.
+   1. Açılan PowerShell penceresine `Install-Module AzureAD` girin.
+2. Üç modülü içeri aktarın.
+    1. PowerShell penceresine `Install-Module -Name Az.Accounts` yazın ve aşağıdaki adımları izleyin.
+    1. `Install-Module -Name Az.Resources` ve `Install-Module -Name Az.Storage` için tekrarlayın.
+
+### <a name="configuration-steps"></a>Yapılandırma adımları
+
+1. Mühendisimizin [GitHub deposundan](https://github.com/trin-msft/byol) çalıştırmanız gereken iki PowerShell betiğini indirin.
+    1. `CreateSecurityGroups.ps1`
+       - PowerShell betiğini çalıştırmak için *kiracı yöneticisi* izinlerine sahip olmanız gerekir.
+       - Bu PowerShell betiği, Azure aboneliğinizde iki güvenlik grubu oluşturur. Biri Okuyucu grubu diğeri Katılımcı grubu içindir ve bu güvenlik gruplarının her ikisi için de Microsoft Dataverse hizmetini sahip olarak ayarlar.
+       - Bu PowerShell betiğini, Azure Data Lake Storage'ınızı içeren Azure abonelik kimliğini girerek Windows PowerShell'de yürütün. Ek bilgileri ve uygulanan mantığı gözden geçirmek için PowerShell betiğini düzenleyicide açın.
+       - Bu betik tarafından oluşturulan güvenlik grubu kimliği değerlerini kaydedin. Bu değerleri `ByolSetup.ps1` betiğinde kullanacağız.
+
+        > [!NOTE]
+        > Güvenlik grubu oluşturma işlemi kiracınızda devre dışı bırakılabilir. Bu durumda, el ile ayarlama yapılması ve Azure AD yöneticinizin [güvenlik grubu oluşturmayı etkinleştirmesi](/azure/active-directory/enterprise-users/groups-self-service-management) gerekir.
+
+    2. `ByolSetup.ps1`
+        - Bu betiği çalıştırmak için depolama hesabı/kapsayıcı düzeyinde *Depolama Blobu Veri Sahibi* izinlerine sahip olmanız gerekir veya bu betik sizin için bir tane oluşturacaktır. Rol atamanız betik başarıyla çalıştırıldıktan sonra el ile kaldırılabilir.
+        - Bu PowerShell betiği, Microsoft Dataverse hizmeti ve tüm Dataverse tabanlı iş uygulamaları için gereken rol tabanlı erişim denetimini (RBAC) ekler. Ayrıca, `CreateSecurityGroups.ps1` betiğiyle oluşturulan güvenlik grupları için CustomerInsights kapsayıcısında Erişim Denetim Listesini (ACL) güncelleştirir. Katılımcı grubu *rwx* iznine ve Okuyucular grubu yalnızca *r-x* iznine sahip olur.
+        - Azure Data Lake Storage, depolama hesabı adı, kaynak grubu adı ve Okuyucu ve Katılımcı güvenlik grubu kimliği değerlerini içeren Azure aboneliği kimliğinizi girerek bu PowerShell betiğini Windows PowerShell'de yürütün. Ek bilgileri ve uygulanan mantığı gözden geçirmek için PowerShell betiğini düzenleyicide açın.
+        - Betiği başarıyla çalıştırdıktan sonra çıkış dizesini kopyalayın. Çıkış dizesi şu şekilde görünür: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+
+2. Yukarıda kopyaladığınız çıkış dizesini Microsoft Dataverse için ortam yapılandırma adımının **İzin tanımlayıcısı** alanına girin.
+
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Microsoft Dataverse ile kendi Azure Data Lake Storage'ınızdan veri paylaşımını etkinleştirmeye yönelik yapılandırma seçenkleri.":::
+
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Dataverse ortamına varolan bir bağlantıyı kaldırma
+
+Bir Dataverse ortamına bağlanırken **Bu CDS kuruluşu zaten başka bir Customer Insights kurulumuna bağlı** hata iletisi Dataverse ortamının zaten bir Customer Insight ortamında kullanılmakta olduğu anlamına gelir. Dataverse ortamında genel yönetici olarak mevcut bağlantıyı kaldırabilirsiniz. Değişikliklerin geçerli olması birkaç saat sürebilir.
+
+1. [Power Apps](https://make.powerapps.com) uygulamasına gidin.
+1. Ortam seçiciden ortamı seçin.
+1. **Çözümler**'e gidin
+1. **Dynamics 365 Customer Insights Müşteri Kartı Eklentisi (Önizleme)** adlı çözümü kaldırın veya silin.
+
+OR
+
+1. Dataverse ortamınızı açın.
+1. **Gelişmiş Ayarlar** > **Çözümler**'e gidin.
+1. **CustomerInsightsCustomerCard** çözümünü kaldırın.
+
+Bağlantı kaldırma işlemi bağımlılıklar nedeniyle başarısız olursa, bağımlılıkları da kaldırmanız gerekir. Daha fazla bilgi için bkz. [Bağımlılıkları kaldırma](/power-platform/alm/removing-dependencies).
 
 ## <a name="output-entities"></a>Çıkış varlıkları
 
@@ -50,7 +120,6 @@ Customer Insights'ın bazı çıktı varlıkları, Dataverse'de tablolar olarak 
 - [Zenginleştirme](#enrichment)
 - [Tahmin](#prediction)
 - [Segment üyeliği](#segment-membership)
-
 
 ### <a name="customerprofile"></a>Müşteri profili
 
@@ -139,3 +208,34 @@ Bu tablo, müşteri profillerinin segment üyeliği bilgilerini içerir.
 | Segmentler       | JSON Dizesi  | Müşteri profilinin üyesi olduğu benzersiz segmentler listesi      |
 | msdynci_identifier  | String   | Segment üyeliği kaydının benzersiz tanıtıcısı. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | `msdynci_identifier` öğesinden oluşturulan deterministik GUID          |
+
+<!--
+## FAQ: Update existing environments to use Microsoft Dataverse
+
+Between mid-May 2022 and June 13, 2022, administrators can update the environment settings with a Dataverse environment that Customer Insights can use. On June 13, 2022, your environment will be updated automatically and we'll create a Dataverse environment on your tenant for you.
+
+1. My environment uses my own Azure Data Lake Storage account. Do I still need to update?
+
+   If there's already a Dataverse environment configured in your environment, the update isn't required. If no Dataverse is environment configured, the **Update now** button will create a Dataverse environment and update from the Customer Insights database to a Dataverse database.
+
+1. Will we get extra Dataverse capacity, or will the update use my existing Dataverse capacity?
+
+   - If there's already a Dataverse environment configured in your Customer Insights environment, or connected with other Dynamics 365 or Power Apps applications, the capacity remains unchanged.
+   - If the Dataverse environment is new, it will add new storage and database capacity. The capacity added varies per environment and entitlements. You'll get 3 GB for trial and sandbox environment. Production environments get 15 GB.
+
+1. I proceeded with the update and it seems like nothing happened. Is the update complete?
+
+   If the notification in Customer Insights doesn't show anymore, the update is complete. You can check the status of the update by reviewing your environment settings.
+
+1. Why do I still see the banner after completing the update steps?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+
+1. I received a "Failed to provision Dataverse environment" error after starting the update. What happened?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+   Common causes:
+    - Insufficient capacity. There's no more capacity to create more environments. For more information, see [Manage capacity action](/power-platform/admin/capacity-storage#actions-to-take-for-a-storage-capacity-deficit).
+    - Region mismatch between tenant region and Customer Insights environment region in the Australia and India regions.
+    - Insufficient privileges to provision Dataverse. The users starting the update needs a Dynamics 365 admin role.
+    - -->

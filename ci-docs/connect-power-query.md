@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647705"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800213"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query veri kaynağına bağlanma
 
@@ -76,7 +76,7 @@ Customer Insights'a veri içeri aktarmak üzere kullanabileceğiniz bağlayıcı
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-2. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı seçin ve açılır menüden **Düzenle**'yi seçin.
+2. Değiştirmek istediğiniz veri kaynağının yanındaki dikey üç noktayı (&vellip;) seçin ve açılır menüden **Düzenle**'yi seçin.
 
    > [!div class="mx-imgBorder"]
    > ![Seçeneği düzenleyin.](media/edit-option-data-sources.png "Seçeneği düzenle")

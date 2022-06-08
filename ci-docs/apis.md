@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755474"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808551"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insights API'leriyle çalışma
 
@@ -31,11 +31,11 @@ Bu makalede, Customer Insights API'lerine nasıl erişileceği, bir Azure Uygula
 
 1. Customer Insights'ta [oturum açın](https://home.ci.ai.dynamics.com). Henüz aboneliğiniz yoksa [Customer Insights denemesine kaydolun](https://aka.ms/tryci).
 
-1. Customer Insights ortamınızda API'leri etkinleştirmek için **Yönetici** > **İzinler**'e gidin. Bunu yapabilmek için yönetici izinlerine ihtiyacınız vardır.
+1. Customer Insights ortamınızda API'leri etkinleştirmek için **Yönetici** > **Güvenlik**'e gidin. Bunu yapabilmek için yönetici izinlerine ihtiyacınız vardır.
 
 1. **API'ler** sekmesine gidin ve **Etkinleştir** düğmesini seçin.    
  
-   API'lerin etkinleştirilmesi, kurulumunuz için API isteklerinde kullanılacak birincil ve ikincil abonelik anahtarı oluşturur. **Yönetici** > **İzinler** > **API'ler**'de **Birincil oluştur** veya **İkincil Oluştur**'u seçerek anahtarları yeniden oluşturabilirsiniz.
+   API'lerin etkinleştirilmesi, kurulumunuz için API isteklerinde kullanılacak birincil ve ikincil abonelik anahtarı oluşturur. **Yönetici** > **Güvenlik** > **API'ler**'deki **Birincili yeniden üret** veya **İkincili yeniden üret** seçeneğini belirleyerek anahtarları yeniden oluşturabilirsiniz.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Bu adımlar, temsilci seçilen izinleri kullanarak bir Azure uygulamasında Cust
 1. Solda, **Uygulama kayıtları**'nı seçin.
 
 1. Uygulama adını girmek için **Yeni kayıt** seçeneğini belirleyin ve hesap türünü seçin.
- 
+
    İsteğe bağlı olarak, yeniden yönlendirme URL'si ekleyin. http://localhost, yerel bilgisayarınızda bir uygulama geliştirmek için yeterlidir.
 
 1. Yeni Uygulama kaydınızda, **API izinleri**'ne gidin.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Yan bölmede **İzin ekle**'yi ve **Customer Insights**'ı seçin.
+1. **İzin ekle**'yi seçin ve yan bölmede **Customer Insights için Dynamics 365 AI**'yi seçin.
 
 1. **İzin türü** için, **Temsilci izinleri**'ni seçin ve sonra **user_impersonation** iznini seçin.
 
@@ -109,7 +107,7 @@ Azure'da uygulama kaydı hakkında daha fazla bilgi için, bkz. [Uygulama kaydet
 
 1. Sonuç olarak, Customer Insights'a uygulama kaydının adını kullanıcı olarak eklemeniz gerekir.  
    
-   Customer Insights'ı açın, **Yönetici** > **İzinler**'e gidin ve **Kullanıcı ekle**'yi seçin.
+   Customer Insights'ı açın, **Yönetici** > **Güvenlik**'e gidin ve **Kullanıcı ekle**'yi seçin.
 
 1. Uygulama kaydınızın adını arayıp arama sonuçlarından seçin ve **Kaydet**'i seçin.
 

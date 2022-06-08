@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647812"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800120"
 ---
 # <a name="create-segments"></a>Segmentler oluşturma
 
@@ -134,8 +134,9 @@ Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir se
 > - Segment Oluşturucu, koşullar için işleçler ayarlanırken varlıklardan geçerli değerler önermez. Hangi değerlerin kullanılabilir olduğunu görmek için **Veri** > **Varlıklar**'a gidebilir ve varlık verilerini indirebilirsiniz.
 > - Tarihlere dayanan koşullar, sabit tarihlerle kayan tarih aralığı arasında geçiş yapmanızı sağlar.
 > - Segmentiniz için birden çok kuralınız varsa, düzenlemekte olduğunuz kuralın yanında dikey mavi bir çizgi olur.
-> - Kural ve koşulları kesim tanımındaki diğer konumlarına taşıyabilirsiniz. Bir kural veya koşulun yanındaki [...] seçeneğini belirleyin ve bunun nasıl ve nereye taşınacağını belirleyin.
+> - Kural ve koşulları kesim tanımındaki diğer konumlarına taşıyabilirsiniz. Bir kural veya koşulun yanındaki dikey üç noktayı ( &vellip;) seçin ve sonra da nasıl ve nereye taşınacağını belirleyin.
 > - Komut çubuğundaki **Geri al** ve **Yineleme** denetimleri, değişiklikleri geri almanıza olanak tanır.
+> - Bir segment oluşturduktan sonra, bazı segmentler [segmentin kullanımını izlemenize](segments.md#track-usage-of-a-segment) olanak sağlar.
 
 ## <a name="quick-segments"></a>Hızlı segmentler
 

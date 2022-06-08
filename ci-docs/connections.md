@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755333"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800396"
 ---
 # <a name="connections-preview-overview"></a>Bağlantılara (önizleme) genel bakış
 
@@ -69,9 +69,9 @@ Verme bağlantısını ayarlarken veya düzenlerken [dışarı aktarımları](ex
 
 1. **Bağlantılar** sekmesine gidin.
 
-1. Düzenlemek istediğiniz bağlantı için dikey üç nokta seçin.
+1. Düzenlemek istediğiniz bağlantı için dikey üç noktayı (&vellip;) seçin.
 
-1. **Düzenle** seçeneğini işaretleyin.
+1. **Düzenle**'yi seçin.
 
 1. Güncellemek istediğiniz değerleri değiştirin ve **Kaydet**'i seçin.
 
@@ -85,7 +85,7 @@ Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunla
 
 1. **Bağlantılar** sekmesine gidin.
 
-1. Kaldırmak istediğiniz bağlantı için dikey üç nokta seçin.
+1. Kaldırmak istediğiniz bağlantı için dikey üç noktayı (&vellip;) seçin.
 
 1. Açılır menüsünde **Kaldır** seçeneğini belirleyin. Bir onay iletişim kutusu görüntülenir.
 

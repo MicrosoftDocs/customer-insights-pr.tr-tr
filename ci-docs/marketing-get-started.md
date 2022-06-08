@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653760"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833332"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Dynamics 365 Marketing içindeki birleştirilmiş müşteri profilleriyle çalışma
 
@@ -23,7 +23,6 @@ Customer Insights verilerini Marketing'e bağlayarak aşağıdakileri yapabilirs
 - Bağlılık durumu, abonelik yenileme tarihi, ana firma veya birleşik Customer Insights profilinde yakaladığınız diğer ölçümler gibi ölçümlerde e-postalar, SMS'ler ve anında iletme bildirimlerindeki dinamik içeriği (kişiselleştirilmiş belirteçler gibi) temel alın.
 - Marketing'den Customer Insights'a veri yükleyin ve bunları diğer kaynaklardan gelen müşteri verileriyle birleştirin.
 - Customer Insights veri temizleme, zenginleştirme ve kısmi eşleşme araçlarından yararlanın.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Gerçek zamanlı pazarlamada zengin müşteri profillerini kullanma
 
@@ -41,4 +40,4 @@ Daha fazla bilgi: [Dynamics 365 Marketing ile Dynamics 365 Customer Insights seg
 
 Marketing ile Customer Insights verilerini kullanmak istiyorsanız yalnızca bulut depolama alanıyla sınırlı kalmanıza gerek yoktur. Zaten kendi Azure Data Lake Storage kurulumunuz varsa Customer Insights'a bağlanabilir ve ardından verileri bulut tabanlı kurulumlarda olduğu gibi Marketing uygulamasıyla paylaşabilirsiniz.
 
-Daha fazla bilgi: [Kendi Azure Data Lake Storage'ınızdan Dataverse ile veri paylaşımını etkinleştirme](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Daha fazla bilgi: [Kendi Azure Data Lake Storage'ınızdan Dataverse ile veri paylaşımını etkinleştirme](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

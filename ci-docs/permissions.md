@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740927"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833746"
 ---
 # <a name="user-permissions"></a>Kullanıcı izinleri
 
@@ -41,7 +41,7 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. İzinler say
 
 - Tüm izinler Görüntüleyici tarafından kullanılabilir.
 - Verileri, **Veri kaynakları** sayfasını kullanarak yükleyin ve dönüştürün.
-- Unified customer profile varlığına yol açan eksiksiz ***Veri Birleştirme**'yi tamamlayın.
+- Unified customer profile varlığına yol açan eksiksiz **Veri Birleştirme**'yi tamamlayın.
 - **İlişkiler** ve **Aktiviteler**'i tanımlayın.
 - Segmentleri, **Segmentler** sayfasını kullanarak oluşturun.
 - **Ölçümler** sayfasını kullanarak ölçümler oluşturun.
@@ -65,11 +65,11 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. İzinler say
 ## <a name="admin-owner"></a>Yönetici (sahip)
 
 - Tüm izinler, yöneticinin kullanımına sunulur.
-- Ortamı [sıfırlayın ve silin](manage-environments.md#reset-an-existing-environment).
+- Ortamı [sıfırlayın ve silin](manage-environments.md#reset-an-existing-environment-preview).
 
 ## <a name="assign-roles-and-permissions"></a>Rolleri ve izinleri atama
 
-1. **Yönetici** > **Güvenlik** > **Kullanıcılar***'a gidin.
+1. **Yönetici** > **Güvenlik** > **Kullanıcılar**'a gidin.
 
 1. **İzin ekle/düzenle** bölmesini açmak için **Kullanıcı ekle**'yi seçin.
 
