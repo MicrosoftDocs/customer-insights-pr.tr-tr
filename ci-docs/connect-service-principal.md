@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833421"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011865"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Azure hizmet sorumlusu kullanarak bir Azure Data Lake Storage hesabına bağlanma
 
@@ -51,7 +51,13 @@ Customer Insights için yeni bir hizmet sorumlusu oluşturmadan önce kuruluşun
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Depolama hesabına erişim için hizmet sorumlusuna izin verme
 
-Customer Insights içinde kullanmak istediğiniz depolama hesabına yönelik servis sorumlusuna izin vermek için Azure portalına gidin.
+Customer Insights içinde kullanmak istediğiniz depolama hesabına yönelik servis sorumlusuna izin vermek için Azure portalına gidin. Depolama hesabına veya kapsayıcıya aşağıdaki rollerden biri atanmalıdır:
+
+|Kimlik bilgisi|Gereksinimler|
+|----------|------------|
+|Şu anda oturum açmış kullanıcı|**Rol**: Depolama Blobu Veri Okuyucusu, Depolama Blobu Katılımcısı veya Depolama Blobu Sahibi.<br>**Seviye**: Depolama hesabı veya kapsayıcı için izinler verilebilir.</br>|
+|Customer Insights Hizmet Sorumlusu -<br>Azure Data Lake Storage'ı veri kaynağı olarak kullanma</br>|Seçenek 1<ul><li>**Rol**: Depolama Blobu Veri Okuyucusu, Depolama Blobu Veri Katılımcısı veya Depolama Blobu Veri Sahibi.</li><li>**Düzey**: İzinler, depolama hesabında atanmalıdır.</li></ul>Seçenek 2 *(Hizmet Sorumlusu erişimini depolama hesabına paylaşmadan)*<ul><li>**Rol 1**: Depolama Blobu Veri Okuyucusu, Depolama Blobu Veri Katılımcısı veya Depolama Blobu Veri Sahibi.</li><li>**Düzey**: İzinler kapsayıcıda atanmalıdır.</li><li>**Rol 2** : Depolama Blobu Veri Temsilcisi.</li><li>**Düzey**: İzinler, depolama hesabında atanmalıdır.</li></ul>|
+|Customer Insights Hizmet Sorumlusu - <br>Azure Data Lake Storage'ı çıkış veya hedef olarak kullanma</br>|Seçenek 1<ul><li>**Rol**: Depolama Blobu Veri Katılımcısı veya Depolama Blobu Sahibi.</li><li>**Düzey**: İzinler, depolama hesabında atanmalıdır.</li></ul>Seçenek 2 *(Hizmet Sorumlusu erişimini depolama hesabına paylaşmadan)*<ul><li>**Rol**: Depolama Blobu Veri Katılımcısı veya Depolama Blobu Sahibi.</li><li>**Düzey**: İzinler kapsayıcıda atanmalıdır.</li><li>**Rol 2**: Depolama Blobu Temsilcisi.</li><li>**Düzey**: İzinler, depolama hesabında atanmalıdır.</li></ul>|
 
 1. [Azure yönetim portalına](https://portal.azure.com) gidin ve kuruluşunuzda oturum açın.
 
@@ -62,7 +68,7 @@ Customer Insights içinde kullanmak istediğiniz depolama hesabına yönelik ser
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Rol ataması eklerken Azure portalını gösteren ekran görüntüsü.":::
 
 1. **Rol ataması ekle** bölmesinde, aşağıdaki özellikleri ayarlayın:
-   - Rol: **Depolama Blobu Veri Katılımcısı**
+   - Rol: Yukarıda listelenen kimlik bilgilerine göre Depolama Blobu Veri Okuyucusu, Depolama Blobu Katılımcısı veya Depolama Blobu Sahibi.
    - Şuna erişim ata: **Kullanıcı, grup veya hizmet sorumlusu**
    - Üyeleri seçin: **Customer Insights için Dynamics 365 AI** (bu prosedürde daha önce aradığınız [hizmet görevlisi](#create-a-new-service-principal))
 

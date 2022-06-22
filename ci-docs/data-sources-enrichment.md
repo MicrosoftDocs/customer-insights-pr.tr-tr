@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800305"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011497"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Veri kaynakları için zenginleştirme (önizleme)
 
@@ -29,9 +29,11 @@ Zenginleştirmeler oluşturmak veya düzenlemek için Katkıda Bulunan veya Yön
 
 1. Zenginleştirmek istediğiniz veri kaynağının yanındaki dikey üç noktayı (&vellip;) seçin ve **Zenginleştir**'i seçin.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Veri kaynaklarını zenginleştirme sayfası.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Zenginleştirmenin vurgulandığı veri kaynakları sayfası":::
 
    **Keşfet** sekmesi, [desteklenen veri kaynağı zenginleştirme seçeneklerini](#supported-data-source-enrichments) görüntüler.
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Veri kaynaklarını zenginleştirme sayfası.":::
 
 1. Veri kaynağı zenginleştirmesini yapılandırmak için **Verilerimi zenginleştir**'i seçin. Çıkış varlığı adı otomatik olarak doldurulur.
 

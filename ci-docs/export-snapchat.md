@@ -1,19 +1,19 @@
 ---
 title: Customer Insights verilerini Snapchat'e aktarma
 description: Bağlantıyı yapılandırmayı ve Snapchat'a dışa aktarmayı öğrenin.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647845"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947300"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmentleri Snapchat'e aktarma (önizleme)
 
@@ -21,7 +21,8 @@ Birleşik müşteri profillerinin bölümlerini Snapchat'e verin ve bunları rek
 
 ## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
 
--   Bir [Snapchat iş hesabınız](https://business.snapchat.com/), [Snapchat reklamlar hesabınız](https://ads.snapchat.com/)v e karşılık gelen Yönetici kimlik bilgileriniz vardır.
+-   Bir [Snapchat iş hesabınız](https://business.snapchat.com/), [Snapchat reklamlar hesabınız](https://ads.snapchat.com/)v e karşılık gelen Yönetici kimlik bilgileriniz vardır. En az bir Kuruluş Hesabının üyesi ve belirli bir Reklam Hesabının Veri Yöneticisi olmanız gerekir. 
+-   Snapchat Hedef Kitle yöneticisinde SAM (Snap Hedef Kitle Eşleştirmesi) türünde en az bir hedef kitlenizin olması gerekir. 
 -   Customer Insights'ta [yapılandırılmış segmentlere](segments.md) sahip olmanız gerekir.
 -   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
@@ -60,7 +61,7 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Dışa aktarma bağlantısı** alanında, Snapchat bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
 
-1. [**Snapchat hedef kitle kimliğini**](https://businesshelp.snapchat.com/s/article/custom-audiences) girin.
+1. [**Snapchat Segmentini/Hedef Kitle Kimliğini**](https://businesshelp.snapchat.com/s/article/custom-audiences) girin. Hedef kitlenin kimliği, Snapchat Kitle Yöneticisi'nde hedef kitle seçildikten sonra URL'de bulunabilir. 
 
 1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. Snapchat'e segmentleri aktarmak gerekir.
 

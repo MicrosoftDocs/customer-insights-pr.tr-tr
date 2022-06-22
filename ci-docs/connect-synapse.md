@@ -1,7 +1,7 @@
 ---
 title: Azure Synapse Analytics'ten veri alma
 description: Dynamics 365 Customer Insights'te veri kaynağı olarak Azure Synapse'te veritabanı kullanın.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647695"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011451"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Azure Synapse veri kaynağı bağlama (önizleme)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics veri kaynağı bağlama (önizleme)
 
 Azure Synapse Analytics, veri ambarları ve büyük veri sistemlerinde içgörüler için zamanı hızlandıran bir kurumsal analiz hizmetidir. Azure Synapse Analytics, kurumsal veri ambarlamada kullanılan en iyi SQL teknolojilerini, büyük veriler için kullanılan Spark teknolojilerini, günlük ve zaman serisi analizleri için Data Explorer'ı, veri tümleştirme ve ETL/ELT için İşlem Hatlarını ve Power BI, Cosmos DB ve AzureML gibi diğer Azure hizmetleriyle derin tümleştirmeyi bir araya getirir.
 
@@ -24,16 +24,14 @@ Daha fazla bilgi için bkz. [Azure Synapse'e genel bakış](/azure/synapse-analy
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Dynamics 365 Customer Insights'tan Azure Synapse'e bağlantı yapılandırmak için aşağıdaki ön koşulların karşılanması gerekir.
-
 > [!IMPORTANT]
 > Tüm **rol atamalarını** açıklandığı gibi ayarladığından emin olun.  
 
-## <a name="prerequisites-in-customer-insights"></a>Customer Insights'ta önkoşullar
+**Customer Insights'ta**:
 
 * Customer Insights'ta **Yönetici** rolüne sahip olmanız gerekir. [Customer Insights'ta kullanıcı izinleri](permissions.md#assign-roles-and-permissions) hakkında daha fazla bilgi edinin.
 
-Azure'da: 
+**Azure'da**:
 
 - Etkin bir Azure aboneliği.
 
@@ -47,7 +45,7 @@ Azure'da:
 
 - Azure Synapse workspace'te *Customer Insights için hizmet sorumlusuna* **Synapse Yöneticisi** rolünün atanmış olması gerekir. Daha fazla bilgi için, bkz. [Synapse workspace'e erişim denetimini ayarlama](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Azure Synapse Analytics'te data lake veritabanlarına bağlanma
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Azure Synapse Analytics'te data lake veritabanına bağlanma
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
@@ -55,14 +53,16 @@ Azure'da:
 
 1. **Azure Synapse Analytics (Önizleme)** yöntemini seçin.
 
-1. Veri kaynağı için bir **Ad** girin ve veri kaynağını oluşturmak için **İleri** öğesini seçin. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Synapse Analytics verilerine bağlanmak için iletişim kutusu":::
+  
+1. Veri kaynağı için bir **Ad** ve isteğe bağlı bir **Açıklama** girin.
 
 1. Azure Synapse Analytics için [kullanılabilir bağlantı](connections.md) seçin veya yeni bağlantı oluşturun.
 
-1. Azure Synapse Analytics bağlantısında bağlı çalışma alanından bir **Lake Veritabanı** seçin ve **İleri** seçeneğini belirleyin.
+1. Azure Synapse Analytics bağlantısında bağlı çalışma alanından bir **Veritabanı** seçin ve **İleri** seçeneğini belirleyin.
 
-1. Bağlı veritabanından alınacak varlıkları seçin. 
+1. Bağlı veritabanından alınacak varlıkları belirleyin ve **İleri**'yi seçin.
 
-1. İsteğe bağlı olarak, veri profili oluşturmaya izin vermek için veri varlıklarını seçin. 
+1. İsteğe bağlı olarak, veri profili oluşturmaya izin vermek için veri varlıklarını seçin.
 
-1. Seçiminizi onaylamak için **Kaydet**'i seçin ve Azure Synapse Analytics'te Lake veritabanı tablolarıyla bağlantılı yeni oluşturulan veri kaynağınızdan veri alımını başlatın.
+1. Seçiminizi onaylamak için **Kaydet**'i seçin ve Azure Synapse Analytics'te Lake veritabanı tablolarıyla bağlantılı yeni oluşturulan veri kaynağınızdan veri alımını başlatın. Yeni veri kaynağını **Yenileniyor** durumunda gösteren **Veri kaynakları** sayfası açılır.

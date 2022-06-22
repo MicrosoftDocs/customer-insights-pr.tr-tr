@@ -1,19 +1,19 @@
 ---
 title: Customer Insights verilerini SFTP ana bilgisayarlarına dışarı aktarma (video içerir)
 description: Bağlantıyı yapılandırmayı ve SFTP konumuna dışa aktarmayı öğrenin.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647635"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947208"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentleri ve diğer verileri SFTP'ye aktarma (önizleme)
 
@@ -28,8 +28,8 @@ Müşteri verilerinizi güvenli bir Dosya Aktarım Protokolü (SFTP) konumuna ve
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
 - Güvenlik duvarlarının arkasındaki SFTP hedefleri şu anda desteklenmemektedir. 
-- Dışarı aktarmanın çalışma zamanı sistem performansınıza bağlıdır. Sunucunuzun en düşük yapılandırması için iki CPU çekirdeği ve 1 GB bellek öneririz. 
-- 100 milyona kadar müşteri profiline sahip varlıkların dışarı aktarılması önerilen en düşük yapılandırma olan iki CPU çekirdeği ve 1 GB bellek kullanıldığında 90 dakika sürebilir. 
+- Dışarı aktarmanın çalışma zamanı sistem performansınıza bağlıdır. Sunucunuzun en düşük yapılandırması için iki CPU çekirdeği ve 1 GB bellek öneririz.
+- 100 milyona kadar müşteri profiline sahip varlıkların dışarı aktarılması önerilen en düşük yapılandırma olan iki CPU çekirdeği ve 1 GB bellek kullanıldığında 90 dakika sürebilir.
 
 ## <a name="set-up-connection-to-sftp"></a>SFTP bağlantısı ayarlayın
 
@@ -64,13 +64,17 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 1. Dışarı aktarmak istediğiniz varlıkları, örneğin segmentleri seçin.
 
    > [!NOTE]
-   > Seçili her varlık, verildiğinde en fazla beş çıkış dosyası içine bölünür. 
+   > Seçili her varlık, verildiğinde en fazla beş çıkış dosyası içine bölünür.
 
 1. **Kaydet**'i seçin.
 
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
-Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır.
+[Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz.
+
+> [!TIP]
+> Büyük miktarda veri içeren varlıklar dışarı aktarıldığında her dışarı aktarma işlemi için aynı klasörde birden fazla CSV dosyası bulunabilir. Dışarı aktarma işleminin tamamlanması için gereken süreyi en aza indirmek için performans nedenleriyle dışarı aktarmalarda bölünme olabilir.
 
 ## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 

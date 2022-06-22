@@ -1,7 +1,7 @@
 ---
 title: Müşteri profillerini görüntüleme
 description: Birleşik müşteri verilerinizin birleşik bir görünümünü elde edin.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755806"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947070"
 ---
 # <a name="customer-profiles"></a>Müşteri profilleri
 
@@ -55,9 +55,9 @@ Yönetici olarak, **Dizini ara ve filtrele** sayfasını kullanarak aranabilir �
 
 **Müşteri ayrıntıları sayfası**'nı açmak için müşteri kutucuklarından birini seçin. Bu görünüm, seçilen müşteri için birleşik bilgiler içerir. Müşteri ayrıntıları aşağıdaki içeriği içerir:
 
-**Müşteri profili kutucuğu**: Bu kutucuk, birleşik *Müşteri* varlığındaki farklı değerleri gösterir. Seçili müşteri profili için bir alanın değeri yoksa, bir alan gösterilmez. Kutucuk bölümler halinde yapılandırılmıştır:
+**Müşteri profili kutucuğu**: Bu kutucuk, birleşik *Müşteri* varlığındaki farklı değerleri gösterir. Seçili müşteri profili için bir alanın değeri yoksa adres alanı dışında bir alan gösterilmez. Kutucuk bölümler halinde yapılandırılmıştır:
 
-- İlk bölümde, önceden tanımlı bir alanlar kümesi ve ardından arama ve filtre dizininin parçası olan tüm alanlar gösterilir. Profilde bu tür alanlar varsa, adresle ilgili tüm alanlar tek bir satır olarak birleştirilir.
+- İlk bölümde, önceden tanımlı bir alanlar kümesi ve ardından arama ve filtre dizininin parçası olan tüm alanlar gösterilir. Adresle ilgili tüm alanlar tek bir satır olarak birleştirilir ve bu, profilde adres bilgisi bulunmasa bile gösterilir.
 - **Bu müşteriye ait ilgili kişiler**: İş hesaplarının ortamları alanında, ikinci bölüm olarak bu müşteriye yönelik tüm ilgili ilgili kişileri görürsünüz. Her ilgili kişi alanlarıyla birlikte gösterilir. Boş alanlar gizlidir.
 - **Ek alanlar**: Seçili müşterinin kalan alanlarını kimlik hariç gösterir.
 - **Kimlikler**: Karşılık gelen varlık adı altındaki tüm kimlikler listelenir. Alanlar, kendilerini kimlikler olarak sınıflayan semantikleri tarafından belirlenir.

@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800203"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011727"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse yönetilen veri gölündeki verilere bağlanma
 
-Bu makalede, Dataverse kullanıcılarının Microsoft Dataverse tarafından yönetilen bir göldeki analiz varlıklarına nasıl hızlı bir şekilde bağlanabileceği hakkında bilgiler verilmektedir. 
+Microsoft Dataverse kullanıcıları, Microsoft Dataverse tarafından yönetilen bir göldeki analiz varlıklarına hızlı bir şekilde bağlanabilir.
 
 > [!NOTE]
 > Devam etmek ve yönetilen gölde bulunan varlıkların listesini görüntülemek için Dataverse kuruluşunda yönetici olmanız gerekir.
@@ -32,40 +32,34 @@ Bu makalede, Dataverse kullanıcılarının Microsoft Dataverse tarafından yön
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Bir Dataverse yönetilen gölüne bağlanma
 
-1. Customer Insights'ta **Veri** > **Veri Kaynakları**'na gidin.
+1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-2. **Veri Kaynağı ekle**'yi seçin.
+1. **Veri Kaynağı ekle**'yi seçin.
 
-3. **Microsoft Dataverse** öğesini seçin ve **İleri**'yi seçin.
+1. **Microsoft Dataverse** öğesini seçin.
 
-4. Veri kaynağı için bir **ad** girin ve **İleri**'yi seçin. 
+1. Veri kaynağı için bir **Ad** ve isteğe bağlı bir **Açıklama** girin.
 
-5. Dataverse kuruluşu için **Sunucu adresini** sağlayın ve **Oturum aç**'ı seçin.
+1. Dataverse kuruluşu için **Sunucu adresini** sağlayın ve **Oturum aç**'ı seçin.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Kullanıcının Dataverse ortamı URL'sini girebileceği veri alımı adımındaki ekran.":::
-
-6. Kullanılabilir listeden, Customer Insights'a varlık olarak atamak istediğiniz tabloları seçin.    
+1. Kullanılabilir listeden, Customer Insights'a varlık olarak atamak istediğiniz tabloları seçin.
 
    > [!NOTE]
    > Bazı tablolar zaten seçilmişse diğer Dynamics 365 uygulamaları (Dynamics 365 Sales Insights veya Customer Service Insights gibi) tarafından kullanılıyor olabilirler. Seçimi değiştiremezsiniz. Veri kaynağı oluşturulduktan sonra bu tabloları varlık olarak kullanabilirsiniz.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dataverse ortamındaki varlıkların listesini gösteren iletişim kutusu.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dataverse ortamındaki varlıkların listesini gösteren iletişim kutusu.":::
 
-7. Dataverse uygulamasından seçilen tabloları eşitlemeye başlamak için seçiminizi kaydedin. Yeni eklenen bağlantıyı **Veri kaynakları** sayfasında bulursunuz. Yenileme için kuyruğa alınır ve seçilen tüm tablolar eşitlenene kadar varlık sayısı 0 olarak gösterilir.
+1. Dataverse uygulamasından seçilen tabloları eşitlemeye başlamak için seçiminizi kaydedin. Yeni eklenen bağlantıyı **Veri kaynakları** sayfasında bulursunuz. Yenileme için kuyruğa alınır ve seçilen tüm tablolar eşitlenene kadar varlık sayısı 0 olarak gösterilir.
 
 Bir ortamın yalnızca bir veri kaynağı aynı anda aynı Dataverse tarafından yönetilen gölü kullanabilir.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Bir Dataverse yönetilen göl veri kaynağını düzenleme
 
-Varlık seçimini ancak veri kaynağı oluşturduktan sonra düzenleyebilirsiniz. Örneğin, 'Dataverse'e ek varlıklar eklenmiş ve bunları da içe aktarmak isterseniz.    
+Varlık seçimini ancak veri kaynağı oluşturduktan sonra düzenleyebilirsiniz. Örneğin, 'Dataverse'e ek varlıklar eklenmiş ve bunları da içe aktarmak isterseniz.
 Farklı bir Dataverse veri gölüne bağlanmak için [yeni bir veri kaynağı oluşturun](#connect-to-a-dataverse-managed-lake).
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-2. Güncelleştirmek istediğiniz veri kaynağının yanındaki dikey üç noktayı ( &vellip;) seçin.
+1. Güncelleştirmek istediğiniz veri kaynağının yanında **Düzenle**'yi seçin.
 
-3. Listeden **Düzenle** seçeneği belirleyin.
-
-4. Kullanılabilir varlıklar listesinden ek varlıklar seçin ve ardından **Kaydet**'i seçin.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Kullanılabilir varlıklar listesinden ek varlıklar seçin ve ardından **Kaydet**'i seçin.

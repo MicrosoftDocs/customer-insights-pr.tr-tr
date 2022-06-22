@@ -1,7 +1,7 @@
 ---
 title: Birleşik müşteri profillerini zenginleştirme
 description: Müşteri verilerinizi zenginleştirmek için özellikleri kullanın.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800629"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954065"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
 
@@ -35,29 +35,29 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 
 # <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 
+- LiveRamp AbiliTec tarafından sağlanan [AbiliTec Kimliği](enrichment-liveramp.md)
 - Microsoft tarafından sağlanan [markalar](enrichment-microsoft.md)
-- Microsoft tarafından sağlanan [ilgi alanları](enrichment-microsoft.md)
-- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md) 
 - Experian tarafından sağlanan [demografik bilgiler](enrichment-experian.md)
-- Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md) 
-- [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
-- HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md) 
-- LiveRamp AbiliTec tarafından sağlanan [Kimlik](enrichment-liveramp.md)
+- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md)
+- Microsoft tarafından sağlanan [ilgi alanları](enrichment-microsoft.md)
+- Microsoft Azure Haritalar tarafından sağlanan [Konum verileri](enrichment-azure-maps.md)
+- HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md)
+- Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [SFTP özel verileri](enrichment-SFTP-custom-import.md)
 
 # <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
-- Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
-- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md) 
-- Microsoft tarafından sağlanan [iyileştirilmiş şirket verileri](enrichment-enhanced-company-data.md)
-- HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md) 
-- Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [özel veriler](enrichment-SFTP-custom-import.md) 
-- [Azure Haritalar](enrichment-azure-maps.md), Microsoft tarafından sağlanır
-- Dun & Bradstreet tarafından sağlanan [şirket verileri](enrichment-dnb.md)
 - Microsoft tarafından sağlanan [Firma etkileşim verileri](enrichment-office.md)
+- Dun & Bradstreet tarafından sağlanan [şirket verileri](enrichment-dnb.md)
+- Leadspace tarafından sağlanan [şirket verileri](enrichment-leadspace.md)
+- Microsoft tarafından sağlanan [gelişmiş adresler](enrichment-enhanced-addresses.md)
+- Microsoft tarafından sağlanan [iyileştirilmiş şirket verileri](enrichment-enhanced-company-data.md)
+- Microsoft Azure Haritalar tarafından sağlanan [Konum verileri](enrichment-azure-maps.md)
+- HERE Technologies tarafından sağlanan [konum verileri](enrichment-here.md)
+- Güvenli Dosya Aktarım Protokolü (SFTP) aracılığıyla [SFTP özel verileri](enrichment-SFTP-custom-import.md)
 
 ---
 
-**Zenginleştirmelerim** sekmesinde, yapılandırdığınız zenginleştirmeleri görebilir ve özelliklerini düzenleyebilirsiniz.
+**Zenginleştirmelerim** sekmesinde, yapılandırdığınız zenginleştirmeleri görebilir ve özelliklerini düzenleyebilirsiniz. Zenginleştirmelerden [segmentler](segments.md) veya [ölçümler](measures.md) de oluşturabilirsiniz.
 
 ## <a name="manage-existing-enrichments"></a>Mevcut zenginleştirmeleri yönetme
 
@@ -81,36 +81,45 @@ Listeden seçerek birden çok zenginleştirmeyi aynı anda çalıştırın veya 
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Aynı türden birden çok zenginleştirme
 
-Zenginleştirmeniz gereken varlık, profillerinizin yalnızca bir alt kümesini zenginleştirme olanağı sağlayan zenginleştirme yapılandırması sırasında belirtilir. Örneğin, verileri yalnızca belirli bir segment için zenginleştirir. Aynı türden birçok zenginleştirme ve aynı bağlantıyı yeniden kullanabilirsiniz. Bazı zenginleştirmeler aynı türden zenginleştirmeler türlerine sınırlı olur. Sınırları ve geçerli kullanımı, **zenginleştirme** sayfasında görülebilir.
+Zenginleştirmeniz gereken varlık, profillerinizin yalnızca bir alt kümesini zenginleştirme olanağı sağlayan zenginleştirme yapılandırması sırasında belirtilir. Örneğin, verileri yalnızca belirli bir segment için zenginleştirir. Aynı türden birçok zenginleştirme ve aynı bağlantıyı yeniden kullanabilirsiniz. Bazı zenginleştirmeler aynı türden zenginleştirmeler türlerine sınırlı olur. Limitler ve geçerli kullanım, **Zenginleştirme** sayfasının **Keşfet** sekmesindeki her bir kutucukta görülebilir.
 
 ## <a name="enrich-data-sources-before-unification"></a>Birleştirmeden önce veri kaynaklarını zenginleştirme
 
 Veri eşleşmesinin kalitesini artırmaya yardımcı olmak için verileri birleştirmeden önce müşteri verilerinizi zenginleştirebilirsiniz. Daha fazla bilgi için bkz. [veri kaynağı zenginleştirmesi](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Zenginleştirme işleminin ilerleme durumunu görün
+## <a name="run-or-refresh-enrichments"></a>Zenginleştirmeleri çalıştırma veya yenileme
+
+1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin. Alternatif olarak, [Zamanlanmış yenileme](system.md#schedule-tab) işleminin bir parçası olarak sistemin zenginleştirmeyi otomatik olarak çalıştırmasına izin verin. İşlem süresi müşteri verilerinizin boyutuna bağlıdır.
+
+1. İsteğe bağlı olarak [zenginleştirme işleminin ilerlemesine bakın](#see-the-progress-of-the-enrichment-process).
+
+1. Zenginleştirme işlemi tamamlandıktan sonra yeni zenginleştirilmiş müşteri profilleri verilerini, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını incelemek için **Zenginleştirmelerim**'e gidin.
+
+1. [Zenginleştirme sonuçlarını](#enrichment-results) görmek için zenginleştirmeyi seçin.
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Zenginleştirme işleminin ilerleme durumunu görün
 
 Yenilenme sırasında veya yenileme işlemi tamamlandıktan sonra BT durumu ve potansiyel sorunlar da dahil olmak üzere, bir zenginleştirme hakkında ayrıntılı bilgi bulabilirsiniz. Bir zenginleştirmeyi yenilemede ne gibi süreçler olduğunu ve bu süreçleri çalıştırmanın ne kadar sürdüğünü anlayın. Zenginleştirme durumu; Experian, Leadspace, HERE Technologies, SFTP Import ve Azure Haritalar için desteklenir.
 
-Zenginleştirme durumunu görmek için
-
-1. **Veriler** > **Zenginleştirme**'ye gidin. 
-1. **Zenginleştirmelerim** sekmesinde yan bölmeyi açmak için bir zenginleştirme durumunu seçin. 
-1. **İlerleme ayrıntıları** bölmesinde, **Zenginleştirmelerim** bölümünü genişletin. 
-1. İlerlemeyi görmek istediğiniz zenginleştirme altından **Ayrıntıları görüntüle**'yi seçin. 
-1. **Görev ayrıntıları** bölmesinde, zenginleştirmenizi ve durumlarını güncelleştirmekte yer alan işlemleri görmek için **Ayrıntıları göster**'i seçin. 
+1. **Veriler** > **Zenginleştirme**'ye gidin.
+1. **Zenginleştirmelerim** sekmesinde yan bölmeyi açmak için zenginleştirme durumunu seçin.
+1. **İlerleme ayrıntıları** bölmesinde, **Zenginleştirmelerim** bölümünü genişletin.
+1. İlerlemeyi görmek istediğiniz zenginleştirme altından **Ayrıntıları görüntüle**'yi seçin.
+1. **Görev ayrıntıları** bölmesinde, zenginleştirmenizi ve durumlarını güncelleştirmekte yer alan işlemleri görmek için **Ayrıntıları göster**'i seçin.
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
-Tamamlanan bir zenginleştirme çalıştırmasından sonra, zenginleştirme sonuçlarını gözden geçirebilirsiniz.
+Tamamlanan bir zenginleştirme çalıştırmasından sonra, zenginleştirme sonuçlarını inceleyin.
 
-1. **Veriler** > **Zenginleştirme**'ye gidin. 
-1. Hakkında bilgi almak istediğiniz zenginleştirmeyi seçin.
+1. **Veriler** > **Zenginleştirme**'ye gidin.
+1. **Zenginleştirmelerim** sekmesinde hakkında bilgi edinmek istediğiniz zenginleştirmeyi seçin.
 
-Tüm zenginleştirmeler zenginleştirilmiş profillerin sayısı, oluşturulan zenginleştirme varlığının önizlemesi ve zaman içinde zenginleştirilmiş profillerin sayısı gibi temel bilgileri gösterir. Varsa, **Alana göre zenginleştirilen müşteri sayısı**, her zenginleştirilmiş alanın kapsamında ayrıntılı bilgiler sağlar.
+Tüm zenginleştirmeler zenginleştirilmiş profillerin sayısı ve zaman içinde zenginleştirilmiş profillerin sayısı gibi temel bilgileri gösterir. **Zenginleştirilmiş müşteriler önizlemesi** kutucuğu, oluşturulan zenginleştirme varlığının bir örneğini gösterir. Ayrıntılı görünümü görmek için **Daha fazla göster**'i ve **Veriler** sekmesini seçin.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Zenginleştirme sonuçları sayfası.":::
 
-Bazı zenginleştirmeler, zenginleştirme türüne özel bilgileri de gösterir. Daha fazla bilgi için ilgili zenginleştirmenin belgelerine başvurun.
+Varsa, **Alana göre zenginleştirilen müşteri sayısı**, her zenginleştirilmiş alanın kapsamında ayrıntılı bilgiler sağlar.
 
+Bazı zenginleştirmeler, zenginleştirme türüne özel bilgileri de gösterir. Daha fazla bilgi için ilgili belgelere bakın.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

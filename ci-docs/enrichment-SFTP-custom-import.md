@@ -1,19 +1,19 @@
 ---
 title: SFTP özel içeri aktarmayla zenginleştirme
 description: SFTP özel içeri aktarma zenginleştirmesi hakkında genel bilgiler.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647528"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953743"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Müşteri profillerini özel verilerle zenginleştirme (önizleme)
 
@@ -21,54 +21,13 @@ Güvenli Dosya Aktarım Protokolü (SFTP) özel içeri aktarma işlemi, verileri
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-SFTP özel içeri aktarma zenginleştirmelerini yapılandırmak için aşağıdaki ön koşulların karşılanması gerekir:
+- SFTP ana bilgisayarında içeri aktarılacak dosyanın adı ve konumu (yolu) bilinmelidir.
 
-- SFTP ana bilgisayarındaki alınacak dosyanın adı ve konumuna (yol) sahip olmanız gerekir.
-- Alınacak veriler Için [Common Data Model şemasını](/common-data-model/) belirten bir *model.json* dosyası vardır. Bu dosya, içeri aktarılacak dosyayla aynı dizinde olmalıdır.
-- Bir SFTP bağlantısı zaten bir Yönetici tarafından yapılandırılmış olabilir *veya* [Yönetici](permissions.md#admin) izinlere sahip olmanız gerekir. Verileri almak istediğiniz SFTP konumunun Kullanıcı kimlik bilgileri, URL'si ve bağlantı noktası numarası gerekir.
+- İçeri aktarılacak veriler için Common Data Model şemasını belirten bir *model.json* dosyası kullanılabilir olmalıdır. Bu dosya, içeri aktarılacak dosyayla aynı dizinde olmalıdır.
 
+- SFTP [bağlantısı](connections.md) [yapılandırılmış](#configure-the-connection-for-sftp-custom-import) olmalıdır.
 
-## <a name="configure-the-import"></a>İçe aktarmayı yapılandırın
-
-1. **Veri** > **Zenginleştirme** sayfasına gidin ve **Keşfet** sekmesini seçin.
-
-1. **SFTP özel içe aktarma kutusunda**, **verilerimi zenginleştir** ve **Başlarken**'i seçin.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP Özel İçeri Aktarma kutucuğu.":::
-
-1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi ve açılan listeden **SFTP özel içe aktarma** seçeneğini belirleyerek bir bağlantı oluşturabilirsiniz.
-
-1. Bağlantı seçimini onaylamak için **Özel İçe aktarmaya bağlan**'ı seçin.
-
-1.  **İleri**'i seçin ve almak istediğiniz veri dosyasının **yolunu** ve **dosya adını** girin.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Veri konumuna girerken ekran görüntüsü.":::
-
-1. **İleri**'yi ve müşteri veri kümesini seçin. Bu, tüm müşteri profilleri veya bir segment olabilir.
-
-1. **İleri**'yi seçin ve Zenginleştirme için bir ad ve çıkış varlığı için bir ad girin. 
-
-1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>SFTP özel alma için bağlantıyı yapılandırma 
-
-Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Bir zenginleştirme yapılandırırken **Bağlantı Ekle**'yi seçin *veya* **yönetici** > **Bağlantılar**'a gidip Özel İçe aktarma kutucuğunda **Ayarla**'yı seçin.
-
-1. **Görünen ad** kutusunda bağlantı için bir ad girin.
-
-1. Alınacak verilerin bulunduğu SFTP sunucusu için geçerli bir Kullanıcı adı, parola ve ana bilgisayar URL 'SI girin.
-
-1. İnceleyin ve **Veri gizliliği ve uyumluluk** için **Kabul ediyorum** onay kutusunu seçerek onayınızı verin.
-
-1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
-
-1. Doğrulama tamamlandığında, bağlantı, **Kaydet** seçilerek kaydedilebilir.
-
-   > [!div class="mx-imgBorder"]
-   > ![Experian bağlantısı yapılandırma sayfası.](media/enrichment-SFTP-connection.png "Experian bağlantı Yapılandırması sayfası")
-
-
-## <a name="defining-field-mappings"></a>Alan eşlemelerini tanımlama 
+## <a name="file-schema-example"></a>Dosya şeması örneği
 
 SFTP sunucusunda içeri aktarılacak dosyayı içeren dizin ayrıca bir *model.json* dosyası da içermelidir. Bu dosya, verileri içeri aktarmak için kullanılacak şemayı tanımlar. Şemanın, alan eşlemesini belirtmek Için [ortak veri modeli](/common-data-model/) kullanmaları gerekebilir. model.json dosyasının basit bir örneği şuna benzer:
 
@@ -82,12 +41,12 @@ SFTP sunucusunda içeri aktarılacak dosyayı içeren dizin ayrıca bir *model.j
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,13 +73,56 @@ SFTP sunucusunda içeri aktarılacak dosyayı içeren dizin ayrıca bir *model.j
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>SFTP özel alma için bağlantıyı yapılandırma
+
+Customer Insights'ta [yönetici](permissions.md#admin) olmanız ve verileri içeri aktarmak istediğiniz SFTP konumu için kullanıcı kimlik bilgilerine, URL'ye ve bağlantı noktası numarasına sahip olmanız gerekir.
+
+1. Bir zenginleştirme yapılandırırken **Bağlantı Ekle**'yi seçin veya **Yönetici** > **Bağlantılar**'a gidip Özel İçe aktarma kutucuğunda **Ayarla**'yı seçin.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Özel İçeri Aktarma bağlantı yapılandırma sayfası.":::
+
+1. Bağlantı için bir ad girin.
+
+1. Alınacak verilerin bulunduğu SFTP sunucusu için geçerli bir Kullanıcı adı, parola ve ana bilgisayar URL 'SI girin.
+
+1. [Kabul ediyorum](#data-privacy-and-compliance)'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
+
+1. Yapılandırmayı doğrulamak için **Doğrula**'yı ve ardından **Kaydet**'i seçin.
+
+### <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
+
+Dynamics 365 Customer Insights uygulamasının Özel İçeri Aktarma kullanarak veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri alır, ancak verilerin sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini yerine getirmesini sağlamaktan siz sorumlusunuz. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
+Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
+
+## <a name="configure-the-import"></a>İçe aktarmayı yapılandırın
+
+1. **Veri** > **Zenginleştirme** sayfasına gidin ve **Keşfet** sekmesini seçin.
+
+1. **STFP özel içe aktarma** kutucuğunda **Verilerimi zenginleştir** seçeneğini belirleyin.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP Özel İçeri Aktarma kutucuğu.":::
+
+1. Genel bakışı inceleyip **İleri**'yi seçin.
+
+1. Bağlantıyı seçin. Kullanılabilir değilse yönetici ile iletişime geçin.
+
+1. **Müşteri veri kümesi** seçeneğini belirleyin ve zenginleştirmek istediğiniz profili veya segmenti seçin. *Müşteri* varlığı tüm müşteri profillerinizi zenginleştirirken bir segment yalnızca bu segmentte bulunan müşteri profillerini zenginleştirir.
+
+1. **İleri**'yi seçin.
+
+1. İçeri aktarmak istediğiniz veri dosyasının **Yol** ve **Dosya Adı**'nı girin.
+
+1. **İleri**'yi seçin.
+
+1. Zenginleştirme için bir **Ad** ve **Çıkış varlığı adı** girin.
+
+1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
+
+1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
+
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
-Zenginleştirme işlemini başlatmak için, komut çubuğundan **Çalıştır**'ı seçin. [Zamanlanmış yenileme](system.md#schedule-tab) işleminin bir parçası olarak, sistemin zenginleştirmeyi otomatik olarak çalıştırılmasına da izin verebilirsiniz. İşleme süresi, içeri aktarılacak verilerin boyutuna ve SFTP sunucusu bağlantısına bağlı olarak değişir.
-
-Zenginleştirme işlemi tamamlandıktan sonra yeni içeri aktarılan özel zenginleştirme verilerinizi **Zenginleştirmelerim** altında inceleyebilirsiniz. Ayrıca, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını da bulacaksınız.
-
-**Zenginleştirilmiş verileri görüntüle**'yi seçerek her zenginleştirilmiş profilin ayrıntılı görünümüne erişebilirsiniz.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

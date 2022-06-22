@@ -1,19 +1,19 @@
 ---
 title: Customer Insights verilerini Azure Blob depolamasına içeri aktarma
 description: Bağlantıyı yapılandırmayı ve Blob Depolama'da dışa aktarmayı öğrenin.
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757410"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947162"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segment listesini ve diğer verileri Azure Blob depolama'ya ver (Önizleme)
 
@@ -58,16 +58,19 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
-Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır.     
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır.
 
-[Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
+[Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz.
 
 Dışarı aktarılan veriler, yapılandırdığınız Blob Depolama kapsayıcısında depolanır. Aşağıdaki klasör yolları kapsayıcısında otomatik olarak oluşturulur:
 
 - Kaynak varlıkları ve sistem tarafından oluşturulan varlıklar için:   
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Örnek: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > Büyük miktarda veri içeren varlıklar dışarı aktarıldığında her dışarı aktarma işlemi için aynı klasörde birden fazla CSV dosyası bulunabilir. Dışarı aktarma işleminin tamamlanması için gereken süreyi en aza indirmek için performans nedenleriyle dışarı aktarmalarda bölünme olabilir.
+
 - Dışarı aktarılan varlıklar için model.json, %ExportDestinationName% düzeyinde olur.  
   - Örnek: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

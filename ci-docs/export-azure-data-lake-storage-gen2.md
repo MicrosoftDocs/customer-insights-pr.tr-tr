@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647645"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947254"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segment listesini ve diğer verileri Azure Data Lake Storage Gen2'ye verme (Önizleme)
 
@@ -21,11 +21,9 @@ Data Lake Storage Gen2 hesabı Customer Insights verilerinizi depolamak veya ver
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-1. Azure Data Lake Storage Gen2 için, veri gölü için depolama hesabı oluştururken [Standart performans ve Üstün performans katmanı](/azure/storage/blobs/create-data-lake-storage-account) arasında seçim yapabilirsiniz. Üst düzey performans katmanını seçerseniz, üst düzey blok blobu hesap türünü seçin. 
+1. Azure Data Lake Storage Gen2 için, veri gölü için depolama hesabı oluştururken [Standart performans ve Üstün performans katmanı](/azure/storage/blobs/create-data-lake-storage-account) arasında seçim yapabilirsiniz. Üst düzey performans katmanını seçerseniz, üst düzey blok blobu hesap türünü seçin.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Azure Data Lake Storage Gen2 uygulamalarına bağlantıyı ayarlayın. 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Azure Data Lake Storage Gen2 uygulamalarına bağlantıyı ayarlayın.
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
@@ -39,7 +37,7 @@ Data Lake Storage Gen2 hesabı Customer Insights verilerinizi depolamak veya ver
     - Azure Data Lake Storage Gen2 ile kullanılmak üzere depolama hesabı oluşturmayı öğrenmek için bkz. [Depolama hesabı oluşturma](/azure/storage/blobs/create-data-lake-storage-account). 
     - Azure Data Lake 2. Nesil depolama hesabı adı ve firma anahtarının nasıl bulunacağı hakkında daha fazla bilgi edinmek için bkz. [Azure Portal'da depolama hesabı ayarlarını yönetme](/azure/storage/common/storage-account-manage).
 
-1. Bağlantıyı tamamlamak için **Kaydet**'i seçin. 
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
 
 ## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
@@ -57,8 +55,12 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 
-Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
+Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır.
+[Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz.
 
-Verilen veriler, yapılandırdığınız Azure Data Lake 2. Nesil depolama kapsayıcısında depolanır. 
+Verilen veriler, yapılandırdığınız Azure Data Lake 2. Nesil depolama kapsayıcısında depolanır.
+
+> [!TIP]
+> Büyük miktarda veri içeren varlıklar dışarı aktarıldığında her dışarı aktarma işlemi için aynı klasörde birden fazla CSV dosyası bulunabilir. Dışarı aktarma işleminin tamamlanması için gereken süreyi en aza indirmek için performans nedenleriyle dışarı aktarmalarda bölünme olabilir.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833599"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012003"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights kullanmaya başlama
 
@@ -39,7 +39,7 @@ Customer Insights'ta ilk kez oturum açtığınızda, ayarları yapılandırın 
 
 Birleşik profiller, içgörüler almak ve veriler üzerinde işlem yapmak için gerekli olan bir temelidir. Çeşitli kaynaklardan verileri alın ve birleştirilmiş profilleri birleştirmek için verileri birleşme işlemini çalıştırın. Alınan varlıklar arasındaki ilişkileri belirtin ve profillere bilgi eklemek için zenginleştirme özelliklerini kullanın.
 
-1. Birden çok seçenekten veri kaynağı oluşturarak verileri alın. [Power Query bağlayıcıları](connect-power-query.md), [Common Data Model klasörü](connect-common-data-model.md) veya [Microsoft Dataverse](connect-dataverse-managed-lake.md) arasından seçim yapın.
+1. Birden çok seçenekten veri kaynağı oluşturarak verileri alın. [Common Data Model dahil Azure Data Lake Storage](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md) veya [Power Query bağlayıcıları](connect-power-query.md) arasından seçim yapın.
 
 1. [Kaynak alanları](map-entities.md) tanımlayarak, [yinelenenleri](remove-duplicates.md) kaldırarak, [koşulları eşleştirerek](match-entities.md) ve [alanları birleştirerek](merge-entities.md) bir [veri birleştirme işlemi](data-unification.md) yürütün.
 

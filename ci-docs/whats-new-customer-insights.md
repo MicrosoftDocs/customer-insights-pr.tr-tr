@@ -1,19 +1,19 @@
 ---
-title: Yeni ve gelecek özellikler
+title: Yeni ve güncelleştirilmiş özellikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833654"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843371"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'teki yenilikler
 
@@ -24,6 +24,37 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
 
+## <a name="may-2022-updates"></a>Mayıs 2022 güncelleştirmeleri
+
+Mayıs 2022'deki güncelleştirmeler arasında yeni özellikler, performans yükseltmeleri ve hata düzeltmeleri yer alıyor.
+
+### <a name="updated-data-unification-experience"></a>Güncelleştirilmiş veri birleştirme deneyimi
+
+ Verileri ilişkilendirme, bu verilerin birleştirilmiş bir görünümünü sağlayan tek bir ana veri kümesi, her bir-farklı veri kaynağını birleştirir. Veriler tek bir varlık veya birden çok varlık için Birleşik olabilir. İlk olarak, [varlıkları ve kaynak alanlarını seçin](map-entities.md), [yinelenen kayıtları kaldırın](remove-duplicates.md), [eşleşen koşullar](match-entities.md) için kurallar belirleyin ve [Unified customer profile'a dahil edilecek alanları](merge-entities.md) tanımlayın.
+
+Daha fazla bilgi için bkz. [Veri birleştirmeye genel bakış](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Customer Insights'ta yenilenen giriş sayfası
+
+**Giriş**, temel özellikler için yapılandırma sürecinde size yol gösterir ve segmentlere, ölçülere ve zenginleştirme verilerine genel bir bakış sunar. Bir bakışta daha ilgili bilgiler sağlamak için deneyimi yeniledik.
+
+Daha fazla bilgi için bkz. [Customer Insights'ı keşfedin](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Bir segmentin kullanımını izleme
+
+Artık, Customer Insights ile bağlantılı Dataverse kuruluşunu temel alan uygulamalarda [segmentin kullanımını izleyebilirsiniz](segments.md#track-usage-of-a-segment). [Dynamics 365 Marketing müşteri yolculuklarında kullanılan Customer Insights segmentleri](/dynamics365/marketing/real-time-marketing-ci-profile) için sistem size segmentin kullanımı hakkında bilgi verir.
+
+### <a name="export-to-criteo"></a>Criteo'ya dışarı aktarma
+
+Criteo, kullanıcıların dijital reklamcılığı yönetmelerine yardımcı olan çevrimiçi bir platformdur. Artık kampanyalar oluşturmak, e-posta pazarlaması sağlamak ve Criteo ile belirli müşteri gruplarını kullanmak için Unified customer profile segmentlerini dışa aktarabilirsiniz.
+
+Daha fazla bilgi için bkz. [Segmentleri Criteo'ya aktarma (önizleme)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Ortam oluşturma için iyileştirilmiş belge yapısı
+
+Customer Insights'ta ortamların oluşturulması ve yönetimiyle ilgili yardım belgelerini yeniden ele aldık. Makaleler artık içerikler tablosundaki Ortamlar düğümü altında gruplandırılmıştır. Yeniden yapılandırılmış makaleler, ortamları kurmanın ve daha net bir yapıya sahip olmanın farklı yolları için daha fazla rehberlik sağlar. Paylaşacak geri bildiriminiz varsa yardım makalelerinin sonuna doğru denetimler aracılığıyla bize bildirin.
+
+Daha fazla bilgi için bkz. [Nasıl yapılır: Yeni bir ortam oluşturma](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Nisan 2022 güncelleştirmeleri
 

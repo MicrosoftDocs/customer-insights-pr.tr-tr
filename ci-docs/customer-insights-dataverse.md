@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833700"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011580"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
 Customer Insights, çıkış varlıklarını [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) olarak kullanılabilir hale getirme seçeneğini sunar. Bu tümleştirme, az kod gerektiren/kodsuz bir yaklaşım aracılığıyla kolay veri paylaşımına ve özel geliştirmeye olanak tanır. [Çıkış varlıkları](#output-entities) Dataverse ortamında tablolar olarak kullanılabilir. Verileri, Dataverse tablolarını temel alan başka bir uygulama için kullanabilirsiniz. Bu tablolar, Power Automate aracılığıyla otomatikleştirilmiş iş akışları veya Power Apps ile uygulama oluşturma gibi senaryoları etkinleştirir.
 
-Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve ağ geçitlerini kullanarak şirket içi veri kaynaklarından veri almanıza](data-sources.md#add-data-from-on-premises-data-sources) olanak tanır.
+Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve ağ geçitlerini kullanarak şirket içi veri kaynaklarından veri almanıza](connect-power-query.md#add-data-from-on-premises-data-sources) olanak tanır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 

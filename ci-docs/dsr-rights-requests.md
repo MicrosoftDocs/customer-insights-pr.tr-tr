@@ -1,19 +1,19 @@
 ---
 title: GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri | Microsoft Docs
 description: Dynamics 365 Customer Insights için Veri Sahibi İsteklerinin yanıtlanması.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808591"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947392"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri
 
@@ -77,11 +77,5 @@ Kiracı yöneticisi verileri dışarı aktarmak için aşağıdaki adımları iz
 1. D365CI@microsoft.com adresine, istek içerisinde kullanıcının e-posta adresini belirten bir e-posta gönderin. Customer Insights takımı, kayıtlı kiracı yöneticisi e-posta adresine bir e-posta göndererek verilerin dışarı aktarılmasını onaylamanızı ister.
 2. İstenen kullanıcı için verileri dışarı aktarma onayını kabul edin.
 3. Dışarı aktarılan verileri kiracı yöneticisi e-posta adresi üzerinden alın.
-
-## <a name="consent-management-preview"></a>Onay yönetimi (önizleme)
-
-Onay yönetimi özelliği kullanıcı verilerini doğrudan toplamaz. Yalnızca diğer uygulamalarda kullanıcıların sağladığı onay verilerini alır ve işler.
-
-Belirli kullanıcılarla ilgili onay verilerini kaldırmak için, bu verileri onay yönetimi özelliğine alınan veri kaynaklarından kaldırın. Veri kaynağını yeniledikten sonra, kaldırılan veriler Onay Merkezi'nden de silinir. Onay varlığını kullanan uygulamalar, [yenilemeden](system.md#refresh-processes) sonra kaynakta kaldırılan verileri de siler. Veri sahibi isteğine yanıt verdikten sonra, kullanıcı verileri tüm diğer işlemlerden ve uygulamalardan kaldırmak için veri kaynaklarını hızlıca yenilemenizi öneririz.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

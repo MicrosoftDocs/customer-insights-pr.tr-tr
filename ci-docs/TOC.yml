@@ -48,14 +48,14 @@
   items:
     - name: Veri kaynaklarına genel bakış
       href: data-sources.md
+    - name: Azure Data Lake Storage'ta verilere bağlanma
+      href: connect-common-data-model.md
+    - name: Azure Synapse Analytics'a bağlanma
+      href: connect-synapse.md
+    - name: Microsoft Dataverse yönetilen veri gölündeki verilere bağlanma
+      href: connect-dataverse-managed-lake.md
     - name: Power Query bağlayıcıları aracılığıyla veri kaynakları ekleme
       href: connect-power-query.md
-    - name: Veri kaynağı olarak bir Common Data Model klasörü ekleme
-      href: connect-common-data-model.md
-    - name: Dataverse yönetilen veri gölü ekleme
-      href: connect-dataverse-managed-lake.md
-    - name: Azure Synapse Analytics ekleme
-      href: connect-synapse.md
     - name: Veri kaynakları için zenginleştirme
       href: data-sources-enrichment.md
     - name: Veri kaynakları için artımlı yenileme
@@ -82,27 +82,27 @@
   items:
     - name: Müşteri profillerini zenginleştirme
       href: enrichment-hub.md
+    - name: Office 365 firma verileri
+      href: enrichment-office.md
     - name: Markalar ve ilgi alanları
       href: enrichment-microsoft.md
+    - name: Dun & Bradstreet şirket verileri
+      href: enrichment-dnb.md
+    - name: Leadspace'ten şirket verileri
+      href: enrichment-leadspace.md
+    - name: Experian ile demografik bilgiler
+      href: enrichment-experian.md
     - name: Gelişmiş adresler
       href: enrichment-enhanced-addresses.md
     - name: Gelişmiş şirket verileri
       href: enrichment-enhanced-company-data.md
-    - name: Azure Haritalar ile zenginleştirme
-      href: enrichment-azure-maps.md
-    - name: Dun & Bradstreet ile zenginleştirme
-      href: enrichment-dnb.md
-    - name: HERE Technologies ile zenginleştirme
-      href: enrichment-here.md
-    - name: Leadspace ile zenginleştirme
-      href: enrichment-leadspace.md
-    - name: LiveRamp ile zenginleştirme
+    - name: LiveRamp ile kimlik
       href: enrichment-liveramp.md
-    - name: Experian İle zenginleştirme
-      href: enrichment-experian.md
-    - name: Office 365 verileriyle zenginleştirme
-      href: enrichment-office.md
-    - name: SFTP özel içeri aktarmayla zenginleştirme
+    - name: Azure Haritalar'dan konum
+      href: enrichment-azure-maps.md
+    - name: HERE Technologies'den konum
+      href: enrichment-here.md
+    - name: SFTP özel içeri aktarma
       href: enrichment-SFTP-custom-import.md
 - name: Birleşik profiller
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Müşteri etkinliklerini tanımlama
       href: activities.md
+    - name: Customer Insights için onay yönetimi
+      href: consent-management.md
 - name: Segmentler
   items:
     - name: Segmentlere genel bakış
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: OData örnek sorgular
       href: odata-examples.md
-- name: Onay yönetimi (Önizleme)
-  items:
-    - name: Yardım merkezi
-      href: consent-management/index.yml
-    - name: Özelliğe genel bakış
-      href: consent-management/overview.md
-    - name: Kullanmaya başlayın
-      items:
-        - name: Kullanmaya başlayın
-          href: consent-management/get-started.md
-        - name: Kavramlar ve terminoloji
-          href: consent-management/glossary.md
-    - name: Onay verilerini içeri aktarma
-      items:
-        - name: Onay verilerini içeri aktarma
-          href: consent-management/import-consent-data.md
-        - name: Onay verileri ayarlama ve onay tercihlerini uygulama
-          href: consent-management/set-consent-rules.md
-    - name: Onay verilerini yönetme
-      items:
-        - name: Customer Insights'ta onay kurallarını etkinleştirme
-          href: activate-consent.md
-        - name: Customer Insights segmentleriyle varsayılan onay kurallarını yönetin
-          href: change-default-consent-rules.md
-    - name: Ayarları ve kullanıcıları yönetme
-      items:
-        - name: Sistem ayarlarını yapılandırma
-          href: consent-management/system-settings.md
-        - name: Kullanıcıları ve izinleri yönetme
-          href: consent-management/manage-users.md
-    - name: Onay verilerini kullanma
-      items:
-        - name: Onay verileriyle tahminler oluşturma
-          href: consent-management/predictions-consent-data.md
 - name: Hizmet sınırları
   href: service-limits.md
 - name: DSR hakları ve istekleri

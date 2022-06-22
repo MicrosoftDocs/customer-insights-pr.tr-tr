@@ -1,7 +1,7 @@
 ---
 title: Birleştirme ayarlarını güncelleştirme
 description: Birleşme ayarlarındaki yinelenen kuralları, eşleştirme kurallarını veya birleşmiş alanları güncelleştirin.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755614"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844064"
 ---
 # <a name="update-the-unification-settings"></a>Birleştirme ayarlarını güncelleştirme
 
@@ -43,8 +43,9 @@ Birleşik bir profil oluşturulduktan sonra, herhangi bir ayarı gözden geçirm
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Vurgulanan bütünleştirme seçenekleriyle Veri Bütünleştirme sayfasının ekran görüntüsü.":::
 
-   - Unified customer profile'ı (bağımlılıklarla veya bağımlılıklar olmadan) güncelleştirmek için bkz. [Müşteri profilinde güncelleştirme çalıştırma](#run-updates-to-the-unified-customer-profile).
-   - Birleşik profili güncelleştirmeden, eşleştirme koşullarınızın kalitesini değerlendirmek için, [Eşleşen koşulları çalıştır](#run-matching-conditions) bölümüne bakın. **Yalnızca eşleşen koşulları çalıştır** seçeneği tek bir varlık için görüntülenmez.
+   - Birleştirilmiş profili güncelleştirmeden eşleştirme koşullarınızın (tekilleştirme ve eşleşme kuralları) kalitesini hızlı bir şekilde değerlendirmek için [eşleştirme koşullarını çalıştırın](#run-matching-conditions). **Yalnızca eşleşen koşulları çalıştır** seçeneği tek bir varlık için görüntülenmez.
+   - Eşleşen koşulları çalıştırmak ve unified customer profile varlığını bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden güncelleştirmek için [müşteri profillerini birleştirin](#run-updates-to-the-unified-customer-profile). Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](system.md#schedule-tab) yenilenecek.
+   - Eşleşen koşulları çalıştırmak ve unified customer profile varlığını ve tüm bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) güncelleştirmek için [müşteri profillerini ve bağımlılıkları birleştirin](#run-updates-to-the-unified-customer-profile). Tüm işlemler otomatik olarak yeniden çalıştırıldı.
 
 ## <a name="edit-source-fields"></a>Kaynak alanları düzenleme
 
@@ -135,11 +136,13 @@ Eşleştirme parametrelerinin çoğunu yeniden yapılandırabilir ve üzerinde i
 
 ## <a name="run-matching-conditions"></a>Eşleştirme koşullarını çalıştırma
 
+Eşleştirme koşullarını çalıştır, yalnızca veri kaldırma ve eşleşme kurallarını çalıştırır ve *Deduplication_* ve *ConflationMatchPair* varlıklarını güncelleştirir.
+
 1. **Veri** > **Birleştir** sayfasından, **Yalnızca eşleştirme koşullarını çalıştır**'ı seçin.
 
-   **Yinelenen kayıtlar** ve **Eşleştirme koşulları** kutucukları, **Kuyruğa alınmış** veya **Yenilenen**'i gösterir.
+   **Yinelenen kayıtlar** ve **Eşleştirme koşulları** kutucukları, **Kuyruğa alındı** veya **Yenileniyor** durumunu gösterir.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Eşleşen işlem tamamlandığında, **Eşleşen koşullar** kutucuğunda **Düzenle**'yi seçin.
 
@@ -153,10 +156,12 @@ Eşleştirme parametrelerinin çoğunu yeniden yapılandırabilir ve üzerinde i
 
 1. **Veri** > **Birleştir** sayfasından, aşağıdakileri seçin:
 
-   - **Müşteri profillerini bütünleştirme**: Unified customer profile varlığını, bağımlılıkları etkilemeden (örn. zenginleştirme, segmentler veya ölçüler gibi) güncelleştirir. Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](system.md#schedule-tab) yenilenecek.
+   - **Müşteri profillerini birleştir**: Bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden eşleşen koşulları çalıştırır ve Unified customer profile varlığını güncelleştirir. Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](system.md#schedule-tab) yenilenecek.
 
-   - **Müşteri profillerini ve bağımlılıklarını bütünleştirme**: Birleşik profili ve tüm bağımlılıkları güncelleştirir. Tüm işlemler otomatik olarak yeniden çalıştırıldı. Tüm aşağı akış işlemleri tamamlandıktan sonra, müşteri profili güncelleştirilmiş verileri yansıtır.
+   - **Müşteri profillerini ve bağımlılıklarını birleştir**: Eşleşen koşulları çalıştırır ve birleştirilmiş profili ve tüm bağımlılıkları güncelleştirir. Tüm işlemler otomatik olarak yeniden çalıştırıldı. Tüm aşağı akış işlemleri tamamlandıktan sonra, müşteri profili güncelleştirilmiş verileri yansıtır.
 
-   **Yinelenen kayıtlar**, **Eşleşen koşullar** ve **Birleşik müşteri alanları** kutucukları, **Kuyruğa alınmış** veya **Yenilenen**'i gösterir.
+   **Yinelenen kayıtlar**, **Eşleşen koşullar** ve **Birleşik müşteri alanları** kutucukları **Kuyruğa alındı** veya **Yenileniyor** durumunu gösterir.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Bir başarılı çalıştırmanın sonuçları, unified customer profile sayısını gösteren **Bütünleştirme** sayfasında görüntülenir.

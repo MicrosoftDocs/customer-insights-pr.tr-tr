@@ -1,88 +1,80 @@
 ---
 title: Verileri almak için veri kaynaklarını kullanma
 description: Çeşitli kaynaklardan verilerin nasıl içe aktarıldığını öğrenin.
-ms.date: 03/18/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800490"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011773"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
+Dynamics 365 Customer Insights, geniş bir kaynak kümesinden veri getirmek için bağlantılar sağlar. Bir veri kaynağına bağlanma, genellikle *veri alma* işlemi olarak anılır. Verileri aldıktan sonra [birleştirebilir](data-unification.md), öngörüler oluşturabilir ve kişiselleştirilmiş deneyimler oluşturmak için verileri etkinleştirebilirsiniz.
 
+## <a name="add-data-sources"></a>Veri kaynakları ekleme
 
-Dynamics 365 Customer Insights, geniş bir kaynak kümesi içindeki verilere bağlanır. Bir veri kaynağına bağlanma, genellikle *veri alma* işlemi olarak anılır. Verileri aldıktan sonra, onlara [bütünleştir](data-unification.md) öğesi uygulayabilir ve üzerinde işlem gerçekleştirebilirsiniz.
+Veri kaynaklarını Customer Insights'a ekleyebilir veya içe aktarabilirsiniz. Aşağıdaki bağlantılar, veri kaynaklarının eklenmesiyle ilgili talimatlar sağlar.
 
-## <a name="add-a-data-source"></a>Veri kaynağı ekle
+**Veri kaynağını ekleme**
 
-Belirlediğiniz seçeneğe bağlı olarak, bir veri kaynağının nasıl ekleneceğini öğrenmek için ayrıntılı makalelere bakın.
+Microsoft'un Azure veri hizmetlerinden birinde hazırlanmış verileriniz varsa Customer Insights verileri yeniden almak zorunda kalmadan veri kaynağına kolayca bağlanabilir. Aşağıdaki seçeneklerden birini belirleyin:
+- [Azure Data Lake Storage (Common Data Model klasöründeki csv veya parquet dosyaları)](connect-common-data-model.md)
+- [Azure Synapse Analytics (Lake veritabanları)](connect-synapse.md)
+- [Microsoft Dataverse veri gölü](connect-dataverse-managed-lake.md)
 
-Aşağıdaki veri kaynaklarını ekleyebilirsiniz:
+**İçe aktarma ve dönüştürme**
 
-- [Düzinelerce Power Query bağlayıcısı aracılığıyla](connect-power-query.md)
-- [Common Data Model klasöründen](connect-common-data-model.md)
-- [Kendi Microsoft Dataverse gölünüzden](connect-dataverse-managed-lake.md)
-- [Azure Synapse Analytics veritabanından](connect-synapse.md)
+Şirket içi veri kaynakları, Microsoft veya üçüncü taraf verileri kullanıyorsanız Power Query bağlayıcılarını kullanarak verileri içe aktarın ve dönüştürün.
+- [Power Query bağlayıcıları](connect-power-query.md)
 
-## <a name="add-data-from-on-premises-data-sources"></a>Şirket içi veri kaynaklarından veri ekleme
+## <a name="review-data-sources"></a>Veri kaynaklarını inceleme
 
-Şirket içi veri kaynaklarından veri alma, Microsoft Power Platform veri akışlarına göre desteklenir. Ortam kurulumu sırasında [Microsoft Dataverse ortam URL'sini sağlayarak](create-environment.md) Customer Insights'ta Veri akışlarını etkinleştirebilirsiniz.
-
-Dataverse ortamını Customer Insights ile ilişkilendirdikten sonra oluşturulan veri kaynakları, varsayılan olarak [Power Platform veri akışlarını](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) kullanır. Veri akışları, veri ağ geçitlerini kullanarak önceden ön bağlanabilirliği destekler. Dataverse ortamı [şirket içi veri ağ geçitleri kullanılarak](/data-integration/gateway/service-gateway-app) ilişkilendirilmeden önce var olan veri kaynaklarını kaldırabilir ve yeniden oluşturabilirsiniz.
-
-Varolan Power BI veya Power Apps ortamdan gelen veri geçitleri görünür ve Customer Insights'ta yeniden kullanabilirsiniz. Veri kaynakları sayfasında, yerinde veri ağ geçitlerini görüntüleyebileceğiniz ve yapılandırabileceğiniz Microsoft Power Platform ortama gitmek için bağlantılar gösterilir.
-
-> [!IMPORTANT]
-> Ağ geçitlerinizin en son sürümüne güncelleştirildiğinden emin olun. Bir güncelleştirme yükleyebilir ve ağ geçidi ekranında görüntülenen komuttan doğrudan yeniden yapılandırabilir ya da [en son sürümü indirebilirsiniz](https://powerapps.microsoft.com/downloads/). En son ağ geçidi sürümünü kullanmıyorsanız, veri akışı yenilemesi şuna benzer bir hata iletisiyle başarısız olur: **Anahtar sözcük desteklenmiyor: yapılandırma özellikleri. Parametre adı: anahtar sözcük**.
-
-## <a name="review-ingested-data"></a>Alınan verilerin gözden geçirilmesi
-Ortamınız Power Platform veri akışları içeriyorsa **Veri Kaynakları** sayfasında üç bölüm listelenir: 
-- **Paylaşıldı**: Tüm Customer Insights yöneticileri tarafından yönetilebilen veri kaynakları. Power BI veri akışları, kendi depolama hesabınız ve Dataverse yönetilen veri gölüne ekleme, paylaşılan veri kaynaklarına örnektir.
-- **Benim tarafımdan yönetilen**: Power Platform veri akışları oluşturulur ve yalnızca sizin tarafından yönetilebilir. Diğer Customer Insights yöneticileri bu veri akışlarını yalnızca görüntüleyebilir ancak düzenleyemez, yenileyemez veya silemez.
+Ortamınız Customer Insights depolamayı kullanacak şekilde yapılandırılmışsa ve şirket içi veri kaynaklarını kullanıyorsanız Power Platform veri akışlarını kullanırsınız. Power Platform veri akışlarıyla, paylaşılan veri kaynaklarını ve başkaları tarafından yönetilen veri kaynaklarını görüntüleyebilirsiniz. **Veri Kaynakları** sayfası, veri kaynaklarını üç bölümde listeler:
+- **Paylaşıldı**: Tüm Customer Insights yöneticileri tarafından yönetilebilen veri kaynakları. Power Platform veri akışları, kendi depolama hesabınız ve Dataverse tarafından yönetilen veri gölüne ekleme, paylaşılan veri kaynaklarına örnektir.
+- **Benim tarafından yönetilen**: Yalnızca sizin tarafınızdan oluşturulan ve yönetilen Power Platform veri akışları. Diğer Customer Insights yöneticileri bu veri akışlarını yalnızca görüntüleyebilir ancak düzenleyemez, yenileyemez veya silemez.
 - **Başkaları tarafından yönetilen**: Diğer yöneticiler tarafından oluşturulan Power Platform veri akışları. Bunları yalnızca görüntüleyebilirsiniz. Bu, herhangi bir yardım için erişebileceğiniz veri akışı sahibini listeler.
 > [!NOTE]
-> Tüm varlıklar, diğer kullanıcılar tarafından görüntülenebilir ve kullanılabilir. Kullanıcı bağlamsallığı, bu veri akışlarından kaynaklanan varlıklar değil yalnızca veri kaynakları için geçerlidir.
+> Tüm varlıklar, diğer kullanıcılar tarafından görüntülenebilir ve kullanılabilir. Veri kaynakları, onları oluşturan kullanıcıya ait olsa da veri alımından elde edilen varlıklar her Customer Insights kullanıcısı tarafından kullanılabilir.
 
-Hiçbir Power Platform veri akışı kullanılmıyorsa, hiçbir grup veya bölüm görmezsiniz. **Veri Kaynakları** sayfası yalnızca tüm veri kaynaklarının listesini içerir.
+Ortamınız Power Platform veri akışlarını kullanmıyorsa **Veri Kaynakları** sayfası yalnızca tüm veri kaynaklarının bir listesini içerir. Hiçbir bölüm görüntülenmiyor.
 
-Her alınan veri kaynağının adı, durumu ve verilerin bu kaynak için en son yenilenme zamanını göreceksiniz. Veri kaynakları listesini her bir sütuna göre sıralayabilirsiniz.
+Alınan her veri kaynağının adını, durumunu ve bu kaynak için verilerin en son ne zaman yenilendiğini görmek için **Veri** > **Veri kaynakları** bölümüne gidin. Veri kaynakları listesini her bir sütuna göre sıralayabilirsiniz.
 
-> [!div class="mx-imgBorder"]
-> ![Eklenen veri kaynağı.](media/configure-data-datasource-added.png "Eklenen veri kaynağı")
+:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Eklenen veri kaynağı.":::
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, **Varlıklar** sayfasından incelenebilir. Daha fazla bilgi için bkz. [Varlıklar](entities.md).
 
-## <a name="refresh-a-data-source"></a>Veri kaynağını yenileme
+## <a name="refresh-data-sources"></a>Veri kaynaklarını yenileme
 
-Veri kaynakları otomatik bir zamanlamayla veya isteğe bağlı olarak el ile yenilenebilir. 
+Veri kaynakları otomatik bir zamanlamayla veya isteğe bağlı olarak el ile yenilenebilir. [Şirket içi veri kaynakları](connect-power-query.md#add-data-from-on-premises-data-sources), veri alımı sırasında ayarlanan kendi programlarına göre yenilenir. Ekli veri kaynakları için veri alımı, ilgili veri kaynağından elde edilen en son verileri kullanır.
 
-Alınan tüm veri kaynaklarınızın zamanlanmış yenilemelerini yapılandırmak için **Yönetici** > **Sistem** > [**Zamanla**](system.md#schedule-tab)'ya gidin.
+Alınan veri kaynaklarınızın sistem zamanlaması yenilemelerini yapılandırmak için **Yönetici** > **Sistem** > [**Zamanlama**](system.md#schedule-tab) seçeneğine gidin.
 
 Veri kaynağını isteğe bağlı olarak yenilemek için şu adımları izleyin:
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-2. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı (&vellip;) seçin ve açılır listeden **Yenile**'yi seçin.
+1. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı (&vellip;) seçin ve açılır listeden **Yenile**'yi seçin. Veri kaynağı şimdi el ile yenileme için tetiklenir. Bir veri kaynağı yenileme, hem varlık şemasını hem de veri kaynağı belirtilen tüm varlıklar için verileri güncelleştirir.
 
-3. Veri kaynağı şimdi el ile yenileme için tetiklenir. Bir veri kaynağı yenileme, hem varlık şemasını hem de veri kaynağı belirtilen tüm varlıklar için verileri güncelleştirir.
-
-4. Var olan bir yenilemeyi iptal etmek isterseniz **Yenileme işlemini durdur**'u seçtiğinizde veri kaynağı son yenileme durumuna dönecektir.
+1. Var olan bir yenilemeyi iptal etmek isterseniz **Yenileme işlemini durdur**'u seçtiğinizde veri kaynağı son yenileme durumuna dönecektir.
 
 ## <a name="delete-a-data-source"></a>Veri kaynağını silme
+
+Veri kaynağı, yalnızca veriler birleştirme, öngörüler, etkinleştirmeler veya dışa aktarma gibi herhangi bir işlemde kullanılmadığında silinebilir.
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 

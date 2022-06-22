@@ -1,7 +1,7 @@
 ---
 title: Gelişmiş adres zenginleştirmesi (video içerir)
 description: Microsoft'un modelleriyle müşteri profillerinin adres bilgilerini zenginleştirin ve normalleştirin.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647520"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953835"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Müşteri profillerinin gelişmiş adreslerle zenginleştirilmesi
 
@@ -53,17 +53,17 @@ Adres bilgileri standart olmayan bir biçimde olabilir ve yazım hataları içer
 
 ### <a name="limitations"></a>Sınırlamalar
 
-Gelişmiş adresler yalnızca alınan adres verilerinizde zaten varolan değerlerle çalışır. Modeli şunları yapmaz: 
+Gelişmiş adresler, yalnızca alınan adres verilerinizde zaten var olan değerlerle çalışır. Modeli şunları yapmaz:
 
 1. Adresin geçerli bir adres olup olmadığını doğrulama.
 2. Posta kodları veya sokak adları gibi değerlerden herhangi birinin geçerli olup olmadığını doğrulama.
 3. Tanımadığı değerleri değiştirme.
 
-Model, adresleri geliştirmek için makine öğrenimi tabanlı teknikler kullanır. Makine öğrenim tabanlı modelde olduğu gibi, model bir giriş değerini değiştirdiğinde yüksek güvenirlik eşiği uyguladığımdayken, yüzde 100 kesinliği garanti edilmez.
+Model, adresleri geliştirmek için makine öğrenimi tabanlı teknikler kullanır. Makine öğrenimi tabanlı modellerde olduğu gibi yüzde 100 doğruluk garanti edilmez.
 
 ## <a name="supported-countries-or-regions"></a>Desteklenen ülkeler veya bölgeler
 
-Şu anda bu ülkelerde veya bölgelerde adresleri zenginleştirmeyi destekliyoruz: 
+Şu anda bu ülkelerde veya bölgelerde adresleri zenginleştirmeyi destekliyoruz:
 
 - Avustralya
 - Kanada
@@ -74,50 +74,46 @@ Model, adresleri geliştirmek için makine öğrenimi tabanlı teknikler kullan�
 - Birleşik Krallık
 - ABD
 
-Adresler bir ülke/bölge değeri içermelidir. Desteklenmeyen ülkeler veya bölgeler için adresleri ve ülke veya bölge sağlanmayan adresleri işlemeyiz.
-
 ## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 
-1. **Veriler** > **Zenginleştirme**'ye gidin.
+1. **Veri** > **Zenginleştirme** sayfasına gidin ve **Keşfet** sekmesini seçin.
 
 1. **Gelişmiş adresler** kutucuğunda **Verilerimi zenginleştir**'i seçin.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Gelişmiş adresler kutucuğunun ekran görüntüsü.":::
 
-1. **Müşteri veri kümesi** seçin ve zenginleştirmek istediğiniz adresleri içeren varlığı seçin. Tüm müşteri profillerinizdeki adresleri zenginleştirmek için *Müşteri* varlığını seçebilir veya adresleri yalnızca bu segmentte bulunan müşteri profillerinde zenginleştirmek için bir segment varlığı seçebilirsiniz.
+1. Genel bakışı inceleyip **İleri**'yi seçin.
+
+1. **Müşteri veri kümesi** seçeneğini belirleyin ve zenginleştirmek istediğiniz profili veya segmenti seçin. *Müşteri* varlığı tüm müşteri profillerinizi zenginleştirirken bir segment yalnızca bu segmentte bulunan müşteri profillerini zenginleştirir.
 
 1. Adreslerin veri kümenizde nasıl biçimlendirildiklerini seçin. Verilerinizdeki adresler tek bir alan kullanıyorsa, **Tek öznitelikli adres**'i seçin. Verilerinizdeki adresler birden fazla alanda kullanıyorsa, **Birden çok öznitelikli adres**'i seçin.
+
+1. **İleri**'yi seçin ve birleşik müşteri varlığınızdaki adres alanlarını eşleyin.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Gelişmiş adres alanı eşleme sayfası.":::
 
    > [!NOTE]
    > Hem tek öznitelik hem de birden çok öznitelik adreslerinde ülke/bölge zorunludur. Geçerli veya desteklenen ülke/bölge değerleri içermeyen adresler zenginleştirilmeyecek.
 
-1.  Adres alanlarını birleşik müşteri varlığınızdan eşleyin.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Gelişmiş adres alanı eşleme sayfası.":::
-
 1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
 
-1. Zenginleştirme için bir ad ve çıkış varlığı değerini girin.
+1. Zenginleştirme için bir **Ad** ve **Çıkış varlığı** değerini girin.
 
 1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
-Zenginleştirme işlemini başlatmak için, komut çubuğundan **Çalıştır**'ı seçin. [Zamanlanmış yenileme](system.md#schedule-tab) işleminin bir parçası olarak, sistemin zenginleştirmeyi otomatik olarak çalıştırılmasına da izin verebilirsiniz. İşlem süresi müşteri verilerinizin boyutuna bağlıdır.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşteri profilleri verisini; **Zenginleştirmelerim** altında gözden geçirebilirsiniz. Ayrıca, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını da bulacaksınız.
-
-**Zenginleştirilmiş müşteriler önizlemesi** kutucuğunda zenginleştirilen verilerin bir örneğini görebilirsiniz. **Daha fazla göster**'i ve **Veriler** sekmesini seçerek her zenginleştirilen profilin ayrıntılı görünümüne erişin.
+**Alana göre zenginleştirilen müşteri sayısı**, her zenginleştirilmiş alanın kapsamında ayrıntılı bilgiler sağlar.
 
 ### <a name="overview-card"></a>Genel bakış kartı
 
-Genel bakış kartı, zenginleştirmenin kapsamıyla ilgili ayrıntıları gösterir. 
+**Müşteri değişikliklerine genel bakış** kartı zenginleştirmenin kapsamıyla ilgili ayrıntıları gösterir:
 
-* **İşlenen ve değiştirilen adresler**: Adreslerle başarıyla zenginleştirilen müşteri profillerinin sayısı.
-
-* **İşlenen ve değiştirilmeyen adresler**: Tanınan ancak değiştirilmeyen adres içeren müşteri profillerinin sayısı. Genellikle giriş verileri geçerli olduğunda ve zenginleştirmeyle iyileştirilemediğinde gerçekleştirilir.
-
-* **İşlenmeyen ve değiştirilmeyen adresler**: Tanınmayan adres içeren müşteri profillerinin sayısı. Genellikle geçersiz veya zenginleştirme tarafından desteklenmeyen giriş verileri içindir.
+- **İşlenen ve değiştirilen adresler**: Adreslerle başarıyla zenginleştirilen müşteri profillerinin sayısı.
+- **İşlenen ve değiştirilmeyen adresler**: Tanınan ancak değiştirilmeyen adres içeren müşteri profillerinin sayısı. Genellikle giriş verileri geçerli olduğunda ve zenginleştirmeyle iyileştirilemediğinde gerçekleştirilir.
+- **İşlenmeyen ve değiştirilmeyen adresler**: Tanınmayan adres içeren müşteri profillerinin sayısı. Genellikle geçersiz veya zenginleştirme tarafından desteklenmeyen giriş verileri içindir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

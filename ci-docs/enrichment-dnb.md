@@ -1,7 +1,7 @@
 ---
 title: Dun & Bradstreet ile şirket profillerini zenginleştirme
 description: Dun & Bradstreet üçüncü taraf zenginleştirme hakkında genel bilgiler.
-ms.date: 04/26/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c738c2657d4cda213342629156ddc8104366bd8a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755424"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953915"
 ---
 # <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Dun & Bradstreet ile şirket profillerini zenginleştirme (Önizleme)
 
@@ -22,16 +22,14 @@ Dun & Bradstreet işletmeler için ticari veriler, analizler ve öngörüler sun
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Dun & Bradstreet zenginleştirmesini yapılandırmak için aşağıdaki ön koşulların karşılanması gerekir:
+- Etkin bir [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) lisansı.
+- Şirketler için [birleşik müşteri profilleri](customer-profiles.md).
+- Dun & Bradstreet [projesi](#set-up-your-dun--bradstreet-project) ayarlanmış olmalıdır.
+- Dun & Bradstreet [bağlantısı](connections.md) bir yönetici tarafından [yapılandırılır](#configure-a-connection-for-dun--bradstreet).
 
-- Etkin bir [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) lisansınızın olması gerekir.
-- Şirketler için [birleşik müşteri profillerine](customer-profiles.md) sahip olmanız.
-- Dun & Bradstreet [bağlantısı](connections.md), bir yönetici tarafından yapılandırılır. [Yönetici](permissions.md#admin) izniniz ve Dun & Bradstreet Bağlantı için kimlik bilgileriniz varsa oluşturabilirsiniz.
-
-## <a name="setting-up-your-dun--bradstreet-project"></a>Dun & Bradstreet projenizi kurma
+## <a name="set-up-your-dun--bradstreet-project"></a>Dun & Bradstreet projenizi ayarlama
 
 Dun & Bradstreet lisanslı kullanıcısı olarak [Dun & Bradstreet Bağlantı](https://connect.dnb.com?lead_source=microsoft_audienceinsights)'da bir proje kurabilirsiniz.
-
 
 1. [Dun & Bradstreet Bağlan](https://connect.dnb.com?lead_source=microsoft_audienceinsights)'da oturum açın. Kimlik bilgilerini almak için [parolanızı geri yükleyin](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
@@ -47,66 +45,69 @@ Dun & Bradstreet lisanslı kullanıcısı olarak [Dun & Bradstreet Bağlantı](h
 
    :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Dun & Bradstreet projesindeki s3 bilgileri seçiminin ekran görüntüsü.":::
 
-## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
-
-1. **Veriler** > **Zenginleştirme**'ye gidin.
-
-1. Dun & Bradstreet kutucuğunda **Verilerimi zenginleştir** öğesini seçin ve ardından **Kullanmaya başlayın**'ı seçin.
-
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Dun & Bradstreet kutucuğunun ekran görüntüsü.":::
-
-1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir yöneticiyseniz bir bağlantı oluşturabilirsiniz. **Bağlantı ekle**'yi ve **Dun & Bradstreet**'i seçin.
-
-1. Bağlantıyı onaylamak için **Dun & Bradstreet'e Bağlan** öğesini seçin.
-
-1. **İleri**'yi seçin ve Dun & Bradstreet'ten şirket verileriyle zenginleştirmek istediğiniz **Müşteri veri kümesi**'ni seçin. Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan birleşik müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
-
-1. **İleri**'yi seçin ve Dun & Bradstreet'te eşleşen şirket verilerini aramak için birleştirilmiş profillerinizden hangi tür alanların kullanılması gerektiğini tanımlayın. **DUNS sayısı** veya **Şirket adı** ve **Ülke** alanları zorunludur. Ülke alanı, [iki veya üç harflik ülke kodunu](https://www.iso.org/iso-3166-country-codes.html), İngilizce ülke adını, yerel dilde ülke adını ve telefon ön ekini destekler. Bazı yaygın ülke çeşitleri aşağıdakileri içerir:
-
-- US: Amerika Birleşik Devletleri, Birleşik Devletler, USA, Amerika.
-- CA: Kanada
-- GB: Birleşik Krallık, UK, Büyük Britanya, GB, Büyük Britanya ve İrlanda Birleşik Krallığı, Büyük Britanya Birleşik Krallığı.
-- AU: Avustralya, Avusturalya İngiliz Uluslar Topluluğu.
-- FR: Fransa, Fransa Cumhuriyeti.
-- DE: Almanya, Alman, Deutschland, Allemagne, Almanya Federal Cumhuriyeti, Almanya Cumhuriyeti.
-
-   :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Dun & Bradstreet alan eşleme bölmesi.":::
-
-1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
-
-1. Zenginleştirme için bir ad girin ve seçimlerinizi inceledikten sonra **zenginleştirmeyi kaydet** seçeneğini belirleyin.
-
 ## <a name="configure-a-connection-for-dun--bradstreet"></a>Dun & Bradstreet için bir bağlantı yapılandırma
 
-Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Zenginleştirmeyi yapılandırırken **Bağlantı ekle**'yi seçin *veya* **Yönetici** > **Bağlantılar**'a gidin ve Dun & Bradstreet dosyasında **Kurulum**'u seçin.
+Customer Insights'ta [yönetici](permissions.md#admin) olmanız ve Dun & Bradstreet Bağlantısı için kimlik bilgilerinizin olması gerekir.
 
-1. **Başlayın**'ı seçin.
+1. Zenginleştirmeyi yapılandırırken **Bağlantı ekle**'yi seçin veya **Yönetici** > **Bağlantılar**'a gidin ve Dun & Bradstreet dosyasında **Ayarla**'yı seçin.
 
-1. **Görünen ad** kutusunda bağlantı için bir ad girin.
+1. Bağlantı için bir ad girin.
 
-1. Geçerli Dun & Bradstreet kimlik bilgilerini ve Dun & Bradstreet proje ayrıntılarını *Bölge, Bırakma klasörü yolu ve Bırakma klasörü adını* sağlayın. [Bu bilgileri](#setting-up-your-dun--bradstreet-project), Dun & Bradstreet projesinden elde edersiniz.
+1. Geçerli Dun & Bradstreet kimlik bilgilerini ve Dun & Bradstreet proje ayrıntılarını *Bölge, Bırakma klasörü yolu ve Bırakma klasörü adını* sağlayın. [Bu bilgileri](#set-up-your-dun--bradstreet-project), Dun & Bradstreet projesinden elde edersiniz.
 
-1. **Kabul ediyorum**'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
+1. [Kabul ediyorum](#data-privacy-and-compliance)'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
 
-1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
-
-1. Doğrulamayı tamamladıktan sonra, **Kaydet**'i seçin.
+1. Yapılandırmayı doğrulamak için **Doğrula**'yı ve ardından **Kaydet**'i seçin.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Dun & Bradstreet bağlantı yapılandırma sayfası.":::
 
+### <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
+
+Dynamics 365 Customer Insights uygulamasının Dun & Bradstreet'e veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri alır, ancak Dun & Bradstreet'in sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini yerine getirmesini sağlamaktan siz sorumlusunuz. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
+Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
+
+## <a name="supported-countries-or-regions"></a>Desteklenen ülkeler veya bölgeler
+
+Şu anda şu ülke/bölge seçenekleri desteklenmektedir: Kanada (İngilizce) veya Amerika Birleşik Devletleri (İngilizce).
+
+## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
+
+1. **Veri** > **Zenginleştirme** sayfasına gidin ve **Keşfet** sekmesini seçin.
+
+1. Dun & Bradstreet kutucuğu için **Şirket verileri** seçeneğinde **Verilerimi zenginleştir**'i seçin.
+
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Dun & Bradstreet kutucuğunun ekran görüntüsü.":::
+
+1. Genel bakışı inceleyip **İleri**'yi seçin.
+
+1. Bağlantıyı seçip onaylayın. Kullanılabilir değilse yönetici ile iletişime geçin.
+
+1. **İleri**'yi seçin.
+
+1. **Müşteri veri kümesi** seçeneğini belirleyin ve Dun & Bradstreet'in şirket verileriyle zenginleştirmek istediğiniz profili veya segmenti seçin. *Müşteri* varlığı tüm müşteri profillerinizi zenginleştirirken bir segment yalnızca bu segmentte bulunan müşteri profillerini zenginleştirir.
+
+1. Dun & Bradstreet'te eşleşen şirket verileri için birleşik profillerinizden kullanılacak tür alanlarını tanımlayın. Alan **adı ve adres**, **Telefon** veya **e-posta** alanlarından en az birine gerek vardır.
+
+1. **İleri**'yi seçin
+
+1. Alanlarınızı Dun & Bradstreet'teki şirket verileriyle eşleyin. **DUNS sayısı** veya **Şirket adı** ve **Ülke** alanları zorunludur.
+
+      :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Dun & Bradstreet alan eşleme bölmesi.":::
+
+1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
+
+1. Zenginleştirme için bir **Ad** ve **Çıkış varlığı adı** girin.
+
+1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
+
+1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
+
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
-Zenginleştirme yenilendikten sonra, yeni zenginleştirilmiş şirket verilerini [Zenginleştirmelerim](enrichment-hub.md) bölümünde inceleyebilirsiniz. Son güncelleştirmenin saatini ve zenginleştirilmiş profillerin sayısını bulabilirsiniz.
-
-**Zenginleştirilmiş verileri görüntüle**'yi seçerek her zenginleştirilmiş profilin ayrıntılı görünümüne erişebilirsiniz.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
-
-Dynamics 365 Customer Insights uygulamasının Dun & Bradstreet'e veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri alır, ancak Dun & Bradstreet'in sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini yerine getirmesini sağlamaktan siz sorumlusunuz. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
-Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

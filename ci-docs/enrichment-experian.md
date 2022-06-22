@@ -1,101 +1,92 @@
 ---
 title: Üçüncü taraf zenginleştirme Experian ile zenginleştirme
 description: Experian Üçüncü taraf zenginleştirme hakkında genel bilgiler.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f5aa45316b9e0e99c7ba4389353063e9d3ce06c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647512"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954111"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Experian'dan (Önizleme) nüfus nitelikleriyle zenginleştirme müşteri profilleri
 
 Experian, tüketici ve iş alacak raporlama ve pazarlama servisleri için genel bir liderdir. Experian Uygulamasının veri zenginleştirmeli servisleri sayesinde, müşteri profillerinizi, ev büyüklüğü, gelir ve daha fazlası gibi nüfus niteliği verileriyle zenginleştirerek müşterilerinizi daha fazla anlamanız için daha fazla bilgi sahibi olabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
-
-Experian'ı yapılandırmak için aşağıdaki ön koşullar karşılanmalıdır:
-
-- Etkin bir Experian aboneliğiniz olması gerekir. Abonelik almak için doğrudan [Experian ile bağlantı kurun](https://www.experian.com/marketing-services/contact). [Experian Veri Zenginleştirme hakkında daha fazla bilgi edinin](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage)
-
-- Bir Experian bağlantısı zaten bir Yönetici tarafından yapılandırılmış olabilir *veya* [Yönetici](permissions.md#admin) izinlere sahip olmanız gerekir. Ayrıca, sizin için oluşturulan Experian SSH etkin güvenli aktarım (ST) hesabınız için Kullanıcı kimlği, taraf kimlği ve model numarası gerekir.
-
 ## <a name="supported-countriesregions"></a>Desteklenen ülkeler/bölgeler
 
 Şu anda yalnızca Amerika Birleşik Devletleri 'nde müşteri profillerini destekliyoruz.
+
+## <a name="prerequisites"></a>Önkoşullar
+
+- Etkin bir Experian aboneliği. Abonelik almak için doğrudan [Experian ile bağlantı kurun](https://www.experian.com/marketing-services/contact). [Experian Veri Zenginleştirme hakkında daha fazla bilgi edinin](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage)
+
+- Experian [bağlantısı](connections.md) bir yönetici tarafından [yapılandırılır](#configure-the-connection-for-experian).
+
+- Experian'ın sizin için oluşturduğu SSH özellikli Güvenli Aktarım (ST) hesabınız için Experian Kullanıcı Kimliği, Taraf Kimliği ve Model Numarası.
+
+## <a name="configure-the-connection-for-experian"></a>Experian için Bağlantı yapılandırma
+
+Customer Insights'ta [yönetici](permissions.md#admin) olmanız ve Experian Kullanıcı Kimliği, Taraf Kimliği ve Model Numarasına sahip olmanız gerekir.
+
+1. Zenginleştirme yapılandırırken **Bağlantı ekle**'yi seçin veya **Yönetici** > **Bağlantılar**'a gidip Experian kutucuğunda **Ayarla**'yı seçin.
+
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian bağlantı Yapılandırması bölmesi":::
+
+1. Bağlantı için bir ad ve Experian Güvenli Aktarım hesabınız için geçerli bir Kullanıcı Kimliği, Taraf Kimliği ve Model Numarası girin.
+
+1. [Kabul ediyorum](#data-privacy-and-compliance)'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
+
+1. Yapılandırmayı doğrulamak için **Doğrula**'yı ve ardından **Kaydet**'i seçin.
+
+### <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
+
+Dynamics 365 Customer Insights'ı Experian Uygulamasına veri aktarması için etkinleştirdiğinizde, kişisel veriler gibi önemli olası veriler de dahil olmak üzere Dynamics 365 Customer Insights için uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, bu tür verileri yönergelinizde aktaracaktır, ancak sizin sahip olabileceğiniz gizlilik ve güvenlik yükümlülüklerini Experian'ın karşılamasını güvence altına alırsınız. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732). Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
 
 ## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 
 1. **Veri** > **Zenginleştirme** sayfasına gidin ve **Keşfet** sekmesini seçin.
 
-1. Experian Kutucukta **verilerimi zenginleştir** seçeneğini belirleyin.
+1. Experian kutucuğundaki **Demografik bilgiler** seçeneğinde **Verilerimi zenginleştir**'i seçin.
 
-   > [!div class="mx-imgBorder"]
-   > ![Experian kutucuğu.](media/experian-tile.png "Experian tile")
-   > 
+   :::image type="content" source="media/experian-tile.png" alt-text="Zenginleştirmeye genel bakış sayfasında Experian kutucuğu. ":::
 
-1. Açılan listeden bir [bağlantı](connections.md) seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin. Bir Yönetici durumdaysanız, **bağlantı ekle**'yi ve açılan listeden Experian seçeneğini belirleyerek bir bağlantı oluşturabilirsiniz. 
+1. Genel bakışı inceleyip **İleri**'yi seçin.
 
-1. Bağlantı seçimini onaylamak için **Experian'a Bağlan**'ı seçin.
+1. Bağlantıyı seçin. Kullanılabilir değilse yönetici ile iletişime geçin.
 
-1.  **İleri**'ye ve Experian demografik verileriyle zenginleştirmeniz istediğiniz **müşteri veri kümesi** seçin . Tüm müşteri profillerinizi zenginleştirmek için **Müşteri** varlığını seçebilir veya yalnızca söz konusu segmentte bulunan müşteri profillerini zenginleştirmek için bir segment varlığı seçebilirsiniz.
+1. **İleri**'yi seçin.
+
+1. **Müşteri veri kümesi** seçeneğini belirleyin ve Experian'ın demografik verileriyle zenginleştirmek istediğiniz profili veya segmenti seçin. *Müşteri* varlığı tüm müşteri profillerinizi zenginleştirirken bir segment yalnızca bu segmentte bulunan müşteri profillerini zenginleştirir.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Müşteri veri kümesi seçerken ekran görüntüsü.":::
 
-1. **İleri**'yi seçin ve Experian'dan eşleşen demografik verilerini aramak için Birleşik profillerinizden hangi alan türlerinin kullanılacağını tanımlayın. Alan **adı ve adres**, **Telefon** veya **e-posta** alanlarından en az birine gerek vardır. Daha yüksek eşleşme hassasiyeti için daha fazla iki alan eklenebilir. Bu seçim, sonraki adımda erişiminiz olan eşleme alanlarını etkileyecek.
+1. Experian'da eşleşen demografik veriler için birleşik profillerinizden kullanılacak tür alanlarını tanımlayın. Alan **adı ve adres**, **Telefon** veya **e-posta** alanlarından en az birine gerek vardır. Daha yüksek eşleşme doğruluğu için diğer alanları ekleyin. **İleri**'yi seçin.
 
-    > [!TIP]
-    > Büyük olasılıkla daha yüksek eşleşme oranına sahip olacak şekilde Experian'a gönderilen daha fazla anahtar tanımlayıcı öznitelik vardır.
+1. Alanlarınızı Experian'ın demografik verileriyle eşleyin.
 
-1. Alan eşlemesini başlatmak için **İleri**'yi seçin.
+1. Alan eşlemesini tamamlamak için **İleri**'yi seçin.
 
-1. Experian'dan eşleşen demografik verilerini aramak için Birleşik profillerinizden hangi alan türlerinin kullanılacağını tanımlayın. Gerekli alanlar işaretlidir.
-
-1. Zenginleştirme için bir ad ve çıkış varlığı için bir ad girin.
+1. Zenginleştirme için bir **Ad** ve **Çıkış varlığı adı** girin.
 
 1. Seçimlerinizi inceledikten sonra **zenginleştirmei kaydet** seçeneğini belirleyin.
 
-## <a name="configure-the-connection-for-experian"></a>Experian için Bağlantı yapılandırma 
-
-Bağlantıları yapılandırmak için bir Yönetici olmanız gerekir. Zenginleştirme yapılandırırken **Bağlantı Ekle**'yi seçin *veya* **Yönetici** > **Bağlantılar**'a gidip Experian kutucukta **Ayarla**'yı seçin.
-
-1. **Başlarken**'i seçin.
-
-1. **Görünen ad** kutusunda bağlantı için bir ad girin.
-
-1. Experian Güvenli aktarım hesabınız için geçerli kullanıcı kimliği, taraf kimliği ve model numarası girin.
-
-1. **Kabul ediyorum**'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
-
-1. Yapılandırmayı doğrulamak için **Doğrula**'yı seçin.
-
-1. Doğrulamayı tamamladıktan sonra, **Kaydet**'i seçin.
-   
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian bağlantı Yapılandırması bölmesi":::
+1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
 
 ## <a name="enrichment-results"></a>Zenginleştirme sonuçları
 
-Zenginleştirme işlemini başlatmak için, komut çubuğundan **Çalıştır**'ı seçin. [Zamanlanmış yenileme](system.md#schedule-tab) işleminin bir parçası olarak, sistemin zenginleştirmeyi otomatik olarak çalıştırılmasına da izin verebilirsiniz. İşleme süresi müşteri verilerinizin boyutuna ve firmasıyla hesabınız için Experian tarafından ayarlanan zenginleştirme işlemlerine bağlıdır.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Zenginleştirme işlemi tamamlandıktan sonra, yeni zenginleştirilmiş müşteri profilleri verisini; **Zenginleştirmelerim** altında gözden geçirebilirsiniz. Ayrıca, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını da bulacaksınız.
-
-**Zenginleştirilmiş verileri görüntüle**'yi seçerek her zenginleştirilmiş profilin ayrıntılı görünümüne erişebilirsiniz.
+**Alana göre zenginleştirilen müşteri sayısı**, her zenginleştirilmiş alanın kapsamında ayrıntılı bilgiler sağlar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
-
-Dynamics 365 Customer Insights'ı Experian Uygulamasına veri aktarması için etkinleştirdiğinizde, kişisel veriler gibi önemli olası veriler de dahil olmak üzere Dynamics 365 Customer Insights için uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, bu tür verileri yönergelinizde aktaracaktır, ancak sizin sahip olabileceğiniz gizlilik ve güvenlik yükümlülüklerini Experian'ın karşılamasını güvence altına alırsınız. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
-Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
