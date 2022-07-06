@@ -1,5 +1,5 @@
 ---
-title: Dynamics 365 Customer Insights'ı Azure İzleyici ile denetleme
+title: Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (önizleme)
 description: Günlükleri Microsoft Azure İzleyici'ye nasıl göndereceğinizi öğrenin.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807605"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052677"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (Önizleme)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (önizleme)
 
 Dynamics 365 Customer Insights, doğrudan Azure İzleyici tümleştirmesi sağlar. Azure İzleyici kaynak günlükleri, günlükleri izlemenize ve [Azure Depolama](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)'e göndermenize veya bunları [Azure Olay Hub'ları](https://azure.microsoft.com/services/event-hubs/)'a aktarmanıza olanak tanır.
 

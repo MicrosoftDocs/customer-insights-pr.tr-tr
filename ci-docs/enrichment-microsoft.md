@@ -1,5 +1,5 @@
 ---
-title: Microsoft'ta markaları ve ilgi alanları olan müşteri profillerini zenginleştirme
+title: Microsoft'tan alınan marka ve ilgi alanı verileriyle müşteri profillerini zenginleştirme (önizleme)
 description: Müşteri verilerinizi benzeşimler ve görünürlük payı ile zenginleştirmek için Microsoft'un özel verilerini kullanın.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953789"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081888"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Müşteri profillerini benzeşimler ve görünürlük payıyla zenginleştirin (önizleme)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Microsoft'tan alınan marka ve ilgi alanı verileriyle müşteri profillerini zenginleştirme (önizleme)
 
 Müşteri verilerinizi marka benzeşimleri, ilgi alanı benzeşimleri ve görünürlük payı (SoV) ile zenginleştirmek için Microsoft'un özel verilerini kullanın. Bu benzeşimler ve SoV, müşterilerinize benzer demografik bilgilere sahip kişilerin verilerini temel alır. Bu bilgiler, müşterilerinizi belirli markalar ve ilgi alanlarındaki benzeşimlerine veya SoV'ye göre daha iyi anlamanıza ve segmentlere ayırmanıza yardımcı olur.
 
@@ -104,7 +104,7 @@ SoV, 100 puanlı bir ölçekle hesaplanır. Her zenginleştirilmiş müşteri pr
 
    Profilleri zenginleştirdiğinizde, seçili markalar ve ilgi alanları için, seçili ülke veya bölgede olmayan profiller de dahil olmak üzere verilerini edindiğimiz tüm müşteri profillerini zenginleştirebilirsiniz. Örneğin, ABD'de seçilen markalar ve ilgi alanları için kullanılabilir veri varsa, Almanya'da seçeneğini belirlediyseniz, bu ABD'de yer alan profilleri zenginleştiririz.
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

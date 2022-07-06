@@ -6,14 +6,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 99ec463299a24ea81cfe26bb785e36bdefdcd080
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833332"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054456"
 ---
-# <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Dynamics 365 Marketing içindeki birleştirilmiş müşteri profilleriyle çalışma
+# <a name="use-unified-customer-profiles-in-dynamics-365-marketing"></a>Dynamics 365 Marketing'de birleştirilmiş müşteri profilleri kullanma
 
 [Dynamics 365 Marketing](/dynamics365/marketing/overview), müşteri deneyimlerini geliştirerek ilişkileri güçlendirmek ve sadakat kazanmak için tüm temas noktalarında kişiselleştirilmiş yolculuklar düzenlemenizi sağlar. Dynamics 365 Marketing uygulaması Dynamics 365 Sales, Dynamics 365 Customer Insights, Microsoft Teams ve diğer uygulamalarla sorunsuz bir şekilde çalışır ve verilerin ve AI'ın gücünü kullanarak daha hızlı ve iyi kararlar almanıza olanak tanır.
 

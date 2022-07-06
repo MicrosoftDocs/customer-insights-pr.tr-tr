@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini AdRoll'a dışarı aktarma
+title: Segmentleri AdRoll'a aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve AdRoll'a dışa aktarmayı öğrenin.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647605"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081918"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentleri AdRoll'a aktarma (önizleme)
 
@@ -21,9 +21,9 @@ Birleşik müşteri profilleri segmentlerini AdRoll'a dışa aktarın ve bunlar�
 
 ## <a name="prerequisites-for-a-connection"></a>Bağlantı için ön koşullar
 
--   [AdRoll hesabınızın](https://www.adroll.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
--   Customer Insights'ta [yapılandırılmış segmentlere](segments.md) sahip olmanız gerekir.
--   Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
+- [AdRoll hesabınızın](https://www.adroll.com/) ve ilgili yönetici kimlik bilgilerinizin olması gerekir.
+- Customer Insights'ta [yapılandırılmış segmentlere](segments.md) sahip olmanız gerekir.
+- Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 

@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini Facebook Reklamları Yöneticisi'ne dışarı aktarma (video içerir)
+title: Segmentleri Facebook Ads Manager'a aktarma (önizleme) (video içerir)
 description: Bağlantıyı yapılandırmayı ve Facebook Ads Manager'a dışa aktarmayı öğrenin.
 ms.date: 04/15/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f610ab1af83bfd512ec1861e7dc76ebb2eecfcbb
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647925"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081951"
 ---
-# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Segmentler listesini Facebook Ads Manager (Önizleme) dışa aktarma
+# <a name="export-segments-to-facebook-ads-manager-preview"></a>Segmentleri Facebook Ads Manager'a aktarma (önizleme)
 
 Facebook ve Instagram'da kampanyalar oluşturmak için birleşik müşteri profillerinin segmentlerini Facebook Reklamları Yöneticisi'ne dışarı aktarın.
 

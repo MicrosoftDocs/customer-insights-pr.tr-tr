@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini Azure Blob depolamasına içeri aktarma
+title: Verileri Azure Blob Depolama'ya aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve Blob Depolama'da dışa aktarmayı öğrenin.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947162"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055514"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segment listesini ve diğer verileri Azure Blob depolama'ya ver (Önizleme)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Verileri Azure Blob Depolama'ya aktarma (önizleme)
 
 Blob Depolama Customer Insights verilerinizi depolamak veya verilerinizi diğer uygulamalara aktarmak için kullanın.
 

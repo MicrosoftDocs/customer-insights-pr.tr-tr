@@ -1,5 +1,5 @@
 ---
-title: Müşteri profillerini Microsoft Office 365 verileriyle zenginleştirme
+title: Müşteri profillerini Microsoft Office 365 verileriyle zenginleştirme (önizleme)
 description: Müşteri profillerinizi etkileşim verileriyle zenginleştirmek için Microsoft Office uygulamasının özel verilerini kullanın.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954157"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055698"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Etkileşim verileriyle müşteri profillerini zenginleştirme (önizleme)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Müşteri profillerini Microsoft Office 365 verileriyle zenginleştirme (önizleme)
 
 Müşteri firması profillerinizi Office 365 uygulamaları aracılığıyla etkileşim bilgileriyle zenginleştirmek için Microsoft Office 365 uygulamasından gelen verileri kullanın. Etkileşim verileri, firma düzeyinde toplanan e-posta ve toplantı etkinliklerinden oluşur. Örneğin, bir iş hesabından gelen e-postaların sayısı veya firmayla yapılan toplantıların sayısı. Bireysel kullanıcılar hakkında hiçbir veri sağlanmaz.
 
@@ -75,7 +75,7 @@ Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Bu, *Office* varlığıdır. *Office_UserEntity* zenginleştirme yapılandırması sırasında seçilen e-posta adresleri için Active Directory Kimliklerini içerir.
 

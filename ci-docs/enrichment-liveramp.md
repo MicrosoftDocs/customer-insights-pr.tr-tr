@@ -1,5 +1,5 @@
 ---
-title: LiveRamp kimlik verilerini zenginleştirme
+title: Müşteri profillerini LiveRamp'ten gelen kimlik verileriyle zenginleştirme (önizleme)
 description: Müşteri profillerini LiveRamp verileriyle zenginleştirin.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954019"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081768"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Müşteri profillerini LiveRamp'ten gelen kimlik verileriyle zenginleştirme (önizleme)
 
@@ -79,7 +79,7 @@ Dynamics 365 Customer Insights uygulamasının LiveRamp'e veri aktarmasına izin
 
 1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Analytics'ten veri alma
+title: Azure Synapse veri kaynağı bağlama (önizleme)
 description: Dynamics 365 Customer Insights'te veri kaynağı olarak Azure Synapse'te veritabanı kullanın.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011451"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052723"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics veri kaynağı bağlama (önizleme)
 
@@ -59,7 +59,7 @@ Daha fazla bilgi için bkz. [Azure Synapse'e genel bakış](/azure/synapse-analy
 
 1. Azure Synapse Analytics için [kullanılabilir bağlantı](connections.md) seçin veya yeni bağlantı oluşturun.
 
-1. Azure Synapse Analytics bağlantısında bağlı çalışma alanından bir **Veritabanı** seçin ve **İleri** seçeneğini belirleyin.
+1. Azure Synapse Analytics bağlantısında bağlı çalışma alanından bir **Veritabanı** seçin ve **İleri** seçeneğini belirleyin. Şu anda veritabanı türü olarak yalnızca *Lake veritabanı*'nı destekliyoruz.
 
 1. Bağlı veritabanından alınacak varlıkları belirleyin ve **İleri**'yi seçin.
 

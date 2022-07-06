@@ -1,5 +1,5 @@
 ---
-title: Anlamsal eşlemeler (Önizleme)
+title: Anlamsal eşlemeler (önizleme)
 description: Anlamsal eşlemelerin ve bunların nasıl kullanılacağı genel bakış.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647802"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081993"
 ---
-# <a name="semantic-mappings-preview"></a>Anlamsal eşlemeler (Önizleme)
+# <a name="semantic-mappings-preview"></a>Anlamsal eşlemeler (önizleme)
 
 Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şemalara eşlemenizi sağlar. Bu şemalar, veri özniteklerinizi daha iyi anlaması için Customer Insights'a yardımcı olur. Anlamsal eşleme ve sağlanan veriler, Customer Insights içinde yeni öngörü ve özellikleri etkinleştirir. Aktivite verilerinizi şemalara eşlemek için, [aktiviteler](activities.md) belgelerini gözden geçirin.
 

@@ -1,6 +1,6 @@
 ---
-title: Birleşik müşteri profillerini zenginleştirme
-description: Müşteri verilerinizi zenginleştirmek için özellikleri kullanın.
+title: Veri zenginleştirmeye (önizleme) genel bakış
+description: Müşteri verilerinizi zenginleştirmek için Microsoft ve diğer üçüncü taraf hizmetlerin yeteneklerini kullanın.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954065"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053904"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Müşteri profillerini zenginleştirme (önizleme)
+# <a name="data-enrichment-preview-overview"></a>Veri zenginleştirmeye (önizleme) genel bakış
 
-Microsoft ve diğer iş ortakları gibi kaynaklardan gelen verileri kullanarak müşteri verilerinizi zenginleştirin.
+Microsoft ve diğer iş ortakları gibi kaynaklardan gelen verileri kullanarak müşteri verilerinizi zenginleştirin. Üçüncü taraf zenginleştirmeler, yönetici kimlik bilgileriyle birlikte ayarlanan ve veri aktarımları için izin sağlayan [bağlantılar](connections.md) kullanılarak yapılandırılır. Bu bağlantılar, zenginleştirme yapılandırmak için yöneticiler ve katkıda bulunanlar tarafından kullanılabilir.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Aynı türden birden çok zenginleştirme
+
+Zenginleştirmeniz gereken varlık, profillerinizin yalnızca bir alt kümesini zenginleştirme olanağı sağlayan zenginleştirme yapılandırması sırasında belirtilir. Örneğin, verileri yalnızca belirli bir segment için zenginleştirir. Aynı türden birçok zenginleştirme ve aynı bağlantıyı yeniden kullanabilirsiniz. Bazı zenginleştirmeler aynı türden zenginleştirmeler türlerine sınırlı olur. Limitler ve geçerli kullanım, **Zenginleştirme** sayfasının **Keşfet** sekmesindeki her bir kutucukta görülebilir.
+
+## <a name="enrich-data-sources-before-unification"></a>Birleştirmeden önce veri kaynaklarını zenginleştirme
+
+Veri eşleşmesinin kalitesini artırmaya yardımcı olmak için verileri birleştirmeden önce müşteri verilerinizi zenginleştirebilirsiniz. Daha fazla bilgi için bkz. [veri kaynağı zenginleştirmesi](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Zenginleştirme oluştur
+
+Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönetici [izinlerine](permissions.md) ihtiyacınız vardır.
+
+**Veriler** > **Zenginleştirme**'ye gidin. **Bul** sekmesinde, desteklenen tüm zenginleştirme seçenekleri gösterilir.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Zenginleştirme merkezi sayfası.":::
-
-Zenginleştirme seçenekleriyle birlikte çalışmak için **Veri** > **Zenginleştirme**'ye gidin.  
-
-Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönetici izinlerine ihtiyacınız vardır. Daha fazla bilgi için bkz. [İzinler](permissions.md).
-
-**Bul** sekmesinde, tüm desteklenen zenginleştirme seçeneklerini bulacaksınız.
 
 # <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 
@@ -57,45 +65,33 @@ Zenginleştirme oluşturmak veya düzenlemek için Katkıda Bulunan ya da Yönet
 
 ---
 
-**Zenginleştirmelerim** sekmesinde, yapılandırdığınız zenginleştirmeleri görebilir ve özelliklerini düzenleyebilirsiniz. Zenginleştirmelerden [segmentler](segments.md) veya [ölçümler](measures.md) de oluşturabilirsiniz.
-
 ## <a name="manage-existing-enrichments"></a>Mevcut zenginleştirmeleri yönetme
 
-Yapılandırılmış tüm zenginleştirmeleri görmek için **Zenginleştirmelerim** sekmesine gidin. Her zenginleştirme, zenginleştirme hakkında ek bilgiler içeren bir satır olarak temsil edilir.
+**Veriler** > **Zenginleştirme**'ye gidin. **Zenginleştirmelerim** sekmesinde, yapılandırılmış zenginleştirmeler, bunların durumları, zenginleştirilmiş müşteri sayısı ve verilerin son yenilenme zamanını görüntüleyebilirsiniz. Zenginleştirme listesini herhangi bir sütuna göre sıralayabilir veya yönetmek istediğiniz zenginleştirmeyi bulmak için arama kutusunu kullanabilirsiniz.
 
-Kullanılabilir seçenekleri görmek için zenginleştirmeyi seçin. Ayrıca seçenekleri görmek için bir liste öğesinde dikey üç noktayı ( &vellip;) da seçebilirsiniz. Birkaç zenginleştirme yapılandırdıysanız aradığınızı hızlı bir şekilde bulmak için arama kutusunu kullanabilirsiniz.
+Kullanılabilir eylemleri görüntülemek için zenginleştirmeyi seçin.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Zenginleştirmelerim listesindeki zenginleştirmeleri yönetme seçenekleri.":::
 
 - Zenginleştirilen müşteri profillerinin sayısı dahil olmak üzere zenginleştirme ayrıntılarını **görüntüleyin**.
 - Zenginleştirme yapılandırmasını **düzenleyin**.
-- En son verilerle müşteri profillerini güncelleştirmek için **Çalıştır** seçeneğini kullanarak zenginleştirme işlemini gerçekleştirin.
-- Her zamanlanmış yenilemeyle otomatik olarak yenilenmesini durdurmak için mevcut bir zenginleştirmeyi **devre dışı bırakın**. Son başarılı yenilemenin verileri kullanılabilir olmaya devam eder. Her zamanlanmış yenilemeyle otomatik yenilemeyi yeniden başlatmak için etkin olmayan bir zenginleştirmeyi **etkinleştirin**.
+- En son verilerle müşteri profillerini güncelleştirmek için [**Çalıştır**](#run-or-refresh-enrichments) seçeneğini kullanarak zenginleştirme işlemini gerçekleştirin. Zenginleştirmeleri listeden seçerek birden çok zenginleştirmeyi çalıştırın.
+- Bir zenginleştirmeyi **etkinleştirin** veya **devre dışı bırakın**. Etkin olmayan zenginleştirmeler, [zamanlanmış yenileme](system.md#schedule-tab) sırasında yenilenmez.
 - Zenginleştirmeyi **silin**.
 
-Listeden seçerek birden çok zenginleştirmeyi aynı anda çalıştırın veya devre dışı bırakın. Görüntüleme ve düzenleme seçenekleri toplu eylem olarak kullanılamaz. Bir defada yalnızca bir zenginleştirme için çalışırlar.
-
-## <a name="enrichments-and-connections"></a>Zenginleştirme ve bağlantılar
-
-Üçüncü taraf zenginleştirmeler, yönetici kimlik bilgileriyle birlikte ayarlanan ve veri aktarımları için izin sağlayan [bağlantılar](connections.md) kullanılarak yapılandırılır. Bu bağlantılar, zenginleştirme yapılandırmak için yöneticiler ve katkıda bulunanlar tarafından kullanılabilir.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Aynı türden birden çok zenginleştirme
-
-Zenginleştirmeniz gereken varlık, profillerinizin yalnızca bir alt kümesini zenginleştirme olanağı sağlayan zenginleştirme yapılandırması sırasında belirtilir. Örneğin, verileri yalnızca belirli bir segment için zenginleştirir. Aynı türden birçok zenginleştirme ve aynı bağlantıyı yeniden kullanabilirsiniz. Bazı zenginleştirmeler aynı türden zenginleştirmeler türlerine sınırlı olur. Limitler ve geçerli kullanım, **Zenginleştirme** sayfasının **Keşfet** sekmesindeki her bir kutucukta görülebilir.
-
-## <a name="enrich-data-sources-before-unification"></a>Birleştirmeden önce veri kaynaklarını zenginleştirme
-
-Veri eşleşmesinin kalitesini artırmaya yardımcı olmak için verileri birleştirmeden önce müşteri verilerinizi zenginleştirebilirsiniz. Daha fazla bilgi için bkz. [veri kaynağı zenginleştirmesi](data-sources-enrichment.md).
+Zenginleştirmelerden [segmentler](segments.md) veya [ölçümler](measures.md) de oluşturabilirsiniz.
 
 ## <a name="run-or-refresh-enrichments"></a>Zenginleştirmeleri çalıştırma veya yenileme
 
-1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin. Alternatif olarak, [Zamanlanmış yenileme](system.md#schedule-tab) işleminin bir parçası olarak sistemin zenginleştirmeyi otomatik olarak çalıştırmasına izin verin. İşlem süresi müşteri verilerinizin boyutuna bağlıdır.
+Çalıştırıldıktan sonra zenginleştirmeler, otomatik zamanlamaya göre veya isteğe bağlı olarak el ile yenilenebilir.
+
+1. Bir veya daha fazla zenginleştirmeyi el ile yenilemek için bunları seçin ve **Çalıştır**'ı seçin. [Otomatik yenileme zamanlamak için](system.md#schedule-tab) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin. İşlem süresi müşteri verilerinizin boyutuna bağlıdır.
 
 1. İsteğe bağlı olarak [zenginleştirme işleminin ilerlemesine bakın](#see-the-progress-of-the-enrichment-process).
 
 1. Zenginleştirme işlemi tamamlandıktan sonra yeni zenginleştirilmiş müşteri profilleri verilerini, son güncelleştirme zamanını ve zenginleştirilmiş profillerin sayısını incelemek için **Zenginleştirmelerim**'e gidin.
 
-1. [Zenginleştirme sonuçlarını](#enrichment-results) görmek için zenginleştirmeyi seçin.
+1. [Zenginleştirme sonuçlarını](#view-enrichment-results) görmek için zenginleştirmeyi seçin.
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Zenginleştirme işleminin ilerleme durumunu görün
 
@@ -107,12 +103,12 @@ Yenilenme sırasında veya yenileme işlemi tamamlandıktan sonra BT durumu ve p
 1. İlerlemeyi görmek istediğiniz zenginleştirme altından **Ayrıntıları görüntüle**'yi seçin.
 1. **Görev ayrıntıları** bölmesinde, zenginleştirmenizi ve durumlarını güncelleştirmekte yer alan işlemleri görmek için **Ayrıntıları göster**'i seçin.
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 Tamamlanan bir zenginleştirme çalıştırmasından sonra, zenginleştirme sonuçlarını inceleyin.
 
 1. **Veriler** > **Zenginleştirme**'ye gidin.
-1. **Zenginleştirmelerim** sekmesinde hakkında bilgi edinmek istediğiniz zenginleştirmeyi seçin.
+1. **Zenginleştirmelerim** sekmesinde, görüntülemek istediğiniz zenginleştirmeyi seçin.
 
 Tüm zenginleştirmeler zenginleştirilmiş profillerin sayısı ve zaman içinde zenginleştirilmiş profillerin sayısı gibi temel bilgileri gösterir. **Zenginleştirilmiş müşteriler önizlemesi** kutucuğu, oluşturulan zenginleştirme varlığının bir örneğini gösterir. Ayrıntılı görünümü görmek için **Daha fazla göster**'i ve **Veriler** sekmesini seçin.
 

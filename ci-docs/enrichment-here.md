@@ -1,5 +1,5 @@
 ---
-title: Üçüncü taraf zenginleştirme HERE Technologies ile zenginleştirme
+title: HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 description: Üçüncü taraf HERE Technologies zenginleştirmesi hakkında genel bilgiler.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953697"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052075"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 
 HERE Technologies, konum merkezli veri ve hizmetler sunan bir konum platformu şirketidir. HERE Technologies'in veri zenginleştirme hizmetleri, müşterilerinizle ilgili konum bilgilerinin duyarlılığını artırır. Adres normalleştirme, enlem ve boylam ayılma ve diğer işlemleri sağlar.
 
@@ -72,7 +72,7 @@ Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erd
 
 1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

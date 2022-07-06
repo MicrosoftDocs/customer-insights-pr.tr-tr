@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini Azure Data Lake Storage Gen2'ye aktarma
+title: Verileri Azure Data Lake Storage 2. Nesil'e aktarma (önizleme)
 description: Azure Data Lake Storage Gen2 bağlantısının nasıl yapılandırılacağını öğrenin.
 ms.date: 10/06/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947254"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081878"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segment listesini ve diğer verileri Azure Data Lake Storage Gen2'ye verme (Önizleme)
+# <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>Verileri Azure Data Lake Storage 2. Nesil'e aktarma (önizleme)
 
 Data Lake Storage Gen2 hesabı Customer Insights verilerinizi depolamak veya verilerinizi diğer uygulamalara aktarmak için kullanın.
 

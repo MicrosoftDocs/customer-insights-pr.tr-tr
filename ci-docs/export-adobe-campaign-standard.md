@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini Adobe Campaign Standard'a dışarı aktarma
+title: Customer Insights segmentlerini Adobe Campaign Standard'a aktarma (önizleme)
 description: Customer Insights segmentlerini, Adobe Campaign Standard'da nasıl kullanacağınızı öğrenin.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647755"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081801"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Adobe Campaign Standard'da Customer Insights segmentlerini kullanma (önizleme)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Customer Insights segmentlerini Adobe Campaign Standard'a aktarma (önizleme)
 
-Dynamics 365 Customer Insights kullanıcısı olarak, ilgili hedef kitlelerini hedefleyerek pazarlama kampanyalarınızı daha verimli hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Experience Platform ve Adobe Campaign Standard gibi uygulamalarda Customer Insights'tan bir segment kullanmak için bu makalede açıklandığı şekilde aşağıdaki birkaç adımı tamamlamanız gerekir.
+Bir Dynamics 365 Customer Insights kullanıcısı olarak, ilgili hedef kitlelerini hedefleyerek pazarlama kampanyalarınızı daha verimli hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Experience Platform ve Adobe Campaign Standard gibi uygulamalarda Customer Insights'tan bir segment kullanmak için bu makalede açıklandığı şekilde aşağıdaki birkaç adımı tamamlamanız gerekir.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Bu makalede özetlenen adımların süreç diyagramı.":::
 
 ## <a name="prerequisites"></a>Ön koşullar
 
--   Dynamics 365 Customer Insights lisansı
--   Adobe Campaign Standard lisansı
--   Azure Blob Depolama hesabı
+- Dynamics 365 Customer Insights lisansı
+- Adobe Campaign Standard lisansı
+- Azure Blob Depolama hesabı
 
 ## <a name="campaign-overview"></a>Kampanyaya Genel Bakış
 

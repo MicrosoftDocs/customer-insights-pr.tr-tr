@@ -1,21 +1,21 @@
 ---
-title: Customer Insights verilerini Azure Synapse Analytics'a dışarı aktarma
+title: Verileri Azure Synapse Analytics'e aktarma (önizleme)
 description: Azure Synapse Analytics'te bağlantının nasıl yapılandırılacağını öğrenin.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741527"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081928"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Verileri Azure Synapse Analytics'e dışarı aktarma (Önizleme)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Verileri Azure Synapse Analytics'e aktarma (önizleme)
 
 Azure Synapse, veri ambarları ve büyük veri sistemleri arasında içgörü yapma süresini hızlandıran bir analiz hizmetidir. [Azure Synapse](/azure/synapse-analytics/overview-what-is)'de Customer Insights verilerinizi alabilir ve kullanabilirsiniz.
 
@@ -72,13 +72,13 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Dışarı aktarılacak bağlantı** alanında, **Azure Synapse Analytics** bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir [bağlantı](connections.md) yoktur.
 
-1. Verme için tanınabilir bir **görünen ad** ve bir **Veritabanı adı** sağlayın.
+1. Verme için tanınabilir bir **görünen ad** ve bir **Veritabanı adı** sağlayın. Dışarı aktarma işlemi, bağlantıda tanımlanan çalışma alanında yeni [bir Azure Synapse Lake veritabanı](/azure/synapse-analytics/database-designer/concepts-lake-database) oluşturur.
 
 1. Azure Synapse Analytics'e dışarı aktarmak istediğiniz varlıkları seçin.
    > [!NOTE]
    > [Common Data Model klasörü](connect-common-data-model.md)'nü temel alan veri kaynakları desteklenmez.
 
-2. **Kaydet**'i seçin.
+1. **Kaydet**'i seçin.
 
 Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
 

@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: Veri zenginleştirme
   items:
-    - name: Müşteri profillerini zenginleştirme
+    - name: Veri zenginleştirmeye genel bakış
       href: enrichment-hub.md
     - name: Office 365 firma verileri
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: Müşteri etkinliklerini tanımlama
       href: activities.md
-    - name: Customer Insights için onay yönetimi
+    - name: Onay yönetimini kullanma
       href: consent-management.md
 - name: Segmentler
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Iterable
           href: export-iterable.md
         - name: Klaviyo

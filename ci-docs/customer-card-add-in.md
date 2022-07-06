@@ -1,5 +1,5 @@
 ---
-title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (video içerir)
+title: Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (önizleme) (video içerir)
 description: Bu eklentiye sahip Dynamics 365 uygulamalarındaki Customer Insights'taki müşteri profili verilerini gösterin.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755660"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081751"
 ---
-# <a name="customer-card-add-in-preview"></a>Müşteri Kartı Eklentisi (önizleme)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (önizleme)
 
 Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görünümünü edinin. Desteklenen bir Dynamics 365 uygulamasında Müşteri Kartı Eklentisi yüklüyse, müşteri profili alanlarını, öngörüleri ve etkinlik zaman çizelgesini görüntülemeyi seçebilirsiniz. Eklenti, Customer Insights'den, bağlı Dynamics 365 uygulamasındaki verileri etkilemeden verileri alır.
 

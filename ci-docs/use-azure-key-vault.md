@@ -1,6 +1,6 @@
 ---
-title: Gizli anahtarları yönetmek için kendi Azure Key Vault'unuzu getirin
-description: Kendi Azure Key Vault'unuzu kullanmak için Customer Insights'ın nasıl yapılandırılacağını öğrenin.
+title: Kendi Azure Key Vault'unuzu getirin (önizleme)
+description: Gizli anahtarları yönetmek üzere kendi Azure Key Vault'unuzu kullanmak için Customer Insights'ın nasıl yapılandırılacağını öğrenin.
 ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
-ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
+ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "8763603"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081871"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Kendi Azure Key Vault'unuzu getirin (önizleme)
 

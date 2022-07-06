@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verileriniCampaign Monitor'e aktarma
+title: Segmentleri Campaign Monitor'a aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve Campaign Monitor'da dışa aktarmayı öğrenin.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b351e491ee830b6360d4efe33d32a726c2e553ba
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7431d4df5143724b5ecf2a2d747ed164fe2c29
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647585"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081931"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentleri Campaign Monitor'a aktarma (önizleme)
 

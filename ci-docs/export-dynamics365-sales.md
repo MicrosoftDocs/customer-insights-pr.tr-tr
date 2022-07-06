@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini Dynamics 365 Sales'e dışarı aktarma
+title: Segmentleri Dynamics 365 Sales'e aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve Dynamics 365 Sales'da dışa aktarmayı öğrenin.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647682"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081811"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Dynamics 365 Sales'daki segmentleri kullanma (önizleme)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Segmentleri Dynamics 365 Sales'e aktarma (önizleme)
 
 Pazarlama listeleri oluşturmak, iş akışlarını izlemek ve Dynamics 365 Sales ile promosyonları göndermek için müşteri verilerinizi kullanın.
 

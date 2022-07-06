@@ -1,5 +1,5 @@
 ---
-title: Dun & Bradstreet ile şirket profillerini zenginleştirme
+title: Dun & Bradstreet ile şirket profillerini zenginleştirme (önizleme)
 description: Dun & Bradstreet üçüncü taraf zenginleştirme hakkında genel bilgiler.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953915"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081851"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Dun & Bradstreet ile şirket profillerini zenginleştirme (Önizleme)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Dun & Bradstreet ile şirket profillerini zenginleştirme (önizleme)
 
 Dun & Bradstreet işletmeler için ticari veriler, analizler ve öngörüler sunar. Şirketlerin birleşik müşteri profillerine sahip müşteri verilerini zenginleştirmesine olanak tanır. Zenginleştirmeler arasında DUNS sayısı, şirket boyutu, konum, sektör ve fazlası gibi öznitelikler yer alır.
 
@@ -102,7 +102,7 @@ Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erd
 
 1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

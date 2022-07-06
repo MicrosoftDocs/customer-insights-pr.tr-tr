@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647935"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081858"
 ---
-# <a name="relationships-between-entities"></a>Varlıklar arasındaki ilişkiler
+# <a name="relationships-between-entities-and-entity-paths"></a>Varlıklar ve varlık yolları arasındaki ilişkiler
 
 İlişkiler varlıkları bağlar ve varlıklar ortak tanımlayıcı, yabancı bir anahtar paylaştıklarında verilerinizin grafiğini tanımlar. Bu yabancı anahtar için bir varlıktan diğerine referans verilebilir. Bağlı varlıklar, segmentleri ve ölçümleri birden çok veri kaynağına göre tanımlamanızı sağlar.
 

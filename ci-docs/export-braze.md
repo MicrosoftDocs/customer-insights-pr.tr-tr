@@ -1,34 +1,35 @@
 ---
-title: Customer Insights verilerini Braze'e aktarma
+title: Segmentleri Braze'e aktarma (önizleme)
 description: Bağlantının nasıl yapılandırılacağını ve Braze'e aktarılacağını öğrenin.
-ms.date: 03/29/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bfc9b34506dc3385b5edf12b31e74d05f2d20655
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647592"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081881"
 ---
-# <a name="export-segment-lists-to-braze-preview"></a>Segment listelerini Braze'e aktarma (önizleme)
+# <a name="export-segments-to-braze-preview"></a>Segmentleri Braze'e aktarma (önizleme)
 
 Unified Customer Profile segmentlerini Braze'e aktarın ve pazarlama etkinlikleri için kullanın.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
--   [Braze hesabına](https://www.braze.com/) ve ilgili yönetici kimlik bilgilerine sahip olmanız gerekir.
--   Customer Insights'ta [yapılandırılmış segmentlere](segments.md) sahip olmanız gerekir.
--   Dışarı aktarılan segmentteki Unified Customer Profile öğeleri bir e-posta adresi ve Braze müşteri numarası bulunan bir alan içerir. 
+- Bir [Braze hesabı](https://www.braze.com/) ve ilgili yönetici kimlik bilgileri.
+- [Braze'de varolan](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/) segmentler.
+- Customer Insights'ta [yapılandırılmış segmentler](segments.md).
+- Dışarı aktarılan segmentteki Unified Customer Profile öğeleri bir e-posta adresi ve Braze müşteri numarası bulunan bir alan içerir.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
 - Braze'e dışarı aktarma segmentlerle sınırlıdır.
-- Braze'e 1 milyona kadar müşteri profili aktarma işleminin tamamlanması 40 dakikaya kadar sürebilir. 
+- Braze'e 1 milyona kadar müşteri profili aktarma işleminin tamamlanması 40 dakikaya kadar sürebilir.
 - Braze'e aktarabileceğiniz müşteri profilleri sayısı, Braze ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
 
 ## <a name="set-up-connection-to-braze"></a>Braze bağlantısını ayarlama
@@ -41,7 +42,7 @@ Unified Customer Profile segmentlerini Braze'e aktarın ve pazarlama etkinlikler
 
 1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Oturum açmaya devam etmek için [Braze API anahtarınızı](https://www.braze.com/docs/api/basics/) girin. 
+1. Oturum açmaya devam etmek için [Braze API anahtarınızı](https://www.braze.com/docs/api/basics/) girin.
 
 1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
 
@@ -59,9 +60,13 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
 
-1. **Dışarı aktarılacak bağlantısı** alanında, Braze bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.  
+1. **Dışarı aktarılacak bağlantısı** alanında, Braze bölümünden bir bağlantı seçin. Bu bölümü göremiyorsanız, sizin kullanabileceğiniz bu türde bir bağlantı yoktur.  
 
-3. **Veri eşleştirme** bölümündeki **E-posta** alanında, müşterinin e-posta adresini temsil eden alanı seçin, "Müşteri Kimliği" alanında müşterinin Braze kimliğini gösteren alanı seçin. Segmentleri Braze'e aktarmanız için gereklidir. Braze'deki segmentler, Dynamics 365 Customer Insights'taki aynı segment adıyla oluşturulur. Veri eşleştirmesi için ek, isteğe bağlı alanlar seçebilirsiniz. 
+1. Dışarı aktarımınız için bir **Görünen ad** ekleyin.
+
+1. Dışa aktarmak istediğiniz Braze segmentinin API tanımlayıcısını **Braze Segment API'si Tanımlayıcısı** alanına ekleyin. Tanımlayıcıyı, Braze platformundaki segment ayrıntılarında bulabilirsiniz.
+
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresini temsil eden alanını seçin. **Müşteri Kimliği** alanında, müşterinin Braze kimliğini gösteren alanı seçin. Segmentleri Braze'e aktarmanız için gereklidir. İsteğe bağlı olarak, daha fazla alan seçebilirsiniz.
 
 1. **Kaydet**'i seçin.
 

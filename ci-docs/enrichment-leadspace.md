@@ -1,5 +1,5 @@
 ---
-title: Üçüncü taraf Leadspace zenginleştirme ile şirket profillerini zenginleştirme
+title: Leadspace ile şirket profillerini zenginleştirme (önizleme)
 description: Leadspace üçüncü taraf zenginleştirmesi hakkında genel bilgiler.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954203"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081808"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Leadspace ile şirket profillerini zenginleştirme (önizleme)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Leadspace ile şirket profillerini zenginleştirme (önizleme)
 
 Leadspace, B-B Müşteri Veri Platformu sağlayan bir veri bilimi şirketidir. Verilerini zenginleştirmeniz için firmalara göre birleşik müşteri profilleri bulunan ortamları etkinleştirir. Şirket boyutu, konum veya endüstri gibi özniteliklere sahip *Müşteri profillerini* zenginleştirebilirsiniz. Başlık, kişi veya e-posta doğrulaması gibi özniteliklere sahip *İlgili kişi profilleri* zenginleştirin.
 
@@ -82,7 +82,7 @@ Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erd
 
 1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

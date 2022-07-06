@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini Snapchat'e aktarma
+title: Segmentleri Snapchat'e aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve Snapchat'a dışa aktarmayı öğrenin.
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: abe04cd1464c3f7df969da3c769329382d603d7e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947300"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051937"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmentleri Snapchat'e aktarma (önizleme)
 

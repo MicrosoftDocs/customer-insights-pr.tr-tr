@@ -1,5 +1,5 @@
 ---
-title: Dynamics 365 Customer Insights API'leri için OData örnekleri
+title: Customer Insights API'leri için OData sorgusu örnekleri
 description: Verileri incelemek üzere Customer Insights API'lerini sorgulamak için genel olarak kullanılan Açık Veri Protokolü (OData) örnekleri.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808485"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082000"
 ---
-# <a name="odata-query-examples"></a>OData sorgu örnekleri
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Customer Insights API'leri için OData sorgusu örnekleri
 
 Açık Veri Protokolü (OData), HTTP gibi temel protokollerde oluşturulmuş bir veri erişim protokolüdür. Web için REST gibi sık kabul edilen yöntemlerden yararlanır. OData hizmetlerini tüketmek için kullanılabilen çeşitli kitaplık ve araçlar vardır.
 

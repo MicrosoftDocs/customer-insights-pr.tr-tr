@@ -1,5 +1,5 @@
 ---
-title: Customer Insights verilerini Adobe Experience Platform'a dışarı aktarma
+title: Segmentleri Adobe Experience Platform'a aktarma (önizleme)
 description: Customer Insights segmentlerini, Adobe Experience Platform'da nasıl kullanacağınızı öğrenin.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 42a4e0c6bce67a63b449a541299620ef2f4a3259
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647902"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052535"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Adobe Experience Platform'da Customer Insights segmentlerini kullanma (önizleme)
+# <a name="export-segments-to-adobe-experience-platform-preview"></a>Segmentleri Adobe Experience Platform'a aktarma (önizleme)
 
 Bir Dynamics 365 Customer Insights kullanıcısı olarak, ilgili hedef kitlelerini hedefleyerek pazarlama kampanyalarınızı daha verimli hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Experience Platform ve Adobe Campaign Standard gibi uygulamalarda Customer Insights'tan bir segment kullanmak için bu makalede açıklandığı şekilde aşağıdaki birkaç adımı tamamlamanız gerekir.
 

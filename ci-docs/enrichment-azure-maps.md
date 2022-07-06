@@ -1,5 +1,5 @@
 ---
-title: Azure Haritalar'dan konum verileri ile zenginleştirmiş müşteri profilleri
+title: Müşteri profillerini Azure Haritalar'dan gelen konum verileriyle zenginleştirme (önizleme)
 description: Azure Haritalar birinci taraf zenginleştirme hakkında genel bilgiler.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953652"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052631"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Azure Haritalar ile müşteri profillerini zenginleştirme (Önizleme)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Müşteri profillerini Azure Haritalar'dan gelen konum verileriyle zenginleştirme (önizleme)
 
 Azure Haritalar, yerleşik konum zekası ile jeo-uzamsal verileri temel alan deneyimler sunmak için konum merkezli veriler ve hizmetler sağlar. Azure Haritalar veri zenginleştirme servisleri, müşterilerinizle ilgili konum bilgilerinin kesinliğini iyileştirir. Adres normalleştirme ve Dynamics 365 Customer Insights'a enlem ve boylam ayıklama gibi özellikler sunar.
 
@@ -82,7 +82,7 @@ Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erd
 
 1. Zenginleştirme işlemini başlatmak için **Çalıştır**'ı seçin veya **Zenginleştirmeler** sayfasına dönmek için kapatın.
 
-## <a name="enrichment-results"></a>Zenginleştirme sonuçları
+## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
