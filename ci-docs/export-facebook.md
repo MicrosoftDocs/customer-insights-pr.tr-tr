@@ -1,19 +1,19 @@
 ---
 title: Segmentleri Facebook Ads Manager'a aktarma (önizleme) (video içerir)
 description: Bağlantıyı yapılandırmayı ve Facebook Ads Manager'a dışa aktarmayı öğrenin.
-ms.date: 04/15/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081951"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195038"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Segmentleri Facebook Ads Manager'a aktarma (önizleme)
 
@@ -21,31 +21,32 @@ Facebook ve Instagram'da kampanyalar oluşturmak için birleşik müşteri profi
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-## <a name="prerequisites-for-connection"></a>Bağlantı için ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- [**Facebook Kurumsal Hesabı**](https://business.facebook.com/) içeren bir [**Facebook Reklam Hesabınız**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) olması gerekir
-- [**Facebook Reklamlar Hesabı**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) Yönetici olmanız gerekir.
+- [Facebook Kurumsal Hesabı](https://business.facebook.com/) içeren bir [Facebook Ads Hesabı](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- [Facebook Ads Hesabında](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) yönetici ayrıcalıkları.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Facebook Reklam Yöneticisi'ne ihracat başına 10 milyona kadar müşteri profili.
-- Facebook Reklamları Yöneticisi'ne dışarı aktarma segmentlerle sınırlıdır.
-- Facebook üzerinde Özel izleyicileri yalnızca *müşteri listesi* türünde oluşturun veya güncelleştirin.
-- 10 milyona kadar müşteri profili olan segmentleri vermenin tamamlanması 90 dakikaya kadar sürebilir.
+- Facebook Reklam Yöneticisi'ne dışa aktarım başına en fazla 10 milyon müşteri profili; bu işlemin tamamlanması 90 dakika kadar sürebilir.
+- Yalnızca segmentler.
+- Yalnızca özel [hedef kitlelerde](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) Facebook *müşteri listesi* türü.
+  > [!NOTE]
+  > Bazı durumlarda, açılan listede farklı türlerde özel kitleler görebilirsiniz. *Müşteri listesi* haricinde farklı bir tür seçerseniz dışa aktarma işlemi başarısız olur.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Facebook Ads Manager bağlantısı ayarla
 
-Kullanıcılar bir verme oluşturmadan önce, Yönetici hizmetle bağlantıyı yapılandırmalı ve katkıda bulunanların bağlantıyı kullanmalarına izin vermelidir.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **Facebook Ads manager**'i seçin.
+1. **Bağlantı ekle**'yi ve **Facebook Reklam Yöneticisi**'ni seçin.
 
 1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
 
-1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. [Katkıda bulunanların dışa aktarma için bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Facebook Ads ile kimlik doğrulaması: 
+1. Facebook Ads ile kimlik doğrulaması:
 
    1. Facebook Reklam hesabınıza giriş yapmak için **Facebook ile Devam**'ı seçin.
 
@@ -53,27 +54,25 @@ Kullanıcılar bir verme oluşturmadan önce, Yönetici hizmetle bağlantıyı y
 
    1. Çalışmak istediğiniz **Facebook Reklamları Hesabı**'nı seçin.
 
-   1. Açılan listeden **Varolan özel hedef kitle** seçin veya **Yeni özel hedef kitle** oluşturun. Daha fazla bilgi için bkz. [**Facebook Reklamları Yöneticisinde Hedef Kitleler**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > Bu verme işlemiyle, *müşteri listesi* türünde Facebook'ta yalnızca özel hedef kitleleri oluşturabilir veya güncelleştirebilirsiniz. Bazı durumlarda, açılan listede farklı türlerde özel kitleler görürsünüz. Farklı bir türü *müşteri listesinden* seçmek, verme işlemi sırasında ortaya sonuçlanacaktır. 
+   1. Açılan listeden **Varolan özel hedef kitle** seçin veya **Yeni özel hedef kitle** oluşturun.
 
-1. **Veri gizliliği ve uyumluluğunu** gözden geçirin ve **kabul ediyorum** seçeneğini belirleyin.
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
 
 1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
 
 ## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
-Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin. 
+1. **Dışarı aktarma ekle**'yi seçin.
 
-1. **Dışa aktarma bağlantısı** alanında, **Facebook Ads Manager** bölümünden bir bağlantı seçin. Bu bölüm adını görmüyorsanız, bu tür hiçbir bağlantı kullanabilirsiniz.
+1. **Dışa aktarma bağlantısı** alanında, Facebook Reklam Yöneticisi bölümünden bir bağlantı seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin.
 
-1. **Anahtar tanımlayıcınızı seçin** alanında, Facebook Ads Yöneticisi'ne göndermek üzere **E-posta**, **Ad ve adres** veya **Telefon**'u seçin. 
+1. Dışa aktarım için bir ad girin.
 
-1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin.
+1. **Verileri bağla** alanında, Facebook Reklam Yöneticisi'ne göndermek üzere **E-posta**, **Ad ve adres** veya **Telefon**'u seçin.
 
 1. Seçilen anahtar tanımlayıcı için birleşik müşteri varlığınızdaki karşılık gelen öznitelikleri eşleyin.
    > [!TIP]
@@ -85,16 +84,6 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Kaydet**'i seçin.
 
-Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
-
-Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. 
-
-[Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
-
-## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
-
-Dynamics 365 Customer Insights uygulamasının Facebook Reklamları Yöneticisine veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak Facebook Reklamları'nın sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
-Dynamics 365 Customer Insights yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman bu dışarı aktarma hedefini kaldırabilir.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

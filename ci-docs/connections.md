@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081741"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195198"
 ---
 # <a name="connections-preview-overview"></a>Bağlantılara (önizleme) genel bakış
 
@@ -28,7 +28,13 @@ Bağlantılar oluşturmak ve görüntülemek için **Yönetim** > **bağlantıla
 
 Hızlı bir genel bakış, açıklama alın ve **bul** sekmesindeki her genişletilebilirlik seçeneğiyle neler yapabileceğinizi öğrenin.
 
-## <a name="exports"></a>Dışarı aktarma işlemleri
+## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
+
+Üçüncü taraflara veya Microsoft ürünlerine veri aktarmak için Dynamics 365 Customer Insights'ı etkinleştirdiğinizde, kişisel veriler gibi potansiyel olarak hassas bilgiler de dahil olmak üzere Dynamics 365 Customer Insights uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak üçüncü tarafın sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Dynamics 365 Customer Insights yöneticiniz, işlevin kullanımını sona erdirmek için istediği zaman bağlantıyı kaldırabilir.
+
+## <a name="exports"></a>Dışarı aktarmalar
 
 Yalnızca Yöneticiler yeni bağlantılar yapılandırabilir, ancak varolan bağlantıları kullanmak için katkıda bulunanların erişimine izin verebilirler. Yöneticiler verilerin nereye gidebileceğini denetler; katkı sağlayanlar, yükü ve sıklığı tanımlar. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](#allow-contributors-to-use-a-connection-for-exports).
 
@@ -41,8 +47,6 @@ Yalnızca Yöneticiler yeni bağlantılar yapılandırabilir, ancak oluşturulan
 Bağlantı eklemek için, [Yönetici izinlere](permissions.md) sahip olmanız gerekir. Diğer Microsoft hizmetlerine bağlanırsanız, her iki hizmetin da aynı kuruluşta olduğu varsayılmaktadır.
 
 1. **Yönetici** > **Bağlantılar (Önizleme)** gidin.
-
-1. **Bağlantılar** sekmesine gidin.
 
 1. Yeni bir bağlantı oluşturmak için **Bağlantı ekle**'yi seçin. Açılan menüden, oluşturmak istediğiniz bağlantı türünü seçin.
 
@@ -99,3 +103,5 @@ Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunla
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Kendi Key Vault'unuzun yönettiği gizli anahtarlarla bağlantı kurma
 
 Bazı bağlantıların API tuşları veya parolalar gibi gizli anahtarlara ihtiyacı vardır. Bazı bağlantılar, kendi Key Vault'unuzda depolanan gizli anahtarları destekler. Desteklenen bağlantılarla ilgili daha fazla bilgi ve [Customer Insights için kendi Key Vault'unuzun nasıl kurulacağını](use-azure-key-vault.md) öğrenin.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

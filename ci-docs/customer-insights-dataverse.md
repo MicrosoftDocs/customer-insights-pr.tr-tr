@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 description: Customer Insights ve Microsoft Dataverse'e nasıl bağlanılacağını öğrenin ve Dataverse'e aktarılan çıkış varlıklarını anlayın.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011580"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153428"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
@@ -31,13 +31,25 @@ Dataverse ortamınıza bağlanmak ayrıca [Power Platform veri akışları ve a�
 - Bağlanmak istediğiniz Dataverse ortamıyla zaten ilişkilendirilmiş olan başka bir Customer Insights ortamı yok. [Dataverse ortamına varolan bir bağlantının nasıl](#remove-an-existing-connection-to-a-dataverse-environment) kaldırılacağını öğrenin.
 - Bir Microsoft Dataverse ortamı yalnızca tek bir depolama hesabına bağlanabilir. Ortamı yalnızca [Azure Data Lake Storage'ı kullanmak üzere ](own-data-lake-storage.md) yapılandırırsanız geçerlidir.
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse depolama kapasitesi yetkilendirmesi
+
+Bir Customer Insights aboneliği, kuruluşunuzun varolan [Dataverse depolama kapasitesi](/power-platform/admin/capacity-storage) için size fazladan kapasite hakkı verir. Eklenen kapasite, aboneliğinizin kullandığı profil sayısına bağlıdır.
+
+**Örnek:**
+
+100.000 müşteri profili başına 15 GB veri depolama alanı ve 20 GB dosya depolama alanı aldığınız varsayılmaktadır. Aboneliğiniz 300.000 müşteri profili içeriyorsa, toplam depolama kapasiteniz 45 GB (3 x 15 GB) veritabanı depolama alanı ve 60 GB dosya depolama alanı (3 x 20 GB) olacaktır. Benzer şekilde, 30.000 hesaba sahip bir B2B aboneliğiniz varsa, toplam depolama kapasiteniz 45 GB (3 x 15 GB) veritabanı depolama alanı ve 60 GB dosya depolama alanı (3 x 20 GB) olacaktır.
+
+Günlük kapasitesi, kuruluşunuz için artımlı ve sabit değildir.
+
+Kapasite hakları hakkında daha fazla bilgi için bkz. [Dynamics 365 Lisanslama Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Bir Dataverse ortamını Customer Insights'a bağlama
 
 **Microsoft Dataverse** adımı [bir Customer Insights ortamı oluştururken](create-environment.md) Customer Insights'ı Dataverse ortamınızla bağlamanızı sağlar.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="net yeni ortamlar için otomatik etkinleştirilen Microsoft Dataverse ile veri paylaşımı.":::
 
-Yöneticiler, varolan Dataverse ortamını bağlamak için Customer Insights'ı yapılandırabilirler. Dataverse ortamına URL sağlayarak, bu yeni Customer Insights ortamına ekleniyor.
+Yöneticiler, varolan Dataverse ortamını bağlamak için Customer Insights'ı yapılandırabilirler. Dataverse ortamına URL sağlanarak bu yeni Customer Insights ortamı ile bağlantı kurulur. Customer Insights ile Dataverse arasında bağlantı kurduktan sonra, Dataverse ortamının kuruluş adını değiştirmeyin. Kuruluşun adı Dataverse URL'sinde kullanılır ve adın değiştirilmesi Customer Insights ile olan bağlantıyı keser.
 
 Mevcut Dataverse ortamını kullanmak istemiyorsanız sistem, kiracınızdaki Customer Insights verileri için yeni bir ortam oluşturur. [Power Platform yöneticileri ortamları kimlerin oluşturabileceğini ve yönetebileceğini denetleyebilir](/power-platform/admin/control-environment-creation). Yeni bir Customer Insights ortamı ayarladığınızda ve yönetici, yöneticiler dışındaki herkes için Dataverse ortamı oluşturmayı devre dışı bıraktıysa yeni bir ortam oluşturamayabilirsiniz.
 
@@ -84,7 +96,7 @@ PowerShell komut dosyalarını çalıştırmak için öncelikle PowerShell'i uyg
 
     2. `ByolSetup.ps1`
         - Bu betiği çalıştırmak için depolama hesabı/kapsayıcı düzeyinde *Depolama Blobu Veri Sahibi* izinlerine sahip olmanız gerekir veya bu betik sizin için bir tane oluşturacaktır. Rol atamanız betik başarıyla çalıştırıldıktan sonra el ile kaldırılabilir.
-        - Bu PowerShell betiği, Microsoft Dataverse hizmeti ve tüm Dataverse tabanlı iş uygulamaları için gereken rol tabanlı erişim denetimini (RBAC) ekler. Ayrıca, `CreateSecurityGroups.ps1` betiğiyle oluşturulan güvenlik grupları için CustomerInsights kapsayıcısında Erişim Denetim Listesini (ACL) güncelleştirir. Katılımcı grubu *rwx* iznine ve Okuyucular grubu yalnızca *r-x* iznine sahip olur.
+        - Bu PowerShell betiği, Microsoft Dataverse hizmeti ve tüm Dataverse tabanlı iş uygulamaları için gereken rol tabanlı erişim denetimini ekler. Ayrıca, `CreateSecurityGroups.ps1` betiğiyle oluşturulan güvenlik grupları için CustomerInsights kapsayıcısında Erişim Denetim Listesini (ACL) güncelleştirir. Katılımcı grubu *rwx* iznine ve Okuyucular grubu yalnızca *r-x* iznine sahip olur.
         - Azure Data Lake Storage, depolama hesabı adı, kaynak grubu adı ve Okuyucu ve Katılımcı güvenlik grubu kimliği değerlerini içeren Azure aboneliği kimliğinizi girerek bu PowerShell betiğini Windows PowerShell'de yürütün. Ek bilgileri ve uygulanan mantığı gözden geçirmek için PowerShell betiğini düzenleyicide açın.
         - Betiği başarıyla çalıştırdıktan sonra çıkış dizesini kopyalayın. Çıkış dizesi şu şekilde görünür: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

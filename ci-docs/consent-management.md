@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947511"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188072"
 ---
 # <a name="use-customer-consent"></a>Müşteri onayını kullanma
 
@@ -50,7 +50,7 @@ Birden çok izin seçeneğine sahip basit bir onay veritabanının örnek tablos
 
 ## <a name="import-and-unify-consent-data"></a>Onay verilerini içe aktarma ve birleştirme
 
-Onay verilerini, diğer veri kaynaklarını Customer Insights'a aldığınız şekilde içe aktarabilirsiniz. Desteklenen veri kaynakları ve bunların nasıl içe aktarılacağı hakkında daha fazla bilgi için bkz. [Veri kaynaklarına genel bakış](data-sources.md).
+Onay verilerini, diğer veri kaynaklarını Customer Insights'a aldığınız şekilde içe aktarın. Desteklenen veri kaynakları ve bunların nasıl içe aktarılacağı hakkında daha fazla bilgi için bkz. [Veri kaynaklarına genel bakış](data-sources.md).
 
 Veri kaynaklarınızı birleştirme hakkında daha fazla bilgi için bkz. [Veri birleştirmeye genel bakış](data-unification.md).
 
@@ -71,3 +71,5 @@ Müşterilerinizin izin durumunun güncelleştirilmesi önemlidir. Customer Insi
 Başka bir deyişle, Customer Insights'a aktarılan kaynak verilerin her zaman en son bilgilere sahip olduğundan emin olun.
 
 Daha fazla bilgi için bkz. [Segmentleri el ile yenileme](segments.md#refresh-segments) veya [Zamanlanmış bir yenilemeyi yapılandırma](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

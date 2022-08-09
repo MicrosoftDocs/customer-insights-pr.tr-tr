@@ -1,28 +1,56 @@
 ---
 title: Dynamics 365 Customer Insights'teki yenilikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054042"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114270"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'teki yenilikler
 
 En son güncelleştirmeleri bildirmekten heyecan duyuyoruz! Bu makalede genel önizleme özellikleri, genel kullanılabilirlik geliştirmeleri ve özellik güncelleştirmeleri özetlenmektedir. Uzun vadeli özellik planlarını görmek için [Dynamics 365 ve Power Platform sürüm planları](/dynamics365/release-plans/) konusuna bakın.
 
-Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı bölgeler özellikleri diğerlerinden önce görebilir. Farklı şekilde belirtilmedikçe herhangi bir işlem yapmanıza gerek yoktur ve uygulamayı kesinti olmadan otomatik olarak güncelleştiririz.
+Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı bölgeler özellikleri diğerlerinden önce görebilir. Farklı şekilde belirtilmedikçe herhangi bir işlem yapmanıza gerek yoktur; uygulamayı kesinti olmadan otomatik olarak güncelleştiririz.
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="june-2022-updates"></a>Haziran 2022 güncelleştirmeleri
+
+2022 Haziran güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata düzeltmeleri içerir.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Veri kaynakları ve veri alımı için kullanıcı deneyimi güncelleştirildi
+
+Çok çeşitli veri kaynaklarından veri aktarılması, Dynamics 365 Customer Insights uygulamasında müşteri verilerinizi birleştirmenin temelini oluşturur. Veri kaynaklarının içe aktarılması ve bağlantısı için kullanıcı deneyimini zenginleştirdik. Bu güncelleştirme, verileri Customer Insights'a almanızı kolaylaştırmayı amaçlar.
+
+Daha fazla bilgi için bkz. [Veri kaynaklarına genel bakış](data-sources.md).
+
+### <a name="export-to-inmobi"></a>InMobi'ye Aktarma
+
+InMobi, markaların müşterileri anlamasına, tanımlamasına, edinmesine ve onlarla etkileşime geçmesine yardımcı olur. Segmentleri ve diğer verileri Azure Blob Depolama hesapları aracılığıyla InMobi hizmetine aktarabilirsiniz.
+
+Daha fazla bilgi için bkz. [Segmentleri InMobi'ye aktarma (önizleme)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Customer Insights'ta kasa desteği
+
+Müşteri Kasası, veri erişim isteklerini gözden geçirmek ve onaylamak (veya reddetmek) için bir arabirim sağlar. Bu istekler, destek talebini çözmek için müşteri verilerine veri erişimi gerektiğinde ortaya çıkar.
+
+Daha fazla bilgi için bkz. [Müşteri Kasası (Önizleme) ile müşteri verilerine güvenli bir şekilde erişim](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Azure Özel Bağlantı'yı kullanarak verilerinize bağlanma
+
+Azure Özel Bağlantı, Customer Insights'ın sanal ağınızdaki özel bir uç nokta üzerinden Azure Data Lake Storage hesabınıza bağlanmasını sağlar. Genel internete açık olmayan depolama hesabındaki veriler için Özel Bağlantı, bu kısıtlı ağa bağlantı sağlar.
+
+Daha fazla bilgi için bkz. [Customer Insights'ta Özel Bağlantı'yı kullanma](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Mayıs 2022 güncelleştirmeleri
 
@@ -169,7 +197,7 @@ Geçiş dönemi boyunca, mevcut önizleme katılımcıları bazı önizleme öze
 - Olaylara ve olay özelliklerine bakma 
 - Müşteri verilerinin tam değerinden yararlanmak için alınan ve iyileştirilen olaylarla birleşik profilleri geliştirme
   
-Geçiş süresi boyunca, yakalanan olaylar bağlı Data Lake'e aktarılmaya devam eder. Bu işlev kapatıldığında, etkileşim veri paylaşımı durabilir ve bağlı depoya yeni olay gönderilmez.
+Geçiş süresi boyunca, yakalanan olaylar bağlı Data Lake'e aktarılmaya devam eder. Bu işlev kapatıldığında, veri paylaşımı durur ve bağlı depolamaya yeni olay gönderilmez.
 Özellik önizlemesinin sonu hakkında sorularınız varsa doğrudan Microsoft Hesabı ekibinize başvurun. Hesap ekibiniz, yaklaşan başlatmalar hakkında sizi güncel tutar. 
 
 ## <a name="january-2022-updates"></a>Ocak 2022 güncelleştirmeleri

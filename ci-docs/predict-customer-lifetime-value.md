@@ -1,7 +1,7 @@
 ---
 title: Müşteri yaşam süresi değeri (CLV) tahmini
 description: Gelecekteki etkin müşterilerin gelir potansiyelini tahmin edin.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055238"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186464"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Müşteri yaşam süresi değeri (CLV) tahmini
 
 Tek tek etkin müşterilerin gelecekteki belirli bir dönemde işinize kazandıracağı olası değeri (geliri) tahmin edin. Bu özellik çeşitli hedeflere ulaşmanıza yardımcı olabilir:
+
 - Yüksek değerli müşterileri belirleme ve bu içgörüyü işleme
 - Hedeflenen satış, pazarlama ve destek çabalarıyla kişiselleştirilmiş kampanyalar yürütmek için olası değerlerine göre stratejik müşteri segmentleri oluşturma
 - Müşteri değerini artıran özelliklere odaklanarak ürün geliştirme rehberliği sağlama
 - Satış veya pazarlama stratejisini optimize etme ve müşteriyi desteklemek için bütçeyi daha doğru şekilde ayırma
-- Bağlılık veya ödül programları aracılığıyla yüksek değerli müşterileri tanıma ve ödüllendirme 
+- Bağlılık veya ödül programları aracılığıyla yüksek değerli müşterileri tanıma ve ödüllendirme
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -35,7 +36,7 @@ Başlamadan önce CLV'nin işletmeniz için ne ifade ettiğini gösterin. Şu an
 
 CLV modelinin yapılandırılıp çalıştırılması çok zaman almadığından farklı giriş tercihlerine sahip birkaç model oluşturmayı deneyin ve iş gereksinimlerinize en uygun model senaryosunu görmek için model sonuçlarını karşılaştırın.
 
-###  <a name="data-requirements"></a>Veri gereksinimleri
+### <a name="data-requirements"></a>Veri gereksinimleri
 
 Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde model performansını artırmak için önerilir. Model ne kadar çok veri işleyebilirse tahmin o kadar doğru olur. Bu nedenle, varsa daha fazla müşteri etkinliği verisi almanızı tavsiye ederiz.
 
@@ -52,11 +53,12 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
     - Web etkinlikleri: web sitesi ziyaret geçmişi, e-posta geçmişi
     - Bağlılık etkinlikleri: bağlılık ödülü puanları tahakkuk ve kullanım geçmişi
     - Müşteri hizmetleri günlüğü, servis çağrısı, şikayet veya iade geçmişi
+    - Müşteri profili bilgileri
 - Müşteri etkinlikleriyle ilgili veriler (isteğe bağlı):
     - Aynı türdeki etkinlikleri ayıran etkinlik tanımlayıcıları
     - Müşterilerinizle etkinlikleri eşleştiren müşteri tanımlayıcıları
     - Etkinliğin adını ve tarihini içeren etkinlik bilgileri
-    - Etkinliklerin anlamsal veri şeması şunları içerir: 
+    - Etkinliklerin anlamsal veri şeması şunları içerir:
         - **Birincil anahtar:** Etkinliğin benzersiz tanımlayıcısı
         - **Zaman Damgası:** Birincil anahtarla belirtilen olayın tarihi ve saati
         - **Olay (etkinlik adı):** Kullanmak istediğiniz olayın adı
@@ -66,7 +68,7 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
     - Yeterli geçmiş veri: En az bir yıllık işlem verileri. Tercihen CLV bir yıl için tahmin etmek için işlem verileri iki ila üç yıl.
     - Müşteri başına birden fazla satın alma: İdeal olarak, tercihen birden fazla tarih boyunca müşteri kimliği başına en az iki ila üç işlem.
     - Müşteri sayısı: en az 100 benzersiz müşteri (tercihen 10.000 müşteri). Model 100 adetten az müşteriyi kullanarak başarısız olur ve geçmişteki verileri yetersiz eder
-    - Veri tamlığı: Giriş verilerindeki gerekli alanlarda %20'den az eksik değer   
+    - Veri tamlığı: Giriş verilerindeki gerekli alanlarda %20'den az eksik değer
 
 > [!NOTE]
 > - Model, müşterilerinizin hareket geçmişini gerektiriyor. Şu anda yalnızca bir işlem geçmişi varlığı yapılandırılabilir. Birden çok satın alma/işlem varlığı varsa bunları veri alımından önce Power Query'de birleştirebilirsiniz.
@@ -122,11 +124,11 @@ Aşağıdaki veriler gereklidir ve isteğe bağlı olarak işaretlendiklerinde m
 
 1. **İleri**'yi seçin.
 
-### <a name="add-optional-data"></a>İsteğe bağlı veri ekle
+### <a name="add-optional-activity-data"></a>İsteğe bağlı etkinlik verileri ekleme
 
-Temel müşteri etkileşimlerini yansıtan veriler (web, müşteri hizmetleri ve olay günlükleri gibi), işlem kayıtlarına bağlam ekler. Müşteri etkinliği verilerinizde bulunan diğer desenler, tahminlerin doğruluğunu iyileştirebilir. 
+Temel müşteri etkileşimlerini yansıtan veriler (web, müşteri hizmetleri ve olay günlükleri gibi), işlem kayıtlarına bağlam ekler. Müşteri etkinliği verilerinizde bulunan diğer desenler, tahminlerin doğruluğunu iyileştirebilir.
 
-1. **Ek veri (isteğe bağlı)** adımında, **Veri ekle**'yi seçin. [Ön koşullar](#prerequisites) bölümünde açıklandığı şekilde müşteri etkinliği bilgilerini sağlayan müşteri etkinliği varlığını seçin.
+1. **Ek veriler (isteğe bağlı)** adımında, **Ek etkinlik verileriyle model içgörülerini geliştirin** altında **Veri ekle**'yi seçin. [Ön koşullar](#prerequisites) bölümünde açıklandığı şekilde müşteri etkinliği bilgilerini sağlayan müşteri etkinliği varlığını seçin.
 
 1. Anlamsal alanları müşteri etkinliği varlığınızdaki özniteliklerle eşleyin ve **İleri**'yi seçin.
 
@@ -135,15 +137,34 @@ Temel müşteri etkileşimlerini yansıtan veriler (web, müşteri hizmetleri ve
 1. Eklediğiniz müşteri etkinliği türüyle eşleşen bir etkinlik türü seçin. Mevcut etkinlik türleri arasından seçim yapın veya yeni bir etkinlik türü ekleyin.
 
 1. Müşteri etkinliği varlığınız ile *Müşteri* varlığı arasındaki ilişkiyi yapılandırın.
-    
+
     1. Müşteri etkinliği tablosundaki müşteriyi tanımlayan alanı seçin. Bu alan, *Müşteri* varlığınızın birincil müşteri kimliği ile doğrudan ilişkili olabilir.
     1. Birincil *Müşteri* varlığınızla eşleşen *Müşteri* varlığını seçin.
     1. İlişkiyi açıklayan bir ad girin.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Ek veri eklemek ve etkinliği doldurulmuş örneklerle yapılandırmak için yapılandırma akışındaki adımın görüntüsü.":::
 
-1. **Kaydet**'i seçin.    
+1. **Kaydet**'i seçin.
     Eklemek istediğiniz başka müşteri etkinlikleri varsa daha fazla veri ekleyin.
+
+1. İsteğe bağlı müşteri verilerini ekleyin veya **İleri**'yi seçin.
+
+### <a name="add-optional-customer-data"></a>İsteğe bağlı müşteri verileri ekleme
+
+Modele giriş olarak eklemek için, sık kullanılan 18 müşteri profili öznitelikleri arasından seçim yapın. Bu öznitelikler, iş kullanım durumlarınız için daha kişiselleştirilmiş, alakalı ve eyleme dönüştürülebilir model sonuçları sağlayabilir.
+
+Örneğin: Contoso Coffee, yüksek değerli müşterileri yeni espresso makinesinin kullanıma sunulmasıyla ilişkili olarak kişiselleştirilmiş bir teklifle hedeflemek için müşteri yaşam süresi değerini tahmin etmek istemektedir. Contoso, CLV modelini kullanır ve en yüksek değerli müşterileri etkileyen etkenleri görmek için 18 müşteri profili özniteliklerini de ekler. Şirket, müşteri konumunun bu müşteriler için en etkili unsur olduğunu öğrenmiştir.
+Bu bilgiler sayesinde şirket, kullanıma sunulan espresso makinesi için yerel bir etkinlik organize etmiş ve etkinlikte kişiselleştirilmiş teklifler ve özel bir deneyim sunmak için yerel satıcılarla işbirliği yapmıştır. Bu bilgiler olmadan Contoso, yalnızca genel pazarlama e-postaları göndermiş ve yüksek değerli müşterilerin bu yerel segmentini kişiselleştirme fırsatını kaçırmış olurdu.
+
+1. **Ek veriler (isteğe bağlı)** adımında, **Ek müşteri verileriyle model içgörülerini daha da geliştirin** altında **Veri ekle**'yi seçin.
+
+1. **Varlık** için, müşteri öznitelik verileriyle eşleşen birleşik müşteri profili tablosunu seçmek için **Müşteri: CustomerInsights**'ı seçin. **Müşteri Kimliği** için **System.Customer.CustomerId** öğesini seçin.
+
+1. Veriler birleştirilmiş müşteri profillerinizde kullanılabiliyorsa daha fazla alan eşleyin.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Müşteri profili verileri için eşlenen alan örnekleri.":::
+
+1. Müşterinin yaşam süresi değerini tahmin etmek için modelin kullanacağı öznitelikleri eşledikten sonra **Kaydet**'i seçin.
 
 1. **İleri**'yi seçin.
 

@@ -1,7 +1,7 @@
 ---
-title: 'Müşteri profilleri: Dizin arama ve filtreleme'
+title: Müşteri profilleri için arama ve filtre dizinini yönetme
 description: Birleşik müşteri profilleri hakkındaki bilgileri kolayca bulun ve belirtilen öznitelikler için filtreleyin.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050833"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187933"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Müşteri profilleri: Dizin arama ve filtreleme
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Müşteri profilleri için arama ve filtre dizinini yönetme
 
-Müşteri verilerinizi birleştirerek toplam müşteri tabanınızda birleşik görünüm sağlayan bir Müşteri Profili varlığı elde edersiniz. Kolayca [belirli bir müşteri veya müşteri grubuyla ilgili bilgileri bulmak](customer-profiles.md) için **Müşteriler** sayfasında **Arama** ve **Filtreleme** özelliklerini yapılandırabilirsiniz. Yöneticilerin, arama ve filtreleme için kullanıcılara sunulan **Dizini ara ve filtrele** sayfasındaki öznitelikleri nasıl düzenleyebileceğini öğrenmek için okumaya devam edin.
+Müşteri verilerinizi birleştirerek toplam müşteri tabanınızda birleşik görünüm sağlayan bir *Müşteri* varlığı elde edersiniz. Kullanıcıların [belirli bir müşteri veya müşteri grubuyla ilgili bilgileri kolayca bulması](customer-profiles.md) için bir yöneticinin **Müşteriler** sayfasında **Arama** ve **Filtreleme** özelliklerini yapılandırması gerekir.
 
    :::image type="content" source="media/search-filter.png" alt-text="Arama filtresi":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Aranabilir öznitelikleri ve dizinlenmiş alanları tanımlama
 
-## <a name="add-fields-and-specify-attributes"></a>Alan ekleme ve öznitelikleri belirleme
+Yönetici olarak aranabilir öznitelikleri ilk kez tanımlıyorsanız önce dizinlenmiş alanları tanımlayın. Kullanıcıların **Müşteriler** sayfasında müşterileri arayabileceği ve filtreleyebileceği tüm öznitelikleri seçmenizi öneririz. Yalnızca veri birleştirme işlemi sırasında oluşturulan *Müşteri* varlığında bulunan öznitelikler belirtilebilir.
 
-Yönetici olarak aranabilir öznitelikleri ilk kez tanımlıyorsanız önce dizin oluşturulan alanları tanımlamanız gerekir. Kullanıcıların **Müşteriler** sayfasında müşterileri arayabileceği ve filtreleyebileceği tüm öznitelikleri seçmenizi öneririz. Yalnızca veri birleştirme işlemi sırasında oluşturduğunuz Müşteri Profili varlığında bulunan öznitelikleri belirtebilirsiniz.
+1. **Müşteriler** sayfasına gidin ve **Arama ve filtre dizini**'ni seçin.
 
-1. **Müşteriler** sayfasını açın ve **Dizini ara ve filtrele**'yi seçin.
+1. **+ Ekle**'yi seçin.
 
-2. Dizin oluşturulan alanları belirtmek için **+ Ekle**'yi seçin.
+1. Listeye dizin oluşturulan alan olarak eklemek istediğiniz öznitelikleri seçin ve **Uygula**'ya tıklayın.
 
-3. Listeye dizin oluşturulan alan olarak eklemek istediğiniz öznitelikleri seçin. **Ekle**'yi seçerek her zaman daha fazla öznitelik ekleyebilirsiniz. Ayrıca **Kaldır** simgesini belirleyerek seçtiğiniz öznitelikleri kaldırabilirsiniz.
+1. Daha fazla öznitelik eklemek için **Ekle** seçeneğini belirleyin. Seçilen bir özniteliği kaldırmak için özniteliği ve ardından **Sil**'i seçin.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Dizin oluşturulan müşteri alanları tablosunu keşfetme
+   :::image type="content" source="media/search-filter-index.png" alt-text="Arama ve filtre dizini sayfası.":::
 
-Tabloda aşağıdaki bilgiler sunulur.
+1. Arama ve filtreleme ayarlarınızı uygulamaya hazır olduğunuzda **Çalıştır**'ı seçin. Değişiklikler işlendikten sonra, bunları [Müşteri sayfasındaki müşteri kartlarında](customer-profiles.md) görüntüleyebilirsiniz.
 
-- **Ad**: Özniteliğin adını Müşteri Profili varlığında görüntülendiği gibi gösterir.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Belirli bir öznitelik için filtreleme seçeneklerini tanımlama
+
+**Müşteriler** sayfasında müşterileri filtrelemek için kullanılabilen alanları ayarlayın.
+
+1. **Müşteriler** sayfasına gidin ve **Arama ve filtre dizini**'ni seçin.
+
+1. Bir öznitelik seçin ve **Filtre Ekle**'yi belirleyin. Sonuç sayısını ve bunların düzenlenme sırasını tanımlayın. Özniteliğin veri türüne bağlı olarak aşağıdaki bölmelerden biri görüntülenir.
+
+   - Dize türü öznitelikleri: **Dize filtresi** panelinde istediğiniz sonuç sayısını ve bunların düzenleneceği sıralama ilkesini belirtin.
+
+   - Sayısal türde öznitelikler: **Sayı filtresi** paneline dahil olan aralıkları ve bunların düzenleneceği sıralama ilkesini belirtin.
+
+   - Tarih türünde öznitelikler: **Tarih filtresi** paneline dahil olan aralıkları ve bunların düzenleneceği sıralama ilkesini belirtin.
+
+1. **Tamam**'ı seçin. Filtre uygulamak istediğiniz tüm öznitelikler için bu adımları yineleyin.
+
+1. Arama ve filtreleme ayarlarınızı uygulamaya hazır olduğunuzda **Çalıştır**'ı seçin. Değişiklikler işlendikten sonra, bunları [Müşteri sayfasındaki müşteri kartlarında](customer-profiles.md) görüntüleyebilirsiniz.
+
+## <a name="view-indexed-customer-fields"></a>Dizin oluşturulan müşteri alanlarını görüntüleme
+
+**Arama ve filtre dizini** sayfası aşağıdaki bilgileri görüntüler:
+
+- **Ad**: Özniteliğin adını *Müşteri* varlığında görüntülendiği gibi gösterir.
 - **Veri türü**: Veri türünün dize, sayı veya tarih olup olmadığını belirtir.
 - **Aramaya eklendi**: Bu özniteliğin **Arama** alanı kullanılarak **Müşteriler** sayfasında müşterileri aramak için kullanılıp kullanılamayacağını belirtir.
 - **Filtre Ekle**: Bu özniteliğin **Müşteriler** sayfasında filtreleme için nasıl kullanılabileceğini tanımlamak üzere kontrol sağlar.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Belirli bir öznitelik için filtreleme seçeneklerini düzenleme
-
-**Müşteriler** sayfasındaki **Filtre** menüsü değişen sayıda öznitelik düzeyi içerebilir (örneğin, müşterileri filtrelemek için farklı yaş grupları).
-
-1. **Dizini ara ve filtrele** sayfasında belirli bir öznitelik için **Filtre Ekle**'yi seçin. Sonuç sayısını ve bunların düzenlenme sırasını tanımlayabilirsiniz. Özniteliğin veri türüne bağlı olarak aşağıdaki bölmelerden biri görüntülenir.
-
-- Dize türü öznitelikleri: **Dize filtre seçenekleri** panelinde istediğiniz sonuç sayısını ve bunların düzenleneceği sıralama ilkesini belirtin.
-
-- Sayısal türü öznitelikleri: **Sayı filtre seçenekleri** panelinde dahil olan aralıkları ve bunların düzenleneceği sıralama ilkesini belirtin.
-
-- Tarih türü öznitelikleri: **Tarih filtre seçenekleri** panelinde dahil olan aralıkları ve bunların düzenleneceği sıralama ilkesini belirtin.
-
-2. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
-
-3. Ayarlarınızı uygulamaya hazır olduğunuzda **Çalıştır**'ı seçin. Değişiklikler işlendikten sonra, bunları [Müşteri sayfasındaki müşteri kartlarında bulabilirsiniz](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Profilleri aramak için [birleşik profiller sayfasını](customer-profiles.md) gözden geçirin veya tüm birleşik profillerin alt kümesini görmek için dizin oluşturulan alanları kullanın.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
