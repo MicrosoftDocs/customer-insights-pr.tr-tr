@@ -1,19 +1,19 @@
 ---
 title: Power Automate bağlayıcısı (önizleme) | Microsoft Docs
 description: Dynamics 365 Customer Insights'tan Microsoft Power Automate'te akış oluşturun.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081828"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196142"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate bağlayıcısı (önizleme)
 
@@ -21,18 +21,18 @@ Verileriniz değiştiğinde belirli olayları otomatik olarak gerçekleşecek ş
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- 60 saniyede en fazla 100 çağrı gerçekleştirebilirsiniz. $skip parametresini kullanarak API uç noktasına birden çok çağrı gerçekleştirebilirsiniz. [$skip parametresi hakkında daha fazla bilgi edinin](/connectors/customerinsights/#get-items-from-an-entity).
+- 60 saniyede en fazla 100 çağrı. [$skip parametresini](/connectors/customerinsights/#get-items-from-an-entity) kullanarak API uç noktasına birden çok çağrı gerçekleştirin.
 
 ## <a name="power-automate-triggers"></a>Power Automate tetikleyicileri
 
-Bulut akışları oluşturmak ve bildirimler veya daha fazla gelişmiş eylem gibi yinelenen görevleri otomatikleştirmek için tetikleyiciler kullanın.
+Bulut akışları oluşturmak ve bildirimler veya daha fazla gelişmiş eylem gibi yinelenen görevleri otomatikleştirmek için tetikleyiciler kullanın. Şu durumlarda tetikleyicileri kullanın:
 
-- Veri kaynağını yenileme işlemi başarısız olduğunda tetikleyin.
-- Veri kaynağını yenileme işlemi başarılı olduğunda tetikleyin.
-- Bir segmentte bir eşik geçildiğinde tetikleyin. Tetikleyici, eşiğin üzerine geçme ile sınırlıdır.
-- İş ölçümündeki eşik geçildiğinde tetikleyin. Yalnızca Boyutu olmayan iş ölçümleri desteklenir. Tetikleyici, eşiğin üzerine geçme ile sınırlıdır.
-- (Veri kaynaklarının, segmentlerin, ölçümlerin...) yenileme işlemi tamamen bittiğinde tetikleyin.
-- Birleşme işleminin yenilenmesi tamamlandığında tetiklenir.
+- Veri kaynağı yenilemesi başarısız olduğunda.
+- Veri kaynağı yenilemesi başarılı olduğunda.
+- Bir segmentte bir eşik geçildiğinde. Tetikleyici, eşiğin üzerine geçme ile sınırlıdır.
+- İş ölçümündeki bir eşik geçildiğinde. Yalnızca Boyutu olmayan iş ölçümleri desteklenir. Tetikleyici, eşiğin üzerine geçme ile sınırlıdır.
+- Zamanlanmış tam bir yenileme işlemi tamamlandığında. Bu tetikleyici el ile başlatılan yenilemeler için çalışmaz.
+- Birleştirme işleminin yenilenmesi tamamlandığında.
 
 [Power Automate'te tetikleyicilerinizi yapılandırma](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Power Automate bağlayıcısı, kullanılabilir tetikleyicilerden farklı eyleml
 
 ## <a name="create-a-power-automate-flow"></a>Power Automate akışı oluşturma
 
-1. **Yönetici** > **Dışarı aktarma hedefleri**'ne gidin.
+1. **Yönetici** > **Bağlantılar** gidin.
 
 1. **Power Automate** kutucuğunda, **Ayarla**'yı seçin.
 
@@ -53,7 +53,5 @@ Power Automate bağlayıcısı, kullanılabilir tetikleyicilerden farklı eyleml
 Akışlara nasıl kullanılacağı hakkında örnekler: 
 - Veri kaynağı yenilemesi başarısız olursa Microsoft Teams kanalına bir ileti gönderin. 
 - Segmentteki bir eşik aşıldığında, veri sahiplerine bir e-posta gönderin.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

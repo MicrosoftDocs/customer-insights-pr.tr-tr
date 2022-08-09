@@ -1,7 +1,7 @@
 ---
 title: Common Data Model klasörünü Azure Data Lake hesabına bağlama
 description: Azure Data Lake Storage kullanarak Common Data Model verileriyle çalışın.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081781"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207023"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage'ta verilere bağlanma
 
@@ -82,7 +82,7 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
    :::image type="content" source="media/ADLS_required.png" alt-text="Birincil anahtar için Gerekli seçeneğini gösteren iletişim kutusu":::
 
    > [!TIP]
-   > Varlıkları bir JSON düzenleme arabiriminde düzenlemek için **Daha fazlası** > **Şema dosyasını düzenle**'yi seçin. Değişiklikleri yapın ve **Kaydet**'i seçin.
+   > Bir JSON düzenleme arabirimindeki bir varlığı düzenlemek için varlığı ve ardından **Şema dosyasını düzenle**'yi seçin. Değişiklikleri yapın ve **Kaydet**'i seçin.
 
 1. Artımlı alım gerektiren seçili varlıklar için **Artımlı yenileme** altında **Gerekli** görüntülenir. Bu varlıkların her biri için bkz. [Azure Data Lake veri kaynakları için artımlı yenilemeyi yapılandırma](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
    1. **Bitti**'yi seçin.
 
 1. **Kaydet**'i seçin. Yeni veri kaynağını **Yenileniyor** durumunda gösteren **Veri kaynakları** sayfası açılır.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, [**Varlıklar**](entities.md) sayfasından incelenebilir.
 
 ### <a name="create-a-new-schema-file"></a>Yeni bir şema dosyası oluşturma
 
@@ -148,6 +152,9 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
 
 1. **Kaydet**'i seçin. Yeni veri kaynağını **Yenileniyor** durumunda gösteren **Veri kaynakları** sayfası açılır.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, [**Varlıklar**](entities.md) sayfasından incelenebilir.
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage veri kaynağını düzenleme
 
@@ -179,8 +186,16 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
       > [!IMPORTANT]
       > Mevcut model.json veya manifest.json dosyasında ve varlık kümesinde bağımlılıklar varsa bir hata iletisi görürsünüz ve farklı bir model.json veya manifest.json dosyası seçemezsiniz. model.json veya manifest.json dosyasını değiştirmeden önce bu bağımlılıkları kaldırın veya bağımlılıkları kaldırmaktan kaçınmak için kullanmak istediğiniz model.json veya manifest.json dosyasıyla yeni bir veri kaynağı oluşturun.
    - Veri dosyası konumunu veya birincil anahtarı değiştirmek için **Düzenle**'yi seçin.
-   - Artımlı alım verilerini değiştirmek için bkz. [Azure Data Lake veri kaynakları için artımlı yenilemeyi yapılandırma](incremental-refresh-data-sources.md)
+   - Artımlı alım verilerini değiştirmek için bkz. [Azure Data Lake veri kaynakları için artımlı yenilemeyi yapılandırma](incremental-refresh-data-sources.md).
+   - Varlık adını yalnızca .json dosyasındaki varlık adıyla eşleşecek şekilde değiştirin.
+
+     > [!NOTE]
+     > Customer Insights'taki varlık adını her zaman, alımdan sonraki model.json veya manifest.json dosyasının içindeki varlık adıyla aynı tutun. Customer Insights her sistem yenilemesi sırasında model.json veya manifest.json ile tüm varlık adlarını doğrular. Bir varlık adı Customer Insights içinde veya dışında değiştirilirse, Customer Insights yeni varlık adını .json dosyasında bulamadığından bir hata oluşur. Alınan bir varlık adı yanlışlıkla değiştirilmişse, bu varlık adını .json dosyasındaki adla eşleşecek şekilde Customer Insights'ta düzenleyin.
 
 1. Öznitelikleri eklemek, değiştirmek veya veri profili oluşturmayı etkinleştirmek için **Öznitelikler**'i seçin. Ardından **Bitti**'yi seçin.
 
 1. Değişikliklerinizi uygulamak ve **Veri kaynakları** sayfasına dönmek için **Kaydet**'i tıklayın.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

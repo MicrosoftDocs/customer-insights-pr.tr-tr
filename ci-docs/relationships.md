@@ -21,12 +21,12 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081858"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183596"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Varlıklar ve varlık yolları arasındaki ilişkiler
 
@@ -34,8 +34,8 @@ ms.locfileid: "9081858"
 
 Üç tür ilişki vardır: 
 - Düzenlenemez sistem ilişkileri, sistem tarafından veri birleştirme işleminin bir parçası olarak oluşturulur
-- Veri kaynaklarından otomatik olarak oluşturulan düzenlenemez devralınan ilişkiler 
-- Kullanıcılar tarafından oluşturulan ve yapılandırılan düzenlenebilir özel ilişkiler
+- Düzenlenemez devralınan ilişkiler, alınan veri kaynaklarından otomatik olarak oluşturulur
+- Düzenlenebilir özel ilişkiler kullanıcılar tarafından oluşturulur ve yapılandırılır
 
 ## <a name="non-editable-system-relationships"></a>Düzenlenemez sistem ilişkileri
 
@@ -67,69 +67,66 @@ Veri alma işlemi sırasında, sistem veri kaynaklarını mevcut ilişkiler içi
    - **Açıklama**: İlişkinin açıklaması.
    - **Kaynak varlık**: İlişkide kaynak olarak kullanılan varlık. Örnek: SupportCase.
    - **Hedef varlık**: İlişkide hedef olarak kullanılan varlık. Örnek: Müşteri.
-   - **Kaynak kardinalitesi**: Kaynak varlığın kardinalitesini belirtin. Kardinalite, kümedeki olası öğelerin sayısını açıklar. Her zaman hedef kardinalite ile ilgilidir. **Bir** ve **Çok** arasında seçim yapabilirsiniz. Yalnızca çok-bir ve bire bir ilişkiler desteklenir.  
+   - **Kaynak kardinalitesi**: Kaynak varlığın kardinalitesi. Kardinalite, kümedeki olası öğelerin sayısını açıklar. Her zaman hedef kardinalite ile ilgilidir. **Bir** ve **Çok** arasında seçim yapabilirsiniz. Yalnızca çok-bir ve bire bir ilişkiler desteklenir.  
      - Çok-bir: Birden çok kaynak kayıt bir hedef kayıtla ilişkilendirilebilir. Örnek: Tek bir müşteriden birden çok destek servis talebi.
      - Bir-bir: Tek bir kaynak kayıt, tek bir hedef kayıtla ilgilidir. Örnek: Tek bir müşteri için bir bağlılık programı kimliği.
 
      > [!NOTE]
      > Çok-çok ilişkileri, iki çok-bir ilişkisi ve kaynak varlık ile hedef varlığı bağlayan bir bağlantı varlığı kullanılarak oluşturulabilir.
 
-   - **Hedef önemlilik**: Hedef varlık kayıtlarının önem düzeyini seçin. 
-   - **Kaynak anahtar alanı**: Kaynak varlıktaki yabancı anahtar alanı. Örnek: SupportCase yabancı anahtar alanı olarak CaseID kullanabilir.
-   - **Hedef anahtar alanı**: Hedef varlığın anahtar alanı. Örnek: Müşteri, **CustomerID** anahtar alanını kullanabilir.
+   - **Hedef kardinalite**: Hedef varlık kayıtlarının kardinalitesi.
+   - **Kaynak anahtar alanı**: Kaynak varlıktaki yabancı anahtar alanı. Örnek: SupportCase yabancı anahtar alanı olarak **CaseID** kullanır.
+   - **Hedef anahtar alanı**: Hedef varlığın anahtar alanı. Örnek: Müşteri, anahtar alanı olarak **CustomerID** kullanır.
 
 4. Özel ilişki oluşturmak için **Kaydet**'i seçin.
 
 ## <a name="set-up-account-hierarchies"></a>Sesap hiyerarşileri belirleme
 
-Birincil hedef hedef kitle olarak kullanılacak iş hesaplarını kullanmak üzere yapılandırılan ortamlar ilgili iş firmaları için firma hiyerarşilerini yapılandırabilir. Örneğin, ayrı departmanları olan bir şirket. 
+Birincil hedef kitle olarak kullanılacak iş hesaplarını kullanmak üzere yapılandırılan ortamlar ilgili iş firmaları için firma hiyerarşilerini yapılandırabilir. Örneğin, ayrı departmanları olan bir şirket.
 
 Kuruluşlar, firmaları ve İlişkiler birbirleriyle daha iyi yönetmek için firma hiyerarşileri oluşturur. Customer Insights, önceden girilmiş müşteri verilerinde zaten var olan ana alt firma hiyerarşilerini destekler. Örneğin, Dynamics 365 Sales'dan gelen firmalar. Bu hiyerarşiler **İlişkiler** sayfasında yapılandırılabilir.
 
 1. **Veri** > **İlişkiler**'e gidin.
 1. **Firma hiyerarşisi** sekmesini seçin.
-1. **Yeni firma hiyerarşisi**'ni seçin. 
-1. **Firma hiyerarşisi** bölmesinde, hiyerarşi için bir ad girin. Sistem çıkış varlığı için bir ad oluşturur. Çıkış adı varlığının adını değiştirebilirsiniz.
+1. **Yeni firma hiyerarşisi**'ni seçin.
+1. **Firma hiyerarşisi** bölmesinde, hiyerarşi için bir ad girin. Sistem, çıkış varlığı için bir ad oluşturur, ancak bunu değiştirebilirsiniz.
 1. Firma hiyerarşinizi içeren varlığı seçin. Bu genellikle firmaları içeren aynı varlıkta yer almaktadır.
-1. Seçilen varlıktan **Hesap kimliği** ve **Firma ana kimliğini** seçin 
-1. Ayarları uygulamak ve hesap hiyerarşisini sonlandırmak için **Kaydet**'i seçin.
+1. Seçilen varlıktan **Hesap UID'si** ve **Üst UID**'yi seçin.
+1. Hesap hiyerarşisini sonlandırmak için **Kaydet**'i seçin.
 
-## <a name="view-relationships"></a>İlişkileri görüntüle
+## <a name="manage-existing-relationships"></a>Mevcut ilişkileri yönetin
 
-İlişkiler sayfası oluşturulan tüm ilişkileri listeler. Her satır kaynak varlık, hedef varlık ve kardinalite hakkında ayrıntılar da içeren bir ilişkiyi temsil eder. 
+Oluşturulan tüm ilişkileri, bunların kaynak varlığını, hedef varlığını ve kardinalitesini görüntülemek için **İlişkiler** sayfasına gidin.
 
 :::image type="content" source="media/relationships-list.png" alt-text="İlişkiler sayfasının eylem çubuğundaki ilişkilerin ve seçeneklerin listesi.":::
 
-Bu sayfa mevcut ve yeni ilişkiler için bir dizi seçenek sunar: 
-- **Yeni İlişki**: [Özel ilişki oluştur](#create-a-custom-relationship).
-- **Görselleştirici**: Varolan ilişkiler ve kardinalitelerinin ağ diyagramını görmek için [İlişki görselleştiricisini keşfedin](#explore-the-relationship-visualizer).
-- **Filtre ölçütü**: Listede gösterilecek ilişkiler türünü seçin.
-- **İlişkileri ara**: İlişkilerin özelliklerinde metin tabanlı bir arama kullanın.
+Belirli bir ilişkiyi bulmak için **Filtreleme ölçütü** veya **Arama ilişkileri** seçeneklerini kullanın. Varolan ilişkiler ve bunların kardinalitelerinin ağ diyagramını görmek için [**Görselleştirici**](#explore-the-relationship-visualizer)'yi seçin.
+
+Kullanılabilir eylemleri görüntülemek için bir ilişki seçin:
+- **Düzenle**: Özel ilişkilerin özelliklerini düzenleme bölmesinde güncelleştirin ve değişiklikleri kaydedin.
+- **Sil**: Özel ilişkileri silin.
+- **Görüntüle**: Sistem tarafından oluşturulan ve devralınmış ilişkileri görüntüleyin.
 
 ### <a name="explore-the-relationship-visualizer"></a>İlişki görselleştiricisini keşfedin
 
 İlişki görselleştiricisi, bağlı varlıklar ve onların kardinalitesi arasındaki mevcut ilişkilerin ağ diyagramını gösterir. Bu ayrıca ilişki yolunu görselleştirir.
 
-Görünümü özelleştirmek için, tuval üzerinde sürükleyerek kutuların konumunu değiştirebilirsiniz.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="İlgili varlıklar arasındaki bağlantılarla birlikte ilişki görselleştiricisi ağ diyagramının ekran görüntüsü.":::
 
-Kullanılabilir seçenekler: 
+Görünümü özelleştirmek için, tuval üzerinde sürükleyerek kutuların konumunu değiştirebilirsiniz. Diğer seçenekler şunlardır: 
 - **Resim olarak dışarı aktar**: Geçerli görünümü bir resim dosyası olarak kaydedin.
 - **Yatay/dikey düzene geç**: Varlıkların ve ilişkilerin hizalama şeklini değiştirin.
 - **Düzenle**: Özel ilişkilerin özelliklerini düzenleme bölmesinde güncelleştirin ve değişiklikleri kaydedin.
 
 ## <a name="relationship-paths"></a>İlişki yolları
 
-İlişki yolu, bir kaynak varlık ve bir hedef varlık arasında ilişkiler ile birbirine bağlanan varlıkları açıklar. Bu, birleşik profil varlığından farklı varlıklar içeren bir segment veya ölçüm oluştururken kullanılır ve birleşik profil varlığına ulaşmak için birden çok seçenek vardır. 
-
-İlişki yolu, hangi ilişkilerin birleşik profil varlığına erişebileceği konusunda sisteme bilgi verir. Farklı ilişki yolları, farklı sonuçlar ortaya koyabilir.
+İlişki yolu, bir kaynak varlık ve bir hedef varlık arasında ilişkiler ile birbirine bağlanan varlıkları açıklar. Bu, birleşik profil varlığından farklı varlıklar içeren bir segment veya ölçüm oluştururken kullanılır ve birleşik profil varlığına ulaşmak için birden çok seçenek vardır. Farklı ilişki yolları, farklı sonuçlar ortaya koyabilir.
 
 Örneğin, *eCommerce_eCommercePurchases* varlığında birleşik profil *Müşteri* varlığı için aşağıdaki ilişki bulunur:
 
 - eCommerce_eCommercePurchases > Müşteri
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Müşteri
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Müşteri 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Müşteri
 
 İlişki yolu, ölçümler veya segmentler için kurallar oluştururken kullanabileceğiniz varlıkları belirler. Eşleşen kayıtlar tüm varlıkların parçası olması gerektiğinden en uzun ilişki yolunun bulunduğu seçeneğin belirlenmesi muhtemelen daha az sonuç ortaya koyar. Bu örnekte, müşterinin bir satış noktasında (POS_posPurchases) e-ticaret (eCommerce_eCommercePurchases) üzerinden mal satın almış olması ve bağlılık programımıza (loyaltyScheme_loyCustomers) katılması gerekir. İlk seçeneği belirlediğinizde müşterilerin yalnızca bir ek varlıkta bulunması gerektiğinden daha fazla sonuç almanız olasıdır.
 
@@ -155,7 +152,7 @@ Bir kaynak varlık, hedef varlıkla ilişkilendirilmeden önce bir veya daha faz
 
 #### <a name="multi-hop-relationship"></a>Çok atlamalı ilişki
 
-*Çok atlamalı ilişki*, bir kaynak varlığı bir veya daha fazla ara varlık üzerinden bir hedef varlığa bağlamanıza olanak sağlayan *dolaylı bir ilişkidir*.
+**Çok atlamalı ilişki**, bir kaynak varlığı bir veya daha fazla ara varlık üzerinden bir hedef varlığa bağlamanıza olanak sağlayan *dolaylı bir ilişkidir*.
 
 Örneğin, *eCommerce_eCommercePurchasesWest* adlı bir etkinlik varlığı *eCommerce_eCommercePurchasesEast* adlı bir ara varlığa bağlanırsa ve sonra *eCommerce_eCommerceContacts* adlı bir hedef varlığa bağlanırsa, bu çok atlamalı bir ilişkidir.
 
@@ -168,16 +165,6 @@ Bir kaynak varlık, hedef varlıkla ilişkilendirilmeden önce bir veya daha faz
 Örneğin, *eCommerce_eCommercePurchasesWest* adlı bir etkinlik varlığı *eCommerce_eCommercePurchasesEast* adlı bir ara varlığa bağlanırsa ve sonra *eCommerce_eCommerceContacts* ve *loyaltyScheme_loyCustomers* olmak üzere iki hedef varlığa bağlanırsa bu, çok atlamalı, çok yollu ilişkidir.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Kaynak varlık doğrudan bir hedef varlığa bağlanır ve bir ara varlık aracılığıyla başka bir hedef varlığa bağlanır.":::
-
-## <a name="manage-existing-relationships"></a>Mevcut ilişkileri yönetin 
-
-İlişkiler sayfasında, her ilişki bir satırla temsil edilir. 
-
-Bir ilişki seçin ve aşağıdaki seçeneklerden birini belirleyin: 
- 
-- **Düzenle**: Özel ilişkilerin özelliklerini düzenleme bölmesinde güncelleştirin ve değişiklikleri kaydedin.
-- **Sil**: Özel ilişkileri silin.
-- **Görüntüle**: Sistem tarafından oluşturulan ve devralınmış ilişkileri görüntüleyin. 
 
 ## <a name="next-step"></a>Sonraki adım
 

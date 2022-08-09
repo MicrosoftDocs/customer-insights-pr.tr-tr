@@ -1,51 +1,54 @@
 ---
 title: Segmentleri Microsoft Advertising'e aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve Microsoft Advertising'e aktarmayı öğrenin.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ca37159ec6473ad5c331a0ce1aa8424d277529ff
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 44217e7823ffbe14d232b3e33de1b4ea6ed69dcf
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081911"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196556"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmentleri Microsoft Advertising'e aktarma (önizleme)
 
 Müşteri Eşleştirme hedef kitleleri oluşturmak için Customer Insights segmentlerini Microsoft Advertising'e aktarın. Reklam kampanyalarınız için bu hedef kitleleri kullanın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
--   Bir [Microsoft Advertising hesabı](https://ads.microsoft.com/) ve karşılık gelen yönetici kimlik bilgileri.
--   Müşteri Eşleştirme kullanım koşullarını kabul ettiniz. 
--   Customer Insights'ta [yapılandırılmış segmentler](segments.md).
--   Dışa aktarılan segmentlerdeki birleşik müşteri profillerinde e-posta adresi içeren bir alan bulunur.
+- Bir [Microsoft Advertising hesabı](https://ads.microsoft.com/) ve karşılık gelen yönetici kimlik bilgileri.
+- Microsoft Advertising Müşteri Kimliği ve Hesap Kimliği. Microsoft Advertising'de oturum açtığınızda, URL'nin parametrelerinde Müşteri Kimliği (`cid`) ve Hesap Kimliğini (`aid`) bulabilirsiniz.
+- Customer Match kullanım koşulları kabul edilmelidir.
+- Customer Insights'ta [yapılandırılmış segmentler](segments.md).
+- Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Microsoft Advertising'e dışa aktarma başına en fazla 500.000 müşteri profili aktarabilirsiniz.
-- Microsoft Advertising'e aktarma segmentlerle sınırlıdır.
-- Microsoft Advertising'e 500.000'e kadar milyona kadar müşteri profili vermenin tamamlanması 10 dakikaya kadar sürebilir. 
+- Microsoft Advertising'e dışa aktarım başına en fazla 500.000 müşteri profili; bu işlem 10 dakika kadar sürebilir.
+- Yalnızca segmentler.
 
+## <a name="set-up-connection-to-microsoft-advertising"></a>Microsoft Advertising bağlantısını ayarlama
 
-## <a name="set-up-the-connection-to-microsoft-advertising"></a>Microsoft Advertising'e bağlantıyı ayarlama
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Bağlantı ekle**'yi ve bağlantıyı yapılandırmak için **Microsoft Advertising**'i seçin.
+1. **Bağlantı ekle**'yi ve **Microsoft Advertising**'i seçin.
 
 1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
 
 1. Bu bağlantıyı kimin kullanabileceğini seçin. Varsayılan olarak yöneticilerdir. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
+1. **Microsoft Advertising Müşteri Kimliğini** girin.
 
-1. Microsoft Advertising bağlantısı başlatmak için **Bağlan**'ı seçin.
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
+
+1. Bağlantıyı başlatmak için **Bağlan**'ı seçin.
 
 1. **Microsoft Advertising ile kimlik doğrulaması**'nı seçin ve Microsoft Advertising için yönetici kimlik bilgilerinizi sağlayın.
 
@@ -55,29 +58,24 @@ Müşteri Eşleştirme hedef kitleleri oluşturmak için Customer Insights segme
 
 ## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
-Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
+1. **Dışarı aktarma ekle**'yi seçin.
 
-1. **Dışarı aktarma bağlantısı** alanında, Microsoft Advertising bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
+1. **Dışarı aktarma bağlantısı** alanında, Microsoft Advertising bölümünden bir bağlantı seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin.
 
-1. Dışarı aktarılacak segmentleri seçin. Microsoft Advertising'deki Müşteri Eşleştirme hedef kitleleri, dışarı aktarma için seçilen segmentlerin adıyla otomatik olarak oluşturulur. Her segment ayrı bir Müşteri Eşleştirme hedef kitlesiyle sonuçlanır. 
+1. Dışa aktarım için bir ad girin.
 
-1. **Microsoft Advertising Müşteri Kimliğinizi ve Hesap Kimliğinizi** girin. Microsoft Advertising'de oturum açtığınızda, URL'nin parametrelerinde Müşteri Kimliği (`cid`) ve Hesap Kimliğini (`aid`) bulabilirsiniz.
+1. Dışarı aktarılacak segmentleri seçin. Microsoft Advertising'deki Müşteri Eşleştirme hedef kitleleri, dışarı aktarma için seçilen segmentlerin adıyla otomatik olarak oluşturulur. Her segment ayrı bir Müşteri Eşleştirme hedef kitlesiyle sonuçlanır.
 
-1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresi olan alanı seçin. Microsoft Advertising'e segmentleri aktarmak gerekir.
+1. **Microsoft Advertising Müşteri Kimliğinizi ve Hesap Kimliğinizi** girin.
+
+1. **Veri eşleme** bölümünde, **E-posta** alanında, müşterinin e-posta adresi olan alanı seçin.
 
 1. **Kaydet**'i seçin.
 
-Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
-
-
-## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
-
-Microsoft Advertising'e veri aktarmk için Dynamics 365 Customer Insights etkinleştirdiğinizde, kişisel veriler gibi önemli potansiyel bilgiler de dahil olmak üzere Dynamics 365 Customer Insights uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, bu tür verileri yönergeye aktaracaktır, ancak Microsoft Advertising'in sahip olabileceğiniz gizlilik veya güvenlik yükümlülüklerini karşıladığından emin olmak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Bu işlevin kullanımını durdurmak için Dynamics 365 Customer Insights Yöneticiniz istediği zaman bu dışarı aktarma hedefini kaldırabilir.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

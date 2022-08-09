@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052075"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196280"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>HERE Technologies ile müşteri profillerini zenginleştirme (önizleme)
 
@@ -54,7 +54,7 @@ Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erd
 
 1. Genel bakışı inceleyip **İleri**'yi seçin.
 
-1. Bağlantıyı seçin. Kullanılabilir değilse yönetici ile iletişime geçin.
+1. Bağlantıyı seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin.
 
 1. **İleri**'yi seçin.
 

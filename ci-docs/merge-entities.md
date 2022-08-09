@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081948"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139694"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Veri birleştirme için müşteri alanlarını birleştirme
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Birleşme işleminin bu adımında, birleşik profil varlığınız içinde birleştirilecek öznitelikleri seçin ve dışlayın. Örneğin, üç varlık e-posta verisine sahip olursa, üç ayrı e-posta alanını tutmak veya bunları birleşik profil için tek bir e-posta alanında birleştirmek isteyebilirsiniz. Bazı öznitelikler sistem tarafından otomatik olarak birleştirilir. Tutarlı ve benzersiz müşteri kimlikleri oluşturabilir ve ilgili profilleri bir kümede gruplayabilirsiniz.
 

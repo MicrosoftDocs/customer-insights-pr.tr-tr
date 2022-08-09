@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8648022"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171119"
 ---
 # <a name="transaction-churn-prediction"></a>İşlem erime tahmini
 
@@ -240,7 +240,7 @@ Kıyaslamalar olarak kullanmak istediğiniz iş müşterilerinin ve firmaların 
    - **Tahmin adı**: Tahmini oluştururken tahmine verilen ad.
    - **Tahmin türü**: Tahmin için kullanılan model türü
    - **Çıkış varlığı**: Tahminin çıktısının depolanacağı varlığın adı. Bu ada sahip bir varlığı **Veri** > **Varlıklar** bölümünden bulabilirsiniz.
-     Çıkış varlığında *ChurnScore* karmaşıklık olasılığı tahmini olasılığıdır ve *IsChurn* 0,5 eşiğindeki *ChurnScore* tabanlı bir ikili etikettir. Varsayılan eşik senaryonuz için çalışmayabilir. Tercih edilen eşiğe sahip [yeni bir segment oluşturun](segments.md#create-a-new-segment).
+     Çıkış varlığında *ChurnScore* karmaşıklık olasılığı tahmini olasılığıdır ve *IsChurn* 0,5 eşiğindeki *ChurnScore* tabanlı bir ikili etikettir. Varsayılan eşik senaryonuz için çalışmayabilir. Tercih edilen eşiğe sahip [yeni bir segment oluşturun](segments.md#create-a-segment).
      Tüm müşterilerin etkin müşteri olması gerekmez. Bunların bazılarında, uzun bir süre için herhangi bir etkinlik yapılmamış olabilir ve siz karmaşıklığı tanımına göre önceden yapılmış olarak kabul edilir. Zaten erimesi yapılan müşterilerin erime riskini tahmin etmek, hedef kitle olmadıklarından yararlı değildir.
    - **Tahmini alan**: Bu alan yalnızca bazı tahmin türleri için doldurulur ve erime tahmininde kullanılmaz.
    - **Durum:**: Tahmin çalıştırmasının durumu.

@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012049"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207161"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Power Query ve Azure Data Lake veri kaynakları için artımlı yenileme
 
-Bu makalede, Power Query veya Azure Data Lake'i temel alan veri kaynakları için artımlı yenilemenin nasıl yapılandırılacağı anlatılmaktadır.
-
-Veri kaynakları için artımlı yenileme aşağıdaki avantajları sağlar:
+Power Query veya Azure Data Lake'e dayanan veri kaynaklarının artımlı yenilenmesi aşağıdaki avantajları sağlar:
 
 - **Daha hızlı yenilemeler** - Yalnızca değiştirilen veriler yenilenir. Örneğin, bir geçmiş veri kümesi yalnızca son beş günü yenileyebilirsiniz.
 - **Artırılmış güvenilirlik** - Daha küçük yenilemeler sayesinde, geçici kaynak sistemleri için bağlantı sorunları risklilik tehlikesini azaltarak bağlantıları korumanızı gerekmez.
@@ -73,6 +71,7 @@ Customer Insights, Azure Data Lake Storage'e bağlı veri kaynakları için art�
 
    1. Tam veri, artımlı veri eklemeleri/güncelleştirmeleri ve artımlı veri silinenleri için .csv veya .parquet dosyalarını içeren kök klasöre göz atın.
    1. Tam veri ve her iki artımlı dosyanın uzantısını girin (\.csv veya \.parquet).
+   1. .csv dosyaları için, dosyanın ilk satırının sütun başlığı olarak görünmesini istiyorsanız sütun sınırlayıcısını seçin.
    1. **Kaydet**'i seçin.
 
 1. **Son güncelleştirme** için tarih zaman damgası özniteliğini seçin.

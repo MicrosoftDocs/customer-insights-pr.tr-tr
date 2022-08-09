@@ -1,19 +1,19 @@
 ---
 title: Power Apps bağlayıcısı (önizleme)
 description: Power Apps ve Power Automate ile bağlantı kurun.
-ms.date: 10/01/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 0b71f723d1e491d422d24b1be6616d2f33c95d40
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 8807e82e65ea20d1a7f7dc07552229f377927eed
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055284"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196924"
 ---
 # <a name="power-apps-connector-preview"></a>Power Apps bağlayıcısı (önizleme)
 
@@ -27,7 +27,7 @@ Customer Insights, [Power Apps'te veriler için kullanılabilir kaynaklardan](/p
 
 ## <a name="available-entities"></a>Kullanılabilir varlıklar
 
-Customer Insights'ı veri bağlantısı olarak ekledikten sonra Power Apps'te aşağıdaki varlıkları seçebilirsiniz:
+Customer Insights'ı veri bağlantısı olarak ekledikten sonra Power Apps'te aşağıdaki varlıkları seçin:
 
 - **Müşteri**: [Bütünleştirilmiş müşteri profilindeki](customer-profiles.md) verileri kullanmak için.
 - **UnifiedActivity**: [Etkinlik zaman çizelgesini](activities.md) uygulamada görüntülemek için.
@@ -37,41 +37,38 @@ Customer Insights'ı veri bağlantısı olarak ekledikten sonra Power Apps'te a�
 
 ### <a name="retrievable-entities"></a>Alınabilir varlıklar
 
-Yalnızca **Müşteri**, **UnifiedActivity**, **Segmentler** ve **ContactProfile** varlıklarını Power Apps bağlayıcısı üzerinden alabilirsiniz. ContactProfile, işletme hesapları için şu anda yalnızca Customer Insights örneklerinde kullanılabilir. Diğer varlıklar ise temeldeki bağlayıcının bu varlıkları Power Automate tetikleyicileri aracılığıyla desteklediğinden gösterilir.
+Yalnızca **Müşteri**, **UnifiedActivity**, **Segmentler** ve **ContactProfile** varlıklarını Power Apps bağlayıcısı üzerinden alabilirsiniz. ContactProfile, işletme hesapları için şu anda yalnızca Customer Insights ortamlarında kullanılabilir. Diğer varlıklar ise temeldeki bağlayıcının bu varlıkları Power Automate tetikleyicileri aracılığıyla desteklediğinden gösterilir.
 
 60 saniyede en fazla 100 çağrı gerçekleştirebilirsiniz. $skip parametresini kullanarak API uç noktasına birden çok çağrı gerçekleştirebilirsiniz. [$skip parametresi hakkında daha fazla bilgi edinin](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Temsilci
 
-Temsilci atama, **Müşteri** varlığı ve **UnifiedActivity** varlığı için çalışır. 
+Temsilci atama, **Müşteri** varlığı ve **UnifiedActivity** varlığı için çalışır.
 
-- **Müşteri** varlığının temsilcisi: Bu varlığın temsilcisini kullanmak için alanların [Arama ve filtreleme dizininde](search-filter-index.md) dizinlenmesi gerekir.  
+- **Müşteri** varlığı için temsilci atama: Bu varlık için temsilcisi atamayı kullanmak için alanların [arama ve filtre dizininde](search-filter-index.md) dizinlenmesi gerekir.  
 - **UnifiedActivity** için temsilci atama: Bu varlık için temsilci seçmek, yalnızca **ActivityId** ve **CustomerId** alanları için geçerlidir.  
 - **ContactProfile** için temsilci seçme: Bu varlık için temsilci seçmek yalnızca, **ContactId** ve **CustomerId** alanları için geçerlidir. ContactProfile, işletme hesapları için şu anda yalnızca Customer Insights ortamlarında kullanılabilir.
 
-Temsil hakkında daha fazla bilgi için bkz. [Power Apps atanabilir işlevleri ve işlemleri](/powerapps/maker/canvas-apps/delegation-overview). 
+Temsil hakkında daha fazla bilgi için bkz. [Power Apps atanabilir işlevleri ve işlemleri](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="example-gallery-control"></a>Örnek galeri denetimi
 
-Bir [galeri denetimine](/powerapps/maker/canvas-apps/add-gallery) müşteri profilleri ekleyebilirsiniz.
+İsteğe bağlı olarak [gallery denetimine](/powerapps/maker/canvas-apps/add-gallery) müşteri profilleri ekleyin.
 
 1. Oluşturduğunuz uygulamaya **galeri** denetimi ekleyin.
+  
+   :::image type="content" source="media/connector-powerapps9.png" alt-text="Galeri öğesi ekleyin.":::
 
-    > [!div class="mx-imgBorder"]
-    > ![Galeri öğesi ekleyin.](media/connector-powerapps9.png "Galeri öğesi ekleme.")
+1. Öğelerin veri kaynağı olarak **Müşteri**'yi seçin.
 
-2. Öğelerin veri kaynağı olarak **Müşteri**'yi seçin.
+   :::image type="content" source="media/choose-datasource-powerapps.png" alt-text="Veri kaynağı seçin.":::
 
-    > [!div class="mx-imgBorder"]
-    > ![Veri kaynağı seçin.](media/choose-datasource-powerapps.png "Veri kaynağı seçme.")
+1. Müşteri varlığının galeride gösterileceği alanı seçmek için sağdaki veri panelini değiştirin.
 
-3. Müşteri varlığının galeride gösterileceği alanı seçmek için sağdaki veri panelini değiştirebilirsiniz.
-
-4. Galeride seçilen müşteriden herhangi bir alanı göstermek istiyorsanız etiketin **Metin** özelliğini şununla doldurun: **{Name_of_the_gallery}.Selected.{property_name}**  
+1. Galeride seçilen müşteriden herhangi bir alanı göstermek istiyorsanız etiketin **Metin** özelliğini şununla doldurun: **{Name_of_the_gallery}.Selected.{property_name}**  
     - Örnekğin: _Gallery1.Selected.address1_city_
 
-5. Müşterinin bütünleştirilmiş zaman çizelgesini görüntülemek için bir galeri öğesi ve **Öğe** özelliğini ekleyin: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
+1. Müşterinin bütünleştirilmiş zaman çizelgesini görüntülemek için bir galeri öğesi ve **Öğe** özelliğini ekleyin: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
     - Örneğin: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

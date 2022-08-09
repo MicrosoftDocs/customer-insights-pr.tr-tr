@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081851"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196050"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Dun & Bradstreet ile şirket profillerini zenginleştirme (önizleme)
 
@@ -80,7 +80,7 @@ Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erd
 
 1. Genel bakışı inceleyip **İleri**'yi seçin.
 
-1. Bağlantıyı seçip onaylayın. Kullanılabilir değilse yönetici ile iletişime geçin.
+1. Bağlantıyı seçip onaylayın. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin.
 
 1. **İleri**'yi seçin.
 

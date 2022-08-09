@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051615"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171027"
 ---
 # <a name="segment-insights-preview"></a>Segment içgörüleri (önizleme)
 
@@ -43,26 +43,25 @@ Ayrıca, belirli öznitelikler için çakışmanın nasıl değiştiğini analiz
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Çakışma analizini görüntüleme ve en iyi duruma getirme
 
-Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğinde bu içgörüyle ilgili ayrıntıları bulabilirsiniz.
+1. Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğinde bu içgörüyle ilgili ayrıntıları bulabilirsiniz.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Segment çakışması içgörü ayrıntıları.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Segment çakışması içgörü ayrıntıları.":::
 
-Analiz sonuçlarını görmek için bir içgörü seçin:
+1. Analiz sonuçlarını görmek için bir içgörü seçin:
 
-- Analiz için seçili segmentlerle çakışan üye sayısı.
-- Segmentlerden birine eklenen ancak kalan segmentlere eklenmeyen üye sayısı.
-- Çakışma analizini yapılandırırken alanları seçtiyseniz bunları ilgili sekmelerde bulabilirsiniz. Herhangi bir öznitelik ilgi düzeyini seçmek için filtre açılır menüsünü kullanabilirsiniz ve alttaki tablo ilgili verileri gösterecektir.
+   - Analiz için seçili segmentlerle çakışan üye sayısı.
+   - Segmentlerden birine eklenen ancak kalan segmentlere eklenmeyen üye sayısı.
+   - Çakışma analizini yapılandırırken alanları seçtiyseniz bunları ilgili sekmelerde bulabilirsiniz. Herhangi bir öznitelik ilgi düzeyini seçmek için filtre açılır menüsünü kullanabilirsiniz ve alttaki tablo ilgili verileri gösterecektir.
 
 ## <a name="segment-differentiators"></a>Segment farklılaştırıcılar
 
-Segment farklılığı, bir segmentin müşterilerinizin kalanından veya başka bir segmentten ne kadar farklı olduğunu bulmanıza yardımcı olur. Bir segmenti seçmeniz yeterlidir, sistem seçili segmenti ayıran profil özniteliklerini ve ölçümleri tanımlar.
+Segment farklılığı, bir segmentin müşterilerinizin kalanından veya başka bir segmentten ne kadar farklı olduğunu bulmanıza yardımcı olur. Bir segment seçtiğinizde sistem, seçili segmenti diğerlerinden ayıran profil özniteliklerini ve ölçümleri tanımlar.
 
 ### <a name="run-a-differentiator-analysis"></a>Farklılık analizi çalıştırma
 
 1. **Segmentler**'e gidin ve **İçgörüler (önizleme)** sekmesini seçin.
 
-1. **Yeni**'yi seçin ve **İçgörü Türünü Seçin** bölmesinde **Çakışma** seçeneğini belirleyin.
+1. **Yeni**'yi seçin ve **İçgörü Türünü Seçin** bölmesinde **Farklılaştırıcılar** seçeneğini belirleyin.
 
 1. **Birincil segment** olarak analiz etmek istediğiniz segmenti ve **İleri**'yi seçin.
 
@@ -70,29 +69,29 @@ Segment farklılığı, bir segmentin müşterilerinizin kalanından veya başka
 
 1. İsteğe bağlı olarak, analizi belirli özniteliklere odaklamak için bir veya daha fazla ilgi alanı seçin ve **İleri** seçeneğini belirleyin.
 
-1. Çakışma analizi için bir ad, isteğe bağlı bir görünen ad ve bir açıklama girin.
+1. Farklılaştırıcı analiziniz için bir ad, isteğe bağlı bir görünen ad ve bir açıklama girin.
 
-1. Analizi başlatmak için **Kaydet**'i seçin. Yenileniyor olan durum Başarılı olarak değiştiğinde çakışma analizi hazırdır.
+1. Analizi başlatmak için **Kaydet**'i seçin. Yenileniyor olan durum Başarılı olarak değiştiğinde farklılaştırıcı analizi hazırdır.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Farklılık analizini görüntüleme ve en iyi duruma getirme
 
-Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğinde bu içgörüyle ilgili ayrıntıları bulabilirsiniz.
+1. Analizi tamamladıktan sonra **Segmentler** > **İçgörüler (önizleme)** seçeneğine gidin.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Segment farklılığı içgörü ayrıntıları.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Segment farklılığı içgörü ayrıntıları.":::
 
-Analiz sonuçlarını görmek için bir içgörü seçin. Farklılık analizi iki sekme içerir. **Öznitelikler** sekmesi, farklılık olarak kabul edilen profil özniteliklerini listeler. **Ölçümler** sekmesi farklılıkları listeler. Her sekme aşağıdaki ayrıntıları içerir:
+1. Analiz sonuçlarını görmek için bir içgörü seçin. Farklılık analizi iki sekme içerir. **Öznitelikler** sekmesi, farklılık olarak kabul edilen profil özniteliklerini listeler. **Ölçümler** sekmesi farklılıkları listeler. Her sekme aşağıdaki ayrıntıları içerir:
 
-- Fark puanına göre sıralanan, sıralı farklılık listesi.
-- Her farklılığın **Fark puanı**. Fark puanı, iki segment arasındaki bir özniteliğin fark derecesini gösterir. Fark puanı ne kadar yüksekse iki segment arasındaki öznitelikler o kadar farklı olur. Bu öznitelik için değerlerin dağılımlarıyla birlikte **Fark puanı** bölmesini açmak için bir puan seçin.
+   - Fark puanına göre sıralanan, sıralı farklılık listesi.
+   - Her farklılığın **Fark puanı**. Fark puanı, iki segment arasındaki bir özniteliğin fark derecesini gösterir. Fark puanı ne kadar yüksekse iki segment arasındaki öznitelikler o kadar farklı olur. Bu öznitelik için değerlerin dağılımlarıyla birlikte **Fark puanı** bölmesini açmak için bir puan seçin.
 
 ## <a name="manage-segment-insights"></a>Segment içgörülerini yönetme
 
-İçgörülerinizde komut çubuğundaki aşağıdaki seçenekleri kullanabilirsiniz:
+Segment içgörülerinizi görüntülemek ve bunları yönetmek için **Segmentler** > **İçgörüler (önizleme)** seçeneğine gidin. Kullanılabilir eylemleri görüntülemek için bir segment içgörüsü seçin.
 
-- İçgörüler listesine dönmek için **Geri**
-- Analizi yeniden çalıştırmak için **Yenile**
-- Bu içgörüyü kaldırmak için **Sil**
-
+- İçgörü analizini **görüntüleme**
+- Özelliklerini değiştirmek için içgörüyü **düzenleme**
+- Analizi yeniden çalıştırmak için içgörüyü **yenileme**
+- İçgörüyü **yeniden adlandırma**
+- İçgörüyü **silme**
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

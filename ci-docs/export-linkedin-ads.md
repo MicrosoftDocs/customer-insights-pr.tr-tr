@@ -1,52 +1,53 @@
 ---
 title: Segmentleri LinkedIn Ads'e aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve LinkedIn Ads'e aktarmayı öğrenin.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050880"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196832"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentleri LinkedIn Ads'e aktarma (önizleme)
 
 Eşleştirilmiş hedef kitleler oluşturmak için birleşik müşteri profillerinin segmentlerini LinkedIn Ads'e aktarın. Şirket hedeflemesi ve ilgili kişi hedeflemesi için eşleşen hedef kitleleri kullanın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
--   Bir [LinkedIn Campaign Manager hesabınız](https://business.linkedin.com/marketing-solutions/ads) ve karşılık gelen Yönetici kimlik bilgileriniz var.
--   Customer Insights'ta [yapılandırılmış segmentlere](segments.md) sahip olmanız gerekir.
--   Dışa aktarılan segmentlerdeki müşteri profillerinde e-posta adresi içeren bir alan bulunur.
+- Bir [LinkedIn Campaign Manager hesabı](https://business.linkedin.com/marketing-solutions/ads) ve ilgili yönetici kimlik bilgileri.
+- [LinkedIn Campaign Manager Hesap Kimliği](https://www.linkedin.com/help/lms/answer/a424270).
+- Customer Insights'ta [yapılandırılmış segmentler](segments.md).
+- Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-- Customer Insights'taki segmentinizde en az 300 benzersiz profil bulunması gerekir. 
-- LinkedIn Ads'e dışa aktarma başına en fazla 100.000 müşteri profili aktarabilirsiniz.
-- LinkedIn Ads'e aktarma segmentlerle sınırlıdır.
-- LinkedIn Ads'e 100.000'e kadar müşteri profili vermenin tamamlanması 10 dakikaya kadar sürebilir. 
+- LinkedIn Ads'e dışa aktarım başına en fazla 100.000 müşteri profili; bu işlemin tamamlanması 10 dakika kadar sürebilir.
+- Yalnızca segmentler. Bir segmentin en az 300 benzersiz profil içermesi gerekir.
 
-## <a name="set-up-the-connection-to-linkedin-ads"></a>LinkedIn Ads'e bağlantıyı ayarlama
+## <a name="set-up-connection-to-linkedin-ads"></a>LinkedIn Ads bağlantısını ayarlama
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Bağlantı Ekle**'ye ve bağlantıyı yapılandırmak için **LinkedIn Ads**'i seçin.
+1. **Bağlantı ekle**'yi ve **LinkedIn Ads**'i seçin.
 
 1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
 
-1. Bu bağlantıyı kimin kullanabileceğini seçin. Herhangi bir eylem gerçekleştirmezseniz varsayılan olarak yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Varsayılan olarak yalnızca yöneticilerdir. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. [LinkedIn Campaign Manager Hesap Kimliğinizi](https://www.linkedin.com/help/lms/answer/a424270) sağlayın.
+1. LinkedIn Campaign Manager Hesap Kimliğinizi sağlayın.
 
-1. **Veri gizliliği ve uyumluluğu**'nu onaylamak için **Kabul ediyorum**'u seçin.
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
 
-1. Campaign Monitor Bağlantısı başlatmak için **Bağlan**'nı seçin.
+1. Bağlantıyı başlatmak için **Bağlan**'ı seçin.
 
 1. **LinkedIn ile kimlik doğrulaması**'nı seçin ve LinkedIn Campaign Manager için yönetici kimlik bilgilerinizi sağlayın.
 
@@ -56,29 +57,26 @@ Eşleştirilmiş hedef kitleler oluşturmak için birleşik müşteri profilleri
 
 ## <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
-Bu tür bir bağlantıya erişiminiz varsa bir dışarı aktarma işlemi yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-1. Yeni bir dışa aktarma oluşturmak için **Hedef Ekle**'yi seçin.
+1. **Dışarı aktarma ekle**'yi seçin.
 
-1. **Dışa aktarma bağlantısı** alanında, LinkedIn Ads bölümünden bir bağlantı seçin. Bu bölüm adını göremiyorsanız, sizin için kullanılabilecek bu türde bir bağlantı yoktur.
+1. **Dışa aktarma bağlantısı** alanında, LinkedIn Ads bölümünden bir bağlantı seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin.
 
-1. LinkedIn'de [kişi hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) veya [şirket hedeflemesi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) yapmak için verileri dışarı aktarmayı isteyip istemediğinizi seçin. 
+1. Dışa aktarım için bir ad girin.
 
-1. **Veri eşleme** bölümünde, ilgili kişi hedeflemesi için, müşterinin e-posta adresini, Apple Reklam kimliğini, Google Reklam kimliğini, Google Kullanıcı kimliğini veya ad ve soyadı temsil eden en az bir alan seçin. Şirket hedefleme seçeneğini belirlerseniz, bir şirket adı, e-posta etki alanı, LinkedIn sayfası URL'si, Stock simgesi veya Web sitesini temsil eden en az bir alan seçin. Dışa aktarmanızın daha fazla tanımlanabilmesi için başka alanlar seçilebilir. 
+1. LinkedIn'de [kişi hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) veya [şirket hedeflemesi](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) yapmak için verileri dışarı aktarmayı isteyip istemediğinizi seçin.
 
-1. Dışarı aktarmak istediğiniz segmentleri seçin. LinkedIn Campaign Manager'daki eşleşen hedef kitleler, dışarı aktarmak için seçtiğiniz segmentlerin adıyla otomatik olarak oluşturulur. Her segment ayrı bir eşleşen hedef kitleyle sonuçlanır. 
+1. **Veri eşleme** bölümünde, ilgili kişi hedeflemesi için, müşterinin e-posta adresini, Apple Reklam kimliğini, Google Reklam kimliğini, Google Kullanıcı kimliğini veya ad ve soyadı temsil eden en az bir alan seçin. Şirket hedefleme seçeneğini belirlerseniz, bir şirket adı, e-posta etki alanı, LinkedIn sayfası URL'si, Stock simgesi veya Web sitesini temsil eden en az bir alan seçin.
+
+1. Dışa aktarmanızı daha da iyi tanımlamak için isteğe bağlı olarak başka alanlar ekleyin. Bu alanları eşlemek için **Öznitelik ekle**'yi seçin.
+
+1. Dışarı aktarmak istediğiniz segmentleri seçin. LinkedIn Campaign Manager'daki eşleşen hedef kitleler, dışarı aktarmak için seçtiğiniz segmentlerin adıyla otomatik olarak oluşturulur. Her segment ayrı bir eşleşen hedef kitleyle sonuçlanır.
 
 1. **Kaydet**'i seçin.
 
-Bir verme işlemi kaydedildiğinde verme işlemi hemen çalıştırılamaz.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Dışa aktarma işlemi her [Zamanlanmış yenileme](system.md#schedule-tab) ile çalışır. [Verileri isteğe bağlı olarak](export-destinations.md#run-exports-on-demand) da dışa aktarabilirsiniz. 
-
-
-## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
-
-LinkedIn Ads'e veri aktarmk için Dynamics 365 Customer Insights etkinleştirdiğinizde, kişisel veriler gibi önemli potansiyel bilgiler de dahil olmak üzere Dynamics 365 Customer Insights uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, bu tür verileri yönergeye aktaracaktır, ancak LinkedIn Ads'in sahip olabileceğiniz gizlilik veya güvenlik yükümlülüklerini karşıladığından emin olmak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Bu işlevin kullanımını durdurmak için Dynamics 365 Customer Insights Yöneticiniz istediği zaman bu dışarı aktarma hedefini kaldırabilir.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

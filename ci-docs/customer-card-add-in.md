@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081751"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194947"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (önizleme)
 
@@ -26,23 +26,27 @@ Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görün
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Eklenti yalnızca satış veya müşteri hizmetleri, sürüm 9.0 ve daha sonraki sürümler gibi Dynamics 365 model güdümlü uygulamalarla çalışır.
-- Dynamics 365 verilerinizin Customer Insights müşteri profilleriyle eşleşmesi için [bunların Microsoft Dataverse bağlayıcı kullanılarak Dynamics 365 uygulamasından alınmasını](connect-power-query.md) öneririz. Dynamics 365 ilgili kişilerini (veya firmalarını) almak için farklı bir yöntem kullanıyorsanız `contactid` (veya `accountid`) alanının [veri birleştirme işleminin eşleme adımında ilgili veri kaynağı için birincil anahtar](map-entities.md#select-primary-key-and-semantic-type-for-attributes) olarak ayarlandığından emin olmanız gerekir.
+- Sales veya Customer Service sürüm 9.0 ve üzeri gibi Dynamics 365 model temelli uygulamaları.
+- Dynamics 365 verilerinizin Customer Insights müşteri profilleriyle eşleşmesi için [bunların Microsoft Dataverse bağlayıcı kullanılarak Dynamics 365 uygulamasından alınmasını](connect-power-query.md) öneririz. Dynamics 365 ilgili kişilerini (veya firmalarını) almak için farklı bir yöntem kullanıyorsanız `contactid` (veya `accountid`) alanının [veri birleştirme işlemi sırasında ilgili veri kaynağı için birincil anahtar](map-entities.md#select-primary-key-and-semantic-type-for-attributes) olarak ayarlandığından emin olun.
 - Müşteri Kartı Eklentisinin tüm Dynamics 365 kullanıcılarının verileri görmesini sağlamak için Customer Insights'ta [kullanıcı olarak eklenmesi](permissions.md) gerekir.
-- [Customer Insights'ta yapılandırılan arama ve filtre özellikleri](search-filter-index.md), verilerin çalışması için arama yapmak üzere gereklidir.
+- Customer Insights'ta [yapılandırılmış arama ve filtre özellikleri](search-filter-index.md).
 - Her eklenti denetimi Customer Insights içindeki belirli verilere dayanır. Bazı veriler ve denetimler yalnızca belirli türlerdeki ortamlarda kullanılabilir. Eklenti yapılandırması, seçilen ortam türü nedeniyle denetim kullanılamıyorsa size bildirir. [Ortam kullanma durumları](work-with-business-accounts.md) daha fazla bilgi edinin.
-  - **Ölçü denetimi**: Müşteri öznitelikleri türünde [yapılandırılmış ölçüler](measures.md) gerektiriyor.
-  - **İstihbarat denetimi**: [Tahminler veya özel modeller](predictions-overview.md) kullanılarak oluşturulan veriler gerekir.
-  - **Müşteri ayrıntıları denetimi**: Profildeki tüm alanlar birleşik müşteri profilinde kullanılabilir.
+  - **Ölçü denetimi**: [Yapılandırılmış müşteri özniteliği ölçüleri](measures.md) gerektirir.
+  - **İstihbarat denetimi**: [Tahminler veya özel modeller](predictions-overview.md) kullanılarak oluşturulan veriler gerektirir.
+  - **Müşteri ayrıntıları denetimi**: Birleşik müşteri profilinde kullanılabilir olup profilde yer alan tüm alanları gösterir.
   - **Zenginleştirme denetimi**: Müşteri profillerine uygulanmış etkin [zenginleştirmeler](enrichment-hub.md) gerektirir. Kart eklentisi şu zenginleştirmeleri destekler: Microsoft tarafından sağlanan [Markalar](enrichment-microsoft.md), Microsoft tarafından sağlanan [İlgi Alanları](enrichment-microsoft.md) ve Microsoft tarafından sağlanan [Office etkileşim verileri](enrichment-office.md).
-  - **İlgili kişiler denetimi**: İlgili kişiler türünde anlamsal varlık tanımı gerekir.
-  - **Zaman çizelgesi denetimi**: [Yapılandırılmış etkinlikler](activities.md) gerektirir.
+  - **İlgili kişiler denetimi**: İlgili kişi anlamsal varlık türü gerektirir.
+  - **Zaman çizelgesi denetimi**: [Yapılandırılmış aktiviteler](activities.md) gerektirir.
 
 ## <a name="install-the-customer-card-add-in"></a>Müşteri Kartı Eklentisini yükleme
 
-Müşteri Kartı Eklentisi, Dynamics 365'teki müşteri etkileşimi uygulamalarına yönelik bir çözümdür. Çözümü yüklemek için AppSource uygulamasına gidin ve **Dynamics Müşteri Kartı**'nı arayın. [AppSource uygulamasındaki Müşteri Kartı Eklentisi](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview)'ni seçin ve **Şimdi Edinin**'i seçin.
+Müşteri Kartı Eklentisi, Dynamics 365'teki müşteri etkileşimi uygulamalarına yönelik bir çözümdür. Çözümü yüklemek için:
+
+1. AppSource'a gidin **Dynamics Müşteri Kartı**'nı arayın.
+
+1. [AppSource uygulamasındaki Müşteri Kartı Eklentisi](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview)'ni seçin ve **Şimdi Edinin**'i seçin.
 
 Çözümü yüklemek için Dynamics 365 uygulamasındaki yönetici kimlik bilgilerinizle oturum açmanız gerekebilir. Çözümün ortamınıza yüklenmesi biraz zaman alabilir.
 

@@ -1,32 +1,32 @@
 ---
 title: Segmentleri Adobe Experience Platform'a aktarma (önizleme)
 description: Customer Insights segmentlerini, Adobe Experience Platform'da nasıl kullanacağınızı öğrenin.
-ms.date: 03/29/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: fcb43e0956c6d1f0ef36b222dd2b718906364244
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052535"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195314"
 ---
 # <a name="export-segments-to-adobe-experience-platform-preview"></a>Segmentleri Adobe Experience Platform'a aktarma (önizleme)
 
-Bir Dynamics 365 Customer Insights kullanıcısı olarak, ilgili hedef kitlelerini hedefleyerek pazarlama kampanyalarınızı daha verimli hale getirmek için segmentler oluşturmuş olabilirsiniz. Adobe Experience Platform ve Adobe Campaign Standard gibi uygulamalarda Customer Insights'tan bir segment kullanmak için bu makalede açıklandığı şekilde aşağıdaki birkaç adımı tamamlamanız gerekir.
+İlgili hedef kitleleri hedef alan segmentleri Adobe Experience Platform'a aktarın.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Bu makalede özetlenen adımların süreç diyagramı.":::
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
--   Dynamics 365 Customer Insights lisansı
--   Adobe Experience Platform lisansı
--   Adobe Campaign Standard lisansı
--   Azure Blob Depolama hesabı
+- Bir Adobe Experience Platform lisansı.
+- Adobe Campaign Standard lisansı
+- [Azure Blob Depolama hesabı](/azure/storage/blobs/create-data-lake-storage-account) adı ve hesap anahtarı. Adı ve anahtarı bulmak için bkz. [Azure portalında depolama hesabı ayarlarını yönetme](/azure/storage/common/storage-account-manage).
+- [Azure Blob Depolama kapsayıcısı](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 ## <a name="campaign-overview"></a>Kampanyaya Genel Bakış
 
@@ -48,38 +48,39 @@ Göndermek istediğiniz teklif e-postası, müşterinin ad, soyadı ve abonelik 
 
 ## <a name="export-your-target-audience"></a>Hedef kitlenizi dışa aktarın
 
-Hedef kitlemizi tanımladıktan sonra, bir Azure Blob Depolama hesabına Customer Insights'tan verme işlemini yapılandırabiliriz.
+Customer Insights'tan bir Azure Blob Depolama hesabına aktarma işlemini yapılandıracağız.
 
-### <a name="configure-a-connection"></a>Bağlantı yapılandırma
+### <a name="set-up-connection-to-azure-blob-storage"></a>Azure Blob Depolama bağlantısını ayarlama
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Bağlantı Ekle** ' yı seçin ve bağlantıyı yapılandırmak için **Azure Blob Depolama**'yı seçin veya **Azure Blob Depolama** kutucuğunda **ayarla** ' yı seçin.
-
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure Blob depolama için yapılandırma kutucuğu."::: 
+1. **Bağlantı ekle**'yi ve **Azure Blob Depolama**'yı seçin.
 
 1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
 
-1. Bu bağlantıyı kimin kullanabileceğini seçin. Hiçbir eylem gerçekleştiriyorsanız, varsayılan olarak Yöneticiler kullanılır. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Bu bağlantıyı kimin kullanabileceğini seçin. Varsayılan olarak yalnızca yöneticilerdir. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. **Firma adını**, **firma anahtarını** ve segmenti vermek istediğiniz Blob depolama hesabınızın **kapsayıcısını** girin.  
-      
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Depolama alanı hesabı yapılandırmasının ekran görüntüsü."::: 
-   
-    - BLOB depolama hesabı adı ve firma anahtarının nasıl bulunacağı hakkında daha fazla bilgi edinmek için bkz. [Azure Portal'da depolama hesabı ayarlarını yönetme](/azure/storage/common/storage-account-manage).
-    - Kapsayıcının nasıl oluşturulacağını öğrenmek için bkz. [Kapsayıcı oluşturma](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Bağlantıyı tamamlamak için **Kaydet**'i seçin. 
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Depolama alanı hesabı yapılandırmasının ekran görüntüsü.":::
+
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
+
+1. Bağlantıyı tamamlamak için **Kaydet**'i seçin.
 
 ### <a name="configure-an-export"></a>Dışa aktarma yapılandırma
 
-Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilirsiniz. Daha fazla bilgi için, [bir dışa aktarma yapılandırmak için gereken izinlere bakın](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. **Veri** > **Dışa aktarmalar**'a gidin.
 
-1. Yeni bir dışa aktarma oluşturmak için **Dışa aktarma Ekle**'yi seçin.
+1. **Dışarı aktarma ekle**'yi seçin.
 
-1. **Dışa aktarma bağlantısı** alanında, Azure Blob Depolama bölümünden bir bağlantı seçin. Bu bölüm adını görmüyorsanız, bu tür hiçbir bağlantı kullanabilirsiniz.
+1. **Dışa aktarma bağlantısı** alanında, Azure Blob Depolama bölümünden bir bağlantı seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin.
+
+1. Dışa aktarım için bir ad girin.
 
 1. Dışa aktarmak istediğiniz segmenti seçin. Bu örnekte, **ChurnProneCustomers**'dır.
 
@@ -87,46 +88,49 @@ Bu tür bir bağlantıya erişiminiz varsa bu verme işlemini yapılandırabilir
 
 1. **Kaydet**'i seçin.
 
-Verme hedefini kaydettikten sonra, **veri** > **Dışar aktarmalar**'da bulursunuz.
-
-Artık [segmenti talep üzerine dışa aktarabilirsiniz](export-destinations.md#run-exports-on-demand). Dışarı aktarma ayrıca her [zamanlanan yenileme](system.md) ile de çalışır.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!NOTE]
 > Dışarı aktarılan segmentteki kayıt sayısının izin verilen Adobe Campaign Standard lisansı sınırı içinde olduğundan emin olun.
 
-Dışa aktarılan veriler, yukarıda yapılandırdığınız Azure Blob depolama kapsayıcısında depolanır. Aşağıdaki klasör yolu, kapsayıcınızda otomatik olarak oluşturulur:
+Dışarı aktarılan veriler, yapılandırdığınız Azure Blob Depolama kapsayıcısında depolanır. Aşağıdaki klasör yolları kapsayıcısında otomatik olarak oluşturulur:
 
-*%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
+- Kaynak varlıkları ve sistem tarafından oluşturulan varlıklar için:  
 
-Örnek: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/ChurnSegmentDemo/2021/02/16/1433/ChurnProneCustomers_1.csv
+  *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
-Dışa aktarılan varlıklar için *model.json* *%ExportDestinationName%* düzeyinde yer alır.
+  Örnek: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/ChurnSegmentDemo/2021/02/16/1433/ChurnProneCustomers_1.csv
 
-Örnek: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
+- Dışa aktarılan varlıklar için *model.json* *%ExportDestinationName%* düzeyinde yer alır.
+
+  Örnek: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Adobe Experience Platform'da Experience Data Model (XDM) tanımlama
 
-Customer Insights'tan aktarılan veriler Adobe Experience Platform içinde kullanılmadan önce Deneyim Veri Modeli şemasını tanımlamamız ve [Gerçek Zamanlı Müşteri Profili için verileri yapılandırmamız](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials) gerekir.
+Customer Insights'tan dışarı aktarılan veriler Adobe Experience Platform içinde kullanılmadan önce, Deneyim Veri Modeli şemasını tanımlayın ve [Gerçek Zamanlı Müşteri Profili için verileri yapılandırın](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 [XDM'nin ne olduğunu](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) öğrenin ve [şema kompozisyonunun temellerini](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema) anlayın.
 
 ## <a name="import-data-into-adobe-experience-platform"></a>Verileri Adobe Experience Platform ortamına aktarma
 
-Her şey artık hazır olduğuna göre, profil oluşturmak için hazırlanan hedef kitle Customer Insights verilerini Adobe Experience Platform'a aktarmanız gerekir.
+Hazırlanan hedef kitle verilerini Customer Insights'ta Adobe Experience Platform'a aktarın.
 
-Önce, [bir Azure Blob depolama kaynak bağlantısı oluşturun](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
+1. [Bir Azure Blob Depolama kaynak bağlantısı oluşturun](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).
 
-Kaynak bağlantıyı tanımladıktan sonra, bir bulut depolama toplu iş bağlantısı için bir [veri akışı yapılandırarak](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) Customer Insights'tan segmenti Adobe Experience Platform'a aktarın.
+1. Customer Insights'tan segment çıktısını Adobe Experience Platform'a aktarmak üzere bir bulut depolama toplu iş bağlantısı için [veri akışı yapılandırın](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials).
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Adobe Campaign Standard'da hedef kitle oluşturma
 
-Bu kampanya için e-posta göndermek üzere Adobe Campaign Standard'ı kullanacağız. Verileri Adobe Experience Platform'da içeri aktardıktan sonra Adobe Experience Platform'daki verileri kullanarak Adobe Campaign Standard'da [bir hedef kitle oluşturmamız](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) gerekir.
+Bu kampanya için e-posta göndermek üzere Adobe Campaign Standard'ı kullanacağız.
 
+1. Adobe Experience Platform'daki verileri kullanarak Adobe Campaign Standard'ta [bir hedef kitle oluşturun](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission).
 
-Adobe Experience Platform'daki verileri temel alan bir hedef kitle tanımlamak için Adobe Campaign Standard'da [segment oluşturucu kullanmayı](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) öğrenin.
+1. Adobe Experience Platform'daki verileri temel alan bir hedef kitle tanımlamak için Adobe Campaign Standard'da [segment oluşturucu kullanın](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html).
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Adobe Campaign Standard'ı kullanarak e-posta oluşturma ve gönderme
 
 E-posta içeriğini oluşturun ve ardından e-postanızı [test edin ve gönderin](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages).
 
 :::image type="content" source="media/contoso-sample-email.jpg" alt-text="Adobe Campaign Standard'da yenileme teklifi içeren örnek e-posta.":::
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

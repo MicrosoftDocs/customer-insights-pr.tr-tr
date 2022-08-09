@@ -1,7 +1,7 @@
 ---
 title: Veri kaynaklarına genel bakış
 description: Çeşitli kaynaklardan nasıl veri aktaracağınızı veya alacağınızı öğrenin.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051477"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207115"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
 Dynamics 365 Customer Insights, geniş bir kaynak kümesinden veri getirmek için bağlantılar sağlar. Bir veri kaynağına bağlanma, genellikle *veri alma* işlemi olarak anılır. Verileri aldıktan sonra [birleştirebilir](data-unification.md), öngörüler oluşturabilir ve kişiselleştirilmiş deneyimler oluşturmak için verileri etkinleştirebilirsiniz.
 
-## <a name="add-data-sources"></a>Veri kaynakları ekleme
+## <a name="add-or-edit-data-sources"></a>Veri kaynakları ekleme veya düzenleme
 
-Veri kaynaklarını Customer Insights'a ekleyebilir veya içe aktarabilirsiniz. Aşağıdaki bağlantılar, veri kaynaklarının eklenmesiyle ilgili talimatlar sağlar.
+Veri kaynaklarını Customer Insights'a ekleyebilir veya içe aktarabilirsiniz. Aşağıdaki bağlantılar, veri kaynaklarının eklenmesiyle ve düzenlenmesiyle ilgili talimatlar sağlar.
 
 **Veri kaynağını ekleme**
 
@@ -50,13 +50,18 @@ Ortamınız Customer Insights depolamayı kullanacak şekilde yapılandırılmı
 
 Ortamınız Power Platform veri akışlarını kullanmıyorsa **Veri Kaynakları** sayfası yalnızca tüm veri kaynaklarının bir listesini içerir. Hiçbir bölüm görüntülenmiyor.
 
-Alınan her veri kaynağının adını, durumunu ve bu kaynak için verilerin en son ne zaman yenilendiğini görmek için **Veri** > **Veri kaynakları** bölümüne gidin. Veri kaynakları listesini her bir sütuna göre sıralayabilirsiniz.
+## <a name="manage-existing-data-sources"></a>Mevcut veri kaynaklarını yönetme
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Eklenen veri kaynağı.":::
+Alınan her veri kaynağının adını, durumunu ve bu kaynak için verilerin en son ne zaman yenilendiğini görmek için **Veri** > **Veri kaynakları** bölümüne gidin. Veri kaynakları listesini herhangi bir sütuna göre sıralayabilir veya yönetmek istediğiniz veri kaynağını bulmak için arama kutusunu kullanabilirsiniz.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Kullanılabilir eylemleri görüntülemek için bir veri kaynağı seçin.
 
-Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, **Varlıklar** sayfasından incelenebilir. Daha fazla bilgi için bkz. [Varlıklar](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Eklenen veri kaynağı.":::
+
+- Özelliklerini değiştirmek için veri kaynağını [**düzenleyin**](#add-or-edit-data-sources).
+- En son verileri dahil etmek için veri kaynağını [**yenileyin**](#refresh-data-sources).
+- Birleştirmeden önce veri kaynağını [**zenginleştirin**](data-sources-enrichment.md).
+- Veri kaynağını **silin**. Veri kaynağı, yalnızca veriler birleştirme, öngörüler, etkinleştirmeler veya dışa aktarma gibi herhangi bir işlemde kullanılmadığında silinebilir.
 
 ## <a name="refresh-data-sources"></a>Veri kaynaklarını yenileme
 
@@ -64,23 +69,12 @@ Veri kaynakları otomatik bir zamanlamayla veya isteğe bağlı olarak el ile ye
 
 Alınan veri kaynaklarınızın sistem zamanlaması yenilemelerini yapılandırmak için **Yönetici** > **Sistem** > [**Zamanlama**](system.md#schedule-tab) seçeneğine gidin.
 
-Veri kaynağını isteğe bağlı olarak yenilemek için şu adımları izleyin:
+İsteğe bağlı olarak bir veri kaynağını yenilemek için:
 
 1. **Veri** > **Veri kaynakları** öğesine gidin.
 
-1. Değiştirmek istediğiniz veri kaynağı yanındaki dikey üç noktayı (&vellip;) seçin ve açılır listeden **Yenile**'yi seçin. Veri kaynağı şimdi el ile yenileme için tetiklenir. Bir veri kaynağı yenileme, hem varlık şemasını hem de veri kaynağı belirtilen tüm varlıklar için verileri güncelleştirir.
+1. Yenilemek istediğiniz veri kaynağını ve **Yenile**'yi seçin. Veri kaynağı şimdi el ile yenileme için tetiklenir. Bir veri kaynağı yenileme, hem varlık şemasını hem de veri kaynağı belirtilen tüm varlıklar için verileri güncelleştirir.
 
-1. Var olan bir yenilemeyi iptal etmek isterseniz **Yenileme işlemini durdur**'u seçtiğinizde veri kaynağı son yenileme durumuna dönecektir.
-
-## <a name="delete-a-data-source"></a>Veri kaynağını silme
-
-Veri kaynağı, yalnızca veriler birleştirme, öngörüler, etkinleştirmeler veya dışa aktarma gibi herhangi bir işlemde kullanılmadığında silinebilir.
-
-1. **Veri** > **Veri kaynakları** öğesine gidin.
-
-2. Kaldırmak istediğiniz veri kaynağı yanındaki dikey üç noktayı (&vellip;) seçin ve açılır menüden **Sil**'i seçin.
-
-3. Silme işlemini onaylayın.
-
+1. **İlerleme ayrıntıları** bölmesini açmak ve ilerlemeyi görüntülemek için durumu seçin. İşi iptal etmek için bölmenin alt kısmında **İşi iptal et** seçeneğini belirleyin.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

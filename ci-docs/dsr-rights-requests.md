@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947392"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146719"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>GDPR kapsamında Veri Sahibi Hakları (DSR) istekleri
 
@@ -31,18 +31,22 @@ Bir kuruluşun müşteri verilerinden kişisel verilerini kaldırılması anlam�
 
 Customer Insights, belirli bir müşteri veya kullanıcının kişisel verilerini silmek için aşağıdaki ürün içi deneyimleri sunar:
 
-- **Müşteri verileri için silme isteklerini yönetme**: Customer Insights içindeki müşteri verileri, Customer Insights dışındaki orijinal veri kaynaklarından alınır. Tüm GDPR silme istekleri orijinal veri kaynağında gerçekleştirilmelidir.
+- **Müşteri verileri için silme isteklerini yönetme**: Customer Insights içindeki müşteri verileri, Customer Insights dışındaki orijinal veri kaynaklarından alınır. GDPR silme isteklerini öncelikle orijinal veri kaynağında gerçekleştirin.
 - **Customer Insights kullanıcı verileri için silme isteklerini yönetme**: Kullanıcıların verileri, Customer Insights tarafından oluşturulur. Tüm GDPR silme istekleri Customer Insights'ta gerçekleştirilmelidir.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Müşteri verilerini silme isteklerini yönetme
 
-Customer Insights yöneticisi, veri kaynağında silinen müşteri verilerini kaldırmak için aşağıdaki adımları izleyebilir:
+Customer Insights yöneticisi, veri kaynağında silinen müşteri verilerini kaldırmak için aşağıdaki adımları izleyebilir. Aşağıda listelenen adımlara geçmeden önce veri kaynağınızda isteğin gerçekleştirildiğinden emin olun. 
 
 1. Dynamics 365 Customer Insights'a oturum açın.
-2. **Veri** > **Veri kaynakları** öğesine gidin
-3. Silinen müşteri verilerini içeren listedeki her veri kaynağı için:
+1. **Veri** > **Veri kaynakları** öğesine gidin
+1. Silinen müşteri verilerini içeren listedeki her veri kaynağı için:
    1. Dikey üç noktayı (&vellip;) seçin ve ardından **Yenile**'yi seçin.
-   2. **Durum** altında veri kaynağının durumunu denetleyin. Onay işareti, yenilemenin başarılı olduğu anlamına gelir. Uyarı üçgeni, bir sorun oluştuğu anlamına gelir. Uyarı üçgeni görüntülenirse D365CI@microsoft.com'a başvurun.
+   1. **Durum** altında veri kaynağının durumunu denetleyin. Onay işareti, yenilemenin başarılı olduğu anlamına gelir. Uyarı üçgeni, bir sorun oluştuğu anlamına gelir. Uyarı üçgeni görüntülenirse D365CI@microsoft.com'a başvurun.
+1. Başarılı bir veri kaynağı yenilemesinden sonra, aşağı akış yenilemelerini de çalıştırın. Bunu özellikle de Customer Insights için yinelenen bir tam yenileme planlamadıysanız yapın. 
+
+> [!IMPORTANT]
+> Bir silme isteğinden sonra statik segmentler tam yenilemeye veya çalışan aşağı akış yenilemelerine dahil edilmez. Müşteri verilerinin statik segmentlerden de kaldırılmasını sağlamak için, yenilenen kaynak verileriyle statik segmentleri yeniden oluşturun.
 
 > [!div class="mx-imgBorder"]
 > ![Müşteri verileri için GDPR silme isteklerini işleme.](media/gdpr-data-sources.png "Müşteri verileri için GDPR silme isteklerini işleme")
@@ -77,5 +81,10 @@ Kiracı yöneticisi verileri dışarı aktarmak için aşağıdaki adımları iz
 1. D365CI@microsoft.com adresine, istek içerisinde kullanıcının e-posta adresini belirten bir e-posta gönderin. Customer Insights takımı, kayıtlı kiracı yöneticisi e-posta adresine bir e-posta göndererek verilerin dışarı aktarılmasını onaylamanızı ister.
 2. İstenen kullanıcı için verileri dışarı aktarma onayını kabul edin.
 3. Dışarı aktarılan verileri kiracı yöneticisi e-posta adresi üzerinden alın.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'ta veri silme işlemi
+
+1. Veri bölümleri ve veri anlık görüntüleri 30 günden uzun süre boyunca etkin değilse veriler (veri bölümleri ve veri anlık görüntüleri) silinir; başka bir deyişle bunlar, veri kaynaklarının yenilenmesi aracılığıyla yeni bir veri bölümü ve anlık görüntüsü ile değiştirilirler.
+2. Tüm veriler ve anlık görüntüler silinmez. Customer Insights'ta kullanıldıkları için, en yeni veri bölümü ve veri anlık görüntüsü, tanım gereği etkin durumdadır. En yeni veriler için, veri kaynaklarının son 30 gün içinde yenilenmemiş olmasının önemi yoktur.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

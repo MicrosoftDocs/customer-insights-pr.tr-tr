@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081988"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170873"
 ---
 # <a name="measures-overview"></a>Ölçümlere genel bakış
 
-Ölçüler müşteri davranışlarını ve iş performansını daha iyi anlamanıza yardımcı olur. Bu kullanıcılar [tümleşik profiller](data-unification.md) içinden ilgili değerlere bakar . Örneğin, bir işletme, tek bir müşterinin satın alma geçmişini anlamak için *müşteri başına toplam harcamayı* görmeyi veya tüm işletmedeki toplam düzey geliri anlamak için *şirketin toplam satışlarını* ölçmeyi ister.  
+Ölçüler müşteri davranışlarını ve iş performansını daha iyi anlamanıza yardımcı olur. Bu kullanıcılar [tümleşik profiller](data-unification.md) içinden ilgili değerlere bakar . Örneğin, bir işletme, tek bir müşterinin satın alma geçmişini anlamak için *müşteri başına toplam harcamayı* görmeyi veya tüm işletmedeki toplam düzey geliri anlamak için *şirketin toplam satışlarını* ölçmeyi ister.
 
-Ölçümler, çeşitli işleçlere ve basit eşleşme seçeneklerine sahip bir veri sorgusu platformu olan [ölçüm oluşturucuyu kullanarak](measure-builder.md) oluşturulur. Verileri filtrelemenizi, sonuçları gruplamanızı, [varlık ilişkisi yollarını](relationships.md) algılamanızı ve çıktıyı önizlemenizi sağlar. Sık kullanılan ölçümleri verimli şekilde yapılandırmak için [önceden tanımlanmış şablonları kullanabilirsiniz](measure-templates.md).
+Müşteri verilerini sorgulayarak ve içgörüleri çıkararak iş etkinliklerini planlamak için ölçümler oluşturun. Örneğin, *müşteri başına toplam harcama* ve *müşteri başına toplam iade* ölçümü oluşturmak, harcama tutarı yüksek olan ancak iade tutarı da yüksek olan bir müşteri grubunun belirlenmesine yardımcı olur. Ardından, sonraki en iyi eylemleri belirlemek için bu ölçümlere bağlı olarak [segment oluşturun](segments.md).
 
-Müşteri verilerini sorgulayarak ve içgörüler çıkararak iş etkinliklerini planlamak için ölçüm oluşturucuyu kullanın. Örneğin, *müşteri başına toplam harcama* ve *müşteri başına toplam iade* ölçümü oluşturmak, yüksek harcaması olan ancak yüksek iadesi de olan bir müşteri grubunun belirlenmesine yardımcı olur. Sonraki en iyi eylemleri yönetmek için bu ölçümlere bağlı olarak [segment oluşturabilirsiniz](segments.md).
+## <a name="create-a-measure"></a>Ölçüm oluşturma
 
-## <a name="manage-your-measures"></a>Ölçümlerinizi yönetme
+Hedef kitlenize göre bir ölçümün nasıl oluşturulacağını seçin.
 
-Ölçüler listesini **Ölçüler** sayfasında bulabilirsiniz.
+# <a name="individual-consumers-b-to-c"></a>[Bireysel tüketici (İşletme ile Müşteri Arası)](#tab/b2c)
 
-Ölçüm türü, oluşturan, oluşturma tarihi, durum ve durum hakkında bilgiler bulabilirsiniz. Listeden bir ölçü seçtiğinizde, çıktıyı önizleyebilir ve bir CSV dosyası indirebilirsiniz.
+- Ölçüm oluşturucusu ile sıfırdan: [Kendi ölçümünüzü oluşturun](measure-builder.md).
+- Sık kullanılan ölçümlerden: [Önceden tanımlanmış şablonları kullanın](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
+
+Ölçüm oluşturucusu ile sıfırdan: [Kendi ölçümünüzü oluşturun](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Mevcut ölçümleri yönetme
+
+Oluşturduğunuz ölçümleri, bunların durumunu, ölçüm türünü ve verilerin son yenilenme süresini görüntülemek için **Ölçümler** sayfasına gidin. Ölçümler listesini herhangi bir sütuna göre sıralayabilir veya yönetmek istediğiniz ölçümü bulmak için arama kutusunu kullanabilirsiniz.
+
+Kullanılabilir eylemleri görüntülemek için bir ölçümü seçin. Çıktıyı önizlemek ve bir CSV dosyası indirmek için ölçüm adını seçin.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Tek ölçümleri yönetmek için eylemler."lightbox="media/measures-actions.png":::
 
-Bir ölçü seçtiğinizde aşağıdaki eylemler kullanılabilir:
-
-- Ölçümün yapılandırmasını **düzenleyin**.
-- Ölçümü **yineleme**. Özelliklerini hemen düzenlemeyi veya yinelemeyi kaydetmeyi seçebilirsiniz.
-- En son verileri göre ölçümü **yenileyin**. Tüm ölçümlerinizi aynı anda yenilemek için tüm ölçümleri ve ardından **Yenile**'yi seçin.
+- Özelliklerini değiştirmek için ölçümü **düzenleyin**.
+- En son verileri dahil etmek için ölçümü **yenileyin**.
 - Ölçümü **yeniden adlandırın**.
-- **Etkinleştirin** veya **Devre Dışı Bırakın**. Etkin olmayan ölçümler [zamanlanmış yenileme](system.md#schedule-tab) sırasında yenilenmez.
-- Segmentte [etiketleri yönetmek için](work-with-tags-columns.md#manage-tags) **Etiket**.
+- Ölçümü **etkinleştirin** veya **devre dışı bırakın**. Etkin olmayan ölçümler [zamanlanan yenileme](system.md#schedule-tab) sırasında yenilenmez ve **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir.
+- Ölçüm için [etiketleri yönetmek üzere](work-with-tags-columns.md#manage-tags) **Etiket** seçeneğini kullanın.
 - Ölçümü **silin**.
+- Görüntülenen [sütunları özelleştirmek için](work-with-tags-columns.md#customize-columns) **Sütunlar**.
+- [Etiketlere göre filtre uygulamak için](work-with-tags-columns.md#filter-on-tags) **Filtre**.
+- Ölçüm adına göre arama yapmak için **Arama adı** seçeneğini kullanın.
+
+## <a name="refresh-measures"></a>Ölçümleri yenileme
+
+Ölçümler otomatik bir zamanlamayla veya isteğe bağlı olarak el ile yenilenebilir. Bir veya daha fazla ölçümü el ile yenilemek için bunları seçin ve **Yenile**'yi seçin. [Otomatik yenileme zamanlamak için](system.md#schedule-tab) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Sonraki adım
-
-[Müşteri segmenti](segments.md) oluşturmak için varolan önlemleri kullanabilirsiniz.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

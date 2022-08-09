@@ -1,30 +1,27 @@
 ---
 title: Dynamics 365 Customer Insights için Teams botu (önizleme)
 description: Bot yardımıyla Microsoft Teams'te birleşik müşteri profillerini arayın.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: d140ae72578b48091a41005c4acafe03bac540da
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081861"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195866"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Dynamics 365 Customer Insights için Teams botu (önizleme)
 
 Botun Teams kanallarında birleşik müşteri profillerini aramasını sağlamak için Microsoft Teams ile bağlanın.
 
-> [!div class="mx-imgBorder"]
-> ![Müşteri kaydını gösteren Teams botu.](media/teams-bot.png "Müşteri kaydını gösteren Teams botu")
+:::image type="content" source="media/teams-bot.png" alt-text="Müşteri kaydını gösteren Teams botu":::
 
-## <a name="prerequisites"></a>Ön koşullar
-
-Botu ayarlamak ve yapılandırmak için aşağıdaki önkoşulların karşılanması gerekir:
+## <a name="prerequisites"></a>Önkoşullar
 
 - En az bir [veri kaynağının eklenmesi](data-sources.md).
 - [Birleştirme işleminin](data-unification.md) tamamlanması.
@@ -37,12 +34,12 @@ Botu ayarlamak ve yapılandırmak için aşağıdaki önkoşulların karşılanm
 
 ## <a name="configure-the-bot"></a>Botu yapılandırma
 
-1. **Yönetici** > **Dışarı Aktarma Hedefleri**'ne gidin.
+1. **Yönetici** > **Bağlantılar** gidin.
 1. Microsoft Teams kutucuğunda, **Ayarla**'yı seçin.
 1. Teams'teki **Uygulamalar** alanına yönlendirilirsiniz. Ayrıca Teams'i açıp sol alt köşede **Uygulamalar**'ı seçebilir veya doğrudan [AppSource uygulamasından edinebilirsiniz](https://go.microsoft.com/fwlink/?linkid=2124104).
 1. **Customer Insights**'ı arayın ve uygulamayı seçin.
 1. **Ekle**'yi seçin.
-1. Teams'te Customer Insights'ta oturum açtıktan sonra bir hoş geldiniz iletisi görür ve başlayabilirsiniz.
+1. Teams'de Customer Insights'ta oturum açın. Hoş geldiniz iletisi görüntülenir.
 
 ## <a name="things-you-can-do-with-the-bot"></a>Bot ile yapabilecekleriniz
 
@@ -50,11 +47,10 @@ Bot, birleşik müşteri profilleri için arama özellikleri sağlar.
 
 - Arama ve filtre dizinine eklenen birleşik müşteri profilinde **arama** yazıp ardından bir ad, e-posta adresi veya başka bir alan girin.
 
-  Ortaya çıkan müşteri profilinden en fazla 15 alan içeren bir kart alırsınız. Birden çok eşleşme, bir profil seçebileceğiniz sonuçların listesini döndürür. Tam eşleşme aramak için arama terimini çift tırnak işaretleri arasına alabilirsiniz.
+  Ortaya çıkan müşteri profilinden en fazla 15 alan içeren bir kart alırsınız. Birden çok eşleşme, bir profil seçebileceğiniz sonuçların listesini döndürür. Tam eşleşme aramak için arama terimini çift tırnak işaretleri arasına alın.
 
-- Kuruluşunuz aynı kuruluşta birden çok Customer Insights ortamı kullanıyorsa botu bağlamak istediğiniz ortamı seçmek için **switchinstance** girebilirsiniz.
+- Kuruluşunuz aynı kuruluşta birden çok Customer Insights ortamı kullanıyorsa botu bağlamak istediğiniz ortamı seçmek için **switchinstance** girin.
 
 - Bot için kullanılabilir komutların bir listesini görmek üzere **yardım** girin.  
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082000"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121586"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Customer Insights API'leri için OData sorgusu örnekleri
 
@@ -23,7 +23,7 @@ Bu makalede, [Customer Insights API'lerine](apis.md) dayalı olarak kendi uygula
 
 Sorgu örneklerini hedef ortamlarda çalışmak için değiştirmeniz gerekir: 
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` {instanceId}, sorgulamak istediğiniz Customer Insights ortamının GUID'sidir. [ListAllInstances işlemi](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances), erişiminiz olan {InstanceId} öğesini bulmanıza izin verir.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` {instanceId}, sorgulamak istediğiniz Customer Insights ortamının GUID'sidir. [ListAllInstances işlemi](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances), erişiminiz olan {InstanceId} öğesini bulmanıza izin verir.
 - {CID}: Birleşik bir müşteri kaydının GUID'si. Örnek: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Veri kaynağı bir müşteri kaydının birincil anahtarının tanımlayıcısı. Örnek: `CNTID_1002`
 - {DSname}: Customer Insights'a yönlendirilmeden bir veri kaynağı varlık adını içeren dizedir. Örnek: `Website_contacts`.
@@ -39,9 +39,10 @@ Aşağıdaki tabloda *Müşteri* varlığına yönelik bir örnek sorgu kümesi 
 |Alternatif anahtar    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternatif anahtarlar, birleşik müşteri varlığında korunur       |
 |Yeni bir ölçüm başlatmak için   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |In    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Alternatif Anahtar + Giriş   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Alternatif Anahtar + Giriş   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Arama yap  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Bir arama dizesi için ilk 10 sonucu verir      |
 |Segment üyeliği  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Segmentasyon varlıktan önceden belirlenmiş satır sayısı döndürür.      |
+|Bir müşteri için segment üyeliği | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Müşteri belirtilen segmentin bir üyesiyse müşteri profilini döndürür     |
 
 ## <a name="unified-activity"></a>Birleşik etkinlik
 

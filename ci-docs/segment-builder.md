@@ -1,6 +1,6 @@
 ---
-title: Segmentler oluşturma
-description: Segment oluşturucusu ya da hızlı segmentleri kullanarak müşterileri çeşitli özniteliklere göre onları gruplamak için müşteri segmentleri oluşturun.
+title: Karmaşık segmentleri segment oluşturucuyu kullanarak oluşturma
+description: Müşterileri çeşitli özniteliklere göre gruplayarak karmaşık müşteri segmentleri oluşturmak için segment oluşturucusunu kullanın.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,20 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: b99d9575d3b6af91758d80eb04170773b08cc9ab
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053996"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170659"
 ---
-# <a name="create-segments"></a>Segmentler oluşturma
+# <a name="create-complex-segments-with-segment-builder"></a>Karmaşık segmentleri segment oluşturucuyu kullanarak oluşturma
 
-Birleşik Müşteri varlığı ve ilgili varlıkları etrafında karmaşık filtreler tanımlayın. Her segment işlendikten sonra, dışarı aktarabileceğiniz ve işlem gerçekleştirebileceğiniz bir müşteri kaydı kümesi oluşturur. Segmentler, **Segmentler** sayfasında yönetilir. Segment oluşturucusunu kullanarak [yeni segmentler oluşturabilir](#create-a-new-segment) veya uygulamanın diğer bölümlerinden [hızlı segmentler oluşturabilirsiniz](#quick-segments).
+Birleşik Müşteri varlığı ve ilgili varlıkları etrafında karmaşık filtreler tanımlayın. Her segment işlendikten sonra, dışarı aktarabileceğiniz ve işlem gerçekleştirebileceğiniz bir müşteri kaydı kümesi oluşturur.
 
 > [!TIP]
-> - Hızlı segmentler yalnızca **bağımsız müşterilerin** ortamları içinde desteklenir.
-> - **Bağımsız müşteriye** dayanan segmentler, segment üyeleri için kullanılabilir ilgili kişi bilgilerini otomatik olarak içerir. **İş hesaplarının** ortamlarında , segmentler firmaları (şirketler veya yan kuruluşlar) temel alır. Bir segmente ilgili kişi bilgilerini dahil etmek için, segment oluşturucusundaki **Proje özellikleri** işlevini kullanın. İlgili kişi veri kaynaklarının [anlamsal olarak ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) varlığıyla eşlendiğinden emin olun.
+> **Bağımsız müşteriye** dayanan segmentler, segment üyeleri için kullanılabilir ilgili kişi bilgilerini otomatik olarak içerir. **İş hesaplarının** ortamlarında , segmentler firmaları (şirketler veya yan kuruluşlar) temel alır. Bir segmente ilgili kişi bilgilerini dahil etmek için, segment oluşturucusundaki **Proje özellikleri** işlevini kullanın. İlgili kişi veri kaynaklarının [anlamsal olarak ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) varlığıyla eşlendiğinden emin olun.
 
 ## <a name="segment-builder"></a>Segment oluşturucu
 
@@ -34,7 +33,7 @@ Aşağıdaki resimde, segment oluşturucunun çeşitli yönleri gösterilmektedi
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Segment oluşturucunun öğeleri." lightbox="media/segment-builder-overview.png":::
 
-1. Kuralları ve alt kurallarıyla segmentinizi düzenleyin. Her kural veya alt kural, koşullardan oluşur. Koşulları mantıksal işleçlerle birleştirin
+1. Kuralları ve alt kurallarıyla segmentinizi düzenleyin. Her kural veya alt kural, koşullardan oluşur. Koşulları mantıksal işleçlerle birleştirin.
 
 1. Kurala uygulanacak varlıklar arasındaki [ilişki yolunu](relationships.md) seçin. İlişki yolu, bir koşulda hangi özniteliklerin kullanılabileceğini belirler.
 
@@ -52,17 +51,15 @@ Aşağıdaki resimde, segment oluşturucunun çeşitli yönleri gösterilmektedi
 
 Yukarıdaki örnek, segmentleme yeteneğini gösterir. Çevrimiçi ortamda en az düzeyde 500 dolar değerinde ürün satın alan *ve* yazılım geliştirmeye ilgi gösteren müşteriler için bir segment belirledik.
 
-## <a name="create-a-new-segment"></a>Yeni segment oluşturma
+## <a name="create-a-new-segment-with-segment-builder"></a>Segment oluşturucuyu kullanarak yeni bir segment oluşturma
 
-Yeni bir segment oluşturmanın çeşitli yolları vardır. Bu bölümde kendi segmentinizi sıfırdan nasıl oluşturacağınız açıklanır. Ayrıca, varolan varlıklara dayanan bir *hızlı segment* oluşturabilir veya *önerilen segmentleri* almak için makine öğrenimi modellerinden yararlanın. Daha fazla bilgi için [Segment genel bakışına](segments.md) gidin.
+1. **Segmentler**'e gidin.
 
-Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir segment etkin olmayan bir segment olarak kaydedilir. Segment konfigürasyonunu tamamladığınızda, segmenti etkinleştirmek için çalıştırın. Ayrıca bir segmenti **Tüm segmentler** sayfasından da **Etkinleştirebilirsiniz**.
+1. **Yeni** > **Kendiniz oluşturun**'u seçin. Segment oluşturucu sayfasında, kurallar tanımlayabilir veya alırsınız. Kural, bir müşteri kümesini tanımlayan bir veya daha fazla koşuldan oluşur.
 
-1. **Segmentler** sayfasına gidin.
+1. Adsız segmentin yanındaki **Ayrıntıları düzenle** seçeneğini belirleyin. Segmentiniz için bir ad girin ve segment için önerilen **Çıkış varlığı adını** güncelleştirin. İsteğe bağlı olarak, segmente bir açıklama ve [etiketler](work-with-tags-columns.md#manage-tags) ekleyin.
 
-1. **Yeni** > **Kendiniz oluşturun**'u seçin.
-
-1. Segment oluşturucu sayfasında, kurallar tanımlayabilir veya alırsınız. Kural, bir müşteri kümesini tanımlayan bir veya daha fazla koşuldan oluşur.
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Ayrıntıları düzenle iletişim kutusu.":::
 
 1. **Rule1** bölümünde, müşterileri filtrelemek istediğiniz bir varlığın özniteliğini seçin. Öznitelik seçmenin iki yolu vardır:
    - **Kurala Ekle** bölmesinde kullanılabilir varlıkların ve özniteliklerin listesini gözden geçirin ve eklenecek özelliğin yanında **+** simgesini seçin. Özniteliği varolan bir kurala eklemek veya yeni bir kural oluşturmak için kullanmak istiyorsanız seçin.
@@ -72,35 +69,30 @@ Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir se
 
 1. Bir kurala daha fazla koşul eklemek için **Koşul ekle**'yi seçin. Geçerli kuralın altında bir kural oluşturmak için **Alt kural ekle**'yi seçin.
 
-1. Bir kural *Müşteri* varlığından başka varlıkları kullanırsa, ilişki yolunu ayarlamanız gerekir. İlişki yolunun, sistemin birleşik müşteri varlığına hangi ilişki üzerinden erişmesini istediğiniz konusunda bilgilendirmesi gerekir. Seçili varlığı birleştirilmiş müşteri varlığına eşlemek için **İlişki yolunu ayarla**'yı seçin. Yalnızca tek bir olası ilişki yolu varsa, sistemi otomatik olarak seçer. Farklı ilişki yolları, farklı sonuçlar ortaya koyabilir. Her kuralın kendi ilişki yolu olabilir.
+1. Bir kural *Müşteri* varlığından başka varlıkları kullanıyorsa, seçili varlığı birleştirilmiş müşteri varlığıyla eşlemek için **İlişki yolunu ayarla**'yı seçin. Yalnızca tek bir olası ilişki yolu varsa, sistem bunu otomatik olarak seçer. Farklı [ilişki yolları](relationships.md#relationship-paths), farklı sonuçlar ortaya koyabilir. Her kuralın kendi ilişki yolu olabilir.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Birleşik müşteri varlığına eşlenen bir varlığı temel alan bir kural oluştururken potansiyel ilişki yolu.":::
 
-   Örneğin, ekran görüntüsündeki *eCommerce_eCommercePurchases* varlığında *Müşteri* varlığını eşlemek için dört seçenek bulunur:
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Müşteri
-   - eCommerce_eCommercePurchases > Müşteri
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Müşteri
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Müşteri Son seçeneği belirlerken kural koşullarındaki listelenen tüm varlıklardan öznitelikleri dahil edebiliriz. Eşleşen müşteri kayıtlarının tüm varlıkların parçası olması gerektiğinden, büyük ihtimalle daha az sonuç elde edeceğiz. Bu örnekte, bir satış noktasında (*POS_posPurchases*) e-ticaret (*eCommerce_eCommercePurchases*) üzerinden mal satın almış olması ve bağlılık programımıza (*loyaltyScheme_loyCustomers*) katılması gerekir. İkinci seçeneği seçerken yalnızca *eCommerce_eCommercePurchases* ve *Müşteri* varlığındaki öznitelikleri seçebiliriz. Bu, büyük olasılıkla daha fazla müşteri profiline neden olur.
-
-1. Bir kuralda birden çok koşulunuz varsa, hangi mantıksal işlecin bunları bağlayacağını seçebilirsiniz.  
-   - **VE** işleci: Segmente bir kayıt eklemek için tüm koşulların karşılanması gerekir. Bu seçenek en çok farklı varlıklardaki koşulları tanımladığınızda kullanışlıdır.
-   - **VEYA** işleci: Segmente bir kayıt eklemek için koşullardan herhangi birinin karşılanması gerekir. Bu seçenek en çok aynı varlık için birden çok koşul tanımladığınızda kullanışlıdır.
+1. Bir kuralda birden çok koşulunuz varsa, bunları hangi mantıksal işlecin bağlayacağını seçin.  
+   - **VE** işleci: Segmente bir kayıt eklemek için tüm koşulların karşılanması gerekir. Farklı varlıklardaki koşulları tanımlarken bu seçeneği kullanın.
+   - **VEYA** işleci: Segmente bir kayıt eklemek için koşullardan herhangi birinin karşılanması gerekir. Aynı varlık için birden çok koşul tanımlarken bu seçeneği kullanın.
 
    :::image type="content" source="media/segmentation-either-condition.png" alt-text="İki VE koşulu bulunan kural.":::
 
    VEYA işlecini kullanırken, tüm koşullar ilişki yolundaki varlıklara dayalı olmalıdır.
 
-   - Farklı müşteri kaydı kümeleri oluşturmak için birden çok kural oluşturabilirsiniz. İş servis talebi için gerekli olan müşterileri dahil etmek üzere grupları birleştirebilirsiniz. Yeni bir kural oluşturmak için **Kural ekle**'yi seçin. Özellikle, belirtilen ilişki yolu nedeniyle bir kurala varlık ekleyemiyorsanız öznitelikleri seçmek için yeni bir kural oluşturmanız gerekir.
+1. Farklı müşteri kaydı kümeleri oluşturmak için birden çok kural oluşturun. İş kullanım durumunuz için gerekli olan müşterileri dahil etmek üzere grupları birleştirin. Özellikle, belirtilen ilişki yolu nedeniyle bir kurala varlık ekleyemiyorsanız öznitelikleri seçmek için yeni bir kural oluşturun.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Bir segmente yeni bir kural ekleyin ve ayarlama işlecini seçin.":::
 
-   - Ayarlanan işleçlerden birini seçin: **Birleşim**, **Kesişim** veya **Hariç**.
+   1. **Kural ekle**'yi seçin.
+   1. Ayarlanan işleçlerden birini seçin: **Birleşim**, **Kesişim** veya **Hariç**.
 
       - **Birleşim** iki grubu birleştirir.
       - **Kesişim** iki grubu çakıştırır. Birleşik grupta yalnızca iki grup için de *ortak olan* veriler kalır.
       - **Dışında** iki grubu birleştirir. A grubunda yalnızca B grubundaki veriler için *ortak olmayan* veriler tutulur.
 
-1. Varsayılan olarak, segmentler, tanımlı filtrelerle eşleşen müşteri profillerinin tüm özniteliklerini içeren çıkış varlığı oluştururlar. Bir segment *müşteri* varlığından başka varlıklara dayanıyorsa çıkış varlığına bu varlıklardan daha fazla nitelik ekleyebilirsiniz. Çıkış varlığına eklenecek öznitelikleri seçmek için **proje öznitelikleri**'ni seçin.
+1. Varsayılan olarak, çıkış varlığı, tanımlı filtrelerle eşleşen müşteri profillerinin tüm özniteliklerini otomatik olarak içerir. Bir segment *Müşteri* varlığından başka varlıklara dayanıyorsa çıkış varlığına bu varlıklardan daha fazla öznitelik eklemek için **Proje öznitelikleri**'ni seçin.
 
    > [!IMPORTANT]
    > İş hesaplarına dayanan segmentlere yönelik olarak, segmentin ilgili kişi bilgileri gerektiren hedefler için etkinleştirilmesine veya dışarı aktarılmasına olanak sağlamak üzere *ContactProfile* varlığındaki her firmanın bir ya da daha fazla ilgili kişisinin ayrıntılarının bu segmente eklenmesi gerekir. *ContactProfile* varlığı hakkında daha fazla bilgi için bkz. [Anlamsal eşlemeler](semantic-mappings.md).
@@ -120,48 +112,18 @@ Bir segment oluştururken, bir taslak kaydedebilirsiniz. Taslak aşamada, bir se
    > - Proje yapmak istediğiniz öznitelik, *Müşteri* varlığındaki bir taneden fazla atlama uzaklıktaysa, oluşturduğunuz segment sorgusunun tüm kuralında o öznitelik kullanılması gerekmez.
    > - **Tasarlanan öznitelikler**, ayarla işleçleri kullanılırken uygulamasında çarpanlarına göre belirlenir.
 
-1. Adsız segmentin yanındaki **Ayrıntıları düzenle** seçeneğini belirleyin. Segmentiniz için bir ad girin ve segment için önerilen **Çıkış varlığı adını** güncelleştirin. İsteğe bağlı olarak, segmente bir açıklama ve [etiketler](work-with-tags-columns.md#manage-tags) ekleyin.
+1. Segment oluşturmak için **Çalıştır**'ı seçin. Geçerli yapılandırmayı koruyup segmenti daha sonra çalıştırmak isterseniz **Kaydet**'i seçin. **Segmentler** sayfası görüntülenir.
 
-   :::image type="content" source="media/segments_edit_details.png" alt-text="Ayrıntıları düzenle iletişim kutusu.":::
+### <a name="segment-builder-tips"></a>Segment oluşturucu ipuçları
 
-1. Segmenti kaydetmek için **Çalıştır**'ı seçin, bunu etkinleştirin ve tüm kurallar ve koşullara göre segmentinizi işlemeye başlayın. Aksi takdirde, etkin olmayan bir segment olarak kaydedilir.
+Segment oluşturucusunu kullanarak bir segment oluştururken, aşağıdaki ipuçlarına dikkat edin:
 
-1. **Segmentler** sayfasına geri dönmek için **Segmentler'e dön**'ü seçin.
-
-1. Varsayılan olarak, segment bir dinamik segment olarak oluşturulur. Bu, sistem yenilemeleri sırasında segmentin yenilendiği anlamına gelir. [Otomatik yenilemeyi durdurmak](segments.md#manage-existing-segments) için segmenti **Statik hale getir** seçeneğini belirleyerek seçin. Statik segmentler istendiği zaman [el ile yenilenebilir](segments.md#refresh-segments).
-
-> [!TIP]
-> - Segment Oluşturucu, koşullar için işleçler ayarlanırken varlıklardan geçerli değerler önermez. Hangi değerlerin kullanılabilir olduğunu görmek için **Veri** > **Varlıklar**'a gidebilir ve varlık verilerini indirebilirsiniz.
-> - Tarihlere dayanan koşullar, sabit tarihlerle kayan tarih aralığı arasında geçiş yapmanızı sağlar.
-> - Segmentiniz için birden çok kuralınız varsa, düzenlemekte olduğunuz kuralın yanında dikey mavi bir çizgi olur.
-> - Kural ve koşulları kesim tanımındaki diğer konumlarına taşıyabilirsiniz. Bir kural veya koşulun yanındaki dikey üç noktayı ( &vellip;) seçin ve sonra da nasıl ve nereye taşınacağını belirleyin.
-> - Komut çubuğundaki **Geri al** ve **Yineleme** denetimleri, değişiklikleri geri almanıza olanak tanır.
-> - Bir segment oluşturduktan sonra, bazı segmentler [segmentin kullanımını izlemenize](segments.md#track-usage-of-a-segment) olanak sağlar.
-
-## <a name="quick-segments"></a>Hızlı segmentler
-
-Hızlı segmentler, daha hızlı Öngörüler için hızlı bir şekilde tek bir operatör ile basit segmentler oluşturmanıza olanak sağlar.
-
-1. **Segmentler** sayfasında, **Yeni** > **Şuradan oluştur**'u seçin.
-   - *Birleşik Müşteri* varlığına dayalı bir segment oluşturmak için **Profiller**'i seçin.
-   - Daha önce oluşturmuş olduğunuz ölçülerin etrafında bir segment oluşturmak için **ölçüler** seçeneğini belirleyin.
-   - **Tahminler** veya **Özel Modeller** özelliklerini kullanarak oluşturduğunuz çıkış varlıklarından birinin etrafında bir segment oluşturmak için **Yönetim bilgileri** seçeneğini belirleyin.
-
-2. **Yeni hızlı segment** iletişim kutusunda **Alan** açılan menüsünden bir öznitelik seçin.
-
-3. Sistem, müşterilerinizin daha iyi segmentlerini oluşturmanıza yardımcı olan daha fazla öngörü sağlayacaktır.
-   - Kategorik alanlar için, başlıca 10 müşteri sayısını göstereceğiz. **Değer**'i ve ardından **İncele**'yi seçin.
-   - Sayısal bir öznitelik için sistem, her bir müşterinin yüzde birlik değerinin altına hangi öznitelik değerinin denk geldiğini gösterir. **İşleç**'i ve **Değer**'i seçip **İncele** seçeneğini belirleyin.
-
-4. Sistem size bir **Tahmini segment boyutu** sağlar. Tanımladığınız segmenti oluşturup oluşturmamayı seçebilir veya farklı bir segment boyutu elde etmek için ilk olarak yeniden ziyaret edebilirsiniz.
-
-   :::image type="content" source="media/quick-segment-name.png" alt-text="Hızlı segment için ad ve tahmin.":::
-
-5. Segmentiniz için bir **Ad** ve **Çıkış varlığı adı** girin. İsteğe bağlı olarak, [etiketler](work-with-tags-columns.md#manage-tags) ekleyin.
-
-6. Segmentinizi oluşturmak için **Kaydet**'i seçin.
-
-7. Segmentin işlenmesi tamamlandıktan sonra segmenti oluşturduğunuz diğer segmentler gibi görüntüleyebilirsiniz.
+- Segment Oluşturucu, koşullar için işleçler ayarlanırken varlıklardan geçerli değerler önermez. Hangi değerlerin kullanılabilir olduğunu görmek için **Veri** > **Varlıklar**'a gidebilir ve varlık verilerini indirebilirsiniz.
+- Tarihlere dayanan koşullar, sabit tarihlerle kayan tarih aralığı arasında geçiş yapmanızı sağlar.
+- Segmentiniz için birden çok kuralınız varsa, düzenlemekte olduğunuz kuralın yanında dikey mavi bir çizgi olur.
+- Kural ve koşulları kesim tanımındaki diğer konumlarına taşıyabilirsiniz. Bir kural veya koşulun yanındaki dikey üç noktayı ( &vellip;) seçin ve sonra da nasıl ve nereye taşınacağını belirleyin.
+- Komut çubuğundaki **Geri al** ve **Yineleme** denetimleri, değişiklikleri geri almanıza olanak tanır.
+- Bir segment oluşturduktan sonra, bazı segmentler [segmentin kullanımını izlemenize](segments.md#track-usage-of-a-segment) olanak sağlar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
