@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173806"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224319"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Bilinen ve bilinmeyen kullanıcılar hakkındaki verilerle deneyimlerinizi kişiselleştirme
 
-Müşteri verilerini yönetmek yeni bir zorluk değil; ancak kullanıcıların, markaların sunduğu çeşitli dijital kanallarda gezinmesi giderek daha da zorlaşıyor. Bir kanalda bilinen (kimliği doğrulanmış) bir kullanıcı, oturum açmamışsa başka bir kanalda bilinmeyen (kimlik doğrulaması yapılmamış) kullanıcı haline gelir. Problem genelde kimlik doğrulaması yapılmamış (bilinmeyen) kullanıcıların ortak bir kimliğe sahip olmamasıdır. Bu, anlamlı profil özniteliklerini ilişkilendirmek ve birleştirilmiş müşteri profilleri oluşturmak için kullanılabilir. Customer Insights, kaynak sistemlerinizdeki izleme yöntemlerinden veri alma yoluyla bu sorunun çözülmesine yardımcı olur. Birleştirilmiş bilinmeyen ve bilinen profiller, kuruluşlara güncel profillerin tam görünümünü ve bunların geçmişteki işlemlerini, davranışlarını ve demografik bilgilerini sağlar. Ayrıca, web siteniz, mağaza içi satın alım işlemleriniz, bağlılık programları vb. dahil olmak üzere birden çok kanalda müşteri etkinliklerini ilişkilendirmenize olanak tanıyan kimlik çözümlemesi yaparak bunu bir adım ileri taşır.
+Müşteri verilerini yönetmek yeni bir zorluk değil; ancak kullanıcıların, markaların sunduğu çeşitli dijital kanallarda gezinmesi giderek daha da zorlaşıyor. Bir kanalda bilinen (kimliği doğrulanmış) bir kullanıcı, oturum açmamışsa başka bir kanalda bilinmeyen (kimlik doğrulaması yapılmamış) kullanıcı haline gelir. Problem genelde kimlik doğrulaması yapılmamış (bilinmeyen) kullanıcıların ortak bir kimliğe sahip olmamasıdır. Bu, anlamlı profil özniteliklerini ilişkilendirmek ve birleştirilmiş müşteri profilleri oluşturmak için kullanılabilir. Customer Insights, kaynak sistemlerinizdeki izleme yöntemlerinden veri alma yoluyla bu sorunun çözülmesine yardımcı olur. Bilinmeyen ve bilinen profiller birleştirildiğinde kuruluşlara güncel profiller ve bunların geçmiş işlemleri, davranışları ve demografileri hakkında eksiksiz bir görünüm sağlanır. Ayrıca, web siteniz, mağaza içi satın alım işlemleriniz, bağlılık programları vb. dahil olmak üzere birden çok kanalda müşteri etkinliklerini ilişkilendirmenize olanak tanıyan kimlik çözümlemesi yaparak bunu bir adım ileri taşır.
 
 ## <a name="sample-scenario"></a>Örnek senaryo
 

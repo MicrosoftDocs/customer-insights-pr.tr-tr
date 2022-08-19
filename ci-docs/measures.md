@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170873"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245397"
 ---
 # <a name="measures-overview"></a>Ölçümlere genel bakış
 
@@ -53,7 +53,7 @@ Kullanılabilir eylemleri görüntülemek için bir ölçümü seçin. Çıktıy
 - Özelliklerini değiştirmek için ölçümü **düzenleyin**.
 - En son verileri dahil etmek için ölçümü **yenileyin**.
 - Ölçümü **yeniden adlandırın**.
-- Ölçümü **etkinleştirin** veya **devre dışı bırakın**. Etkin olmayan ölçümler [zamanlanan yenileme](system.md#schedule-tab) sırasında yenilenmez ve **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir.
+- Ölçümü **etkinleştirin** veya **devre dışı bırakın**. Etkin olmayan ölçümler [zamanlanan yenileme](schedule-refresh.md) sırasında yenilenmez ve **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir.
 - Ölçüm için [etiketleri yönetmek üzere](work-with-tags-columns.md#manage-tags) **Etiket** seçeneğini kullanın.
 - Ölçümü **silin**.
 - Görüntülenen [sütunları özelleştirmek için](work-with-tags-columns.md#customize-columns) **Sütunlar**.
@@ -62,7 +62,7 @@ Kullanılabilir eylemleri görüntülemek için bir ölçümü seçin. Çıktıy
 
 ## <a name="refresh-measures"></a>Ölçümleri yenileme
 
-Ölçümler otomatik bir zamanlamayla veya isteğe bağlı olarak el ile yenilenebilir. Bir veya daha fazla ölçümü el ile yenilemek için bunları seçin ve **Yenile**'yi seçin. [Otomatik yenileme zamanlamak için](system.md#schedule-tab) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin.
+Ölçümler otomatik bir zamanlamayla veya isteğe bağlı olarak el ile yenilenebilir. Bir veya daha fazla ölçümü el ile yenilemek için bunları seçin ve **Yenile**'yi seçin. [Otomatik yenileme zamanlamak için](schedule-refresh.md) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

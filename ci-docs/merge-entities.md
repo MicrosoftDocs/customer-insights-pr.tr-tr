@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139694"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213606"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Veri birleştirme için müşteri alanlarını birleştirme
 
@@ -58,6 +58,9 @@ Birleşme işleminin bu adımında, birleşik profil varlığınız içinde birl
 
 1. Üç seçenekten birinden alanları nasıl kombine edeceğinizi veya birleştireceğinizi belirtin:
     - **Önem**: Katılan alanlar için belirtilen önem derecesine dayalı olarak kazanan değeri tanımlar. Bu, varsayılan birleştirme seçeneğidir. Önem derecesini ayarlamak için **Yukarı/aşağı hareket**'i seçin.
+
+      > [!NOTE]
+      > Customer Insights, ilk null olmayan değeri kullanır. Örneğin, bu sırayla sıralanan belirli A, B ve C varlıkları için A.Name ve B.Name null ise C.Name'deki değer kullanılır.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Alanları birleştir iletişim kutusunda önem seçeneği.":::
 

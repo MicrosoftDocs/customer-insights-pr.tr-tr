@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206931"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259822"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics veri kaynağı bağlama (önizleme)
 
@@ -24,26 +24,30 @@ Daha fazla bilgi için bkz. [Azure Synapse'e genel bakış](/azure/synapse-analy
 
 ## <a name="prerequisites"></a>Önkoşullar
 
+> [!NOTE]
+> [Güvenlik duvarı etkinleştirilen](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) Synapse Workspaces şu anda desteklenmemektedir.
 > [!IMPORTANT]
 > Tüm **rol atamalarını** açıklandığı gibi ayarladığından emin olun.  
 
 **Customer Insights'ta**:
 
-* Customer Insights'ta **Yönetici** rolüne sahip olmanız gerekir. [Customer Insights'ta kullanıcı izinleri](permissions.md#assign-roles-and-permissions) hakkında daha fazla bilgi edinin.
+* Customer Insights'ta **Yönetici** rolüne sahip olmanız gerekir. [Customer Insights'ta kullanıcı izinleri](permissions.md#add-users) hakkında daha fazla bilgi edinin.
 
 **Azure'da**:
 
 - Etkin bir Azure aboneliği.
 
-- Yeni bir Azure Data Lake Storage 2. Nesil hesabı kullanıyorsanız *Customer Insights servis sorumlusu* için **Depolama Blobu Veri Katılımcısı** izinleri gerekir. [Customer Insights için hizmet sorumlusuyla Azure Data Lake Storage'a bağlanma](connect-service-principal.md) hakkında daha fazla bilgi edinin. Data Lake Storage 2. Nesil [hiyerarşik ad alanı](/azure/storage/blobs/data-lake-storage-namespace) etkinleştirilmiş **olmalıdır**.
+- Yeni bir Azure Data Lake Storage 2. Nesil hesabı kullanıyorsanız "Customer Insights için Dynamics 365 AI" olan *Customer Insights hizmet sorumlusu* için **Depolama Blobu Veri Katılımcısı** izinleri gerekir. [Customer Insights için hizmet sorumlusuyla Azure Data Lake Storage'a bağlanma](connect-service-principal.md) hakkında daha fazla bilgi edinin. Data Lake Storage 2. Nesil [hiyerarşik ad alanı](/azure/storage/blobs/data-lake-storage-namespace) etkinleştirilmiş **olmalıdır**.
 
-- Azure Synapse workspace bulunan kaynak grubunda, *hizmet görevlisi* ve *Customer Insights kullanıcısının* en azından **Okuyucu** izinleri atanması gerekir. Daha fazla bilgi için bkz. [Azure portal kullanarak Azure rolleri atama](/azure/role-based-access-control/role-assignments-portal).
+- Azure Synapse workspace bulunan kaynak grubunda, "Customer Insights için Dynamics 365 AI" olan *hizmet sorumlusu* ve *Customer Insights kullanıcısı*'na en azından **Okuyucu** izinlerinin atanması gerekir. Daha fazla bilgi için bkz. [Azure portal kullanarak Azure rolleri atama](/azure/role-based-access-control/role-assignments-portal).
 
-- *Kullanıcının*, verilerin bulunduğu ve Azure Synapse çalışma alanına bağlı olduğu Azure Data Lake Storage Gen2 hesabında **Depolama Blob Verileri Katkıda Bulunan** izinlerine ihtiyacı vardır. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
+- *Kullanıcının*, verilerin bulunduğu ve Azure Synapse çalışma alanına bağlı olduğu Azure Data Lake Storage 2. Nesil hesabında **Depolama Blob Verileri Katkıda Bulunan** izinlerine ihtiyacı vardır. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
 
 - *[Azure Synapse workspace yönetilen kimliğinin](/azure/synapse-analytics/security/synapse-workspace-managed-identity)*, verilerin bulunduğu ve Azure Synapse çalışma alanına bağlı olduğu Azure Data Lake Storage 2. Nesil hesabında **Depolama Blob Verileri Katkıda Bulunan** izinlerine ihtiyacı vardır. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
 
-- Azure Synapse workspace'te *Customer Insights için hizmet sorumlusuna* **Synapse Yöneticisi** rolünün atanmış olması gerekir. Daha fazla bilgi için, bkz. [Synapse workspace'e erişim denetimini ayarlama](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Azure Synapse workspace'te, "Customer Insights için Dynamics 365 AI" olan *Customer Insights için hizmet sorumlusu*'na **Synapse Yöneticisi** rolünün atanmış olması gerekir. Daha fazla bilgi için, bkz. [Synapse workspace'e erişim denetimini ayarlama](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Customer Insights ortamınız verileri [kendi Azure Data Lake Storage](own-data-lake-storage.md) bölümünüzde depolarsa Azure Synapse Analytics'e bağlantıyı ayarlayan kullanıcının en azından Data Lake Storage hesabında yerleşik **Okuyucu** rolünün olması gerekir. Daha fazla bilgi için bkz. [Azure portal kullanarak Azure rolleri atama](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Azure Synapse Analytics'te data lake veritabanına bağlanma
 
@@ -57,7 +61,7 @@ Daha fazla bilgi için bkz. [Azure Synapse'e genel bakış](/azure/synapse-analy
   
 1. Veri kaynağı için bir **Ad** ve isteğe bağlı bir **Açıklama** girin.
 
-1. Azure Synapse Analytics için [kullanılabilir bağlantı](connections.md) seçin veya yeni bağlantı oluşturun.
+1. Azure Synapse Analytics için [kullanılabilir bağlantı](connections.md) seçin veya [yeni bağlantı oluşturun](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse).
 
 1. Azure Synapse Analytics bağlantısında bağlı çalışma alanından bir **Veritabanı** seçin ve **İleri** seçeneğini belirleyin. Şu anda veritabanı türü olarak yalnızca *Lake veritabanı*'nı destekliyoruz.
 

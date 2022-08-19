@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011957"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246225"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Kendi Azure Data Lake Storage 2. Nesil hesabınızı kullanma
 
@@ -37,7 +37,7 @@ Yeni bir ortam oluşturduğunuzda, Data Lake Storage hesabının var olduğundan
 1. **Depolama alanınıza nasıl bağlanılacağını** seçin. Kimlik doğrulaması için kaynak tabanlı seçenek ve abonelik tabanlı seçenek arasından seçim yapabilirsiniz. Daha fazla bilgi için bkz. [Azure Hizmet Sorumlusunu kullanarak bir Azure Data Lake Storage hesabına bağlanma](connect-service-principal.md).
    - **Azure aboneliği** için **Abonelik**, **Kaynak grubu** ve `customerinsights` kapsayıcısını içeren **Depolama hesabı**'nı seçin.
    - **Hesap anahtarı** için, Data Lake Storage hesabının **Hesap adı** ve **Hesap anahtarı** bilgilerini sağlayın. Bu kimlik doğrulaması yönteminin kullanılması, kuruluşunuz anahtarları döndürdüğünde bu konuda bilgilendirileceğiniz anlamına gelir. Yeni anahtar döndürüldüğünde bu anahtarla [ortam yapılandırmasını güncelleştirmeniz](manage-environments.md#edit-an-existing-environment) gerekir.
-1. Depolama hesabına bağlanmak için Azure Özel Bağlantısı kullanmak isteyip istemediğinizi seçin ve iki adımlı işlemle [Özel Bağlantı oluşturun](security-overview.md#private-links-tab).
+1. Depolama hesabına bağlanmak için Azure Özel Bağlantısı kullanmak isteyip istemediğinizi seçin ve iki adımlı işlemle [Özel Bağlantı oluşturun](security-overview.md#set-up-an-azure-private-link).
 
 Veri kullanımı gibi sistem işlemleri tamamlandığında sistem, depolama hesabında karşılık gelen klasörleri oluşturur. Veri dosyaları ve *model.json* dosyaları oluşturulur ve işlem adına göre klasörlere eklenir.
 

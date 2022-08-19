@@ -1,7 +1,7 @@
 ---
-title: Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (önizleme)
+title: Tanılama günlüklerini dışarı aktarma (önizleme)
 description: Günlükleri Microsoft Azure İzleyici'ye nasıl göndereceğinizi öğrenin.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,87 +11,56 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052677"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245949"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Dynamics 365 Customer Insights'ta Azure İzleyici ile günlük iletme (önizleme)
+# <a name="export-diagnostic-logs-preview"></a>Tanılama günlüklerini dışarı aktarma (önizleme)
 
-Dynamics 365 Customer Insights, doğrudan Azure İzleyici tümleştirmesi sağlar. Azure İzleyici kaynak günlükleri, günlükleri izlemenize ve [Azure Depolama](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)'e göndermenize veya bunları [Azure Olay Hub'ları](https://azure.microsoft.com/services/event-hubs/)'a aktarmanıza olanak tanır.
+Azure İzleyici'yi kullanarak Customer Insights'taki günlükleri iletin. Azure İzleyici kaynak günlükleri, günlükleri izlemenize ve [Azure Depolama](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)'e göndermenize veya bunları [Azure Olay Hub'ları](https://azure.microsoft.com/services/event-hubs/)'a aktarmanıza olanak tanır.
 
 Customer Insights, aşağıdaki olay günlüklerini gönderir:
 
 - **Denetim Olayları**
-  - **APIEvent**: Dynamics 365 Customer Insights kullanıcı arabirimi aracılığıyla gerçekleştirilen değişiklik izlemeyi etkinleştirir.
+  - **APIEvent**: Dynamics 365 Customer Insights kullanıcı arabirimi aracılığıyla değişiklik izlemeyi etkinleştirir.
 - **Operasyonel Olaylar**
-  - **WorkflowEvent**: İş akışı, [Veri Kaynaklarını](data-sources.md) kurmanıza, [birleştirmenize](data-unification.md), [zenginleştirmenize](enrichment-hub.md) ve son olarak verileri diğer sistemlere [dışarı aktarmanızı](export-destinations.md) sağlar. Bu adımların tümü tek bir şekilde yapılabilir (örneğin, tek bir verme işlemini tetikler). Ayrıca, sistemli de çalıştırabilir (örneğin, zenginleştirme işlemini tetikleyen veri kaynaklarından veri yenilemesi yapabilir ve bir kez verileri başka bir sisteme verir). Daha fazla bilgi için bkz. [WorkflowEvent Şeması](#workflow-event-schema).
-  - **APIEvent**: Dynamics 365 Customer Insights müşteri kurulumlarına yapılan tüm API çağrıları. Daha fazla bilgi için bkz. [APIEvent Şeması](#api-event-schema).
+  - **WorkflowEvent**: [Veri kaynaklarını](data-sources.md) ayarlamanıza, [birleştirmenize](data-unification.md), [zenginleştirmenize](enrichment-hub.md) ve son olarak verileri diğer sistemlere [dışarı aktarmanıza](export-destinations.md) olanak tanır. Bu adımlar ayrı ayrı yapılabilir (örneğin, tek bir dışarı işlemini tetikleyin). Ayrıca düzenli olarak da çalıştırabilirler (örneğin, zenginleştirme işlemini tetikleyen veri kaynaklarından veri yenilemesi yapılır, böylece zenginleştirmeler alınır ve veriler başka sisteme dışarı aktarılır). Daha fazla bilgi için bkz. [WorkflowEvent Şeması](#workflow-event-schema).
+  - **APIEvent**: Müşteri kurulumlarının API çağrılarını Dynamics 365 Customer Insights'a gönderir. Daha fazla bilgi için bkz. [APIEvent Şeması](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Tanılama ayarların yapma
 
 ### <a name="prerequisites"></a>Önkoşullar
 
-Customer Insights'ta tanılamayı yapılandırmak için aşağıdaki ön koşulların karşılanması gerekir:
-
-- Etkin bir [Azure Aboneliğine](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) sahip olmanız gerekir.
-- Customer Insights'ta [Yönetici](permissions.md#admin) izinlerine sahip olmanız gerekir.
-- Azure'daki hedef kaynakta **Katkıda Bulunan** ve **Kullanıcı Erişim Yöneticisi** rolüne sahip olmanız gerekir. Kaynak; Azure Data Lake Storage hesabı, Azure Olay Hub'ı veya Azure Log Analytics çalışma alanı olabilir. Daha fazla bilgi için bkz. [Azure portalı kullanarak Azure rol atamalarını ekleme veya kaldırma](/azure/role-based-access-control/role-assignments-portal). Bu izin, Customer Insights'ta tanılama ayarlarını yapılandırırken gereklidir; bu da başarılı kurulumdan sonra değiştirilebilir.
-- Azure Depolama, Azure Olay Hub'ı veya Azure Log Analytics için [hedef gereksinimleri](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) karşılanmalıdır.
-- Kaynağın ait olduğu kaynak grubunda en azından **Okuyucu** rolüne sahip olmalısınız.
+- Etkin bir [Azure Aboneliği](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- Customer Insights'ta [Yönetici](permissions.md#admin) izinleri.
+- Azure'daki hedef kaynakta [Katkıda Bulunan ve Kullanıcı Erişim Yöneticisi rolü](/azure/role-based-access-control/role-assignments-portal). Kaynak; Azure Data Lake Storage hesabı, Azure Olay Hub'ı veya Azure Log Analytics çalışma alanı olabilir. Bu izin, Customer Insights'ta tanılama ayarlarını yapılandırırken gereklidir ancak başarılı kurulumdan sonra değiştirilebilir.
+- Azure Depolama, Azure Olay Hub'ı veya Azure Log Analytics için [hedef gereksinimleri](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) karşılanır.
+- Kaynağın ait olduğu kaynak grubunda en azından **Okuyucu** rolü.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Azure İzleyici ile tanılamayı ayarlama
 
-1. Bu kurulumda yapılandırılan tanılama hedeflerini görmek için Customer Insights'ta **Sistem** > **Tanılama**'yı seçin.
+1. Customer Insights'ta **Yönetici** > **Sistem**'e gidin ve **Tanılama** sekmesini seçin.
 
 1. **Hedef ekle**'yi seçin.
 
-   > [!div class="mx-imgBorder"]
-   > ![Tanılama bağlantısı](media/diagnostics-pane.png "Tanılama bağlantısı")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Tanılama bağlantısı.":::
 
 1. **Tanılama hedefi adı** alanına bir ad girin.
 
-1. Hedef kaynakla Azure aboneliğinin **Kiracı**'sını seçin ve **Oturum aç**'ı seçin.
+1. **Kaynak türü**'nü seçin (Depolama Hesabı, Olay Hub'ı veya Günlük Analizi).
 
-1. **Kaynak türü**'nü seçin (Depolama hesabı, olay hub'ı veya günlük analizi).
+1. Hedef kaynak için **Abonelik**, **Kaynak grubu** ve **Kaynak**'ı seçin. İzin ve günlük bilgileri için [Hedef kaynakta yapılandırma](#configuration-on-the-destination-resource) bölümüne bakın.
 
-1. Hedef kaynak için **Abonelik**'i seçin.
-
-1. Hedef kaynak için **Kaynak grubu**'nu seçin.
-
-1. **Kaynak**'ı seçin.
-
-1. **Veri gizliliği ve uyumluluk** bildirimini onaylayın.
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
 
 1. Hedef kaynağa bağlanmak için **Sisteme bağlan**'ı seçin. API kullanımdaysa ve olaylar oluşturursa günlükler, 15 dakika sonra hedefte görünmeye başlar.
 
-### <a name="remove-a-destination"></a>Hedefi kaldırma
-
-1. **Sistem** > **Tanılama**'ya gidin.
-
-1. Listeden tanılama hedefini seçin.
-
-1. **Eylemler** sütununda **Sil** simgesini seçin.
-
-1. Günlük iletmeyi durdurmak için silme işlemini onaylayın. Azure aboneliğindeki kaynak silinmez. Seçilen kaynak için Azure portalını açmak ve seçilen kaynağı oradan silmek için **Eylemler** sütunundaki bağlantıyı seçebilirsiniz.
-
-## <a name="log-categories-and-event-schemas"></a>Günlük kategorileri ve olay şemaları
-
-Şu anda [API olayları](apis.md) ve iş akışı olayları desteklenmektedir, aşağıdaki kategoriler ve şemalar geçerlidir.
-Günlük şeması, [Azure İzleyici ortak şeması](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema)'nı izler.
-
-### <a name="categories"></a>Kategoriler
-
-Customer Insights, iki kategori sağlar:
-
-- **Denetim olayları**: Hizmetteki yapılandırma değişikliklerini izlemek için [API olayları](#api-event-schema). `POST|PUT|DELETE|PATCH` işlemleri bu kategoriye girer.
-- **Operasyonel olaylar**: Hizmet kullanımı sırasında oluşturulan [API olayları](#api-event-schema) veya [iş akışı olayları](#workflow-event-schema).  Örneğin, bir iş akışının `GET` istekleri veya yürütme olayları.
-
 ## <a name="configuration-on-the-destination-resource"></a>Hedef kaynakta yapılandırma
 
-Kaynak türü seçiminize bağlı olarak aşağıdaki adımlar otomatik olarak uygulanır:
+Kaynak türü seçiminize bağlı olarak aşağıdaki değişiklikler otomatik olarak gerçekleşir:
 
 ### <a name="storage-account"></a>Storage account
 
@@ -116,9 +85,34 @@ Customer Insights hizmet sorumlusu, kaynak üzerinde **Log Analytics Katkıda Bu
 
 **Sorgular** penceresinde, **Denetim** çözümünü genişletin ve `CIEvents` öğesini arayarak sağlanan örnek sorguları bulun.
 
+## <a name="remove-a-diagnostics-destination"></a>Tanılama hedefi kaldırma
+
+1. **Yönetici** > **Sistem**'e gidin ve **Tanılama** sekmesini seçin.
+
+1. Listeden tanılama hedefini seçin.
+
+   > [!TIP]
+   > Hedef kaldırıldığında günlük iletme durdurulur ancak Azure aboneliğindeki kaynak silinmez. Azure'daki kaynağı silmek üzere **Eylemler** sütunundaki bağlantıyı seçip seçili kaynak için Azure portalını açın ve kaynağı buradan silin. Ardından tanılama hedefini silin.
+
+1. **Eylemler** sütununda **Sil** simgesini seçin.
+
+1. Hedefi kaldırmak ve günlük iletmeyi durdurmak için silme işlemini onaylayın.
+
+## <a name="log-categories-and-event-schemas"></a>Günlük kategorileri ve olay şemaları
+
+Şu anda [API olayları](apis.md) ve iş akışı olayları desteklenmektedir, aşağıdaki kategoriler ve şemalar geçerlidir.
+Günlük şeması, [Azure İzleyici ortak şeması](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema)'nı izler.
+
+### <a name="categories"></a>Kategoriler
+
+Customer Insights, iki kategori sağlar:
+
+- **Denetim olayları**: Hizmetteki yapılandırma değişikliklerini izlemek için [API olayları](#api-event-schema). `POST|PUT|DELETE|PATCH` işlemleri bu kategoriye girer.
+- **Operasyonel olaylar**: Hizmet kullanımı sırasında oluşturulan [API olayları](#api-event-schema) veya [iş akışı olayları](#workflow-event-schema).  Örneğin, bir iş akışının `GET` istekleri veya yürütme olayları.
+
 ## <a name="event-schemas"></a>Olay şemaları
 
-API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntılarda farklılık gösterir, bkz. [API olay şeması](#api-event-schema) veya [iş akışı olay şeması](#workflow-event-schema).
+API olayları ve iş akışı olaylarının ortak bir yapısı vardır ancak aralarında birkaç fark bulunur. Daha fazla bilgi için bkz. [API olay şeması](#api-event-schema) veya [İş akışı olay şeması](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>API olay şeması
 
@@ -186,7 +180,7 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 
 #### <a name="operation-types"></a>İşlem türleri
 
-| OperationType     | Gruplandır                                     |
+| OperationType     | Gruplandırma                                     |
 | ----------------- | ----------------------------------------- |
 | Alım         | [Veri kaynakları](data-sources.md)           |
 | DataPreparation   | [Veri kaynakları](data-sources.md)           |
@@ -220,7 +214,6 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 | `durationMs`    | Uzun      | İsteğe bağlı          | İşlemin milisaniye cinsinden süresi.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | İsteğe bağlı          | Belirli bir olay kategorisinde daha fazla özellik içeren JSON nesnesi.                                                                                        | [İş Akışı Özellikleri](#workflow-properties-schema) alt bölümüne bakın                                                                                                       |
 | `level`         | String    | Zorunlu          | Olayın önem derecesi.                                                                                                                                  | `Informational`, `Warning` veya `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>İş akışı özellikleri şeması
 
@@ -247,3 +240,5 @@ API olayları ve iş akışı olayları ortak bir yapıya sahiptir ve ayrıntıl
 | `properties.additionalInfo.AffectedEntities` | No       | Evet  | isteğe bağlı. Yalnızca OperationType `Export` için. Dışarı aktarma sırasında yapılandırılmış varlıkların bir listesini içerir.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Evet  | isteğe bağlı. Yalnızca OperationType `Export` için. Dışarı aktarmanın ayrıntılı iletisi.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Evet  | isteğe bağlı. Yalnızca OperationType `Segmentation` için. Segmentin sahip olduğu toplam üye sayısını belirtir.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

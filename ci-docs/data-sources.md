@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207115"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245673"
 ---
 # <a name="data-sources-overview"></a>Veri kaynaklarına genel bakış
 
@@ -67,7 +67,7 @@ Kullanılabilir eylemleri görüntülemek için bir veri kaynağı seçin.
 
 Veri kaynakları otomatik bir zamanlamayla veya isteğe bağlı olarak el ile yenilenebilir. [Şirket içi veri kaynakları](connect-power-query.md#add-data-from-on-premises-data-sources), veri alımı sırasında ayarlanan kendi programlarına göre yenilenir. Ekli veri kaynakları için veri alımı, ilgili veri kaynağından elde edilen en son verileri kullanır.
 
-Alınan veri kaynaklarınızın sistem zamanlaması yenilemelerini yapılandırmak için **Yönetici** > **Sistem** > [**Zamanlama**](system.md#schedule-tab) seçeneğine gidin.
+Alınan veri kaynaklarınızın sistem zamanlaması yenilemelerini yapılandırmak için **Yönetici** > **Sistem** > [**Zamanlama**](schedule-refresh.md) seçeneğine gidin.
 
 İsteğe bağlı olarak bir veri kaynağını yenilemek için:
 

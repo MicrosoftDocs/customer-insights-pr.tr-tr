@@ -1,19 +1,19 @@
 ---
 title: Müşteri profillerini Azure Haritalar'dan gelen konum verileriyle zenginleştirme (önizleme)
 description: Azure Haritalar birinci taraf zenginleştirme hakkında genel bilgiler.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052631"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238066"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Müşteri profillerini Azure Haritalar'dan gelen konum verileriyle zenginleştirme (önizleme)
 
@@ -35,14 +35,9 @@ Customer Insights'ta [yönetici](permissions.md#admin) olmanız ve etkin bir Azu
 
 1. Bağlantı için bir ad ve geçerli bir Azure Haritalar API anahtarı girin.
 
-1. [Kabul ediyorum](#data-privacy-and-compliance)'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
 
 1. Yapılandırmayı doğrulamak için **Doğrula**'yı ve ardından **Kaydet**'i seçin.
-
-### <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
-
-Dynamics 365 Customer Insights'ı Azure Haritalar'a veri aktarması için etkinleştirdiğinizde, kişisel veriler gibi önemli olası veriler de dahil olmak üzere Dynamics 365 Customer Insights için uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri alır, ancak Azure Haritalar'ın sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini yerine getirmesini sağlamaktan siz sorumlusunuz. Daha fazla bilgi için [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732)'ne gidin.
-Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
 
 ## <a name="configure-the-enrichment"></a>Zenginleştirmeyi yapılandırma
 

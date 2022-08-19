@@ -1,7 +1,7 @@
 ---
 title: Dun & Bradstreet ile şirket profillerini zenginleştirme (önizleme)
 description: Dun & Bradstreet üçüncü taraf zenginleştirme hakkında genel bilgiler.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196050"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237928"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Dun & Bradstreet ile şirket profillerini zenginleştirme (önizleme)
 
@@ -55,16 +55,11 @@ Customer Insights'ta [yönetici](permissions.md#admin) olmanız ve Dun & Bradstr
 
 1. Geçerli Dun & Bradstreet kimlik bilgilerini ve Dun & Bradstreet proje ayrıntılarını *Bölge, Bırakma klasörü yolu ve Bırakma klasörü adını* sağlayın. [Bu bilgileri](#set-up-your-dun--bradstreet-project), Dun & Bradstreet projesinden elde edersiniz.
 
-1. [Kabul ediyorum](#data-privacy-and-compliance)'u seçerek **Veri gizliliği ve uyumluluğu** için onayınızı gözden geçirin ve sağlayın.
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
 
 1. Yapılandırmayı doğrulamak için **Doğrula**'yı ve ardından **Kaydet**'i seçin.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Dun & Bradstreet bağlantı yapılandırma sayfası.":::
-
-### <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
-
-Dynamics 365 Customer Insights uygulamasının Dun & Bradstreet'e veri aktarmasına izin verdiğinizde, Kişisel Veriler gibi hassas olabilecek veriler de dahil olmak üzere verilerin Dynamics 365 Customer Insights için uyumluluk sınırı dışında aktarılmasına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri alır, ancak Dun & Bradstreet'in sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini yerine getirmesini sağlamaktan siz sorumlusunuz. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
-Dynamics 365 Customer Insights Yöneticiniz, bu işlevin kullanımını sona erdirmek için istediği zaman zenginleştirmeyi kaldırabilir.
 
 ## <a name="supported-countries-or-regions"></a>Desteklenen ülkeler veya bölgeler
 

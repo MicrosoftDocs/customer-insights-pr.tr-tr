@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139635"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245618"
 ---
 # <a name="update-the-unification-settings"></a>Birleştirme ayarlarını güncelleştirme
 
@@ -42,7 +42,7 @@ Birleşik bir profil oluşturulduktan sonra, herhangi bir ayarı gözden geçirm
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Vurgulanan bütünleştirme seçenekleriyle Veri Bütünleştirme sayfasının ekran görüntüsü.":::
 
    - Birleştirilmiş profili güncelleştirmeden eşleştirme koşullarınızın (tekilleştirme ve eşleşme kuralları) kalitesini hızlı bir şekilde değerlendirmek için [eşleştirme koşullarını çalıştırın](#run-matching-conditions). **Yalnızca eşleşen koşulları çalıştır** seçeneği tek bir varlık için görüntülenmez.
-   - Eşleşen koşulları çalıştırmak ve unified customer profile varlığını bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden güncelleştirmek için [müşteri profillerini birleştirin](#run-updates-to-the-unified-customer-profile). Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](system.md#schedule-tab) yenilenecek.
+   - Eşleşen koşulları çalıştırmak ve unified customer profile varlığını bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden güncelleştirmek için [müşteri profillerini birleştirin](#run-updates-to-the-unified-customer-profile). Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](schedule-refresh.md) yenilenecek.
    - Eşleşen koşulları çalıştırmak ve unified customer profile varlığını ve tüm bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) güncelleştirmek için [müşteri profillerini ve bağımlılıkları birleştirin](#run-updates-to-the-unified-customer-profile). Tüm işlemler otomatik olarak yeniden çalıştırıldı.
 
 ## <a name="edit-source-fields"></a>Kaynak alanları düzenleme
@@ -154,7 +154,7 @@ Eşleştirme koşullarını çalıştır, yalnızca veri kaldırma ve eşleşme 
 
 1. **Veri** > **Birleştir** sayfasından, aşağıdakileri seçin:
 
-   - **Müşteri profillerini birleştir**: Bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden eşleşen koşulları çalıştırır ve Unified customer profile varlığını güncelleştirir. Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](system.md#schedule-tab) yenilenecek.
+   - **Müşteri profillerini birleştir**: Bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden eşleşen koşulları çalıştırır ve Unified customer profile varlığını güncelleştirir. Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](schedule-refresh.md) yenilenecek.
 
    - **Müşteri profillerini ve bağımlılıklarını birleştir**: Eşleşen koşulları çalıştırır ve birleştirilmiş profili ve tüm bağımlılıkları güncelleştirir. Tüm işlemler otomatik olarak yeniden çalıştırıldı. Tüm aşağı akış işlemleri tamamlandıktan sonra, müşteri profili güncelleştirilmiş verileri yansıtır.
 

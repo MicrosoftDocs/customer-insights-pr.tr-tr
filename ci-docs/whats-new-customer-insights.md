@@ -1,19 +1,19 @@
 ---
 title: Dynamics 365 Customer Insights'teki yenilikler
 description: Yeni özellikler, iyileştirmeler ve hata düzeltmeleri hakkında bilgiler.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114270"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246035"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'teki yenilikler
 
@@ -23,6 +23,28 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="july-2022-updates"></a>Temmuz 2022 güncelleştirmeleri
+
+Temmuz 2022 güncelleştirmeleri yeni özellikler, performans yükseltmeleri ve hata düzeltmeleri içerir.
+
+### <a name="export-to-moengage"></a>MoEngage'e dışarı aktarma
+
+Birleşik müşteri profillerinin segmentlerini MoEngage'e aktarın ve bunları MoEngage'de e-posta pazarlaması için kullanın.
+
+Daha fazla bilgi için bkz. [Segmentleri MoEngage'e dışarı aktarma](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>SFTP tabanlı dışarı aktarmalar için SSH desteği
+
+SFTP dışarı aktarma hedeflerine bağlantılar için SSH veya kullanıcı adı/parola üzerinden kimlik doğrulaması yapmak isteyip istemediğinizi seçin.
+
+Daha fazla bilgi için bkz. [Verileri SFTP ana bilgisayarlarına dışarı aktarma](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Bilinen ve bilinmeyen kullanıcılar hakkındaki verilerle deneyimleri kişiselleştirin
+
+Müşteri verilerini yönetmek yeni bir zorluk değil; ancak kullanıcıların, markaların sunduğu çeşitli dijital kanallarda gezinmesi giderek daha da zorlaşıyor. Bir kanalda bilinen (kimliği doğrulanmış) bir kullanıcı, oturum açmamışsa başka bir kanalda bilinmeyen (kimlik doğrulaması yapılmamış) kullanıcı haline gelir. Problem genelde kimlik doğrulaması yapılmamış (bilinmeyen) kullanıcıların ortak bir kimliğe sahip olmamasıdır. Bu, anlamlı profil özniteliklerini ilişkilendirmek ve birleştirilmiş müşteri profilleri oluşturmak için kullanılabilir. Customer Insights, kaynak sistemlerinizdeki izleme yöntemlerinden veri alma yoluyla bu sorunun çözülmesine yardımcı olur.
+
+Daha fazla bilgi için bkz. [Bilinen ve bilinmeyen kullanıcılar hakkındaki verilerle deneyimlerinizi kişiselleştirme](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Haziran 2022 güncelleştirmeleri
 
@@ -50,7 +72,7 @@ Daha fazla bilgi için bkz. [Müşteri Kasası (Önizleme) ile müşteri veriler
 
 Azure Özel Bağlantı, Customer Insights'ın sanal ağınızdaki özel bir uç nokta üzerinden Azure Data Lake Storage hesabınıza bağlanmasını sağlar. Genel internete açık olmayan depolama hesabındaki veriler için Özel Bağlantı, bu kısıtlı ağa bağlantı sağlar.
 
-Daha fazla bilgi için bkz. [Customer Insights'ta Özel Bağlantı'yı kullanma](security-overview.md#private-links-tab).
+Daha fazla bilgi için bkz. [Customer Insights'ta Özel Bağlantı'yı kullanma](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Mayıs 2022 güncelleştirmeleri
 

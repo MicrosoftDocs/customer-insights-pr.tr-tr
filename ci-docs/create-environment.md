@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142843"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245627"
 ---
 # <a name="how-to-create-a-new-environment"></a>Nasıl yapılır: Yeni ortam oluşturma
 
@@ -48,7 +48,7 @@ Ortam oluşturmak veya yönetmek için Customer Insights içinde [yönetici izin
 
 Aşağıdaki ayrıntıları sağlayın:
 
-- **Ad**: Bu ortamın adı. Var olan bir ortamı kopyaladıysanız bu alan zaten doldurulmuş haldedir ancak bunu değiştirebilirsiniz.
+- **Ad**: Bu ortamın adı. Var olan bir ortamı kopyaladıysanız bu alan zaten doldurulmuş haldedir ancak bunu değiştirebilirsiniz. Birden çok çalışma ortamınız varsa her birine kolayca tanımlanabilir bir ad verin.
 - **İşinizi seçin**: Yeni ortam için birincil hedef kitleyi seçin. Bireysel tüketiciler (B-C) veya [iş hesapları](work-with-business-accounts.md) (B-B) ile çalışabilirsiniz. Kuruluşunuz çoğunlukla bireylerle iş yapıyorsa (ör. perakendeci veya kahve dükkanı gibi) bireysel tüketicileri seçin. Ana hedef kitlenizin araba üreticisi veya kağıt şirketi gibi diğer şirketler olması durumunda işletme hesaplarını seçin.
 - **Tür**: Üretim veya korumalı alan ortamı oluşturmak isteyip istemediğinizi seçin. Korumalı alan ortamları, planlanan veri yenilemeye izin vermez ve uygulama öncesine ve teste yöneliktir. Korumalı alan ortamları, o anda seçili olan üretim ortamıyla aynı birincil hedef kitle kullanır.
 - **Bölge**: Hizmetin dağıtıldığı ve barındırıldığı bölge. [Kendi Azure Data Lake Storage hesabınızı kullanmak](own-data-lake-storage.md) veya [mevcut bir Microsoft Dataverse kuruluşuna bağlanmak için](customer-insights-dataverse.md) Customer Insights ortamının aynı bölgede olması gerekir.

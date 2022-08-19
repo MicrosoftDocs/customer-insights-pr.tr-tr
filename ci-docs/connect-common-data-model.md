@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207023"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245857"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage'ta verilere bağlanma
 
@@ -29,7 +29,7 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
 
 - Azure Data Lake Storage hesabında [hiyerarşik ad alanı etkin](/azure/storage/blobs/data-lake-storage-namespace) olmalıdır. Veriler, kök klasörü tanımlayan ve her varlık için alt klasörleri olan hiyerarşik bir klasör biçiminde saklanmalıdır. Alt klasörler, tam veri veya artımlı veri klasörlerine sahip olabilir.
 
-- Azure hizmet sorumlusu ile kimlik doğrulaması yapmak için Azure hizmet sorumlusunun kiracınızda yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [Azure hizmet sorumlusunu kullanarak bir Azure Data Lake Storage Gen2 hesabına bağlanma](connect-service-principal.md).
+- Azure hizmet sorumlusu ile kimlik doğrulaması yapmak için Azure hizmet sorumlusunun kiracınızda yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [Azure hizmet sorumlusunu kullanarak bir Azure Data Lake Storage 2. Nesil hesabına bağlanma](connect-service-principal.md).
 
 - Bağlanmak ve verileri almak istediğiniz Azure Data Lake Storage, Dynamics 365 Customer Insights ortamıyla aynı Azure bölgesinde olmalıdır. Farklı bir Azure bölgesindeki bir veri gölünden Common Data Model klasörüne bağlantılar desteklenmez. Ortamın Azure bölgesini öğrenmek için, Customer Insights'ta **yönetici** > **Sistem** > **Hakkında**'ya gidin.
 
@@ -56,8 +56,8 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
 
 1. **Depolama hesabınızı şunu kullanarak bağlayın:** için aşağıdaki seçeneklerden birini belirleyin. Daha fazla bilgi için bkz. [Customer Insights'ı Azure hizmet sorumlusuyla Azure Data Lake Storage 2. Nesil hesabına bağlama](connect-service-principal.md).
 
-   - **Azure kaynağı**: **Kaynak Kimliği**'ni girin. İsteğe bağlı olarak, bir Azure Özel Bağlantı aracılığıyla bir depolama hesabından veri almak istiyorsanız **Özel Bağlantıyı Etkinleştir**'i seçin. Daha fazla bilgi için bkz. [Özel Bağlantılar](security-overview.md#private-links-tab).
-   - **Azure aboneliği**: **Abonelik**'i ve ardından **Kaynak grubu** ve **Depolama hesabı**'nı seçin. İsteğe bağlı olarak, bir Azure Özel Bağlantı aracılığıyla bir depolama hesabından veri almak istiyorsanız **Özel Bağlantıyı Etkinleştir**'i seçin. Daha fazla bilgi için bkz. [Özel Bağlantılar](security-overview.md#private-links-tab).
+   - **Azure kaynağı**: **Kaynak Kimliği**'ni girin. İsteğe bağlı olarak, bir Azure Özel Bağlantı aracılığıyla bir depolama hesabından veri almak istiyorsanız **Özel Bağlantıyı Etkinleştir**'i seçin. Daha fazla bilgi için bkz. [Özel Bağlantılar](security-overview.md#set-up-an-azure-private-link).
+   - **Azure aboneliği**: **Abonelik**'i ve ardından **Kaynak grubu** ve **Depolama hesabı**'nı seçin. İsteğe bağlı olarak, bir Azure Özel Bağlantı aracılığıyla bir depolama hesabından veri almak istiyorsanız **Özel Bağlantıyı Etkinleştir**'i seçin. Daha fazla bilgi için bkz. [Özel Bağlantılar](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Veri kaynağını oluşturmak için kapsayıcıda veya depolama hesabında aşağıdaki rollerden birine sahip olmalısınız:
@@ -176,7 +176,7 @@ Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan 
         > - Depolama Blobu Veri Sahibi
         > - Depolama Blobu Veri Katılımcısı
 
-   - Azure Özel Bağlantı aracılığıyla bir depolama hesabından veri almak istiyorsanız **Özel Bağlantıyı Etkinleştir**'i seçin. Daha fazla bilgi için bkz. [Özel Bağlantılar](security-overview.md#private-links-tab).
+   - Azure Özel Bağlantı aracılığıyla bir depolama hesabından veri almak istiyorsanız **Özel Bağlantıyı Etkinleştir**'i seçin. Daha fazla bilgi için bkz. [Özel Bağlantılar](security-overview.md#set-up-an-azure-private-link).
 
 1. **İleri**'yi seçin.
 1. Aşağıdakilerden birini değiştirin:

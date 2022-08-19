@@ -1,7 +1,7 @@
 ---
-title: Sistem yapılandırması
+title: Sistem yapılandırmasını görüntüleme
 description: Dynamics 365 Customer Insights içindeki sistem ayarları hakkında bilgi edinin.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,60 +10,98 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050695"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246271"
 ---
-# <a name="system-configuration"></a>Sistem yapılandırması
+# <a name="view-system-configuration"></a>Sistem yapılandırmasını görüntüleme
 
-Sistem yapılandırmalarına erişmek üzere, sistem görevleri ve süreçleri listesini görüntülemek için **Yönetici** > **Sistem**'e gidin.
+Sistem bilgilerini, sistem durumunu ve API kullanımını görüntüleyin.
 
-**Sistem** sayfası, aşağıdaki sekmeleri içerir:
-- [Status](#status-tab)
-- [Zamanlama](#schedule-tab)
-- [API kullanımı](#api-usage-tab)
-- [Hakkında](#about-tab)
-- [Genel](#general-tab)
+## <a name="view-api-usage"></a>API kullanımını görüntüleme
 
-:::image type="content" source="media/system-tabs.png" alt-text="Sistem sayfasındaki ayarlar sekmesi.":::
+Gerçek zamanlı API kullanımıyla ilgili ayrıntıları görüntüleyin ve belirli bir zaman diliminde hangi olayların gerçekleştiğini görün.
 
-## <a name="status-tab"></a>Durum sekmesi
+1. **Yönetici** > **Sistem**'e gidin ve **API kullanımı** sekmesini seçin.
 
-**Durum sekmesi** görevlerin ilerlemesini, veri alımınızı, veri dışarı aktarmalarını ve diğer önemli ürün işlemlerini izlemenize olanak tanır. Etkin görevlerinizin ve süreçlerinizin eksiksiz olduğundan emin olmak için bu sekmedeki bilgileri gözden geçirin.
+1. Görüntülemek için **zaman dilimi seçin**.
 
-Bu sekmede, çeşitli işlemler için durum ve işleme bilgilerini içeren tablolar bulunur. Her tablo, görevin **Adını** ve ilgili varlığını, en son çalıştırma **Durumunu** ve **Son güncelleştirme** zamanını izler. Görev veya işlem adını seçerek, son birkaç çalıştırmanın ayrıntılarını görüntüleyebilirsiniz. 
+   **API kullanımı** sayfası üç bölüm içerir:
 
-**İlerleme ayrıntıları** bölmesini açmak için **Durum** sütunundaki görev veya işlemin yanında bulunan durumu seçin.
+   - **API çağrıları**: seçilen zaman diliminde API'ye yapılan toplu çağrı sayısını görselleştiren bir grafik.
+   - **Veri aktarımı**: seçilen zaman diliminde API aracılığıyla aktarılan veri miktarını gösteren bir grafik.
+   - **İşlemler**: kullanılabilir her API işlemi için satırları ve işlemlerin kullanımıyla ilgili ayrıntıları içeren bir tablo. [API başvurusuna](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) gitmek için bir işlem adı seçin.
+
+   [Gerçek zamanlı veri alımı](real-time-data-ingestion.md) kullanan işlemler, gerçek zamanlı API kullanımını görmek için kullanabileceğiniz bir dürbün simgesi içerir.
+
+   1. İşlem için kullanım ayrıntılarını içeren **Gerçek zamanlı API kullanımı** bölmesini açmak üzere dürbünü seçin.
+   1. Görüntülemek için **zaman dilimi seçin**.
+   1. Gerçek zamanlı etkileşimlerinizi en iyi şekilde nasıl sunacağınızı seçmek için **Gruplama ölçütü** kutusunu kullanın. Verileri API **Yöntemi**, **Varlık Adı** (alınan varlık), **Oluşturan** (etkinliğin kaynağı), **Sonuç** (başarı veya başarısızlık) ya da **Hata kodları**'na göre gruplayın. Veriler, geçmiş grafiği ve tablo olarak kullanılabilir.
+
+## <a name="view-system-information"></a>Sistem bilgilerini görüntüleme
+
+Ortam görünen adı, kimlik, bölge, tür ve oturum kimliğini görüntüleyin.
+
+1. **Yönetici** > **Sistem**'e gidin ve **Hakkında** sekmesini seçin.
+
+1. Dili ve ülkeyi/bölgeyi görüntülemek için **Genel** sekmesini seçin.
+
+### <a name="update-preferred-language-or-countryregion"></a>Tercih edilen dili veya ülkeyi/bölgeyi güncelleştirme
+
+Customer Insights [birçok dili destekler](/dynamics365/get-started/availability). Uygulamada menü, etiket metni ve sistem iletileri gibi öğeleri tercih ettiğiniz dilde görüntülemek için dil tercihiniz kullanılır.
+
+İçeri aktarılan veriler ve el ile girdiğiniz bilgiler çevrilmez.
+
+1. **Yönetici** > **Sistem**'e gidin ve **Genel** sekmesini seçin.
+
+1. Tercih edilen dili değiştirmek için açılan menüden bir **Dil** seçin.
+
+1. Tarih, saat ve sayılar için tercih ettiğiniz biçimlendirmeyi değiştirmek üzere **Ülke/Bölge biçimi** açılan menüsünü kullanın. Biçimlendirme önizlemesi görüntülenir. Sistem, yeni bir dil seçtiğinizde otomatik olarak bir seçim önerir.
+
+1. **Kaydet**'i seçin.
+
+## <a name="view-system-status"></a>Sistem durumunu görüntüle
+
+Görevlerin ilerlemesini, veri alımını, veri dışarı aktarmalarını ve diğer önemli ürün işlemlerini izleyin. Etkin görevlerinizin ve süreçlerinizin eksiksiz olduğundan emin olmak için bilgileri gözden geçirin.
+
+1. **Yönetici** > **Sistem**'e gidin ve **Durum** sekmesini seçin.
+
+   Çeşitli işlemler için durum ve işleme bilgileri görüntülenir. Görevin **Adını**, en son çalıştırma **Durumunu** ve **Son güncelleştirme** zamanını görüntüleyin.
+
+1. Son birkaç çalıştırmanın ayrıntılarını görüntülemek için görevi veya işlem adını seçin.
+
+1. Görevin ilerleme ayrıntılarını görüntülemek için durumu seçin. **İlerleme ayrıntıları** bölmesi görüntülenir.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Sistem ilerleme ayrıntıları bölmesi":::
+
+1. Tüm görevlerin ilerleme ayrıntılarını görüntülemek için **Tüm iş akışı**'nı seçin.
 
 ### <a name="status-definitions"></a>Durum tanımları
 
 Sistem, görevler ve işlemler için aşağıdaki durumları kullanır:
 
-|Status  |Tanım  |
+|Status  |Açıklama  |
 |---------|---------|
-|İptal edildi |İşlem bitmeden önce kullanıcı tarafından iptal edildi.   |
-|Yapılamadı   |Veri alımı hatalarla karşılaştı.         |
-|Hata  |İşleme başarısız oldu.  |
-|Başlatılmadı   |Veri kaynağında henüz alınmış veri yok veya veri kaynağı hala taslak modunda.         |
+|İptal edildi |Görev veya işlem bitmeden önce kullanıcı tarafından iptal edildi.   |
+|Yapılamadı   |Görev veya işlem hatalarla karşılaştı.         |
+|Hata  |Görev veya işlem başarısız oldu.  |
+|Başlatılmadı   |Veri kaynağında henüz alınmış veri yok veya görev hala taslak modunda.         |
 |İşleme  |Görev veya işlem devam ediyor.  |
-|Yenileniyor    |Veri alımı devam ediyor. **Eylem** sütununda **Yenilemeyi durdur**'u seçerek bu işlemi iptal edebilirsiniz. Veri kaynağının yenilenmesinin durdurulması veri kaynağını son yenileme durumuna döndürür.       |
+|Yenileniyor    |Görev veya işlem devam ediyor. Bu işlemi iptal etmek için **Yenileniyor** ve **İşi iptal et**'i seçin. Görev veya işlemin yenilenmesi durdurulduğunda görev veya işlem son yenileme durumuna döndürülür.       |
 |Atlandı  |Görev veya işlem atlandı. Bu görevin bağımlı olduğu aşağı yönlü işlemlerden biri veya daha fazlası başarısız oldu veya atlandı.|
 |Başarılı  |Görev veya işlem başarıyla tamamlandı. Veri kaynakları için, **Yenilendi** sütunda bir saat belirtildiğinde verilerin başarıyla alındığı anlamına gelir.|
 |Kuyruğa alındı | İşlem sıraya alınır ve tüm yukarı akış görevleri ve işlemleri tamamlandıktan sonra başlar. Daha fazla bilgi için bkz. [İşlemleri yenileme](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>İşlemleri yenileme
 
-Görev ve işlem yenilemesi [yapılandırılan zamanlamaya](#schedule-tab) göre çalıştırılır. 
+Görev ve işlem yenilemesi [yapılandırılan zamanlamaya](schedule-refresh.md) göre çalıştırılır.
 
 |İşlem  |Açıklama  |
 |---------|---------|
@@ -86,58 +124,6 @@ Görev ve işlem yenilemesi [yapılandırılan zamanlamaya](#schedule-tab) göre
 |Kullanıcı  |El ile çalışır (tek seferlik yenileme). Varlıklara bağlıdır.  |
 
 Bir işlemin durumunu, içinde olduğu tüm işin ilerleme ayrıntılarını görmek için seçin. Yukarıdaki yenileme işlemleri, **Atlanan** veya **Kuyruğa alınan** bir görev veya işlem için ne yapabileceğinizi anlamanıza yardımcı olur.
-
-## <a name="schedule-tab"></a>Zamanlama sekmesi
-
-Tüm [alınan veri kaynaklarınız](data-sources.md) ile ilgili otomatik yenilemeleri zamanlamak için **Zamanla** sekmesini kullanın. Otomatik yenilemeler, veri kaynaklarınızdaki güncelleştirmelerin birleşik müşteri profillerinize yansımasına yardımcı olur.
-
-> [!NOTE]
-> Sizin tarafınızdan yönetilen veri kaynakları, kendi zamanlamalarında yenilenir. Sizin tarafından yönetilen veri kaynaklarının yenilenmesini zamanlamak için **Veri kaynakları** sayfasından bu belirli veri kaynağında yenileme ayarlarını yapılandırın.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Veri akışı yenileme ayarları.":::
-
-1. **Yönetici** > **Sistem**'e gidin ve ardından **Zamanlama** sekmesini seçin.
-
-2. Zamanlanmış yenileme için varsayılan durum **Kapalı**'dır. Zamanlanmış yenilemeleri etkinleştirmek için ekranın üst kısmındaki geçiş öğesini **Açık** olarak değiştirin.
-
-3. **Haftalık** (varsayılan) ve **Günlük** yenilemeler arasından seçim yapın. Haftalık yenilemeleri zamanlamak istiyorsanız yenilemeyi çalıştırmak istediğiniz bir veya daha fazla günü seçin.
-
-4. **Saat diliminizi** ayarlayın ve ardından yenileme zamanınızı ayarlamak için **Saat** açılan menüsünü kullanın. Tamamladığınızda **Ayarla**'yı seçin. Tek bir günde birden fazla yenileme zamanlamak istiyorsanız **Başka bir saat ekle**'yi seçin.
-
-5. Yaptığınız değişiklikleri uygulamak için **Kaydet**'i seçin.
-
-## <a name="about-tab"></a>Hakkında sekmesi
-
-**Hakkında** sekmesinde kuruluşunuzun **Görünen adı**, etkin **Ortam Kimliği**, **Bölge** ve **Oturum Kimliğiniz** bulunur. Birden çok çalışma ortamınız varsa her birine kolayca tanımlanabilir bir görünen ad vermeniz gerekir.
-
-## <a name="general-tab"></a>Genel sekmesi
-
-**Genel** sekmesinde dili ve ülke/bölge biçimini değiştirebilirsiniz.
-
-Customer Insights [birçok dili destekler](/dynamics365/get-started/availability). Uygulamada menü, etiket metni ve sistem iletileri gibi öğeleri tercih ettiğiniz dilde görüntülemek için dil tercihiniz kullanılır.
-
-İçeri aktarılan veriler ve el ile girdiğiniz bilgiler çevrilmez.
-
-### <a name="update-the-settings"></a>Ayarları güncelleştirme
-
-Tercih edilen dili değiştirmek için açılan menüden bir **Dil** seçin.
-
-Tarih, saat ve sayılar için tercih ettiğiniz biçimlendirmeyi değiştirmek üzere **Ülke/Bölge biçimi** açılan menüsünü kullanın. Bu alanın altında bir biçimlendirme önizlemesi görüntülenir. Sistem, yeni bir dil seçtiğinizde otomatik olarak bir seçim önerir.
-
-Seçimlerinizi onaylamak için **Kaydet**'i seçin.
-
-## <a name="api-usage-tab"></a>API kullanımı sekmesi
-
-Gerçek zamanlı API kullanımıyla ilgili ayrıntıları bulun ve belirli bir zaman diliminde hangi olayların gerçekleştiğini görün. **Bir zaman dilimi seç** açılır menüsünde zaman dilimi seçersiniz. 
-
-**API kullanımı** üç bölüm içerir: 
-- **API çağrıları**: seçilen zaman diliminde API'ye yapılan toplu çağrı sayısını görselleştiren bir grafik.
-
-- **Veri aktarımı**: seçilen zaman diliminde API aracılığıyla aktarılan veri miktarını gösteren bir grafik.
-
--  **İşlemler**: kullanılabilir her API işlemi için satırları ve işlemlerin kullanımıyla ilgili ayrıntıları içeren bir tablo. [API başvurusuna](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) gitmek için bir işlem adı seçebilirsiniz.
-
-   [Gerçek zamanlı veri alımı](real-time-data-ingestion.md) kullanan işlemler, gerçek zamanlı API kullanımını görmek için kullanabileceğiniz dürbün simgesi bulunan bir düğme içerir. Geçerli ortamda gerçek zamanlı API kullanımına yönelik kullanım ayrıntılarını içeren bir yan bölmeyi açmak için düğmeyi seçin.   
-   Gerçek zamanlı etkileşimlerinizi en iyi şekilde nasıl sunacağınızı seçmek için **Gerçek zamanlı API kullanımı** bölmesindeki **Gruplama ölçütü** kutusunu kullanın. Verileri API yöntemi, uygun bulunan varlık adı (alınan varlık), oluşturan (etkinliğin kaynağı), sonuç (başarı veya başarısızlık) ya da hata kodlarına göre gruplandırabilirsiniz. Veriler, geçmiş grafiği ve tablo olarak kullanılabilir.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

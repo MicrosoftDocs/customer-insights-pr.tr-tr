@@ -1,7 +1,7 @@
 ---
 title: Bağlantılara (önizleme) genel bakış
 description: Customer Insights üzerinden diğer servislere bağlantılar.
-ms.date: 04/09/2021
+ms.date: 08/04/2022
 ms.reviewer: nikeller
 ms.subservice: audience-insights
 ms.topic: overview
@@ -11,91 +11,89 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8580dc7d90c75f66f73efc15f8e38f5e10fbb8a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195198"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245535"
 ---
 # <a name="connections-preview-overview"></a>Bağlantılara (önizleme) genel bakış
 
-Bağlantılar, Customer Insights üzerinden ve aracılığıyla veri paylaşımını etkinleştiren anahtardır. Her bağlantı, belirli bir hizmetle veri paylaşımı oluşturur. Bağlantılar, [üçüncü taraf zenginleştirme](enrichment-hub.md) ve [verme işlemlerini yapılandırma](export-destinations.md) temelidir. Aynı bağlantı bir çok defa kullanılabilir. Örneğin, Dynamics 365 Marketing'e yönelik bir bağlantı birden çok verme için çalışır ve birçok zenginleştirme için bir puan alanı bağlantısı kullanılabilir.
+Bağlantılar, Customer Insights üzerinden ve aracılığıyla veri paylaşımını etkinleştiren anahtardır. Her bağlantı, belirli bir hizmetle veri paylaşımı oluşturur. [Üçüncü taraf zenginleştirmelerini yapılandırmak](enrichment-hub.md) ve [dışarı aktarmaları yapılandırmak](export-destinations.md) için bağlantıları kullanın. Aynı bağlantı bir çok defa kullanılabilir. Örneğin, Dynamics 365 Marketing'e yönelik bir bağlantı birden çok verme için çalışır ve birçok zenginleştirme için bir puan alanı bağlantısı kullanılabilir.
 
-Bağlantılar oluşturmak ve görüntülemek için **Yönetim** > **bağlantılar**'a gidin.
+## <a name="export-connections"></a>Bağlantıları dışarı aktarma
 
-**Bağlantılar** sekmesi, tüm etkin bağlantıları size gösterir. Liste her bağlantı için bir satır gösterir.
+Yalnızca yöneticiler yeni bağlantılar yapılandırabilir ancak varolan bağlantıları kullanmak için [katkıda bulunanların erişimine izin verebilirler](#allow-contributors-to-use-a-connection-for-exports). Yöneticiler verilerin nereye gidebileceğini denetler; katkı sağlayanlar, yükü ve sıklığı tanımlar.
 
-Hızlı bir genel bakış, açıklama alın ve **bul** sekmesindeki her genişletilebilirlik seçeneğiyle neler yapabileceğinizi öğrenin.
+## <a name="enrichment-connections"></a>Zenginleştirme bağlantıları
 
-## <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
+Yalnızca yöneticiler yeni bağlantılar yapılandırabilir ancak oluşturulan bağlantılar her zaman yöneticiler ve katkıda bulunanlar tarafından kullanılabilir. Yöneticiler kimlik bilgilerini yönetir ve veri aktarımına izin verir. Bağlantılar, Yöneticiler ve katkıda bulunanlar tarafından zenginleştirme yapılandırmak için kullanılabilir.
+
+## <a name="add-a-new-connection"></a>Yeni bağlantı ekle
+
+### <a name="prerequisites"></a>Önkoşullar
+
+- [Yönetici izinleri](permissions.md)
+- Varsa diğer Microsoft hizmetleri aynı kuruluştadır
+
+1. **Yönetici** > **Bağlantılar** gidin.
+
+1. **Bağlantı ekle** seçeneğini belirleyin ve oluşturmak istediğiniz bağlantı türünü seçin. Alternatif olarak, **Keşfet** sekmesine gidin ve bağlantı kutucuğunda **Ayarla**'yı seçin.
+
+1. **Görünen ad**'da bağlantı tarafından tanınabilir bir ad verin. Ad ve bağlantının türü bu bağlantıyı açıklar. Bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
+
+1. Gerekli ayrıntıları girin. Tam alanlar bağlandığınız hizmete bağlıdır. Belirli bir bağlantı türünün ayrıntıları için hedef hizmetle ilgili makaleye bakın.
+
+1. Gizlilikleri depolamak için kendi [Key Vault](use-azure-key-vault.md)'unuzu kullanırsanız, **Key Vault kullan** öğesini etkinleştirin ve listeden parolayı seçin.
+
+1. Veri gizliliği ve uyumluluğunu gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
+
+1. Bağlantıyı oluşturmak için **Kaydet**'i seçin.
+
+### <a name="data-privacy-and-compliance"></a>Veri gizliliği ve uyumluluk
 
 Üçüncü taraflara veya Microsoft ürünlerine veri aktarmak için Dynamics 365 Customer Insights'ı etkinleştirdiğinizde, kişisel veriler gibi potansiyel olarak hassas bilgiler de dahil olmak üzere Dynamics 365 Customer Insights uyumluluk sınırının dışına veri aktarımına izin verirsiniz. Microsoft, talimatınız üzerine bu tür verileri aktarır ancak üçüncü tarafın sahip olabileceğiniz tüm gizlilik veya güvenlik yükümlülüklerini karşılamasını sağlamak sizin sorumluluğunuzdadır. Daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Dynamics 365 Customer Insights yöneticiniz, işlevin kullanımını sona erdirmek için istediği zaman bağlantıyı kaldırabilir.
 
-## <a name="exports"></a>Dışarı aktarmalar
+## <a name="allow-contributors-to-use-a-connection-for-exports"></a>Katkıda bulunanların dışa aktarma için bağlantı kullanmalarına izin ver
 
-Yalnızca Yöneticiler yeni bağlantılar yapılandırabilir, ancak varolan bağlantıları kullanmak için katkıda bulunanların erişimine izin verebilirler. Yöneticiler verilerin nereye gidebileceğini denetler; katkı sağlayanlar, yükü ve sıklığı tanımlar. Daha fazla bilgi için bkz. [Katkı sağlayanlar, dışa aktarma için bir bağlantı kullanmalarına izin verin](#allow-contributors-to-use-a-connection-for-exports).
-
-## <a name="enrichments"></a>Zenginleştirmeler
-
-Yalnızca Yöneticiler yeni bağlantılar yapılandırabilir, ancak oluşturulan bağlantılar her zaman Yöneticiler ve katkıda bulunanlar tarafından kullanılabilir. Yöneticiler kimlik bilgilerini yönetir ve veri aktarımına izin verir. Bağlantılar, Yöneticiler ve katkıda bulunanlar tarafından zenginleştirme yapılandırmak için kullanılabilir.
-
-## <a name="add-a-new-connection"></a>Yeni bağlantı ekle
-
-Bağlantı eklemek için, [Yönetici izinlere](permissions.md) sahip olmanız gerekir. Diğer Microsoft hizmetlerine bağlanırsanız, her iki hizmetin da aynı kuruluşta olduğu varsayılmaktadır.
-
-1. **Yönetici** > **Bağlantılar (Önizleme)** gidin.
-
-1. Yeni bir bağlantı oluşturmak için **Bağlantı ekle**'yi seçin. Açılan menüden, oluşturmak istediğiniz bağlantı türünü seçin.
-
-1. **Bağlantıyı ayarla** bölmesinde gerekli ayrıntıları girin.
-   1. **Görünen ad** ve bağlantının türü bir bağlantıyı açıklar. Bu bağlantının amacını ve hedefini açıklayan bir ad seçmeniz önerilir.
-   1. Tam alanlar bağlandığınız hizmete bağlıdır. Belirli bir bağlantının ayrıntıları hakkında bilgi edinmek için hedef hizmetle ilgili makaleyi kullanabilirsiniz.
-   1. Gizlilikleri depolamak için kendi [Key Vault](use-azure-key-vault.md)'unuzu kullanırsanız, **Key Vault kullan** öğesini etkinleştirin ve listeden parolayı seçin.
-
-1. Bağlantı oluşturmak için **Kaydet**'i seçin.
-
-**Keşfet** sekmesinde bir kutucukta **Ayarla**'yı da seçebilirsiniz.
-
-### <a name="allow-contributors-to-use-a-connection-for-exports"></a>Katkıda bulunanların dışa aktarma için bağlantı kullanmalarına izin ver
-
-Verme bağlantısını ayarlarken veya düzenlerken [dışarı aktarımları](export-destinations.md) tanımlamak için hangi kullanıcıların bu belirli bağlantıyı kullanmasına izin verileceğini seçersiniz. Varsayılan olarak, bir bağlantı Yönetici rolüne sahip kullanıcılar tarafından kullanılabilir. **Bu bağlantıyı kullanabilecek kişileri seçin** altında bu ayarı değiştirebilirsiniz ve bu bağlantıyı kullanmak için katılımcı rolüne sahip kullanıcılara izin verebilirsiniz.
+Dışarı aktarma bağlantısı ayarlarken veya düzenlerken [dışarı aktarmaları](export-destinations.md) tanımlamak için hangi kullanıcıların bu belirli bağlantıyı kullanmasına izin verileceğini seçin. Varsayılan olarak bağlantı, yönetici rolüne sahip kullanıcılar tarafından kullanılabilir. Katkıda bulunan rolüne sahip kullanıcıların bu bağlantıyı kullanmasına izin vermek için **Bu bağlantıyı kimin kullanabileceğini seçin** ayarını değiştirin.
 
 - Katkıda bulunanlar bağlantıyı görüntüleyemez veya düzenleyemez. Dışa aktarma oluştururken yalnızca görünen ad ve türünü görürler.
 - Bir bağlantıyı paylaşarak, katkı sağlayanlar bir bağlantı kullanmalarına izin verir. Katkıda bulunanlar, verme işlemlerini ayarlarken paylaşılan bağlantıları görürler. Bu, belirli bir bağlantıyı kullanan her bir verme işlemini yönetebilir.
 - Bu ayarı, katkıda bulunanlar tarafından önceden tanımlanmış olan dışarı aktarımları korurken değiştirebilirsiniz.
 
-## <a name="edit-a-connection"></a>Bağlantı düzenleme
+## <a name="manage-existing-connections"></a>Mevcut bağlantıları yönetme
 
-1. **Yönetici** > **Bağlantılar (Önizleme)** gidin.
+1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Bağlantılar** sekmesine gidin.
+1. Zenginleştirme veya dışarı aktarma bağlantılarının listesini, bağlantı türünü, oluşturulma zamanını ve erişimi olan kişileri görüntülemek için **Zenginleştirme** ya da **Dışarı Aktarmalar** sekmesini seçin. Bağlantılar listesini herhangi bir sütuna göre sıralayabilirsiniz.
 
-1. Düzenlemek istediğiniz bağlantı için dikey üç noktayı (&vellip;) seçin.
+1. Kullanılabilir eylemleri görüntülemek için bağlantıyı seçin.
 
-1. **Düzenle**'yi seçin.
+   - Bağlantıyı **düzenleyin**.
+   - Bağlantıyı [**kaldırın**](#remove-a-connection).
 
-1. Güncellemek istediğiniz değerleri değiştirin ve **Kaydet**'i seçin.
+### <a name="remove-a-connection"></a>Bağlantı kaldırma
 
-## <a name="remove-a-connection"></a>Bağlantı kaldırma
+Kaldırmakta olduğunuz bağlantı zenginleştirmeler veya dışarı aktarmalar tarafından kullanılıyorsa ilk olarak bunları ayırın ya da kaldırın. Kaldır iletişim kutusu sizi ilgili zenginleştirmelere veya dışarı aktarmalara yönlendirir.
 
-Kaldırmakta olduğunuz bağlantı zenginleştirme veya dışarı aktarımlar tarafından kullanılıyorsa, önce Bu parolaları ayırmanız veya kaldırmanız gerekir. Kaldır iletişim kutusu sizi ilgili zenginleştirme veya dışa aktarımlara yönlendirecektir.
+> [!TIP]
+> Devre dışı bırakılan zenginleştirmeler ve dışarı aktarmalar, etkin olmayan durumuna gelir. Bunları, [zenginleştirme](enrichment-hub.md) veya [dışarı aktarmalar](export-destinations.md) sayfasında bunlara başka bir bağlantı ekleyerek yeniden etkinleştirebilirsiniz.
 
-Ayrılmışlar zenginleştirmeler ve dışa aktarmalar devre dışı olur. Bunları, [zenginleştirme](enrichment-hub.md) veya [dışarı aktarmalar](export-destinations.md) sayfasında bunlara başka bir bağlantı ekleyerek yeniden etkinleştirebilirsiniz.
+1. **Yönetici** > **Bağlantılar** gidin.
 
-1. **Yönetici** > **Bağlantılar (Önizleme)** gidin.
+1. **Zenginleştirme** veya **Dışarı Aktarmalar** sekmesini seçin.
 
-1. **Bağlantılar** sekmesine gidin.
-
-1. Kaldırmak istediğiniz bağlantı için dikey üç noktayı (&vellip;) seçin.
+1. Kaldırmak istediğiniz bağlantıyı seçin.
 
 1. Açılır menüsünde **Kaldır** seçeneğini belirleyin. Bir onay iletişim kutusu görüntülenir.
 
    1. Bu bağlantıyı kullanarak zenginleştirme veya verme işlemleri varsa bağlantının hangi öğeleri göreceğini görmek için düğmesini seçin.
-      - **Dışarı aktarımlar:** Bağlantıyı kaldırabilmeniz için, verme işlemlerini kaldırmayı veya sökmenizi seçebilirsiniz. Bir verme işlemini kesmek için, Yöneticiler **Bağlantıyı Kes** eylemini kullanabilir. Bu eylem, seçilen tek ve birden çok verme için kullanılabilir. Bağlantıyı keserek verme yapılandırmasını koruyabilir ancak başka bir bağlantı eklenene kadar çalıştırılamaz.
-      - **Zenginleştirmeler:** Bağlantıyı kaldırabilmeniz için, zenginleştirme işlemlerini kaldırmayı veya sökmenizi seçebilirsiniz.
+      - **Dışarı Aktarmalar:** Dışarı aktarma için **Kaldır** veya **Bağlantıyı ayır** seçeneğini belirleyin. Bağlantıyı ayırdığınızda, dışarı aktarma yapılandırması korunur ancak başka bir bağlantı eklenene kadar çalıştırılmaz.
+      - **Zenginleştirmeler:** Zenginleştirmeler için **Sil** veya **Devre Dışı Bırak** seçeneğini belirleyin.
    1. Bağlantının daha fazla bağımlılığı yoksa, **yönetici** > **bağlantıları**'na dönün ve bağlantıyı kaldırmayı yeniden deneyin.
 
 1. Silme işleminizi onaylamak için **Kaldır**'ı seçin.

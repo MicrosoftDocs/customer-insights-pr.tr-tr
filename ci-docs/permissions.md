@@ -1,7 +1,7 @@
 ---
-title: Kullanıcı izinlerini yönetme
+title: Kullanıcı izinleri atama
 description: İzinler ve kullanıcı rolleri hakkında bilgi edinin.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054916"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245443"
 ---
-# <a name="manage-user-permissions"></a>Kullanıcı izinlerini yönetme
+# <a name="assign-user-permissions"></a>Kullanıcı izinleri atama
 
-**İzinler** sayfası, Customer Insights kullanma için rolleri ve izinleri ayarladığınız yer burasıdır.
-
-Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. İzinler sayfasına erişmek için **Yönetici** > **Güvenlik** > **Kullanıcılar**'a gidin.
-
-Üç tür rol vardır:
+Customer Insights'a erişim, kuruluşunuzdaki bir yönetici tarafından uygulamaya eklenen kullanıcılarla kısıtlıdır. Yönetici; kullanıcıları ekleyebilir, düzenleyebilir veya kaldırabilir. Kullanıcı tek bir kullanıcı, grup veya uygulama olabilir. Kullanıcının sahip olabileceği üç rol türü vardır:
 
 ## <a name="viewer"></a>İzleyici
 
@@ -41,18 +37,18 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. İzinler say
 
 - Tüm izinler Görüntüleyici tarafından kullanılabilir.
 - Verileri, **Veri kaynakları** sayfasını kullanarak yükleyin ve dönüştürün.
-- Unified customer profile varlığına yol açan eksiksiz **Veri Birleştirme**'yi tamamlayın.
+- Birleşik müşteri profili varlığına neden olan **Veri Birleştirme**'yi tamamlayın.
 - **İlişkiler** ve **Aktiviteler**'i tanımlayın.
 - Segmentleri, **Segmentler** sayfasını kullanarak oluşturun.
 - **Ölçümler** sayfasını kullanarak ölçümler oluşturun.
 - **Zenginleştirme** sayfasından yapılandırmayı yönetin ve müşteri profillerini zenginleştirin (yalnızca birinci taraf zenginleştirmeleri için).
-- Katkıda bulunanlar ile paylaşılan bağlantılara göre, verme işlemlerini yönetin ve oluşturun. [Yöneticilerin, verme amacıyla bir bağlantı kullanmalarına nasıl izin verdiği hakkında daha fazla bilgi edinin](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- [Katkıda bulunanlar ile paylaşılan bağlantılara](connections.md#allow-contributors-to-use-a-connection-for-exports) göre dışarı aktarmaları yönetin ve oluşturun.
 
 ## <a name="admin"></a>Yönetici
 
 - Tüm izinler Katılımcı tarafından kullanılabilir.
-- Sistem işlemleriniz için çalışma dili ve yenileme zamanlamaları da dahil olmak üzere **Sistem** sayfasındaki ayarları değiştirin.
-- İzinleri, **İzinler** sayfasını kullanarak görüntüleyin ve ekleyin.
+- Sistem işlemleriniz için çalışma dili ve yenileme zamanlamaları dahil ve tanılama günlükleri hariç olmak üzere **Sistem** sayfasındaki ayarları değiştirin.
+- Kullanıcılar, API anahtarları, gizli bağlantılar ve Key Vault dahil olmak üzere **Güvenlik** sayfasındaki ayarları değiştirin.
 - Müşteriler sayfası için arama ve filtreleme tanımlarını **Dizini ara ve filtrele** sayfasını (**Müşteriler** sayfasından erişilebilir) kullanarak ayarlayın.
 - Bağlantıları yönetin ve **bağlantılar** sayfasındaki diğer Kullanıcı rolleri için izin verin.
 - **Zenginleştirme** sayfasından yapılandırmayı yönetin ve müşteri profillerini zenginleştirin (tüm zenginleştirmeler için).
@@ -67,24 +63,27 @@ Sayfayı görmek için yönetici izinlerine sahip olmanız gerekir. İzinler say
 - Tüm izinler, yöneticinin kullanımına sunulur.
 - Ortamı [sıfırlayın ve silin](manage-environments.md#reset-an-existing-environment-preview).
 
-## <a name="assign-roles-and-permissions"></a>Rolleri ve izinleri atama
+## <a name="add-users"></a>Kullanıcı ekle
 
-1. **Yönetici** > **Güvenlik** > **Kullanıcılar**'a gidin.
+1. **Yönetici** > **Güvenlik**'e gidin ve **Kullanıcılar** sekmesini seçin.
 
 1. **İzin ekle/düzenle** bölmesini açmak için **Kullanıcı ekle**'yi seçin.
 
-1. İzinlerini ayarlamak istediğiniz Azure Active Directory kullanıcısını veya grubunu bulmak için **Arama** alanını kullanın. Bu kullanıcı veya gruba atamak için bir **Rol** seçin.
+1. Eklemek istediğiniz Azure Active Directory kullanıcısı veya grubunu bulmak için **Arama** alanını kullanın. Bu kullanıcı veya gruba atamak için bir **Rol** seçin.
 
-1. **Kaydet**'i seçin. Geçerli ortam, izinlerini değiştirdiğiniz grubun kullanıcı veya üyeleriyle otomatik olarak paylaşılır. Kullanıcılar Customer Insights uygulamasına erişebilir ve belirtilen rollerine göre çalışabilir.
+1. **Kaydet**'i seçin. Geçerli ortam, kullanıcı veya grup üyeleriyle otomatik olarak paylaşılır. Kullanıcılar Customer Insights uygulamasına erişebilir ve belirtilen rollerine göre çalışabilir.
 
 ## <a name="view-current-permissions"></a>Geçerli izinleri görüntüleme
 
-Hangi rol atamalarının şu anda etkin olduğunu görmek için **Yönetici** > **Güvenlik** > **Kullanıcılar**'a gidin.
+Etkin kullanıcıların listesini ve rol atamalarını görüntülemek için **Yönetici** > **Güvenlik**'e gidin ve **Kullanıcılar** sekmesini seçin. Kullanıcı listesini herhangi bir sütuna göre sıralayabilir veya belirli bir kullanıcıyı bulmak için arama kutusunu kullanabilirsiniz.
 
-- **Tür** sütunu tek bir kullanıcıyı, grubu veya uygulamayı belirtir. Sistem, tek tek kullanıcıları ve grupları destekler.
-- Roller **Rol** sütunu altında belirtilir.
-- Herhangi bir sütun başlığı seçerek sonuçları bu sütunun değerine göre sıralayın.
-- Belirli kullanıcıları bulmak için sayfanın üst kısmındaki **Arama** alanını kullanın.
+## <a name="manage-current-users"></a>Geçerli kullanıcıları yönetme
 
+**Yönetici** > **Güvenlik**'e gidin ve **Kullanıcılar** sekmesini seçin. Kullanıcı listesini herhangi bir sütuna göre sıralayabilir veya yönetmek istediğiniz kullanıcıyı bulmak için arama kutusunu kullanabilirsiniz.
+
+Kullanılabilir eylemleri görüntülemek için kullanıcı seçin.
+
+- Customer Insights'ta kullanıcının rolünü düzenlemek için **Düzenle**'yi seçin. Değişikliği onaylamak için **Kaydet**’i seçin.
+- Kullanıcının Customer Insights'a erişimini kaldırmak için **Kaldır**'ı seçin. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081921"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245489"
 ---
 # <a name="manage-predictions"></a>Tahminleri yönetme
 
@@ -58,7 +58,7 @@ Raporda yer alan aşağıdaki sütunlar, modelin verilerini geliştirmek için y
 
 ## <a name="refresh-a-prediction"></a>Tahmini yenileme
 
-Tahminler, ayarlarda yapılandırılan aynı [veri yenileme zamanlamasına](system.md#schedule-tab) göre otomatik olarak yenilenir. Bunları el ile de yenileyebilirsiniz.
+Tahminler, ayarlarda yapılandırılan aynı [veri yenileme zamanlamasına](schedule-refresh.md) göre otomatik olarak yenilenir. Bunları el ile de yenileyebilirsiniz.
 
 1. **Yönetim Bilgileri** > **Tahminler**'e gidin ve **Tahminlerim** sekmesini seçin.
 

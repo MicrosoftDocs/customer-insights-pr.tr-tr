@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Yönetim
   items:
-    - name: Sistem yapılandırmasını ayarlama
-      href: system.md
-    - name: Güvenlik ayarlarını yapılandırma
-      href: security-overview.md
     - name: Kullanıcı izinleri atama
       href: permissions.md
     - name: Kendi Key Vault'unuzu getirin
       href: use-azure-key-vault.md
+    - name: Güvenlik ayarlarını yapılandırma
+      href: security-overview.md
     - name: Tanılama günlüklerini dışarı aktarma
       href: diagnostics.md
-    - name: Bağlantılara genel bakış
+    - name: Bağlantıları yönet
       href: connections.md
+    - name: Sistem yenilemesini zamanlama
+      href: schedule-refresh.md
+    - name: Sistem yapılandırmasını görüntüleme
+      href: system.md
 - name: API'ler
   items:
     - name: API'lerle çalışma

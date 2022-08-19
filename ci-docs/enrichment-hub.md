@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053904"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245903"
 ---
 # <a name="data-enrichment-preview-overview"></a>Veri zenginleştirmeye (önizleme) genel bakış
 
@@ -76,7 +76,7 @@ Kullanılabilir eylemleri görüntülemek için zenginleştirmeyi seçin.
 - Zenginleştirilen müşteri profillerinin sayısı dahil olmak üzere zenginleştirme ayrıntılarını **görüntüleyin**.
 - Zenginleştirme yapılandırmasını **düzenleyin**.
 - En son verilerle müşteri profillerini güncelleştirmek için [**Çalıştır**](#run-or-refresh-enrichments) seçeneğini kullanarak zenginleştirme işlemini gerçekleştirin. Zenginleştirmeleri listeden seçerek birden çok zenginleştirmeyi çalıştırın.
-- Bir zenginleştirmeyi **etkinleştirin** veya **devre dışı bırakın**. Etkin olmayan zenginleştirmeler, [zamanlanmış yenileme](system.md#schedule-tab) sırasında yenilenmez.
+- Bir zenginleştirmeyi **etkinleştirin** veya **devre dışı bırakın**. Etkin olmayan zenginleştirmeler, [zamanlanmış yenileme](schedule-refresh.md) sırasında yenilenmez.
 - Zenginleştirmeyi **silin**.
 
 Zenginleştirmelerden [segmentler](segments.md) veya [ölçümler](measures.md) de oluşturabilirsiniz.
@@ -85,7 +85,7 @@ Zenginleştirmelerden [segmentler](segments.md) veya [ölçümler](measures.md) 
 
 Çalıştırıldıktan sonra zenginleştirmeler, otomatik zamanlamaya göre veya isteğe bağlı olarak el ile yenilenebilir.
 
-1. Bir veya daha fazla zenginleştirmeyi el ile yenilemek için bunları seçin ve **Çalıştır**'ı seçin. [Otomatik yenileme zamanlamak için](system.md#schedule-tab) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin. İşlem süresi müşteri verilerinizin boyutuna bağlıdır.
+1. Bir veya daha fazla zenginleştirmeyi el ile yenilemek için bunları seçin ve **Çalıştır**'ı seçin. [Otomatik yenileme zamanlamak için](schedule-refresh.md) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin. İşlem süresi müşteri verilerinizin boyutuna bağlıdır.
 
 1. İsteğe bağlı olarak [zenginleştirme işleminin ilerlemesine bakın](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Yenilenme sırasında veya yenileme işlemi tamamlandıktan sonra BT durumu ve p
 1. **İlerleme ayrıntıları** bölmesinde, **Zenginleştirmelerim** bölümünü genişletin.
 1. İlerlemeyi görmek istediğiniz zenginleştirme altından **Ayrıntıları görüntüle**'yi seçin.
 1. **Görev ayrıntıları** bölmesinde, zenginleştirmenizi ve durumlarını güncelleştirmekte yer alan işlemleri görmek için **Ayrıntıları göster**'i seçin.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Zenginleştirme sonuçlarını görüntüleme
 

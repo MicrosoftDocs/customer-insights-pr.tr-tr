@@ -2,7 +2,7 @@
 title: Verileri birleştirmeden önce yinelenenleri kaldırın
 description: Birleşme işlemindeki ikinci adım, yinelenen öğeler bulunduğunda hangi kaydın saklanacağını seçmeyi tercih etmedir.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139453"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213651"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Verileri birleştirmeden önce yinelenenleri kaldırın
 
-Bu adım, isteğe bağlı olarak, bir varlık içindeki yinelenen kayıtları işlemek için kurallar ayarlamanıza olanak sağlar. *Yinelenenleri kaldırma*, yinelenen kayıtları tanımlar ve bunları tek bir kayıt halinde birleştirir. Kaynak kayıtları, farklı kimliklerle birleştirilmiş kayda bağlanır. Kurallar yapılandırılmazsa, sistem tanımlı kurallar uygulanır.
+Birleştirmede isteğe bağlı bu adım, varlık **içindeki** yinelenen kayıtları ortadan kaldırmak için kurallar ayarlamanıza olanak tanır. Yinelenenleri kaldırma, müşteri için birden çok kayıt tanımlar ve (temel birleştirme tercihlerine göre) tutulacak en iyi kaydı seçer veya (gelişmiş birleştirme tercihlerine göre) kayıtları tek bir kayıtta birleştirir. Kaynak kayıtları, farklı kimliklerle birleştirilmiş kayda bağlanır. Kurallar yapılandırılmazsa, sistem tanımlı kurallar uygulanır.
+
+## <a name="default-deduplication"></a>Varsayılan yinelenenleri kaldırma
+
+Yinelenenleri kaldırma kuralı eklenmediyse sistem tanımlı kurallar uygulanır.
+
+- Birincil anahtarın yinelemeleri kaldırılır.
+  Aynı birincil anahtara sahip kayıtlar için **En fazla doldurulan** (en az boş değere sahip) kayıt, kazanan kayıttır.
+- Çapraz varlık eşleştirme kuralları varlığa uygulanır.
+  Örneğin: Eşleştirme adımında, A varlığı *FullName* ve *DateofBirth*'te B varlığı ile eşleşirse *FullName* ve *DateofBirth*'e göre A varlığının yinelenenleri de kaldırılır. *FullName* ve *DateofBirth* A varlığında müşteri tanımlamak için geçerli anahtarlar olduğundan bu anahtarlar ayrıca A varlığında yinelenen müşterileri tanımlamak için de geçerlidir.
 
 ## <a name="include-enriched-entities-preview"></a>Zenginleştirilmiş varlıkları dahil etme (önizleme)
 

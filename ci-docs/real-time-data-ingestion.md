@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195682"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246132"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Gerçek zamanlı veri alımı (önizleme)
 
 Neredeyse gerçek zamanlı işlevler, müşterilerinizin ürünleriniz veya hizmetlerinizle kurduğu en son etkileşimleri saniyeler içinde görmenizi sağlar.
 
-[Zamanlanmış yenilemeler](system.md#schedule-tab), çok sayıda kayıt ve birkaç karmaşık işlem içerir. İlk olarak, veriler veri kaynağından çekilir. Ardından veriler birleştirilir ve ek bilgilerle zenginleştirilir. Bu işlemin her çalıştırması birkaç dakikadan birkaç saate kadar sürebilir.
+[Zamanlanmış yenilemeler](schedule-refresh.md), çok sayıda kayıt ve birkaç karmaşık işlem içerir. İlk olarak, veriler veri kaynağından çekilir. Ardından veriler birleştirilir ve ek bilgilerle zenginleştirilir. Bu işlemin her çalıştırması birkaç dakikadan birkaç saate kadar sürebilir.
 
 Gerçek zamanlı işlevsellik, sonraki zamanlanan yenileme, bu verileri veri kaynağından çekene kadar tüketim için hemen veri sağlar.
 
@@ -85,7 +85,7 @@ Parametreler ve yanıtlar dahil olmak üzere bu API'nin ayrıntılarına [Custom
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Telemetriyle gerçek zamanlı kullanımınızı anlama
 
-Gerçek zamanlı API'ye yönelik isteklerin hacmine genel bir bakış ve sistemin karşılaşabileceği sorunlar hakkında bilgi edinin. [Gerçek zamanlı telemetriye erişebilirsiniz](system.md#api-usage-tab). 
+Gerçek zamanlı API'ye yönelik isteklerin hacmine genel bir bakış ve sistemin karşılaşabileceği sorunlar hakkında bilgi edinin. [Gerçek zamanlı telemetriye erişebilirsiniz](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,68 +1,39 @@
 ---
-title: Customer Insights'ta güvenlik ayarları
+title: Güvenlik ayarlarını yapılandırma
 description: Dynamics 365 Customer Insights'ta güvenlik ayarları hakkında bilgi edinin.
-ms.date: 06/08/2022
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947439"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246086"
 ---
-# <a name="security-settings-in-customer-insights"></a>Customer Insights'ta güvenlik ayarları
+# <a name="configure-security-settings"></a>Güvenlik ayarlarını yapılandırma
 
-**Güvenlik** sayfası, Dynamics 365 Customer Insights'ın daha güvenli olmasına yardımcı olan kullanıcı izinlerini ve özellikleri yapılandırma seçeneklerini listeler. Bu sayfaya yalnızca yöneticiler erişebilir.
+API anahtarlarını yönetin, müşteri verilerine erişin ve Azure Özel Bağlantı ayarlayın.
 
-Ayarları yapılandırmak için **Yönetici** > **Güvenlik** bölümüne gidin.
+## <a name="manage-api-keys"></a>API anahtarlarını yönetme
 
-**Güvenlik** sayfası aşağıdaki sekmeleri içerir:
+[Customer Insights API'lerini](apis.md) ortamınızdaki verilerle kullanmak için anahtarları görüntüleyin ve yönetin.
 
-- [Kullanıcılar](#users-tab)
-- [API'ler](#apis-tab)
-- [Özel Bağlantılar](#private-links-tab)
-- [Anahtar Kasası](#key-vault-tab)
-- [Müşteri Kasası (önizleme) ile müşteri verilerine güvenli bir şekilde erişim](#securely-access-customer-data-with-customer-lockbox-preview)
+1. **Sistem** > **Güvenlik**'e gidin ve **API'ler** sekmesini seçin.
 
-## <a name="users-tab"></a>Kullanıcılar sekmesi
+1. Ortama API erişimi ayarlanmadıysa **Etkinleştir**'i seçin. Alternatif olarak, ortama API erişimini engellemek için **Devre Dışı Bırak**'ı seçip onaylayın.
 
-Customer Insights'a erişim, kuruluşunuzdaki bir yönetici tarafından uygulamaya eklenen kullanıcılarla kısıtlıdır. **Kullanıcılar** sekmesi, kullanıcı erişimini ve izinlerini yönetmenizi sağlar. Daha fazla bilgi için [Kullanıcı izinleri](permissions.md) bölümüne bakın.
+1. Birincil ve ikincil API anahtarlarını yönetin:
 
-## <a name="apis-tab"></a>API'ler sekmesi
+   1. Birincil veya ikincil API anahtarını göstermek için **Göster** simgesini seçin.
 
-[Customer Insights API'lerini](apis.md) ortamınızın verileriyle kullanmak için anahtarları görüntüleyin ve yönetin.
+   1. Birincil veya ikincil API anahtarını kopyalamak için **Kopyala** simgesini seçin.
 
-**Birincili yeniden üret**'i veya **İkincili yeniden üret**'i seçerek yeni birincil ve ikincil anahtarlar oluşturabilirsiniz. 
-
-Ortama API erişimini engellemek için **Devre dışı**'yı seçin. API'ler devre dışı bırakılmışsa, erişim izni vermek için **Etkinleştir**'i seçebilirsiniz.
-
-## <a name="private-links-tab"></a>Özel Bağlantılar sekmesi
-
-[Azure Özel Bağlantı](/azure/private-link/private-link-overview), Customer Insights'ın sanal ağınızdaki özel bir uç nokta üzerinden Azure Data Lake Storage hesabınıza bağlanmasını sağlar. Genel internete açık olmayan depolama hesabındaki veriler için Özel Bağlantı, bu kısıtlı ağa bağlantı sağlar.
-
-> [!IMPORTANT]
-> Özel Bağlantı bağlantısı kurmak için minimum rol gereksinimi:
->
-> - Customer Insights: Yönetici
-> - Azure yerleşik rolü: [Depolama Hesabı Katkıda Bulunanı](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
-> - Özel Azure rolü için izinler: [Microsoft.Storage/storageAccounts/read ve Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
-
-Customer Insights'ta Özel Bağlantı kurmak iki adımlı bir işlemdir. İlk olarak, Customer Insights'ta **Yönetici** > **Güvenlik** > **Özel Bağlantılar** altından Özel Bağlantı oluşturma işlemini başlatın. **Özel Bağlantı Ekle** bölmesi, kiracınızdan görme izinleriniz olan depolama hesaplarını listeler. Depolama hesabını seçin ve Özel Bağlantı oluşturmak için onay verin.
-
-Ardından, Data Lake Storage hesabı tarafında Özel Bağlantıyı onaylamanız gerekir. Yeni Özel Bağlantıyı onaylamak için ekranda gösterilen bağlantıyı açın.
-
-## <a name="key-vault-tab"></a>Key Vault sekmesi
-
-**Key Vault** sekmesi, kendi [Azure Key Vault'unuzu](/azure/key-vault/general/basic-concepts) ortama bağlamanıza ve yönetmenize olanak tanır.
-Bir kuruluşun uyumluluk sınırında gizliliklerin kullanılması ve kullanılabilmesi için adanmış Key Vault kullanılabilir. Customer Insights, üçüncü taraf sistemlere [bağlantılar ayarlamak](connections.md) için Azure Key Vault'taki gizli anahtarları kullanabilir.
-
-Daha fazla bilgi için bkz. [Kendi Azure Key Vault'unuzu getirme](use-azure-key-vault.md).
+   1. Yeni birincil veya ikincil API anahtarları oluşturmak için **Birincili yeniden oluştur** veya **İkincili yeniden oluştur**'u seçin.
 
 ## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Müşteri Kasası (önizleme) ile müşteri verilerine güvenli bir şekilde erişim
 
@@ -72,5 +43,33 @@ Müşteri Kasası hakkında daha fazla bilgi için Power Platform Müşteri Kasa
 
 > [!IMPORTANT]
 > Power Platform veya Power Platform yöneticilerinin genel yöneticileri, Customer Insights için verilen Müşteri Kasası isteklerini onaylayabilir.
+
+## <a name="set-up-an-azure-private-link"></a>Azure Özel Bağlantı ayarlama
+
+[Azure Özel Bağlantı](/azure/private-link/private-link-overview), Customer Insights'ın sanal ağınızdaki özel bir uç nokta üzerinden Azure Data Lake Storage hesabınıza bağlanmasını sağlar. Genel internete açık olmayan depolama hesabındaki veriler için Özel Bağlantı, bu kısıtlı ağa bağlantı sağlar.
+
+> [!IMPORTANT]
+> Özel Bağlantı bağlantısı kurmak için minimum rol gereksinimi:
+>
+> - Customer Insights: Yönetici
+> - Azure yerleşik rolü: [Depolama Hesabı Katkıda Bulunanı](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
+> - Özel Azure rolü için izinler: [Microsoft.Storage/storageAccounts/read ve Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
+
+1. Customer Insights'ta **Yönetici** > **Güvenlik**'e gidin ve **Özel Bağlantılar** sekmesini seçin.
+
+1. **Özel Bağlantı Ekle**'yi seçin.
+
+   **Özel Bağlantı Ekle** bölmesi, kiracınızdan görme izinleriniz olan depolama hesaplarını listeler.
+
+1. Abonelik, kaynak grubu ve depolama hesabını seçin.
+
+1. [Veri gizliliği ve uyumluluğunu](connections.md#data-privacy-and-compliance) gözden geçirin ve **Kabul ediyorum** seçeneğini belirleyin.
+
+1. **Kaydet**'i seçin.
+
+1. Data Lake Storage hesabınıza gidin ve ekranda sunulan bağlantıyı açın.
+
+1. Özel Bağlantı'yı onaylayın.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196418"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259868"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Verileri Azure Synapse Analytics'e aktarma (önizleme)
 
@@ -24,7 +24,7 @@ Azure Synapse, veri ambarları ve büyük veri sistemleri arasında içgörü ya
 > [!NOTE]
 > Tüm **rol atamalarını** açıklandığı gibi ayarladığından emin olun.
 
-- Customer Insights'ta Azure Active Directory (AD) kullanıcı hesabınızın bir [Yönetici rolü](permissions.md#assign-roles-and-permissions) olması gerekir.
+- Customer Insights'ta Azure Active Directory (AD) kullanıcı hesabınızın bir [Yönetici rolü](permissions.md#add-users) olması gerekir.
 
 Azure'da:
 
@@ -39,6 +39,8 @@ Azure'da:
 - *[Azure Synapse workspace yönetilen kimliğinin](/azure/synapse-analytics/security/synapse-workspace-managed-identity)*, verilerin bulunduğu ve Azure Synapse çalışma alanına bağlı olduğu Azure Data Lake Storage 2. Nesil hesabında **Depolama Blob Verileri Katkıda Bulunan** izinlerinin olması gerekir. [Blob ve sıra verilerine erişim için bir Azure rolü atamak üzere Azure portalını kullanma](/azure/storage/common/storage-auth-aad-rbac-portal) ve [Depolama Blob Verileri katkıda bulunan izinlerine](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) hakkında daha fazla bilgi edinin.
 
 - Azure Synapse workspace'te *Customer Insights için hizmet sorumlusuna* **Synapse Yöneticisi** [rolünün atanmış olması](/azure/synapse-analytics/security/how-to-set-up-access-control) gerekir.
+
+- Customer Insights ortamınız verileri [kendi Azure Data Lake Storage](own-data-lake-storage.md) bölümünüzde depolarsa Azure Synapse Analytics'e bağlantıyı ayarlayan kullanıcının en azından Data Lake Storage hesabında yerleşik **Okuyucu** rolünün olması gerekir. Daha fazla bilgi için bkz. [Azure portal kullanarak Azure rolleri atama](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Azure Synapse bağlantısını ayarlama
 

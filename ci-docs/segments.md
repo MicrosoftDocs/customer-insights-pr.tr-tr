@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170705"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246317"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
@@ -58,7 +58,7 @@ Kullanılabilir eylemleri görüntülemek için bir segment seçin.
 - Özelliklerini değiştirmek için segmenti **düzenleyin**.
 - Bir segmentin **yinelemesini oluşturun**. Özelliklerini hemen düzenlemeyi ya da yinelemeyi kaydetmeyi tercih edebilirsiniz.
 - En son verileri dahil etmek için segmenti [**yenileyin**](#refresh-segments).
-- Segmenti **Etkinleştirin** veya **Devre dışı bırakın**. Etkin olmayan segmentler [zamanlanan yenileme](system.md#schedule-tab) sırasında yenilenmez ve **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir. Etkin segmentler türlerine göre yenilenir: statik veya dinamik.
+- Segmenti **Etkinleştirin** veya **Devre dışı bırakın**. Etkin olmayan segmentler [zamanlanan yenileme](schedule-refresh.md) sırasında yenilenmez ve **Durum**, **Atlandı** olarak listelenir ve bu, bir yenileme girişimi denemesinin bile yapılmadığını gösterir. Etkin segmentler türlerine göre yenilenir: statik veya dinamik.
 - Segment türünü ayarlamak için **Statik hale getir** veya **Dinamik hale getir**'i seçin. Statik segmentler el ile yenilenmelidir. Dinamik segmentler sistem yenilemeleri sırasında otomatik olarak yenilenir.
 - Segmentteki [**benzer müşterileri bulma**](find-similar-customer-segments.md).
 - Segmenti **yeniden adlandırın**.
@@ -88,7 +88,7 @@ Alt kısım, segment üyelerinin bir listesini içerir.
 
 Segmentler otomatik bir zamanlamayla veya isteğe bağlı olarak el ile yenilenebilir. Bir veya daha fazla segmenti el ile yenilemek için bunları seçin ve **Yenile**'yi belirleyin.
 
-[Otomatik yenileme zamanlamak için](system.md#schedule-tab) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin. Geçerli olan kurallar şunlardır:
+[Otomatik yenileme zamanlamak için](schedule-refresh.md) **Yönetici** > **Sistem** > **Zamanlama**'ya gidin. Geçerli olan kurallar şunlardır:
 
 - **Dinamik** veya **Genişletme** türündeki tüm segmentler ayarlanan sıklkta otomatik olarak yenilenir. Yenileme tamamlandığında **Durum**, segmenti yenilerken herhangi bir sorun olup olmadığını gösterir. **Son yenileme**, son başarılı yenileme işleminin zaman damgasını gösterir. Hata oluşursa, ne olduğuyla ilgili ayrıntıları görmek için hatayı seçin.
 - **Statik** türündeki segmentler otomatik olarak *yenilenmez*. **Son yenilenme**, statik segmentin son kez el ile çalıştırıldığı veya yenilendiği zamanın zaman damgasını gösterir.
