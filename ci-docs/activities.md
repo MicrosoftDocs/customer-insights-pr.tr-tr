@@ -1,9 +1,9 @@
 ---
-title: Müşteri etkinlikleri
-description: Müşteri etkinliklerini tanımlayın ve bunları müşteri profillerinde bir zaman çizelgesinde görüntüleyin.
-ms.date: 07/22/2022
+title: Müşteri veya ilgili kişi etkinlikleri
+description: Müşteri veya ilgili kişi etkinliklerini tanımlayın ve bunları müşteri profillerinde bir zaman çizelgesinde görüntüleyin.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188163"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304129"
 ---
-# <a name="customer-activities"></a>Müşteri etkinlikleri
+# <a name="customer-or-business-contact-activities"></a>Müşteri veya ilgili kişi etkinlikleri
 
-Müşteri etkinlikleri, müşteriler tarafından gerçekleştirilen eylemler veya olaylardır. Örnek olarak hareketler, destek çağrı süresi, web sitesi incelemeleri, satın almalar veya iadeler verilebilir. Bu aktiviteler bir veya daha fazla veri kaynağında yer almaktadır. Customers Insights ile bu [veri kaynaklarındaki](data-sources.md) müşteri aktivitelerinizi birleştirin ve bunları müşteri profilleri ile ilişkilendirin. Bu aktiviteler müşteri profilindeki bir zaman çizelgesinde kronolojik olarak görüntülenir. [Müşteri kartı eklentisi](customer-card-add-in.md) çözümü ile Dynamics 365 uygulamalarına zaman çizelgesini dahil edin.
+Müşteri etkinlikleri, müşteriler veya ilgili kişiler tarafından gerçekleştirilen eylemler veya etkinliklerdir. Örnek olarak hareketler, destek çağrı süresi, web sitesi incelemeleri, satın almalar veya iadeler verilebilir. Bu aktiviteler bir veya daha fazla veri kaynağında yer almaktadır. Customers Insights ile bu [veri kaynaklarındaki](data-sources.md) müşteri aktivitelerinizi birleştirin ve bunları müşteri profilleri ile ilişkilendirin. Bu aktiviteler müşteri profilindeki bir zaman çizelgesinde kronolojik olarak görüntülenir. [Müşteri kartı eklentisi](customer-card-add-in.md) çözümü ile Dynamics 365 uygulamalarına zaman çizelgesini dahil edin.
 
-## <a name="define-an-activity"></a>Aktivite tanımlama
+## <a name="define-a-customer-activity"></a>Bir müşteri etkinliğini tanımlama
 
 Varlığın, müşteri zaman çizelgesine dahil edilmesi için **Tarih** türünde en az bir özniteliği olması gerekir. Böyle bir varlık bulunmazsa **Aktivite ekle** denetimi devre dışı bırakılır.
 
@@ -38,9 +38,9 @@ Varlığın, müşteri zaman çizelgesine dahil edilmesi için **Tarih** türün
 
 1. **Aktivite verileri** adımında aşağıdaki bilgileri girin:
 
-   - **Aktivite adı**: Aktivitenizin adı.
-   - **Aktivite varlığı**: İşlem veya aktivite verilerini içeren bir varlık.
-   - **Birincil anahtar**: Bir kaydı benzersiz şekilde tanımlayan alan. Yinelenen değerler, boş değerler veya eksik değerler içermemelidir.
+   - **Aktivite adı**: Etkinliğiniz için bir ad seçin.
+   - **Etkinlik varlığı**: İşlem tabanlı veya etkinlik verileri içeren bir varlık seçin.
+   - **Birincil anahtar**: Bir kaydı benzersiz şekilde tanımlayan alanı seçin. Yinelenen değerler, boş değerler veya eksik değerler içermemelidir.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Aktivite verilerini ad, varlık ve birincil anahtarla ayarlayın.":::
 
@@ -48,9 +48,9 @@ Varlığın, müşteri zaman çizelgesine dahil edilmesi için **Tarih** türün
 
 1. **İlişki** adımında, aktivite verilerinizi karşılık gelen müşteri kaydına bağlamak için **İlişki ekle**'yi seçin. Bu adım, varlıklar arasındaki bağlantıyı görselleştirir.  
 
-   - **Varlıktan gelen yabancı anahtar**: Aktivite varlığınızdaki, başka bir varlıkla ilişki kurmak için kullanılacak alan.
+   - **Yabancı anahtar**: Başka bir varlıkla ilişki kurmak için kullanılacak, etkinlik varlığınızdaki yabancı alan.
    - **Varlık adına**: Aktivite varlığınızın ilişkide olacağı, karşılık gelen kaynak müşteri varlığı. Yalnızca veri birleşme işleminde kullanılan kaynak müşteri varlıklarına ilişki oluşturabilirsiniz.
-   - **İlişki adı**: Varlıklar arasındaki ilişkiyi tanımlayan ad. Bu aktivite varlığı ile seçili kaynak müşteri varlığı arasında bir ilişki zaten varsa, ilişki adı salt okunur modda olur.
+   - **İlişki adı**: Bu etkinlik varlığı ile seçilen kaynak müşteri varlığı arasında bir ilişki zaten varsa ilişki adı salt okunur modda olacaktır. Böyle bir ilişki yoksa bu kutuda sağladığınız adla yeni bir ilişki oluşturulur.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Varlık ilişkisini tanımlayın.":::
 
@@ -90,7 +90,7 @@ Varlığın, müşteri zaman çizelgesine dahil edilmesi için **Tarih** türün
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Mevcut aktiviteleri yönetme
+## <a name="manage-existing-customer-activities"></a>Mevcut müşteri aktivitelerini yönetme
 
 Kaydedilmiş aktivitelerinizi, bunların kaynak varlığını, aktivite türünü ve aktivitelerin müşteri zaman çizelgesine dahil edilip edilmediğini görüntülemek için **Veri** > **Aktiviteler**'e gidin. Aktivite listesini herhangi bir sütuna göre sıralayabilir veya yönetmek istediğiniz aktiviteyi bulmak için arama kutusunu kullanabilirsiniz.
 
@@ -116,9 +116,43 @@ Kullanılabilir eylemleri görüntülemek için bir aktivite seçin.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Filtre koşullarını yapılandırmak için filtre panelini kullanın.":::
 
-1. Filtreleri kaldırmak için **Filtreleri Temizle**'yi seçin veya **Filtre**'yi seçip filtre onay kutusunu temizleyin.
-
 > [!NOTE]
 > Bir müşteri profili bıraktığınızda aktivite filtreleri kaldırılır. Her müşteri profili açışınızda bunları uygulamanız gerekir.
+
+## <a name="define-a-contact-activity"></a>Bir ilgili kişi etkinliğini tanımlama
+
+İş hesapları (İşletmeler arası) için, ilgili kişi etkinliklerini yakalamak için bir *ContactProfile* varlığı kullanın. Her bir aktiviteden sorumlu olan bir firmanın etkinlik zaman çizelgesinde ilgili kişilerin etkinliklerini görebilirsiniz. Çoğu adım, müşteri etkinliği eşleme yapılandırmasını izler.
+
+   > [!NOTE]
+   > İlgili kişi düzeyinde bir aktivite tanımlamak için, [birleştirilmiş bir ilgili kişi profili](data-unification-contacts.md) olarak veya [anlamsal eşleme](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) yoluyla bir *ContactProfile* varlığı oluşturulmalıdır.
+   >
+   > Etkinlik verilerinizdeki tüm kayıtların hem **AccountID** hem de **ContactID** özniteliklerine sahip olmanız gerekir.
+  
+1. **Veri** > **Etkinlikler**'e gidin.
+
+1. **Etkinlik Ekle**'yi seçin.
+
+1. Etkinliğe bir ad verin, kaynak etkinlik varlığını seçin ve etkinlik varlığının birincil anahtarını seçin.
+
+1. **İlişkiler** adımında, ilgili kişi verilerinizi bir aracı varlık olarak kullanarak etkinlik kaynağı verileriniz ile firmalar arasında dolaylı bir ilişki oluşturun. Daha fazla bilgi için [doğrudan ve dolaylı ilişki yolları](relationships.md#relationship-paths) bölümüne bakın.
+   - *Satın Almalar* adlı bir etkinlik için örnek ilişki:
+      - **ContactID** özniteliğinde **Satın Almalar Kaynak Etkinlik Verileri** > **İlgili Kişi Verileri**
+      - **AccountID** özniteliğinde **İlgili Kişi Verileri** > **Firma Verileri**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="İlişki kurulumu örneği.":::
+
+1. İlişkileri kurduktan sonra **İleri**'yi seçin ve etkinlik eşleme yapılandırmanızı tamamlayın. Etkinlik oluşturma ile ilgili ayrıntılı adımlar için [müşteri etkinliği tanımlama](#define-a-customer-activity) bölümüne bakın.
+
+1. Etkinlik eşlemelerinizi çalıştırın.
+
+1. İlgili kişi düzeyindeki etkinlikleriniz artık müşteri zaman çizelgenizde görüntülenir.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="İlgili kişi etkinlikleri yapılandırması sonrasındaki nihai sonuç":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>İlgili kişi düzeyinde etkinlik zaman çizelgesi filtrelemesi
+
+İlgili kişi düzeyinde etkinlik eşlemesi yapılandırıldıktan ve çalıştırıldıktan sonra müşterileriniz için etkinlik zaman çizelgesi güncelleştirilir. Üzerinde işlem yaptıkları etkinlikler için *ContactProfile* yapılandırmanıza bağlı olarak müşterilerinizin kimliklerini veya adlarını içerir. İlgilendiğiniz belirli ilgili kişileri görmek için etkinlikleri zaman çizelgesinde ilgili kişilere göre filtreleyebilirsiniz. Ek olarak, **Etkinlikler İlgili Kişi ile eşlenmedi** öğesini seçerek belirli bir ilgili kişiye atanmamış tüm etkinlikleri görebilirsiniz.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="İlgili kişi düzeyindeki etkinlikler için filtreleme seçenekleri kullanılabilir.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

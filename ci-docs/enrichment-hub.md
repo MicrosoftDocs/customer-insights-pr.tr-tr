@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245903"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304543"
 ---
 # <a name="data-enrichment-preview-overview"></a>Veri zenginleştirmeye (önizleme) genel bakış
 
@@ -95,7 +95,7 @@ Zenginleştirmelerden [segmentler](segments.md) veya [ölçümler](measures.md) 
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Zenginleştirme işleminin ilerleme durumunu görün
 
-Yenilenme sırasında veya yenileme işlemi tamamlandıktan sonra BT durumu ve potansiyel sorunlar da dahil olmak üzere, bir zenginleştirme hakkında ayrıntılı bilgi bulabilirsiniz. Bir zenginleştirmeyi yenilemede ne gibi süreçler olduğunu ve bu süreçleri çalıştırmanın ne kadar sürdüğünü anlayın. Zenginleştirme durumu; Experian, Leadspace, HERE Technologies, SFTP Import ve Azure Haritalar için desteklenir.
+Yenilenme sırasında veya yenileme işlemi tamamlandıktan sonra, işlemin durumu ve potansiyel sorunlar da dahil olmak üzere, bir zenginleştirme hakkında ayrıntılı bilgi bulabilirsiniz. Bir zenginleştirmeyi yenilemede ne gibi süreçler olduğunu ve bu süreçleri çalıştırmanın ne kadar sürdüğünü anlayın. Zenginleştirme durumu; Experian, Leadspace, HERE Technologies, SFTP Import ve Azure Haritalar için desteklenir.
 
 1. **Veriler** > **Zenginleştirme**'ye gidin.
 1. **Zenginleştirmelerim** sekmesinde yan bölmeyi açmak için zenginleştirme durumunu seçin.

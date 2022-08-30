@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188117"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303807"
 ---
 # <a name="view-customer-profiles"></a>Müşteri profillerini görüntüleme
 
@@ -78,7 +78,7 @@ Müşteri ayrıntıları şunları içerir:
 **Müşteri profili kutucuğu**: Birleşik *Müşteri* varlığındaki farklı değerleri gösterir. Seçili müşteri profili için bir alanın değeri yoksa adres alanı dışında bir alan gösterilmez. Kutucuk bölümler halinde yapılandırılmıştır:
 
 - İlk bölümde, önceden tanımlı bir alanlar kümesi ve ardından arama ve filtre dizininin parçası olan tüm alanlar gösterilir. Adresle ilgili tüm alanlar tek bir satır olarak birleştirilir ve bu, profilde adres bilgisi bulunmasa bile gösterilir.
-- **Bu müşteriye ait ilgili kişiler**, iş hesaplarına ait ortamlarda görüntülenir. Her ilgili kişi alanlarıyla birlikte gösterilir. Boş alanlar gizlidir.
+- **Bu müşteriye ait ilgili kişiler**, iş hesaplarına (İşletmeler arası) ait ortamlarda görüntülenir. Her ilgili kişi alanlarıyla birlikte gösterilir. Boş alanlar gizlidir.
 - **Ek alanlar**: Seçili müşterinin, kimlik hariç diğer alanlarını gösterir.
 - **Kimlikler**: Karşılık gelen varlık adı altındaki tüm kimlikler listelenir. Alanlar, semantiklerine göre kimlik olarak tanımlanır.
 

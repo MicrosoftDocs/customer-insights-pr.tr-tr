@@ -1,7 +1,7 @@
 ---
 title: Segmentlere genel bakış
 description: Segmentlere ve bunların nasıl oluşturulacağı ve yönetildiği ile ilgili genel bakış.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246317"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304819"
 ---
 # <a name="segments-overview"></a>Segmentlere genel bakış
 
 Segmentler, müşterilerinizi demografik, işlem tabanlı veya davranışsal özniteliklere göre gruplamanıza olanak tanır. İş hedeflerinize ulaşmak için tanıtım kampanyalarını, satış etkinliklerini ve müşteri desteği eylemlerini hedeflemek üzere segmentleri kullanabilirsiniz.
 
-Bir segment tanımının filtreleriyle eşleşen müşteri profilleri, bir segmentin *üyeleri* olarak ifade edilir. Bazı [hizmet sınırları](/dynamics365/customer-insights/service-limits) geçerlidir.
+Bir segment tanımının filtreleriyle eşleşen müşteri veya ilgili kişi profilleri, bir segmentin *üyeleri* olarak ifade edilir . Bazı [hizmet sınırları](/dynamics365/customer-insights/service-limits) geçerlidir.
 
 ## <a name="create-a-segment"></a>Segment oluştur
 
@@ -41,13 +41,19 @@ Hedef kitlenize göre bir segmentin nasıl oluşturulacağını seçin.
 
 # <a name="business-accounts-b-to-b"></a>[İşletme hesapları (İşletmeler Arası)](#tab/b2b)
 
-- Segment oluşturucusu ile basit veya karmaşık segmentler oluşturma: [Kendiniz oluşturun](segment-builder.md)
+Segment oluşturucu ile firma segmenti veya ilgili kişi segmenti (önizleme): [Kendinizinkini oluşturma](segment-builder.md)
+
+> [!NOTE]
+> Çoğu dışarı aktarma hedefi, pazarlama amaçlarıyla ilgili kişi bilgileri gerektirir. Bu nedenle, bu dışarı aktarımlar için kullanılacak ilgili kişi segmentleri oluşturun.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Mevcut segmentleri yönetme
 
-Oluşturduğunuz segmentleri, bunların durumunu, üye sayısını ve verilerin son yenilenme süresini görüntülemek için **Segmentler** sayfasına gidin. Segmentler listesini herhangi bir sütuna göre sıralayabilir veya yönetmek istediğiniz segmenti bulmak için arama kutusunu kullanabilirsiniz.
+Oluşturduğunuz segmentleri, bunların durumunu ve verilerin son yenilenme zamanını görüntülemek için **Segmentler** sayfasına gidin. Segmentler listesini herhangi bir sütuna göre sıralayabilir veya yönetmek istediğiniz segmenti bulmak için arama kutusunu kullanabilirsiniz.
+
+> [!TIP]
+> İşletmeler arası ortamlarda, **Hedef Kitle Türü** sütunu bir segmentin firmalara veya ilgili kişilere dayalı olup olmadığını belirler.
 
 Kullanılabilir eylemleri görüntülemek için bir segment seçin.
 
@@ -82,7 +88,7 @@ Alt kısım, segment üyelerinin bir listesini içerir.
 > [!NOTE]
 > Bu listede görünen alanlar, segment varlıklarınızın özniteliklerini temel alır.
 >
->Liste, eşleştirilen segment üyelerinin önizlemesidir ve segmentinizin ilk 100 kaydını gösterir, böylece hızlı bir şekilde değerlendirebilir ve gerekirse tanımlarını inceleyebilirsiniz. Eşleştirilen tüm kayıtları görmek için [segmenti dışarı aktarın](export-destinations.md).
+> Liste, eşleştirilen segment üyelerinin önizlemesidir ve segmentinizin ilk 100 kaydını gösterir, böylece hızlı bir şekilde değerlendirebilir ve gerekirse tanımlarını inceleyebilirsiniz. Eşleşen tüm kayıtları görmek için, [**Varlıklar**](entities.md) sayfasını açan **Daha fazla göster**'i seçin veya [segmenti dışarı aktarın](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Segmentleri yenileme
 

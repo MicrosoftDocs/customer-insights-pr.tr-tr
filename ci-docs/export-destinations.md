@@ -1,7 +1,7 @@
 ---
 title: Dışarı aktarma (önizleme) genel bakışı
 description: Verileri paylaşmak için dışarı aktarma işlemlerini yönetin.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245351"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304083"
 ---
 # <a name="exports-preview-overview"></a>Dışarı aktarma (önizleme) genel bakışı
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245351"
 
 İki ana dışa aktarma türü vardır:  
 
-- **Veri çıkışı aktarmaları**: Customer Insights'ta kullanılabilir olan her türlü varlığı dışa aktarmanızı sağlar. Vermek üzere seçtiğiniz varlıklar tüm veri alanları, meta veriler, şemalar ve eşleme ayrıntıları ile birlikte verilir.
-- **Segment dışa aktarmaları**: Customer Insights'tan segment varlıklarını dışa aktarabilmenize izin verir. Segmentler, müşteri profillerinin listesini temsil eder. Dışarı aktarma işlemini yapılandırırken, veri aktardığınız hedef sisteme bağlı olarak eklenen veri alanlarını seçersiniz.
+- **Veri çıkışı aktarmaları**, Customer Insights'ta kullanılabilir olan her türlü varlığı vermenizin sağlar. Vermek üzere seçtiğiniz varlıklar tüm veri alanları, meta veriler, şemalar ve eşleme ayrıntıları ile birlikte verilir.
+- **Segment dışa aktarmaları**, Customer Insights'tan segment varlıklarını dışa aktarabilmenize izin verir. Bağımsız tüketiciler (İşletme ile Müşteri arası) için segmentler, müşteri profillerinin bir listesini temsil eder. İşletmeler (İşletmeler arası) için, [segmentler firmaların veya ilgili kişilerin listesini temsil edebilir](segment-builder.md#create-a-new-segment-with-segment-builder). Dışarı aktarma işlemini yapılandırırken, veri aktardığınız hedef sisteme bağlı olarak eklenen veri alanlarını seçersiniz.
 
 ### <a name="export-segments"></a>Segmentleri dışarı aktarma
 
@@ -38,14 +38,15 @@ ms.locfileid: "9245351"
 **Bireysel tüketiciler (B-C) için ortamlarda segment dışarı aktarımları**  
 - Bireysel müşterilerin ortam içeriğindeki segmentler *birleşik müşteri profili* varlığı üzerine kurulmuştur. Hedef sistemlerin gereksinimlerine uyan her segment (örneğin, bir e-posta adresi) verilebilir.
 
-**İş hesapları (B-B) için ortamlarda segment dışarı aktarımları**  
-- İş hesaplarının ortam içeriğindeki segmentler *firma* varlığı üzerine kurulmuştur. Firma segmentlerini olduğu gibi vermek için hedef sistemin saf firma kesimlerini desteklemesi gerekir. Bu, dışa aktarma işlemini tanımlarken **şirket** seçeneğini seçerken, [LinkedIn](export-linkedin-ads.md) için de geçerlidir.
-- Tüm diğer hedef sistemler ilgili kişi varlığı için alanlar gerektirir. Firma kesimlerinin ilgili kişilerin verilerini alabilmeleri için, segment tanımınızın ilgili kişi varlığının proje öznitelikleri olması gerekir. [Segmentleri ve proje özniteliklerini yapılandırma](segment-builder.md) hakkında daha fazla bilgi edinin.
+**İş hesapları (İşletmeler arası) için ortamlarda segment dışarı aktarımları**  
+- İş hesaplarının ortam içeriğindeki segmentler *firma* veya *ilgili kişi* varlığı üzerine kurulmuştur. Firma segmentlerini olduğu gibi vermek için hedef sistemin saf firma kesimlerini desteklemesi gerekir. Bu, dışa aktarma işlemini tanımlarken **şirket** seçeneğini seçerken, [LinkedIn](export-linkedin-ads.md) için de geçerlidir.
+- Tüm diğer hedef sistemler ilgili kişi varlığı için alanlar gerektirir.
+- İki segment türüyle (ilgili kişiler ve firmalar) Customer Insights, hedef sisteme dayalı olarak dışa aktarmaya uygun olan parçaların türünü otomatik olarak belirler. Örneğin, MailChimp gibi ilgili kişi odaklı bir hedef sisteminde, Customer Insights yalnızca dışarı aktarılacak ilgili kişi segmentlerini seçmenize olanak sağlar.
 
 **Segment verme sınırları**  
 - Üçüncü taraf hedef sistemleri, verebileceğiniz müşteri profilleri sayısını sınırlayabilir. 
 - Bağımsız müşteriler için, dışa aktarma için bir segment seçtiğinizde, segment üyelerinin gerçek sayısını görürsünüz. Bir segment çok büyükse bir uyarı alırsınız. 
-- İş hesaplarında, bir segmentteki firmaların sayısını görürsünüz; ancak tahmin edilecek ilgili kişilerin sayısı gösterilmez. Bazı durumda, bu, verilen parçaya gerçekte hedef sistemin kabul ettiğinden daha fazla müşteri profili içermesinden dolayı olabilir. Hedef sistemin sınırları aşılırsa dışa aktarma işlemi atlanır.
+- İş hesaplarında, segmente bağlı olarak firma veya ilgili kişi sayısını görürsünüz. Bir segment çok büyükse bir uyarı alırsınız. Hedef sistemlerin sınırlarının aşıldığı sonuçlar, verme işlemini atlar.
 
 ## <a name="set-up-a-new-export"></a>Yeni dışa aktarma ayarlayın
 
@@ -110,6 +111,20 @@ Zamanlanmış yenileme beklemeden verileri vermek için **veri** > **Dışa akta
 
 - Tüm verme işlemlerini çalıştırmak için, komut çubuğunda **Tümünü Çalıştır**'ı seçin. Yalnızca etkin bir zamanlaması olan dışarı aktarma işlemleri çalıştırılır. Etkin olmayan bir dışa aktarma işlemini çalıştırmak için tek bir dışa aktarma işlemi çalıştırın.
 - Tek bir dışarı aktarma çalıştırmak için, listeden seçin ve komut çubuğunda **Çalıştır**'ı seçin.
+
+## <a name="troubleshooting"></a>Sorun giderme
+
+### <a name="segment-not-eligible-for-export"></a>Segment dışarı aktarım için uygun değil
+
+**Sorun** İş hesaplarının bir ortamında dışarı aktarma işleminiz şu hata iletisiyle başarısız olur: "Şu segment bu dışarı aktarım hedefine uygun değil: '{segmentin adı}'. Lütfen yalnızca ContactProfile türünde segmentleri seçip yeniden deneyin."
+
+**Çözüm** İş hesaplarına yönelik Customer Insights ortamları firma segmentlerine ek olarak ilgili kişi segmentlerini destekleyecek şekilde güncelleştirilmiştir. Bu değişiklik nedeniyle, ilgili kişi ayrıntılarını gerektiren dışarı aktarım işlemleri yalnızca ilgili kişileri temel alan segmentlerle çalışır.
+
+1. Önceden kullandığınız segmentle eşleşen [ilgili kişilere dayalı bir segment oluşturun](segment-builder.md).
+
+1. İlgili kişi segmenti çalışmaya başladıktan sonra, ilgili dışa aktarma işlemini düzenleyin ve yeni segmenti seçin.
+
+1. Yapılandırmayı kaydetmek için **Kaydet**'i seçin veya bu dışa aktarımı hemen test etmek için **kaydedip çalıştırın**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

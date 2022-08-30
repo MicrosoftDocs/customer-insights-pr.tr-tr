@@ -2,7 +2,7 @@
 title: Veri birleştirme için müşteri alanlarını birleştirme
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213606"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304037"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Veri birleştirme için müşteri alanlarını birleştirme
+# <a name="unify-customer-fields"></a>Müşteri alanları birleştirme
 
-Birleşme işleminin bu adımında, birleşik profil varlığınız içinde birleştirilecek öznitelikleri seçin ve dışlayın. Örneğin, üç varlık e-posta verisine sahip olursa, üç ayrı e-posta alanını tutmak veya bunları birleşik profil için tek bir e-posta alanında birleştirmek isteyebilirsiniz. Bazı öznitelikler sistem tarafından otomatik olarak birleştirilir. Tutarlı ve benzersiz müşteri kimlikleri oluşturabilir ve ilgili profilleri bir kümede gruplayabilirsiniz.
+Birleşme işleminin bu adımında, birleşik profil varlığınız içinde birleştirilecek öznitelikleri seçin ve dışlayın. Örneğin, üç varlık e-posta verisine sahip olursa, üç ayrı e-posta alanını tutmak veya bunları birleşik profil için tek bir e-posta alanında birleştirmek isteyebilirsiniz. Bazı öznitelikler sistem tarafından otomatik olarak birleştirilir. Tutarlı ve benzersiz müşteri kimlikleri oluşturabilirsiniz. Bireyse müşteriler için ilgili profilleri bir kümede gruplayabilirsiniz.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Birleşik müşteri profilini tanımlayan birleştirilmiş alanlarla veri birleşme işlemini gösteren sayfayı birleştirme sayfası.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Birleşik müşteri profilini tanımlayan birleştirilmiş alanlar içeren tabloyu gösteren, veri birleştirme işlemindeki müşteri alanlarını birleştirme sayfası.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Müşteri alanlarını inceleme ve güncelleştirme
 
@@ -47,7 +47,7 @@ Birleşme işleminin bu adımında, birleşik profil varlığınız içinde birl
 
 1. İsteğe bağlı olarak, [müşteri kimliği yapılandırmasını oluşturun](#configure-customer-id-generation).
 
-1. İsteğe bağlı olarak, [profilleri yeni ve kümeler halinde gruplayın](#group-profiles-into-households-or-clusters).
+1. İşletme ile Müşteri arası ortamlar için isteğe bağlı olarak , [profilleri ev veya kümeler halinde gruplayın](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Sonraki adım: Birleşmeyi gözden geçirme](review-unification.md)
@@ -161,7 +161,7 @@ Kararlı bir müşteri kimliği yapılandırmak, bu davranıştan kaçınmanız�
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Profilleri yeni ve kümeler halinde gruplayın
 
-İlgili profilleri bir kümede gruplamak için kurallar tanımlayabilirsiniz. Şu anda iki tür küme kullanılabilir: ev kümeleri ve özel kümeler. *Müşteri* varlığında *Person.LastName* ve *Location.Adress* semantik alanları varsa, sistem otomatik olarak önceden tanımlanmış kurallara sahip ev türünü seçer. Ayrıca, [eşleşme kurallarına](match-entities.md#define-rules-for-match-pairs) benzer şekilde kendi kurallarınızı ve koşullarına sahip bir küme de oluşturabilirsiniz.
+Bireyse müşteriler için ilgili profilleri bir kümede gruplamak için kurallar tanımlayabilirsiniz. Şu anda iki tür küme kullanılabilir: ev kümeleri ve özel kümeler. *Müşteri* varlığında *Person.LastName* ve *Location.Adress* semantik alanları varsa, sistem otomatik olarak önceden tanımlanmış kurallara sahip ev türünü seçer. Ayrıca, [eşleşme kurallarına](match-entities.md#define-rules-for-match-pairs) benzer şekilde kendi kurallarınızı ve koşullarına sahip bir küme de oluşturabilirsiniz.
 
 1. **Gelişmiş** > **Küme oluştur**'u seçin.
 

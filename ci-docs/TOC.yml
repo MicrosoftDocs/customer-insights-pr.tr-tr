@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: Veri birleştirmeyi gözden geçir
       href: review-unification.md
+    - name: Birleşik ilgili kişi profili oluşturma
+      href: data-unification-contacts.md
     - name: Birleştirme ayarlarını güncelleştirme
       href: data-unification-update.md
 - name: Veri zenginleştirme

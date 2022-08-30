@@ -1,7 +1,7 @@
 ---
 title: Karmaşık segmentleri segment oluşturucuyu kullanarak oluşturma
 description: Müşterileri çeşitli özniteliklere göre gruplayarak karmaşık müşteri segmentleri oluşturmak için segment oluşturucusunu kullanın.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170659"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304773"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Karmaşık segmentleri segment oluşturucuyu kullanarak oluşturma
 
-Birleşik Müşteri varlığı ve ilgili varlıkları etrafında karmaşık filtreler tanımlayın. Her segment işlendikten sonra, dışarı aktarabileceğiniz ve işlem gerçekleştirebileceğiniz bir müşteri kaydı kümesi oluşturur.
+Birleşik müşteri veya birleşik ilgili kişi ve onun ilgili varlıkları etrafında karmaşık filtreler tanımlayın. Her segment, işlendikten sonra, dışarı aktarabileceğiniz ve üzerinde eylem gerçekleştirebileceğiniz bir dizi müşteri veya ilgili kişi kaydı oluşturur.
 
 > [!TIP]
-> **Bağımsız müşteriye** dayanan segmentler, segment üyeleri için kullanılabilir ilgili kişi bilgilerini otomatik olarak içerir. **İş hesaplarının** ortamlarında , segmentler firmaları (şirketler veya yan kuruluşlar) temel alır. Bir segmente ilgili kişi bilgilerini dahil etmek için, segment oluşturucusundaki **Proje özellikleri** işlevini kullanın. İlgili kişi veri kaynaklarının [anlamsal olarak ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) varlığıyla eşlendiğinden emin olun.
+> **Bağımsız müşteriye** dayanan segmentler, segment üyeleri için kullanılabilir ilgili kişi bilgilerini otomatik olarak içerir. **İş hesaplarında**, hem firmaları hem de ilgili kişileri [birleştirdiyseniz](data-unification.md) segmentin firmalara veya ilgili kişilere dayalı olup olmadığını seçin. İlgili kişi bilgilerini bekleyen bir hedefe dışa aktarmak için bir ilgili kişi segmentini kullanın. Firma bilgilerini bekleyen bir hedefe dışa aktarmak için bir firma segmentini kullanın.
 
 ## <a name="segment-builder"></a>Segment oluşturucu
 
@@ -57,6 +57,11 @@ Yukarıdaki örnek, segmentleme yeteneğini gösterir. Çevrimiçi ortamda en az
 
 1. **Yeni** > **Kendiniz oluşturun**'u seçin. Segment oluşturucu sayfasında, kurallar tanımlayabilir veya alırsınız. Kural, bir müşteri kümesini tanımlayan bir veya daha fazla koşuldan oluşur.
 
+   > [!NOTE]
+   > İş hesaplarına dayalı ortamlarda, oluşturmak istediğiniz segmentin türüne göre **Yeni** > **Firma Segmenti** veya **İlgili Kişi Segmenti (önizleme)**'yi seçin. Bir [firma hiyerarşisi](relationships.md#set-up-account-hierarchies) tanımlanmışsa ve alt ve üst ilişkisine dayanarak verileri filtrelemek için kurallar oluşturmak isterseniz, **Hiyerarşi kullanılsın mı? (önizleme)**'yi seçin, hiyerarşiyi ve ardından **Uygula**'yı seçin.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Segment firma hiyerarşisi seç bölmesi.":::
+
 1. Adsız segmentin yanındaki **Ayrıntıları düzenle** seçeneğini belirleyin. Segmentiniz için bir ad girin ve segment için önerilen **Çıkış varlığı adını** güncelleştirin. İsteğe bağlı olarak, segmente bir açıklama ve [etiketler](work-with-tags-columns.md#manage-tags) ekleyin.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Ayrıntıları düzenle iletişim kutusu.":::
@@ -65,11 +70,11 @@ Yukarıdaki örnek, segmentleme yeteneğini gösterir. Çevrimiçi ortamda en az
    - **Kurala Ekle** bölmesinde kullanılabilir varlıkların ve özniteliklerin listesini gözden geçirin ve eklenecek özelliğin yanında **+** simgesini seçin. Özniteliği varolan bir kurala eklemek veya yeni bir kural oluşturmak için kullanmak istiyorsanız seçin.
    - Eşleşen önerileri görmek için kural bölümüne özniteliğin adını yazın.
 
-1. Koşulun eşleşen değerlerini belirtmek için işleçleri seçin. Öznitelik, değer olarak dört veri türünden birine sahip olabilir: sayı, dize, tarih veya Boole. Özniteliğin veri türüne bağlı olarak, koşulu belirtmek için farklı işleçler vardır. İş hesaplarıyla ilgili segmentler için, belirli firmalar arasına potansiyel hiyerarşiler eklemek üzere iki özel işleç kullanılabilir. İlgili firmaları eklemek için işleçlerinin *alt* ve *üst* öğesini kullanın.
+1. Koşulun eşleşen değerlerini belirtmek için işleçleri seçin. Öznitelik, değer olarak dört veri türünden birine sahip olabilir: sayı, dize, tarih veya Boole. Özniteliğin veri türüne bağlı olarak, koşulu belirtmek için farklı işleçler vardır.
 
 1. Bir kurala daha fazla koşul eklemek için **Koşul ekle**'yi seçin. Geçerli kuralın altında bir kural oluşturmak için **Alt kural ekle**'yi seçin.
 
-1. Bir kural *Müşteri* varlığından başka varlıkları kullanıyorsa, seçili varlığı birleştirilmiş müşteri varlığıyla eşlemek için **İlişki yolunu ayarla**'yı seçin. Yalnızca tek bir olası ilişki yolu varsa, sistem bunu otomatik olarak seçer. Farklı [ilişki yolları](relationships.md#relationship-paths), farklı sonuçlar ortaya koyabilir. Her kuralın kendi ilişki yolu olabilir.
+1. Bir kural, *Müşteri* varlığından (veya İşletmeler arası ortamlarda *ContactProfile* varlığından) başka varlıklar kullanırsa, seçili varlığı birleştirilmiş müşteri varlığına eşlemek için **İlişki yolunu ayarla**'yı seçin. Yalnızca tek bir olası ilişki yolu varsa, sistem bunu otomatik olarak seçer. Farklı [ilişki yolları](relationships.md#relationship-paths), farklı sonuçlar ortaya koyabilir. Her kuralın kendi ilişki yolu olabilir.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Birleşik müşteri varlığına eşlenen bir varlığı temel alan bir kural oluştururken potansiyel ilişki yolu.":::
 
@@ -92,24 +97,22 @@ Yukarıdaki örnek, segmentleme yeteneğini gösterir. Çevrimiçi ortamda en az
       - **Kesişim** iki grubu çakıştırır. Birleşik grupta yalnızca iki grup için de *ortak olan* veriler kalır.
       - **Dışında** iki grubu birleştirir. A grubunda yalnızca B grubundaki veriler için *ortak olmayan* veriler tutulur.
 
-1. Varsayılan olarak, çıkış varlığı, tanımlı filtrelerle eşleşen müşteri profillerinin tüm özniteliklerini otomatik olarak içerir. Bir segment *Müşteri* varlığından başka varlıklara dayanıyorsa çıkış varlığına bu varlıklardan daha fazla öznitelik eklemek için **Proje öznitelikleri**'ni seçin.
-
-   > [!IMPORTANT]
-   > İş hesaplarına dayanan segmentlere yönelik olarak, segmentin ilgili kişi bilgileri gerektiren hedefler için etkinleştirilmesine veya dışarı aktarılmasına olanak sağlamak üzere *ContactProfile* varlığındaki her firmanın bir ya da daha fazla ilgili kişisinin ayrıntılarının bu segmente eklenmesi gerekir. *ContactProfile* varlığı hakkında daha fazla bilgi için bkz. [Anlamsal eşlemeler](semantic-mappings.md).
-   > İlgili kişilerin yansıtılan özniteliklerinin olduğu, iş hesaplarına dayalı bir segment için örnek çıktı şöyle görünebilir:
-   >
-   > |Kimlik  |Hesap adı  |Gelir  |İlgili kişi adı  | İlgili kişi rolü|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Tedarik yöneticisi]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Çıkış varlığına eklenecek yan bölmede seçilen öngörülen öznitelikler örneği.":::
-  
+1. Varsayılan olarak, çıkış varlığı, tanımlı filtrelerle eşleşen müşteri profillerinin tüm özniteliklerini otomatik olarak içerir. İşletmeler arası ortamlarda *ContactProfile* varlığını kullanırken, hesap kimliği otomatik olarak eklenir. Bir segment *Müşteri* varlığından başka varlıklara dayanıyorsa veya *ContactProfile*'dan daha fazla öznitelik eklemek için, bu varlıklardan çıktı varlığına daha fazla öznitelik eklemek üzere **Proje öznitelikleri**'ni seçin.
+ 
    Örneğin: Bir segment, *Müşteri* varlığıyla ilgili satın alma verileri içeren bir varlığı temel alır. Segment, geçerli yılda malları satın alan, İspanya'daki tüm müşterileri arar. Malların fiyatı gibi öznitelikleri veya çıktı varlığındaki tüm eşleşen müşteri kayıtlarını ekleme seçeneğini belirleyebilirsiniz. Bu bilgiler, toplam harcamadan mevsimsel ilişkileri analiz etmek yararlı olabilir.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Çıkış varlığına eklenecek yan bölmede seçilen öngörülen öznitelikler örneği.":::
+ 
+   İlgili kişilerin yansıtılan özniteliklerinin olduğu, iş hesaplarına dayalı bir segment için örnek çıktı şöyle görünebilir:
+
+   |Kimlik  |Hesap adı  |Gelir  |İlgili kişi adı  | İlgili kişi rolü|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Tedarik yöneticisi]
+
    > [!NOTE]
-   > - **Proje öznitelikleri** yalnızca, müşteri varlığıyla birden çoka ilişkisine sahip varlıklar için çalışır. Örneğin, bir müşterinin birden çok aboneliği olabilir.
-   > - Proje yapmak istediğiniz öznitelik, ilişkide belirtildiği gibi, *Müşteri* varlığındaki bir taneden fazla atlama uzaklıktaysa, oluşturduğunuz segment sorgusunun tüm kuralında o öznitelik kullanılmalıdır.
-   > - Proje yapmak istediğiniz öznitelik, *Müşteri* varlığındaki bir taneden fazla atlama uzaklıktaysa, oluşturduğunuz segment sorgusunun tüm kuralında o öznitelik kullanılması gerekmez.
+   > - **Proje öznitelikleri** yalnızca, *Müşteri* veya *ContactProfile* varlığıyla birden çoka ilişkisine sahip varlıklar için çalışır. Örneğin, bir müşterinin birden çok aboneliği olabilir.
+   > - Proje yapmak istediğiniz özniteliğin *Müşteri* veya *ContactProfile* varlığına uzaklığı birden fazla atlamaysa, ilişkide belirtildiği gibi, oluşturduğunuz segment sorgusunun her kuralında o öznitelik kullanılmalıdır.
+   > - Proje yapmak istediğiniz özniteliğin *Müşteri* veya *ContactProfile* varlığına uzaklığı tek bir atlamaysa, oluşturduğunuz segment sorgusunun her kuralında o özniteliğin bulunması gerekmez.
    > - **Tasarlanan öznitelikler**, ayarla işleçleri kullanılırken uygulamasında çarpanlarına göre belirlenir.
 
 1. Segment oluşturmak için **Çalıştır**'ı seçin. Geçerli yapılandırmayı koruyup segmenti daha sonra çalıştırmak isterseniz **Kaydet**'i seçin. **Segmentler** sayfası görüntülenir.

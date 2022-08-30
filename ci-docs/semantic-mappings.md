@@ -1,9 +1,9 @@
 ---
 title: Anlamsal eşlemeler (önizleme)
 description: Anlamsal eşlemelerin ve bunların nasıl kullanılacağı genel bakış.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183655"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303945"
 ---
 # <a name="semantic-mappings-preview"></a>Anlamsal eşlemeler (önizleme)
 
-Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şemalara eşlemenizi sağlar. Bu şemalar, Customer Insights'ın veri özniteliklerinizi daha iyi anlamasına yardımcı olur. Anlamsal eşleme ve sağlanan veriler, Customer Insights içinde yeni öngörü ve özellikleri etkinleştirir. Aktivite verilerinizi şemalara eşlemek için, [aktiviteler](activities.md) belgelerini gözden geçirin.
+> [!NOTE]
+> **Anlamsal eşlemeler** sayfası yalnızca bu sayfa kullanılarak ilgili kişi profillerinin zaten oluşturulduğu iş ortamları (İşletmeler arası) için kullanılabilir. **Anlamsal eşlemeler** sayfasını kullanarak her bir ilgili kişi profilini oluşturmaya ve yönetmeye devam edebilirsiniz. Veya, yinelenen kişileri kaldırmak için [ilgili kişi verilerinizi birleştirin](data-unification-contacts.md), varlıklar arasındaki eşleşmeleri belirleyin ve birleştirilmiş bir ilgili kişi profili oluşturun. Daha sonra ilgili kişi düzeyinde etkinlikler oluşturmak için birleştirilmiş ilgili kişi profilini kullanabilirsiniz.
 
-**İş hesaplarına dayalı ortamlarda anlamsal eşlemeler şu anda etkin durumdadır**. *ContactProfile*, Customer Insights'ta şu anda kullanılabilir olan tek anlamsal eşleme türüdür.
+Anlamsal eşlemeler, aktivite dışı verilerinizi önceden tanımlanmış şemalara eşlemenizi sağlar. Bu şemalar, veri özniteklerinizi daha iyi anlaması için Customer Insights'a yardımcı olur. Anlamsal eşleme ve sağlanan veriler, Customer Insights içinde yeni öngörü ve özellikleri etkinleştirir. Aktivite verilerinizi şemalara eşlemek için, [aktiviteler](activities.md) belgelerini gözden geçirin.
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>ContactProfile anlamsal varlık eşlemesi tanımlayın
 
@@ -87,41 +88,5 @@ Kullanılabilir eylemleri görüntülemek için anlamsal eşlemeyi seçin.
 - En son verileri dahil etmek için anlamsal eşlemeyi **yenileyin**. Verilen herhangi bir anlamsal eşleme yenilenmesi, aynı türdeki tüm anlamsal eşlemeleri yeniler.
 - Anlamsal eşlemeyi **yeniden adlandırın**. **Kaydet**'i seçin.
 - Anlamsal eşlemeyi **silin**. Aynı anda birden fazla anlamsal eşlemeyi silmek için anlamsal eşlemeleri ve sil simgesini seçin. **Sil**'i seçin ve ardından silme işleminizi onaylayın.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>İlgili kişi düzeyinde etkinlikler oluşturmak için ContactProfile anlamsal varlık eşlemesi kullanma
-
-*ContactProfile* anlamsal varlık eşlemesi oluşturduktan sonra ilgili kişilerin etkinliklerini yakalayabilirsiniz. Bu, her bir aktiviteden sorumlu olan bir firmanın etkinlik zaman çizelgesinde ilgili kişilerin etkinliklerini görmenizi sağlar. Çoğu adım, tipik etkinlik eşleme yapılandırmasını izler.
-
-   > [!NOTE]
-   > İlgili kişi düzeyindeki etkinliklerin çalışması için etkinlik verilerinizdeki tüm kayıtların hem **AccountID** hem de **ContactID** özniteliklerine sahip olmanız gerekir.
-
-1. [Bir *ContactProfile* anlamsal varlık eşlemesi tanımlayın](#define-a-contactprofile-semantic-entity-mapping) ve anlamsal eşlemeyi çalıştırın.
-
-1. **Veri** > **Etkinlikler**'e gidin.
-
-1. Yeni bir etkinlik oluşturmak için **Etkinlik Ekle**'yi seçin.
-
-1. Etkinliğe bir ad verin, kaynak etkinlik varlığını seçin ve etkinlik varlığının birincil anahtarını seçin.
-
-1. **İlişkiler** adımında, ilgili kişi verilerinizi bir aracı varlık olarak kullanarak etkinlik kaynağı verileriniz ile firmalar arasında dolaylı bir ilişki oluşturun. Daha fazla bilgi için [doğrudan ve dolaylı ilişki yolları](relationships.md#relationship-paths) bölümüne bakın.
-   - *Satın Almalar* adlı bir etkinlik için örnek ilişki:
-      - **ContactID** özniteliğinde **Satın Almalar Kaynak Etkinlik Verileri** > **İlgili Kişi Verileri**
-      - **AccountID** özniteliğinde **İlgili Kişi Verileri** > **Firma Verileri**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="İlişki kurulumu örneği.":::
-
-1. İlişkileri kurduktan sonra **İleri**'yi seçin ve etkinlik eşleme yapılandırmanızı tamamlayın. Etkinlik oluşturma ile ilgili ayrıntılı adımlar için [etkinlik tanımlama](activities.md) bölümüne bakın.
-
-1. Etkinlik eşlemelerinizi çalıştırın.
-
-1. Bir ilgili kişi düzeyi aktivite eşlemesini çalıştıktan sonra, **Müşteriler**'i seçin. İlgili kişi düzeyindeki etkinlikleriniz müşteri zaman çizelgenizde görüntülenir.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="İlgili kişi etkinlikleri yapılandırması sonrasındaki nihai sonuç":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>İlgili kişi düzeyinde etkinlik zaman çizelgesi filtrelemesi
-
-Müşterilerinize ait etkinlik zaman çizelgesi, müşterilerinizin üzerinde işlem yaptıkları etkinlikler için *ContactProfile* yapılandırmanıza bağlı olarak kimliklerini veya adlarını içerir. İlgilendiğiniz belirli ilgili kişileri görmek için etkinlikleri zaman çizelgesindeki ilgili kişilere göre filtreleyin. Belirli bir ilgili kişiye atanmamış tüm etkinlikleri görmek için **Etkinlikler İlgili Kişi ile eşlenmedi** öğesini seçin.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="İlgili kişi düzeyindeki etkinlikler için filtreleme seçenekleri kullanılabilir.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

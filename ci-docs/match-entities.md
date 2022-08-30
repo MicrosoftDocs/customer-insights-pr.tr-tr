@@ -2,7 +2,7 @@
 title: Veri birleştirme için eşleşme koşulları
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139727"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304681"
 ---
 # <a name="match-conditions-for-data-unification"></a>Veri birleştirme için eşleşme koşulları
 
@@ -27,6 +27,8 @@ Bu adım, çapraz varlık eşleştirme için eşleşme sırası ve kuralları ta
 
 > [!NOTE]
 > Eşleştirme koşullarınızı oluşturduktan ve **İleri**' yi seçtikten sonra, seçili bir varlığı veya özniteliği kaldıramazsınız. Gerekirse, devam etmeden önce seçili varlıkları ve öznitelikleri gözden geçirmek için **Geri** öğesini seçin.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Zenginleştirilmiş varlıkları dahil etme (önizleme)
 
@@ -43,16 +45,16 @@ Veri kaynağı düzeyindeki varlıkları zenginleştirdikten sonra, birleşme so
 Her eşleştirme iki veya daha fazla varlığı tek ve konsolide bir varlığa birleştirir. Aynı zamanda, benzersiz müşteri kayıtlarını tutar. Eşleşme sırası, sistemin kayıtları eşleştirmeye çalıştığı sırayı gösterir.
 
 > [!IMPORTANT]
-> Listedeki ilk varlık birincil varlık olarak adlandırılır. Birincil varlık veri kümesi birleşik profiller için temel olarak hizmet eder. Bu varlığa, seçilen ek varlıklar eklenir.
+> Birinci varlık, birincil varlık olarak adlandırılır ve birleşik profillerinizin temelini oluşturur. Bu varlığa, seçilen ek varlıklar eklenir.
 >
 > Dikkat edilmesi gereken önemli hususlar:
 >
 > - Birincil varlık olarak müşterilerinizle ilgili en iyi ve güvenilir profil verilerine sahip varlığı seçin.
 > - Diğer varlıklarla birden fazla ortak özniteliği (ör. ad, telefon numarası veya e-posta adresi) olan varlığı birincil varlık olarak seçin.
 
-1. **Eşleştirme koşulları** sayfasında, varlıkları istediğiniz sırayla taşımak için yukarı ve aşağı oklarını yukarı taşıyı kullanın veya sürükleyip bırakın. Örneğin, **Contacts:eCommerce** öğesini birincil varlık, **CustomerLoyalty:Loyalty** öğesini ise ikincil varlık olarak seçin.
+1. **Eşleştirme koşulları** sayfasında, varlıkları istediğiniz sırayla taşımak için yukarı ve aşağı oklarını yukarı taşıyı kullanın veya sürükleyip bırakın. Örneğin, **eCommerceCustomers** öğesini birincil varlık, **loyCustomers** öğesini ise ikincil varlık olarak seçin.
 
-1. Eşleşme bulunup bulunmamasından bağımsız olarak varlıktaki her kaydın benzersiz bir müşteri olması için **Tüm kayıtları dahil et**'i seçin. Bu varlıktaki tüm diğer varlıklara ait kayıtlarla eşleşmeyen kayıtlar birleşik profile dahil edilir. Eşleşmesi olmayan kayıtlar tekil olarak adlandırılır.
+1. Eşleşme bulunup bulunmamasından bağımsız olarak varlıktaki her kaydın benzersiz bir müşteri olması için **Tüm kayıtları dahil et**'i seçin. Bu varlıktaki, diğer hiçbir varlığa ait kayıtlarla eşleşmeyen kayıtlar birleşik profile dahil edilir. Eşleşmesi olmayan kayıtlar tekil olarak adlandırılır.
   
 Birincil varlık *Contacts:eCommerce*, sonraki varlık *CustomerLoyalty:Loyalty* ile eşleştirilir. Birden fazla varlığı taşımanız durumunda ilk eşleştirme adımından kaynaklanan veri kümesi takip eden varlıkla eşleştirilir.
 
@@ -70,7 +72,7 @@ Bir varlık adının yanındaki uyarı, eşleştirme çifti için tanımlanmış
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Kural ekle bölmesinin ekran görüntüsü.":::
 
-   - **Varlık/Alan seç (ilk satır)**: Bir müşteri için benzersiz olan bir kayıt özelliğini belirtmek üzere ilgili bir varlık ve bir öznitelik seçin. Örneğin, bir telefon numarası veya e-posta adresi. Etkinlik türü özniteliklere göre eşleştirmekten kaçının. Örneğin, bir satın alma kimliği diğer kayıt türlerinde büyük olasılıkla eşleşme bulmaz.
+   - **Varlık/Alan seç (ilk satır)**: Bir müşteri için muhtemelen benzersiz olan bir varlık ve bir öznitelik seçin. Örneğin, bir telefon numarası veya e-posta adresi. Etkinlik türü özniteliklere göre eşleştirmekten kaçının. Örneğin, bir satın alma kimliği diğer kayıt türlerinde büyük olasılıkla eşleşme bulmaz.
 
    - **Varlık/Alan seç (ikinci satır)**: İlk satırda belirtilen varlıkla ilgili özniteliği seçin.
 
@@ -116,7 +118,7 @@ Eşleşme kuralları koşul kümelerini temsil eder. Varlıkları birden fazla �
 
 ### <a name="add-exceptions-to-a-rule"></a>Kurala özel durum ekleme
 
-Çoğu durumda, eşleşen varlık birleştirilmiş verilere sahip benzersiz müşteri profillerine yol açar. Nadiren görülen hatalı pozitif ve hatalı negatif durumlarını ele almak için bir eşleştirme kuralına özel durumlar tanımlayabilirsiniz. Özel durumlar eşleştirme kuralları işlendikten sonra uygulanır; özel durum ölçütlerini karşılayan tüm kayıtların eşleşmesini önleyin.
+Çoğu durumda, eşleşen varlık birleştirilmiş verilere sahip benzersiz müşteri profillerine yol açar. Nadiren görülen hatalı pozitif ve hatalı negatif durumlarını ele almak için bir eşleştirme kuralına yönelik özel durumlar tanımlayın. Özel durumlar eşleştirme kuralları işlendikten sonra uygulanır; özel durum ölçütlerini karşılayan tüm kayıtların eşleşmesini önleyin.
 
 Örneğin, eşleştirme kuralınız soyadı, şehir ve doğum tarihini birleştiriyorsa sistem aynı şehirde yaşayan aynı soyadına sahip ikizleri aynı profil olarak tanımlar. Birleştirdiğiniz varlıklardaki ad aynı değilse profilleri eşleştirmeyen bir özel durum belirtebilirsiniz.
 
@@ -134,7 +136,7 @@ Varsayılan eşleştirme mantığını geçersiz kılan koşullar belirtebilirsi
 |---------|---------|---------|
 |Her zaman eşleştir     | Her zaman eşleşen değerleri tanımlar.         |  Her zaman *Mike* ve *MikeR*'yi eşleştir.       |
 |Hiçbir zaman eşleştirme     | Hiçbir zaman eşleşmeyen değerleri tanımlar.        | *John* ve *Jonathan*'ı hiçbir zaman eşleştirme.        |
-|Özel atlama     | Sistemin eşleştirme aşamasında her zaman yok sayması gereken değerleri tanımlar. |  *11111* ve *Bilinmeyen* değerlerini eşleştirme sırasında yok say.        |
+|Atla            | Sistemin eşleştirme aşamasında her zaman yok sayması gereken değerleri tanımlar. |  *11111* ve *Bilinmeyen* değerlerini eşleştirme sırasında yok say.        |
 |Diğer ad eşlemesi    | Sistemin aynı değer olarak kabul edilmesi gereken değerleri tanımlama.         | *Joe* ve *Joseph*'i eşit say.        |
 
 1. **Özel**'i seçin.

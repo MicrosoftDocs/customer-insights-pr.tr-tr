@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213651"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304497"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Verileri birleştirmeden önce yinelenenleri kaldırın
 
@@ -47,7 +47,7 @@ Veri kaynağı düzeyindeki varlıkları zenginleştirdikten sonra, birleşme so
 
 1. **Yinelenen kayıtlar** sayfasında, bir varlık seçin ve yinelenenleri kaldırma kurallarını tanımlamak için **Kural ekle**'yi seçin.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Daha fazla göster vurgulanmış olarak Yinelenen kayıtlar sayfasının ekran görüntüsü":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Varlığın vurgulandığı ve Kural ekle bölmesinin görüntülendiği Yinelenen kayıtlar sayfasının ekran görüntüsü"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. **Kural ekle** bölmesinde, aşağıdaki bilgileri girin:
       - **Alan seçin**: Yinelemeleri denetlemek istediğiniz varlıktan kullanılabilir alanlar listesinden seçim yapın. Her bir müşteri için muhtemelen benzersiz olan alanları seçin. Örneğin, bir e-posta adresi veya ad, şehir ve telefon numarasının birleşimi.
@@ -80,9 +80,9 @@ Veri kaynağı düzeyindeki varlıkları zenginleştirdikten sonra, birleşme so
       - **En fazla doldurulan**: En fazla doldurulan varlık alanına sahip kaydı, kazanan kayıt olarak tanımlar. Bu, varsayılan birleştirme seçeneğidir.
       - **En son**: Kazanan kaydı, en yeni olma durumuna göre tanımlar. Yeni olma durumunu tanımlamak için bir tarih veya sayısal alan gerekir.
       - **En az yeni**: Kazanan kaydı, en az yeni olma durumuna göre tanımlar. Yeni olma durumunu tanımlamak için bir tarih veya sayısal alan gerekir.
-      
+
       Bir bağlama olayında, kazanan kayıt MAX(PK) veya daha büyük birincil anahtar değerine sahip olan kayıttır.
-      
+
    1. İsteğe bağlı olarak, bir varlığın her bir özniteliği üzerinde birleştirme tercihlerini tanımlamak için, bölmenin alt kısmındaki **Gelişmiş**'i seçin. Örneğin, en son e-postayı VE farklı kayıtlardan en eksiksiz adresi tutmayı seçebilirsiniz. Tüm özniteliklerini görmek için varlığı genişletin ve her bir öznitelik için hangi seçeneğin kullanılacağını tanımlayın. Yeni olma durumunu temel alan bir seçenek belirlerseniz yeni olma durumun tanımlayan bir tarih/saat alanı da belirtmeniz gerekir.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="En yeni e-posta ve tam adresi gösteren gelişmiş birleştirme tercihleri bölmesi":::
@@ -96,18 +96,5 @@ Veri kaynağı düzeyindeki varlıkları zenginleştirdikten sonra, birleşme so
 
 > [!div class="nextstepaction"]
 > [Birden çok varlık için sonraki adım: Eşleşen koşullar](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Varlık olarak yinelenenleri kaldırma çıktısı
-
-Yinelenenleri kaldırma işlemi, kaynak varlıkların her biri için yeni bir tekrarlanmış varlık oluşturur. Bu varlıklar **Varlıklar** sayfasındaki **Sistem** bölümünde **ConflationMatchPairs:CustomerInsights** ile birlikte **Deduplication_DataSource_Entity** adıyla bulunabilir.
-
-Yinelenenleri kaldırma çıkış varlığı aşağıdaki bilgileri içerir:
-
-- Kimlikler/Anahtarlar
-  - Birincil anahtar ve Alternatif kimlik alanları. Alternatif kimlik alanı, bir kayıt için tanımlanan tüm diğer kimliklerden oluşur.
-  - Deduplication_GroupId alanı, belirtilen yinelenenleri kaldırma alanlarına göre tüm benzer kayıtları gruplayan bir varlık içinde tanımlanan grubu veya kümeyi gösterir. Bu, sistem işleme amaçları için kullanılır. El ile yenilenenleri kaldırma kuralı veya sistem tanımlı yenilemeyi kaldırma kuralları yoksa bu alanı, yenilenenleri kaldırma çıkış varlığında bulamayabilirsiniz.
-  - Deduplication_WinnerId: Bu alan, tanımlanan gruplardan veya kümelerden kazanan kimliğini içerir. Deduplication_WinnerId bir kaydın Birincil anahtar değeriyle aynıysa bu, kaydın kazanan kayıt olduğu anlamına gelir.
-- Yinelenenleri kaldırma kurallarını tanımlamak için kullanılan alanlar.
-- Yinelenenleri kaldırma kurallarından hangilerinin uygulandığını ve eşleştirme algoritması tarafından döndürülen puanı gösteren Kural ve Puan alanları.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Segmentleri LinkedIn Ads'e aktarma (önizleme)
 description: Bağlantıyı yapılandırmayı ve LinkedIn Ads'e aktarmayı öğrenin.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196832"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304727"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentleri LinkedIn Ads'e aktarma (önizleme)
 
@@ -24,7 +24,7 @@ Eşleştirilmiş hedef kitleler oluşturmak için birleşik müşteri profilleri
 - Bir [LinkedIn Campaign Manager hesabı](https://business.linkedin.com/marketing-solutions/ads) ve ilgili yönetici kimlik bilgileri.
 - [LinkedIn Campaign Manager Hesap Kimliği](https://www.linkedin.com/help/lms/answer/a424270).
 - Customer Insights'ta [yapılandırılmış segmentler](segments.md).
-- Dışarı aktarılan segmentlerdeki birleşik müşteri profilleri, e-posta adresini temsil eden bir alan içerir.
+- LinkedIn'de [ilgili kişi hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) veya [şirket hedefleme](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) seçeneğini seçmenize bağlı olarak, dışarı aktarılan segmentler için en az bir belirli alan gerekir. [Dışa aktarma yapılandırılırken](#configure-an-export), olası alanlar **Veri eşleştirme** adımında listelenir.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 

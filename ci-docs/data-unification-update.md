@@ -1,11 +1,11 @@
 ---
-title: Birleştirme ayarlarını güncelleştirme
-description: Birleşme ayarlarındaki yinelenen kuralları, eşleştirme kurallarını veya birleşmiş alanları güncelleştirin.
-ms.date: 06/01/2022
+title: Müşteri, firma veya ilgili kişi birleştirme ayarlarını güncelleştirme
+description: Müşteri veya firma birleştirme ayarlarındaki yinelenen kuralları, eşleştirme kurallarını veya birleşmiş alanları güncelleştirin.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245618"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304359"
 ---
-# <a name="update-the-unification-settings"></a>Birleştirme ayarlarını güncelleştirme
+# <a name="update-unification-settings"></a>Birleştirme ayarlarını güncelleştirme
 
 Birleşik bir profil oluşturulduktan sonra, herhangi bir ayarı gözden geçirmek veya değiştirmek için aşağıdaki adımları uygulayın.
 
 1. **Veri** > **Birleştir**'e gidin.
 
-   :::image type="content" source="media/m3_unified.png" alt-text="Veriler birleşmiş olduktan sonra Verileri Bütünleştirme sayfasının ekran görüntüsü.":::
+   Bağımsız müşteriler (İşletme ile Müşteri arası) için, **Birleştirme** sayfası her bir birleşme adımı için birleşik müşteri profilleri ve kutucukları sayısını görüntüler.
+
+   :::image type="content" source="media/m3_unified.png" alt-text="Veriler birleşmiş olduktan sonra Verileri Bütünleştirme sayfasının ekran görüntüsü." lightbox="media/m3_unified.png":::
+
+   İş hesapları (İşletmeler arası) için, **Birleştirme** sayfası her bir firma birleştirme adımı için birleşik firma profilleri ve kutucukları sayısını görüntüler. İlgili kişiler birleşik ise, her bir ilgili kişi için birleştirme adımı için ilgili kişi profili ve kutucuğu sayısı görüntülenir. Güncelleştirmek istediğiniz öğelere bağlı olarak, **Firmaları Birleştir** veya **İlgili Kişileri Birleştir (Önizleme)** altında uygun kutucuğu seçin.
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="Firma ve ilgili kişi verileri birleştirildikten sonra Verileri Birleştirme sayfasının ekran görüntüsü." lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > **Eşleşen koşullar** kutucuğu yalnızca birden fazla varlık seçilmişse görüntülenir.
@@ -36,14 +42,14 @@ Birleşik bir profil oluşturulduktan sonra, herhangi bir ayarı gözden geçirm
    - Yinelenenleri kaldırma kurallarını veya birleştirme tercihlerini yönetmek için [kayıtları çoğaltın](#manage-deduplication-rules).
    - İki veya daha fazla varlık arasında eşleşen kuralları güncelleştirmek için [eşleşen koşullar](#manage-match-rules) vardır.
    - Alanları birleştirmek veya dışlamak için [birleşik müşteri alanları](#manage-unified-fields). Ayrıca, ilgili profilleri kümeler halinde gruplayabilirsiniz.
+   - Birleştirilmiş ilgili kişi alanlarının anlamsal türlerini yönetmek için [anlamsal alanlar](#manage-semantic-fields-for-unified-contacts).
+   - İlgili kişinin firma ilişkisinin yönetilmesi için [İlişkiler](#manage-contact-and-account-relationships).
 
 1. Değişikliklerinizi yaptıktan sonra, sonraki seçeneğinizi belirleyin:
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="Vurgulanan bütünleştirme seçenekleriyle Veri Bütünleştirme sayfasının ekran görüntüsü.":::
-
    - Birleştirilmiş profili güncelleştirmeden eşleştirme koşullarınızın (tekilleştirme ve eşleşme kuralları) kalitesini hızlı bir şekilde değerlendirmek için [eşleştirme koşullarını çalıştırın](#run-matching-conditions). **Yalnızca eşleşen koşulları çalıştır** seçeneği tek bir varlık için görüntülenmez.
-   - Eşleşen koşulları çalıştırmak ve unified customer profile varlığını bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden güncelleştirmek için [müşteri profillerini birleştirin](#run-updates-to-the-unified-customer-profile). Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](schedule-refresh.md) yenilenecek.
-   - Eşleşen koşulları çalıştırmak ve unified customer profile varlığını ve tüm bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) güncelleştirmek için [müşteri profillerini ve bağımlılıkları birleştirin](#run-updates-to-the-unified-customer-profile). Tüm işlemler otomatik olarak yeniden çalıştırıldı.
+   - Eşleşen koşulları çalıştırmak ve birleştirilmiş profil varlığını bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden güncelleştirmek için [profilleri birleştirin](#run-updates-to-the-unified-profile). Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](schedule-refresh.md) yenilenecek.
+   - Eşleşen koşulları çalıştırmak, birleştirilmiş profil varlığını ve tüm bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) güncelleştirmek için [profilleri ve bağımlılıkları birleştirin](#run-updates-to-the-unified-profile). Tüm işlemler otomatik olarak yeniden çalıştırıldı. İşletmeler arası ortamda, birleştirilmiş profilleri güncelleştiren firma ve ilgili kişi varlıkları üzerinde birleşme işlemi yapılır.
 
 ## <a name="edit-source-fields"></a>Kaynak alanları düzenleme
 
@@ -55,11 +61,11 @@ Bir özniteliği veya varlığı zaten birleştirilmiş bir varlık varsa, kald�
 
    Eşlenmiş ve eşlenmemiş alanların sayısı görüntülenir.
 
-1. Başka öznitelikler veya varlıklar eklemek için **Varlık ve alan seç**'i belirleyin. Özniteliklerinizi ve ilgilendiğiniz varlıkları bulup seçmek için aramayı veya kaydırmayı kullanın. **Uygula**'yı seçin.
+1. Başka öznitelikler veya varlıklar eklemek için **Varlık ve alan seç**'i belirleyin.
 
-1. İsteğe bağlı olarak, bir varlık için birincil anahtarı, öznitelik türlerini değiştirebilir ve **Akıllı eşlemeyi** açıp kapatabilirsiniz. Daha fazla bilgi için bkz. [Öznitelikler için birincil anahtar ve anlamsal türünü seçme](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. İsteğe bağlı olarak, bir varlık için birincil anahtarı, öznitelik türlerini değiştirebilir ve **Akıllı eşlemeyi** açıp kapatabilirsiniz. Daha fazla bilgi için bkz. [Kaynak alanlarını seçme](map-entities.md).
 
-1. Yinelenenleri kaldırma kurallarındaki değişiklikleri yapmak için **İleri**'yi, [Birleşme ayarlarını güncelleştirmek](#update-the-unification-settings) için **Kaydet ve Kapat**' ı ve geri dönü seçin.
+1. Yinelenenleri kaldırma kurallarındaki değişiklikleri yapmak için **İleri**'yi seçin veya **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştir](#update-unification-settings)'e geri dönün.
 
 ## <a name="manage-deduplication-rules"></a>Yinelenenleri kaldırma kurallarını yönet
 
@@ -69,7 +75,7 @@ Bir özniteliği veya varlığı zaten birleştirilmiş bir varlık varsa, kald�
 
    Bulunan yinelenen kayıt sayısı, **Yinelemeler** altında görüntülenir. **Yinelemeleri kaldırılan kayıtlar** sütunu, hangi varlıkların yinelenen kayıtlar ve yinelenen kayıt yüzdesi olduğunu gösterir.
 
-1. Zenginleştirilmiş bir varlık eklediyseniz **Zenginleştirilmiş varlıkları kullan**'ı seçin. Daha fazla bilgi için bkz. [Veri kaynakları için zenginleştirme](data-sources-enrichment.md).
+1. Zenginleştirilmiş bir varlık kullanmak için **Zenginleştirilmiş varlıkları kullan**'ı seçin. Daha fazla bilgi için bkz. [Veri kaynakları için zenginleştirme](data-sources-enrichment.md).
 
 1. Yinelenenleri kaldırma kurallarını yönetmek için, aşağıdaki seçeneklerden birini belirleyin:
    - **Yeni bir kural oluşturun**: Uygun varlık altında **Kural ekle**'yi seçin. Daha fazla bilgi için bkz. [Yinelenenleri kaldırma kuralları](remove-duplicates.md#define-deduplication-rules).
@@ -83,11 +89,9 @@ Bir özniteliği veya varlığı zaten birleştirilmiş bir varlık varsa, kald�
    1. **Birleştirme tercihlerini düzenle**'yi seçin ve **Korunacak kayıt** seçeneğini değiştirin.
    1. Bir varlığın her bir özniteliklerindeki birleştirme tercihlerini değiştirmek için, **Gelişmiş**'i seçin ve gerekli değişiklikleri yapın.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="En son e-posta ve en kapsamlı adres gösteren gelişmiş birleştirme tercihlerinin ekran görüntüsü":::
-
    1. **Bitti**'yi seçin.
 
-1. Eşleşme koşullarında değişiklikleri yapmak için **İleri**'yi, [Birleşme ayarlarını güncelleştirmek](#update-the-unification-settings) için **Kaydet ve Kapat**' ı ve geri dönü seçin.
+1. Eşleşme koşullarında değişiklikleri yapmak için **İleri**'yi seçin veya **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştir](#update-unification-settings)'e geri dönün.
 
 ## <a name="manage-match-rules"></a>Eşleşme Kurallarını yönetme
 
@@ -98,7 +102,7 @@ Eşleştirme parametrelerinin çoğunu yeniden yapılandırabilir ve üzerinde i
    :::image type="content" source="media/m3_match_edit.png" alt-text="Kurallarla eşleşme kuralları ve koşullar sayfasının ekran görüntüsü." lightbox="media/m3_match_edit.png":::
 
    Sayfa, eşleştirme sırası ve tanımlı kurallar ve aşağıdaki istatistikleri görüntüler:
-   - **Benzersiz kaynak kayıtları** son eşleşme çalıştırmasında işlenmiş olan tek tek kaynak kayıt sayısını gösterir.
+   - **Benzersiz kaynak kayıtları**, son eşleşme çalıştırmasında işlenmiş olan kaynak kaydı sayısını gösterir.
    - **Eşleşen ve eşleştirilmeyen kayıtlar** eşleştirme kuralları işlendikten sonra kaç benzersiz kaydın kaldığını vurgular.
    - **Yalnızca eşleşen kayıtlar** tüm eşleştirme çiftleriniz arasındaki eşleşmelerin sayısını gösterir.
 
@@ -120,7 +124,7 @@ Eşleştirme parametrelerinin çoğunu yeniden yapılandırabilir ve üzerinde i
    - **Bir kuralı çoğaltın**: Kuralı seçin ve sonra da değişikliklerle birlikte benzer bir kural oluşturmak için **Yineleyin**.
    - **Kural silme**: kuralı seçin ve ardından **Silin**.
 
-1. Birleştirilen alanlarda değişiklikleri yapmak için **İleri**'yi, [Birleşme ayarlarını güncelleştirmek](#update-the-unification-settings) için **Kaydet ve Kapat**' ı ve geri dönü seçin.
+1. Birleştirilen alanlarda değişiklikleri yapmak için **İleri**'yi seçin veya **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştir](#update-unification-settings)'e geri dönün.
 
 ## <a name="manage-unified-fields"></a>Birleşik alanları yönetme
 
@@ -130,7 +134,28 @@ Eşleştirme parametrelerinin çoğunu yeniden yapılandırabilir ve üzerinde i
 
 1. Birleştirilmiş ve dışlanan alanları gözden geçirin ve gerekli değişiklikleri yapın. CustomerID anahtarını veya grup profillerini kümeler halinde ekleyin veya düzenleyin. Daha fazla bilgi için bkz. [Müşteri birleştirme alanları](merge-entities.md).
 
-1. Birleşme ayarlarını gözden geçirmek ve [birleştirilmiş profili ve bağımlılıkları güncelleştirmek için](#run-updates-to-the-unified-customer-profile) **İleri**'yi ya da daha fazla değişiklik yapmak için **Kaydet ve kapat**'ı seçin [Birleştirme ayarlarını güncelleştirme](#update-the-unification-settings)'ye dönün.
+1. Müşteriler veya firmalar için, [birleştirilmiş profili ve bağımlılıkları gözden geçirmek ve güncelleştirmek](#run-updates-to-the-unified-profile) için **İleri**'yi seçin. Veya **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştir](#update-unification-settings)'e geri dönün.
+
+   İlgili kişiler için anlamsal alanları yönetmek üzere **İleri**'yi seçin. Veya **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştir](#update-unification-settings)'e geri dönün.
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>Birleştirilmiş ilgili kişiler için anlamsal alanları yönetme
+
+1. **Anlamsal alanlar** kutucuğunda **Düzenle**'yi seçin.
+
+1. Birleşik bir alanın anlam türünü değiştirmek için yeni bir tür seçin. Daha fazla bilgi için bkz. [Birleştirilmiş ilgili kişiler için anlamsal alanları tanımlama](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts).
+
+1. Firma ve ilgili kişi ilişkisini yönetmek için **İleri**'yi seçin veya **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştir](#update-unification-settings)'e geri dönün.
+
+## <a name="manage-contact-and-account-relationships"></a>İlgili kişi ve firma ilişkilerini yönetme
+
+1. **İlişkiler** kutucuğunda **Düzenle**'yi seçin.
+
+1. İlgili kişi ve firma ilişkisini değiştirmek için aşağıdaki bilgilerden birini değiştirin:
+
+   - **İlgili kişi varlığından gelen yabancı anahtar**: İlgili kişi varlığınızı başka bir firmaya bağlayan özniteliği seçin.
+   - **Firma varlığına**: İlgili kişiyle ilişkili firma varlığını seçin.
+
+1. Birleşme ayarlarını gözden geçirmek ve [birleştirilmiş profili ve bağımlılıkları güncelleştirmek için](#run-updates-to-the-unified-profile) **İleri**'yi seçin ya da daha fazla değişiklik yapmak için **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştirme](#update-unification-settings)'ye dönün.
 
 ## <a name="run-matching-conditions"></a>Eşleştirme koşullarını çalıştırma
 
@@ -148,18 +173,15 @@ Eşleştirme koşullarını çalıştır, yalnızca veri kaldırma ve eşleşme 
 
 1. Değişiklik yapmak için bkz. [Yinelemeleri kaldırma kurallarını yönet](#manage-deduplication-rules) veya [Eşleşme kurallarını yönet](#manage-match-rules).
 
-1. Eşleştirme işlemini yeniden çalıştırın veya [müşteri profilinde güncelleştirmeleri çalıştırın](#run-updates-to-the-unified-customer-profile).
+1. Eşleştirme işlemini yeniden çalıştırın veya [profilde güncelleştirmeleri çalıştırın](#run-updates-to-the-unified-profile).
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>Unified customer profile'da güncelleştirmeleri çalıştırma
+## <a name="run-updates-to-the-unified-profile"></a>Birleştirilmiş profilde güncelleştirmeleri çalıştırma
 
-1. **Veri** > **Birleştir** sayfasından, aşağıdakileri seçin:
+- Eşleşen koşulları çalıştırmak ve birleştirilmiş profil varlığını bağımlılıkları (müşteri kartları, zenginleştirmeler, segmentler veya ölçüler gibi) *etkilemeden* güncelleştirmek için **Müşteri profillerini birleştir**'i seçin. Firmalar için, **Firmaları birleştir** > **Profilleri birleştir**'i seçin. İlgili kişiler için, **İlgili kişileri birleştir (önizleme)** > **Profilleri birleştir**'i seçin. Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](schedule-refresh.md) yenilenecek.
+- Eşleşen koşulları çalıştırmak, birleştirilmiş profili güncelleştirmek ve tüm bağımlılıkları çalıştırmak için **Müşteri profillerini ve bağımlılıklarını birleştir**'i seçin. Tüm işlemler otomatik olarak yeniden çalıştırıldı. Firmalar ve ilgili kişiler için, **Firmaları birleştir** >  **Müşteri profillerini ve bağımlılıklarını birleştir**'i seçin. Eşleşen koşullar hem firmalar hem de ilgili kişiler için çalıştırılarak birleşik profillerin her ikisini de güncelleştirilir ve diğer tüm bağımlılıklar çalıştırılır.
 
-   - **Müşteri profillerini birleştir**: Bağımlılıkları (zenginleştirmeler, segmentler veya ölçüler gibi) etkilemeden eşleşen koşulları çalıştırır ve Unified customer profile varlığını güncelleştirir. Bağımlı işlemler çalışmaz, ancak [yenileme zamanlamasında tanımlandığı gibi](schedule-refresh.md) yenilenecek.
+**Kaynak alanları** dışındaki tüm kutucuklarda **Kuyruğa Alındı** veya **Yenileniyor** durumu gösterilir.
 
-   - **Müşteri profillerini ve bağımlılıklarını birleştir**: Eşleşen koşulları çalıştırır ve birleştirilmiş profili ve tüm bağımlılıkları güncelleştirir. Tüm işlemler otomatik olarak yeniden çalıştırıldı. Tüm aşağı akış işlemleri tamamlandıktan sonra, müşteri profili güncelleştirilmiş verileri yansıtır.
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   **Yinelenen kayıtlar**, **Eşleşen koşullar** ve **Birleşik müşteri alanları** kutucukları **Kuyruğa alındı** veya **Yenileniyor** durumunu gösterir.
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-Bir başarılı çalıştırmanın sonuçları, unified customer profile sayısını gösteren **Bütünleştirme** sayfasında görüntülenir.
+Bir başarılı çalıştırmanın sonuçları, birleştirilmiş profil sayısını gösteren **Birleştirme** sayfasında görüntülenir.
