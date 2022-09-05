@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245949"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352825"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Tanılama günlüklerini dışarı aktarma (önizleme)
 
@@ -36,8 +36,8 @@ Customer Insights, aşağıdaki olay günlüklerini gönderir:
 
 - Etkin bir [Azure Aboneliği](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Customer Insights'ta [Yönetici](permissions.md#admin) izinleri.
+- Azure Depolama Alanı, Azure Olay Hub'ı veya Azure Log Analytics için [hedef gereksinimleri](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) karşılayan, Azure'daki geçerli bir kaynak.
 - Azure'daki hedef kaynakta [Katkıda Bulunan ve Kullanıcı Erişim Yöneticisi rolü](/azure/role-based-access-control/role-assignments-portal). Kaynak; Azure Data Lake Storage hesabı, Azure Olay Hub'ı veya Azure Log Analytics çalışma alanı olabilir. Bu izin, Customer Insights'ta tanılama ayarlarını yapılandırırken gereklidir ancak başarılı kurulumdan sonra değiştirilebilir.
-- Azure Depolama, Azure Olay Hub'ı veya Azure Log Analytics için [hedef gereksinimleri](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) karşılanır.
 - Kaynağın ait olduğu kaynak grubunda en azından **Okuyucu** rolü.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Azure İzleyici ile tanılamayı ayarlama

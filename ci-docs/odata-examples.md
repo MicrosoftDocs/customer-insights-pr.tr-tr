@@ -1,27 +1,27 @@
 ---
 title: Customer Insights API'leri için OData sorgusu örnekleri
 description: Verileri incelemek üzere Customer Insights API'lerini sorgulamak için genel olarak kullanılan Açık Veri Protokolü (OData) örnekleri.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121586"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387226"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Customer Insights API'leri için OData sorgusu örnekleri
 
 Açık Veri Protokolü (OData), HTTP gibi temel protokollerde oluşturulmuş bir veri erişim protokolüdür. Web için REST gibi sık kabul edilen yöntemlerden yararlanır. OData hizmetlerini tüketmek için kullanılabilen çeşitli kitaplık ve araçlar vardır.
 
-Bu makalede, [Customer Insights API'lerine](apis.md) dayalı olarak kendi uygulamanızı oluşturmak için size yardımcı olacak bazı sık kullanılan örnek sorgular listelenmektedir.
+[Customer Insights API'lerine](apis.md) dayalı olarak kendi uygulamalarınızı oluşturmanıza yardımcı olmak için sık kullanılan bazı örnek sorguları inceleyin.
 
-Sorgu örneklerini hedef ortamlarda çalışmak için değiştirmeniz gerekir: 
+Sorgu örneklerini hedef ortamlarda çalışmak için değiştirin:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` {instanceId}, sorgulamak istediğiniz Customer Insights ortamının GUID'sidir. [ListAllInstances işlemi](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances), erişiminiz olan {InstanceId} öğesini bulmanıza izin verir.
 - {CID}: Birleşik bir müşteri kaydının GUID'si. Örnek: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Sorgu örneklerini hedef ortamlarda çalışmak için değiştirmeniz gerekir:
 
 ## <a name="customer"></a>Customer
 
-Aşağıdaki tabloda *Müşteri* varlığına yönelik bir örnek sorgu kümesi yer almaktadır.
+*Müşteri* varlığı için örnek sorgular.
 
 |Sorgu türü |Örnek  | Not  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Aşağıdaki tabloda *Müşteri* varlığına yönelik bir örnek sorgu kümesi 
 
 ## <a name="unified-activity"></a>Birleşik etkinlik
 
-Aşağıdaki tabloda *UnifiedActivity* varlığına yönelik bir örnek sorgu kümesi yer almaktadır.
+*UnifiedActivity* varlığı için örnek sorgular.
 
 |Sorgu türü |Örnek  | Not  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Aşağıdaki tabloda *UnifiedActivity* varlığına yönelik bir örnek sorgu k�
 
 ## <a name="other-examples"></a>Diğer örnekler
 
-Aşağıdaki tabloda diğer varlıklara yönelik bir örnek sorgu kümesi yer almaktadır.
+Diğer varlıklar için örnek sorgular.
 
 |Sorgu türü |Örnek  | Not  |
 |---------|---------|---------|
