@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081981"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411855"
 ---
 # <a name="predictions-overview"></a>Tahminlere genel bakış
 
@@ -39,14 +39,11 @@ Verileri tahmin ederek başlamanın en kolay yolu, genellikle kullanıma hazır 
 
 > [!TIP]
 > İş kullanım örneğinin doğru şekilde bilgilendirmesini sağlamak için kullanıma hazır modelleri güncelleştirilmiş verilerle düzenli olarak yenilemenizi öneririz. Sistem yeni veya güncelleştirilmiş veri kaynakların aldığında veriler anlık olarak yenilenir. Ancak, modeller bu durumda yalnızca yeniden puanlanır ve mevcut eğitim verilerini kullanmaya devam eder.
-> 
+>
 > Yapılandırma deneyiminde model yeniden eğitme zamanlamasını ayarlayarak bir **Güncelleştirme zamanlaması** yapılandırabilirsiniz. Model, istediğiniz zaman değiştirebileceğiniz bu zamanlamada yeniden eğitilir ve yeniden puanlanır.
-
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learning tümleştirmesi
 
 Bir kuruluş zaten Azure Machine Learning denemelerini temel alan makine öğrenimi senaryoları kullanıyorsa, Customer Insights'daki özel modeller özelliği noktaların bağlanmasına yardımcı olur. İçgörü oluşturmak istediğiniz verileri seçmenize ve sonuçları birleşik müşteri profillerinizle eşlemenize yardımcı olacak iş akışları oluşturun. Daha fazla bilgi için bkz. [Özel makine öğrenimi modelleri](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder tahmini
-
-Bazen, veri kümeleri tamamlanmamış ve bazı değerler eksik olabilir. Customer Insights, Müşteri varlığı ve segmentler için eksik değerleri tahmin etmenize yardımcı olabilir. Daha fazla bilgi için bkz. [Kısmi verilerinizi tahminlerle tamamlama](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

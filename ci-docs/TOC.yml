@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Azure Machine Learning'den özel modeller kullanma
           href: custom-models.md
-        - name: Kısmen eksik verileri tamamlama
-          href: predictions.md
     - name: Örnek kılavuzlar
       items:
         - name: CLV tahmini için örnek kılavuz

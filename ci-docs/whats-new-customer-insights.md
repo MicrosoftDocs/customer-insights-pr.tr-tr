@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387318"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409381"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'teki yenilikler
 
@@ -41,6 +41,14 @@ Daha fazla bilgi için bkz. [Birleşik ilgili kişi profili oluşturma](data-uni
 Yeni ilgili kişi birleştirme özelliği sayesinde ilgili kişilerden, firmalardan veya her ikisinden ölçütleri kullanarak ilgili kişi segmentleri oluşturabilirsiniz. Bu segmentler, diğer hizmetlerde etkinleştirmek için dışarı aktarılabilir.
 
 Daha fazla bilgi için bkz. [Dışa aktarımlara genel bakış](export-destinations.md).
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Microsoft Dataverse ile uyumlu dağıtım bölgeleri
+
+Yeni bir Customer Insights ortamı oluştururken, servisin dağıtılmasını ve barındırılmasını istediğiniz bölgeyi seçebilirsiniz. Bölge seçimini Microsoft Dataverse ve Power Platform ile uyumlu olacak şekilde güncelleştirdik.
+
+Artık varolan Microsoft Dataverse ortamınız veya Azure Data Lake Storage hesabınızla aynı bölgeyi (Bu seçeneği belirlerseniz) Customer Insights kullanılabilirliğine bağlı olarak kolayca seçebilirsiniz.
+
+Daha fazla bilgi için bkz. [Yeni bir ortam oluşturma](create-environment.md) ve [Coğrafyaya göre ürün kullanılabilirliği](https://dynamics.microsoft.com/availability-reports/).
 
 ## <a name="july-2022-updates"></a>Temmuz 2022 güncelleştirmeleri
 

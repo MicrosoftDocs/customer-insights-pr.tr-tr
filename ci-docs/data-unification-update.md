@@ -1,7 +1,7 @@
 ---
 title: Müşteri, firma veya ilgili kişi birleştirme ayarlarını güncelleştirme
 description: Müşteri veya firma birleştirme ayarlarındaki yinelenen kuralları, eşleştirme kurallarını veya birleşmiş alanları güncelleştirin.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304359"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392495"
 ---
 # <a name="update-unification-settings"></a>Birleştirme ayarlarını güncelleştirme
 
@@ -38,7 +38,7 @@ Birleşik bir profil oluşturulduktan sonra, herhangi bir ayarı gözden geçirm
    > **Eşleşen koşullar** kutucuğu yalnızca birden fazla varlık seçilmişse görüntülenir.
 
 1. Güncelleştirmek istediğinizi seçin:
-   - Varlık veya öznitelik eklemek ya da öznitelik türlerini değiştirmek için [kaynak alanlar](#edit-source-fields).
+   - Öznitelik veya varlık eklemek ya da öznitelik türlerini değiştirmek için [kaynak alanlar](#edit-source-fields). Bir özniteliği kaldırmak için bkz. [Birleşik bir alanı kaldırma](#remove-a-unified-field). Bir varlığı kaldırmak için bkz. [Birleşik bir varlığı kaldırma](#remove-a-unified-entity).
    - Yinelenenleri kaldırma kurallarını veya birleştirme tercihlerini yönetmek için [kayıtları çoğaltın](#manage-deduplication-rules).
    - İki veya daha fazla varlık arasında eşleşen kuralları güncelleştirmek için [eşleşen koşullar](#manage-match-rules) vardır.
    - Alanları birleştirmek veya dışlamak için [birleşik müşteri alanları](#manage-unified-fields). Ayrıca, ilgili profilleri kümeler halinde gruplayabilirsiniz.
@@ -53,8 +53,6 @@ Birleşik bir profil oluşturulduktan sonra, herhangi bir ayarı gözden geçirm
 
 ## <a name="edit-source-fields"></a>Kaynak alanları düzenleme
 
-Bir özniteliği veya varlığı zaten birleştirilmiş bir varlık varsa, kaldıramazsınız.
-
 1. **Kaynak alanları** kutucuğunda **Düzenle**'yi seçin.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Birincil anahtarların, eşlenen ve eşlenmemiş alanların sayısını gösteren kaynak alanları sayfasının ekran görüntüsü":::
@@ -66,6 +64,80 @@ Bir özniteliği veya varlığı zaten birleştirilmiş bir varlık varsa, kald�
 1. İsteğe bağlı olarak, bir varlık için birincil anahtarı, öznitelik türlerini değiştirebilir ve **Akıllı eşlemeyi** açıp kapatabilirsiniz. Daha fazla bilgi için bkz. [Kaynak alanlarını seçme](map-entities.md).
 
 1. Yinelenenleri kaldırma kurallarındaki değişiklikleri yapmak için **İleri**'yi seçin veya **Kaydet ve kapat**'ı seçin ve [Birleştirme ayarlarını güncelleştir](#update-unification-settings)'e geri dönün.
+
+### <a name="remove-a-unified-field"></a>Birleşik alanı kaldırma
+
+Birleştirilmiş bir alanı kaldırmak için alan; segmentler, ölçüler, zenginleştirme veya ilişkiler gibi bağımlılıklardan kaldırılmalıdır.
+
+1. Alanın tüm bağımlılıkları kaldırıldığında, **Veri** > **Birleştir**'e gidin.
+
+1. **Birleşik müşteri alanları** kutucuğunda **Düzenle**'yi seçin.
+
+1. Alanın tüm oluşumlarını seçin ve **Hariç Tut**'u seçin.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Seçili alanları ve Dışlama düğmesini gösteren Birleşik alanlar sayfasının ekran görüntüsü":::
+
+1. Onaylamak için **Bitti** öğesini ve sonra **Kaydet ve kapat** öğesini seçin.
+
+   > [!TIP]
+   > "Birleştirme kaydedilemedi. Aşağı akış bağımlılıkları nedeniyle belirtilen kaynak değiştirilemiyor veya silinemiyor." mesajını görürseniz alan hala aşağı akış bağımlılığında kullanılıyordur.
+
+1. Alan, yinelenen kayıtlara veya eşleştirme koşullarına yönelik bir kuralda kullanılıyorsa aşağıdaki adımları uygulayın. Aksi halde sonraki adıma gidin.
+   1. **Kayıtları yinele** kutucuğunda **Düzenle**'yi seçin.
+   1. Alanı, varsa kullanıldığı tüm kurallardan kaldırın ve sonra **İleri**'yi seçin.
+   1. **Eşleştirme koşulları** sayfasında, alanı varsa içinde kullanıldığı tüm kurallardan kaldırın ve ardından **Kaydet ve Kapat**'ı seçin.
+   1. **Birleştir** > **Müşteri profillerini ve bağımlılıklarını birleştir**'i seçin. Bir sonraki adıma geçmeden önce, birleştirmenin tamamlanmasını bekleyin.
+
+1. **Kaynak alanları** kutucuğunda **Düzenle**'yi seçin.
+
+1. **Varlık ve alan seç**'i seçin ve alanın her oluşumunun yanındaki onay kutusunu temizleyin.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Temizlenen onay kutularını gösteren varlık ve alan seçme iletişim kutusu ekran görüntüsü":::
+
+1. **Uygula**'yı seçin.
+
+1. **Kaydet ve kapat**'ı seçin.
+
+1. Birleştirilmiş profili güncelleştirmek için **Birleştir** > **Müşteri profillerini ve bağımlılıklarını birleştir**'i seçin.
+
+### <a name="remove-a-unified-entity"></a>Birleşik bir varlığı kaldırma
+
+Birleştirilmiş bir varlığı kaldırmak için varlık; segmentler, ölçüler, zenginleştirme veya ilişkiler gibi bağımlılıklardan kaldırılmalıdır.
+
+1. Varlığın tüm bağımlılıkları kaldırıldığında, **Veri** > **Birleştir**'e gidin.
+
+1. **Birleşik müşteri alanları** kutucuğunda **Düzenle**'yi seçin.
+
+1. Varlığın tüm alanlarını seçin ve ardından **Hariç Tut**'u seçin.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Seçili bir varlığın tüm alanlarını ve Dışlama düğmesini gösteren Birleşik alanlar sayfasının ekran görüntüsü":::
+
+1. Onaylamak için **Bitti** öğesini ve sonra **Kaydet ve kapat** öğesini seçin.
+
+   > [!TIP]
+   > "Birleştirme kaydedilemedi. Aşağı akış bağımlılıkları nedeniyle belirtilen kaynak değiştirilemiyor veya silinemiyor." mesajını görürseniz varlık hala aşağı akış bağımlılığında kullanılıyordur.
+
+1. **Kayıtları yinele** kutucuğunda **Düzenle**'yi seçin.
+
+1. Varsa, varlıktan tüm kuralları kaldırın ve sonra **İleri**'yi seçin.
+
+1. **Eşleştirme koşulları** sayfasında varlığı seçin ve ardından **Sil**'i seçin.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Varlık seçiliyken Sil düğmesini gösteren Eşleştirme koşulları sayfasının ekran görüntüsü":::
+
+1. **Kaydet ve kapat**'ı seçin.
+
+1. **Kaynak alanları** kutucuğunda **Düzenle**'yi seçin.
+
+1. **Varlık ve alan seç**'i seçin ve varlığın yanındaki onay kutusunu temizleyin.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Temizlenen varlık onay kutusunu gösteren varlık ve alan seçme iletişim kutusu ekran görüntüsü":::
+
+1. **Uygula**'yı seçin.
+
+1. **Kaydet ve kapat**'ı seçin.
+
+1. Birleştirilmiş profili güncelleştirmek için **Birleştir** > **Müşteri profillerini ve bağımlılıklarını birleştir**'i seçin.
 
 ## <a name="manage-deduplication-rules"></a>Yinelenenleri kaldırma kurallarını yönet
 

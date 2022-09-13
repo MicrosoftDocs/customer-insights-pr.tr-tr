@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 description: Customer Insights ve Microsoft Dataverse'e nasıl bağlanılacağını öğrenin ve Dataverse'e aktarılan çıkış varlıklarını anlayın.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303853"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424333"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
@@ -136,6 +136,7 @@ Bağlantı kaldırma işlemi bağımlılıklar nedeniyle başarısız olursa, ba
 Customer Insights'ın bazı çıktı varlıkları, Dataverse'de tablolar olarak kullanılabilir. Aşağıdaki bölümlerde bu tabloların beklenen şeması açıklanmaktadır.
 
 - [Müşteri profili](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Customer Insights'ın bazı çıktı varlıkları, Dataverse'de tablolar olarak 
 
 ### <a name="customerprofile"></a>Müşteri profili
 
-Bu tablo, Customer Insights'dan gelen birleştirilmiş müşteri profilini içerir. Unified customer profile şeması, veri birleşme işleminde kullanılan varlıklara ve özniteliklere bağlıdır. Bir müşteri profili şeması genellikle [CustomerProfile'ın Common Data Model tanımındaki](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) özniteliklerin alt kümesini içerir.
+Bu tablo, Customer Insights'dan gelen birleştirilmiş müşteri profilini içerir. Unified customer profile şeması, veri birleşme işleminde kullanılan varlıklara ve özniteliklere bağlıdır. Bir müşteri profili şeması genellikle [CustomerProfile'ın Common Data Model tanımındaki](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) özniteliklerin alt kümesini içerir. B-B senaryosu için müşteri profili birleşik firmalar içerir ve şema genellikle [Firmanın Common Data Model tanımındaki](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account) bir öznitelik alt kümesini içerir.
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile bir ilgili kişiyle ilgili birleşik bilgileri içerir. İlgili kişiler, B-B senaryosunda [bir firmayla eşlenen bireylerdir](data-unification-contacts.md).
+
+| Column                       | Türü                | Tanım     |
+| ---------------------------- | ------------------- | --------------- |
+|  BirthDate            | DateTime       |  İlgili kişinin doğum tarihi               |
+|  City                 | Metin |  İlgili kişi adresindeki şehir               |
+|  ContactId            | Metin |  İlgili kişi profilinin kimliği               |
+|  ContactProfileId     | Benzersiz tanımlayıcı   |  İlgili kişi için GUID               |
+|  CountryOrRegion      | Metin |  İlgili kişi adresindeki Ülke/Bölge               |
+|  CustomerId           | Metin |  İlgili kişinin eşlendiği hesabın kimliği               |
+|  EntityName           | Metin |  Verilerin geldiği varlık                |
+|  FirstName            | Metin |  İlgili kişinin adı               |
+|  Cinsiyet               | Metin |  İlgili kişinin cinsiyeti               |
+|  Id                   | Metin |  `Identifier` öğesine göre belirleyici GUID               |
+|  Tanımlayıcı           | Metin |  İlgili kişi profilinin dahili kimliği: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | Metin |  İlgili kişinin iş unvanı               |
+|  LastName             | Metin |  İlgili kişinin soyadı               |
+|  PostalCode           | Metin |  İlgili kişi adresindeki ZIP kodu               |
+|  PrimaryEmail         | Metin |  İlgili kişinin e-posta adresi               |
+|  PrimaryPhone         | Metin |  İlgili kişinin telefon numarası               |
+|  StateOrProvince      | Metin |  İlgili kişi adresindeki eyalet veya il               |
+|  StreetAddress        | Metin |  İlgili kişi adresindeki cadde               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 AlternateKey tablosu, birleştirme işlemine katılan varlıkların anahtarlarını içerir.
 
-|Column  |Tür  |Açıklama  |
+|Column  |Türü  |Tanım  |
 |---------|---------|---------|
-|DataSourceName    |String         | Veri kaynağının adı. Örneğin: `datasource5`        |
-|EntityName        | String        | Customer Insights'daki varlığın adı. Örneğin: `contact1`        |
-|AlternateValue    |String         |Müşteri kimliğiyle eşlenen alternatif kimlik. Örnek: `cntid_1078`         |
-|KeyRing           | Çok satırlı metin        | JSON değeri  </br> Örnek: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | Birleşik müşteri profili kimliği.         |
-|AlternateKeyId     | GUID         |  msdynci_identifier öğesine göre AlternateKey belirleyici GUID       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Örnek: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Metin         | Veri kaynağının adı. Örneğin: `datasource5`        |
+|EntityName        | Metin        | Customer Insights'daki varlığın adı. Örneğin: `contact1`        |
+|AlternateValue    |Metin         |Müşteri kimliğiyle eşlenen alternatif kimlik. Örnek: `cntid_1078`         |
+|KeyRing           | Metin        | JSON değeri  </br> Örnek: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Metin        | Birleşik müşteri profili kimliği.         |
+|AlternateKeyId     | Benzersiz tanımlayıcı        |  `Identifier` öğesine göre AlternateKey belirleyici GUID      |
+|Tanımlayıcı |   Metin      |   `DataSourceName|EntityName|AlternateValue`  </br> Örnek: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Bu tablo, Customer Insights'da bulunan kullanıcıların etkinliklerini içerir.
 
 | Column            | Türü        | Tanım                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | Müşteri profili Kimliği                                                                      |
-| ActivityId        | String      | Müşteri etkinliğinin dahili kimliği (birincil anahtar)                                       |
-| SourceEntityName  | String      | Kaynak varlığın adı                                                                |
-| SourceActivityId  | String      | Kaynak varlıktaki birincil anahtar                                                       |
-| ActivityType      | String      | Özel etkinliğin anlamsal etkinlik türü veya adı                                        |
-| ActivityTimeStamp | DATETIME    | Etkinlik zaman damgası                                                                      |
-| Title             | String      | Etkinliğinin başlığı veya adı                                                               |
-| Tanım       | String      | Etkinlik açıklaması                                                                     |
-| URL               | String      | Etkinliğe özgü bir harici URL'ye bağlantı                                         |
-| SemanticData      | JSON Dizesi | Etkinlik türüne özgü anlamsal eşleme alanları için anahtar değer çiftlerinin listesini içerir |
-| RangeIndex        | String      | Etkinlik zaman çizelgesini ve etkin aralık sorgularını sıralamak için kullanılan Unix zaman damgası |
-| mydynci_unifiedactivityid   | GUID | Müşteri etkinliğinin dahili kimliği (ActivityId) |
+| CustomerId        | Metin      | Müşteri profili Kimliği                                                                      |
+| ActivityId        | Metin      | Müşteri etkinliğinin dahili kimliği (birincil anahtar)                                       |
+| SourceEntityName  | Metin      | Kaynak varlığın adı                                                                |
+| SourceActivityId  | Metin      | Kaynak varlıktaki birincil anahtar                                                       |
+| ActivityType      | Metin      | Özel etkinliğin anlamsal etkinlik türü veya adı                                        |
+| ActivityTimeStamp | DateTime    | Etkinlik zaman damgası                                                                      |
+| Title             | Metin      | Etkinliğinin başlığı veya adı                                                               |
+| Tanım       | Metin      | Etkinlik açıklaması                                                                     |
+| URL               | Metin      | Etkinliğe özgü bir harici URL'ye bağlantı                                         |
+| SemanticData      | Metin | Etkinlik türüne özgü anlamsal eşleme alanları için anahtar değer çiftlerinin listesini içerir |
+| RangeIndex        | Metin      | Etkinlik zaman çizelgesini ve etkin aralık sorgularını sıralamak için kullanılan Unix zaman damgası |
+| UnifiedActivityId   | Benzersiz tanımlayıcı | Müşteri etkinliğinin dahili kimliği (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Bu tablo müşteri özniteliğine dayalı ölçümlere ait çıkış verilerini içerir.
 
-| Column             | Tür             | Açıklama                 |
+| Column             | Türü             | Tanım                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | Müşteri profili Kimliği        |
-| Ölçümler           | JSON Dizesi      | Belirtilen müşterinin ölçü adı ve değerleri için anahtar değer çiftleri listesi içerir | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | Müşteri profili Kimliği |
-
+| CustomerId         | Metin           | Müşteri profili Kimliği        |
+| Ölçümler           | Metin      | Belirtilen müşterinin ölçü adı ve değerleri için anahtar değer çiftleri listesi içerir |
+| Tanımlayıcı | Metin           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Benzersiz tanımlayıcı     | Müşteri profili Kimliği |
 
 ### <a name="enrichment"></a>Zenginleştirme
 
 Bu tablo, zenginleştirme işleminin çıkışını içerir.
 
-| Column               | Tür             |  Açıklama                                          |
+| Column               | Türü             |  Tanım                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | Müşteri profili Kimliği                                 |
-| EnrichmentProvider   | String           | Zenginleştirme için sağlayıcı adı                                  |
-| EnrichmentType       | String           | Zenginleştirme türü                                      |
-| Değerler               | JSON Dizesi      | Zenginleştirme işlemi tarafından üretilen özniteliklerin listesi |
-| msdynci_enrichmentid | GUID             | msdynci_identifier öğesinden oluşturulan belirleyici GUID |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Metin           | Müşteri profili Kimliği                                 |
+| EnrichmentProvider   | Metin           | Zenginleştirme için sağlayıcı adı                                  |
+| EnrichmentType       | Metin           | Zenginleştirme türü                                      |
+| Değerler               | Metin      | Zenginleştirme işlemi tarafından üretilen özniteliklerin listesi |
+| EnrichmentId | Benzersiz tanımlayıcı            | `Identifier` öğesinden oluşturulan deterministik GUID |
+| Tanımlayıcı   | Metin           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Tahmin
 
@@ -211,25 +236,24 @@ Bu tablo, model tahminlerinin çıkışını içerir.
 
 | Column               | Türü        | Tanım                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | Müşteri profili Kimliği                                  |
-| ModelProvider        | String      | Modelin sağlayıcı adı                                      |
-| Model                | String      | Model adı                                                |
-| Değerler               | JSON Dizesi | Model tarafından üretilen özniteliklerin listesi |
-| msdynci_predictionid | GUID        | msdynci_identifier öğesinden oluşturulan belirleyici GUID | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Metin      | Müşteri profili Kimliği                                  |
+| ModelProvider        | Metin      | Modelin sağlayıcı adı                                      |
+| Model                | Metin      | Model adı                                                |
+| Değerler               | Metin | Model tarafından üretilen özniteliklerin listesi |
+| PredictionId | Benzersiz tanımlayıcı       | `Identifier` öğesinden oluşturulan deterministik GUID |
+| Tanımlayıcı   | Metin      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Segment üyeliği
 
 Bu tablo, müşteri profillerinin segment üyeliği bilgilerini içerir.
 
-| Column        | Type | Description                        |
+| Column        | Türü | Tanım                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Müşteri Profili Kimliği        |
-| SegmentProvider      | String       | Segmentleri yayımlayan uygulama.      |
-| SegmentMembershipType | String       | Bu segment üyeliği kaydı için müşteri türü. Müşteri, İlgili Kişi veya Firma gibi birden çok türü destekler. Varsayılan: Müşteri  |
-| Segmentler       | JSON Dizesi  | Müşteri profilinin üyesi olduğu benzersiz segmentler listesi      |
-| msdynci_identifier  | String   | Segment üyeliği kaydının benzersiz tanıtıcısı. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | `msdynci_identifier` öğesinden oluşturulan deterministik GUID          |
-
+| CustomerId        | Metin       | Müşteri Profili Kimliği        |
+| SegmentProvider      | Metin       | Segmentleri yayımlayan uygulama.      |
+| SegmentMembershipType | Metin       | Bu segment üyeliği kaydı için müşteri türü. Müşteri, İlgili Kişi veya Firma gibi birden çok türü destekler. Varsayılan: Müşteri  |
+| Segmentler       | Metin  | Müşteri profilinin üyesi olduğu benzersiz segmentler listesi      |
+| Tanımlayıcı  | Metin   | Segment üyeliği kaydının benzersiz tanıtıcısı. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Benzersiz tanımlayıcı      | `Identifier` öğesinden oluşturulan deterministik GUID          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

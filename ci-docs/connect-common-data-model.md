@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245857"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396115"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage'ta verilere bağlanma
 
@@ -39,6 +39,8 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
   - Depolama Blobu Veri Okuyucusu
   - Depolama Blobu Veri Sahibi
   - Depolama Blobu Veri Katılımcısı
+
+- Veri kaynağı bağlantısını ayarlayan kullanıcının depolama hesabında en az Depolama Blobu Veri Katılımcısı izinlerine sahip olması gerekir.
 
 - Data Lake Storage'ınızdaki veriler, verilerinizin depolanması için Common Data Model standardını izlemeli ve veri dosyalarının (*.csv veya *.parquet) şemasını temsil edecek ortak veri modeli bildirimine sahip olmalıdır. Bildirim, varlık sütunları ve veri türleri gibi varlıkların ayrıntılarının yanı sıra veri dosyası konumu ve dosya türü sağlamalıdır. Daha fazla bilgi için bkz. [Common Data Model bildirimi](/common-data-model/sdk/manifest). Bildirim yoksa, Depolama Blobu Veri Sahibi veya Depolama Blobu Veri Katılımcısı erişimi olan Yönetici kullanıcılar, verileri alırken şemayı tanımlayabilir.
 
@@ -62,7 +64,7 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
    > [!NOTE]
    > Veri kaynağını oluşturmak için kapsayıcıda veya depolama hesabında aşağıdaki rollerden birine sahip olmalısınız:
    >
-   >  - Depolama Blobu Veri Okuyucusu, depolama hesabından okumak ve Customer Insights'a verileri almak için yeterlidir. 
+   >  - Depolama Blobu Veri Okuyucusu, depolama hesabından okumak ve Customer Insights'a verileri almak için yeterlidir.
    >  - Bildirim dosyalarını doğrudan Customer Insights'ta düzenlemek isterseniz Depolama Blobu Veri Katılımcısı veya Sahibi rolü gereklidir.  
   
 1. Verileri içe aktarmak için verileri ve şemayı (model.json veya manifest.json dosyası) içeren **Kapsayıcı**'nın adını ve **İleri**'yi seçin.

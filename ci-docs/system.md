@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246271"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396025"
 ---
 # <a name="view-system-configuration"></a>Sistem yapılandırmasını görüntüleme
 
@@ -38,12 +38,6 @@ Gerçek zamanlı API kullanımıyla ilgili ayrıntıları görüntüleyin ve bel
    - **API çağrıları**: seçilen zaman diliminde API'ye yapılan toplu çağrı sayısını görselleştiren bir grafik.
    - **Veri aktarımı**: seçilen zaman diliminde API aracılığıyla aktarılan veri miktarını gösteren bir grafik.
    - **İşlemler**: kullanılabilir her API işlemi için satırları ve işlemlerin kullanımıyla ilgili ayrıntıları içeren bir tablo. [API başvurusuna](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) gitmek için bir işlem adı seçin.
-
-   [Gerçek zamanlı veri alımı](real-time-data-ingestion.md) kullanan işlemler, gerçek zamanlı API kullanımını görmek için kullanabileceğiniz bir dürbün simgesi içerir.
-
-   1. İşlem için kullanım ayrıntılarını içeren **Gerçek zamanlı API kullanımı** bölmesini açmak üzere dürbünü seçin.
-   1. Görüntülemek için **zaman dilimi seçin**.
-   1. Gerçek zamanlı etkileşimlerinizi en iyi şekilde nasıl sunacağınızı seçmek için **Gruplama ölçütü** kutusunu kullanın. Verileri API **Yöntemi**, **Varlık Adı** (alınan varlık), **Oluşturan** (etkinliğin kaynağı), **Sonuç** (başarı veya başarısızlık) ya da **Hata kodları**'na göre gruplayın. Veriler, geçmiş grafiği ve tablo olarak kullanılabilir.
 
 ## <a name="view-system-information"></a>Sistem bilgilerini görüntüleme
 
