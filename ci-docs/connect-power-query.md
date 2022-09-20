@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207069"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463289"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query veri kaynağına bağlanma
 
@@ -63,7 +63,9 @@ Power Query bağlayıcılarını temel alan veri kaynakları ekleme işleminde g
 Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan veriler, [**Varlıklar**](entities.md) sayfasından incelenebilir.
 
 > [!CAUTION]
-> Power Query'ye dayalı bir veri kaynağı, [Dataverse'te bir veri akışı](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) oluşturur. Power Platform yönetim merkezinde yer alıp Customer Insights'ta kullanılan veri akışının adını değiştirmeyin. Veri akışının yeniden adlandırılması, Customer Insights veri kaynağı ve Dataverse veri akışı arasındaki başvurularla ilgili sorunlara yol açar.
+>
+> - Power Query'ye dayalı bir veri kaynağı, [Dataverse'te bir veri akışı](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) oluşturur. Power Platform yönetim merkezinde yer alıp Customer Insights'ta kullanılan veri akışının adını değiştirmeyin. Veri akışının yeniden adlandırılması, Customer Insights veri kaynağı ve Dataverse veri akışı arasındaki başvurularla ilgili sorunlara yol açar.
+> - Customer Insights'ta Power Query veri kaynakları için eşzamanlı değerlendirmeler [PowerBI.com'daki Veri akışları gibi yenileme sınırlarına](/power-query/power-query-online-limits#refresh-limits) sahiptir. Değerlendirme sınırına ulaştığı için veri yenileme işlemi başarısız olursa, veri kaynaklarının aynı anda işlenmemesini için her bir veri kaynağına yönelik yenileme zamanlaması ayarlamanızı öneririz.
 
 ### <a name="available-power-query-data-sources"></a>Kullanılabilir Power Query veri kaynakları
 
@@ -77,7 +79,7 @@ Customer Insights'a veri içeri aktarmak üzere kullanabileceğiniz bağlayıcı
 
 Dataverse ortamını Customer Insights ile ilişkilendirdikten sonra oluşturulan veri kaynakları, varsayılan olarak [Power Platform veri akışlarını](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) kullanır. Veri akışları, veri ağ geçitlerini kullanarak önceden ön bağlanabilirliği destekler. Dataverse ortamı [şirket içi veri ağ geçitleri kullanılarak](/data-integration/gateway/service-gateway-app) ilişkilendirilmeden önce var olan veri kaynaklarını kaldırabilir ve yeniden oluşturabilirsiniz.
 
-Varolan Power BI veya Power Apps ortamdan gelen veri geçitleri görünür olur ve bunları Customer Insights'ta yeniden kullanabilirsiniz. Veri kaynakları sayfasında, yerinde veri ağ geçitlerini görüntüleyebileceğiniz ve yapılandırabileceğiniz Microsoft Power Platform ortama gitmek için bağlantılar gösterilir.
+Mevcut bir Power BI veya Power Apps ortamından gelen veri ağ geçitleri görünür olacaktır ve veri ağ geçidinin ve Customer Insights ortamının aynı Azure bölgesinde olması durumunda bunları Customer Insights'da yeniden kullanabilirsiniz. Veri kaynakları sayfasında, yerinde veri ağ geçitlerini görüntüleyebileceğiniz ve yapılandırabileceğiniz Microsoft Power Platform ortama gitmek için bağlantılar gösterilir.
 
 > [!IMPORTANT]
 > Ağ geçitlerinizin en son sürümüne güncelleştirildiğinden emin olun. Bir güncelleştirme yükleyebilir ve ağ geçidi ekranında görüntülenen komuttan doğrudan yeniden yapılandırabilir ya da [en son sürümü indirebilirsiniz](https://powerapps.microsoft.com/downloads/). En son ağ geçidi sürümünü kullanmıyorsanız, veri akışı yenilemesi şuna benzer bir hata iletisiyle başarısız olur: **Anahtar sözcük desteklenmiyor: yapılandırma özellikleri. Parametre adı: anahtar sözcük**.

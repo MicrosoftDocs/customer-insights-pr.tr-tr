@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304083"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460214"
 ---
 # <a name="exports-preview-overview"></a>Dışarı aktarma (önizleme) genel bakışı
 
@@ -81,6 +81,11 @@ Kullanılabilir eylemleri görüntülemek için bir dışa aktarım seçin.
 ## <a name="schedule-and-run-exports"></a>Dışarı aktarmaları zamanlama ve çalıştırma
 
 Yapılandırdığınız her bir dışarı aktarma bir yenileme zamanlaması içerir. Yenileme sırasında, sistem dışarı aktarma işlemine dahil etmek için yeni veya güncelleştirilmiş verileri arar. Varsayılan olarak, dışarı aktarma işlemleri [zamanlanmış her sistem yenileme](schedule-refresh.md) işleminin parçası olarak çalıştırılır. Yenileme zamanlamasını özelleştirebilir veya dışa aktarma işlemlerini el ile çalıştırmak için kapatabilirsiniz.
+
+> [!TIP]
+> Segment dışarı aktarmaların işlenme süresini aşağıdaki en iyi uygulamaları kullanarak en aza indirin:
+> - Segment varlıklarını birden fazla dışarı aktarma arasında dağıtın.
+> - Tüm dışarı aktarımları aynı anda zamanlanmaktan kaçının. Her dışarı aktarma işlemi için zamanlanan saat arasında 30 dakika veya bir saat bırakın.
 
 Dışarı aktarma zamanlamaları, ortamınızın durumuna bağlıdır. Zamanlanmış bir verme işleminin başlaması gerektiğinde [bağımlılıklar](system.md#refresh-processes) üzerinde devam eden güncelleştirmeler varsa, sistem önce güncelleştirmeleri tamamlar ve sonra verme işlemini çalıştırır. **Yenilendi** sütununda bir dışarı aktarmanın en son ne zaman yenilendiği gösterilir.
 

@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411809"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463243"
 ---
 # <a name="service-limits-in-customer-insights"></a>Customer Insights'ta servis sınırları
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411809"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmentler, ölçümler ve tahminler | 300  | Birleştirilmiş [segmentler](segments.md), [ölçümler](measures.md) ve [tahminlerin](predictions-overview.md) toplam sayısı 300'ü geçemez.  |
 | İlişki | Varlık yollarındaki ilişkilerde 20 derinlik düzeyi. | Oluşturucu arabirimini kullanarak [segmentler](segments.md) veya [ölçümler](measures.md) oluştururken varlık yolları, başlangıç varlığı ile hedef varlık arasında 20'ye kadar ilişki atlama noktasına sahip olabilir.  |
+|Veri alımı| Power Query veri kaynakları için eşzamanlı değerlendirmeler sınırlıdır. | Customer Insights [PowerBI.com'daki Veri akışları gibi yenileme sınırlamalarına](/power-query/power-query-online-limits#refresh-limits) sahiptir. |
 
 ## <a name="fair-scheduling-of-jobs"></a>İşlerin adil olarak zamanlanması
 

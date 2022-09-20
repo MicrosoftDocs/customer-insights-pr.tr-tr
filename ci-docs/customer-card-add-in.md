@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194947"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473666"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 uygulamaları için Müşteri Kartı Eklentisi (önizleme)
 
@@ -32,7 +32,8 @@ Doğrudan Dynamics 365 uygulamalarında müşterilerinizin 360 derecelik görün
 - Dynamics 365 verilerinizin Customer Insights müşteri profilleriyle eşleşmesi için [bunların Microsoft Dataverse bağlayıcı kullanılarak Dynamics 365 uygulamasından alınmasını](connect-power-query.md) öneririz. Dynamics 365 ilgili kişilerini (veya firmalarını) almak için farklı bir yöntem kullanıyorsanız `contactid` (veya `accountid`) alanının [veri birleştirme işlemi sırasında ilgili veri kaynağı için birincil anahtar](map-entities.md#select-primary-key-and-semantic-type-for-attributes) olarak ayarlandığından emin olun.
 - Müşteri Kartı Eklentisinin tüm Dynamics 365 kullanıcılarının verileri görmesini sağlamak için Customer Insights'ta [kullanıcı olarak eklenmesi](permissions.md) gerekir.
 - Customer Insights'ta [yapılandırılmış arama ve filtre özellikleri](search-filter-index.md).
-- Her eklenti denetimi Customer Insights içindeki belirli verilere dayanır. Bazı veriler ve denetimler yalnızca belirli türlerdeki ortamlarda kullanılabilir. Eklenti yapılandırması, seçilen ortam türü nedeniyle denetim kullanılamıyorsa size bildirir. [Ortam kullanma durumları](work-with-business-accounts.md) daha fazla bilgi edinin.
+- Bazı veriler ve denetimler yalnızca belirli türlerdeki ortamlarda kullanılabilir. Eklenti yapılandırması, seçilen ortam türü nedeniyle denetim kullanılamıyorsa size bildirir. Bu hata, işleme sırasında denetimin içinde gösterilir. [Ortam kullanma durumları](work-with-business-accounts.md) daha fazla bilgi edinin.
+- Her eklenti denetimi Customer Insights içindeki belirli verilere dayanır.
   - **Ölçü denetimi**: [Yapılandırılmış müşteri özniteliği ölçüleri](measures.md) gerektirir.
   - **İstihbarat denetimi**: [Tahminler veya özel modeller](predictions-overview.md) kullanılarak oluşturulan veriler gerektirir.
   - **Müşteri ayrıntıları denetimi**: Birleşik müşteri profilinde kullanılabilir olup profilde yer alan tüm alanları gösterir.
