@@ -7,21 +7,21 @@
 - name: Öğrenme kataloğu
   items:
     - name: Microsoft Müşteri Verileri Platformu Uzmanı Olarak Onaylanma
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Customer Insights kullanmaya başlayın
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Veri alma
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Birleşik müşteri profili oluşturma
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Customer Insights ile çalışma
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Verileri zenginleştirme ve tahminlerde bulunma
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Harici bağlantıları yönetme
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Customer Insights'ı yönetme
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Ücretsiz deneme sürümü
   items:
     - name: Ücretsiz deneme sürümüne kaydolma
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Web verilerini kişiselleştirme için kullanma
       href: unknown-to-known.md
+    - name: Bilinmeyen müşteri profillerini yönetme
+      href: manage-unknown-profiles.md
 - name: Segmentler
   items:
     - name: Segmentlere genel bakış
