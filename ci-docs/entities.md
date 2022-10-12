@@ -1,7 +1,7 @@
 ---
 title: Customer Insights'taki varlıklar
 description: Varlıklar sayfasında verileri görüntüleyin.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183609"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610122"
 ---
 # <a name="entities-in-customer-insights"></a>Customer Insights'taki varlıklar
 
@@ -61,27 +61,5 @@ Varlıkların listesini görüntülemek için **Veri** > **Varlıklar**'a gidin.
   - **Oluşturulma tarihi**: Varlığın oluşturulma tarihi ve saati.
   - **Düzenleyen**: Varlığı değiştiren kişinin adı.
   - **Düzenlendi**: Varlığın değiştirilme tarihi ve saati.
-
-## <a name="entity-specific-information"></a>Varlığa özel bilgiler
-
-Aşağıdaki bölümde, sistemin oluşturduğu bazı varlıklar hakkında bilgi sağlanmaktadır.
-
-### <a name="corrupted-data-sources"></a>Bozuk veri kaynakları
-
-Alınan bir veri kaynağındaki alanlar bozuk veriler içerebilir. Bozuk alanlara sahip kayıtlar, sistemin oluşturduğu varlıklarda ortaya çıkar. Bozuk kayıtları bilmek, kaynak sistemde hangi verilerin gözden geçirilip güncelleştirileceğini belirlemenize yardımcı olur. Veri kaynağının sonraki yenilemesinden sonra, düzeltilen kayıtlar Customer Insights'a alınır ve aşağı akış işlemlerine iletilir. 
-
-Örneğin, bir "doğum günü" sütununda veri türü "tarih" olarak ayarlanmıştır. Müşteri kaydında doğum günü "1.1.19777" olarak girilmiştir. Sistem bu kaydı bozuk olarak işaretler. Birisi artık kaynak sistemdeki doğum gününü "1977" olarak değiştirebilir. Veri kaynaklarının otomatik olarak yenilemesinden sonra, alan artık geçerli bir biçime sahiptir ve kayıt, bozuk varlıktan kaldırılır.
-
-**Veriler** > **Varlıklar**'a gidin ve **Sistem** bölümünde bozuk varlıkları arayın. Bozuk varlıkların adlandırma şeması: "DataSourceName_EntityName_corrupt". Bozuk alanları ve kayıt düzeyindeki nedeni tanımlamak için bozuk bir varlık seçin.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Bozulma nedeni.":::
-
-Customer Insights yine de bozuk varlıkları işler. Ancak bunlar, birleşik verilerle çalışırken sorunlara neden olabilir.
-
-Bozuk kayıtları açığa çıkarmak için alınan verilerde aşağıdaki denetimler çalıştırılır:
-
-- Alanın değeri, sütununun veri türüyle eşleşmiyor.
-- Alanlar, sütunların beklenen şemayla eşleşmemesine neden olan karakterler içeriyor. Örneğin: yanlış biçimlendirilmiş tırnak işaretleri, kaçışsız tırnak işaretleri veya yeni satır karakterleri.
-- Datetime/date/datetimeoffset sütunları varsa ve standart ISO biçimine uygun değillerse biçimlerinin model içinde belirtilmesi gerekir.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse yönetilen veri gölündeki verilere bağlanma
 description: Yönetilen bir Microsoft Dataverse data lake'ten verileri içe aktarın.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206977"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609875"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Microsoft Dataverse yönetilen veri gölündeki verilere bağlanma
 
@@ -70,5 +70,93 @@ Farklı bir Dataverse veri gölüne bağlanmak için [yeni bir veri kaynağı ol
 1. Değişikliklerinizi uygulamak ve **Veri kaynakları** sayfasına dönmek için **Kaydet**'i tıklayın.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Veri giriş hatalarının veya bozuk verilerin genel nedenleri
+
+Bozuk kayıtları açığa çıkarmak için alınan verilerde aşağıdaki denetimler çalıştırılır:
+
+- Alanın değeri, sütununun veri türüyle eşleşmiyor.
+- Alanlar, sütunların beklenen şemayla eşleşmemesine neden olan karakterler içeriyor. Örneğin: yanlış biçimlendirilmiş tırnak işaretleri, kaçışsız tırnak işaretleri veya yeni satır karakterleri.
+- Datetime/date/datetimeoffset sütunları varsa ve standart ISO biçimine uygun değillerse biçimlerinin model içinde belirtilmesi gerekir.
+
+### <a name="schema-or-data-type-mismatch"></a>Şema veya veri türü uyumsuzluğu
+
+Veriler şemaya uygun değilse, kayıtlar bozuk olarak sınıflandırılır. Kaynak verileri veya şemayı düzeltin ve verileri yeniden alın.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Tarih saat alanları yanlış biçimde
+
+Varlıktaki tarih saat alanları ISO veya en-US biçiminde değil. Customer Insights'taki varsayılan tarih saat biçimi en-US biçimindedir. Bir varlıktaki tüm tarih saat alanları aynı biçimde olmalıdır. Customer Insights diğer biçimleri destekler sağlanan ek açıklamalar veya nitelikler, modeldeki veya bildirimdeki kaynak veya varlık düzeyinde yapılır. Örneğin: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Bir manifest.json içinde, tarih saat biçimi varlık düzeyinde veya öznitelik düzeyinde belirtilebilir. Varlık düzeyinde, tarih saat biçimini tanımlamak için *.manifest.cdm.json içindeki varlıkta "exhibitsTraits" kullanın. Öznitelik düzeyinde, entityname.cdm.json içindeki öznitelikte "appliedTraits" kullanın.
+
+**Manifest.json varlık düzeyinde**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json öznitelik düzeyinde**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

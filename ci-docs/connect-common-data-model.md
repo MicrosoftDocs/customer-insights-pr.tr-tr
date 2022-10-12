@@ -1,7 +1,7 @@
 ---
 title: Common Data Model klasörünü Azure Data Lake hesabına bağlama
 description: Azure Data Lake Storage kullanarak Common Data Model verileriyle çalışın.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396115"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609972"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Azure Data Lake Storage'ta verilere bağlanma
 
@@ -43,6 +43,10 @@ Azure Data Lake Storage 2. Nesil hesabınızı kullanarak verileri Dynamics 365 
 - Veri kaynağı bağlantısını ayarlayan kullanıcının depolama hesabında en az Depolama Blobu Veri Katılımcısı izinlerine sahip olması gerekir.
 
 - Data Lake Storage'ınızdaki veriler, verilerinizin depolanması için Common Data Model standardını izlemeli ve veri dosyalarının (*.csv veya *.parquet) şemasını temsil edecek ortak veri modeli bildirimine sahip olmalıdır. Bildirim, varlık sütunları ve veri türleri gibi varlıkların ayrıntılarının yanı sıra veri dosyası konumu ve dosya türü sağlamalıdır. Daha fazla bilgi için bkz. [Common Data Model bildirimi](/common-data-model/sdk/manifest). Bildirim yoksa, Depolama Blobu Veri Sahibi veya Depolama Blobu Veri Katılımcısı erişimi olan Yönetici kullanıcılar, verileri alırken şemayı tanımlayabilir.
+
+## <a name="recommendations"></a>Öneriler
+
+En iyi performans için, Customer Insights, bir bölüm boyutunun 1 GB veya daha az olmasını önerir ve bir klasördeki bölüm dosyalarının sayısı 1000'i aşmamalıdır.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Azure Data Lake Storage'a bağlanma
 
@@ -199,5 +203,101 @@ Verilerin yüklenmesi zaman alabilir. Başarılı bir yenilemeden sonra alınan 
 1. Değişikliklerinizi uygulamak ve **Veri kaynakları** sayfasına dönmek için **Kaydet**'i tıklayın.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Veri giriş hatalarının veya bozuk verilerin genel nedenleri
+
+Veri kullanımı sırasında, bir kaydın bozuk olarak ele alınmasının en yaygın nedenlerinden bazıları şunlardır:
+
+- Veri türleri ve alan değerleri kaynak dosya ve şema arasında eşleşmiyor
+- Kaynak dosyadaki sütun sayısı şemayla eşleşmiyor
+- Alanlar, beklenen şemaya kıyasla sütunların kaymasına neden olan karakterler içeriyor. Örneğin: yanlış biçimlendirilmiş tırnak işaretleri, kaçışsız tırnak işaretleri, yeni satır karakterleri veya sekmeli karakterler.
+- Bölüm dosyaları eksik
+- Datetime/date/datetimeoffset sütunları varsa ve standart biçime uygun değillerse biçimlerinin şema içinde belirtilmesi gerekir.
+
+### <a name="schema-or-data-type-mismatch"></a>Şema veya veri türü uyumsuzluğu
+
+Veriler şemaya uygun değilse, giriş işlemi hatalarla tamamlanır. Kaynak verileri veya şemayı düzeltin ve verileri yeniden alın.
+
+### <a name="partition-files-are-missing"></a>Bölüm dosyaları eksik
+
+- Alış, bozuk kayıt olmadan başarılı olduysa ancak veri göremiyorsanız model.json veya manifest.json dosyasınızı düzenleyerek bölmelerin spesifik olduğundan emin olun. Ardından [veri kaynağını yenileyin](data-sources.md#refresh-data-sources).
+
+- Veri alımı, otomatik zamanlama yenileme sırasında yenilenen veri kaynaklarıyla aynı vakitte gerçekleşirse bölüm dosyaları boş olabilir veya Customer Insights tarafından işlenemeyebilir. Yukarı akış yenileme zamanlaması ile hizalamak için, [sistem yenileme zamanlamasını](schedule-refresh.md) veya veri kaynağı yenileme zamanlamasını değiştirin. Zamanlamayı, yenilemelerin hepsi bir seferde gerçekleşmeyecek şekilde hizalayın ve Customer Insights içinde işlenecek en yeni veriler sağlanır.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Tarih saat alanları yanlış biçimde
+
+Varlıktaki tarih saat alanları ISO 8601 veya en-US biçiminde değil. Customer Insights'taki varsayılan tarih saat biçimi en-US biçimindedir. Bir varlıktaki tüm tarih saat alanları aynı biçimde olmalıdır. Customer Insights diğer biçimleri destekler sağlanan ek açıklamalar veya nitelikler, modeldeki veya bildirimdeki kaynak veya varlık düzeyinde yapılır. Örneğin: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Bir manifest.json içinde, tarih saat biçimi varlık düzeyinde veya öznitelik düzeyinde belirtilebilir. Varlık düzeyinde, tarih saat biçimini tanımlamak için *.manifest.cdm.json içindeki varlıkta "exhibitsTraits" kullanın. Öznitelik düzeyinde, entityname.cdm.json içindeki öznitelikte "appliedTraits" kullanın.
+
+**Manifest.json varlık düzeyinde**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json öznitelik düzeyinde**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

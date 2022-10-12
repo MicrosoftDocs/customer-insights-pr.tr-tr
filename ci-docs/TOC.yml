@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Azure Machine Learning'den özel modeller kullanma
           href: custom-models.md
+        - name: Tahminleri temel alan segmentler oluşturma
+          href: prediction-based-segment.md
     - name: Örnek kılavuzlar
       items:
         - name: CLV tahmini için örnek kılavuz
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Azure Machine Learning ile denemeler
           href: azure-machine-learning-experiments.md
-    - name: Tahminleri yönetme
-      href: manage-predictions.md
-    - name: Tahminleri temel alan segmentler oluşturma
-      href: prediction-based-segment.md
 - name: Dışarı aktarma seçenekleri
   items:
     - name: Dışarı aktarmalar

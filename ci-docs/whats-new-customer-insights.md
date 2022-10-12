@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409381"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609616"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'teki yenilikler
 
@@ -228,9 +228,9 @@ Daha fazla bilgi için bkz. [Ortam sahibini değiştirme](manage-environments.md
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Veri hazırlama işlemi, bozulmuş kayıtların bozulma nedenini listeler
 
-Veri hazırlama artık bozulmuş verilerin bulunduğu tüm alanlar için bozulma nedenini gösterir. Bilgiler, kolay tanımlama için tek bir kayıt düzeyinde sağlanır. 
+Veri hazırlama artık bozulmuş verilerin bulunduğu tüm alanlar için bozulma nedenini gösterir. Bilgiler, kolay tanımlama için tek bir kayıt düzeyinde sağlanır.
 
-Daha fazla bilgi için bkz. [Bozulmuş veri kaynakları](entities.md#corrupted-data-sources).
+Daha fazla bilgi için bkz. [Bozuk veri kaynakları](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Etkileşim içgörüleri yeteneğindeki raporlama özellikleri için önizlemenin sonu
 

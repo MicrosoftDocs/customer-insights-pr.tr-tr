@@ -1,7 +1,7 @@
 ---
 title: Power Query veri kaynağına bağlanma (video içerir)
 description: Power Query bağlayıcısı aracılığıyla veri alma (video içerir)
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463289"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609920"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query veri kaynağına bağlanma
 
@@ -43,16 +43,17 @@ Power Query bağlayıcılarını temel alan veri kaynakları ekleme işleminde g
 
 1. **Veriyi dönüştür** öğesini seçin.
 
-1. **Power Query - Sorguları düzenle** iletişim kutusunda verileri inceleyebilir ve geliştirebilirsiniz. Seçtiğiniz veri kaynağında sistemlerin belirlediği varlıklar sol bölmede görüntülenir.
+1. **Power Query - Sorguları düzenle** sayfasında verilerinizi gözden geçirin ve daraltın. Seçtiğiniz veri kaynağında sistemlerin belirlediği varlıklar sol bölmede görüntülenir.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Sorguları düzenle diyaloğu":::
 
-1. Ayrıca verilerinizi dönüştürebilirsiniz. Düzenlenecek veya dönüştürülecek bir varlık seçin. Dönüşümleri uygulamak için Power Query penceresindeki seçenekleri kullanın. Her dönüşüm **Uygulanan adımlar** altında listelenir. Power Query, çok sayıda [önceden oluşturulmuş dönüşüm](/power-query/power-query-what-is-power-query#transformations) seçeneği sunar.
+1. Verilerinizi dönüştürün. Düzenlenecek veya dönüştürülecek bir varlık seçin. Dönüşümleri uygulamak için Power Query penceresindeki seçenekleri kullanın. Her dönüşüm **Uygulanan adımlar** altında listelenir. Power Query, çok sayıda [önceden oluşturulmuş dönüşüm](/power-query/power-query-what-is-power-query#transformations) seçeneği sunar.
 
-   Aşağıdaki dönüşümleri kullanmanızı öneririz:
-
-   - CSV dosyasından veri alıyorsanız, ilk satır genellikle başlıkları içerir. **Dönüşüm**'e gidin ve **İlk satırı üst bilgi olarak kullan**'ı seçin.
-   - Veri türünün uygun şekilde ayarlandığından emin olun. Örneğin, tarih alanları için bir tarih türü seçin.
+   > [!IMPORTANT]
+   > Aşağıdaki dönüşümleri kullanmanızı öneririz:
+   >
+   > - CSV dosyasından veri alıyorsanız, ilk satır genellikle başlıkları içerir. **Dönüşüm**'e gidin ve **İlk satırı üst bilgi olarak kullan**'ı seçin.
+   > - Veri türünün uygun şekilde ayarlandığından ve verilerle eşleştiğinden emin olun. Örneğin, tarih alanları için bir tarih türü seçin.
 
 1. **Sorguları düzenle** iletişim kutusunda veri kaynağınıza ek varlıklar eklemek için **Ana Sayfa**'ya gidin ve **Veri al**'ı seçin. Bu veri kaynağının tüm varlıklarını ekleyene kadar 5-10 arasındaki adımları yineleyin. Birden çok veri kümesi içeren bir veritabanınız varsa her veri kümesi bu veritabanının kendi varlığıdır.
 
@@ -102,5 +103,51 @@ Mevcut bir Power BI veya Power Apps ortamından gelen veri ağ geçitleri görü
 1. Değişikliklerinizi uygulamak ve **Veri kaynakları** sayfasına dönmek için **Kaydet**'i seçin.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Veri giriş hatalarının veya bozuk verilerin genel nedenleri
+
+### <a name="data-type-does-not-match-data"></a>Veri türü verilerle eşleşmiyor
+
+Bir tarih alanı doğru tarih biçimine ayarlanmamışsa en yaygın veri türü uyumsuzluğu ortaya çıkar.
+
+Veriler kaynakta düzeltilebilir ve yeniden alınabilir. Veya Customer Insights içindeki dönüşümü düzeltebilirsiniz. Dönüşümü düzeltmek için:
+
+1. **Veri** > **Veri kaynakları** öğesine gidin.
+
+1. Bozuk veri olan veri kaynağının yanında **Düzenle**'yi seçin.
+
+1. **İleri**'yi seçin.
+
+1. Sorguların her birini seçin ve yanlış olan "Uygulanan adımlar" içinde uygulanan dönüşümleri arayın veya tarih biçimiyle dönüştürülmeyen tarih sütunlarını bulun.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query - Yanlış tarih biçimini göstereni düzenle":::
+
+1. Veri türünü veriyle eşleşecek şekilde değiştirin.
+
+1. **Kaydet**'i seçin. Bu veri kaynağı yenilenir.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>PPDF Power Query temelli veri kaynağı yenileme sorunlarında sorun giderme
+
+Veriler eskidiğinde veya bir veri kaynağı yeniledikten sonra hata alıyorsanız, aşağıdaki adımları uygulayın:
+
+1. [Power Platform](https://make.powerapps.com) adresine gider.
+
+1. Customer Insights örneğiniz için **Ortamı** seçin.
+
+1. **Veri akışları**'na gidin.
+
+1. Customer Insights'taki veri kaynağı karşılık gelen veri akışı için dikey üç nokta (&vellip;) seçin ve sonra da **Yenileme geçmişini göster**'i seçin.
+
+1. Veri akışının **Durumu** **Başarılı** olursa, Power Query tabanlı veri kaynağı sahipliği değişmiş olabilir:
+
+   1. Yenileme zamanlamasını yenileme geçmişinden inceleyin.
+   1. Yeni sahibin zamanlamasını ayarlayın ve ayarları kaydedin.
+
+1. Veri akışının **Durumu** **Başarısız** olursa:
+
+   1. Yenileme geçmişi dosyasını karşıdan yükleyin.
+   1. Hatanın nedeni için indirilen dosyayı gözden geçirin.
+   1. Hata çözülemezse, **?** seçeneğini belirleyin destek bileti açmak için. İndirilen yenileme geçmişi dosyasını dahil edin.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
