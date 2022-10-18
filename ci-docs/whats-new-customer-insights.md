@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609616"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638375"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights'teki yenilikler
 
@@ -23,6 +23,28 @@ Güncelleştirmeleri bölge bazında kullanıma sunuyoruz. Bu nedenle bazı böl
 
 > [!TIP]
 > Özellik istekleri ve üretim önerileri göndermek ve bunları oylamak için [Dynamics 365 Uygulama Fikirleri portalına](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights) gidin.
+
+## <a name="september-2022-updates"></a>Eylül 2022 güncelleştirmeleri
+
+Eylül 2022'deki güncelleştirmeler yeni özellikler, performans yükseltmeleri ve hata onarımları içerir.
+
+### <a name="export-data-to-hubspot"></a>Verileri HubSpot'a aktarma
+
+Birleşik müşteri profilleri segmentlerini HubSpot'a aktarın ve e-posta pazarlama etkinlikleri için kullanın.
+
+Daha fazla bilgi için [Segmentleri HubSpot'a aktarma](export-hubspot.md) bölümüne bakın.
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Birleştirilmiş bir alanı veya varlığı veri birleştirmesinden kaldırma
+
+Alanları ve varlıkları veri birleştirme işleminden kaldırabilirsiniz.
+
+Daha fazla bilgi için [Birleştirilmiş alanı kaldırma](data-unification-update.md#remove-a-unified-field) bölümüne bakın.
+
+### <a name="manage-unknown-customer-profiles"></a>Bilinmeyen müşteri profillerini yönetme
+
+Benzersiz kişiselleştirme, müşteri verilerinizin zenginliğine ve tam oluşuna bağlıdır ve Customer Insights, bu hedeflere ulaşmanıza yardımcı olur. Kimlik dışında herhangi bir bilgi sahibi olmadığını kullanıcıların müşteri profillerini yönetebilirsiniz.
+
+Daha fazla bilgi için [Customer Insights ile bilinmeyen profilleri yönetme](manage-unknown-profiles.md) bölümüne bakın.
 
 ## <a name="august-2022-updates"></a>Ağustos 2022 güncelleştirmeleri
 

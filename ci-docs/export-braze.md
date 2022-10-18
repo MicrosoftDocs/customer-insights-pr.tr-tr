@@ -1,19 +1,19 @@
 ---
 title: Segmentleri Braze'e aktarma (önizleme)
 description: Bağlantının nasıl yapılandırılacağını ve Braze'e aktarılacağını öğrenin.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195131"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655286"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmentleri Braze'e aktarma (önizleme)
 
@@ -23,6 +23,7 @@ Unified Customer Profile segmentlerini Braze'e aktarın ve pazarlama etkinlikler
 
 - Bir [Braze hesabı](https://www.braze.com/) ve ilgili yönetici kimlik bilgileri.
 - Bir [Braze API anahtarı](https://www.braze.com/docs/api/basics/)
+- [Braze REST Uç Noktanız](https://www.braze.com/docs/api/basics/#api-definitions) 
 - Customer Insights'ta [yapılandırılmış segmentler](segments.md).
 - Dışarı aktarılan segmentteki Unified Customer Profile öğeleri bir e-posta adresi ve Braze müşteri numarası bulunan bir alan içerir.
 
@@ -30,6 +31,7 @@ Unified Customer Profile segmentlerini Braze'e aktarın ve pazarlama etkinlikler
 
 - Braze'e dışa aktarma işlemi başına 1 milyona kadar müşteri profili; işlemin tamamlanması 40 dakikaya kadar sürebilir. Braze'e aktarabileceğiniz müşteri profilleri sayısı, Braze ile olan sözleşmeye bağlıdır.
 - Yalnızca segmentler.
+- Azure Özel Bağlantı, Braze'e dışarı aktarma işlemi için desteklenmez.
 
 ## <a name="set-up-connection-to-braze"></a>Braze bağlantısını ayarlama
 
@@ -62,6 +64,8 @@ Unified Customer Profile segmentlerini Braze'e aktarın ve pazarlama etkinlikler
 1. **Dışarı aktarma ekle**'yi seçin.
 
 1. **Dışarı aktarılacak bağlantısı** alanında, Braze bölümünden bir bağlantı seçin. Kullanılabilir bağlantı yoksa Yönetici ile iletişime geçin.
+
+1. REST Uç noktanızı **Ana Bilgisayar Adı** alanına aşağıdaki biçimde girin: `rest.iad-03.braze.com`.
 
 1. Dışa aktarım için bir ad girin.
 
