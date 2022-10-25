@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424333"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671275"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Microsoft Dataverse'deki Customer Insights verileriyle çalışma
 
@@ -63,6 +63,9 @@ Kapasite hakları hakkında daha fazla bilgi için bkz. [Dynamics 365 Lisanslama
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Veri paylaşımını Dataverse ile kendi Azure Data Lake Storage'ınızdan etkinleştirme (önizleme)
 
 [Kendi Azure Data Lake Storage hesabınızda](own-data-lake-storage.md), Customer Insights ortamını ayarlayan kullanıcının en azından, depolama hesabındaki `customerinsights` kapsayıcısında **Depolama Blobu Veri Okuyucusu** izinlerine sahip olduğunu doğrulayın.
+
+> [!NOTE]
+> Veri paylaşımı yalnızca kendi Azure Data Lake Storage hesabınızı kullandığınızda geçerlidir. Customer Insights ortamında varsayılan Dataverse depolama alanı kullanılıyorsa bu ayar kullanılamaz.
 
 ### <a name="limitations"></a>Sınırlamalar
 
