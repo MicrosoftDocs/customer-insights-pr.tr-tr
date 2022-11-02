@@ -2,7 +2,7 @@
 title: Veri birleştirme için eşleşme koşulları
 description: Birleştirilmiş müşteri profilleri oluşturmak için varlıkları eşleştirin.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304681"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721545"
 ---
 # <a name="match-conditions-for-data-unification"></a>Veri birleştirme için eşleşme koşulları
 
@@ -130,12 +130,12 @@ Eşleşme kuralları koşul kümelerini temsil eder. Varlıkları birden fazla �
 
 ### <a name="specify-custom-match-conditions"></a>Özel eşleştirme koşulları belirleme
 
-Varsayılan eşleştirme mantığını geçersiz kılan koşullar belirtebilirsiniz. Dört seçenek bulunur:
+Varsayılan eşleştirme mantığını geçersiz kılan koşullar belirtin. Dört seçenek bulunur:
 
-|Seçenek  |Description |Örnek  |
+|Seçenek  |Tanım |Örnek  |
 |---------|---------|---------|
-|Her zaman eşleştir     | Her zaman eşleşen değerleri tanımlar.         |  Her zaman *Mike* ve *MikeR*'yi eşleştir.       |
-|Hiçbir zaman eşleştirme     | Hiçbir zaman eşleşmeyen değerleri tanımlar.        | *John* ve *Jonathan*'ı hiçbir zaman eşleştirme.        |
+|Her zaman eşleştir     | Birincil anahtarlar için her zaman eşleşen değerleri tanımlar.         |  Birincil anahtar *12345* olan satırı her zaman birincil anahtar *54321* olan satıra eşleştirir.       |
+|Hiçbir zaman eşleştirme     | Birincil anahtarlar için asla eşleşmeyen değerleri tanımlar.        | Birincil anahtar *12345* olan satırı asla birincil anahtar *54321* olan satıra eşleştirmez.        |
 |Atla            | Sistemin eşleştirme aşamasında her zaman yok sayması gereken değerleri tanımlar. |  *11111* ve *Bilinmeyen* değerlerini eşleştirme sırasında yok say.        |
 |Diğer ad eşlemesi    | Sistemin aynı değer olarak kabul edilmesi gereken değerleri tanımlama.         | *Joe* ve *Joseph*'i eşit say.        |
 
@@ -143,17 +143,18 @@ Varsayılan eşleştirme mantığını geçersiz kılan koşullar belirtebilirsi
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Özel düğmesi":::
 
-1. **Özel türü** seçin ve **Şablon indir**'i seçin. Her eşleştirme seçeneği için ayrı bir şablon gerekir.
+1. **Özel türü** seçin ve **Şablon indir**'i seçin. Şablonu boşluklar kullanmadan yeniden adlandırın. Her eşleştirme seçeneği için ayrı bir şablon kullanın.
 
-1. İndirilen şablon dosyasını açın ve ayrıntıları doldurun. Şablon, özel eşleştirmede kullanılacak varlığın ve varlık birincil anahtar değerlerinin belirleneceği alanlar içerir. Örneğin, *satış* varlığındaki birincil anahtar *12345*'in *ilgili kişi* varlığındaki birincil anahtar *34567* ile her zaman eşleşmesini istiyorsanız şablonu doldurun:
-    - Entity1: Satış
-    - Entity1Key: 12345
-    - Entity2: İlgili Kişi
-    - Entity2Key: 34567
+1. İndirilen şablon dosyasını açın ve ayrıntıları doldurun. Şablon, özel eşleştirmede kullanılacak varlığın ve varlık birincil anahtar değerlerinin belirleneceği alanlar içerir. Varlık adları, büyük ve küçük harf duyarlıdır. Örneğin, *satış* varlığındaki birincil anahtar *12345*'in *ilgili kişi* varlığındaki birincil anahtar *34567* ile her zaman eşleşmesini istiyorsanız şablonu doldurun:
+   - Entity1: Satış
+   - Entity1Key: 12345
+   - Entity2: İlgili Kişi
+   - Entity2Key: 34567
 
    Aynı şablon dosyası, birden çok varlıktaki özel eşleştirme kayıtlarını belirtebilir.
 
-   Bir varlıkta yinelenenleri kaldırma için özel eşleştirme belirtmek isterseniz aynı varlığı, Varlık1 ve Varlık2 olarak sağlayın ve farklı birincil anahtar değerleri ayarlayın.
+   > [!NOTE]
+   > Bir varlıkta yinelenenleri kaldırma için özel eşleştirme belirtmek isterseniz aynı varlığı, Varlık1 ve Varlık2 olarak sağlayın ve farklı birincil anahtar değerleri ayarlayın. Özel eşleştirmeyi kullanmak için varlığa en az bir yinelenenleri kaldırma kuralı tanımlamanız gerekir.
 
 1. Tüm geçersiz kılmaları ekledikten sonra, şablon dosyasını kaydedin.
 
@@ -169,6 +170,8 @@ Varsayılan eşleştirme mantığını geçersiz kılan koşullar belirtebilirsi
    - **Atlama** veya **Diğer ad eşlemesi** için, var olan eşleştirme kuralında **Düzenle**'yi seçin veya yeni bir kural oluşturun. Normalleştirmeler açılan listede **Özel atlama** veya **Diğer ad eşlemesi** seçeneğini belirleyin ve **Bitti**'yi seçin.
 
 1. **Özel** bölmede **Bitti**'yi seçerek özelleştirilmiş eşleştirme yapılandırmasını uygulayın.
+
+   Her şablon dosyasının kendine ait veri kaynağı vardır. Özel eşleştirme işlemi gerektiren kayıtlar bulunduğunda, uygun veri kaynağı güncelleştirin. Güncelleştirme bir sonraki işlem sırasında kullanılacaktır. Örneğin, ikizleri tek bir kişi olarak birleştirilmiş aynı adreste bulunan neredeyse aynı adla tanımlarsınız. İkizleri ayrı ve benzersiz kayıtlar olarak tanımlamak için veri kaynağı güncelleştirin.
 
 > [!div class="nextstepaction"]
 > [Sonraki adım: Alanları bütünleştirme](merge-entities.md)
