@@ -1,12 +1,12 @@
 ---
 title: Müşteri veya ilgili kişi etkinlikleri
 description: Müşteri veya ilgili kişi etkinliklerini tanımlayın ve bunları müşteri profillerinde bir zaman çizelgesinde görüntüleyin.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304129"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723805"
 ---
 # <a name="customer-or-business-contact-activities"></a>Müşteri veya ilgili kişi etkinlikleri
 
@@ -41,6 +41,9 @@ Varlığın, müşteri zaman çizelgesine dahil edilmesi için **Tarih** türün
    - **Aktivite adı**: Etkinliğiniz için bir ad seçin.
    - **Etkinlik varlığı**: İşlem tabanlı veya etkinlik verileri içeren bir varlık seçin.
    - **Birincil anahtar**: Bir kaydı benzersiz şekilde tanımlayan alanı seçin. Yinelenen değerler, boş değerler veya eksik değerler içermemelidir.
+
+     > [!NOTE]
+     > Her satır için Birincil anahtarın veri kaynağı yenilemeleri arasında tutarlı kalması gerekir. Bir satırın Birincil anahtarı veri kaynağı yenilenmesinde güncellendiği için, çıkış etkinliği varlığı içinde yinelemeler oluşturur. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Aktivite verilerini ad, varlık ve birincil anahtarla ayarlayın.":::
 
@@ -132,7 +135,15 @@ Kullanılabilir eylemleri görüntülemek için bir aktivite seçin.
 
 1. **Etkinlik Ekle**'yi seçin.
 
-1. Etkinliğe bir ad verin, kaynak etkinlik varlığını seçin ve etkinlik varlığının birincil anahtarını seçin.
+1. **Aktivite verileri** adımında aşağıdaki bilgileri girin:
+
+   - **Aktivite adı**: Etkinliğiniz için bir ad seçin.
+   - **Etkinlik varlığı**: İşlem tabanlı veya etkinlik verileri içeren bir varlık seçin.
+   - **Birincil anahtar**: Bir kaydı benzersiz şekilde tanımlayan alanı seçin. Yinelenen değerler, boş değerler veya eksik değerler içermemelidir.
+
+     > [!NOTE]
+     > Her satır için Birincil anahtarın veri kaynağı yenilemeleri arasında tutarlı kalması gerekir. Bir satırın Birincil anahtarı veri kaynağı yenilenmesinde güncellendiği için, çıkış etkinliği varlığı içinde yinelemeler oluşturur. 
+
 
 1. **İlişkiler** adımında, ilgili kişi verilerinizi bir aracı varlık olarak kullanarak etkinlik kaynağı verileriniz ile firmalar arasında dolaylı bir ilişki oluşturun. Daha fazla bilgi için [doğrudan ve dolaylı ilişki yolları](relationships.md#relationship-paths) bölümüne bakın.
    - *Satın Almalar* adlı bir etkinlik için örnek ilişki:

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196510"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724525"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentleri Constant Contact'a aktarma (önizleme)
 
@@ -28,6 +28,7 @@ Birleşik müşteri profillerinin bölümlerini Constant Contact'a verin ve bunl
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - Constant Contact'e dışa aktarım başına en fazla 1 milyon müşteri profili; bu işlemin tamamlanması bir saat kadar sürebilir. Constant Contact'e aktarabileceğiniz müşteri profilleri sayısı, Constant Contact ile olan sözleşmenize bağlıdır.
 - Yalnızca segmentler.
 

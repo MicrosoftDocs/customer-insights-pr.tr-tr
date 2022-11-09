@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196096"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725010"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmentleri DotDigital'a aktarma (önizleme)
 
@@ -28,6 +28,7 @@ Birleşik müşteri profillerinin segmentlerini DotDigital adres defterlerine d�
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - DotDigital'a dışa aktarım başına en fazla 1 milyon müşteri profili; sağlayıcı tarafındaki sınırlamalar nedeniyle bu işlemin tamamlanması üç saat kadar sürebilir. DotDigital'a aktarabileceğiniz müşteri profilleri sayısı, DotDigital ile olan sözleşmenize bağlıdır.
 - Yalnızca segmentler.
 

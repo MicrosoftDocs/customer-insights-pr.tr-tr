@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655286"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725240"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmentleri Braze'e aktarma (önizleme)
 
@@ -29,6 +29,7 @@ Unified Customer Profile segmentlerini Braze'e aktarın ve pazarlama etkinlikler
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - Braze'e dışa aktarma işlemi başına 1 milyona kadar müşteri profili; işlemin tamamlanması 40 dakikaya kadar sürebilir. Braze'e aktarabileceğiniz müşteri profilleri sayısı, Braze ile olan sözleşmeye bağlıdır.
 - Yalnızca segmentler.
 - Azure Özel Bağlantı, Braze'e dışarı aktarma işlemi için desteklenmez.
