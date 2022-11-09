@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195084"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724826"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Segmentleri Autopilot'a dışa aktarma (Önizleme)
 
@@ -28,6 +28,7 @@ Birleşik müşteri profillerinin segmentlerini Autopilot'a aktarın ve bunları
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - Autopilot'a dışa aktarım başına en fazla 100.000 müşteri profili; bu işlemin tamamlanması birkaç saat sürebilir. Autopilot'a aktarabileceğiniz müşteri profilleri sayısı, Autopilot ile olan sözleşmenize bağlıdır.
 - Yalnızca segmentler.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196188"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725194"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentleri Omnisend'e aktarma (önizleme)
 
@@ -28,6 +28,7 @@ Birleşik müşteri profillerinin segmentlerini Omnisend'e aktarın ve bunları 
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - Omnisend'e dışa aktarım başına en fazla 1 milyon müşteri profili; bu işlemin tamamlanması dört saat kadar sürebilir. Omnisend'e aktarabileceğiniz müşteri profilleri sayısı, Omnisend ile olan sözleşmeye bağlıdır.
 - Yalnızca segmentler.
 

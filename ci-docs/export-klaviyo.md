@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 075e6758f2c6992a1185756f9beecf852fdd0a96
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196786"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724657"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Segmentleri Klaviyo'ya aktarma (önizleme)
 
@@ -29,6 +29,7 @@ Birleşik müşteri profillerinin segmentlerini Klaviyo'ya dışarı aktarın ve
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - Klaviyo'ya dışa aktarım başına en fazla 1 milyon müşteri profili; bu işlemin tamamlanması 20 dakika kadar sürebilir. Klaviyo'ya aktarabileceğiniz müşteri profilleri sayısı, Klaviyo ile olan sözleşmenize bağlıdır.
 - Yalnızca segmentler.
 

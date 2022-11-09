@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588918"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725378"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Segmentleri HubSpot'a aktarma (Önizleme)
 
@@ -27,6 +27,7 @@ Birleşik müşteri profilleri segmentlerini HubSpot'a aktarın ve e-posta pazar
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - HubSpot'a aktarma başına 100.000 müşteri profiline kadar; bu işlemin tamamlanması 15 dakika kadar sürebilir. HubSpot'a aktarabileceğiniz müşteri profilleri sayısı, HubSpot ile olan sözleşmeye bağlıdır ve bunla kısıtlıdır.
 - Yalnızca segmentler.
 

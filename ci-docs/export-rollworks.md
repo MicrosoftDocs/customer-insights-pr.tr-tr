@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195636"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725149"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentleri RollWorks'e aktarma (önizleme)
 
@@ -28,6 +28,7 @@ Birleşik müşteri profillerinin bölümlerini RollWorks'e verin ve bunları re
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - RollWorks'e dışa aktarım başına en fazla 250.000 müşteri profili; bu işlemin tamamlanması 10 dakika kadar sürebilir. RollWorks'e aktarabileceğiniz müşteri profilleri sayısı, RollWorks ile olan sözleşmenize bağlıdır.
 - Yalnızca segmentler.
 

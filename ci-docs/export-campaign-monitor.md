@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196326"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724708"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentleri Campaign Monitor'a aktarma (önizleme)
 
@@ -29,6 +29,7 @@ Birleşik müşteri profillerinin bölümlerini Campaign Monitor'e verin ve bunl
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
+- Kendi depolama alanınızı getirin (BYOS) ile birlikte özel bağlantı desteklenmez.
 - Campaign Monitor'e dışa aktarım başına en fazla 1 milyon müşteri profili; bu işlemin tamamlanması 20 dakika kadar sürebilir. Campaign Monitor'e aktarabileceğiniz müşteri profilleri sayısı, Campaign Monitor ile olan sözleşmenize bağlıdır.
 - Yalnızca segmentler.
 
