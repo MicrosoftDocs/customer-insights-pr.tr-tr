@@ -8,29 +8,29 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556420"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776845"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Bilinmeyen profilleri Customer Insights ile yönetme
 
-İnternet kullanıcıları, çevrimiçi ortamda genellikle tanımsız ve anonim durumdalardır. Daimi müşteriler bile farklı cihaz veya kanallar kullandıkları için oturum açmayabilirler. Üçüncü taraf tanımlama bilgilerinin yakın zamanda gidecek olması düşünüldüğünde farklılaştırılmış ve kişiselleştirilmiş deneyimler için kullanıcı tercihlerinin birinci taraf verilerine göre yönetilmesi önem kazanmaktadır. Müşterilerin kişiselleştirme ile ilgili giderek artan beklentilerine karşın bilinen veya kimliği doğrulanmış kullanıcılar, birçok marka için hala azınlık durumundadır. İşletmelerin güvenilir, ayrıntılı ve birleşik verilere dayanarak müşterilerinin kim olduğunu bilmesi faydalıdır.
+İnternet kullanıcıları, çevrimiçi ortamda genellikle tanımsız veya anonim durumdalardır. En sadık müşteriler bile farklı cihazlarda oturum açmamışsa da "bilinmiyor" olarak görünebilir. Müşterilerin kişiselleştirme ile ilgili giderek artan beklentilerine karşın bilinen veya kimliği doğrulanmış kullanıcılar, birçok marka için hala azınlık durumundadır. Üçüncü taraf tanımlama bilgilerinin geleceği tartışılırken, kullanıcı tercihlerinin birinci taraf verileri temel alınarak yönetilmesi kişiselleştirilmiş deneyimler üretmek için çok önemlidir.
 
-Benzersiz kişiselleştirme, müşteri verilerinizin zenginliğine ve tam oluşuna bağlıdır ve Customer Insights, bu hedeflere ulaşmanıza yardımcı olur. Müşteri yolculuğunun başında toplanan verilerin kullanımını sınırlandırmanız veya durdurmanız gerekmez. Customer Insights, bilinmeyen kullanıcılar için müşteri profili oluşturmak üzere kendi verilerinizi kullanmanızı sağlar. Sonrasında, ilgili kişi bilgileri eksik olsa da bu profili daha fazla eylem için kullanabilirsiniz. Müşteri profillerini sürekli olarak zenginleştirmek için birinci taraf verilerini web, mobil veya CRM sistemleri gibi kaynaklardan Customer Insights'a içeri aktarın. Daha fazla etkileşimi birleştirirken [*bilinmeyen* müşterileri *bilinen* müşterilere dönüştürün](unknown-to-known.md).
+Benzersiz kişiselleştirme müşterinizi ne kadar iyi tanıdığınıza bağlıdır ve Customer Insights tüm müşterilerinizi izleyerek onları daha iyi tanımanıza yardımcı olur.  Müşteri yolculuğunun başında toplanan verilerin kullanımını sınırlandırmanız veya durdurmanız gerekmez. Customer Insights, bilinmeyen kullanıcılar için müşteri profili oluşturmak üzere kendi verilerinizi kullanmanızı sağlar. Sonrasında, ilgili kişi bilgileri eksik olsa da bu profili daha fazla eylem için kullanabilirsiniz. Müşteri profillerini sürekli olarak zenginleştirmek için birinci taraf verilerini web, mobil veya CRM sistemleri gibi kaynaklardan Customer Insights'a içeri aktarın. Daha fazla etkileşimi birleştirirken [*bilinmeyen* müşterileri *bilinen* müşterilere dönüştürün](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Örnek Senaryo
 
-E-ticaret, son on yıl içerisinde en hızlı büyüyen kanal olmuştur. Bir kullanıcının e-ticaret sitenizde gezinirken mobil cihazını kullandığını varsayın. Web sitesi, ziyaretçiye “mobile_guest123” şeklinde bir benzersiz tanıtıcı atar ve siz de çevrimiçi etkinliğine göre bu ziyaretçinin davranış etkinliklerini toplamaya başlarsınız. Bu etkinliklere hangi sayfaları ziyaret ettikleri, bu sayfalarda ne kadar zaman harcadıkları veya hangi bağlantıları tıkladıkları örnek verilebilir. Adını veya e-posta adresini bilmiyor olsanız bile bu veriler, söz konusu kullanıcı hakkında anlamlı içgörüler edinmeleri konusunda markalara yardımcı olabilir. Siz de bu kullanıcının siteyi bir sonraki ziyaretinde bu içgörülerden faydalanabilirsiniz. Kullanıcının "organik", "mobil ön sipariş müşterileri", "yüksek değerli müşteriler", vb. gibi segment listesini almak için Customer Insights'ta “mobile_guest123” için sorgulama yapabilir veya kişiselleştirilmiş web deneyimi oluşturmak için profili alabilirsiniz. Aynı işlemi yapmak için verileri herhangi bir etkinleştirme sistemine dışarı da aktarabilirsiniz.
+Bir kullanıcının e-ticaret sitenizde gezinirken mobil cihazını kullandığını varsayın. Web sitesi, ziyaretçiye “mobile_guest123” şeklinde bir benzersiz tanıtıcı atar ve siz de çevrimiçi etkinliğine göre bu ziyaretçinin davranış etkinliklerini toplamaya başlarsınız. Bu etkinliklere hangi sayfaları ziyaret ettikleri, bu sayfalarda ne kadar zaman harcadıkları veya hangi bağlantıları tıkladıkları örnek verilebilir. Adını veya e-posta adresini bilmiyor olsanız bile bu veriler, söz konusu kullanıcı hakkında anlamlı içgörüler edinmeleri konusunda markalara yardımcı olabilir. Siz de bu kullanıcının siteyi bir sonraki ziyaretinde bu içgörülerden faydalanabilirsiniz. Kullanıcının "organik", "mobil ön sipariş müşterileri", "yüksek değerli müşteriler", vb. gibi segment listesini almak için Customer Insights'ta “mobile_guest123” için sorgulama yapabilir veya kişiselleştirilmiş web deneyimi oluşturmak için profili alabilirsiniz. Aynı işlemi yapmak için verileri herhangi bir etkinleştirme sistemine dışarı da aktarabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 - Birinci taraf verilerinizi Customer Insights'a alma
 - Her varlığın, birincil anahtar olarak ayarlanmış benzersiz bir kimliği vardır
 - Kişiselleştirme için birincil anahtarı bulunan her varlık birleştirilmiştir
-- Web sitenizin içerik yönetim sistemi, (Customer Insights ile doğrudan iletişime dayalı web kişiselleştirmesi için) API kullanma yeteneğine sahiptir
+- Web sitenizin içerik yönetim sistemi, (Customer Insights ile doğrudan iletişime dayalı web kişiselleştirmesi için) API'leri kullanabilir
 
 Aşağıdaki tabloda, yüksek değerli web olaylarının nasıl elde edilebileceği konusunda basit bir örnek gösterilmektedir.
 
